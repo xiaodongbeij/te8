@@ -89,6 +89,68 @@ class Api_Home extends PhalApi_Api {
 	}
 
     /**
+     * 轮播图APP
+     * @desc 用于 轮播图APP
+     * @return int code 操作码，0表示成功
+     * @return array info
+     * @return string msg 提示信息
+     */
+    public function SlideApp()
+    {
+        $info = DI()->notorm->slide_item
+            ->select("title,image,url,target,description,content")
+            ->where('status = 1 and slide_id = 2')
+            ->order("list_order desc")
+            ->fetchAll();
+        if($info)
+        {
+            foreach ($info as $key => $value) {
+                $info[$key]['image'] = get_upload_path($value['image']);
+            }
+        }
+        return ['code' => 0, 'msg' => 'ok', 'info' => $info];     
+    }
+
+    /**
+     * 直播分类
+     * @desc 用于 直播分类
+     * @return int code 操作码，0表示成功
+     * @return array info
+     * @return string msg 提示信息
+     */
+    public function LiveClass()
+    {
+        $list = getLiveClass();
+        return ['code' => 0, 'msg' => 'ok', 'info' => $list];
+    }
+
+    /**
+     * 视频分类
+     * @desc 用于 视频分类
+     * @return int code 操作码，0表示成功
+     * @return array info
+     * @return string msg 提示信息
+     */
+    public function videoClass()
+    {
+        $videoclasslist = getVideoClass();
+        return ['code' => 0, 'msg' => 'ok', 'info' => $videoclasslist];
+    }
+
+    /**
+     * 等级列表
+     * @desc 用于 等级列表
+     * @return int code 操作码，0表示成功
+     * @return array info
+     * @return string msg 提示信息
+     */
+    public function Level()
+    {
+        $level= getLevelList();
+        return ['code' => 0, 'msg' => 'ok', 'info' => $level];
+    }
+
+    /**
      * APP下载详情
      * @desc 用于APP下载详情
      * @return int code 操作码，0表示成功
