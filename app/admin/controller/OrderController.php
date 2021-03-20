@@ -281,7 +281,7 @@ class OrderController extends AdminBaseController
             array('pay_status','支付状态'),
             array('user_id','用户ID'),
             array('payway','支付方式'),
-            array('channel.channel_name','支付通道'),
+            array('channel_id','支付通道'),
 
             array('order_money','订单金额'),
             array('pay_money','支付金额'),
