@@ -216,46 +216,10 @@ class Model_Login extends PhalApi_Model_NotORM
         $info['avatar'] = get_upload_path($info['avatar']);
         $info['avatar_thumb'] = get_upload_path($info['avatar_thumb']);
 
-//        $info['profit_count'] = DI()->notorm->user_change
-//            ->where("user_id = {$info['id']} and change_money > 0 and change_type BETWEEN 3 AND 5 AND 6 AND 7")
-//            ->sum('change_money');
-
         if ($info['is_dai'] == 2){
             $info['profit'] = 0;
         }else{
-            //代理收益
-//            //查找所有下级
-//            $sql = "select * from cmf_user where invite_level like '".$info['invite_level'] . "-%'";
-//            $users = DI()->notorm->user->queryAll($sql);
-//            //用户对应返点
-//            $user_rate = [];
-//            $str_ids = '';
-//            foreach ($users as $v){
-//                $user_rate[$v['id']] = $v['rate'];
-//                $str_ids .= $v['id'] . ',';
-//            }
-//            $str_ids = substr($str_ids,0,-1);
-//            //用户对应该用户返点
-//            $rate = [];
-//            foreach ($users as $v){
-//                $ids = explode('-',$v['invite_level']);
-//                $ra = $info['rate'];
-//                foreach ($ids as $key => $val){
-//                    if ($key == 0) continue;
-//                    $ra = $ra - $user_rate[$val];
-//                }
-//                $rate[$v['id']] = $ra;
-//            }
-//            //下注记录
-//            $time = strtotime(date('Y-m-d'));
-//            $total = 0;
-//            if($str_ids != ''){
-//                $sql2 = "select user_id,sum(money) as total from cmf_game_ticket where user_id in ($str_ids) and addtime > $time group by user_id";
-//                $list = DI()->notorm->game_ticket->queryAll($sql2);
-//                foreach ($list as $v){
-//                    $total += $v['total'] * $rate[$v['user_id']];
-//                }
-//            }
+
             $total = DI()->notorm->user_change
                 ->where('user_id',$info['id'])
                 ->where('change_type',7)
@@ -758,10 +722,10 @@ class Model_Login extends PhalApi_Model_NotORM
     {
         $nowtime = time();
         $expiretime = $nowtime + 60 * 60 * 24 * 300;
-
+        
         DI()->notorm->user
             ->where('id=?', $uid)
-            ->update(array('last_login_time' => $nowtime, "last_login_ip" => $_SERVER['REMOTE_ADDR']));
+            ->update(array('last_login_time' => $nowtime, "last_login_ip" => getIP()));
 
         $isok = DI()->notorm->user_token
             ->where('user_id=?', $uid)
