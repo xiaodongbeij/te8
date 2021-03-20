@@ -42,10 +42,10 @@ class GameController extends HomebaseController
 
         $this->start = date("Y-m-d H:i:s",strtotime('-10 minute'));
         $this->end = date("Y-m-d H:i:s",strtotime('+10 minute'));
-
-        $this->domain = config('game')['domain'];
-        $this->agent = config('game')['agent'];
-        $this->key = config('game')['key'];
+        $con = getConfigPri();
+        $this->domain = $con['tripartite_domain'];
+        $this->agent = $con['tripartite_agent'];
+        $this->key = $con['tripartite_key'];
         /**
          *  上线查询数据库获取数据，并赋值
          */
@@ -63,6 +63,7 @@ class GameController extends HomebaseController
      */
     public function SaveBettingRecord()
     {
+        dump($this->domain);die;
         $platforms = Db::table('cmf_game_cate')->field('platform')->select()->toArray();
         // 请求地址
         $url = $this->domain . "/api/{$this->agent}/GetBettingRecord";
