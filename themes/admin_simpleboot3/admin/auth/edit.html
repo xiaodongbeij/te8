@@ -1,0 +1,89 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li ><a href="{:url('auth/index')}">列表</a></li>
+			<li class="active"><a >{:lang('EDIT')}</a></li>
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('auth/editPost')}">
+            <div class="form-group">
+				<label for="input-name" class="col-sm-2 control-label"><span class="form-required">*</span>会员</label>
+				<div class="col-md-6 col-sm-10" style="padding-top:7px;">
+					{$data['userinfo']['user_nicename']} ({$data['uid']})
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-real_name" class="col-sm-2 control-label"><span class="form-required">*</span>真实姓名</label>
+				<div class="col-md-6 col-sm-10" style="padding-top:7px;">
+					{$data['real_name']}
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-mobile" class="col-sm-2 control-label"><span class="form-required">*</span>手机号码</label>
+				<div class="col-md-6 col-sm-10" style="padding-top:7px;">
+                    {$data['mobile']}
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-cer_no" class="col-sm-2 control-label"><span class="form-required">*</span>身份证号</label>
+				<div class="col-md-6 col-sm-10" style="padding-top:7px;">
+					{$data['cer_no']}
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-front_view" class="col-sm-2 control-label"><span class="form-required">*</span>证件正面</label>
+				<div class="col-md-6 col-sm-10" style="padding-top:7px;">
+					<img src="{:get_upload_path($data['front_view'])}" class="imgtip" style="cursor: hand;max-width:100px;max-height:200px;" />
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-back_view" class="col-sm-2 control-label"><span class="form-required">*</span>证件反面</label>
+				<div class="col-md-6 col-sm-10" style="padding-top:7px;">
+					<img src="{:get_upload_path($data['back_view'])}" class="imgtip" style="cursor: hand;max-width:100px;max-height:200px;" />
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-handset_view" class="col-sm-2 control-label"><span class="form-required">*</span>手持证件照</label>
+				<div class="col-md-6 col-sm-10" style="padding-top:7px;">
+					<img src="{:get_upload_path($data['handset_view'])}" class="imgtip" style="cursor: hand;max-width:100px;max-height:200px;" />
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-trade_no" class="col-sm-2 control-label"><span class="form-required">*</span>审核状态</label>
+				<div class="col-md-6 col-sm-10">
+					<select class="form-control" name="status">
+                        <volist name="status" id="v">
+                        <option value="{$key}" <eq name="data['status']" value="$key">selected</eq>>{$v}</option>
+                        </volist>
+                    </select>
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-reason" class="col-sm-2 control-label"><span class="form-required"></span>原因</label>
+				<div class="col-md-6 col-sm-10">
+					<textarea class="form-control" rows="2" cols="20" id="input-reason" name="reason" >{$data.reason|default=''}</textarea>
+				</div>
+			</div>
+
+            <div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<input type="hidden" name="uid" value="{$data.uid}" />
+					<button type="submit" class="btn btn-primary js-ajax-submit">{:lang('EDIT')}</button>
+					<a class="btn btn-default" href="{:url('auth/index')}">{:lang('BACK')}</a>
+				</div>
+			</div>
+
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

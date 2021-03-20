@@ -1,0 +1,33 @@
+<include file="public@header" />
+</head>
+<body>
+<div class="wrap">
+    <ul class="nav nav-tabs">
+        <li ><a href="{:url('UserChange/withdrawIndex')}">提现列表</a></li>
+        <li class="active"><a >拒绝出款</a></li>
+    </ul>
+    <form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('UserChange/withdrawRefuse')}">
+
+        <input type="hidden" name="id" value="{$id}">
+        <input type="hidden" name="TOKEN" value="{:session('TOKEN')}" />
+        <div class="form-group">
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>拒绝理由</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="text" class="form-control" id="input-remark" name="remark">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-primary js-ajax-submit">确定</button>
+                <a class="btn btn-default" href="{:url('UserChange/withdrawIndex')}">{:lang('BACK')}</a>
+            </div>
+        </div>
+
+    </form>
+</div>
+<script src="__STATIC__/js/admin.js"></script>
+<script>
+
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<include file="public@header" />
+</head>
+<body>
+<div class="wrap">
+    <ul class="nav nav-tabs">
+        <li ><a href="{:url('Liver/index')}">列表</a></li>
+        <li class="active"><a >返点</a></li>
+    </ul>
+    <form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('Liver/is_dai')}">
+
+        <input type="hidden" name="id" value="{$user.id}">
+
+        <div class="form-group">
+            <label for="input-maintain_switch" class="col-sm-2 control-label"><span class="form-required">*</span>是否代理</label>
+            <div class="col-md-6 col-sm-10">
+                <select class="form-control" name="is_dai">
+                    <option value="1" <eq name="user['is_dai']" value="1">selected</eq>> 是</option>
+                    <option value="2" <eq name="user['is_dai']" value="2">selected</eq>> 否</option>
+                </select>
+            </div>
+        </div>
+
+        <foreach name="rates" item="v">
+            <div class="form-group">
+                <label for="input-rate" class="col-sm-2 control-label"><span class="form-required">*</span>{$v.remark}返点</label>
+                <div class="col-md-6 col-sm-10">
+                    <input type="hidden" class="form-control" id="input-platform"
+                           name="platform[]" value="{$v.platform}" >
+                    <input type="number" class="form-control" id="input-rate"
+                           name="rate[]" value="{$v.rate}" >
+                    <p class="help-block">返点填1是0.01,填0.1是0.001</p>
+                </div>
+            </div>
+        </foreach>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-primary js-ajax-submit">更新</button>
+                <a class="btn btn-default" href="{:url('Liver/index')}">{:lang('BACK')}</a>
+            </div>
+        </div>
+
+    </form>
+</div>
+<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

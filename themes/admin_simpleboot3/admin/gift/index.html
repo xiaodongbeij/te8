@@ -1,0 +1,77 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a>礼物列表</a></li>
+            <li><a href="{:url('Gift/add')}">{:lang('ADD')}</a></li>
+		</ul>
+		<form method="post" class="js-ajax-form" action="{:url('Gift/listOrder')}">
+			<div class="table-actions">
+                <button class="btn btn-primary btn-sm js-ajax-submit" type="submit">{:lang('SORT')}</button>
+            </div>
+		
+			<table class="table table-hover table-bordered">
+				<thead>
+					<tr>
+					  	<th>排序</th>
+						<th>ID</th>
+						<th>类型</th>
+						<th>标识</th>
+						<th>名称</th>
+						<th>所需点数</th>
+						<th>图片</th>
+						<th>动画类型</th>
+						<th>动画</th>
+						<th>动画时长</th>
+						<th>发布时间</th>
+						<th align="center">{:lang('ACTIONS')}</th>
+					</tr>
+				</thead>
+				<tbody>
+					<foreach name="lists" item="vo">
+					<tr>
+					   <td><input name="list_orders[{$vo.id}]" class="input-order" type="text" value="{$vo.list_order}"></td>
+						<td>{$vo.id}</td>
+						<td>{$type[$vo['type']]}</td>
+						<td>{$mark[$vo['mark']]}</td>
+						<td>{$vo['giftname']}</td>
+						<td>{$vo['needcoin']}</td>
+						<td><img width="25" height="25" class="imgtip" src="{$vo['gifticon']}" /></td>
+						<td><if condition="$vo['type'] eq 1">{$swftype[$vo['swftype']]}</if></td>
+						<td><if condition="$vo['swf']">
+                                <if condition="$vo['swftype'] eq 1">
+                                    {$vo['swf']}
+                                <else/>
+                                    <img width="100" height="100" src="{$vo['swf']}" />
+                                </if>
+                            </if>
+                        </td>
+                        <td>{$vo['swftime']}</td>
+						<td>{:date('Y-m-d H:i',$vo['addtime'])}</td>
+						<td>
+                            
+                            <if condition="$vo['type'] eq 1">
+                                <if condition="$vo['isplatgift'] eq 1">
+                                <a class="btn btn-xs btn-warning js-ajax-dialog-btn" href="{:url('Gift/plat',array('id'=>$vo['id'],'isplatgift'=>0))}" >取消全站飘屏</a>
+                                <else/>
+                                <a class="btn btn-xs btn-warning js-ajax-dialog-btn" href="{:url('Gift/plat',array('id'=>$vo['id'],'isplatgift'=>1))}" >设置全站飘屏</a>
+                                </if>
+                            </if>
+                            <if condition="$vo['type'] eq 0 && $vo['mark'] eq 3">
+                            <a class="btn btn-xs btn-info" href='{:url("Luckrate/index",array("giftid"=>$vo["id"]))}'>中奖设置</a>
+                            <a class="btn btn-xs btn-info" href='{:url("Jackpotrate/index",array("giftid"=>$vo["id"]))}'>奖池设置</a>
+                             </if>
+                            <a class="btn btn-xs btn-primary" href='{:url("Gift/edit",array("id"=>$vo["id"]))}'>{:lang('EDIT')}</a>
+							<a class="btn btn-xs btn-danger js-ajax-delete" href="{:url('Gift/del',array('id'=>$vo['id']))}">{:lang('DELETE')}</a>
+						</td>
+					</tr>
+					</foreach>
+				</tbody>
+			</table>
+			<div class="pagination">{$page}</div>
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

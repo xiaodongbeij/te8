@@ -1,0 +1,106 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a >音乐列表</a></li>
+            <li><a href="{:url('Music/add')}">{:lang('ADD')}</a></li>
+		</ul>
+		
+		<form class="well form-inline margin-top-20" method="post" action="{:url('Music/index')}">
+			选择分类：
+            <select class="form-control" name="classify_id">
+				<option value="">全部</option>
+                <volist name="classify" id="v">
+                    <option value="{$key}" <if condition="input('request.classify_id') neq '' && input('request.classify_id') eq $key">selected</if> >{$v}</option>
+                </volist>                
+			</select>
+			关键字： 
+            <input class="form-control" type="text" name="keyword" style="width: 200px;" value="{:input('request.keyword')}"
+                   placeholder="请输入音乐名称">
+			<input type="submit" class="btn btn-primary" value="搜索">
+		</form>		
+		
+		<form method="post" class="js-ajax-form" >
+		
+			<table class="table table-hover table-bordered">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>音乐名称</th>
+						<th>演唱者</th>
+						<th>上传类型</th>
+						<th>上传者</th>
+						<th>封面</th>
+						<th>音乐长度</th>
+						<th>音乐地址</th>
+						<th>使用次数</th>
+						<th>是否删除</th>
+						<th>所属分类</th>
+						<th>添加时间</th>
+						<th>修改时间</th>
+						<th>{:lang('ACTIONS')}</th>
+					</tr>
+				</thead>
+				<tbody>
+					<foreach name="lists" item="vo">
+					<tr>
+						<td align="center">{$vo.id}</td>
+						<td>{$vo['title']}</td>
+						<td>{$vo['author']}</td>
+						<td>{$type[$vo['upload_type']]}</td>
+						<td>{$vo['uploader_nicename']}({$vo['uploader']})</td>
+						<td><img src="{$vo['img_url']}" width="50" height="50"></td>
+						<td>{$vo['length']}</td>
+						<td style="max-width: 300px;word-break:break-all;">{$vo['file_url']}</td>
+						<td>{$vo['use_nums']}</td>
+						<td>{$isdel[$vo['isdel']]}</td>
+						<td>
+                        <if condition="isset($classify[$vo['classify_id']])">
+                            {$classify[$vo['classify_id']]}
+                            <else/>
+                            --
+                            </if>
+                        </td>
+						<td>{:date('Y-m-d H:i:s',$vo['addtime'])}</td>
+						<td>
+                            <if condition="$vo['updatetime'] neq '0'">
+                            {:date('Y-m-d H:i:s',$vo['updatetime'])}
+                            <else/>
+                            --
+                            </if>
+                        </td>
+						<td align="center">
+                            <a class="btn btn-xs btn-info" href="javascript:void(0)" onclick="musicListen({$vo['id']})">试听</a>
+                            <a class="btn btn-xs btn-primary" href='{:url("Music/edit",array("id"=>$vo["id"]))}'>{:lang('EDIT')}</a>
+							 <if condition="$vo['isdel'] eq '0'">
+                             <a class="btn btn-xs btn-danger js-ajax-delete" href="{:url('Music/del',array('id'=>$vo['id']))}">{:lang('DELETE')}</a>
+							 <else />
+							 
+                             <a class="btn btn-xs btn-info js-ajax-dialog-btn" href="{:url('Music/canceldel',array('id'=>$vo['id']))}" >取消删除</a>
+                             
+							</if>
+						</td>
+					</tr>
+					</foreach>
+				</tbody>
+			</table>
+			<div class="pagination">{$page}</div>
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+	<script src="__STATIC__/js/layer/layer.js"></script>
+	<script type="text/javascript">
+		function musicListen(id){
+			layer.open({
+			  type: 2,
+			  title: '音乐试听',
+			  shadeClose: true,
+			  shade: 0.8,
+			  area: ['500px', '140px'],
+			  content: '/admin/Music/listen/?id='+id
+			}); 
+		}
+	</script>
+</body>
+</html>

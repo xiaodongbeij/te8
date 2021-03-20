@@ -1,0 +1,88 @@
+<include file="public@header"/>
+<style>
+    .table img{
+        width:25px;
+        height:25px;
+    }
+
+    #pop{
+        display:none;
+    }
+</style>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a>腾讯推流</a></li>
+        <li><a href="{:url('Tencent/add')}">{:lang('ADD')}</a></li>
+    </ul>
+
+    <form method="post" class="js-ajax-form">
+
+        <table class="table table-hover table-bordered">
+            <thead>
+            <tr>
+
+                <th>ID</th>
+                <th>腾讯云推流防盗链key</th>
+                <th>腾讯云直播播流鉴权key</th>
+                <th>腾讯云直播播流鉴权时间(秒)</th>
+                <th>腾讯云直播推流域名</th>
+                <th>腾讯云直播播流域名</th>
+                <th>鉴权</th>
+                <th>状态</th>
+                <th>创建时间</th>
+                <th>更新时间</th>
+
+                <th>{:lang('ACTIONS')}</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            <foreach name="list" item="vo">
+                <tr>
+
+                    <td>{$vo.id}</td>
+                    <td>{$vo.push_key}</td>
+                    <td>{$vo.play_key}</td>
+                    <td>{$vo.play_time}</td>
+                    <td>{$vo.push}</td>
+                    <td>{$vo.pull}</td>
+                    <td>
+                        <eq name="$vo.play_key_switch" value="1"><span class="label label-success">开启</span></eq>
+                        <eq name="$vo.play_key_switch" value="0"><span class="label label-danger">关闭</span></eq>
+                    </td>
+                    <td>
+                        <eq name="$vo.status" value="1"><span class="label label-success">未使用</span></eq>
+                        <eq name="$vo.status" value="2"><span class="label label-success">使用中</span></eq>
+                        <eq name="$vo.status" value="3"><span class="label label-danger">已使用</span></eq>
+                    </td>
+                    <td>{$vo.create_time}</td>
+                    <td>{$vo.update_time}</td>
+
+                    <td>
+                        <if condition="$vo.status eq 1">
+                            <a class="btn btn-xs btn-success js-ajax-dialog-btn"
+                               href="{:url('Tencent/status',array('id'=>$vo['id']))}"
+                               data-msg="">切换</a>
+                        </if>
+                        <a class="btn btn-xs btn-primary" href='{:url("Tencent/edit",array("id"=>$vo["id"]))}'>{:lang('EDIT')}</a>
+                        <a class="btn btn-xs btn-danger js-ajax-delete" href="{:url('Tencent/del',array($vo['id']))}">{:lang('DELETE')}</a>
+
+                    </td>
+                </tr>
+            </foreach>
+            </tbody>
+        </table>
+        <div class="pagination">{$page}</div>
+    </form>
+</div>
+
+
+<script src="__STATIC__/js/admin.js"></script>
+<script src="__STATIC__/js/laydate/laydate.js"></script>
+<script>
+
+</script>
+</body>
+</html>

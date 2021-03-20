@@ -1,0 +1,93 @@
+<include file="public@header"/>
+<style>
+    .table img{
+        width:25px;
+        height:25px;
+    }
+
+    #pop{
+        display:none;
+    }
+</style>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a>游戏用户盈亏</a></li>
+        <!--        <li><a href="{:url('userChange/add')}">{:lang('ADD')}</a></li>-->
+    </ul>
+    <form class="well form-inline margin-top-20" method="post" action="{:url('game/GameDetail/user_profit')}">
+
+        用户：
+        <input class="form-control" type="text" name="user_login" style="width: 200px;" value="{:input('request.user_login')}"
+               placeholder="请输入用户名">
+
+        游戏：
+        <select class="form-control" name="short_name">
+            <option value="">全部</option>
+            <foreach name="cai" item="vo">
+                <option value="{$vo.platform}" <if condition="input('request.short_name') neq '' && input('request.short_name') eq $vo.platform">selected</if>>{$vo.name}</option>
+            </foreach>
+        </select>
+
+        时间范围：
+        <input class="form-control js-bootstrap-date" name="start_time" id="start_time" autocomplete="off" value="{:input('request.start_time')}" aria-invalid="false" style="width: 110px;"> -
+        <input class="form-control js-bootstrap-date" name="end_time" id="end_time" autocomplete='off' value="{:input('request.end_time')}" aria-invalid="false" style="width: 110px;">
+
+        <input type="submit" class="btn btn-primary" value="搜索"/>
+        <a class="btn btn-danger" href="{:url('user/userChange/index')}">清空</a>
+        <br>
+        <br>
+    </form>
+    <form method="post" class="js-ajax-form">
+
+        <table class="table table-hover table-bordered">
+            <thead>
+            <tr>
+                <!--                <th width="16">-->
+                <!--                    <label>-->
+                <!--                        <input type="checkbox" class="js-check-all" data-direction="x" data-checklist="js-check-x">-->
+                <!--                    </label>-->
+                <!--                </th>-->
+                <!--                <th>ID</th>-->
+                <th>登录名</th>
+                <th>日期</th>
+                <th>游戏</th>
+                <th>派彩</th>
+                <th>有效投注</th>
+                <th>盈亏</th>
+                <!--                <th>{:lang('ACTIONS')}</th>-->
+            </tr>
+            </thead>
+            <tbody>
+
+            <foreach name="list" item="vo">
+                <tr>
+
+
+                    <td>{$vo.user_login}</td>
+                    <td>{$vo.date}</td>
+                    <td>{$vo.game_name}</td>
+                    <td>{$vo.bonus}</td>
+                    <td>{$vo.money}</td>
+                    <td>
+                        <if condition="$vo['yin'] lt 0 "><font style="color: red">{$vo.yin}</font>
+                            <else /> <font style="color: green">{$vo.yin}</font>
+                        </if>
+                    </td>
+                </tr>
+            </foreach>
+            </tbody>
+        </table>
+        <div class="pagination">{$page}</div>
+    </form>
+</div>
+
+
+<script src="__STATIC__/js/admin.js"></script>
+<script src="__STATIC__/js/laydate/laydate.js"></script>
+<script>
+
+</script>
+</body>
+</html>

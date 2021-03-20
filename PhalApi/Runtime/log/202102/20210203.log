@@ -1,0 +1,48 @@
+2021-02-03 11:14:38|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210203/06656660786250159.png
+2021-02-03 11:18:03|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210203/06656662836160118.png
+2021-02-03 11:58:33|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210203/06656687133066547.png
+2021-02-03 15:10:01|ERROR|Pay.GetPay|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= '15:10:01') AND (end_time<= = '15:10:01')' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,chann...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(72): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Pay.php(50): pay('1', '1')
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Pay->getPay()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-03 15:10:01|ERROR|Pay.GetPay|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= '15:10:01') AND (end_time<= = '15:10:01')' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,chann...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(72): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Pay.php(50): pay('1', '1')
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Pay->getPay()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-03 15:10:01|ERROR|Pay.GetPay|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= '15:10:01') AND (end_time<= = '15:10:01')' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,chann...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(72): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Pay.php(50): pay('1', '1')
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Pay->getPay()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-03 16:26:49|ERROR|Daili.AddOpenCenter|PDOException: Data truncated for column 'ip' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(4101): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Daili.php(103): setAdminLog('\xE7\x94\x9F\xE6\x88\x90\xE9\x82\x80\xE8\xAF\xB7\xE7\xA0\x81...', 42885, 2)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Daili.php(229): Domain_Daili->addOpenCenter(42885, 0.7)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Daili->addOpenCenter()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-03 16:57:20|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210203/06656866401289086.png
+2021-02-03 17:36:12|ERROR|Ticket.CancelTicket|PDOException: Truncated incorrect DOUBLE value: '2020121188588-qNNQe47U' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_game...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(135): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->cancelTicket()
+#3 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#4 {main}

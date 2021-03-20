@@ -1,0 +1,146 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li ><a href="{:url('Level/index')}">用户等级列表</a></li>
+			<li class="active"><a >{:lang('EDIT')}</a></li>
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('Level/editPost')}">
+            <div class="form-group">
+				<label for="input-levelid" class="col-sm-2 control-label"><span class="form-required">*</span>等级</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-levelid" name="levelid" placeholder="1-99999999之间的整数" value="{$data['levelid']}">
+                    <p class="help-block">请填写1-99999999之间的整数</p>
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-levelname" class="col-sm-2 control-label"><span class="form-required">*</span>等级名称</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-levelname" name="levelname" value="{$data['levelname']}">
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-level_up" class="col-sm-2 control-label"><span class="form-required">*</span>等级经验上限</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-level_up" name="level_up" value="{$data['level_up']}" maxlength="9" placeholder="1-99999999之间的整数">
+                    <p class="help-block">请填写1-99999999之间的整数</p>
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-colour" class="col-sm-2 control-label"><span class="form-required">*</span>昵称颜色</label>
+				<div class="col-md-6 col-sm-10">
+                    <input class="form-control js-color valid" name="colour" id="color"  aria-invalid="false" style="display:inline-block;width:200px;" value="{$data['colour']}">
+                    <input class="form-control" id="colour_block" style="display:inline-block;;width:50px;background:#{$data['colour']};" disabled/>
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>图标</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="hidden" name="thumb" id="thumbnail" value="{$data['thumb']}">
+                    <a href="javascript:uploadOneImage('图片上传','#thumbnail');">
+                        <if condition="empty($data.thumb)">
+                        <img src="__TMPL__/public/assets/images/default-thumbnail.png"
+                                 id="thumbnail-preview"
+                                 style="cursor: pointer;max-width:100px;max-height:100px;"/>
+                        <else/>
+                        <img src="{:cmf_get_image_preview_url($data.thumb)}"
+                             id="thumbnail-preview"
+                             style="cursor: pointer;max-width:100px;max-height:100px;"/>
+                        </if>
+                    </a>
+                    <input type="button" class="btn btn-sm btn-cancel-thumbnail" value="取消图片"> 图片尺寸： 90 X 45
+				</div>
+			</div>
+            
+            <div class="form-group" id="">
+				<label for="input-thumb_mark" class="col-sm-2 control-label"><span class="form-required">*</span>头像角标</label>
+				<div class="col-md-6 col-sm-10">
+                    <input type="hidden" name="thumb_mark" id="thumbnail2" value="{$data['thumb_mark']}">
+                    <a href="javascript:uploadOneImage('图片上传','#thumbnail2');">
+                        <if condition="empty($data.thumb_mark)">
+                        <img src="__TMPL__/public/assets/images/default-thumbnail.png"
+                                 id="thumbnail2-preview"
+                                 style="cursor: pointer;max-width:100px;max-height:100px;"/>
+                        <else/>
+                        <img src="{:cmf_get_image_preview_url($data.thumb_mark)}"
+                             id="thumbnail2-preview"
+                             style="cursor: pointer;max-width:100px;max-height:100px;"/>
+                        </if>
+                    </a>
+                    <input type="button" class="btn btn-sm btn-cancel-thumbnail2" value="取消图片"> 图片尺寸： 40 X 40
+				</div>
+			</div>
+            
+            <div class="form-group" id="">
+				<label for="input-bg" class="col-sm-2 control-label"><span class="form-required">*</span>背景</label>
+				<div class="col-md-6 col-sm-10">
+                    <input type="hidden" name="bg" id="thumbnail3" value="{$data['bg']}">
+                    <a href="javascript:uploadOneImage('图片上传','#thumbnail3');">
+                        <if condition="empty($data.bg)">
+                        <img src="__TMPL__/public/assets/images/default-thumbnail.png"
+                                 id="thumbnail3-preview"
+                                 style="cursor: pointer;max-width:100px;max-height:100px;"/>
+                        <else/>
+                        <img src="{:cmf_get_image_preview_url($data.bg)}"
+                             id="thumbnail3-preview"
+                             style="cursor: pointer;max-width:100px;max-height:100px;"/>
+                        </if>
+                    </a>
+                    <input type="button" class="btn btn-sm btn-cancel-thumbnail3" value="取消图片"> 图片尺寸： 200 X 90
+				</div>
+			</div>
+
+            
+
+            <div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<input type="hidden" name="id" value="{$data.id}" />
+					<button type="submit" class="btn btn-primary js-ajax-submit">{:lang('EDIT')}</button>
+					<a class="btn btn-default" href="javascript:history.back(-1);">{:lang('BACK')}</a>
+				</div>
+			</div>
+
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+    <script>
+    Wind.use('colorpicker',function(){
+        $('.js-color').each(function () {
+            var $this=$(this);
+            $this.ColorPicker({
+                livePreview:true,
+                onChange: function(hsb, hex, rgb) {
+                    $("#colour_block").css('background','#'+hex);
+                    $this.val(hex);
+                },
+                onBeforeShow: function () {
+                    $(this).ColorPickerSetColor(this.value);
+                }
+            });
+        });
+
+    });
+        (function(){
+            $('.btn-cancel-thumbnail').click(function () {
+                $('#thumbnail-preview').attr('src', '__TMPL__/public/assets/images/default-thumbnail.png');
+                $('#thumbnail').val('');
+            });
+            
+            $('.btn-cancel-thumbnail2').click(function () {
+                $('#thumbnail2-preview').attr('src', '__TMPL__/public/assets/images/default-thumbnail.png');
+                $('#thumbnail2').val('');
+            });
+
+            $('.btn-cancel-thumbnail3').click(function () {
+                $('#thumbnail3-preview').attr('src', '__TMPL__/public/assets/images/default-thumbnail.png');
+                $('#thumbnail3').val('');
+            });
+        })()
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+2021-01-23 16:11:07|ERROR|Gaming.Withdrawals|PDOException: Lock wait timeout exceeded; try restarting transaction in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(3974): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Gaming.php(327): user_change_action(42881, 23, '1', '\xE6\xB8\xB8\xE6\x88\x8F\xE5\x8F\x96\xE6\xAC\xBE', '', '', '', '', '0016')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Gaming.php(169): Api_Gaming->money_change('http://net4.tes...', '1', '\xE6\xB8\xB8\xE6\x88\x8F\xE5\x8F\x96\xE6\xAC\xBE', '0016')
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Gaming->withdrawals()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-01-23 16:11:09|ERROR|Gaming.Withdrawals|PDOException: Lock wait timeout exceeded; try restarting transaction in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(3974): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Gaming.php(327): user_change_action(42881, 23, '1', '\xE6\xB8\xB8\xE6\x88\x8F\xE5\x8F\x96\xE6\xAC\xBE', '', '', '', '', '0016')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Gaming.php(169): Api_Gaming->money_change('http://net4.tes...', '1', '\xE6\xB8\xB8\xE6\x88\x8F\xE5\x8F\x96\xE6\xAC\xBE', '0016')
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Gaming->withdrawals()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-01-23 16:11:10|ERROR|Gaming.Withdrawals|PDOException: Lock wait timeout exceeded; try restarting transaction in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(3974): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Gaming.php(327): user_change_action(42881, 23, '1', '\xE6\xB8\xB8\xE6\x88\x8F\xE5\x8F\x96\xE6\xAC\xBE', '', '', '', '', '0016')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Gaming.php(169): Api_Gaming->money_change('http://net4.tes...', '1', '\xE6\xB8\xB8\xE6\x88\x8F\xE5\x8F\x96\xE6\xAC\xBE', '0016')
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Gaming->withdrawals()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-01-23 16:11:11|ERROR|Gaming.Withdrawals|PDOException: Lock wait timeout exceeded; try restarting transaction in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(3974): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Gaming.php(327): user_change_action(42881, 23, '1', '\xE6\xB8\xB8\xE6\x88\x8F\xE5\x8F\x96\xE6\xAC\xBE', '', '', '', '', '0016')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Gaming.php(169): Api_Gaming->money_change('http://net4.tes...', '1', '\xE6\xB8\xB8\xE6\x88\x8F\xE5\x8F\x96\xE6\xAC\xBE', '0016')
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Gaming->withdrawals()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-01-23 16:11:11|ERROR|Gaming.Withdrawals|PDOException: Lock wait timeout exceeded; try restarting transaction in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(3974): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Gaming.php(327): user_change_action(42881, 23, '1', '\xE6\xB8\xB8\xE6\x88\x8F\xE5\x8F\x96\xE6\xAC\xBE', '', '', '', '', '0016')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Gaming.php(169): Api_Gaming->money_change('http://net4.tes...', '1', '\xE6\xB8\xB8\xE6\x88\x8F\xE5\x8F\x96\xE6\xAC\xBE', '0016')
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Gaming->withdrawals()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-01-23 16:11:11|ERROR|Gaming.Withdrawals|PDOException: Lock wait timeout exceeded; try restarting transaction in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(3974): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Gaming.php(327): user_change_action(42881, 23, '1', '\xE6\xB8\xB8\xE6\x88\x8F\xE5\x8F\x96\xE6\xAC\xBE', '', '', '', '', '0016')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Gaming.php(169): Api_Gaming->money_change('http://net4.tes...', '1', '\xE6\xB8\xB8\xE6\x88\x8F\xE5\x8F\x96\xE6\xAC\xBE', '0016')
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Gaming->withdrawals()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}

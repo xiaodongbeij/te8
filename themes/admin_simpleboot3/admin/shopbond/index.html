@@ -1,0 +1,70 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a >保证金列表</a></li>
+
+		</ul>
+		<form class="well form-inline margin-top-20" method="post" action="{:url('Shopbond/index')}">
+            审核状态：
+			<select class="form-control" name="status">
+				<option value="">全部</option>
+                <volist name="status" id="v">
+                    <option value="{$key}" <if condition="input('request.status') neq '' && input('request.status') eq $key">selected</if> >{$v}</option>
+                </volist>                
+			</select>
+			提交时间：
+			<input class="form-control js-bootstrap-date" name="start_time" id="start_time" autocomplete="off" value="{:input('request.start_time')}" aria-invalid="false" style="width: 110px;"> - 
+            <input class="form-control js-bootstrap-date" name="end_time" id="end_time" autocomplete="off" value="{:input('request.end_time')}" aria-invalid="false" style="width: 110px;">
+			关键字： 
+			<input class="form-control" type="text" name="uid" style="width: 200px;" value="{:input('request.uid')}"
+                   placeholder="请输入会员ID、靓号">
+			<input type="submit" class="btn btn-primary" value="搜索">
+		</form>				
+		<form method="post" class="js-ajax-form" >
+
+		
+			<table class="table table-hover table-bordered">
+				<thead>
+					<tr>
+						<th>会员ID</th>
+						<th>会员</th>						
+						<th>保证金</th>
+						<th>状态</th>
+						<th>提交时间</th>
+						<th>处理时间</th>
+						<th>{:lang('ACTIONS')}</th>
+					</tr>
+				</thead>
+				<tbody>
+					<foreach name="lists" item="vo">
+					<tr>
+						<td>{$vo.uid}</td>
+						<td>{$vo['userinfo']['user_nicename']} </td>	
+						<td>{$vo['bond']}</td>			
+						<td>{$status[$vo['status']]}</td>
+						<td>{:date('Y-m-d H:i:s',$vo['addtime'])}</td>						
+						<td>
+						 	<if condition="$vo['uptime'] neq '0'">
+                             {:date('Y-m-d H:i:s',$vo['uptime'])}
+						    <else />
+						    --
+							</if>				
+						 </td>
+						<td>	
+                            <if condition="$vo['status'] eq 1">
+                            <a class="btn btn-xs btn-info js-ajax-dialog-btn" href="{:url('Shopbond/setstatus',array('id'=>$vo['id'],'status'=>0))}" >退回</a>
+                            <a class="btn btn-xs btn-info js-ajax-dialog-btn" href="{:url('Shopbond/setstatus',array('id'=>$vo['id'],'status'=>-1))}" >扣除</a>
+                            </if>
+						</td>
+					</tr>
+					</foreach>
+				</tbody>
+			</table>
+			<div class="pagination">{$page}</div>
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

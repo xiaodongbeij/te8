@@ -1,0 +1,43 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li ><a href="{:url('Refusereason/index')}">卖家拒绝退款原因列表</a></li>
+			<li class="active"><a >{:lang('ADD')}</a></li>
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('Refusereason/add_post')}">
+
+            <div class="form-group">
+				<label for="input-name" class="col-sm-2 control-label"><span class="form-required">*</span>退款原因</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-name" name="name">
+				</div>
+			</div>
+
+			
+
+			<div class="form-group">
+				<label for="input-status" class="col-sm-2 control-label"><span class="form-required">*</span>是否显示</label>
+				<div class="col-md-6 col-sm-10" id="status">
+                    <volist name="status" id="v">
+						<label class="radio-inline">
+							<input type="radio" name="status" value="{$key}" <if condition="$key eq 1">checked</if>>{$v}
+						</label>
+                    </volist>
+				</div>
+			</div>
+            
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-primary js-ajax-submit">{:lang('ADD')}</button>
+					<a class="btn btn-default" href="{:url('Refusereason/index')}">{:lang('BACK')}</a>
+				</div>
+			</div>
+            
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+    
+</body>
+</html>

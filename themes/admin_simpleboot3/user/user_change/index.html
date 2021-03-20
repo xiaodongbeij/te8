@@ -1,0 +1,159 @@
+<include file="public@header"/>
+<style>
+    .table img{
+        width:25px;
+        height:25px;
+    }
+
+    #pop{
+        display:none;
+    }
+</style>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a>资金动向</a></li>
+<!--        <li><a href="{:url('userChange/add')}">{:lang('ADD')}</a></li>-->
+    </ul>
+    <form class="well form-inline margin-top-20" name="form1" method="post" action="{:url('user/userChange/index')}">
+
+        用户：
+        <input class="form-control" type="text" name="uid" style="width: 200px;" value="{:input('request.uid')}"
+               placeholder="请输入用户ID">
+
+        对象：
+        <input class="form-control" type="text" name="tid" style="width: 200px;" value="{:input('request.tid')}"
+               placeholder="请输入用户ID">
+        机器人：
+        <select class="form-control" name="iszombie">
+            <option value="">全部</option>
+            <option value="1" <if condition="input('request.iszombie') neq '' && input('request.iszombie') eq 1">selected</if>>是</option>
+            <option value="0" <if condition="input('request.iszombie') neq '' && input('request.iszombie') eq 0">selected</if>>否</option>
+
+        </select>
+        变动类型：
+        <select class="form-control" name="change_type">
+            <option value="">全部</option>
+            <foreach name="type_list" item="v" key="k">
+            <option value="{$k}" <if condition="input('request.change_type') neq '' && input('request.change_type') eq $k">selected</if>>{$v}</option>
+            </foreach>
+<!--            <option value="3" <if condition="input('request.change_type') neq '' && input('request.change_type') eq 3">selected</if>>彩票</option>-->
+<!--            <option value="4" <if condition="input('request.change_type') neq '' && input('request.change_type') eq 4">selected</if>>补单</option>-->
+<!--            <option value="5" <if condition="input('request.change_type') neq '' && input('request.change_type') eq 5">selected</if>>会员管理转账</option>-->
+<!--            <option value="6" <if condition="input('request.change_type') neq '' && input('request.change_type') eq 6">selected</if>>优惠赠送</option>-->
+<!--            <option value="7" <if condition="input('request.change_type') neq '' && input('request.change_type') eq 7">selected</if>>返水</option>-->
+<!--            <option value="8" <if condition="input('request.change_type') neq '' && input('request.change_type') eq 8">selected</if>>额度转换</option>-->
+        </select>
+
+        添加时间：
+        <input class="form-control js-bootstrap-date" name="start_time" id="start_time" autocomplete="off" value="{:input('request.start_time')}" aria-invalid="false" style="width: 110px;"> -
+        <input class="form-control js-bootstrap-date" name="end_time" id="end_time" autocomplete='off' value="{:input('request.end_time')}" aria-invalid="false" style="width: 110px;">
+
+        <input type="submit" class="btn btn-primary" value="搜索"/>
+        <a class="btn btn-danger" href="{:url('user/userChange/index')}">清空</a>
+        <input type="button" class="btn btn-success" value="导出" onclick="form1.action='{:url('userChange/export')}';form1.submit();"/>
+        <br>
+        <br>
+    </form>
+    <form method="post" class="js-ajax-form">
+
+        <table class="table table-hover table-bordered">
+            <thead>
+            <tr>
+                <th width="16">
+                    <label>
+                        <input type="checkbox" class="js-check-all" data-direction="x" data-checklist="js-check-x">
+                    </label>
+                </th>
+                <th>ID</th>
+                <th>用户</th>
+                <th>对象</th>
+                <th>变动类型</th>
+                <th>变动前金额</th>
+                <th>变动后金额</th>
+                <th>变动金额</th>
+                <th>相关ID</th>
+                <th>备注</th>
+                <th>数量</th>
+                <th>直播ID</th>
+                <th>标识</th>
+                <th>添加时间</th>
+
+<!--                <th>{:lang('ACTIONS')}</th>-->
+            </tr>
+            </thead>
+            <tbody>
+
+            <foreach name="list" item="vo">
+                <tr>
+                    <td>
+                        <input type="checkbox" class="js-check" data-yid="js-check-y" data-xid="js-check-x" name="ids[]" value="{$vo.id}">
+                    </td>
+                    <td>{$vo.id}</td>
+                    <td>{$vo.user_id}</td>
+                    <td>{$vo.touid ?? getGameName($vo.platform)}</td>
+                    <td>
+                        <eq name="$vo.change_type" value="1">充值</eq>
+                        <eq name="$vo.change_type" value="3">彩票</eq>
+                        <eq name="$vo.change_type" value="4">补单</eq>
+                        <eq name="$vo.change_type" value="5">会员管理转账</eq>
+                        <eq name="$vo.change_type" value="6">优惠赠送</eq>
+                        <eq name="$vo.change_type" value="7">返水</eq>
+                        <eq name="$vo.change_type" value="8">额度转换</eq>
+                        <eq name="$vo.change_type" value="9">登录奖励</eq>
+                        <eq name="$vo.change_type" value="10">每日任务</eq>
+                        <eq name="$vo.change_type" value="11">赠送礼物</eq>
+                        <eq name="$vo.change_type" value="12">弹幕</eq>
+                        <eq name="$vo.change_type" value="13">购买VIP</eq>
+                        <eq name="$vo.change_type" value="14">购买坐骑</eq>
+                        <eq name="$vo.change_type" value="15">发送红包</eq>
+                        <eq name="$vo.change_type" value="16">抢红包</eq>
+                        <eq name="$vo.change_type" value="17">开通守护</eq>
+                        <eq name="$vo.change_type" value="18">转盘游戏</eq>
+                        <eq name="$vo.change_type" value="19">转盘中奖</eq>
+                        <eq name="$vo.change_type" value="20">游戏下注</eq>
+                        <eq name="$vo.change_type" value="21">直播反水</eq>
+                        <eq name="$vo.change_type" value="22">邀请奖励</eq>
+                        <eq name="$vo.change_type" value="23">游戏存取款</eq>
+                        <eq name="$vo.change_type" value="24">提现服务费</eq>
+                        <eq name="$vo.change_type" value="25">彩票下注撤销</eq>
+                    </td>
+                    <td>{$vo.money}</td>
+                    <td>{$vo.next_money}</td>
+                    <td>
+                        <if condition="$vo['change_money'] lt 0 "><font style="color: red">{$vo.change_money}</font>
+                            <else /> <font style="color: green">{$vo.change_money}</font>
+                        </if>
+                    </td>
+                    <td>{$vo.withdraw_id_name}</td>
+                    <td>{$vo.remark}</td>
+                    <td>{$vo.num}</td>
+                    <td>{$vo.showid}</td>
+                    <td>
+                        {$vo.isz == 0 ? '会员' : '机器人'}
+                    </td>
+                    <td>{$vo.addtime}</td>
+
+
+<!--                    <td>-->
+<!--                        <a class="btn btn-xs btn-primary" href='{:url("userChange/edit",array("id"=>$vo["id"]))}'>{:lang('EDIT')}</a>-->
+<!--                        <a class="btn btn-xs btn-danger js-ajax-delete" href="{:url('userChange/del',array($vo['id']))}">{:lang('DELETE')}</a>-->
+
+<!--                    </td>-->
+                </tr>
+            </foreach>
+            </tbody>
+        </table>
+        <div class="pagination">{$page}</div>
+    </form>
+</div>
+
+
+<script src="__STATIC__/js/admin.js"></script>
+<script src="__STATIC__/js/laydate/laydate.js"></script>
+<script>
+
+</script>
+</body>
+</html>

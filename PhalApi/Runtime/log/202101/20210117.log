@@ -1,0 +1,91 @@
+2021-01-17 14:41:43|ERROR|Daili.TeamShow|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''(42885,42886,42887,42891,42916,42917,42918)')' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT * FROM c...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Daili.php(465): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Daili.php(359): Domain_Daili->teamShow(42885, 1, 1577808000, 1639238400)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Daili->teamShow()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-01-17 14:41:50|ERROR|Daili.TeamShow|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''(42885,42886,42887,42891,42916,42917,42918)')' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT * FROM c...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Daili.php(465): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Daili.php(359): Domain_Daili->teamShow(42885, 1, 1577808000, 1639238400)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Daili->teamShow()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-01-17 14:42:32|ERROR|Daili.TeamShow|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''(42885,42886,42887,42891,42916,42917,42918)')' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT * FROM c...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Daili.php(465): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Daili.php(359): Domain_Daili->teamShow(42885, 1, 1577808000, 1639238400)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Daili->teamShow()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-01-17 15:01:44|ERROR|Daili.GetMemberList|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('select * from c...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('select * from c...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Daili.php(223): NotORM_Result->queryAll('select * from c...')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Daili.php(284): Domain_Daili->getMemberList(42896, NULL, '0', NULL, NULL, 1, 99)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Daili->getMemberList()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-01-17 15:06:02|ERROR|Daili.TeamShow|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',,,,,) and bet_time >= 1577808000 and bet_time <= 1639238400 and platform_code =' at line 5 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT\n        ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('SELECT\n        ...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Daili.php(511): NotORM_Result->queryAll('SELECT\n        ...')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Daili.php(359): Domain_Daili->teamShow(42885, 16, 1577808000, 1639238400)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Daili->teamShow()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-01-17 15:07:50|ERROR|Daili.TeamShow|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',,,,,) and bet_time >= 1577808000 and bet_time <= 1639238400 and platform_code =' at line 5 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT \n       ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('SELECT \n       ...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Daili.php(511): NotORM_Result->queryAll('SELECT \n       ...')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Daili.php(359): Domain_Daili->teamShow(42885, 16, 1577808000, 1639238400)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Daili->teamShow()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-01-17 16:58:37|ERROR|Video.GetComments|PDOException: Unknown column 'prentid' in 'where clause' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT * FROM c...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Video.php(456): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Video.php(100): Model_Video->getComments(42885, 7, 1)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Video.php(923): Domain_Video->getComments(42885, 7, 1)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Video->getComments()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-01-17 17:17:23|ERROR|User.UpdateFields|PDOException: Incorrect integer value: '' for column 'sex' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(76): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42896, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1581): Domain_User->userUpdate(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-01-17 17:17:32|ERROR|User.UpdateFields|PDOException: Incorrect integer value: '' for column 'sex' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(76): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42896, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1581): Domain_User->userUpdate(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-01-17 18:20:59|ERROR|Daili.GetMemberList|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('select * from c...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('select * from c...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Daili.php(223): NotORM_Result->queryAll('select * from c...')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Daili.php(284): Domain_Daili->getMemberList(42899, NULL, '0', NULL, NULL, 1, 99)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Daili->getMemberList()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}

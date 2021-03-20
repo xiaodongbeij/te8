@@ -1,0 +1,8 @@
+2020-12-26 15:05:24|ERROR|Car.GetMyCarList|PDOException: Table 'yunbao_com.car_user' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT A.id as ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('SELECT A.id as ...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Car.php(46): NotORM_Result->queryAll('SELECT A.id as ...', Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Car->getMyCarList()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#5 {main}

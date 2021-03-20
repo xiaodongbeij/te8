@@ -1,0 +1,50 @@
+2021-01-12 08:59:31|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210112/06637571718387561.png
+2021-01-12 11:47:27|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210112/06637672471213161.png
+2021-01-12 11:49:50|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210112/06637673906135686.png
+2021-01-12 11:54:14|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210112/06637676549227006.png
+2021-01-12 13:40:48|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210112/06637740484398313.png
+2021-01-12 14:34:19|ERROR|User.AddUserBank|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT * FROM c...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(728): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->addUserBank()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-01-12 15:06:05|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210112/06637791658728924.png
+2021-01-12 16:07:53|ERROR|Ticket.GetGameCate|PDOException: Unknown column 'name' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,name,...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(119): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getGameCate()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#5 {main}
+2021-01-12 16:08:00|ERROR|Ticket.GetGameCate|PDOException: Unknown column 'name' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,name,...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(119): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getGameCate()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#5 {main}
+2021-01-12 16:34:28|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210112/06637844682161372.png
+2021-01-12 16:48:11|ERROR|User.WithdrawList|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT bank_nam...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1170): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->withdrawList()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-01-12 17:26:59|ERROR|User.WithdrawList|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT bank_nam...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1170): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->withdrawList()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}

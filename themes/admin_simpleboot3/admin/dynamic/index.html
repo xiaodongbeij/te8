@@ -1,0 +1,266 @@
+<include file="public@header" />
+<style>
+    .imgtip{
+        margin-bottom:5px;
+    }
+</style>
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a >动态列表</a></li>
+		</ul>
+        
+        <form class="well form-inline margin-top-20" method="post" action="{:url('dynamic/index')}">
+            排序：
+            <select class="form-control" name="ordertype" style="width: 100px;">
+                <option value=''>全部</option>
+                <volist name="ordertype" id="v">
+                    <option value="{$key}" <if condition="input('request.ordertype') neq '' && input('request.ordertype') eq $key">selected</if>>{$v}</option>
+                </volist>
+            </select>
+            
+            类型：
+            <select class="form-control" name="type" style="width: 100px;">
+                <option value=''>全部</option>
+                <volist name="type" id="v">
+                    <option value="{$key}" <if condition="input('request.type') neq '' && input('request.type') eq $key">selected</if>>{$v}</option>
+                </volist>
+            </select>
+            提交时间：
+            <input class="form-control js-bootstrap-date" name="start_time" id="start_time" value="{:input('request.start_time')}" aria-invalid="false" style="width: 110px;"> - 
+            <input class="form-control js-bootstrap-date" name="end_time" id="end_time" value="{:input('request.end_time')}" aria-invalid="false" style="width: 110px;">
+            用户ID：
+            <input class="form-control" type="text" name="uid" style="width: 200px;" value="{:input('request.uid')}"
+                   placeholder="用户ID">
+            <input type="hidden" name="status" value="{$status2}"/>
+            <input type="hidden" name="isdel" value="{$isdel2}"/>
+            <input type="submit" class="btn btn-primary" value="搜索"/>
+            <a class="btn btn-danger" href="{:url('dynamic/index',array('status'=>$status2,'isdel'=>$isdel2))}">清空</a>
+        </form>
+    
+		<form method="post" class="js-ajax-form">
+            <div class="table-actions">
+                <button class="btn btn-danger btn-sm js-ajax-submit" type="submit" data-action="{:url('dynamic/del')}"
+                        data-subcheck="true">{:lang('DELETE')}
+                </button>
+            </div>
+			<table class="table table-hover table-bordered">
+				<thead>
+					<tr>
+                        <th width="16">
+                            <label>
+                                <input type="checkbox" class="js-check-all" data-direction="x" data-checklist="js-check-x">
+                            </label>
+                        </th>
+						<th>ID</th>
+						<th>用户</th>
+						<th>类型</th>
+						<th width="10%">标题</th>
+						<th width="30%">图片</th>
+						<th>位置</th>
+						<th>点赞数</th>
+						<th>评论数</th>
+						<th>推荐值</th>
+						<th>状态</th>
+						<th>提交时间</th>
+						<th align="center">{:lang('ACTIONS')}</th>
+					</tr>
+				</thead>
+				<tbody>
+					<foreach name="list" item="vo">
+					<tr>
+                        <td>
+                            <input type="checkbox" class="js-check" data-yid="js-check-y" data-xid="js-check-x" name="ids[]" value="{$vo.id}">
+                        </td>
+						<td>{$vo['id']}</td>
+						<td>{$vo['userinfo']['user_nicename']} ({$vo['uid']})</td>
+                        <td>{$type[$vo['type']]}</td>
+                        <td>{$vo['title']}</td>
+						<td>
+                            <if condition="$vo['type'] eq 1">
+                                <volist name="vo.thumb" id="v">
+                                <img class="imgtip" src="{$v}" style="max-width:100px;max-height:100px;">
+                                </volist>
+                            </if>
+                            <if condition="$vo['type'] eq 2">
+                                <if condition="$vo['video_thumb']"><img class="imgtip" src="{$vo['video_thumb']}" style="max-width:100px;max-height:100px;"></if>
+                            </if>
+                        
+                        </td>
+						<td>{$vo['address']}</td>
+						<td>{$vo['likes']}</td>
+						<td>{$vo['comments']}</td>
+						<td>{$vo['recommend_val']}</td>
+                        <if condition="$vo['isdel'] eq '1'">
+                            <td>已下架</td>
+                        <else />
+                            <td>{$status[$vo['status']]}</td>
+                        </if>
+						
+                        <td>{:date('Y-m-d H:i',$vo['addtime'])}</td>
+						<td>
+                            <if condition="$vo['type'] eq 2">
+                            <a class="btn btn-xs btn-success view" data-id="{$vo['id']}">查看视频</a>
+                            </if>
+                            <if condition="$vo['type'] eq 3">
+                            <a class="btn btn-xs btn-success view" data-id="{$vo['id']}">查看语音</a>
+                            </if>
+                            <if condition="$vo['status'] eq 0">
+                                <a class="btn btn-xs btn-success js-ajax-dialog-btn" href="{:url('dynamic/setstatus',array('id'=>$vo['id'],'status'=>1))}">同意</a>
+                                <a class="btn btn-xs btn-danger js-ajax-dialog-btn" href="{:url('dynamic/setstatus',array('id'=>$vo['id'],'status'=>-1))}">拒绝</a>
+                            </if>
+                            <if condition="$vo['status'] eq 1">
+                                <if condition="$vo['isdel'] eq '0'">
+                                <a class="btn btn-xs btn-warning xiajia" data-id="{$vo['id']}">下架动态</a>
+                                </if>
+                                <if condition="$vo['isdel'] eq '1'">
+                                <a class="btn btn-xs btn-success js-ajax-dialog-btn" href="{:url('dynamic/setDel',array('id'=>$vo['id'],'isdel'=>0,'reason'=>''))}">上架</a>
+                                </if>
+                            </if>
+                            
+                            <if condition="$vo['status'] eq 1">
+                                <!-- <a class="btn btn-xs btn-danger js-ajax-dialog-btn" href="{:url('dynamic/setstatus',array('id'=>$vo['id'],'status'=>-1))}">拒绝</a> -->
+                            </if>
+                            
+                            <if condition="$vo['status'] eq -1">
+                                <!-- <a class="btn btn-xs btn-success js-ajax-dialog-btn" href="{:url('dynamic/setstatus',array('id'=>$vo['id'],'status'=>1))}">同意</a> -->
+                            </if>
+                            
+                            <if condition="$vo['status'] eq 1 && $vo['isdel'] eq 0">
+                            <a class="btn btn-xs btn-info setrecom" data-id="{$vo['id']}" data-recoms="{$vo['recommend_val']}">设置推荐值</a>
+                            </if>
+                            
+                            <if condition="$vo['status'] neq 0">
+                            <a class="btn btn-xs btn-primary comment" data-id="{$vo['id']}">查看评论</a>
+                            </if>
+                            <!-- <a class="btn btn-xs btn-primary" href='{:url("dynamiccom/index",array("did"=>$vo["id"]))}'>查看评论</a> -->
+                            
+                            <a class="btn btn-xs btn-danger js-ajax-delete" href="{:url('dynamic/del',array('id'=>$vo['id']))}">{:lang('DELETE')}</a>
+						</td>
+					</tr>
+					</foreach>
+				</tbody>
+			</table>
+			<div class="pagination">{$page}</div>
+
+		</form>
+	</div>
+    <div id="enlarge_images" style="position:fixed;display:none;z-index:2;"></div>
+	<script src="__STATIC__/js/admin.js"></script>
+    <script>
+        $(function(){
+            
+            Wind.use('layer');
+            
+            $('.xiajia').click(function(){
+                var _this=$(this);
+                var id=_this.data('id');
+                
+                layer.prompt({
+                    formType: 2,
+                    title: '请输入下架原因',
+                    area: ['800px', '100px'] //自定义文本域宽高
+                }, function(value, index, elem){
+                    $.ajax({
+                        url:'{:url('dynamic/setDel')}',
+                        type:'POST',
+                        data:{id:id,isdel:1,reason:value},
+                        dataType:'json',
+                        success:function(data){
+                            var code=data.code;
+                            if(code==0){
+                                layer.msg(data.msg);
+                                return !1;
+                            }
+                            layer.msg(data.msg,{},function(){
+                                layer.closeAll();
+                                reloadPage(window);
+                            });
+                            
+                        },
+                        error:function(){
+                            layer.msg('操作失败，请重试')
+                        }
+                    });
+                    
+                });
+                
+            })
+            
+            $('.setrecom').click(function(){
+                var _this=$(this);
+                var id=_this.data('id');
+                var recoms=_this.data('recoms');
+                
+                layer.prompt({
+                    formType: 0,
+                    title: '推荐值',
+                    value: recoms,
+                    area: ['800px', '100px'] //自定义文本域宽高
+                }, function(value, index, elem){
+				
+					if(isNaN(value)){
+						layer.msg('请填写数字!');
+						return 0;
+					}
+				
+                    $.ajax({
+                        url:'{:url('Dynamic/setrecom')}',
+                        type:'POST',
+                        data:{id:id,recoms:value},
+                        dataType:'json',
+                        success:function(data){
+                            var code=data.code;
+                            if(code==0){
+                                layer.msg(data.msg);
+                                return !1;
+                            }
+                            layer.msg(data.msg,{},function(){
+                                layer.closeAll();
+                                reloadPage(window);
+                            });
+                            
+                        },
+                        error:function(){
+                            layer.msg('操作失败，请重试')
+                        }
+                    });
+                    
+                });
+                
+            })
+            
+            $('.comment').click(function(){
+                var _this=$(this);
+                var id=_this.data('id');
+
+                layer.open({
+                    type: 2,
+                    title: '查看评论',
+                    shadeClose: true,
+                    shade: 0.8,
+                    area: ['80%', '100%'],
+                    content: '/admin/Dynamiccom/index?dynamicid='+id
+                }); 
+                
+            });
+            
+            $('.view').click(function(){
+                var _this=$(this);
+                var id=_this.data('id');
+
+                layer.open({
+                    type: 2,
+                    title: '查看',
+                    shadeClose: true,
+                    shade: 0.8,
+                    area: ['500px', '100%'],
+                    content: '/admin/Dynamic/see?id='+id
+                }); 
+                
+            });
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,352 @@
+2021-02-20 14:05:59|ERROR|User.UpdateFields|PDOException: Data truncated for column 'birthday' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(129): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(109297, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1682): Domain_User->userUpdate(109297, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-20 14:06:03|ERROR|User.UpdateFields|PDOException: Data truncated for column 'birthday' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(129): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(109297, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1682): Domain_User->userUpdate(109297, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-20 14:06:04|ERROR|User.UpdateFields|PDOException: Data truncated for column 'birthday' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(129): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(109297, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1682): Domain_User->userUpdate(109297, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-20 14:06:05|ERROR|User.UpdateFields|PDOException: Data truncated for column 'birthday' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(129): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(109297, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1682): Domain_User->userUpdate(109297, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-20 14:06:07|ERROR|User.UpdateFields|PDOException: Data truncated for column 'birthday' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(129): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(109297, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1682): Domain_User->userUpdate(109297, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-20 15:26:39|ERROR|Video.getCon|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2515): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Video.php(257): checkShopIsPass('109314')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Video->getCon()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-20 15:58:10|ERROR|Ticket.ChoiceTicket|PDOException: Unknown column 'vip_type' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,coin ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(684): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->choiceTicket()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-20 15:58:24|ERROR|Ticket.ChoiceTicket|PDOException: Unknown column 'vip_type' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,coin ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(684): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->choiceTicket()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-20 15:59:02|ERROR|Ticket.ChoiceTicket|PDOException: Unknown column 'vip_type' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,coin ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(684): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->choiceTicket()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-20 15:59:12|ERROR|Ticket.ChoiceTicket|PDOException: Unknown column 'vip_type' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,coin ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(684): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->choiceTicket()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-20 15:59:39|ERROR|Ticket.ChoiceTicket|PDOException: Unknown column 'vip_type' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,coin ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(684): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->choiceTicket()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-20 16:00:29|ERROR|Ticket.ChoiceTicket|PDOException: Unknown column 'vip_type' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,coin ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(684): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->choiceTicket()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-20 16:02:34|ERROR|Ticket.ChoiceTicket|PDOException: Unknown column 'vip_type' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,coin ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(684): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->choiceTicket()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-20 16:02:36|ERROR|Ticket.ChoiceTicket|PDOException: Unknown column 'vip_type' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,coin ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(684): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->choiceTicket()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-20 16:02:38|ERROR|Ticket.ChoiceTicket|PDOException: Unknown column 'vip_type' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,coin ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(684): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->choiceTicket()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-20 16:02:38|ERROR|Ticket.ChoiceTicket|PDOException: Unknown column 'vip_type' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,coin ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(684): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->choiceTicket()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-20 16:04:42|ERROR|Ticket.ChoiceTicket|PDOException: Unknown column 'vip_type' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,coin ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(684): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->choiceTicket()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-20 16:04:48|ERROR|Ticket.ChoiceTicket|PDOException: Unknown column 'vip_type' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,coin ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(684): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->choiceTicket()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-20 16:04:51|ERROR|Ticket.ChoiceTicket|PDOException: Unknown column 'vip_type' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,coin ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(684): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->choiceTicket()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-20 16:04:52|ERROR|Ticket.ChoiceTicket|PDOException: Unknown column 'vip_type' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,coin ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(684): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->choiceTicket()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-20 16:06:21|ERROR|Ticket.ChoiceTicket|PDOException: Unknown column 'vip_type' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,coin ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(684): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->choiceTicket()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-20 16:08:13|ERROR|Ticket.ChoiceTicket|PDOException: Unknown column 'vip_type' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,coin ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(684): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->choiceTicket()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-20 16:08:21|ERROR|Ticket.ChoiceTicket|PDOException: Unknown column 'vip_type' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,coin ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(684): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->choiceTicket()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-20 16:08:24|ERROR|Ticket.ChoiceTicket|PDOException: Unknown column 'vip_type' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,coin ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(684): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->choiceTicket()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-20 16:09:24|ERROR|Ticket.ChoiceTicket|PDOException: Unknown column 'vip_type' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,coin ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(684): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->choiceTicket()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-20 16:10:17|ERROR|Ticket.ChoiceTicket|PDOException: Unknown column 'vip_type' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,coin ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(684): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->choiceTicket()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-20 16:10:28|ERROR|Ticket.ChoiceTicket|PDOException: Unknown column 'vip_type' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,coin ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(684): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->choiceTicket()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-20 16:10:58|ERROR|Ticket.ChoiceTicket|PDOException: Unknown column 'vip_type' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,coin ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(684): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->choiceTicket()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-20 16:10:59|ERROR|Ticket.ChoiceTicket|PDOException: Unknown column 'vip_type' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,coin ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(684): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->choiceTicket()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-20 16:10:59|ERROR|Ticket.ChoiceTicket|PDOException: Unknown column 'vip_type' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,coin ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(684): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->choiceTicket()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-20 16:10:59|ERROR|Ticket.ChoiceTicket|PDOException: Unknown column 'vip_type' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,coin ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(684): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->choiceTicket()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-20 16:10:59|ERROR|Ticket.ChoiceTicket|PDOException: Unknown column 'vip_type' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,coin ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(684): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->choiceTicket()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-20 16:11:00|ERROR|Ticket.ChoiceTicket|PDOException: Unknown column 'vip_type' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,coin ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(684): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->choiceTicket()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-20 16:11:04|ERROR|Ticket.ChoiceTicket|PDOException: Unknown column 'vip_type' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,coin ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(684): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->choiceTicket()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-20 16:11:19|ERROR|Ticket.ChoiceTicket|PDOException: Unknown column 'vip_type' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,coin ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(650): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->choiceTicket()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-20 16:12:00|ERROR|Ticket.ChoiceTicket|PDOException: Unknown column 'usertype' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,coin ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(650): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->choiceTicket()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-20 16:12:04|ERROR|Ticket.ChoiceTicket|PDOException: Unknown column 'usertype' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,coin ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(650): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->choiceTicket()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-20 16:12:07|ERROR|Ticket.ChoiceTicket|PDOException: Unknown column 'guard_type' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,coin ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(650): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->choiceTicket()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-20 16:12:11|ERROR|Ticket.ChoiceTicket|PDOException: Unknown column 'liangname' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,coin ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(650): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->choiceTicket()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}

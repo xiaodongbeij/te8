@@ -1,0 +1,50 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a >用户等级列表</a></li>
+            <li><a href="{:url('Level/add')}">{:lang('ADD')}</a></li>
+		</ul>
+		<form method="post" class="js-ajax-form" >
+			<table class="table table-hover table-bordered">
+				<thead>
+					<tr>
+						<th>等级</th>
+						<th>等级名称</th>
+						<th>等级经验上限</th>
+						<th>昵称颜色</th>
+						<th>图标</th>
+						<th>头像角标</th>
+						<th>背景</th>
+						<th>发布时间</th>
+						<th>{:lang('ACTIONS')}</th>
+					</tr>
+				</thead>
+				<tbody>
+					<foreach name="lists" item="vo">
+					<tr>
+						<td>{$vo['levelid']}</td>
+						<td>{$vo['levelname']}</td>
+						<td>{$vo['level_up']}</td>
+                        <td><input style="width:50px;height:20px;background:#{$vo['colour']};border:none;" disabled/></td>
+                        <td><img src="{$vo['thumb']}" style="height:24px"></td>
+                        <td><img src="{$vo['thumb_mark']}" style="height:24px"></td>
+                        <td><img src="{$vo['bg']}" style="height:24px"></td>
+						<td>{:date('Y-m-d H:i',$vo['addtime'])}</td>
+						<td>	                            
+                            <a class="btn btn-xs btn-primary" href='{:url("Level/edit",array("id"=>$vo["id"]))}'>{:lang('EDIT')}</a>
+							<a class="btn btn-xs btn-danger js-ajax-delete" href="{:url('Level/del',array('id'=>$vo['id']))}">{:lang('DELETE')}</a>
+                            
+						</td>
+					</tr>
+					</foreach>
+				</tbody>
+			</table>
+			<div class="pagination">{$page}</div>
+
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

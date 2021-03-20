@@ -1,0 +1,95 @@
+<include file="public@header"/>
+<style>
+    .table img{
+        width:25px;
+        height:25px;
+    }
+
+    #pop{
+        display:none;
+    }
+</style>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a>存取统计</a></li>
+<!--        <li><a href="{:url('Deposit/add')}">{:lang('ADD')}</a></li>-->
+    </ul>
+    <form class="well form-inline margin-top-20" method="post" action="{:url('user/Deposit/index')}">
+
+        用户：
+        <input class="form-control" type="text" name="user_login" style="width: 200px;" value="{:input('request.user_login')}"
+               placeholder="请输入用户ID">
+
+        <input type="submit" class="btn btn-primary" value="搜索"/>
+        <a class="btn btn-danger" href="{:url('user/Deposit/index')}">清空</a>
+        <br>
+        <br>
+    </form>
+    <form method="post" class="js-ajax-form">
+
+        <table class="table table-hover table-bordered">
+            <thead>
+            <tr>
+                <th width="16">
+                    <label>
+                        <input type="checkbox" class="js-check-all" data-direction="x" data-checklist="js-check-x">
+                    </label>
+                </th>
+                <th>用户</th>
+                <th>存款</th>
+                <th>取款</th>
+                <th>盈亏</th>
+
+<!--                <th>{:lang('ACTIONS')}</th>-->
+            </tr>
+            </thead>
+            <tbody>
+
+            <tr>
+                <td><strong>总:</strong></td>
+                <td><strong>{$user_num}（人）</strong></td>
+                <td style="color: green"><strong>{$count_money}</strong></td>
+                <td style="color: red;"><strong>{$count_Withdrawal}</strong></td>
+                <td>
+                    <if condition="$comprehensive lt 0 "><font style="color: red"><strong>{$comprehensive}</strong></font>
+                        <else /> <font style="color: green"><strong>{$comprehensive}</strong></font>
+                    </if>
+                </td>
+            </tr>
+            <foreach name="list" item="vo">
+                <tr>
+                    <td>
+                        <input type="checkbox" class="js-check" data-yid="js-check-y" data-xid="js-check-x" name="ids[]" value="{$vo.id}">
+                    </td>
+                    <td>{$vo.id}</td>
+                    <td style="color: green">{$vo.count_money}</td>
+                    <td style="color: red;">{$vo.count_Withdrawal}</td>
+                    <td>
+                        <if condition="$vo['comprehensive'] lt 0 "><font style="color: red">{$vo.comprehensive}</font>
+                            <else /> <font style="color: green">{$vo.comprehensive}</font>
+                        </if>
+                    </td>
+
+<!--                    <td>-->
+<!--                        <a class="btn btn-xs btn-primary" href='{:url("Deposit/edit",array("id"=>$vo["id"]))}'>{:lang('EDIT')}</a>-->
+<!--                        <a class="btn btn-xs btn-danger js-ajax-delete" href="{:url('Deposit/del',array($vo['id']))}">{:lang('DELETE')}</a>-->
+<!--                    </td>-->
+                </tr>
+            </foreach>
+
+            </tbody>
+        </table>
+        <div class="pagination">{$page}</div>
+    </form>
+</div>
+
+
+<script src="__STATIC__/js/admin.js"></script>
+<script src="__STATIC__/js/laydate/laydate.js"></script>
+<script>
+
+</script>
+</body>
+</html>

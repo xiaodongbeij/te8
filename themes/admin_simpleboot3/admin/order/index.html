@@ -1,0 +1,159 @@
+<include file="public@header"/>
+<style>
+    .table img{
+        width:25px;
+        height:25px;
+    }
+
+    #pop{
+        display:none;
+    }
+</style>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a>订单管理</a></li>
+<!--        <li><a href="{:url('Channel/add')}">{:lang('ADD')}</a></li>-->
+    </ul>
+    <form class="well form-inline margin-top-20" method="post" action="{:url('admin/Order/index')}">
+
+        订单编号：
+        <input class="form-control" type="text" name="order_sn" style="width: 200px;" value="{:input('request.order_sn')}"
+               placeholder="请输入订单编号">
+
+        三方订单号：
+        <input class="form-control" type="text" name="third_order_sn" style="width: 200px;" value="{:input('request.third_order_sn')}"
+               placeholder="请输入三方订单号">
+
+        用户：
+        <input class="form-control" type="text" name="user_id" style="width: 200px;" value="{:input('request.user_id')}"
+               placeholder="请输入用户ID">
+
+        支付通道：
+        <select class="form-control" name="channel_id">
+            <option value="">全部</option>
+            <foreach name="channels" item="v">
+                <option value="{$v.id}" <if condition="input('request.channel_id') neq '' && input('request.channel_id') eq 1">selected</if>>{$v.channel_name}</option>
+            </foreach>
+        </select>
+
+        支付方式：
+        <select class="form-control" name="payway">
+            <option value="">全部</option>
+            <option value="1" <if condition="input('request.payway') neq '' && input('request.payway') eq 1">selected</if>>支付宝</option>
+            <option value="2" <if condition="input('request.payway') neq '' && input('request.payway') eq 2">selected</if>>微信</option>
+            <option value="3" <if condition="input('request.payway') neq '' && input('request.payway') eq 3">selected</if>>银行卡</option>
+        </select>
+        <p></p>
+        订单状态：
+        <select class="form-control" name="order_status">
+            <option value="">全部</option>
+            <option value="1" <if condition="input('request.order_status') neq '' && input('request.order_status') eq 1">selected</if>>支付中</option>
+            <option value="2" <if condition="input('request.order_status') neq '' && input('request.order_status') eq 2">selected</if>>取消</option>
+            <option value="3" <if condition="input('request.order_status') neq '' && input('request.order_status') eq 3">selected</if>>无效</option>
+            <option value="4" <if condition="input('request.order_status') neq '' && input('request.order_status') eq 4">selected</if>>完成</option>
+            <option value="5" <if condition="input('request.order_status') neq '' && input('request.order_status') eq 5">selected</if>>退款</option>
+        </select>
+
+        支付状态：
+        <select class="form-control" name="pay_status">
+            <option value="">全部</option>
+            <option value="1" <if condition="input('request.pay_status') neq '' && input('request.pay_status') eq 1">selected</if>>已支付</option>
+            <option value="0" <if condition="input('request.pay_status') neq '' && input('request.pay_status') eq 0">selected</if>>未支付</option>
+        </select>
+
+        下单时间：
+        <input class="form-control js-bootstrap-date" name="start_time" id="start_time" autocomplete="off" value="{:input('request.start_time')}" aria-invalid="false" style="width: 110px;"> -
+        <input class="form-control js-bootstrap-date" name="end_time" id="end_time" autocomplete='off' value="{:input('request.end_time')}" aria-invalid="false" style="width: 110px;">
+
+        支付时间：
+        <input class="form-control js-bootstrap-date" name="pay_start_time" id="pay_start_time" autocomplete="off" value="{:input('request.pay_start_time')}" aria-invalid="false" style="width: 110px;"> -
+        <input class="form-control js-bootstrap-date" name="pay_end_time" id="pay_end_time" autocomplete='off' value="{:input('request.pay_end_time')}" aria-invalid="false" style="width: 110px;">
+
+        <input type="submit" class="btn btn-primary" value="搜索"/>
+        <a class="btn btn-danger" href="{:url('admin/Order/index')}">清空</a>
+        <br>
+        <br>
+    </form>
+    <form method="post" class="js-ajax-form">
+
+        <table class="table table-hover table-bordered">
+            <thead>
+            <tr>
+             
+                <th>订单编号</th>
+                <th>三方订单号</th>
+                <th>订单状态</th>
+                <th>支付状态</th>
+                <th>用户</th>
+                <th>支付方式</th>
+                <th>支付通道</th>
+                <th>订单金额</th>
+                <th>支付金额</th>
+                <th>订单类型</th>
+                <th>备注</th>
+                <th>下单时间</th>
+                <th>支付时间</th>
+
+                <th>{:lang('ACTIONS')}</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            <foreach name="list" item="vo">
+                <tr>
+                   
+                    <td>{$vo.order_sn}</td>
+                    <td>{$vo.third_order_sn}</td>
+                    <td>
+                        <eq name="$vo.order_status" value="1">支付中</eq>
+                        <eq name="$vo.order_status" value="2">取消</eq>
+                        <eq name="$vo.order_status" value="3">无效</eq>
+                        <eq name="$vo.order_status" value="4">完成</eq>
+                        <eq name="$vo.order_status" value="5">退款</eq>
+                    </td>
+                    <td>
+                        <eq name="$vo.pay_status" value="1"><font style="color: green">已支付</font></eq>
+                        <eq name="$vo.pay_status" value="0"><font style="color: red">未支付</font></eq>
+                    </td>
+                    <td>{$vo.user_id}</td>
+                    <td>
+                        <eq name="$vo.payway" value="1">支付宝</eq>
+                        <eq name="$vo.payway" value="2">微信</eq>
+                        <eq name="$vo.payway" value="3">银行卡</eq>
+                    </td>
+                    <td>{$vo.channel.channel_name}</td>
+                    <td>{$vo.order_money}</td>
+                    <td>{$vo.pay_money}</td>
+                    <td>
+                        <eq name="$vo.type" value="1"><font style="color: #7f5006">余额充值</font></eq>
+                        <eq name="$vo.type" value="2"><font style="color: #8B6914">VIP购买</font></eq>
+                    </td>
+                    <td>{$vo.remark}</td>
+                    <td>{$vo.addtime}</td>
+                    <td>{$vo.pay_time}</td>
+
+                    <td>
+                        <eq name="$vo.order_status" value="1">
+                            <a class="btn btn-xs btn-primary" href='{:url("Order/callback",array("id"=>$vo["id"]))}'>手动回调</a>
+                        </eq>
+                        <a class="btn btn-xs btn-danger js-ajax-delete" href="{:url('Order/del',array($vo['id']))}">{:lang('DELETE')}</a>
+
+                    </td>
+                </tr>
+            </foreach>
+            </tbody>
+        </table>
+        <div class="pagination">{$page}</div>
+    </form>
+</div>
+
+
+<script src="__STATIC__/js/admin.js"></script>
+<script src="__STATIC__/js/laydate/laydate.js"></script>
+<script>
+
+</script>
+</body>
+</html>

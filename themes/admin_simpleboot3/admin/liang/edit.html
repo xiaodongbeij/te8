@@ -1,0 +1,42 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li ><a href="{:url('Liang/index')}">靓号列表</a></li>
+			<li class="active"><a >{:lang('EDIT')}</a></li>
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('Liang/editPost')}">
+            <div class="form-group">
+				<label for="input-name" class="col-sm-2 control-label"><span class="form-required">*</span>靓号</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-name" name="name" value="{$data['name']}" maxlength="6">最长6位
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-coin" class="col-sm-2 control-label"><span class="form-required">*</span>{$configpub.name_coin}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-coin" name="coin" value="{$data['coin']}" maxlength="9" oninput="this.value=this.value.replace(/\D/g,'')">
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-score" class="col-sm-2 control-label"><span class="form-required">*</span>{$configpub.name_score}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-score" name="score" value="{$data['score']}" maxlength="9" oninput="this.value=this.value.replace(/\D/g,'')">
+				</div>
+			</div>
+            <div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<input type="hidden" name="id" value="{$data.id}" />
+					<button type="submit" class="btn btn-primary js-ajax-submit">{:lang('EDIT')}</button>
+					<a class="btn btn-default" href="javascript:history.back(-1);">{:lang('BACK')}</a>
+				</div>
+			</div>
+
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

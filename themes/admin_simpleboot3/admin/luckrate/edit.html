@@ -1,0 +1,58 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li ><a href="{:url('Luckrate/index',array('giftid'=>$data['giftid']))}">列表</a></li>
+			<li class="active"><a >{:lang('EDIT')}</a></li>
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('Luckrate/editPost')}">
+            <div class="form-group">
+				<label for="input-name" class="col-sm-2 control-label"><span class="form-required">*</span>数量</label>
+				<div class="col-md-6 col-sm-10">
+					<select class="form-control" name="nums">
+                        <volist name="numslist" id="v">
+                        <option value="{$v}" <eq name="data['nums']" value="$v">selected</eq>>{$v}</option>
+                        </volist>
+                    </select>
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-times" class="col-sm-2 control-label"><span class="form-required">*</span>倍数</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-times" name="times" value="{$data['times']}">
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-name" class="col-sm-2 control-label"><span class="form-required">*</span>是否全站</label>
+				<div class="col-md-6 col-sm-10">
+					<select class="form-control" name="isall">
+                        <option value="0">关闭</option>
+                        <option value="1" <eq name="data['isall']" value="1">selected</eq>>开启</option>
+                    </select>
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-rate" class="col-sm-2 control-label"><span class="form-required">*</span>中奖概率</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-rate" name="rate" value="{$data['rate']}">%  最小支持0.001%
+				</div>
+			</div>
+
+            <div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<input type="hidden" name="id" value="{$data.id}" />
+					<input type="hidden" name="giftid" value="{$data.giftid}" />
+					<button type="submit" class="btn btn-primary js-ajax-submit">{:lang('EDIT')}</button>
+					<a class="btn btn-default" href="javascript:history.back(-1);">{:lang('BACK')}</a>
+				</div>
+			</div>
+
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

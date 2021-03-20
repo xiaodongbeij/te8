@@ -1,0 +1,90 @@
+<include file="public@header"/>
+<style>
+    .table img{
+        width:25px;
+        height:25px;
+    }
+
+    #pop{
+        display:none;
+    }
+</style>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a>系统综合报表</a></li>
+        <!--        <li><a href="{:url('userChange/add')}">{:lang('ADD')}</a></li>-->
+    </ul>
+<!--    <form class="well form-inline margin-top-20" method="post" name="form1" action="{:url('report/UserProfit/system_report')}">-->
+    <form class="well form-inline margin-top-20" method="post" name="form1">
+
+        时间范围：
+        <input class="form-control js-bootstrap-date" name="start_time" id="start_time" autocomplete="off" value="{:input('request.start_time')}" aria-invalid="false" style="width: 110px;"> -
+        <input class="form-control js-bootstrap-date" name="end_time" id="end_time" autocomplete='off' value="{:input('request.end_time')}" aria-invalid="false" style="width: 110px;">
+
+<!--        <input type="submit" class="btn btn-primary" value="搜索"/>-->
+<!--        <input type="submit" class="btn btn-primary" value="搜索"/>-->
+        <input type="button" class="btn btn-success" value="搜索" onclick="form1.action='{:url('UserProfit/system_report')}';form1.submit();"/>
+        <input type="button" class="btn btn-success" value="导出" onclick="form1.action='{:url('UserProfit/export')}';form1.submit();"/>
+        <a class="btn btn-danger" href="{:url('user/userChange/index')}">清空</a>
+        <br>
+        <br>
+    </form>
+    <form method="post" class="js-ajax-form">
+
+        <table class="table table-hover table-bordered">
+            <thead>
+            <tr>
+                <!--                <th width="16">-->
+                <!--                    <label>-->
+                <!--                        <input type="checkbox" class="js-check-all" data-direction="x" data-checklist="js-check-x">-->
+                <!--                    </label>-->
+                <!--                </th>-->
+                <!--                <th>ID</th>-->
+                <th>日期</th>
+                <th>存款</th>
+                <th>取款</th>
+                <th>奖金</th>
+                <th>下注</th>
+                <th>返点</th>
+                <th>活动</th>
+                <th>盈亏</th>
+                <!--                <th>{:lang('ACTIONS')}</th>-->
+            </tr>
+            </thead>
+            <tbody>
+
+            <foreach name="list" item="vo">
+                <tr>
+
+
+                    <td>{$vo.date}</td>
+                    <td>{$vo.recharge}</td>
+                    <td>{$vo.withdrawal}</td>
+                    <td>{$vo.bonus}</td>
+                    <td>{$vo.xia}</td>
+                    <td>{$vo.rate}</td>
+                    <td>{$vo.activity}</td>
+                    <!--                    <td>{$vo.yin}</td>-->
+                    <td>
+                        <if condition="$vo['yin'] lt 0 "><font style="color: red">{$vo.yin}</font>
+                            <else /> <font style="color: green">{$vo.yin}</font>
+                        </if>
+                    </td>
+                </tr>
+            </foreach>
+            </tbody>
+        </table>
+        <div class="pagination">{$page}</div>
+    </form>
+</div>
+
+
+<script src="__STATIC__/js/admin.js"></script>
+<script src="__STATIC__/js/laydate/laydate.js"></script>
+<script>
+
+</script>
+</body>
+</html>

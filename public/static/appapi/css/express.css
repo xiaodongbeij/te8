@@ -1,0 +1,109 @@
+body{
+	background: #FFF;
+	padding-left: 0.3rem;
+	padding-right: 0.3rem;
+}
+
+.express_area{
+	margin-top: 0.3rem;
+}
+.express_area .express_thumb{
+	width: 1.5rem;
+	height: auto;
+}
+
+.express_area .express_number{
+	height: 0.8rem;
+	line-height: 0.8rem;
+}
+
+.express_thumb img{
+	width: 100%;
+	height: 100%;
+	border-radius: 0.2rem;
+	border: 1px solid #CCC;
+}
+
+.express_area .express_info{
+	margin-left: 0.3rem;
+}
+
+.express_area .express_info p{
+	height: 0.5rem;
+	line-height: 0.5rem;
+}
+
+.express_area .express_info p:nth-child(2){
+	margin-top: 0.2rem;
+}
+
+.line{
+	height: 0.07rem;
+	background: #E5E5E5;
+}
+
+.express_des{
+	text-align: center;
+	padding-top: 4rem;
+}
+
+.express_address{
+	margin-top: 0.3rem;
+	line-height: 0.4rem;
+}
+
+.express_list{
+	margin-top: 0.5rem;
+}
+
+.express_list ul li{
+	margin-left: 0.2rem;
+	padding-bottom: 0.6rem;
+	border-left: 1px solid #CCC;
+	padding-left: 0.5rem;
+	position: relative;
+}
+
+.express_list ul li .express_sign{
+	position: absolute;
+	width: 0.2rem;
+	height: 0.2rem;
+	border-radius: 100%;
+	background: #CCC;
+	top: 0.01rem;
+	left: -0.1rem;
+}
+
+.express_list ul li .receive{
+	position: absolute;
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 100%;
+	background: url(../images/express/receive.png);
+	background-size: 100%;
+	top: 0;
+	left: -0.25rem;
+}
+
+.express_list ul li .traffic{
+	position: absolute;
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 100%;
+	background: url(../images/express/traffic.png);
+	background-size: 100%;
+	top: 0;
+	left: -0.25rem;
+}
+
+.fl{
+	float: left;
+}
+
+.fr{
+	float: right;
+}
+
+.clearboth{
+	clear: both;
+}

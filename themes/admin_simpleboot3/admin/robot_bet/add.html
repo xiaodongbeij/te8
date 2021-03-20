@@ -1,0 +1,62 @@
+<include file="public@header" />
+
+
+<link href="__STATIC__/css/fSelect.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<div class="wrap">
+    <ul class="nav nav-tabs">
+        <li ><a href="{:url('RobotBet/index')}">列表</a></li>
+        <li class="active"><a >{:lang('ADD')}</a></li>
+    </ul>
+    <form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('RobotBet/add')}">
+
+        <div class="form-group">
+            <label for="input-maintain_switch" class="col-sm-2 control-label"><span class="form-required">*</span>选择房间号</label>
+            <div class="col-md-6 col-sm-10">
+                <select class="form-control" name="uid">
+                    <option value="" selected>请选择房间号</option>
+                    <foreach name="users" item="v">
+                    <option value="{$v.uid}">{$v.uid} - {$v.title}</option>
+                    </foreach>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>下注金额</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="text" class="form-control" id="input-min_coin" name="coin">
+                <p class="help-block">多个请用逗号(,)隔开</p>
+            </div>
+        </div>
+
+      
+
+        <div class="form-group">
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>推送频率</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="number" class="form-control" id="input-push_frequency" name="push_frequency" oninput="if(value>99)value=99;if(value<1)value=1">
+                <p class="help-block">设置值 越大 发送频率越慢</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-primary js-ajax-submit">{:lang('ADD')}</button>
+                <a class="btn btn-default" href="{:url('RobotBet/index')}">{:lang('BACK')}</a>
+            </div>
+        </div>
+
+    </form>
+</div>
+<script src="__STATIC__/js/admin.js"></script>
+<script src="__STATIC__/js/fSelect.js"></script>
+<script>
+    $(function() {
+        $('.demo1').fSelect();
+    });
+</script>
+</body>
+</html>

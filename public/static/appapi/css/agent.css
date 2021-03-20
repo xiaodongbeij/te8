@@ -1,0 +1,234 @@
+
+body {
+	background:#fff;
+}
+
+
+/* index */
+.home{
+    background:#f5f5f5;
+}
+.home .top_bg{
+    position:relative;
+}
+.home .top_bg img{
+    width:100%;
+}
+.home .top_code{
+    position:relative;
+    margin:-55px auto 30px;
+    padding:5px 0 15px 0;
+    width:6.9rem;
+    border-radius:0.4rem;
+    text-align:center;
+    background:#fff;
+    -webkit-box-shadow:0 0 0.2rem 0 rgba(56,31,12,0.1);  
+    -moz-box-shadow:0 0 0.2rem 0 rgba(56,31,12,0.1);  
+    box-shadow:0 0 0.2rem 0 rgba(56,31,12,0.1);  
+}
+.home .top{
+    padding:0 0.4rem;
+    background:#fff;
+}
+.home .top .myagent{
+	position:relative;
+    padding:0 0.2rem;
+	height:1.2rem;
+	line-height:1.2rem;
+    font-size:0.32rem;
+
+}
+.home .top .myagent .li_l{
+    
+}
+.home .top .myagent .li_r{
+    float:right;
+    font-weight:bold;
+}
+.home .top .myagent .agent_add .li_r{
+    font-weight:normal;
+}
+.home .list{
+    background:#fff;
+    padding:0 0.4rem;
+}
+.home .list ul{}
+.home .list ul li{
+    padding-right:0.6rem;
+    height:1.2rem;
+    line-height:1.2rem;
+    border-top:0.02rem solid #f5f5f5;
+    background:url("../images/right.png") no-repeat center right;
+    background-size:0.28rem;
+    font-size:0.32rem;
+}
+.home .list ul li a{
+    display:block;
+}
+.home .list ul li .li_l{
+
+    
+}
+.home .list ul li .li_r{
+    float:right;
+    color:#ffdd00;
+    font-weight:bold;
+}
+
+.home .mycode_title{
+	line-height:0.6rem;
+	font-size:0.32rem;
+    font-weight:bold;
+}
+.home .mycode{
+	line-height:1rem;
+	font-size:0.32rem;
+    font-weight:bold;
+}
+.home .mycode .code{}
+.home .mycode .code i{
+	display:inline-block;
+	width:0.6rem;
+	height:0.6rem;
+	text-align:center;
+	line-height:0.6rem;
+	border:1px solid #a0a0a0;
+	font-style: normal;	
+	margin:0 0.04rem;
+}
+.home .mycode .copy{
+	color:#969696;
+    font-weight:normal;
+    line-height:100%;
+}
+
+.home .tips{
+    background:#fff;
+	padding:0.2rem 0.4rem;
+	color:#9a9a9a;
+    font-size:0.24rem;
+	line-height:0.6rem;
+}
+
+/* 下级分成 */
+.profit{
+    background:#fff;
+}
+.profit ul{
+	padding-left:0.2rem;
+}
+.profit ul li{
+	position:relative;
+	padding:0.2rem 0 0.2rem  1.2rem;
+	height:1.2rem;
+	border-bottom: 1px solid #efefef;
+}
+.profit ul li .thumb{
+	position:absolute;
+	top:0.2rem;
+	left:0;
+	width:1rem;
+	height:1rem;
+	border-radius:50%;
+}
+.profit ul li .info{
+	width:60%;
+	line-height:0.6rem;
+}
+.profit ul li .info .name{
+	color:#040404;
+	font-size:0.32rem;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.profit ul li .info .id{
+	color:#aaaaaa;
+}
+.profit ul li .info2{
+	position:absolute;
+	top:0.2rem;
+	right:0.2rem;
+	width:2rem;
+	height:1.2rem;
+	line-height:0.6rem;
+}
+.profit ul li .info2 .icon{
+	text-align:center;
+}
+.profit ul li .coin{
+	text-align:center;
+}
+
+/* 设置邀请码 */
+.setcode{}
+.setcode .top{
+	height:4rem;
+	background:url("../images/agent/top_set.png") no-repeat center;
+	background-size:auto 4rem;
+}
+.setcode{}
+.setcode{}
+.setcode{}
+.setcode .mycode{
+	color:#000;
+	line-height:1rem;
+	padding:0 0.2rem;
+	font-size:0.32rem;
+	text-align:center;
+}
+.setcode .mycode .code{
+	position:relative;
+	display:inline-block;
+}
+.setcode .mycode .code i{
+	display:inline-block;
+	width:0.6rem;
+	height:0.6rem;
+	text-align:center;
+	line-height:0.6rem;
+	color:#ffbd00;
+	border:1px solid #bababa;
+	font-style: normal;	
+	margin:0 0.04rem;
+}
+.setcode .mycode .code input{
+	position:absolute;
+	top:0;
+	left:0;
+	width:auto;
+	height:auto;
+	opacity: 0;
+	z-index:-1;
+	-webkit-touch-callout:none;
+	-webkit-user-select:none;
+	-khtml-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+}
+.setcode .mycode .copy i{
+	display:inline-block;
+	width:0.4rem;
+	height:0.4rem;
+	background:url("../images/agent/copy.png") no-repeat center;
+	background-size:0.4rem;
+	vertical-align: middle;
+    margin-top: -0.06rem;
+	margin-right:0.06rem;
+}
+.setcode .tips{
+	padding:0.2rem;
+	color:#9a9a9a;
+	line-height:0.6rem;
+}
+.setcode .submit{
+	width:60%;
+	height:0.8rem;
+	line-height:0.8rem;
+	text-align:center;
+	color:#fff;
+	font-size:0.32rem;
+	margin:0.4rem auto 0;
+	border-radius:0.4rem;
+}

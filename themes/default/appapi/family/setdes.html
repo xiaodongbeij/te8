@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<include file="appapi@head"/>
+		<link type="text/css" rel="stylesheet" href="__STATIC__/appapi/css/family.css?t=1561712930"/>
+		<title><if condition="$type neq '1'">家族简介<else />修改简介</if></title>
+	</head>
+	<body class="setdes">
+			
+			<if condition="$type eq '1'">
+				<textarea id="des" class="textarea" >{$familyinfo['briefing']}</textarea>
+				<div class="setdes_button"></div>
+				<div class="setdes_post button_default" >保存</div>
+			<else />
+				<div class="textarea">{$familyinfo['briefing']}</div>
+			</if>
+		
+		<include file="appapi@footer"/>
+		<script>
+			var familyid='{$familyinfo['id']}';
+			var type='{$type}';
+			if(type!=1){ //根据textarea 标签内容自适应高度  
+				$.each($("#des"), function(i, n){
+					$(n).css("height", n.scrollHeight + "px");
+				});
+			}
+		</script>
+		<script src="__STATIC__/appapi/js/family.js"></script>
+		
+		
+		
+	</body>
+</html>

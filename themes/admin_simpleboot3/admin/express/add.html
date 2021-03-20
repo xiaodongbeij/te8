@@ -1,0 +1,93 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li ><a href="{:url('Express/index')}">物流公司列表</a></li>
+			<li class="active"><a >{:lang('ADD')}</a></li>
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('Express/add_post')}">
+
+            <div class="form-group">
+				<label for="input-express_name" class="col-sm-2 control-label"><span class="form-required">*</span>物流公司名称</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-express_name" name="express_name">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="input-express_phone" class="col-sm-2 control-label"><span class="form-required">*</span>物流公司电话</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-express_phone" name="express_phone" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" >
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="input-express_code" class="col-sm-2 control-label"><span class="form-required">*</span>物流公司编码</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-express_code" name="express_code">
+					<p class="help-block" onclick="getExpressList()">查询编码</p>
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>物流公司图标</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="hidden" name="express_thumb" id="thumbnail" value="">
+                    <a href="javascript:uploadOneImage('图片上传','#thumbnail');">
+                        <img src="__TMPL__/public/assets/images/default-thumbnail.png"
+                                 id="thumbnail-preview"
+                                 style="cursor: pointer;max-width:100px;max-height:100px;"/>
+                    </a>
+                    <input type="button" class="btn btn-sm btn-cancel-thumbnail" value="取消图片"> 建议尺寸： 200 X 200
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="input-status" class="col-sm-2 control-label"><span class="form-required">*</span>是否显示</label>
+				<div class="col-md-6 col-sm-10" id="status">
+                    <volist name="status" id="v">
+						<label class="radio-inline">
+							<input type="radio" name="express_status" value="{$key}" <if condition="$key eq 1">checked</if>>{$v}
+						</label>
+                    </volist>
+				</div>
+			</div>
+            
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-primary js-ajax-submit">{:lang('ADD')}</button>
+					<a class="btn btn-default" href="{:url('Express/index')}">{:lang('BACK')}</a>
+				</div>
+			</div>
+            
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+    <script>
+        (function(){
+            $('.btn-cancel-thumbnail').click(function () {
+                $('#thumbnail-preview').attr('src', '__TMPL__/public/assets/images/default-thumbnail.png');
+                $('#thumbnail').val('');
+            });
+            
+        })()
+    </script>
+    <script type="text/javascript">
+    	$(function(){
+    		Wind.use('layer');
+    	});
+
+    	function getExpressList(){
+    		layer.open({
+			  type: 2,
+			  title: '物流公司列表',
+			  shadeClose: true,
+			  shade: 0.8,
+			  area: ['900px', '90%'],
+			  content: '/Admin/Express/expresslist' //iframe的url
+			}); 
+    	}
+    </script>
+</body>
+</html>

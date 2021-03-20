@@ -1,0 +1,54 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a >提现记录</a></li>
+
+		</ul>
+		<form class="well form-inline margin-top-20" name="form1" method="post" action="">
+			已提现：{$total}
+		</form>	
+		
+		<form method="post" class="js-ajax-form" >
+			<table class="table table-hover table-bordered">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>会员</th>						
+						<th>兑换点数</th>
+						<th>提现金额</th>
+						<th>第三方支付订单号</th>
+						<th>状态</th>
+						<th>提交时间</th>
+						<th>处理时间</th>
+					</tr>
+				</thead>
+				<tbody>
+					<foreach name="lists" item="vo">
+					<tr>
+						<td>{$vo.id}</td>
+						<td>{$vo['userinfo']['user_nicename']} ( {$vo['uid']} )</td>	
+						<td>{$vo['votes']}</td>
+						<td>{$vo['money']}</td>				
+						<td>{$vo['trade_no']}</td>
+						<td>{$state[$vo['status']]}</td>
+						<td>{:date('Y-m-d H:i:s',$vo['addtime'])}</td>						
+						<td>
+						 <if condition="$vo['status'] eq '0'" >
+						    处理中
+						 <else/>
+                             {:date('Y-m-d H:i:s',$vo['uptime'])}
+						 </if>						
+						 </td>
+					</tr>
+					</foreach>
+				</tbody>
+			</table>
+			<div class="pagination">{$page}</div>
+
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

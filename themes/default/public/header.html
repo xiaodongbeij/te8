@@ -1,0 +1,79 @@
+	<div id="doc-hd" class="header double">
+		<div class="topbar">
+			<div class="container clearfix">
+				<div class="hd-logo">
+					<a href="#" class="links"></a>
+				</div>
+				<ul class="hd-nav">
+					<li class="item"><a href="/" <if condition="$current eq 'index'">class="current" </if> >首页</a></li>
+<!-- 					<li class="item"><a href="#"  <if condition="$current eq 'follow'">class="current" </if> >我的关注</a></li> -->
+					<li class="item"><a href="/home/Category/index?cat=2"  <if condition="$current eq '2'">class="current" </if> >女神驾到</a></li>
+					<li class="item"><a href="/home/Category/index?cat=1"  <if condition="$current eq '1'">class="current" </if> >国民男神</a></li>
+					<li class="item"><a href="/home/App/programe"  <if condition="$current eq 'download'">class="current" </if> >APP</a></li>
+					
+				</ul>
+				<div class="hd-login">
+				  <if condition="!$user">
+					<div class="no-login">
+						<i class="icon-avatar"></i>
+						<a href="javascript:void(0);" class="tologin">登录/注册</a>
+						<i class="icon-level"></i>
+						<i class="icon-more"></i>
+					</div>
+					<else/>
+					<div class="already-login">
+						<a class="link" href="#"><i class="icon-avatar"><img src="{$user['avatar']}" alt=""/></i><span class="nickname">{$user['user_nicename']}</span></a>
+						<i class="icon-level"></i>
+						<i class="icon-more"></i>
+						<div class="userinfo">
+							<div class="userinfo_up">
+							</div>
+							<div class="userinfo_down">
+								<div class="userinfo_name">
+									 <div class="live">
+										<a href="/{$user['id']}">我的直播</a>
+									</div>
+									<div class="live">
+										<a href="/home/Personal/index">个人中心</a>
+									</div>									
+									<div class="logout">
+										【退出登录】
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					</if>
+					<div class="huajiaodou">
+					  <if condition="!$user">
+						 <a ></a> 
+					    <else/>
+						 <a class="btn-huajiaodou" href="/home/Payment/index" target="_blank">充值</a> 
+					  </if>
+					</div> 
+				</div>
+				
+				<div class="search-bar">
+					<div class="search-hd">
+					</div>
+					<div class="search-bd">
+						<form class="search-form" action="/home/Index/translate" target="_top" method="post" name="search-form">
+							<div class="search-input-wrap">
+								<input  class="search-input" name="keyword" id="keyword" placeholder="请输入用户名或用户ID"/>
+								<input type="submit" class="search-submit-btn"/>
+							</div>
+						</form>
+					</div>
+					<div class="search-ft">
+						<div id="suggest-container" class="suggest-container" style="display:none;">
+							<div class="suggest-bd">
+							</div>
+							<div class="suggest-ft">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+

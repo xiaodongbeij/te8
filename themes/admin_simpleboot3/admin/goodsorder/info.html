@@ -1,0 +1,253 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap" js-check-wrap>
+		<ul class="nav nav-tabs">
+			<li ><a href="{:url('Goodsorder/index')}">商品订单列表</a></li>
+			<li class="active"><a >商品订单详情</a></li>
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form margin-top-20" >
+            
+            <div class="form-group">
+                <label for="input-id" class="col-sm-2 control-label"><span class="form-required"></span>订单ID</label>
+                <div class="col-md-6 col-sm-10">
+                    <input type="text" class="form-control" id="input-id" value="{$data['id']}" readonly="readonly">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-buyer" class="col-sm-2 control-label"><span class="form-required"></span>购买者</label>
+                <div class="col-md-6 col-sm-10">
+                    <input type="text" class="form-control" id="input-buyer" value="{$data['buyer_info']['user_nicename']}({$data['uid']})" readonly="readonly">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-goodsid" class="col-sm-2 control-label"><span class="form-required"></span>商品ID</label>
+                <div class="col-md-6 col-sm-10">
+                    <input type="text" class="form-control" id="input-goodsid" value="{$data['goodsid']}" readonly="readonly">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-spec_name" class="col-sm-2 control-label"><span class="form-required"></span>规格名称</label>
+                <div class="col-md-6 col-sm-10">
+                    <input type="text" class="form-control" id="input-spec_name" value="{$data['spec_name']}" readonly="readonly">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-spec_thumb" class="col-sm-2 control-label"><span class="form-required"></span>规格封面</label>
+                <div class="col-md-6 col-sm-10">
+                    <img src="{$data['spec_thumb']}" class="imgtip" style="width: 100px;height: auto;">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-price" class="col-sm-2 control-label"><span class="form-required"></span>商品单价</label>
+                <div class="col-md-6 col-sm-10">
+                    <input type="text" class="form-control" id="input-price" value="￥{$data['price']}" readonly="readonly">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-nums" class="col-sm-2 control-label"><span class="form-required"></span>购买数量</label>
+                <div class="col-md-6 col-sm-10">
+                    <input type="text" class="form-control" id="input-nums" value="{$data['nums']}" readonly="readonly">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-postage" class="col-sm-2 control-label"><span class="form-required"></span>邮费</label>
+                <div class="col-md-6 col-sm-10">
+                    <input type="text" class="form-control" id="input-postage" value="￥{$data['postage']}" readonly="readonly">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-total" class="col-sm-2 control-label"><span class="form-required"></span>商品总价</label>
+                <div class="col-md-6 col-sm-10">
+                    <input type="text" class="form-control" id="input-total" value="￥{$data['total']}" readonly="readonly">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-username" class="col-sm-2 control-label"><span class="form-required"></span>购买者姓名</label>
+                <div class="col-md-6 col-sm-10">
+                    <input type="text" class="form-control" id="input-username" value="{$data['username']}" readonly="readonly">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-username" class="col-sm-2 control-label"><span class="form-required"></span>购买者姓名</label>
+                <div class="col-md-6 col-sm-10">
+                    <input type="text" class="form-control" id="input-username" value="{$data['username']}" readonly="readonly">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-phone" class="col-sm-2 control-label"><span class="form-required"></span>购买者联系电话</label>
+                <div class="col-md-6 col-sm-10">
+                    <input type="text" class="form-control" id="input-phone" value="{$data['phone']}" readonly="readonly">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-address" class="col-sm-2 control-label"><span class="form-required"></span>收货地址</label>
+                <div class="col-md-6 col-sm-10">
+                    <input type="text" class="form-control" id="input-address" value="{$data['province']} {$data['city']} {$data['area']} {$data['address']}" readonly="readonly">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-orderno" class="col-sm-2 control-label"><span class="form-required"></span>订单编号</label>
+                <div class="col-md-6 col-sm-10">
+                    <input type="text" class="form-control" id="input-orderno" value="{$data['orderno']}" readonly="readonly">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-type" class="col-sm-2 control-label"><span class="form-required"></span>支付方式</label>
+                <div class="col-md-6 col-sm-10">
+                    <input type="text" class="form-control" id="input-type" value="{$type[$data['type']]}" readonly="readonly">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-trade_no" class="col-sm-2 control-label"><span class="form-required"></span>三方支付编号</label>
+                <div class="col-md-6 col-sm-10">
+                    <input type="text" class="form-control" id="input-trade_no" value="{$data['trade_no']}" readonly="readonly">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-status" class="col-sm-2 control-label"><span class="form-required"></span>订单状态</label>
+                <div class="col-md-6 col-sm-10">
+                    <input type="text" class="form-control" id="input-status" value="{$status[$data['status']]}" readonly="readonly">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-addtime" class="col-sm-2 control-label"><span class="form-required"></span>下单时间</label>
+                <div class="col-md-6 col-sm-10">
+                    <input type="text" class="form-control" id="input-addtime" value="{:date('Y-m-d H:i',$data['addtime'])}" readonly="readonly">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-cancel_time" class="col-sm-2 control-label"><span class="form-required"></span>取消时间</label>
+                <div class="col-md-6 col-sm-10">
+                    <input type="text" class="form-control" id="input-addtime" readonly="readonly" <if condition="$data['cancel_time'] gt 0">value="{:date('Y-m-d H:i',$data['cancel_time'])}"<else />value=""</if> >
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-paytime" class="col-sm-2 control-label"><span class="form-required"></span>付款时间</label>
+                <div class="col-md-6 col-sm-10">
+                    <input type="text" class="form-control" id="input-paytime" readonly="readonly" <if condition="$data['paytime'] gt 0">value="{:date('Y-m-d H:i',$data['paytime'])}"<else />value=""</if> >
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-shipment_time" class="col-sm-2 control-label"><span class="form-required"></span>发货时间</label>
+                <div class="col-md-6 col-sm-10">
+                    <input type="text" class="form-control" id="input-shipment_time" readonly="readonly" <if condition="$data['shipment_time'] gt 0">value="{:date('Y-m-d H:i',$data['shipment_time'])}"<else />value=""</if> >
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="input-receive_time" class="col-sm-2 control-label"><span class="form-required"></span>收货时间</label>
+                <div class="col-md-6 col-sm-10">
+                    <input type="text" class="form-control" id="input-receive_time" readonly="readonly" <if condition="$data['receive_time'] gt 0">value="{:date('Y-m-d H:i',$data['receive_time'])}"<else />value=""</if> >
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-evaluate_time" class="col-sm-2 control-label"><span class="form-required"></span>评价时间</label>
+                <div class="col-md-6 col-sm-10">
+                    <input type="text" class="form-control" id="input-evaluate_time" readonly="readonly" <if condition="$data['evaluate_time'] gt 0">value="{:date('Y-m-d H:i',$data['evaluate_time'])}"<else />value=""</if> >
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-settlement_time" class="col-sm-2 control-label"><span class="form-required"></span>结算时间</label>
+                <div class="col-md-6 col-sm-10">
+                    <input type="text" class="form-control" id="input-settlement_time" readonly="readonly" <if condition="$data['settlement_time'] gt 0">value="{:date('Y-m-d H:i',$data['settlement_time'])}"<else />value=""</if> >
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-order_percent" class="col-sm-2 control-label"><span class="form-required"></span>订单提成比例(%)</label>
+                <div class="col-md-6 col-sm-10">
+                    <input type="text" class="form-control" id="input-order_percent" value="{$data['order_percent']}" readonly="readonly"> 
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="input-refund_starttime" class="col-sm-2 control-label"><span class="form-required"></span>发起退款时间</label>
+                <div class="col-md-6 col-sm-10">
+                    <input type="text" class="form-control" id="input-refund_starttime" readonly="readonly" <if condition="$data['refund_starttime'] gt 0">value="{:date('Y-m-d H:i',$data['refund_starttime'])}"<else />value=""</if> >
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-refund_endtime" class="col-sm-2 control-label"><span class="form-required"></span>退款结束时间</label>
+                <div class="col-md-6 col-sm-10">
+                    <input type="text" class="form-control" id="input-refund_endtime" readonly="readonly" <if condition="$data['refund_endtime'] gt 0">value="{:date('Y-m-d H:i',$data['refund_endtime'])}"<else />value=""</if> >
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-refund_status" class="col-sm-2 control-label"><span class="form-required"></span>退款处理结果</label>
+                <if condition="$data['status'] eq 5">
+                <div class="col-md-6 col-sm-10">
+                    <input type="text" class="form-control" id="input-refund_status" value="{$refund_status[$data['refund_status']]}" readonly="readonly">
+                </div>
+                <else />
+                    <div class="col-md-6 col-sm-10">
+                    <input type="text" class="form-control" id="input-refund_status" value="未退款" readonly="readonly">
+                </div>
+                </if>
+            </div>
+
+            <div class="form-group">
+                <label for="input-express_name" class="col-sm-2 control-label"><span class="form-required"></span>物流公司名称</label>
+                <div class="col-md-6 col-sm-10">
+                    <input type="text" class="form-control" id="input-express_name" value="{$data['express_name']}" readonly="readonly">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-express_phone" class="col-sm-2 control-label"><span class="form-required"></span>物流公司客服电话</label>
+                <div class="col-md-6 col-sm-10">
+                    <input type="text" class="form-control" id="input-express_phone" value="{$data['express_phone']}" readonly="readonly"s>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-express_number" class="col-sm-2 control-label"><span class="form-required"></span>物流单号</label>
+                <div class="col-md-6 col-sm-10">
+                    <input type="text" class="form-control" id="input-express_number" value="{$data['express_number']}" readonly="readonly">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-message" class="col-sm-2 control-label"><span class="form-required"></span>买家留言</label>
+                <div class="col-md-6 col-sm-10">
+                    <input type="text" class="form-control" id="input-message" value="{$data['message']}" readonly="readonly">
+                </div>
+            </div>
+
+            <div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					
+					<a class="btn btn-default" href="{:url('Goodsorder/index')}">{:lang('BACK')}</a>
+				</div>
+			</div>
+
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+    
+</body>
+</html>

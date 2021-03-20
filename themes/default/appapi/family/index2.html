@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <include file="appapi@head"/>
+	<link type="text/css" rel="stylesheet" href="__STATIC__/appapi/css/family.css?t=1561712925"/>
+    <title>家族中心</title>
+</head>
+<body class="attended">
+	<div class="search">
+		<div class="search_input">
+			<input id="key" placeholder="搜索签约家族ID/名称">
+			<span class="search_clear"></span>
+		</div>
+		<div class="search_btn color_default">
+			搜索
+		</div>
+	</div>
+	<div class="line10"></div>
+	<div class="list_title">
+		家族列表
+		<div class="reload"></div>
+	</div>
+	<div class="user-list user-list-fillet">
+		<ul>
+			<volist name='list' id='vo' key='k'>
+			<li>
+				<a href="/Appapi/Family/detail?familyid={$vo['id']}&uid={$uid}&token={$token}">
+					<div class="thumb">
+						<img src="{$vo['badge']}">
+					</div>
+					<div class="info">
+						<p class="info-title">{$vo['name']}</p>
+						<p class="info-des2 ellipsis">{$vo['briefing']}</p>
+						<p class="info-des2"><span>成员：{$vo['count']}人</span><span>ID：{$vo['id']}</span></p>
+					</div>
+					<div class="action">
+						<span class="ok" data-familyid="{$vo['id']}">申请</span>
+					</div>
+				</a>
+			</li>
+			</volist>
+		</ul>
+	</div>
+    
+	<include file="appapi@footer"/>
+	<script src="__STATIC__/appapi/js/family.js"></script>
+		
+</body>
+</html>

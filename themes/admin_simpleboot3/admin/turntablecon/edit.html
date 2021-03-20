@@ -1,0 +1,36 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li ><a href="{:url('turntablecon/index')}">大转盘价格列表</a></li>
+			<li class="active"><a >{:lang('EDIT')}</a></li>
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('turntablecon/editPost')}">
+            <div class="form-group">
+				<label for="input-times" class="col-sm-2 control-label"><span class="form-required">*</span>次数</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-times" name="times" value="{$data['times']}">整数
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-coin" class="col-sm-2 control-label"><span class="form-required">*</span>价格</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-coin" name="coin" value="{$data['coin']}">整数
+				</div>
+			</div>
+
+            <div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<input type="hidden" name="id" value="{$data.id}" />
+					<button type="submit" class="btn btn-primary js-ajax-submit">{:lang('EDIT')}</button>
+					<a class="btn btn-default" href="javascript:history.back(-1);">{:lang('BACK')}</a>
+				</div>
+			</div>
+
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

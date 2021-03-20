@@ -1,0 +1,336 @@
+2020-12-31 10:15:53|ERROR|Home.getNearby|PDOException: The user specified as a definer ('livenew'@'127.0.0.1') does not exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT uid,titl...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Home.php(285): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Home.php(61): Model_Home->getNearby('0.0', '0.0', '1')
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Home.php(537): Domain_Home->getNearby('0.0', '0.0', '1')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Home->getNearby()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2020-12-31 10:15:58|ERROR|Home.getNearby|PDOException: The user specified as a definer ('livenew'@'127.0.0.1') does not exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT uid,titl...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Home.php(285): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Home.php(61): Model_Home->getNearby('0.0', '0.0', '1')
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Home.php(537): Domain_Home->getNearby('0.0', '0.0', '1')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Home->getNearby()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2020-12-31 11:31:49|ERROR|Home.getNearby|PDOException: The user specified as a definer ('livenew'@'127.0.0.1') does not exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT uid,titl...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Home.php(285): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Home.php(61): Model_Home->getNearby('0.0', '0.0', '1')
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Home.php(537): Domain_Home->getNearby('0.0', '0.0', '1')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Home->getNearby()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2020-12-31 13:43:03|ERROR|Home.getNearby|PDOException: The user specified as a definer ('livenew'@'127.0.0.1') does not exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT uid,titl...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Home.php(285): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Home.php(61): Model_Home->getNearby('0.0', '0.0', '1')
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Home.php(537): Domain_Home->getNearby('0.0', '0.0', '1')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Home->getNearby()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2020-12-31 13:56:58|ERROR|Home.getNearby|PDOException: The user specified as a definer ('livenew'@'127.0.0.1') does not exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT uid,titl...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Home.php(285): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Home.php(61): Model_Home->getNearby('0.0', '0.0', '1')
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Home.php(537): Domain_Home->getNearby('0.0', '0.0', '1')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Home->getNearby()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2020-12-31 14:00:53|ERROR|Home.getNearby|PDOException: The user specified as a definer ('livenew'@'127.0.0.1') does not exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT uid,titl...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Home.php(285): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Home.php(61): Model_Home->getNearby('0.0', '0.0', '1')
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Home.php(537): Domain_Home->getNearby('0.0', '0.0', '1')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Home->getNearby()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2020-12-31 14:31:22|ERROR|Home.getNearby|PDOException: The user specified as a definer ('livenew'@'127.0.0.1') does not exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT uid,titl...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Home.php(285): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Home.php(61): Model_Home->getNearby('0.0', '0.0', '1')
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Home.php(537): Domain_Home->getNearby('0.0', '0.0', '1')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Home->getNearby()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2020-12-31 16:05:39|ERROR|Home.getNearby|PDOException: The user specified as a definer ('livenew'@'127.0.0.1') does not exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT uid,titl...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Home.php(285): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Home.php(61): Model_Home->getNearby('0.0', '0.0', '1')
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Home.php(537): Domain_Home->getNearby('0.0', '0.0', '1')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Home->getNearby()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2020-12-31 16:08:32|ERROR|Home.getNearby|PDOException: The user specified as a definer ('livenew'@'127.0.0.1') does not exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT uid,titl...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Home.php(285): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Home.php(61): Model_Home->getNearby('0.0', '0.0', '1')
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Home.php(537): Domain_Home->getNearby('0.0', '0.0', '1')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Home->getNearby()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2020-12-31 16:08:48|ERROR|Home.getNearby|PDOException: The user specified as a definer ('livenew'@'127.0.0.1') does not exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT uid,titl...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Home.php(285): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Home.php(61): Model_Home->getNearby('0.0', '0.0', '1')
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Home.php(537): Domain_Home->getNearby('0.0', '0.0', '1')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Home->getNearby()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2020-12-31 16:20:52|ERROR|Home.getNearby|PDOException: The user specified as a definer ('livenew'@'127.0.0.1') does not exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT uid,titl...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Home.php(285): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Home.php(61): Model_Home->getNearby('0.0', '0.0', '1')
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Home.php(537): Domain_Home->getNearby('0.0', '0.0', '1')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Home->getNearby()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2020-12-31 16:22:58|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20201231/06627469787290858.png
+2020-12-31 16:24:40|ERROR|Home.getNearby|PDOException: The user specified as a definer ('livenew'@'127.0.0.1') does not exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT uid,titl...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Home.php(285): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Home.php(61): Model_Home->getNearby('0.0', '0.0', '1')
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Home.php(537): Domain_Home->getNearby('0.0', '0.0', '1')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Home->getNearby()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2020-12-31 16:24:42|ERROR|Home.getNearby|PDOException: The user specified as a definer ('livenew'@'127.0.0.1') does not exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT uid,titl...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Home.php(285): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Home.php(61): Model_Home->getNearby('0.0', '0.0', '1')
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Home.php(537): Domain_Home->getNearby('0.0', '0.0', '1')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Home->getNearby()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2020-12-31 16:24:42|ERROR|Home.getNearby|PDOException: The user specified as a definer ('livenew'@'127.0.0.1') does not exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT uid,titl...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Home.php(285): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Home.php(61): Model_Home->getNearby('0.0', '0.0', '1')
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Home.php(537): Domain_Home->getNearby('0.0', '0.0', '1')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Home->getNearby()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2020-12-31 16:24:43|ERROR|Home.getNearby|PDOException: The user specified as a definer ('livenew'@'127.0.0.1') does not exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT uid,titl...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Home.php(285): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Home.php(61): Model_Home->getNearby('0.0', '0.0', '1')
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Home.php(537): Domain_Home->getNearby('0.0', '0.0', '1')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Home->getNearby()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2020-12-31 16:33:33|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20201231/06627476137851265.png
+2020-12-31 16:49:57|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///avatar/20201231/06627485973630315.png
+2020-12-31 16:52:47|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20201231/06627487674008545.png
+2020-12-31 17:02:21|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///avatar/20201231/06627493419550485.png
+2020-12-31 17:16:30|ERROR|Home.getNearby|PDOException: The user specified as a definer ('livenew'@'127.0.0.1') does not exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT uid,titl...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Home.php(285): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Home.php(61): Model_Home->getNearby('0.0', '0.0', '1')
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Home.php(537): Domain_Home->getNearby('0.0', '0.0', '1')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Home->getNearby()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2020-12-31 17:16:37|ERROR|Home.getNearby|PDOException: The user specified as a definer ('livenew'@'127.0.0.1') does not exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT uid,titl...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Home.php(285): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Home.php(61): Model_Home->getNearby('0.0', '0.0', '1')
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Home.php(537): Domain_Home->getNearby('0.0', '0.0', '1')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Home->getNearby()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2020-12-31 17:23:31|ERROR|Home.getNearby|PDOException: The user specified as a definer ('livenew'@'127.0.0.1') does not exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT uid,titl...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Home.php(285): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Home.php(61): Model_Home->getNearby('0.0', '0.0', '1')
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Home.php(537): Domain_Home->getNearby('0.0', '0.0', '1')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Home->getNearby()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2020-12-31 17:49:20|ERROR|Home.getNearby|PDOException: The user specified as a definer ('livenew'@'127.0.0.1') does not exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT uid,titl...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Home.php(285): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Home.php(61): Model_Home->getNearby('0.0', '0.0', '1')
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Home.php(537): Domain_Home->getNearby('0.0', '0.0', '1')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Home->getNearby()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2020-12-31 18:22:22|ERROR|Home.getNearby|PDOException: The user specified as a definer ('livenew'@'127.0.0.1') does not exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT uid,titl...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Home.php(285): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Home.php(61): Model_Home->getNearby('0.0', '0.0', '1')
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Home.php(537): Domain_Home->getNearby('0.0', '0.0', '1')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Home->getNearby()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2020-12-31 18:23:09|ERROR|Home.getNearby|PDOException: The user specified as a definer ('livenew'@'127.0.0.1') does not exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT uid,titl...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Home.php(285): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Home.php(61): Model_Home->getNearby('0.0', '0.0', '1')
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Home.php(537): Domain_Home->getNearby('0.0', '0.0', '1')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Home->getNearby()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2020-12-31 18:24:15|ERROR|Home.getNearby|PDOException: The user specified as a definer ('livenew'@'127.0.0.1') does not exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT uid,titl...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Home.php(285): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Home.php(61): Model_Home->getNearby('0.0', '0.0', '1')
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Home.php(537): Domain_Home->getNearby('0.0', '0.0', '1')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Home->getNearby()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2020-12-31 18:24:16|ERROR|Home.getNearby|PDOException: The user specified as a definer ('livenew'@'127.0.0.1') does not exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT uid,titl...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Home.php(285): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Home.php(61): Model_Home->getNearby('0.0', '0.0', '1')
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Home.php(537): Domain_Home->getNearby('0.0', '0.0', '1')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Home->getNearby()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2020-12-31 18:24:18|ERROR|Home.getNearby|PDOException: The user specified as a definer ('livenew'@'127.0.0.1') does not exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT uid,titl...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Home.php(285): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Home.php(61): Model_Home->getNearby('0.0', '0.0', '1')
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Home.php(537): Domain_Home->getNearby('0.0', '0.0', '1')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Home->getNearby()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2020-12-31 18:24:19|ERROR|Home.getNearby|PDOException: The user specified as a definer ('livenew'@'127.0.0.1') does not exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT uid,titl...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Home.php(285): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Home.php(61): Model_Home->getNearby('0.0', '0.0', '1')
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Home.php(537): Domain_Home->getNearby('0.0', '0.0', '1')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Home->getNearby()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2020-12-31 18:30:19|ERROR|Live.EnterRoom|PDOException: Unknown column 'uid' in 'where clause' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,hot,t...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(857): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1311): NotORM_Result->fetch()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->enterRoom()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#5 {main}
+2020-12-31 18:30:32|ERROR|Live.EnterRoom|PDOException: Unknown column 'id' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,hot,t...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(857): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1311): NotORM_Result->fetch()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->enterRoom()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#5 {main}
+2020-12-31 18:30:33|ERROR|Live.EnterRoom|PDOException: Unknown column 'id' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,hot,t...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(857): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1311): NotORM_Result->fetch()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->enterRoom()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#5 {main}
+2020-12-31 18:30:33|ERROR|Live.EnterRoom|PDOException: Unknown column 'id' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,hot,t...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(857): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1311): NotORM_Result->fetch()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->enterRoom()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#5 {main}
+2020-12-31 18:30:34|ERROR|Live.EnterRoom|PDOException: Unknown column 'id' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,hot,t...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(857): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1311): NotORM_Result->fetch()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->enterRoom()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#5 {main}
+2020-12-31 18:30:34|ERROR|Live.EnterRoom|PDOException: Unknown column 'id' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,hot,t...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(857): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1311): NotORM_Result->fetch()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->enterRoom()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#5 {main}
+2020-12-31 18:42:57|ERROR|Home.getNearby|PDOException: The user specified as a definer ('livenew'@'127.0.0.1') does not exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT uid,titl...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Home.php(285): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Home.php(61): Model_Home->getNearby('0.0', '0.0', '1')
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Home.php(537): Domain_Home->getNearby('0.0', '0.0', '1')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Home->getNearby()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2020-12-31 18:42:58|ERROR|Home.getNearby|PDOException: The user specified as a definer ('livenew'@'127.0.0.1') does not exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT uid,titl...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Home.php(285): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Home.php(61): Model_Home->getNearby('0.0', '0.0', '1')
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Home.php(537): Domain_Home->getNearby('0.0', '0.0', '1')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Home->getNearby()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2020-12-31 18:59:17|ERROR|Home.getNearby|PDOException: The user specified as a definer ('livenew'@'127.0.0.1') does not exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT uid,titl...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Home.php(285): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Home.php(61): Model_Home->getNearby('0.0', '0.0', '1')
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Home.php(537): Domain_Home->getNearby('0.0', '0.0', '1')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Home->getNearby()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2020-12-31 21:22:34|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20201231/06627649540438151.png
+2020-12-31 21:23:06|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20201231/06627649865860235.png
+2020-12-31 22:50:56|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20201231/06627702560883859.png

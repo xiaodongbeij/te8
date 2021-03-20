@@ -1,0 +1,55 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li><a href="{:url('guide/set')}">配置</a></li>
+			<li class="active"><a >列表</a></li>
+			<li><a href="{:url('guide/add')}">{:lang('ADD')}</a></li>
+		</ul>
+		<form method="post" class="js-ajax-form" action="{:url('guide/listOrder')}">
+			<div class="table-actions">
+                <button class="btn btn-primary btn-sm js-ajax-submit" type="submit">{:lang('SORT')}</button>
+            </div>
+		
+			<table class="table table-hover table-bordered">
+				<thead>
+					<tr>
+					  	<th>排序</th>
+						<th>ID</th>
+						<th><if condition="$type eq 1">视频<else/>图片</if></th>
+						<th>链接</th>
+						<th>发布时间</th>
+						<th>更新时间</th>
+						<th>{:lang('ACTIONS')}</th>
+					</tr>
+				</thead>
+				<tbody>
+					<foreach name="lists" item="vo">
+					<tr>
+					   <td><input name="list_orders[{$vo.id}]" class="input-order" type="text" value="{$vo.list_order}"></td>
+						<td>{$vo.id}</td>
+                        <if condition="$type eq 1">
+						<td>{$vo['thumb']}</td>
+                        <else/>
+						<td><img width="25" height="25" src="{$vo['thumb']}" /></td>
+                        </if>
+                        <td>{$vo['href']}</td>
+						<td>{:date('Y-m-d H:i',$vo['addtime'])}</td>
+						<td>{:date('Y-m-d H:i',$vo['uptime'])}</td>
+
+						<td>	
+                            <a class="btn btn-xs btn-primary" href='{:url("guide/edit",array("id"=>$vo["id"]))}'>{:lang('EDIT')}</a>
+							<a class="btn btn-xs btn-danger js-ajax-delete" href="{:url('guide/del',array('id'=>$vo['id']))}">{:lang('DELETE')}</a>
+							
+						</td>
+					</tr>
+					</foreach>
+				</tbody>
+			</table>
+			<div class="pagination">{$page}</div>
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

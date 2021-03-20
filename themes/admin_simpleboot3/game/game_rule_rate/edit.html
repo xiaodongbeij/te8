@@ -1,0 +1,91 @@
+<include file="public@header" />
+</head>
+
+<body>
+<div class="wrap">
+    <ul class="nav nav-tabs">
+        <li ><a href="{:url('GameRuleRate/index')}">列表</a></li>
+        <li class="active"><a >{:lang('EDIT')}</a></li>
+    </ul>
+    <form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('GameRuleRate/edit')}">
+
+        <input type="hidden" name="id" value="{$info.id}">
+
+        <div class="form-group">
+            <label for="input-maintain_switch" class="col-sm-2 control-label"><span class="form-required">*</span>选择彩种</label>
+            <div class="col-md-6 col-sm-10">
+                <select class="form-control" name="cai_id">
+                    <option value="" selected>请选择分类</option>
+                    <foreach name="cais" item="v">
+                        <option value="{$v.id}" <eq name="info['cai_id']" value="$v.id">selected</eq>>{$v.show_name}</option>
+                    </foreach>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>下注名称</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="text" class="form-control" id="input-rate_name" name="rate_name" value="{$info.rate_name}">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>下注代码</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="text" class="form-control" id="input-rate_code" name="rate_code" value="{$info.rate_code}">
+            </div>
+        </div>
+
+<!--        <div class="form-group">-->
+<!--            <label for="input-type" class="col-sm-2 control-label">玩法类型</label>-->
+<!--            <div class="col-md-6 col-sm-10">-->
+<!--                <input type="text" class="form-control" id="input-type" name="type" value="{$info.type}">-->
+<!--            </div>-->
+<!--        </div>-->
+
+        <div class="form-group">
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>赔率</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="number" class="form-control" id="input-rate" name="rate" value="{$info.rate}">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>玩法名称</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="text" class="form-control" id="input-rule_name" name="rule_name" value="{$info.rule_name}">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>玩法名称代码</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="text" class="form-control" id="input-rule_code" name="rule_code" value="{$info.rule_code}">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-maintain_switch" class="col-sm-2 control-label"><span class="form-required">*</span>状态</label>
+            <div class="col-md-6 col-sm-10">
+                <select class="form-control" name="status">
+                    <option value="1" <eq name="info['status']" value="1">selected</eq>>开启</option>
+                    <option value="0" <eq name="info['status']" value="0">selected</eq>>关闭</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-primary js-ajax-submit">{:lang('EDIT')}</button>
+                <a class="btn btn-default" href="{:url('GameRuleRate/index')}">{:lang('BACK')}</a>
+            </div>
+        </div>
+
+    </form>
+</div>
+<script src="__STATIC__/js/admin.js"></script>
+<script>
+</script>
+</body>
+</html>

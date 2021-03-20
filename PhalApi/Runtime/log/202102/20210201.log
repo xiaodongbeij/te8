@@ -1,0 +1,41 @@
+2021-02-01 10:10:46|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210201/06654894464981051.png
+2021-02-01 10:22:08|ERROR|Video.GetLikeVideos|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'addtime desc' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT A.videoi...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('SELECT A.videoi...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Video.php(219): NotORM_Result->queryAll('SELECT A.videoi...', Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Video->getLikeVideos()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#5 {main}
+2021-02-01 10:22:15|ERROR|Video.GetLikeVideos|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'addtime desc' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT A.videoi...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('SELECT A.videoi...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Video.php(219): NotORM_Result->queryAll('SELECT A.videoi...', Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Video->getLikeVideos()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#5 {main}
+2021-02-01 10:30:35|ERROR|Video.GetLikeVideos|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%'哈哈哈哈哈哈'%) ORDER by A.addtime desc' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT A.videoi...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('SELECT A.videoi...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Video.php(225): NotORM_Result->queryAll('SELECT A.videoi...', Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Video->getLikeVideos()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#5 {main}
+2021-02-01 10:34:24|ERROR|Video.GetLikeVideos|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%'哈哈哈哈哈哈'%) ORDER by A.addtime desc' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT A.videoi...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('SELECT A.videoi...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Video.php(225): NotORM_Result->queryAll('SELECT A.videoi...', Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Video->getLikeVideos()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#5 {main}
+2021-02-01 10:50:52|ERROR|Video.GetLikeVideos|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(0,1) ORDER by A.addtime desc' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT A.videoi...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('SELECT A.videoi...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Video.php(217): NotORM_Result->queryAll('SELECT A.videoi...', Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Video->getLikeVideos()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#5 {main}

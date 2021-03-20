@@ -1,0 +1,121 @@
+<include file="public@header" />
+
+
+<link href="__STATIC__/css/fSelect.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<div class="wrap">
+    <ul class="nav nav-tabs">
+        <li ><a href="{:url('Family/index')}">列表</a></li>
+        <li class="active"><a >{:lang('ADD')}</a></li>
+    </ul>
+    <form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('Family/add')}">
+
+        <div class="form-group">
+            <label for="input-maintain_switch" class="col-sm-2 control-label"><span class="form-required">*</span>选择用户</label>
+            <div class="col-md-6 col-sm-10">
+                <select class="form-control" name="uid">
+                    <option value="" selected>请选择用户</option>
+                    <foreach name="users" item="v">
+                    <option value="{$v.id}">{$v.id}</option>
+                    </foreach>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-user_login" class="col-sm-2 control-label">家族图标</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="hidden" name="badge" id="thumbnail" value="">
+                <a href="javascript:uploadOneImage('图片上传','#thumbnail');">
+                    <img src="__TMPL__/public/assets/images/default-thumbnail.png"
+                         id="thumbnail-preview"
+                         style="cursor: pointer;max-width:100px;max-height:100px;"/>
+                </a>
+                <input type="button" class="btn btn-sm btn-cancel-thumbnail" value="取消图片">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>家族名称</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="text" class="form-control" id="input-name" name="name">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>简介</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="text" class="form-control" id="input-briefing" name="briefing">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>姓名</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="text" class="form-control" id="input-fullname" name="fullname">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>平台抽取比例</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="number" class="form-control" id="input-platform_extraction" name="platform_extraction">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>分成比例</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="number" class="form-control" id="input-divide_family" name="divide_family">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>申请状态</label>
+            <div class="col-md-6 col-sm-10">
+                <select class="form-control" name="state">
+                    <option value="0">未审核</option>
+                    <option value="1">审核失败</option>
+                    <option value="2" selected>审核通过</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>是否禁用</label>
+            <div class="col-md-6 col-sm-10">
+                <select class="form-control" name="disable">
+                    <option value="0" selected>启用</option>
+                    <option value="1">禁用</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-primary js-ajax-submit">{:lang('ADD')}</button>
+                <a class="btn btn-default" href="{:url('Family/index')}">{:lang('BACK')}</a>
+            </div>
+        </div>
+
+    </form>
+</div>
+<script src="__STATIC__/js/admin.js"></script>
+<script src="__STATIC__/js/fSelect.js"></script>
+<script>
+    (function(){
+        $('.btn-cancel-thumbnail').click(function () {
+            $('#thumbnail-preview').attr('src', '__TMPL__/public/assets/images/default-thumbnail.png');
+            $('#thumbnail').val('');
+        });
+
+        $('.btn-cancel-thumbnail2').click(function () {
+            $('#thumbnail2-preview').attr('src', '__TMPL__/public/assets/images/default-thumbnail.png');
+            $('#thumbnail2').val('');
+        });
+    })()
+</script>
+</body>
+</html>

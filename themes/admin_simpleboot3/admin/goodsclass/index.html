@@ -1,0 +1,133 @@
+<include file="public@header" />
+<style type="text/css">
+	.arrow-right {
+		font-size: 0;
+		line-height: 0;
+		border-width: 5px;
+		border-color: #868686;
+		border-right-width: 0;
+		border-style: dashed;
+		border-left-style: solid;
+		border-top-color: transparent;
+		border-bottom-color: transparent;
+		margin-right: 10px;
+	}
+
+	.arrow-bottom {
+		font-size: 0;
+		line-height: 0;
+		border-width: 5px;
+		border-color: #868686;
+		border-bottom-width: 0;
+		border-style: dashed;
+		border-top-style: solid;
+		border-left-color: transparent;
+		border-right-color: transparent;
+		margin-right: 10px;
+	}
+</style>
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a>商品分类列表</a></li>
+            <li><a href="{:url('Goodsclass/add')}">{:lang('ADD')}</a></li>
+		</ul>
+		<form method="post" class="js-ajax-form" action="{:url('Goodsclass/listOrder')}">
+			<div style="height: 50px;line-height: 50px;color: #F00;">
+				
+				前台只显示有三级分类的分类
+			</div>
+			<div class="table-actions">
+                <button class="btn btn-primary btn-sm js-ajax-submit" type="submit">{:lang('SORT')}</button>
+            </div>
+		
+			<table class="table table-hover table-bordered">
+				<thead>
+					<tr>
+					  	<th>排序</th>
+						<th>ID</th>
+						<th>分类名称</th>
+						<th>类别</th>
+						<th>分类图标(二级)</th>
+						<th>是否显示</th>
+						<th>添加时间</th>
+						<th>修改时间</th>
+						<th align="center">{:lang('ACTIONS')}</th>
+					</tr>
+				</thead>
+				<tbody>
+					<php>$isshow=array('0'=>'否','1'=>'是');</php>
+
+
+					<foreach name="lists" item="vo">
+						<tr>
+						   <td>
+						   	<span class="arrow-right"></span>
+						   	<input name="list_orders[{$vo.gc_id}]" class="input-order" type="text" value="{$vo.gc_sort}"></td>
+							<td>{$vo.gc_id}</td>
+							<td>{$vo.gc_name}</td>
+							<td>一级</td>
+							<td>---</td>
+							<td>{$isshow[$vo.gc_isshow]}</td>
+							<td>{:date('Y-m-d H:i',$vo['gc_addtime'])}</td>
+							<td><if condition="$vo.gc_edittime gt 0">{:date('Y-m-d H:i',$vo['gc_edittime'])}<else />---</if></td>
+							
+							<td>
+	                            <a class="btn btn-xs btn-primary" href='{:url("Goodsclass/edit",array("id"=>$vo["gc_id"]))}'>{:lang('EDIT')}</a>
+								<a class="btn btn-xs btn-danger js-ajax-delete" href="{:url('Goodsclass/del',array('id'=>$vo['gc_id']))}">{:lang('DELETE')}</a>
+							</td>
+						</tr>
+
+						<volist name="vo.two_list" id="v2">
+							<div class="" id="">
+							<tr>
+							   <td>&nbsp;&nbsp;&nbsp;&nbsp;
+							   	<span class="arrow-right"></span>
+							   	<input name="list_orders[{$v2.gc_id}]" class="input-order" type="text" value="{$v2.gc_sort}"></td>
+								<td>{$v2.gc_id}</td>
+								<td>&nbsp;&nbsp;&nbsp;&nbsp;{$v2.gc_name}</td>
+								<td>二级</td>
+								<td><if condition="$v2.gc_icon neq ''"><img src="{$v2.gc_icon}" style="width:40px; height:40px"><else/>---</if></td>
+								<td>{$isshow[$v2.gc_isshow]}</td>
+								<td>{:date('Y-m-d H:i',$v2['gc_addtime'])}</td>
+								<td><if condition="$v2.gc_edittime gt 0">{:date('Y-m-d H:i',$v2['gc_edittime'])}<else />---</if></td>
+								
+								<td>
+		                            <a class="btn btn-xs btn-primary" href='{:url("Goodsclass/edit",array("id"=>$v2["gc_id"]))}'>{:lang('EDIT')}</a>
+									<a class="btn btn-xs btn-danger js-ajax-delete" href="{:url('Goodsclass/del',array('id'=>$v2['gc_id']))}">{:lang('DELETE')}</a>
+								</td>
+							</tr>
+
+
+							<volist name="v2.three_list" id="v3">
+								<tr>
+								   <td>
+								   	<input name="list_orders[{$v3.gc_id}]" class="input-order" style="margin-left: 60px;" type="text" value="{$v3.gc_sort}"></td>
+									<td>{$v3.gc_id}</td>
+									<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$v3.gc_name}</td>
+									<td>三级</td>
+									<td>---</td>
+									<td>{$isshow[$v3.gc_isshow]}</td>
+									<td>{:date('Y-m-d H:i',$v3['gc_addtime'])}</td>
+									<td><if condition="$v3.gc_edittime gt 0">{:date('Y-m-d H:i',$v3['gc_edittime'])}<else />--</if></td>
+									
+									<td>
+			                            <a class="btn btn-xs btn-primary" href='{:url("Goodsclass/edit",array("id"=>$v3["gc_id"]))}'>{:lang('EDIT')}</a>
+										<a class="btn btn-xs btn-danger js-ajax-delete" href="{:url('Goodsclass/del',array('id'=>$v3['gc_id']))}">{:lang('DELETE')}</a>
+									</td>
+								</tr>
+							</volist>
+						</volist>
+					</foreach>
+				</tbody>
+			</table>
+			<div class="table-actions">
+                <button class="btn btn-primary btn-sm js-ajax-submit" type="submit">{:lang('SORT')}</button>
+            </div>
+			<div class="pagination">{$page}</div>
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

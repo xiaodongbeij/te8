@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <include file="appapi@head"/>
+		<title>物流信息</title>
+		<link href='__STATIC__/appapi/css/express.css?t=1576653395' rel="stylesheet" type="text/css" >
+	</head>
+	<body>
+        
+        <div class="express_area">
+            <div>
+                <div class="express_thumb fl">
+                    <img src="{$orderinfo['express_thumb']}">
+                </div>
+
+                <div class="express_info fl">
+                    <p>{$orderinfo['express_name']}</p>
+                    <p onclick="tel()">官方电话 {$orderinfo['express_phone']}></p>
+                </div>
+                <div class="clearboth"></div>
+
+            </div>
+            <div class="express_number">订单号：{$orderinfo['express_number']}</div>
+        </div>
+        <div class="line"></div>
+
+        <if condition="$express_status eq 0">
+            <div class="express_des">{$desc}</div>
+        <else />
+            <div class="express_address">收货地址：{$orderinfo['province']}{$orderinfo['city']}{$orderinfo['area']}{$orderinfo['address']}</div>
+            <div class="express_list">
+                <ul>
+                    <volist name="express_list" id="vo">
+                       <li <if condition="$express_list_num eq ($key+1)">style="border:none;"</if>>
+                            <p>{$vo.express_msg}</p>
+                            <p>{$vo.express_time}</p>
+                            <if condition="$express_state eq '3' and $key eq 0">
+                                <p class="receive"></p>
+                            <elseif condition="$express_state eq '3' and $key eq 1" />
+                                <p class="traffic"></p>
+                            <elseif condition="$express_state eq '2' and $key eq 0" />
+                                <p class="traffic"></p>
+                            <else />
+                                <p class="express_sign"></p>
+                            </if>
+                        </li> 
+                    </volist>
+
+                </ul>
+            </div>
+        </if>
+        
+
+    <include file="appapi@footer"/>
+    <script type="text/javascript">
+        function tel(){
+            var tel="{$orderinfo['express_phone']}";
+            location.href='tel://'+tel;
+        }
+    </script>
+	</body>
+</html>

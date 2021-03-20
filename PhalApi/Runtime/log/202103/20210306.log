@@ -1,0 +1,1183 @@
+2021-03-06 09:44:28|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210306/06683390688194089.png
+2021-03-06 10:24:59|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(164206, 42930, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(164206, 42930, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 10:28:32|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(164300, 42930, NULL, 126, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(164300, 42930, NULL, 126, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 10:28:35|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(165870, 42930, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(165870, 42930, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 10:45:19|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(165565, 159884, NULL, 126, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(165565, 159884, NULL, 126, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 10:45:28|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(162905, 42984, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(162905, 42984, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 10:46:27|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(161550, 159884, NULL, 128, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(161550, 159884, NULL, 128, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 10:51:06|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(165382, 159884, NULL, 128, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(165382, 159884, NULL, 128, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 10:52:32|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(163520, 159884, NULL, 126, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(163520, 159884, NULL, 126, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 10:54:12|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(161195, 159884, NULL, 126, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(161195, 159884, NULL, 126, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 11:35:45|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210306/06683457454898335.png
+2021-03-06 11:35:52|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(161378, 109334, NULL, 126, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(161378, 109334, NULL, 126, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 11:51:53|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(162663, 43011, NULL, 126, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(162663, 43011, NULL, 126, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 11:51:54|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(161891, 43011, NULL, 128, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(161891, 43011, NULL, 128, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 11:51:57|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(162800, 43011, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(162800, 43011, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 11:52:04|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(165404, 43011, NULL, 128, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(165404, 43011, NULL, 128, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 11:52:07|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(164792, 43011, NULL, 128, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(164792, 43011, NULL, 128, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 11:52:10|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(164646, 43011, NULL, 126, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(164646, 43011, NULL, 126, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 11:52:15|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(163773, 43011, NULL, 128, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(163773, 43011, NULL, 128, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 11:52:18|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(161586, 43011, NULL, 126, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(161586, 43011, NULL, 126, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 11:52:20|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(165400, 43011, NULL, 128, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(165400, 43011, NULL, 128, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 11:52:22|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(160907, 43011, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(160907, 43011, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 11:52:25|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(165255, 43011, NULL, 128, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(165255, 43011, NULL, 128, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 11:52:27|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(162371, 43011, NULL, 128, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(162371, 43011, NULL, 128, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 11:52:30|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(161429, 43011, NULL, 126, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(161429, 43011, NULL, 126, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 11:52:32|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(165133, 43011, NULL, 126, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(165133, 43011, NULL, 126, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 11:52:35|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(162568, 43011, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(162568, 43011, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 11:53:06|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210306/06683467861858489.png
+2021-03-06 11:56:55|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210306/06683470153838296.png
+2021-03-06 11:59:09|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(162732, 159882, NULL, 128, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(162732, 159882, NULL, 128, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 13:50:04|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(164678, 159882, NULL, 128, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(164678, 159882, NULL, 128, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 13:50:07|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(161558, 159882, NULL, 126, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(161558, 159882, NULL, 126, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 13:50:10|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(163290, 159882, NULL, 128, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(163290, 159882, NULL, 128, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 13:50:12|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(161300, 159882, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(161300, 159882, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 13:50:15|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(163215, 159882, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(163215, 159882, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 14:00:30|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210306/06683544309891512.png
+2021-03-06 14:05:29|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210306/06683547291897333.png
+2021-03-06 14:05:29|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210306/06683547291916805.png
+2021-03-06 14:10:18|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210306/06683550188774107.png
+2021-03-06 14:26:25|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210306/06683559854951552.png
+2021-03-06 16:16:21|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(162721, 159884, NULL, 126, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(162721, 159884, NULL, 126, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 16:16:35|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(162421, 159884, NULL, 128, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(162421, 159884, NULL, 128, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 16:20:52|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210306/06683628526239868.png
+2021-03-06 16:21:39|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(161827, 159884, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(161827, 159884, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 16:23:21|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210306/06683630013412830.png
+2021-03-06 16:23:31|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(161494, 159884, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(161494, 159884, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 16:25:20|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(165490, 159884, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(165490, 159884, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 16:28:59|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(163028, 159884, NULL, 128, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(163028, 159884, NULL, 128, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 16:32:12|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(164538, 159884, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(164538, 159884, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 16:35:08|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(163547, 159884, NULL, 128, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(163547, 159884, NULL, 128, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 16:35:34|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(164434, 159884, NULL, 126, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(164434, 159884, NULL, 126, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 16:35:58|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(165496, 159884, NULL, 128, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(165496, 159884, NULL, 128, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 16:36:12|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(162858, 159884, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(162858, 159884, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 16:38:05|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(163863, 159884, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(163863, 159884, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 16:39:34|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(165860, 159884, NULL, 128, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(165860, 159884, NULL, 128, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 16:40:16|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(163422, 159884, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(163422, 159884, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 16:41:19|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(164958, 159884, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(164958, 159884, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 16:43:02|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(162768, 159884, NULL, 126, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(162768, 159884, NULL, 126, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 16:43:25|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(163815, 159884, NULL, 126, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(163815, 159884, NULL, 126, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 16:43:45|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(162076, 159884, NULL, 128, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(162076, 159884, NULL, 128, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 16:45:45|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(161846, 159884, NULL, 128, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(161846, 159884, NULL, 128, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 16:48:01|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(165175, 159884, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(165175, 159884, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 16:50:32|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(161702, 159884, NULL, 126, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(161702, 159884, NULL, 126, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 16:51:38|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(161477, 159884, NULL, 126, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(161477, 159884, NULL, 126, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 17:07:10|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(474): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(161065, 159884, NULL, 128, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1857): Domain_Live->sendGift(161065, 159884, NULL, 128, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-06 17:07:39|ERROR|Ticket.GetTickets|PDOException: Column 'del_status' in where clause is ambiguous in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT c.cat_id...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('SELECT c.cat_id...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(284): NotORM_Result->queryAll('SELECT c.cat_id...', Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(233): getCameCaizhong('', 0, '1')
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTickets()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#6 {main}
+2021-03-06 17:08:04|ERROR|Ticket.GetTickets|PDOException: Column 'del_status' in where clause is ambiguous in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT c.cat_id...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('SELECT c.cat_id...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(284): NotORM_Result->queryAll('SELECT c.cat_id...', Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(233): getCameCaizhong('11', 0, 0)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTickets()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#6 {main}
+2021-03-06 17:08:10|ERROR|Ticket.GetTickets|PDOException: Column 'del_status' in where clause is ambiguous in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT c.cat_id...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('SELECT c.cat_id...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(284): NotORM_Result->queryAll('SELECT c.cat_id...', Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(233): getCameCaizhong('10', 0, 0)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTickets()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#6 {main}
+2021-03-06 17:08:12|ERROR|Ticket.GetTickets|PDOException: Column 'del_status' in where clause is ambiguous in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT c.cat_id...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('SELECT c.cat_id...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(284): NotORM_Result->queryAll('SELECT c.cat_id...', Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(233): getCameCaizhong('9', 0, 0)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTickets()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#6 {main}
+2021-03-06 17:08:13|ERROR|Ticket.GetTickets|PDOException: Column 'del_status' in where clause is ambiguous in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT c.cat_id...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('SELECT c.cat_id...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(284): NotORM_Result->queryAll('SELECT c.cat_id...', Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(233): getCameCaizhong('8', 0, 0)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTickets()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#6 {main}
+2021-03-06 17:08:14|ERROR|Ticket.GetTickets|PDOException: Column 'del_status' in where clause is ambiguous in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT c.cat_id...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('SELECT c.cat_id...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(284): NotORM_Result->queryAll('SELECT c.cat_id...', Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(233): getCameCaizhong('7', 0, 0)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTickets()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#6 {main}
+2021-03-06 17:08:16|ERROR|Ticket.GetTickets|PDOException: Column 'del_status' in where clause is ambiguous in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT c.cat_id...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('SELECT c.cat_id...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(284): NotORM_Result->queryAll('SELECT c.cat_id...', Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(233): getCameCaizhong('6', 0, 0)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTickets()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#6 {main}
+2021-03-06 17:08:17|ERROR|Ticket.GetTickets|PDOException: Column 'del_status' in where clause is ambiguous in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT c.cat_id...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('SELECT c.cat_id...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(284): NotORM_Result->queryAll('SELECT c.cat_id...', Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(233): getCameCaizhong('4', 0, 0)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTickets()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#6 {main}
+2021-03-06 17:08:19|ERROR|Ticket.GetTickets|PDOException: Column 'del_status' in where clause is ambiguous in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT c.cat_id...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('SELECT c.cat_id...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(284): NotORM_Result->queryAll('SELECT c.cat_id...', Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(233): getCameCaizhong('4', 0, 0)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTickets()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#6 {main}
+2021-03-06 17:08:20|ERROR|Ticket.GetTickets|PDOException: Column 'del_status' in where clause is ambiguous in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT c.cat_id...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('SELECT c.cat_id...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(284): NotORM_Result->queryAll('SELECT c.cat_id...', Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(233): getCameCaizhong('6', 0, 0)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTickets()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#6 {main}
+2021-03-06 17:08:21|ERROR|Ticket.GetTickets|PDOException: Column 'del_status' in where clause is ambiguous in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT c.cat_id...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('SELECT c.cat_id...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(284): NotORM_Result->queryAll('SELECT c.cat_id...', Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(233): getCameCaizhong('4', 0, 0)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTickets()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#6 {main}
+2021-03-06 18:48:40|ERROR|Daili.GetReport|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('select * from c...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('select * from c...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Daili.php(837): NotORM_Result->queryAll('select * from c...')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Daili.php(445): Domain_Daili->getReport(165888, NULL, 1614873600, 1614960000, 1, 1, 99)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Daili->getReport()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#6 {main}
+2021-03-06 18:48:46|ERROR|Daili.GetReport|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('select * from c...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('select * from c...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Daili.php(837): NotORM_Result->queryAll('select * from c...')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Daili.php(445): Domain_Daili->getReport(165888, NULL, 1614873600, 1614960000, 1, 1, 99)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Daili->getReport()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#6 {main}
+2021-03-06 18:48:52|ERROR|Daili.GetReport|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('select * from c...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('select * from c...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Daili.php(837): NotORM_Result->queryAll('select * from c...')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Daili.php(445): Domain_Daili->getReport(165888, NULL, 1614873600, 1615046400, 1, 1, 99)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Daili->getReport()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#6 {main}
+2021-03-06 18:48:53|ERROR|Daili.GetReport|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('select * from c...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('select * from c...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Daili.php(837): NotORM_Result->queryAll('select * from c...')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Daili.php(445): Domain_Daili->getReport(165888, NULL, 1614873600, 1615046400, 1, 1, 99)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Daili->getReport()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#6 {main}
+2021-03-06 18:59:46|ERROR|Daili.GetReport|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('select * from c...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('select * from c...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Daili.php(837): NotORM_Result->queryAll('select * from c...')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Daili.php(445): Domain_Daili->getReport(165888, NULL, 1614873600, 1614960000, 1, 1, 99)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Daili->getReport()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#6 {main}
+2021-03-06 18:59:54|ERROR|Daili.GetReport|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('select * from c...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('select * from c...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Daili.php(837): NotORM_Result->queryAll('select * from c...')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Daili.php(445): Domain_Daili->getReport(165888, NULL, 1614873600, 1615046400, 1, 1, 99)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Daili->getReport()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#6 {main}
+2021-03-06 18:59:55|ERROR|Daili.GetReport|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('select * from c...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('select * from c...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Daili.php(837): NotORM_Result->queryAll('select * from c...')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Daili.php(445): Domain_Daili->getReport(165888, NULL, 1614873600, 1615046400, 1, 1, 99)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Daili->getReport()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#6 {main}
+2021-03-06 19:00:05|ERROR|Daili.GetReport|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('select * from c...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('select * from c...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Daili.php(837): NotORM_Result->queryAll('select * from c...')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Daili.php(445): Domain_Daili->getReport(165888, NULL, 1614873600, 1614960000, 1, 1, 99)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Daili->getReport()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#6 {main}
+2021-03-06 19:00:10|ERROR|Daili.GetReport|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('select * from c...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('select * from c...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Daili.php(837): NotORM_Result->queryAll('select * from c...')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Daili.php(445): Domain_Daili->getReport(165888, NULL, 1614873600, 1614960000, 1, 1, 99)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Daili->getReport()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#6 {main}
+2021-03-06 19:00:45|ERROR|Daili.GetReport|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('select * from c...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('select * from c...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Daili.php(837): NotORM_Result->queryAll('select * from c...')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Daili.php(445): Domain_Daili->getReport(165888, NULL, 1614873600, 1615046400, 1, 1, 99)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Daili->getReport()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#6 {main}
+2021-03-06 20:21:46|ERROR|Daili.GetReport|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('select * from c...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('select * from c...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Daili.php(837): NotORM_Result->queryAll('select * from c...')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Daili.php(445): Domain_Daili->getReport(165888, NULL, 1614873600, 1614960000, 1, 1, 99)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Daili->getReport()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#6 {main}
+2021-03-06 20:21:50|ERROR|Daili.GetReport|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('select * from c...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('select * from c...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Daili.php(837): NotORM_Result->queryAll('select * from c...')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Daili.php(445): Domain_Daili->getReport(165888, NULL, 1614873600, 1615046400, 1, 1, 99)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Daili->getReport()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#6 {main}
+2021-03-06 20:21:51|ERROR|Daili.GetReport|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('select * from c...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('select * from c...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Daili.php(837): NotORM_Result->queryAll('select * from c...')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Daili.php(445): Domain_Daili->getReport(165888, NULL, 1614873600, 1615046400, 1, 1, 99)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Daili->getReport()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#6 {main}
+2021-03-06 20:32:13|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') AND () ORDER BY addtime desc LIMIT 0,11' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(585): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:32:18|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') AND () ORDER BY addtime desc LIMIT 0,11' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(585): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:33:53|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') AND () ORDER BY addtime desc LIMIT 0,11' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(585): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:34:03|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') AND () ORDER BY addtime desc LIMIT 0,11' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(585): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:35:15|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') AND () ORDER BY addtime desc LIMIT 0,11' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(585): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:36:19|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ORDER BY addtime desc LIMIT 0,11' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(585): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:36:49|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(585): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:36:55|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ORDER BY addtime desc LIMIT 0,60' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(585): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:37:02|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ORDER BY addtime desc LIMIT 0,60' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(585): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:37:04|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(585): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:37:06|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 86400 ) ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(585): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:37:07|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 86400 ) ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(585): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:37:08|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ORDER BY addtime desc LIMIT 0,60' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(585): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:37:09|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 86400 ) ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(585): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:37:10|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 86400 ) ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(585): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:37:11|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 86400 ) ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(585): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:37:12|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 86400 ) ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(585): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:37:13|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 86400 ) ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(585): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:37:44|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 86400 ) ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(585): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:37:44|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 86400 ) ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(585): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:39:57|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 86400 ) ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(585): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:39:58|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 86400 ) ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(585): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:39:59|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 86400 ) ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(585): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:40:00|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 86400 ) ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(585): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:40:01|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 86400 ) ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(585): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:40:02|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 86400 ) ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(585): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:40:04|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 86400 ) ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(585): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:40:05|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 86400 ) ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(585): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:40:07|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 86400 ) ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(585): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:40:08|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 86400 ) ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(585): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:40:09|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 86400 ) ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(585): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:43:46|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 86400 ) ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(584): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:43:47|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 86400 ) ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(584): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:43:48|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 86400 ) ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(584): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:43:48|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 86400 ) ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(584): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:43:49|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 86400 ) ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(584): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:43:49|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 86400 ) ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(584): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:44:50|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 86400 ) ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(584): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:44:50|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 86400 ) ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(584): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:44:52|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 86400 ) ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(584): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:44:53|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 86400 ) ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(584): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:44:54|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 86400 ) ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(584): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:44:54|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 86400 ) ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(584): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:44:55|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 86400 ) ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(584): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:51:10|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 86400 ) ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(584): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:51:10|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 86400 ) ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(584): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:58:50|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 86400 ) ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(584): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:58:50|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 86400 ) ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(584): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:58:51|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 86400 ) ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(584): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:58:52|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 86400 ) ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(584): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:58:52|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 86400 ) ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(584): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-06 20:58:53|ERROR|Ticket.GetTicketRecord|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 86400 ) ORDER BY addtime desc LIMIT 0,30' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,codes...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Ticket.php(584): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Ticket->getTicketRecord()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}

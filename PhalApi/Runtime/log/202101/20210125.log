@@ -1,0 +1,44 @@
+2021-01-25 11:56:05|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///avatar/20210125/06648909655327377.png
+2021-01-25 13:52:48|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210125/06648979687049896.png
+2021-01-25 13:56:29|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210125/06648981890787458.png
+2021-01-25 14:01:54|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210125/06648985145086021.png
+2021-01-25 14:10:19|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210125/06648990192564492.png
+2021-01-25 14:17:41|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210125/06648994617705049.png
+2021-01-25 14:27:39|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210125/06649000590422185.png
+2021-01-25 14:36:29|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210125/06649005891989042.png
+2021-01-25 14:39:05|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210125/06649007454585709.png
+2021-01-25 14:41:21|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210125/06649008815706404.png
+2021-01-25 15:07:41|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210125/06649024619704201.png
+2021-01-25 16:40:56|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210125/06649080563710852.png
+2021-01-25 17:11:30|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210125/06649098901945369.png
+2021-01-25 17:30:17|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210125/06649110170760856.png
+2021-01-25 17:54:56|ERROR|User.AddUserBank|PDOException: Incorrect integer value: '' for column 'status' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(780): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->addUserBank()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#5 {main}
+2021-01-25 18:12:51|ERROR|User.GetBaseInfo|PDOException: Unknown column 'user_id' in 'where clause' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT rate FRO...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(18): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(9): Model_User->getBaseInfo('42947')
+#5 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1285): Domain_User->getBaseInfo('42947')
+#6 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#7 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#8 {main}
+2021-01-25 18:13:30|ERROR|User.GetBaseInfo|PDOException: Unknown column 'user_id' in 'where clause' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT rate FRO...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(18): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(9): Model_User->getBaseInfo('42885')
+#5 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1285): Domain_User->getBaseInfo('42885')
+#6 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#7 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#8 {main}

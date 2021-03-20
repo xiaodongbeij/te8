@@ -1,0 +1,561 @@
+<include file="public@header" />
+<link href="__STATIC__/css/admin_index.css" rel="stylesheet" type="text/css">
+</head>
+<style>
+    html,
+    body {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .new_conetnt {
+        background: rgb(54, 54, 54);
+        width: 100%;
+        padding: 2px;
+    }
+
+    .new_conetnt .new_row {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .new_conetnt .new_row .new_title {
+        width: 100%;
+        color: #fff;
+        background-color: rgb(54, 54, 54);
+    }
+
+    .new_conetnt .new_row .con {
+        width: 100%;
+        text-align: center;
+        background: #fff;
+    }
+
+    .new_conetnt .new_row .con>div {
+        padding: 8px 5px;
+        box-sizing: border-box;
+    }
+
+    .item {
+        width: 49.5% !important;
+    }
+
+    .txt-new_row {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .txt-new_row>.w25 {
+        width: 25%;
+    }
+
+    .txt-new_row>.w50 {
+        width: 50%;
+    }
+
+    .tex-right {
+        text-align: right;
+        width: 100%;
+    }
+
+    .red {
+        color: red;
+    }
+</style>
+<body>
+    <div class="content">
+        <div class="content_title">
+            实时统计
+        </div>
+		 <div class="statistics basic">
+            <div class="title">待办事项</div>
+            <div class="bd" style="padding-left: 5px;">
+				<style>
+					.stay li{
+						border: 1px solid rgb(204 204 204 / 25%);
+						padding: 5px 15px;
+						border-radius: 28px;
+						height: 38px;
+						font-size: 14px;
+						margin-right: 30px;
+						margin-top: 5px;
+						margin-bottom: 15px;
+						float: left;
+						background-color: rgb(204 204 204 / 25%);
+						color: rgb(0 0 0 / 84%);
+						
+					}
+					.stay li span{
+						color: #00d0a9;
+						font-size: 16px;
+					}
+				
+				</style>
+			
+				<ul class="stay clear">
+				
+					<a href="{:url('auth/index')}"><li>用户认证待审核数量( <span>{$stayinfo['auth_count']}</span> )</li></a>
+					
+					<a href="{:url('user/user_change/withdrawindex',['status' => 2])}"><li>提现待审核数量( <span>{$stayinfo['withdrawshenh_audit']}</span> )</li></a>
+					<a href="{:url('user/user_change/withdrawindex',['status' => 1])}"><li>提现待出款数量( <span>{$stayinfo['withdrawshenh_count']}</span> )</li></a>
+					
+					<a href="{:url('report/index')}"><li>直播间举报待处理数量( <span>{$stayinfo['liverepot_count']}</span> )</li></a>
+					
+					<a href="{:url('Dynamic/wait',array('isdel'=>0,'status'=>0))}"><li>动态待审核数量( <span>{$stayinfo['dynamic_count']}</span> )</li></a>
+					
+					<a href="{:url('Dynamicrepot/index')}"><li>动态举报数量( <span>{$stayinfo['dynamicrepot_count']}</span> )</li></a>
+					
+					<a href="{:url('video/wait',array('isdel'=>0,'status'=>0,'is_draft'=>0))}"><li>视频待审核数量( <span>{$stayinfo['video_count']}</span> )</li></a>
+					
+					<a href="{:url('videorep/index')}"><li>视频举报数量( <span>{$stayinfo['videorepot_count']}</span> )</li></a>
+
+					<a href="{:url('family/index')}"><li>家族待审核数量( <span>{$stayinfo['family_count']}</span> )</li></a>
+				
+					<a href="{:url('familyuser/divideapply')}"><li>家族分成申请数量( <span>{$stayinfo['familyuser_count']}</span> )</li></a>
+					
+					<li class="hide"></li>
+				
+				</ul>
+			</div>
+        </div>
+        <div class="statistics basic">
+            <div class="title">基本指标</div>
+            <div class="bd">
+                <div class="bd_title">
+                    <input type="hidden" class="action" value='1'>
+                    <div class="dropdown">
+                        <div class="dropdown_input"  data-type="1">
+                            今日
+                        </div>
+                        <div class="dropdown_list">
+                            <ul>
+                                <li data-type="1">今日</li>
+                                <li data-type="2">昨日</li>
+                                <li data-type="3">近7日</li>
+                                <li data-type="4">近30日</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="data_select">
+                        <input type="text" name="start_time" class="form-control js-bootstrap-date" value="" style="width: 80px;display:inline-block;" autocomplete="off">-
+                        <input type="text" class="form-control js-bootstrap-date" name="end_time" value="" style="width: 80px;display:inline-block;" autocomplete="off">
+                    </div>
+                    <div class="search">
+                        查询
+                    </div>
+                    <div class="export">
+                        导出
+                    </div>
+                </div>
+                <div class="basic_list clear">
+                    <ul>
+                        <li class="active on" data-type="1">
+                            <div class="basic_list_t">新增用户</div>
+                            <div class="basic_list_n"><span>{$basic_today['newUsers']}</span></div>
+                        </li>
+                        <li class="active" data-type="2">
+                            <div class="basic_list_t">APP启动次数</div>
+                            <div class="basic_list_n"><span>{$basic_today['launches']}</span></div>
+                        </li>
+                        
+                        <li class="active" data-type="4">
+                            <div class="basic_list_t">活跃用户数</div>
+                            <div class="basic_list_n"><span>{$basic_today['activityUsers']}</span></div>
+                        </li>
+                        <li class="active" data-type="3">
+                            <div class="basic_list_t">平均使用时长</div>
+                            <div class="basic_list_n"><span>0</span>分钟</div>
+                        </li>
+                        
+                        <!-- <li class="active" data-type="5">
+                            <div class="basic_list_t">留存用户数</div>
+                            <div class="basic_list_n">{$basic_today['launches']}</div>
+                        </li> -->
+                        <li>
+                            <div class="basic_list_t">总注册数</div>
+                            <div class="basic_list_n"><span>{$users_total}</span></div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="echarts_basic" style="width:100%;height:300px;"></div>
+            </div>
+        </div>
+        <div class="statistics w50 mr10 source">
+            <div class="title">设备终端</div>
+            <div class="bd">
+                <div id="echarts_source" style="width:100%;height:300px;"></div>
+            </div>
+        </div>
+        <div class="statistics w50 reg">
+            <div class="title">注册渠道</div>
+            <div class="bd">
+                <div id="echarts_reg" style="width:100%;height:300px;"></div>
+            </div>
+        </div>
+<!--         <div class="statistics clear users">
+            <div class="title">用户画像</div>
+            <div class="bd">
+                <div class="bd_title">
+                    <div class="users_tab clear">
+                        <ul>
+                            <li class="on">新增用户</li>
+                            <li>活跃用户</li>
+                            <li>启动次数</li>
+                        </ul>
+                    </div>
+                    <input type="hidden" class="action" value='2'>
+                    <div class="search">
+                        查询
+                    </div>
+                    <div class="data_select">
+                        <input type="text" name="start_time" class="js-date date" value="" style="width: 80px;" autocomplete="off">-
+                        <input type="text" class="js-date date" name="end_time" value="" style="width: 80px;" autocomplete="off">
+                    </div>
+                    <div class="dropdown">
+                        <div class="dropdown_input" data-type="1">
+                            今日
+                        </div>
+                        <div class="dropdown_list">
+                            <ul>
+                                <li data-type="1">今日</li>
+                                <li data-type="2">昨日</li>
+                                <li data-type="3">近7日</li>
+                                <li data-type="4">近30日</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div id="echarts_users" style="width:100%;height:300px;"></div>
+            </div>
+        </div> -->
+        <div class="statistics w33 mr10 anchor">
+            <div class="title">主播数据</div>
+            <div class="bd">
+                <div class="bd_title">
+                    <input type="hidden" class="action" value='3'>
+                    <div class="dropdown">
+                        <div class="dropdown_input" data-type="1">
+                            今日
+                        </div>
+                        <div class="dropdown_list">
+                            <ul>
+                                <li data-type="1">今日</li>
+                                <li data-type="2">昨日</li>
+                                <li data-type="3">近7日</li>
+                                <li data-type="4">近30日</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="data_select">
+                        <input type="text" name="start_time" class="form-control js-bootstrap-date" value="" style="width: 80px;display:inline-block;" autocomplete="off">-
+                        <input type="text" class="form-control js-bootstrap-date" name="end_time" value="" style="width: 80px;display:inline-block;" autocomplete="off">
+                        
+                    </div>
+                    <div class="search">
+                        查询
+                    </div>
+                    <div class="export">
+                        导出
+                    </div>
+                </div>
+                <div class="data_list">
+                    <ul>
+                        <li>
+                            <div class="data_list_left">主播总数</div>
+                            <div class="data_list_right">{:number_format($anchor['anchor_total'])}位</div>
+                        </li>
+                        <li>
+                            <div class="data_list_left">在线主播</div>
+                            <div class="data_list_right">{:number_format($anchor['anchor_online'])}位</div>
+                        </li>
+                        <li>
+                            <div class="data_list_left">直播次数</div>
+                            <div class="data_list_right"><span id="anchor_live_today">{$anchor['anchor_live_today']}</span>次</div>
+                        </li>
+                        <li>
+                            <div class="data_list_left">直播时长</div>
+                            <div class="data_list_right"><span id="anchor_live_long_today">{$anchor['anchor_live_long_today']}</span>分钟</div>
+                        </li>
+                        <li class="last">
+                            <div class="data_list_left">总直播时长</div>
+                            <div class="data_list_right">{$anchor['anchor_live_long_total']}分钟</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="statistics w33 mr10 votestotal">
+            <div class="title">网红榜</div>
+            <div class="bd">
+                <div class="list">
+                    <ul>
+                        <volist name="votes_list" id="v">
+                        <li>
+                            <img class="list_order" src="__STATIC__/images/{$i}.png">
+                            <img class="list_avatar" src="{$v['avatar']}">
+                            <div class="list_info">
+                                <p class="list_name">{$v['user_nicename']}</p>
+                                <p>累计收益<span>{:number_format($v['votestotal'])}</span>{$config['name_votes']}</p>
+                            </div>
+                        </li>
+                        </volist>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="statistics w33 rich">
+            <div class="title">富豪榜</div>
+            <div class="bd">
+                <div class="list">
+                    <ul>
+                        <volist name="rich_list" id="v">
+                        <li>
+                            <img class="list_order" src="__STATIC__/images/{$i}.png">
+                            <img class="list_avatar" src="{$v['avatar']}">
+                            <div class="list_info">
+                                <p class="list_name">{$v['user_nicename']}</p>
+                                <p>累计送出<span>{:number_format($v['consumption'])}<span>{$config['name_coin']}</p>
+                            </div>
+                        </li>
+                        </volist>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="statistics clear charge">
+            <div class="title">财务</div>
+            <div class="bd">
+                <div class="bd_title">
+                    <input type="hidden" class="action" value='4'>
+                    <div class="dropdown">
+                        <div class="dropdown_input" data-type="1">
+                            今日
+                        </div>
+                        <div class="dropdown_list">
+                            <ul>
+                                <li data-type="1">今日</li>
+                                <li data-type="2">昨日</li>
+                                <li data-type="3">近7日</li>
+                                <li data-type="4">近30日</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="data_select">
+                        <input type="text" name="start_time" class="form-control js-bootstrap-date" value="" style="width: 80px;display:inline-block;" autocomplete="off">-
+                        <input type="text" class="form-control js-bootstrap-date" name="end_time" value="" style="width: 80px;display:inline-block;" autocomplete="off">
+                    </div>
+                    <div class="search">
+                        查询
+                    </div>
+                    <div class="export">
+                        导出
+                    </div>
+                    <div class="charge_total">
+                        历史总收益
+                        <span>{$charge_total} 元</span>
+                    </div>
+                </div>
+                <div id="echarts_charge" style="width:100%;height:400px;"></div>
+            </div>
+        </div>
+        <div class="statistics cash">
+            <div class="title">统计</div>
+            <div class="bd">
+                <div class="bd_title">
+<!--                    <input type="hidden" class="action" value='5'>-->
+<!--                    <div class="dropdown">-->
+<!--                        <div class="dropdown_input" data-type="1">-->
+<!--                            今日-->
+<!--                        </div>-->
+<!--                        <div class="dropdown_list">-->
+<!--                            <ul>-->
+<!--                                <li data-type="1">今日</li>-->
+<!--                                <li data-type="2">昨日</li>-->
+<!--                                <li data-type="3">近7日</li>-->
+<!--                                <li data-type="4">近30日</li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="data_select">-->
+<!--                        <input type="text" name="start_time" class="form-control js-bootstrap-date" value="" style="width: 80px;display:inline-block;" autocomplete="off">- -->
+<!--                        <input type="text" class="form-control js-bootstrap-date" name="end_time" value="" style="width: 80px;display:inline-block;" autocomplete="off">-->
+<!--                    </div>-->
+<!--                    <div class="search">-->
+<!--                        查询-->
+<!--                    </div>-->
+<!--                    <div class="export">-->
+<!--                        导出-->
+<!--                    </div>-->
+                </div>
+                <div class="cash_list clear">
+                    <div class="new_conetnt">
+                        <div class="new_row">
+                            <div class="con">
+                                <div class="new_title">合计分析</div>
+                                <div class="txt-new_row">
+                                    <div class="w25">后台总余额</div>
+                                    <div class="w25">{$cashinfo['user_coin_sum']}</div>
+                                    <div></div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="new_row">
+                            <div class="con item">
+                                <div class="new_title">游戏存取款</div>
+
+                                <div class="txt-new_row">
+                                    <div class="w50">游戏存款</div>
+                                    <div class="w50">{$cashinfo['game_deposit_sum']}</div>
+                                </div>
+
+                                <div class="txt-new_row">
+                                    <div class="w50">游戏取款</div>
+                                    <div class="w50">{$cashinfo['game_take_sum']}</div>
+                                </div>
+
+                                <div class="txt-new_row">
+                                    <div class="w50 tex-right red">总计</div>
+                                    <div class="w50 tex-right red"></div>
+                                </div>
+                                <div class="txt-new_row ">
+                                    <div class="tex-right"></div>
+
+                                </div>
+                            </div>
+                            <div class="con item">
+                                <div class="new_title">提现</div>
+                                <div class="txt-new_row">
+                                    <div class="w50">申请金额</div>
+                                    <div class="w50">{$cashinfo['cash_apply']}</div>
+                                </div>
+
+                                <div class="txt-new_row">
+                                    <div class="w50">已通过金额</div>
+                                    <div class="w50">{$cashinfo['cash_adopt']}</div>
+                                </div>
+
+                                <div class="txt-new_row">
+                                    <div class="w50">已拒绝金额</div>
+                                    <div class="w50">{$cashinfo['cash_refuse']}</div>
+                                </div>
+
+                                <div class="txt-new_row">
+                                    <div class="w50">提现人数</div>
+                                    <div class="w50">{$cashinfo['cash_anchor']}</div>
+                                </div>
+
+                                <div class="txt-new_row">
+                                    <div class="w50">总提现手续费</div>
+                                    <div class="w50">{$cashinfo['service_charge_sum']}</div>
+                                </div>
+
+                                <div class="txt-new_row">
+                                    <div class="w50">总提现金额</div>
+                                    <div class="w50">{$cash_total}</div>
+                                </div>
+
+                                <div class="txt-new_row">
+                                    <div class="w50 tex-right red">总计</div>
+                                    <div class="w50 tex-right red"></div>
+                                </div>
+                                <div class="txt-new_row ">
+                                    <div class="tex-right"></div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<!--                    <ul>-->
+<!--                        <li style="width: 100%">-->
+<!--                            <div class="cash_list_t" style="background-color: #073B4C;color: white">后台总余额</div>-->
+<!--                            <div class="cash_list_m"><span id="user_coin_sum">{$cashinfo['user_coin_sum']}</span> 元</div>-->
+<!--                            <div class="cash_list_h">-->
+<!--                                &lt;!&ndash; <a>查看列表</a> &ndash;&gt;-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                    </ul>-->
+
+<!--                    <ul>-->
+<!--                        <li style="width: 49%">-->
+<!--                            <div class="cash_list_t" style="background-color: #073B4C;color: white">游戏存款</div>-->
+<!--                            <div class="cash_list_m"><span id="game_deposit_sum">{$cashinfo['game_deposit_sum']}</span> 元</div>-->
+<!--                            <div class="cash_list_h">-->
+<!--                                &lt;!&ndash; <a>查看列表</a> &ndash;&gt;-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                        <li style="width: 49%">-->
+<!--                            <div class="cash_list_t" style="background-color: #073B4C;color: white">游戏取款</div>-->
+<!--                            <div class="cash_list_m"><span id="game_take_sum">{$cashinfo['game_take_sum']}</span> 元</div>-->
+<!--                            <div class="cash_list_h">-->
+<!--                                &lt;!&ndash; <a>查看列表</a> &ndash;&gt;-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                    </ul>-->
+
+<!--                    <ul>-->
+<!--                        <li style="width: 100%">-->
+<!--                            <div class="cash_list_t" style="background-color: #073B4C;color: white">总提现金额</div>-->
+<!--                            <div class="cash_list_m"><span id="cash_total">{$cash_total}</span> 元</div>-->
+<!--                            <div class="cash_list_h">-->
+<!--                                &lt;!&ndash; <a>查看列表</a> &ndash;&gt;-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                        <li style="width: 100%">-->
+<!--                            <div class="cash_list_t" style="background-color: #073B4C;color: white">总提现手续费</div>-->
+<!--                            <div class="cash_list_m"><span id="service_charge_sum">{$cashinfo['service_charge_sum']}</span> 元</div>-->
+<!--                            <div class="cash_list_h">-->
+<!--                                &lt;!&ndash; <a>查看列表</a> &ndash;&gt;-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <div class="cash_list_t" style="background-color: #073B4C;color: white; ">申请提现金额</div>-->
+<!--                            <div class="cash_list_m"><span id="cash_apply">{$cashinfo['cash_apply']}</span> 元</div>-->
+<!--                            <div class="cash_list_h">-->
+<!--                                &lt;!&ndash; <a>查看列表</a> &ndash;&gt;-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                        <li style="margin-left: -3px;">-->
+<!--                            <div class="cash_list_t" style="background-color: #073B4C;color: white; ">已通过金额</div>-->
+<!--                            <div class="cash_list_m"><span id="cash_adopt">{$cashinfo['cash_adopt']}</span> 元</div>-->
+<!--                            <div class="cash_list_h">-->
+<!--                                &lt;!&ndash; <a>查看列表</a> &ndash;&gt;-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                        <li style="margin-left: -3px;">-->
+<!--                            <div class="cash_list_t" style="background-color: #073B4C;color: white; ">已拒绝金额</div>-->
+<!--                            <div class="cash_list_m"><span id="cash_refuse">{$cashinfo['cash_refuse']}</span> 元</div>-->
+<!--                            <div class="cash_list_h">-->
+<!--                                &lt;!&ndash; <a>查看列表</a> &ndash;&gt;-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                        <li style="margin-left: -2px;">-->
+<!--                            <div class="cash_list_t" style="background-color: #073B4C;color: white; ">提现人数</div>-->
+<!--                            <div class="cash_list_m"><span id="cash_anchor">{$cashinfo['cash_anchor']}</span> 位</div>-->
+<!--                            <div class="cash_list_h">-->
+<!--                                &lt;!&ndash; <a>查看列表</a> &ndash;&gt;-->
+<!--                            </div>-->
+<!--                        </li>-->
+
+<!--                    </ul>-->
+                </div>
+            </div>
+        </div>
+    </div>
+	<script src="__STATIC__/js/admin.js"></script>
+	<script src="__STATIC__/js/echarts/echarts.min.js"></script>
+    <script>
+        var users_total='{$users_total}';
+        var data_basic={$data_basicj};
+        var data_source={$data_sourcej};
+        var data_charge={$data_chargej};
+        var data_type={$data_typej};
+    </script>
+    <script src="__STATIC__/js/admin_index.js"></script>
+</body>
+</html>

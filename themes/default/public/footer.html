@@ -1,0 +1,77 @@
+	<div class="area-ft">
+		<div class="down-ft">
+			<div class="down-ft_one fl">
+				<div class="guan_wei">
+					<if condition="$site_info['sina_url'] neq ''"><a href="{$site_info['sina_url']}" target="_blank"></if>
+						<div class="guan_wei_icon fl">
+							<img src="{$site_info['sina_icon']}">
+						</div>
+						<div class="guan_wei_con fl">
+							<p class="guan_wei_title">{$site_info['sina_title']}</p>
+							<p class="guan_wei_desc">{$site_info['sina_desc']}</p>
+						</div>
+					<if condition="$site_info['sina_url'] neq ''"></a></if>
+					<div class="clearboth"></div>
+				</div>
+
+				<div class="guan_wei mar_top15">
+					<if condition="$site_info['qq_url'] neq ''"><a href="{$site_info['qq_url']}" target="_blank"></if>
+						<div class="guan_wei_icon fl">
+							<img src="{$site_info['qq_icon']}">
+						</div>
+						<div class="guan_wei_con fl">
+							<p class="guan_wei_title">{$site_info['qq_title']}</p>
+							<p class="guan_wei_desc">{$site_info['qq_desc']}</p>
+						</div>
+					<if condition="$site_info['qq_url'] neq ''"></a></if>
+					<div class="clearboth"></div>
+				</div>
+				
+			</div>
+			<div class="down-ft_two fl">
+				<ul class="ewm_list">
+					<li>
+						<p class="ewm_title">微信公众号</p>
+						<p class="ewm_icon"><img src="{$site_info['wechat_ewm']}"></p>
+					</li>
+					<li>
+						<p class="ewm_title">android版下载</p>
+						<p class="ewm_icon"><img src="{$site_info['apk_ewm']}"></p>
+					</li>
+					<li>
+						<p class="ewm_title">iPhone版下载</p>
+						<p class="ewm_icon"><img src="{$site_info['ipa_ewm']}"></p>
+					</li>
+					<div class="clearboth"></div>
+				</ul>
+			</div>
+			<div class="down-ft_three fl">
+				<ul class="href_list fl mar_left50">
+					<p>{$site_info['site_name']}</p>
+				</ul>
+				<ul class="href_list fl">
+					<p>新手帮助</p>
+					<li><a >新手指引</a></li>
+					<li><a >赞助中心</a></li>
+					<li><a >资费介绍</a></li>
+				</ul>
+				<div class="clearboth"></div>
+			</div>
+			<div class="down-ft_four fl">
+				<p class="company_mobile">{$site_info['mobile']}</p>
+				<p>客服热线(服务时间:8:00-16:00)</p>
+				<p>地址:{$site_info['address']}</p>
+			</div>
+			<div class="clearboth"></div>
+		</div>
+	</div>
+	<div id="doc-ft">
+		<div class="container">
+			<p class="footer">
+				{:nl2br($site_info['copyright'])}
+			</p>
+		</div>
+	</div>
+		
+	  
+

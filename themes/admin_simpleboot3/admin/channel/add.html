@@ -1,0 +1,192 @@
+<include file="public@header" />
+</head>
+<body>
+<div class="wrap">
+    <ul class="nav nav-tabs">
+        <li ><a href="{:url('Channel/index')}">列表</a></li>
+        <li class="active"><a >{:lang('ADD')}</a></li>
+    </ul>
+    <form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('Channel/add')}">
+
+
+        <div class="form-group sf">
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>商户ID</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="text" class="form-control" id="input-shop_id" name="shop_id">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>通道名称</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="text" class="form-control" id="input-channel_name" name="channel_name">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>支付方式</label>
+            <div class="col-md-6 col-sm-10">
+                <select class="form-control" id="pay_type" name="pay_type">
+                    <foreach $pay_type as $v >
+                        <option value="{$v.id}">{$v.title}</option>
+                    </foreach>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>快捷金额</label>
+            <div class="col-md-6 col-sm-10">
+                <select class="form-control" name="is_quick">
+                    <option value="1">开启</option>
+                    <option value="0" selected>关闭</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>快捷金额</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="text" class="form-control" id="input-quick_money" name="quick_money" placeholder="多个用'|'隔开">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>金额范围</label>
+            <div class="col-md-6 col-sm-10">
+                <select class="form-control" name="is_range">
+                    <option value="1">开启</option>
+                    <option value="0" selected>关闭</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>最小金额</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="number" class="form-control" id="input-min_money" name="min_money">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>最大金额</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="number" class="form-control" id="input-max_money" name="max_money">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>通道状态</label>
+            <div class="col-md-6 col-sm-10">
+                <select class="form-control" name="status">
+                    <option value="1">启用</option>
+                    <option value="0" selected>禁用</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group sf">
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>请求地址</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="text" class="form-control" id="input-action" name="action">
+            </div>
+        </div>
+
+        <div class="form-group sf">
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>商户秘钥</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="text" class="form-control" id="input-key" name="key">
+            </div>
+        </div>
+
+        <div class="form-group sf">
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>回调地址</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="text" class="form-control" id="input-notify_url" name="notify_url">
+            </div>
+        </div>
+
+        <div class="form-group sf">
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>跳转地址</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="text" class="form-control" id="input-return_url" name="return_url">
+            </div>
+        </div>
+        
+        <div class="form-group bank" style="display: none">
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>银行名称</label>
+            <div class="col-md-6 col-sm-10">
+                <select class="form-control" name="bank_name">
+           
+                    <volist name="list" id="vo">
+                        <option value="{$vo.bank_name}">{$vo.bank_name}</option>
+                    </volist>
+                    
+                </select>
+            </div>
+        </div>
+        
+        <div class="form-group bank" style="display: none">
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>银行卡号</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="text" class="form-control" id="input-bank_no" name="bank_no">
+            </div>
+        </div>
+        
+        <div class="form-group bank" style="display: none">
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>姓名</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="text" class="form-control" id="input-name" name="name">
+            </div>
+        </div>
+        <div class="form-group" >
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>开启时间</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="text" class="form-control" value="00:00:00" id="input-start_time" name="start_time">
+            </div>
+        </div>
+        <div class="form-group ">
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>结算时间</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="text" class="form-control" value="23:59:59" id="input-end_time" name="end_time">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-primary js-ajax-submit">{:lang('ADD')}</button>
+                <a class="btn btn-default" href="{:url('Channel/index')}">{:lang('BACK')}</a>
+            </div>
+        </div>
+
+    </form>
+</div>
+<script src="__STATIC__/js/admin.js"></script>
+<script src="__STATIC__/js/laydate/laydate.js"></script>
+<script>
+
+    laydate.render({
+      elem: '#input-end_time'
+      ,type: 'time'
+
+    });
+    
+    laydate.render({
+      elem: '#input-start_time'
+      ,type: 'time'
+
+    });
+    $('#pay_type').change(function(res){
+        var res = $('#pay_type').find("option:selected").val();
+        if(res == 3)
+        {
+            $(".sf").hide();
+            $(".bank").show();
+        }else{
+            $(".sf").show();
+            $(".bank").hide();
+        }
+    })
+</script>
+</body>
+</html>

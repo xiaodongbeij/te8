@@ -1,0 +1,735 @@
+2021-02-06 10:01:05|ERROR|User.getBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1390): checkShopIsPass('42930')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 10:01:51|ERROR|User.getBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1390): checkShopIsPass('42930')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 10:02:11|ERROR|User.getBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1390): checkShopIsPass('42930')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 10:02:43|ERROR|User.GetBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1390): checkShopIsPass('42952')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 10:02:43|ERROR|User.getBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1390): checkShopIsPass('42952')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 10:05:09|ERROR|User.GetBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1390): checkShopIsPass('42952')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 10:05:14|ERROR|User.GetBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1390): checkShopIsPass('42952')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 10:05:15|ERROR|User.GetBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1390): checkShopIsPass('42952')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 10:05:18|ERROR|User.GetBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1390): checkShopIsPass('42952')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 10:05:23|ERROR|User.GetBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1390): checkShopIsPass('42952')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 10:05:56|ERROR|User.getBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1390): checkShopIsPass('42930')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 10:07:14|ERROR|User.getBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1390): checkShopIsPass('42900')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 10:07:20|ERROR|User.getBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1390): checkShopIsPass('42900')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 10:18:52|ERROR|User.getBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1390): checkShopIsPass('42900')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 10:29:09|ERROR|User.getBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('42930')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 10:50:49|ERROR|User.getBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('42930')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 10:54:03|ERROR|User.getBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('42930')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 13:51:11|ERROR|User.getBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('42930')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 13:51:31|ERROR|User.getBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('42930')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 13:52:01|ERROR|User.GetBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('42952')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 13:52:01|ERROR|User.getBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('42952')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 14:06:35|ERROR|User.getBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('42900')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 14:06:43|ERROR|User.getBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('42900')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 14:14:01|ERROR|User.GetBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('42952')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 14:14:10|ERROR|User.GetBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('42952')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 14:59:57|ERROR|User.GetBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('43008')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 15:01:19|ERROR|User.GetBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('43008')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 15:01:21|ERROR|User.GetBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('43008')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 15:01:22|ERROR|User.GetBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('43008')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 15:22:07|ERROR|User.GetBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('43008')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 15:22:10|ERROR|User.GetBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('43008')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 15:22:11|ERROR|User.GetBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('43008')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 15:22:12|ERROR|User.GetBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('43008')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 15:22:13|ERROR|User.GetBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('43008')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 15:22:32|ERROR|User.GetBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('43008')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 15:24:08|ERROR|User.GetBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('43008')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 15:49:17|ERROR|User.GetBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('43008')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 16:20:19|ERROR|User.GetBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('43008')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 16:25:42|ERROR|User.GetBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('43008')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 16:26:21|ERROR|User.GetBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('43008')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 16:27:56|ERROR|User.GetBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('42952')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 16:27:56|ERROR|User.getBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('42952')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 16:47:48|ERROR|User.GetBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('42952')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 16:47:48|ERROR|User.getBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('42952')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 16:49:51|ERROR|User.getUserHome|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT uid,sale...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Shop.php(198): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Shop.php(69): Model_Shop->getShop('42952', 'uid,sale_nums,q...')
+#5 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(2413): Domain_Shop->getShop('42952')
+#6 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getUserHome()
+#7 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#8 {main}
+2021-02-06 16:50:35|ERROR|User.getBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('43009')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 16:50:40|ERROR|User.getBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('43009')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 16:51:20|ERROR|User.getBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('42952')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 16:51:21|ERROR|User.GetBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('42952')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 16:51:23|ERROR|User.getUserHome|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT uid,sale...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Shop.php(198): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Shop.php(69): Model_Shop->getShop('42952', 'uid,sale_nums,q...')
+#5 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(2413): Domain_Shop->getShop('42952')
+#6 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getUserHome()
+#7 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#8 {main}
+2021-02-06 16:51:25|ERROR|User.GetBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('42952')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 16:51:25|ERROR|User.getBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('42952')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 16:51:36|ERROR|User.getBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('43009')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 16:53:24|ERROR|User.getBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('42952')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 16:53:24|ERROR|User.GetBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('42952')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 16:53:31|ERROR|User.getBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('43009')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 16:55:01|ERROR|User.GetBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('43007')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 16:55:10|ERROR|User.getBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('42952')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 16:55:10|ERROR|User.GetBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('42952')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 16:56:13|ERROR|User.getUserHome|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT uid,sale...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Shop.php(198): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Shop.php(69): Model_Shop->getShop('42952', 'uid,sale_nums,q...')
+#5 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(2413): Domain_Shop->getShop('42952')
+#6 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getUserHome()
+#7 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#8 {main}
+2021-02-06 16:56:46|ERROR|User.GetBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('42952')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 16:56:46|ERROR|User.getBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('42952')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 16:56:49|ERROR|User.GetBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('43007')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 16:56:58|ERROR|User.GetBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('43007')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 16:57:08|ERROR|User.GetBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('42952')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 16:57:08|ERROR|User.getBaseInfo|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1389): checkShopIsPass('42952')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getBaseInfo()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 18:29:42|ERROR|User.getUserHome|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT uid,sale...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Shop.php(198): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Shop.php(69): Model_Shop->getShop('43026', 'uid,sale_nums,q...')
+#5 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(2408): Domain_Shop->getShop('43026')
+#6 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getUserHome()
+#7 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#8 {main}
+2021-02-06 18:48:10|ERROR|User.getUserHome|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT uid,sale...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Shop.php(198): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Shop.php(69): Model_Shop->getShop('43029', 'uid,sale_nums,q...')
+#5 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(2408): Domain_Shop->getShop('43029')
+#6 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getUserHome()
+#7 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#8 {main}
+2021-02-06 18:49:14|ERROR|User.getPerSetting|PDOException: Table 'yunbao_com.cmf_portal_post' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,post_...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(719): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(195): Model_User->getPerSetting()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(2840): Domain_User->getPerSetting()
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getPerSetting()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 18:49:18|ERROR|User.getPerSetting|PDOException: Table 'yunbao_com.cmf_portal_post' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,post_...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(719): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(195): Model_User->getPerSetting()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(2840): Domain_User->getPerSetting()
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getPerSetting()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 18:49:56|ERROR|User.getPerSetting|PDOException: Table 'yunbao_com.cmf_portal_post' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,post_...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(719): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(195): Model_User->getPerSetting()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(2840): Domain_User->getPerSetting()
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getPerSetting()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 18:51:09|ERROR|User.GetPerSetting|PDOException: Table 'yunbao_com.cmf_portal_post' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,post_...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(719): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(195): Model_User->getPerSetting()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(2820): Domain_User->getPerSetting()
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getPerSetting()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-06 18:51:36|ERROR|User.GetPerSetting|PDOException: Table 'yunbao_com.cmf_portal_post' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT id,post_...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(719): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(195): Model_User->getPerSetting()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(2820): Domain_User->getPerSetting()
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->getPerSetting()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}

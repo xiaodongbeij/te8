@@ -1,0 +1,97 @@
+<include file="public@header"/>
+<style>
+    .table img{
+        width:25px;
+        height:25px;
+    }
+
+    #pop{
+        display:none;
+    }
+</style>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a>彩种规则</a></li>
+<!--        <li><a href="{:url('GameRuleRate/add')}">{:lang('ADD')}</a></li>-->
+    </ul>
+    <form class="well form-inline margin-top-20" method="post" action="{:url('game/GameRuleRate/index')}">
+
+        选择彩种：
+        <select class="form-control" name="cai_id">
+            <option value="">全部</option>
+            <foreach name="cais" item="v">
+                <option value="{$v.id}" <if condition="input('request.cai_id') neq '' && input('request.cai_id') eq $v['id']">selected</if>>{$v.show_name}</option>
+            </foreach>
+        </select>
+
+        <input type="submit" class="btn btn-primary" value="搜索"/>
+        <a class="btn btn-danger" href="{:url('game/GameRuleRate/index')}">清空</a>
+        <br>
+        <br>
+    </form>
+    <form method="post" class="js-ajax-form">
+
+        <table class="table table-hover table-bordered">
+            <thead>
+            <tr>
+                <th width="16">
+                    <label>
+                        <input type="checkbox" class="js-check-all" data-direction="x" data-checklist="js-check-x">
+                    </label>
+                </th>
+                <th>ID</th>
+                <th>彩种</th>
+                <th>下注名称</th>
+                <th>下注代码</th>
+<!--                <th>玩法类型</th>-->
+                <th>赔率</th>
+                <th>玩法名称</th>
+                <th>玩法名称代码</th>
+                <th>状态</th>
+
+                <th>{:lang('ACTIONS')}</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            <foreach name="list" item="vo">
+                <tr>
+                    <td>
+                        <input type="checkbox" class="js-check" data-yid="js-check-y" data-xid="js-check-x" name="ids[]" value="{$vo.id}">
+                    </td>
+                    <td>{$vo.id}</td>
+                    <td>{$vo.cz.show_name}</td>
+                    <td>{$vo.rate_name}</td>
+                    <td>{$vo.rate_code}</td>
+<!--                    <td>{$vo.type}</td>-->
+                    <td>{$vo.rate}</td>
+                    <td>{$vo.rule_name}</td>
+                    <td>{$vo.rule_code}</td>
+                    <td>
+                        <eq name="$vo.status" value="1"><font style="color: green">开启</font></eq>
+                        <eq name="$vo.status" value="0"><font style="color:red;">关闭</font></eq>
+                    </td>
+
+                    <td>
+                        <a class="btn btn-xs btn-primary" href='{:url("GameRuleRate/edit",array("id"=>$vo["id"]))}'>{:lang('EDIT')}</a>
+<!--                        <a class="btn btn-xs btn-danger js-ajax-delete" href="{:url('GameRuleRate/del',array($vo['id']))}">{:lang('DELETE')}</a>-->
+
+                    </td>
+                </tr>
+            </foreach>
+            </tbody>
+        </table>
+        <div class="pagination">{$page}</div>
+    </form>
+</div>
+
+
+<script src="__STATIC__/js/admin.js"></script>
+<script src="__STATIC__/js/laydate/laydate.js"></script>
+<script>
+
+</script>
+</body>
+</html>

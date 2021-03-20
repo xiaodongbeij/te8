@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="origin">
+    <meta http-equiv="X-UA-Compatible"content="IE=edge">
+    <meta content="telephone=no" name="format-detection" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <title>{$liveinfo['title']|default=$site_info['site_name']}</title>
+    <link rel="stylesheet" type="text/css" href="__STATIC__/wxshare/share/css/swiper.css">
+    <link rel="stylesheet" type="text/css" href="__STATIC__/wxshare/share/css/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="__STATIC__/wxshare/share/css/style.css">
+    
+    <script type="text/javascript" src="__STATIC__/wxshare/share/js/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="__STATIC__/js/layer/layer.js"></script>
+    <script type="text/javascript" src="//res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script type="text/javascript" src="__STATIC__/wxshare/share/js/swiper.js"></script>
+    <script type="text/javascript" src="__STATIC__/wxshare/share/js/txbb-pop.js"></script>
+    <script type="text/javascript" src="__STATIC__/wxshare/share/js/template.js"></script> 
+    <script type="text/javascript" src="__STATIC__/wxshare/share/js/socket.io.js?t=1571883215"></script> 
+    <script type="text/javascript">
+        var room_id = '{$liveinfo['stream']}';
+        var to_uid = '{$liveinfo['uid']}';
+        var User = {$userinfoj};
+        var level={$levellistj};
+        var level_anchor={$levelanchorlistj};
+		
+		var isiPad = /iPad/i.test(navigator.userAgent);
+		var isiPhone = /iPhone|iPod/i.test(navigator.userAgent);
+		var isAndroid = /Android/i.test(navigator.userAgent);
+		var isWeixin = /MicroMessenger/i.test(navigator.userAgent);
+		var isQQ = /QQ/i.test(navigator.userAgent);
+		var isIOS = (isiPad || isiPhone);
+		var isWeibo = /Weibo/i.test(navigator.userAgent);
+		var isApp = (isAndroid || isIOS);
+		
+		if(isWeixin && !User){
+			window.location.href='/wxshare/Share/wxLogin?roomnum='+to_uid;
+		}
+		
+		var field='{$words_j}';
+		var fly="";
+        var videosrc='{$hls}';
+		var livetype='{$livetype}';
+		var islive='{$liveinfo['islive']}';
+        var thumb='{$liveinfo['avatar']}';
+        var h=window.screen.height;
+        var videotimer='',request='';
+		var socket = new io("{$configpri['chatserver']}");
+
+        $(function(){
+            if(islive==1){
+                videotimer=setTimeout("connectChange()", 1000);
+            }else{
+                $("#state").show();
+            }
+            
+        });
+
+		/*西瓜播放器-安卓,苹果手机播放兼容性全屏展示控制*/
+		var playsinline=false;
+		if(isIOS){
+			playsinline=true;
+		}
+
+        function connectChange(){
+            if(livetype==0){
+                if(videosrc){
+                    $("#videoPlay").show(); 
+                    var div='<button id="play"><img src="__STATIC__/wxshare/share/images/play.png" width="61"></button>';
+                    $("#top_box").append(div);
+                    $("#state").hide();
+                    $("#top_box").show();
+                    
+                    var data_play={
+                        "autoplay": false,
+                        "autoplayMuted": false,
+						"playsinline":playsinline,
+                        "loop": true,
+                        "controls": false,
+                        'x5-video-player-type': 'h5',
+                        'x5-video-player-fullscreen': "true"
+                        
+                    };
+                    xgPlay('video_play',videosrc,data_play);
+                }else{
+                    $("#videoPlay").hide();   
+                    $("#play").remove();       
+                    $("#state").show();
+                    $("#top_box").hide();
+                    $(".jw-preview").show();
+                    $(".section1_box .roomtitle").remove();
+                    clearInterval(videotimer);
+                    return !1;
+                }
+            }else{
+                $("#state h2").html("该房间为密码或收费房间，请下载APP观看....");
+                $("#videoPlay").hide();   
+                $("#play").remove();       
+                $("#state").show();
+                $("#top_box").hide();
+                $(".jw-preview").show();
+                $(".section1_box .roomtitle").remove();
+                clearInterval(videotimer);
+                return !1;
+            }
+
+      }
+    </script> 
+	 <script type="text/javascript" src="__STATIC__/wxshare/share/js/eventListen.js?t=1584778809"></script> 
+</head>
+<body>
+
+<!--视频-->
+<section class="section1">
+    <article class="jwplayer jw-reset jw-stretch-fill">
+        <div class="jw-media jw-reset">
+            <div id="videoPlay" style="width:100%;height:100%;position:absolute;top:0;left:0;overflow:hidden;">
+                <div id="video_play"></div>
+            </div>
+            <div id="state" style="text-align:center;line-height:40px;position:absolute;top:35%;z-index:11;color:#fff;padding:20px;display:none;">
+                <h2>
+				<if condition="$liveinfo['type'] eq 1">
+						抱歉，这个房间是密码房间...
+					<elseif condition="$liveinfo['type'] gt 1"/>
+						抱歉，这个房间是收费房间...
+					<else/>
+						抱歉，这个房间的主播已经退出房间啦...
+					</if></h2>
+            </div>
+            <div class="jw-preview jw-reset" style="background-image: url('{$liveinfo['avatar']}')"></div>
+        </div>
+    </article>
+ 
+    <article class="section1_box" id="section1_box">
+        <header class="header clearfix">
+            <div class="clearfix">
+                <div class="userinfo">
+                    <img src="{$liveinfo['avatar_thumb']}" userid="{$liveinfo['goodnum']}">
+                    <span class="ulive">{$liveinfo['user_nicename']}</span>
+                    <span class="unum">房间号：{$liveinfo['goodnum']}</span>
+                </div>
+                <div class="userimg" id="userimg">
+                    <ul class="userpic clearfix" id="userpic"></ul>
+                </div>
+
+				<if condition="$isattention eq 1">
+				<div class="user_followed on" type="1">
+					已关注
+				</div>
+				<else/>
+				<div class="user_followed" type="0">
+					关注
+				</div>
+				</if>
+            </div>
+        </header>
+
+        <article class="msg-box" id="upchat_hall">
+            <div class="msg-con" id="chat_hall"></div>
+        </article>
+
+        <article class="chat_input">
+            <div class="chat_barrage">
+                <span>弹幕</span>
+            </div>
+            <span class="text_input">
+                <input id="message" name="textfield" type="text" class="input" placeholder="点击这输入文字" value="" maxlength="200">
+            </span>
+            <span class="send" id="chat">
+				发送
+            </span>
+        </article>
+
+        <!--礼物列表-->
+        <article class="chat_gift">
+            <div class="swiper-container">
+                <div class="swiper-wrapper" id="swiper-wrapper"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="chat_gift_send">
+                <div class="balance"><a href="/wxshare/Share/pay">充值</a>：<span class="bglance_money">{$userinfo['coin']|default=0}</span><span class="gift-coin"></span><span class="gift-bbar-text">></span> </div>
+				<div class="send_button">发送</div>
+            </div>
+			<div class="gift-countdown-bg" id="gift_countdown_bg">
+				<div class="gift-countdown-btn">
+                    <p class="gift-countdown-btn-text" onselectstart="return false">连发</p>
+                    <p class="gift-countdown-btn-time" onselectstart="return false">5</p>
+                </div>
+			</div>
+        </article>
+        <!--礼物列表-->
+
+        <article id="heart"><canvas id="canvas"></canvas></article>
+
+        <nav class="chat-tool">
+            <ul>
+                <li><img src="__STATIC__/wxshare/share/images/talk.png" id="talk-btn"></li>
+                <li><img src="__STATIC__/wxshare/share/images/sentgift.png" id="gift-btn"></li>
+                <li style="float:right;">
+                    <a href="/wxshare/Share/index">                        
+						<img src="__STATIC__/wxshare/share/images/ic_room_btn_close_pressed.png">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <article id="top_box" style="display: none;">
+            <!-- <button id="play"><img src="__STATIC__/wxshare/share/images/play.png" width="61"></button> -->
+        </article>
+
+        <!--礼物显示效果-->
+		<div class="hjPopGift hjPopGift_small first"><i class="icon-avatar"></i><div class="nickname"></div><div class="giftname"></div><i class="icon-gift"></i><div class="giftNum"></div></div>
+		<div class="hjPopGift hjPopGift_small last"><i class="icon-avatar"></i><div class="nickname"></div><div class="giftname"></div><i class="icon-gift"></i><div class="giftNum"></div></div>
+		<div class="hjPopGift hjPopGift_big"><div class="giftMsg"></div><img></div>
+
+        <!--弹幕-->
+        <div class="chat_barrage_box"></div>
+		
+    </article>
+    <section class="touchbox" id="touchbox"></section>
+	<!-- 下载 -->
+	<div class="down-bottom" onclick="downurl()">
+		<img src="__STATIC__/wxshare/share/images/down.png">
+	</div>
+</section>
+<!--视频-->
+
+<!--QQ 微信分享提示-->
+<section id="share_alert">
+    <article class="share_prompt">
+        <p></p>
+    </article>
+</section>
+<!--QQ 微信分享提示-->
+
+<!--手机号登录-->
+<div id="login-btn"></div>
+<div class="js-reg"></div>
+<section id="login">
+    <article class="login_form">
+		<div class="warring js_reg_warring">请输入手机号码</div>
+        <div class="phoneArea">
+			<input type="text" class="phone js_reg_phone_input" placeholder="输入手机号码" maxlength="11">
+		</div>
+		<div class="key_con">
+			<div class="keyBorder">
+				<input class="key js_reg_code_input" type="text" placeholder="输入验证码" maxlength="6">
+			</div>													
+			<a class="get_none js_reg_getcode">获取验证码</a>
+		</div>
+		<a class="submit js_reg_submit get_none">确认</a>
+    </article>
+</section>
+
+
+<!--礼物列表模板-->
+<script id="giftlist" type="text/html">
+    (*each pagenum as v k*)
+    <article class="swiper-slide">
+        (*each giftlist as value key*)
+        (*if key>=(k)*8&&key<=(k+1)*8-1 *)
+        <div>
+            <img src="(*value.gifticon*)">
+            <p>(*value.needcoin*)<i></i></p>
+			<div class="gift-select (*if value.type ==0 *)gift-lian(*/if*)" data-id="(*value.id*)" data-giftname="(*value.giftname*)" data-type="(*value.type*)" data-money="(*value.needcoin*)"></div>
+        </div>
+        (*/if*)
+        (*/each*)
+    </article>
+    (*/each*)
+</script>
+<!--礼物列表模板-->
+
+<!-- 视频播放start -->
+<script src="__STATIC__/xigua/xgplayer.js?t=1574906138" type="text/javascript"></script>
+<script src="__STATIC__/xigua/xgplayer-flv.js.js" type="text/javascript"></script>
+<script src="__STATIC__/xigua/xgplayer-hls.js.js" type="text/javascript"></script>
+<script src="__STATIC__/xigua/player.js?t=1587956583" type="text/javascript"></script>
+
+<script type="text/javascript" src="__STATIC__/wxshare/share/js/common.js?t=1587956582"></script>
+<script type="text/javascript" src="__STATIC__/wxshare/share/js/gift.js?t=1576922923"></script>
+<script type="text/javascript" src="__STATIC__/wxshare/share/js/jquery.md5.js"></script>
+<script type="text/javascript" src="__STATIC__/wxshare/share/js/login.js"></script>
+
+<script type="text/javascript">
+
+    var mode = 1;//代表手机直播手机观看
+	
+	function downurl(){
+		var href='';
+		if(isIOS){
+			href='{$site_info['app_ios']}';
+		}else{
+			href='{$site_info['app_android']}';
+		}
+		location.href=href;
+		return !1;
+	}
+ 
+    //弹幕
+    $(".chat_barrage span").click(function(){
+        if($(this).parent().hasClass("animte")){
+            $(this).parent().removeClass("animte");
+            fly=""
+        }else{
+            $(this).parent().addClass("animte");
+            $("#message").val("").focus();
+            fly="FlyMsg"
+        }
+    })
+    $("#chat").click(function(){
+        var url='/wxshare/Share/sendBarrage';
+        Ctrfn.onmessage(url);
+    })
+    var focusstatus = 0;
+    $(document).on("click",".user_followed",function(){
+		var isattention=$(this).attr('type');
+		if(isattention==1 || !User){
+		  return !1;
+		}
+		var url = "/wxshare/Share/follow";
+		var _this = $(this);
+		$.ajax({
+			type: 'POST',
+			url: url,
+			data:{'touid':to_uid},
+			dataType:'json',
+			success: function(data){
+				if (data.code== 0){
+					_this.addClass("on");
+					_this.attr("type",1);
+					_this.text('已关注');
+				}
+			}
+		});
+   })
+    //点击聊天按钮，显示输入框
+    $("#talk-btn").click(function(e){
+		if(User){
+			Ctrfn.talkBtn(e)
+		}else{
+			downurl();
+		}
+    })
+    
+    //点击礼物tool
+    $("#gift-btn").click(function(){
+		if(User){
+			Ctrfn.giftTool()
+		}else{
+			downurl();
+		}
+    })
+	
+	$(".send_button,.gift-countdown-bg").click(function(){
+		Ctrfn.sendBtn()
+    })
+
+    //阻止事件冒泡
+    $(".chat_input").click(function (e){
+            e.stopPropagation();
+        });
+
+    //点击播放按钮
+    $(document).on("click","#play",function(){
+        var objbtn=$(this);
+        Ctrfn.play(objbtn);
+    })
+
+    //聊天提示时关闭提示框
+    function closechatdialog(){
+        $('#message').focus();
+    }
+
+    //点击礼物
+    $(document).on("click",".swiper-slide > div",function(e){
+        var objbtn=$(this);
+        Ctrfn.giftBtn(objbtn);
+    })
+
+    //加载礼物tool
+    $(function(){
+		if(User){
+			$.ajax({
+				url:'/wxshare/Share/getGift',
+				type: 'post',
+				data:{},
+				dataType: 'json',
+				success: function(data) {
+					var pagenum=Math.ceil(data.info.length/8);
+					var num=[];
+					for(var i=1;i<pagenum;i++){
+						num[i]=i;
+					}
+					var gift = {
+						giftlist: data.info,
+						pagenum:num,
+					};
+					var html = template('giftlist', gift);
+					document.getElementById('swiper-wrapper').innerHTML = html;
+					//礼物列表切换
+					var swiper = new Swiper('.swiper-container', {
+						pagination: '.swiper-pagination',
+						paginationClickable: true,
+						observer: true,
+						observeParents: true
+					});
+				}
+			}); 
+        }
+		
+    })
+</script>
+</body>
+</html> 

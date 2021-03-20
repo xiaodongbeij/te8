@@ -1,0 +1,165 @@
+<include file="public@header"/>
+<style>
+    .table img{
+        width:25px;
+        height:25px;
+    }
+
+    #pop{
+        display:none;
+    }
+</style>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a>彩种</a></li>
+<!--        <li><a href="{:url('GameTicket/add')}">{:lang('ADD')}</a></li>-->
+    </ul>
+    <form class="well form-inline margin-top-20" method="post" action="{:url('game/GameTicket/index')}">
+
+        订单号：
+        <input class="form-control" type="text" name="order_id" style="width: 200px;" value="{:input('request.order_id')}"
+               placeholder="请输入订单号">
+        用户：
+        <input class="form-control" type="text" name="username" style="width: 200px;" value="{:input('request.username')}"
+               placeholder="请输入用户ID">
+
+        期号：
+        <input class="form-control" type="text" name="expect" style="width: 200px;" value="{:input('request.expect')}"
+               placeholder="请输入期号">
+
+        彩种：
+        <select class="form-control" name="cz">
+            <option value="">全部</option>
+            <foreach name="cz" item="v" key="k">
+                <option value="{$v.short_name}" <if condition="input('request.cz') neq '' && input('request.cz') eq $k">selected</if>>{$v.show_name}</option>
+            </foreach>
+        </select>
+
+        结算状态：
+        <select class="form-control" name="status">
+            <option value="">全部</option>
+            <option value="1" <if condition="input('request.status') neq '' && input('request.status') eq 1">selected</if>>已结算</option>
+            <option value="0" <if condition="input('request.status') neq '' && input('request.status') eq 0">selected</if>>未结算</option>
+        </select>
+
+        中奖状态：
+        <select class="form-control" name="ok">
+            <option value="">全部</option>
+            <option value="1" <if condition="input('request.ok') neq '' && input('request.ok') eq 1">selected</if>>已中奖</option>
+            <option value="2" <if condition="input('request.ok') neq '' && input('request.ok') eq 2">selected</if>>未中奖</option>
+        </select>
+
+        <input type="submit" class="btn btn-primary" value="搜索"/>
+        <a class="btn btn-danger" href="{:url('game/GameTicket/index')}">清空</a>
+        <br>
+        <br>
+    </form>
+
+
+
+    <form method="post" class="js-ajax-form">
+
+        <table class="table table-hover table-bordered">
+            <thead>
+            <tr>
+                <th width="16">
+                    <label>
+                        <input type="checkbox" class="js-check-all" data-direction="x" data-checklist="js-check-x">
+                    </label>
+                </th>
+                <th>ID</th>
+                <th>订单号</th>
+                <th>用户ID</th>
+<!--                <th>彩种代码</th>-->
+                <th>彩种名称</th>
+<!--                <th>玩法</th>-->
+                <th>玩法名称</th>
+<!--                <th>赔率代码</th>-->
+                <th>用户下注</th>
+                <th>开奖内容</th>
+                <th>期号</th>
+                <th>下注金额</th>
+                <th>奖金金额</th>
+                <th>已结算</th>
+                <th>中奖状态</th>
+                <th>添加时间</th>
+
+<!--                <th>{:lang('ACTIONS')}</th>-->
+            </tr>
+            </thead>
+            <tbody>
+
+            <foreach name="list" item="vo">
+                <tr>
+                    <td>
+                        <input type="checkbox" class="js-check" data-yid="js-check-y" data-xid="js-check-x" name="ids[]" value="{$vo.id}">
+                    </td>
+                    <td>{$vo.id}</td>
+                    <td>{$vo.order_id}</td>
+                    <td>{$vo.user.id}</td>
+<!--                    <td>{$vo.short_name}</td>-->
+                    <td>{$vo.show_name}</td>
+<!--                    <td>{$vo.rule_code}</td>-->
+                    <td>{$vo.rule_name}</td>
+<!--                    <td>{$vo.rate_code}</td>-->
+                    <td>{$vo.rate_name}</td>
+                    <td>{$vo.prize_codes}</td>
+                    <td>{$vo.expect}</td>
+                    <td>
+                        <font style="color: green">{$vo.money}</font>
+                    </td>
+                    <td>
+                        <font style="color: red">{$vo.prize}</font>
+                    </td>
+                    <td>
+                        <eq name="$vo.status" value="1"><font style="color: green">已结算</font></eq>
+                        <eq name="$vo.status" value="0"><font style="color:red;">未结算</font></eq>
+                    </td>
+                    <td>
+                        <eq name="$vo.ok" value="1"><font style="color:green;">已中奖</font></eq>
+                        <eq name="$vo.ok" value="2"><font style="color:red;">未中奖</font></eq>
+                    </td>
+
+                    <td>{$vo.addtime}</td>
+
+<!--                    <td>-->
+<!--                        <a class="btn btn-xs btn-primary" href='{:url("GameTicket/edit",array("id"=>$vo["id"]))}'>{:lang('EDIT')}</a>-->
+<!--                        <a class="btn btn-xs btn-danger js-ajax-delete" href="{:url('GameTicket/del',array($vo['id']))}">{:lang('DELETE')}</a>-->
+
+<!--                    </td>-->
+                </tr>
+            </foreach>
+            </tbody>
+        </table>
+        <div class="pagination">{$page}</div>
+    </form>
+</div>
+
+
+<script src="__STATIC__/js/admin.js"></script>
+<script src="__STATIC__/js/laydate/laydate.js"></script>
+<script>
+    Wind.use('layer');
+    $('#csv').click(function (){
+        let order_id = $('input[name="order_id"]').val();
+        let username = $('input[name="username"]').val();
+        let expect = $('input[name="expect"]').val();
+        let status = $('select[name="status"]').val();
+        let ok = $('select[name="ok"]').val();
+        $.post("{:url('game/GameTicket/csv')}", {
+            order_id:order_id,
+            username:username,
+            expect:expect,
+            status:status,
+            ok:ok,
+        },function (res){
+            if(res.code != 1){
+                layer.msg(res.msg);
+            }
+        })
+    });
+</script>
+</body>
+</html>

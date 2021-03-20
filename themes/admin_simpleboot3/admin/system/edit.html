@@ -1,0 +1,59 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<!-- <li ><a href="{:url('System/index')}">列表</a></li> -->
+			<li class="active"><a >发送消息</a></li>
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form2 margin-top-20" >
+            <div class="form-group">
+				<label for="content" class="col-sm-2 control-label"><span class="form-required">*</span>消息内容</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="content" name="content" value="">发送的系统消息将显示到所有直播间的聊天公屏区域
+				</div>
+			</div>
+            
+
+            <div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-primary js-ajax-submit2">发送</button>
+					<!-- <a class="btn btn-default" href="javascript:history.back(-1);">{:lang('BACK')}</a> -->
+				</div>
+			</div>
+
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+    <script src="__STATIC__/js/socket.io.js"></script>
+    <script type="text/javascript">
+         var socket = new io("{$config['chatserver']}");
+         $(".js-ajax-submit2").on("click",function(){
+            var content=$.trim( $("#content").val() );
+            if(!content){
+                alert("内容不能为空");
+                return !1;
+            }
+            $.ajax({
+                url:'{:url('System/send')}',
+                data:{content:content},
+                type:'POST',
+                dataType:'json',
+                success:function(data){
+                    if(data.code==0){
+                        alert(data.msg);
+                        return !1;
+                    }
+                    
+                    var data2 = {"token":"1234567","content":content};
+                    socket.emit("systemadmin",data2);
+                    alert("发送成功");
+                     
+                }
+            })
+         
+         })
+
+    </script>
+</body>
+</html>

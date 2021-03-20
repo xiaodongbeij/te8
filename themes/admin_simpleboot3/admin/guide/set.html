@@ -1,0 +1,71 @@
+<include file="public@header" />
+</head>
+<body>
+
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a>配置</a></li>
+        <li><a href="{:url('Guide/index')}">管理</a></li>
+    </ul>
+    <form class="form-horizontal js-ajax-form margin-top-20" role="form" action="{:url('Guide/setPost')}" method="post">
+        <fieldset>
+            <div class="tabbable">
+                <div class="tab-content">
+                    <div class="tab-pane active" id="A">
+                        <div class="form-group">
+                            <label for="input-switch" class="col-sm-2 control-label">引导页开关</label>
+                            <div class="col-md-6 col-sm-10">
+                                <select class="form-control" name="post[switch]">
+                                    <option value="0">关闭</option>
+                                    <option value="1" <eq name="config['switch']" value="1">selected</eq>>开启</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="input-type" class="col-sm-2 control-label">引导页类型</label>
+                            <div class="col-md-6 col-sm-10">
+                                <select class="form-control" name="post[type]" id="type">
+                                    <option value="0">图片</option>
+                                    <option value="1" <eq name="config['type']" value="1">selected</eq>>视频</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group" id="type_0" <if condition="$config['type'] eq 1">style="display:none;"</if>>
+                            <label for="input-time" class="col-sm-2 control-label"><span class="form-required">*</span>图片展示时间</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-time" name="post[time]" value="{$config.time|default='1'}">秒,请填写大于0的整数 当类型选择图片时，每张图片的展示时间
+                            </div> 
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-primary js-ajax-submit" data-refresh="1">
+                                    {:lang('SAVE')}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>
+<script src="__STATIC__/js/admin.js"></script>
+<script>
+(function(){
+    $("#type").on('change',function(){
+        var v=$(this).val();
+        if(v==1){
+            $("#type_0").hide();
+        }else{
+            $("#type_0").show();
+        }
+        
+    })
+    
+})()  
+</script>
+</body>
+</html>

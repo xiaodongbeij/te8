@@ -1,0 +1,57 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li ><a href="{:url('Musiccat/index')}">音乐分类列表</a></li>
+			<li class="active"><a >{:lang('EDIT')}</a></li>
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('Musiccat/editPost')}">
+            <div class="form-group">
+				<label for="input-title" class="col-sm-2 control-label"><span class="form-required">*</span>标题</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-title" name="title" value="{$data['title']}">
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>图片</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="hidden" name="img_url" id="thumbnail" value="{$data['img_url']}">
+                    <a href="javascript:uploadOneImage('图片上传','#thumbnail');">
+                        <if condition="empty($data.img_url)">
+                        <img src="__TMPL__/public/assets/images/default-thumbnail.png"
+                                 id="thumbnail-preview"
+                                 style="cursor: pointer;max-width:100px;max-height:100px;"/>
+                        <else/>
+                        <img src="{:cmf_get_image_preview_url($data.img_url)}"
+                             id="thumbnail-preview"
+                             style="cursor: pointer;max-width:100px;max-height:100px;"/>
+                        </if>
+                    </a>
+                    <input type="button" class="btn btn-sm btn-cancel-thumbnail" value="取消图片"> 建议尺寸： 200 X 200
+				</div>
+			</div>
+
+            <div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<input type="hidden" name="id" value="{$data.id}" />
+					<button type="submit" class="btn btn-primary js-ajax-submit">{:lang('EDIT')}</button>
+					<a class="btn btn-default" href="javascript:history.back(-1);">{:lang('BACK')}</a>
+				</div>
+			</div>
+
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+    <script type="text/javascript">
+        (function(){
+            $('.btn-cancel-thumbnail').click(function () {
+                $('#thumbnail-preview').attr('src', '__TMPL__/public/assets/images/default-thumbnail.png');
+                $('#thumbnail').val('');
+            });
+        })()
+
+    </script>
+</body>
+</html>

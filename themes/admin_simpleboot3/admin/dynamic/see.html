@@ -1,0 +1,52 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap">
+        <div class="form-group">
+            <label for="input-name" class="col-sm-2 control-label"><span class="form-required">*</span>标题</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="text" class="form-control" id="input-name" value="{$data['title']}" readonly  />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-6 col-sm-10">
+                <if condition="$data['type'] eq 1">
+                <volist name="data.thumb" id="v">
+                <img class="imgtip" src="{$v}" style="max-width:100px;max-height:100px;">
+                </volist>
+                </if>
+                <if condition="$data['type'] eq 2">
+                <div class="playerzmblbkjP" id="playerzmblbkjP"></div>
+                </if>
+                <if condition="$data['type'] eq 3">
+                <video  autoplay  width="320" height="80" controls>
+					  <source src="{$data['voice']}"  type="video/mp4">
+				</video>
+                </if>
+                
+				
+            </div>
+        </div>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+	<script src="__STATIC__/xigua/xgplayer.js?t=1212" type="text/javascript"></script>
+    <script src="__STATIC__/xigua/xgplayer-flv.js.js" type="text/javascript"></script>
+    <script src="__STATIC__/xigua/xgplayer-hls.js.js" type="text/javascript"></script>
+    <script src="__STATIC__/xigua/player.js" type="text/javascript"></script>
+    <script>
+        (function(){
+            var type="{$data['type']}";
+            if(type==2){
+                var pull='{$data['href']}';
+                if(pull){
+					var data_play={
+						"autoplay": true
+					};
+					xgPlay('playerzmblbkjP',pull,data_play);
+                }
+            }
+            
+        })()
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li ><a href="{:url('Familyuser/index')}">成员列表（不含家族长）</a></li>
+			<li class="active"><a >{:lang('EDIT')}</a></li>
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('Familyuser/editPost')}">
+            <div class="form-group">
+				<label class="col-sm-2 control-label"><span class="form-required">*</span>用户</label>
+				<div class="col-md-6 col-sm-10" style="padding-top:7px;">
+					{$userinfo['user_nicename']}({$data['uid']})
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label class="col-sm-2 control-label"><span class="form-required">*</span>家族</label>
+				<div class="col-md-6 col-sm-10" style="padding-top:7px;">
+					{$family['name']}({$data['familyid']})
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-divide_family" class="col-sm-2 control-label"><span class="form-required">*</span>家族抽成</label>
+				<div class="col-md-6 col-sm-10">
+                    <if condition="$data['divide_family'] neq '-1'">
+					<input type="text" class="form-control" id="input-divide_family" name="divide_family" value="{$data['divide_family']}">
+                    <else/>
+                    <input type="text" class="form-control" id="input-divide_family" name="divide_family" value="{$family['divide_family']}">
+                    </if>
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-needcoin" class="col-sm-2 control-label"><span class="form-required">*</span>审核</label>
+				<div class="col-md-6 col-sm-10">
+					<select class="form-control" name="state">
+                        <volist name="state" id="v">
+                        <option value="{$key}" <eq name="data['state']" value="$key">selected</eq>>{$v}</option>
+                        </volist>
+                    </select>
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-reason" class="col-sm-2 control-label"><span class="form-required"></span>审核失败原因</label>
+				<div class="col-md-6 col-sm-10">
+					<textarea class="form-control" id="input-reason" name="reason" rows="2" cols="20" >{$data.reason|default=''}</textarea>
+				</div>
+			</div>
+            
+
+            <div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<input type="hidden" name="id" value="{$data.id}" />
+					<input type="hidden" name="uid" value="{$data.uid}" />
+					<button type="submit" class="btn btn-primary js-ajax-submit">{:lang('EDIT')}</button>
+					<a class="btn btn-default" href="{:url('Familyuser/index')}">{:lang('BACK')}</a>
+				</div>
+			</div>
+
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<include file="public@header"/>
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a >话题标签列表</a></li>
+			<li><a href="{:url('Dynamiclabel/add')}">添加话题标签</a></li>
+		</ul>
+		<form method="post" class="js-ajax-form margin-top-20" action="{:url('Dynamiclabel/listsorders')}">
+			<div class="table-actions">
+				<button class="btn btn-primary btn-small js-ajax-submit" type="submit">{:lang('SORT')}</button>
+			</div>
+		
+			<table class="table table-hover table-bordered">
+				<thead>
+					<tr>
+					  	<th>排序</th>
+						<th align="center">ID</th>
+						<th>名称</th>
+						<th>封面</th>
+						<th>使用次数</th>
+
+						<th align="center">{:lang('ACTIONS')}</th>
+					</tr>
+				</thead>
+				<tbody>
+					<foreach name="lists" item="vo">
+					<tr>
+					   <td><input name="listsorders[{$vo['id']}]" type="text" size="3" value="{$vo['orderno']}" class="input input-order"></td>
+						<td align="center">{$vo.id}</td>
+                        <td>{$vo['name']}</td>
+                        <td><img width="160" height="60" class="imgtip" src="{:get_upload_path($vo['thumb'])}" /></td>
+						<td>{$vo['use_nums']}</td>
+						<td align="center">	
+							<if condition="$vo.isrecommend eq '1'">
+								<a class="btn btn-xs btn-warning js-ajax-dialog-btn" href="{:url('Dynamiclabel/setrecommend',array('id'=>$vo['id'],'isrecommend'=>0))}" data-msg="您确定要取消该条话题的推荐吗?">取消推荐</a>
+							<else/>
+								<a class="btn btn-xs btn-success js-ajax-dialog-btn" href="{:url('Dynamiclabel/setrecommend',array('id'=>$vo['id'],'isrecommend'=>1))}">推荐</a>
+							</if>
+							<a class="btn btn-xs btn-primary"  href="{:url('Dynamiclabel/edit',array('id'=>$vo['id']))}" >编辑</a>
+                            <a href="{:url('Dynamiclabel/del',array('id'=>$vo['id']))}" class="btn btn-xs btn-danger js-ajax-dialog-btn" data-msg="您确定要删除吗？">删除</a>
+						</td>
+					</tr>
+					</foreach>
+				</tbody>
+			</table>
+			<div class="pagination">{$page}</div>
+			
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

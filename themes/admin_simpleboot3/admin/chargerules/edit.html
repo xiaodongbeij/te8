@@ -1,0 +1,69 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li ><a href="{:url('Chargerules/index')}">充值规则列表</a></li>
+			<li class="active"><a >{:lang('EDIT')}</a></li>
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('Chargerules/editPost')}">
+            <div class="form-group">
+				<label for="input-name" class="col-sm-2 control-label"><span class="form-required">*</span>名称</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-name" name="name" value="{$data['name']}">
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-money" class="col-sm-2 control-label"><span class="form-required">*</span>价格</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-money" name="money" value="{$data['money']}">
+					<p class="help-block">价格在0.01-99999999之间</p>
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-coin" class="col-sm-2 control-label"><span class="form-required">*</span>{$name_coin}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-coin" name="coin" value="{$data['coin']}">
+					<p class="help-block">1-99999999之间</p>
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-coin_ios" class="col-sm-2 control-label"><span class="form-required">*</span>苹果支付{$name_coin}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-coin_ios" name="coin_ios" value="{$data['coin_ios']}">
+					<p class="help-block">1-99999999之间</p>
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-product_id" class="col-sm-2 control-label"><span class="form-required">*</span>苹果项目ID</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-product_id" name="product_id" value="{$data['product_id']}">
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-give" class="col-sm-2 control-label"><span class="form-required">*</span>赠送{$name_coin}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-give" name="give" value="{$data['give']}">
+					<p class="help-block">0-99999999之间</p>
+				</div>
+			</div>
+            
+
+            <div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<input type="hidden" name="id" value="{$data.id}" />
+					<button type="submit" class="btn btn-primary js-ajax-submit">{:lang('EDIT')}</button>
+					<a class="btn btn-default" href="javascript:history.back(-1);">{:lang('BACK')}</a>
+				</div>
+			</div>
+
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

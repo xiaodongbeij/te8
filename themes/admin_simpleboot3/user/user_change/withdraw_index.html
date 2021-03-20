@@ -1,0 +1,132 @@
+<include file="public@header"/>
+<style>
+    .table img{
+        width:25px;
+        height:25px;
+    }
+
+    #pop{
+        display:none;
+    }
+</style>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a>提现</a></li>
+        <!--        <li><a href="{:url('userChange/add')}">{:lang('ADD')}</a></li>-->
+    </ul>
+    <form class="well form-inline margin-top-20" name="form1" method="post" action="{:url('user/userChange/withdrawIndex')}">
+
+        用户：
+        <input class="form-control" type="text" name="uid" style="width: 200px;" value="{:input('request.uid')}"
+               placeholder="请输入用户ID">
+
+        提现类型：
+        <select class="form-control" name="withdraw_type">
+            <option value="">全部</option>
+            <option value="1" <if condition="input('request.withdraw_type') neq '' && input('request.withdraw_type') eq 1">selected</if>>银行卡</option>
+            <option value="2" <if condition="input('request.withdraw_type') neq '' && input('request.withdraw_type') eq 2">selected</if>>微信</option>
+        </select>
+
+        审核状态：
+        <select class="form-control" name="status">
+            <option value="">全部</option>
+            <option value="1" <if condition="input('request.status') neq '' && input('request.status') eq 1">selected</if>>已审核</option>
+            <option value="2" <if condition="input('request.status') neq '' && input('request.status') eq 2">selected</if>>未审核</option>
+            <option value="3" <if condition="input('request.status') neq '' && input('request.status') eq 3">selected</if>>已拒绝</option>
+            <option value="4" <if condition="input('request.status') neq '' && input('request.status') eq 4">selected</if>>已打款</option>
+        </select>
+
+        添加时间：
+        <input class="form-control js-bootstrap-date" name="start_time" id="start_time" autocomplete="off" value="{:input('request.start_time')}" aria-invalid="false" style="width: 110px;"> -
+        <input class="form-control js-bootstrap-date" name="end_time" id="end_time" autocomplete='off' value="{:input('request.end_time')}" aria-invalid="false" style="width: 110px;">
+
+        <input type="submit" class="btn btn-primary" value="搜索"/>
+        <a class="btn btn-danger" href="{:url('user/userChange/withdrawIndex')}">清空</a>
+        <input type="button" class="btn btn-success" value="导出" onclick="form1.action='{:url('userChange/w_export')}';form1.submit();"/>
+        <br>
+        <br>
+        提现人数 {$num_money.num} 金额: {:abs($num_money.money)} 
+    </form>
+    <form method="post" class="js-ajax-form">
+
+        <table class="table table-hover table-bordered">
+            <thead>
+            <tr>
+               
+                <th>ID</th>
+                <th>用户</th>
+                <th>变动类型</th>
+                <th>变动前金额</th>
+                <th>变动后金额</th>
+                <th>变动金额</th>
+                <th>手续费</th>
+                <th>提现类型</th>
+                <th>提现去向(姓名-卡名-卡号)</th>
+                <th>审核状态</th>
+                <th>添加时间</th>
+                <th>审核时间</th>
+                <th>打款时间</th>
+
+                <th>{:lang('ACTIONS')}</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            <foreach name="list" item="vo">
+                <tr>
+                  
+                    <td>{$vo.id}</td>
+                    <td>{$vo.user_id}</td>
+                    <td>
+                        <eq name="$vo.change_type" value="2">提现</eq>
+                    </td>
+                    <td>{$vo.money}</td>
+                    <td>{$vo.next_money}</td>
+                    <td><span style="color: red">{$vo.change_money}</span></td>
+                    <td><span style="color: red">{$vo.service_charge}</span></td>
+                    <td>
+                        <eq name="$vo.withdraw_type" value="1">银行卡</eq>
+                        <eq name="$vo.withdraw_type" value="2">微信</eq>
+                    </td>
+                    <td>{$vo.withdraw_id_name}</td>
+                    <td>
+                        <eq name="$vo.status" value="1"><font style="color: green">已审核</font></eq>
+                        <eq name="$vo.status" value="2"><font style="color: red">未审核</font></eq>
+                        <eq name="$vo.status" value="3"><font style="color: #9d2118">已拒绝</font></eq>
+                        <eq name="$vo.status" value="4"><font style="color: #9d2118">已打款</font></eq>
+                    </td>
+                    <td>{$vo.addtime}</td>
+                    <td>{$vo.audit_time}</td>
+                    <td>{$vo.examine_time}</td>
+
+
+                    <td>
+<!--                        <a class="btn btn-xs btn-primary" href='{:url("userChange/edit",array("id"=>$vo["id"]))}'>{:lang('EDIT')}</a>-->
+                        <eq name="$vo.status" value="1">
+                            <a class="btn btn-xs btn-danger " href="{:url('userChange/examine',array('id' =>$vo['id'],'session' => session('TOKEN')))}">确认打款</a>
+                            <a class="btn btn-xs btn-primary" href='{:url("userChange/withdrawRefuse",array("id"=>$vo["id"]))}'>拒绝</a>
+                        </eq>    
+                        <eq name="$vo.status" value="2">
+                            <a class="btn btn-xs btn-danger" href="{:url('userChange/audit',array('id' =>$vo['id'],'session' => session('TOKEN')))}">审核</a>
+                            <a class="btn btn-xs btn-primary" href='{:url("userChange/withdrawRefuse",array("id"=>$vo["id"]))}'>拒绝</a>
+                        </eq>
+
+                    </td>
+                </tr>
+            </foreach>
+            </tbody>
+        </table>
+        <div class="pagination">{$page}</div>
+    </form>
+</div>
+
+
+<script src="__STATIC__/js/admin.js"></script>
+<script src="__STATIC__/js/laydate/laydate.js"></script>
+<script>
+
+</script>
+</body>
+</html>

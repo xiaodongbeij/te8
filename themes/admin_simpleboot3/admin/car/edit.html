@@ -1,0 +1,114 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li ><a href="{:url('Car/index')}">坐骑列表</a></li>
+			<li class="active"><a >{:lang('EDIT')}</a></li>
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('Car/editPost')}">
+            <div class="form-group">
+				<label for="input-name" class="col-sm-2 control-label"><span class="form-required">*</span>名称</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-name" name="name" value="{$data['name']}">
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-needcoin" class="col-sm-2 control-label"><span class="form-required">*</span>{$configpub.name_coin}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-needcoin" name="needcoin" value="{$data['needcoin']}" maxlength="9" placeholder="1-99999999之间的整数">
+					<p class="help-block">请填写1-99999999之间的整数</p>
+                    /月
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-score" class="col-sm-2 control-label"><span class="form-required">*</span>{$configpub.name_score}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-score" name="score" value="{$data['score']}" maxlength="9" placeholder="1-99999999之间的整数">
+					<p class="help-block">请填写1-99999999之间的整数</p>
+                    /月
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>图片</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="hidden" name="thumb" id="thumbnail" value="{$data['thumb']}">
+                    <a href="javascript:uploadOneImage('图片上传','#thumbnail');">
+                        <if condition="empty($data.thumb)">
+                        <img src="__TMPL__/public/assets/images/default-thumbnail.png"
+                                 id="thumbnail-preview"
+                                 style="cursor: pointer;max-width:100px;max-height:100px;"/>
+                        <else/>
+                        <img src="{:cmf_get_image_preview_url($data.thumb)}"
+                             id="thumbnail-preview"
+                             style="cursor: pointer;max-width:100px;max-height:100px;"/>
+                        </if>
+                    </a>
+                    <input type="button" class="btn btn-sm btn-cancel-thumbnail" value="取消图片"> 建议尺寸： 200 X 200
+				</div>
+			</div>
+            
+            <div class="form-group" id="">
+				<label for="input-swf" class="col-sm-2 control-label"><span class="form-required">*</span>动画（GIF）</label>
+				<div class="col-md-6 col-sm-10">
+                    <input type="hidden" name="swf" id="thumbnail2" value="{$data['swf']}">
+                    <a href="javascript:uploadOneImage('图片上传','#thumbnail2');">
+                        <if condition="empty($data.swf)">
+                        <img src="__TMPL__/public/assets/images/default-thumbnail.png"
+                                 id="thumbnail2-preview"
+                                 style="cursor: pointer;max-width:100px;max-height:100px;"/>
+                        <else/>
+                        <img src="{:cmf_get_image_preview_url($data.swf)}"
+                             id="thumbnail2-preview"
+                             style="cursor: pointer;max-width:100px;max-height:100px;"/>
+                        </if>
+                    </a>
+                    <input type="button" class="btn btn-sm btn-cancel-thumbnail2" value="取消图片"> 建议尺寸： 200 X 200
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-swftime" class="col-sm-2 control-label"><span class="form-required">*</span>动画时长</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-swftime" name="swftime" value="{$data['swftime']}">秒 精度：小数点后两位
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-words" class="col-sm-2 control-label"><span class="form-required">*</span>进场话术</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-words" name="words" value="{$data['words']}">注：实际效果为 用户昵称+进场话术
+				</div>
+			</div>
+            
+
+            <div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<input type="hidden" name="id" value="{$data.id}" />
+					<button type="submit" class="btn btn-primary js-ajax-submit">{:lang('EDIT')}</button>
+					<a class="btn btn-default" href="javascript:history.back(-1);">{:lang('BACK')}</a>
+				</div>
+			</div>
+
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+    <script type="text/javascript">
+        (function(){
+            $('.btn-cancel-thumbnail').click(function () {
+                $('#thumbnail-preview').attr('src', '__TMPL__/public/assets/images/default-thumbnail.png');
+                $('#thumbnail').val('');
+            });
+            
+            $('.btn-cancel-thumbnail2').click(function () {
+                $('#thumbnail2-preview').attr('src', '__TMPL__/public/assets/images/default-thumbnail.png');
+                $('#thumbnail2').val('');
+            });
+        })()
+
+    </script>
+</body>
+</html>

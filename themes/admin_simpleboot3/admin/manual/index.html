@@ -1,0 +1,56 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a >手动充值{$configpub['name_coin']}列表</a></li>
+			<li><a href="{:url('Manual/add')}">充值/减分</a></li>
+		</ul>
+		<form class="well form-inline margin-top-20" name="form1" method="post" action="">
+			提交时间：
+			<input class="form-control js-bootstrap-date" name="start_time" id="start_time" autocomplete="off" value="{:input('request.start_time')}" aria-invalid="false" style="width: 110px;"> - 
+            <input class="form-control js-bootstrap-date" name="end_time" id="end_time" autocomplete="off" value="{:input('request.end_time')}" aria-invalid="false" style="width: 110px;">
+			关键字： 
+            <input class="form-control" type="text" name="uid" style="width: 200px;" value="{:input('request.uid')}"
+                   placeholder="请输入会员ID、靓号">
+                   
+			<input type="button" class="btn btn-primary" value="搜索" onclick="form1.action='{:url('Manual/index')}';form1.submit();"/>
+            <input type="button" class="btn btn-success" value="导出" onclick="form1.action='{:url('Manual/export')}';form1.submit();"/>
+            
+            <div style="margin-top:10px">
+				总点数：{$coin} (根据筛选条件统计)
+			</div>
+		</form>		
+			<table class="table table-hover table-bordered">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>管理员</th>
+						<th>会员(ID)</th>
+						<th>充值点数</th>
+						<th>IP</th>
+						<th>备注</th>
+						<th>时间</th>
+					</tr>
+				</thead>
+				<tbody>
+					<foreach name="lists" item="vo">
+					<tr>
+						<td>{$vo.id}</td>
+						<td>{$vo['admin']}</td>
+						<td>{$vo['userinfo']['user_nicename']} ({$vo['touid']})</td>
+						<td>{$vo['coin']}</td>
+						<td>{$vo['ip']}</td>
+						<td>{$vo['remarks']}</td>
+						<td>{:date('Y-m-d H:i:s',$vo['addtime'])}</td>
+
+					</tr>
+					</foreach>
+				</tbody>
+			</table>
+			<div class="pagination">{$page}</div>
+
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

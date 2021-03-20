@@ -1,0 +1,95 @@
+
+<include file="public@header"/>
+<style>
+    .home-info li em {
+        float: left;
+        width: 120px;
+        font-style: normal;
+        font-weight: bold;
+    }
+
+    .home-info ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    .panel {
+        margin-bottom: 0;
+    }
+
+    .grid-sizer {
+        width: 10%;
+    }
+
+    .grid-item {
+        margin-bottom: 5px;
+        padding: 5px;
+    }
+
+    .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+        padding-left: 5px;
+        padding-right: 5px;
+        float: none;
+    }
+
+</style>
+<hook name="admin_before_head_end"/>
+</head>
+<body>
+<div class="wrap">
+    <empty name="has_smtp_setting">
+        <!-- <div class="grid-item col-md-12">
+            <div class="alert alert-danger alert-dismissible fade in" role="alert" style="margin-bottom: 0;">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <strong>提示!</strong> 邮箱配置未完成,无法进行邮件发送!
+                <a href="#" data-dismiss="alert" aria-label="Close"
+                   onclick="parent.openapp('{:url('Mailer/index')}','admin_mailer_index','邮箱配置');">现在设置</a>
+            </div>
+        </div> -->
+    </empty>
+
+    <if condition="!extension_loaded('fileinfo')">
+        <div class="grid-item col-md-12">
+            <div class="alert alert-danger alert-dismissible fade in" role="alert" style="margin-bottom: 0;">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <strong>提示!</strong> php_fileinfo扩展没有开启，无法正常上传文件！
+            </div>
+        </div>
+    </if>
+
+    <div class="grid-item col-md-12" id="thinkcmf-notices-grid" style="display:none;">
+        <div class="dashboard-box">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{:lang('SYSTEM_NOTIFICATIONS')}</h3>
+                </div>
+                <div class="panel-body home-info">
+                    <ul id="thinkcmf-notices" class="list-unstyled">
+                        <li>
+                            <img src="__TMPL__/public/assets/images/loading.gif" style="vertical-align: middle;"/>
+                            <span style="display: inline-block; vertical-align: middle;">加载中...</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="home-grid">
+        <!-- width of .grid-sizer used for columnWidth -->
+        <div class="grid-sizer"></div>
+    </div>
+</div>
+<script src="__STATIC__/js/admin.js"></script>
+<php>
+    $lang_set=defined('LANG_SET')?LANG_SET:'';
+    $thinkcmf_version=cmf_version();
+</php>
+
+<hook name="admin_before_body_end"/>
+</body>
+</html>

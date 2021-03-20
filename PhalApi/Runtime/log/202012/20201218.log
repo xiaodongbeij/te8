@@ -1,0 +1,70 @@
+2020-12-18 18:16:49|ERROR|Live.SendGift|PDOException: Data truncated for column 'showid' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(472): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(42881, 42867, 'https://yt-tx.c...', 15, 1, 0)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1713): Domain_Live->sendGift(42881, 42867, 'https://yt-tx.c...', 15, 1, 0)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->sendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2020-12-18 18:16:58|ERROR|Live.SendGift|PDOException: Data truncated for column 'showid' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(472): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(42881, 42867, 'https://yt-tx.c...', 15, 1, 0)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1713): Domain_Live->sendGift(42881, 42867, 'https://yt-tx.c...', 15, 1, 0)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->sendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2020-12-18 18:20:44|ERROR|Live.SendGift|PDOException: Data truncated for column 'showid' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(472): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(42881, 42867, 'https://yt-tx.c...', 15, 1, 0)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1713): Domain_Live->sendGift(42881, 42867, 'https://yt-tx.c...', 15, 1, 0)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->sendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2020-12-18 18:23:40|ERROR|Live.SendGift|PDOException: Data truncated for column 'showid' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(42881, 42867, 'https://yt-tx.c...', 15, 1, 0)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1712): Domain_Live->sendGift(42881, 42867, 'https://yt-tx.c...', 15, 1, 0)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->sendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2020-12-18 18:30:27|ERROR|Live.SendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(471): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(42881, 42867, '1607648219', 15, 1, 0)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1712): Domain_Live->sendGift(42881, 42867, '1607648219', 15, 1, 0)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->sendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2020-12-18 18:32:13|ERROR|Live.SendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(471): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(42881, 42867, '0', 15, 1, 0)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1712): Domain_Live->sendGift(42881, 42867, '0', 15, 1, 0)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->sendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2020-12-18 18:33:02|ERROR|Live.SendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(471): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(42881, 42867, '1607648219', 15, 1, 0)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1712): Domain_Live->sendGift(42881, 42867, '1607648219', 15, 1, 0)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->sendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}

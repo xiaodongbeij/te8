@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<include file="appapi@head"/>
+		<title>装备中心</title>
+		<link href='__STATIC__/appapi/css/mall.css?t=1561967793' rel="stylesheet" type="text/css" >
+		<link href='__STATIC__/appapi/css/equipment.css?t=1561975646' rel="stylesheet" type="text/css" >
+	</head>
+<body>
+    <div class="tab clearfix">
+        <ul>
+            <li class="on">
+                靓号
+                <div class="tab_line button_default"></div>
+            </li>
+            <li>
+                坐骑
+                <div class="tab_line button_default"></div>
+            </li>
+        </ul>
+    </div>
+    <div class="tab_bd liang">
+        <div class="bd_content clearfix">
+            <ul>
+                <volist name="liang_list" id="v">
+                <li>
+                    <div class="liang_id">ID:{$v['name']}</div>
+                    <div class="liang_coin"></div>
+                    <div class="liang_buy" data-id="{$v['id']}"  data-state="{$v['state']}" >
+                        <if condition="$v['state'] eq '1'">
+                            卸载
+                        <else/>
+                            使用
+                        </if>
+                    </div>
+                </li>
+                </volist>
+                <empty name="liang_list">
+                    <div class="li_empty">
+                        <p class="title">您还没有靓号哦</p>
+                        <p class="des">赶快去商城挑选一个吧~</p>
+                    </div>
+                </empty>
+            </ul>
+        </div>
+    </div>
+    <div class="tab_bd car hide">
+        <div class="bd_content clearfix">
+            <ul>
+                <volist name="user_carlist" id="v">
+                <li>
+                    <div class="car_img">
+                        <img src="{$v['carinfo']['thumb']}">
+                    </div>
+                    <div class="car_title">
+                        {$v['carinfo']['name']}
+                    </div>
+                    <div class="car_coin">
+                        到期时间<br>
+                        {$v['endtime_date']}
+                    </div>
+                    <div class="car_buy" data-id="{$v['carid']}" data-status="{$v['status']}" >
+                        <if condition="$v['status'] eq '1'">
+                            卸载
+                        <else/>
+                            使用
+                        </if>
+                    </div>
+                </li>
+                </volist>
+                <empty name="user_carlist">
+                    <div class="li_empty">
+                        <p class="title">您还没有坐骑哦</p>
+                        <p class="des">赶快去商城挑选一个吧~</p>
+                    </div>
+                </empty>
+            </ul>
+        </div>
+    </div>
+</body>
+<include file="appapi@footer"/>
+<script src="__STATIC__/appapi/js/equipment.js"></script>
+</body>
+</html>

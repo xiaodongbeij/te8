@@ -1,0 +1,187 @@
+<include file="public@header"/>
+<style>
+.table img{
+	width:25px;
+	height:25px;
+}
+
+#pop{
+    display:none; 
+}
+</style>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a>机器人</a></li>
+        <!-- <li><a href="{:url('Machine/add')}">{:lang('ADD')}</a></li> -->
+    </ul>
+    <form class="well form-inline margin-top-20" method="post" action="{:url('user/Machine/index')}">
+        机器人数：{$nums}
+    </form>
+    <form method="post" class="js-ajax-form">
+        <div class="table-actions">
+
+            <!--<button class="btn btn-danger btn-sm js-ajax-submit" type="submit" data-action="{:url('user/Machine/setzombieall',array('iszombie'=>1))}" data-msg="您确定要进行此操作吗？">一键开启机器人-->
+            <!--</button>-->
+            <!--<button class="btn btn-danger btn-sm js-ajax-submit" type="submit" data-action="{:url('user/Machine/setzombieall',array('iszombie'=>0))}" data-msg="您确定要进行此操作吗？">一键关闭机器人-->
+            <!--</button>-->
+            <button class="btn btn-danger btn-sm js-ajax-submit" type="submit" data-action="{:url('user/Machine/addMachine')}" data-msg="您确定要进行此操作吗？">添加500个机器
+            </button>
+            <button class="btn btn-danger btn-sm js-ajax-submit" type="submit" data-action="{:url('user/Machine/delMachine')}" data-msg="您确定要进行此操作吗？">刪除所有机器
+            </button>
+        </div>
+        <table class="table table-hover table-bordered">
+            <thead>
+            <tr>
+               
+                <th>ID</th>
+                <th>{:lang('USERNAME')}</th>
+                <th>{:lang('NICENAME')}</th>
+                <th>{:lang('AVATAR')}</th>
+                <th>状态</th>
+                <th>{:lang('ACTIONS')}</th>
+            </tr>
+            </thead>
+            <tbody>
+            <php>
+                $user_statuses=array("0"=>lang('USER_STATUS_BLOCKED'),"1"=>lang('USER_STATUS_ACTIVATED'),"2"=>lang('USER_STATUS_UNVERIFIED'));
+            </php>
+            <foreach name="list" item="vo">
+                <tr>
+                    
+                    <td>{$vo.id}</td>
+                    <td>{$vo['user_login']?$vo['user_login']:($vo['mobile']?$vo['mobile']:lang('THIRD_PARTY_USER'))}
+                    </td>
+                    <td>{$vo['user_nicename']?$vo['user_nicename']:lang('NOT_FILLED')}</td>
+                    <td><img src="{$vo['avatar']}" class="imgtip" /></td>
+                   <td> <if condition="$vo['iszombie'] eq '3'">
+                            已注销
+                        <else />
+
+                            <if condition="$vo.end_bantime gt $nowtime || $vo.iszombie eq 0">
+                                <span class="label label-danger">关闭</span>
+                            <else/>
+                                <span class="label label-success">开启</span>
+                            </if>
+
+                        </if>
+                        </td>
+                    <td>
+                        <a class="btn btn-xs btn-primary" href='{:url("Machine/edit",array("id"=>$vo["id"]))}'>{:lang('EDIT')}</a>
+                        <a class="btn btn-xs btn-danger js-ajax-delete" href="{:url('Machine/del',array('id'=>$vo['id']))}">{:lang('DELETE')}</a>
+                        
+                    </td>
+                </tr>
+            </foreach>
+            </tbody>
+        </table>
+        <div class="pagination">{$page}</div>
+    </form>
+</div>
+
+<div id="pop">
+    <div class="wrap" style="padding-bottom:40px;">
+        <form method="post" class="form-horizontal margin-top-20">
+            <div class="form-group">
+                <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>禁用截止日期</label>
+                <div class="col-md-6 col-sm-10">
+                    <input class="form-control js-bootstrap-date" name="ban_long" contenteditable="off" id="ban_long" value="" aria-invalid="false">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>禁用原因</label>
+                <div class="col-md-6 col-sm-10">
+                    <textarea class="form-control" id="ban_reason" name="ban_reason" placeholder="200字以内"></textarea> 
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <a href="javascript:void(0)" class="btn btn-primary" onclick="xiajia_submit()">禁用</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+            
+<script src="__STATIC__/js/admin.js"></script>
+<script src="__STATIC__/js/laydate/laydate.js"></script>
+<script>
+        Wind.use('layer');
+		var clickuid='0';
+		function showlayer(id){
+			clickuid=id;
+            layer.open({
+                type: 1,
+                title: '禁用',
+                shadeClose: true,
+                shade: 0.8,
+                area: ['800px', '300px'],
+                content: $('#pop'),
+                success:function(){
+                    laydate.render({
+                        elem: '#ban_long',//指定元素
+                        trigger: 'click'
+                    });
+                }
+            }); 
+		}
+	
+		
+		var xiajia_status=0;
+		function xiajia_submit(){
+			var ban_long=$("#ban_long").val();
+			var reason=$("#ban_reason").val();
+
+            if(ban_long==''){
+                layer.msg("请选择禁用截止日期");
+                return;
+            }
+
+            if(reason==''){
+                layer.msg("请填写禁用原因");
+                return;
+            }
+
+            if(reason.length>200){
+                layer.msg("禁用原因必须在200字以内");
+                return;
+            }
+
+			if(xiajia_status==1){
+				return;
+			}
+			xiajia_status=1;
+			$.ajax({
+				url: '{:url('user/Machine/setBan')}',
+				type: 'POST',
+				dataType: 'json',
+				data: {id:clickuid,reason: reason,ban_long:ban_long},
+				success:function(data){
+					var code=data.code;
+					if(code==0){
+						layer.msg(data.msg);
+						return !1;
+					}
+
+					xiajia_status=0;
+					
+					layer.msg("操作成功",{},function(){
+						//layer.closeAll();
+                        clickuid=0;
+						$("#ban_long").val("");
+						$("#ban_reason").attr("value","");
+						layer.closeAll();
+                        reloadPage(window);
+					});
+				},
+				error:function(e){
+				}
+			});
+			
+		}
+</script>
+</body>
+</html>

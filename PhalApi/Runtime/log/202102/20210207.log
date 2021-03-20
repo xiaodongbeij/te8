@@ -1,0 +1,100 @@
+2021-02-07 15:09:19|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///avatar/20210207/06660257591542402.jpeg
+2021-02-07 17:23:50|ERROR|User.updateFields|PDOException: Data truncated for column 'birthday' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(85): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(43029, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1719): Domain_User->userUpdate(43029, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-07 19:10:09|ERROR|Live.getSDK|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(281): checkShopIsPass('42871')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getSDK()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-07 19:10:16|ERROR|Live.getSDK|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(281): checkShopIsPass('42871')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getSDK()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-07 19:10:31|ERROR|Live.getSDK|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(281): checkShopIsPass('42871')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getSDK()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-07 19:12:04|ERROR|Live.getSDK|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(281): checkShopIsPass('42871')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getSDK()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-07 19:12:34|ERROR|Live.getSDK|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(281): checkShopIsPass('42871')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getSDK()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-07 19:12:39|ERROR|Live.getSDK|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(281): checkShopIsPass('')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getSDK()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-07 19:17:44|ERROR|Live.getSDK|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(281): checkShopIsPass('42871')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getSDK()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-07 19:22:27|ERROR|Live.GetSDK|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(281): checkShopIsPass('42885')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getSDK()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-07 19:22:39|ERROR|Live.GetSDK|PDOException: Table 'yunbao_com.cmf_shop_apply' doesn't exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT status F...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Common/functions.php(2514): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(281): checkShopIsPass('42885')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getSDK()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}

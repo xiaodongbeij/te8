@@ -1,0 +1,104 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li ><a href="{:url('Family/index')}">家族列表</a></li>
+			<li class="active"><a >{:lang('EDIT')}</a></li>
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('Family/editPost')}">
+            <div class="form-group">
+				<label for="input-name" class="col-sm-2 control-label"><span class="form-required">*</span>家族名称</label>
+				<div class="col-md-6 col-sm-10" style="padding-top:7px;">
+					{$data['name']}
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-name" class="col-sm-2 control-label"><span class="form-required">*</span>家族长</label>
+				<div class="col-md-6 col-sm-10" style="padding-top:7px;">
+					{$data['userinfo']['user_nicename']} ({$data['uid']})
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-votes" class="col-sm-2 control-label"><span class="form-required">*</span>家族简介</label>
+				<div class="col-md-6 col-sm-10" style="padding-top:7px;">
+					{$data['briefing']}
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-money" class="col-sm-2 control-label"><span class="form-required">*</span>家族徽章</label>
+				<div class="col-md-6 col-sm-10" style="padding-top:7px;">
+					<img src="{:get_upload_path($data['badge'])}" class="imgtip" style="cursor: hand;max-width:100px;max-height:200px;" />
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="input-carded" class="col-sm-2 control-label"><span class="form-required">*</span>身份证号</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-carded" name="carded" value="{$data['carded']}">
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-money" class="col-sm-2 control-label"><span class="form-required">*</span>身份证正面</label>
+				<div class="col-md-6 col-sm-10" style="padding-top:7px;">
+					<img src="{$data['apply_pos']}" class="imgtip" style="cursor: hand;max-width:100px;max-height:200px;" />
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-money" class="col-sm-2 control-label"><span class="form-required">*</span>身份证反面</label>
+				<div class="col-md-6 col-sm-10" style="padding-top:7px;">
+					<img src="{$data['apply_side']}" class="imgtip" style="cursor: hand;max-width:100px;max-height:200px;" />
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="input-divide_family" class="col-sm-2 control-label"><span class="form-required">*</span>平台抽成</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-platform_extraction" name="platform_extraction" value="{$data['platform_extraction']}">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="input-divide_family" class="col-sm-2 control-label"><span class="form-required">*</span>家族抽成</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-divide_family" name="divide_family" value="{$data['divide_family']}">
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-trade_no" class="col-sm-2 control-label"><span class="form-required">*</span>审核</label>
+				<div class="col-md-6 col-sm-10">
+					<select class="form-control" name="state">
+                        <volist name="state" id="v">
+                        <option value="{$key}" <eq name="data['state']" value="$key">selected</eq>>{$v}</option>
+                        </volist>
+                    </select>
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-reason" class="col-sm-2 control-label"><span class="form-required"></span>原因</label>
+				<div class="col-md-6 col-sm-10">
+					<textarea class="form-control" id="input-reason" name="reason" >{$data.reason|default=''}</textarea>
+				</div>
+			</div>
+            
+
+            <div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<input type="hidden" name="id" value="{$data.id}" />
+					<button type="submit" class="btn btn-primary js-ajax-submit">{:lang('EDIT')}</button>
+					<a class="btn btn-default" href="{:url('Family/index')}">{:lang('BACK')}</a>
+				</div>
+			</div>
+
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

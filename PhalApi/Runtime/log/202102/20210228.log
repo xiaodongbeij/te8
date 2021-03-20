@@ -1,0 +1,338 @@
+2021-02-28 01:36:11|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210228/06677913711646646.png
+2021-02-28 01:45:30|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210228/06677919309121632.png
+2021-02-28 14:02:34|ERROR|Live.GetUserLists|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query(0, Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1735): NotORM_Result->queryRows(0)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1710): Api_Live->getUserList(42868, '42868_161448960...', 1)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getUserLists()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-02-28 15:22:12|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210228/06678409329295234.png
+2021-02-28 15:23:55|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210228/06678410356746936.png
+2021-02-28 15:35:06|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210228/06678417061699888.png
+2021-02-28 15:37:17|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210228/06678418370461076.png
+2021-02-28 15:41:25|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210228/06678420855630837.png
+2021-02-28 15:44:11|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210228/06678422511618033.png
+2021-02-28 15:49:30|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210228/06678425709400957.png
+2021-02-28 15:53:06|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210228/06678427861055836.png
+2021-02-28 15:54:33|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210228/06678428737345625.png
+2021-02-28 15:55:55|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210228/06678429555770753.png
+2021-02-28 16:04:01|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210228/06678434414418712.png
+2021-02-28 16:09:57|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210228/06678437971153467.png
+2021-02-28 16:21:12|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210228/06678444725974611.png
+2021-02-28 16:26:24|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210228/06678447847518776.png
+2021-02-28 16:26:29|ERROR|Live.GetUserLists|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT id FROM ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1735): NotORM_Result->queryRows('SELECT id FROM ...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1711): Api_Live->getUserList(42959, '42959_161449830...', 1)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getUserLists()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-02-28 16:26:30|ERROR|Live.GetUserLists|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT id FROM ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1735): NotORM_Result->queryRows('SELECT id FROM ...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1711): Api_Live->getUserList(42959, '42959_161449830...', 1)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getUserLists()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-02-28 16:26:30|ERROR|Live.GetUserLists|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT id FROM ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1735): NotORM_Result->queryRows('SELECT id FROM ...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1711): Api_Live->getUserList(42959, '42959_161449830...', 1)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getUserLists()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-02-28 16:26:32|ERROR|Live.GetUserLists|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT id FROM ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1735): NotORM_Result->queryRows('SELECT id FROM ...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1711): Api_Live->getUserList(42959, '42959_161449830...', 1)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getUserLists()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-02-28 16:26:37|ERROR|Live.GetUserLists|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT id FROM ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1735): NotORM_Result->queryRows('SELECT id FROM ...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1711): Api_Live->getUserList(42959, '42959_161449830...', 1)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getUserLists()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-02-28 16:26:50|ERROR|Live.EnterRoom|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT id FROM ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1735): NotORM_Result->queryRows('SELECT id FROM ...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1383): Api_Live->getUserList(43015, '43015_161450070...')
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->enterRoom()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-02-28 16:26:56|ERROR|Live.GetUserLists|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT id FROM ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1735): NotORM_Result->queryRows('SELECT id FROM ...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1711): Api_Live->getUserList(43015, '43015_161450070...', 1)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getUserLists()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-02-28 16:27:00|ERROR|Live.GetUserLists|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT id FROM ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1735): NotORM_Result->queryRows('SELECT id FROM ...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1711): Api_Live->getUserList(43015, '43015_161450070...', 1)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getUserLists()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-02-28 16:27:06|ERROR|Live.GetUserLists|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT id FROM ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1735): NotORM_Result->queryRows('SELECT id FROM ...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1711): Api_Live->getUserList(43015, '43015_161450070...', 1)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getUserLists()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-02-28 16:27:08|ERROR|Live.GetUserLists|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT id FROM ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1735): NotORM_Result->queryRows('SELECT id FROM ...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1711): Api_Live->getUserList(43008, '43008_161448930...', 1)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getUserLists()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-02-28 16:27:10|ERROR|Live.GetUserLists|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT id FROM ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1735): NotORM_Result->queryRows('SELECT id FROM ...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1711): Api_Live->getUserList(43015, '43015_161450070...', 1)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getUserLists()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-02-28 16:27:15|ERROR|Live.GetUserLists|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT id FROM ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1735): NotORM_Result->queryRows('SELECT id FROM ...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1711): Api_Live->getUserList(43015, '43015_161450070...', 1)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getUserLists()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-02-28 16:27:20|ERROR|Live.GetUserLists|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT id FROM ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1735): NotORM_Result->queryRows('SELECT id FROM ...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1711): Api_Live->getUserList(43015, '43015_161450070...', 1)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getUserLists()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-02-28 16:31:11|ERROR|Live.GetUserLists|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT id FROM ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1741): NotORM_Result->queryRows('SELECT id FROM ...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1711): Api_Live->getUserList(43010, '43010_161450070...', 1)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getUserLists()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-02-28 16:31:16|ERROR|Live.GetUserLists|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT id FROM ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1741): NotORM_Result->queryRows('SELECT id FROM ...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1711): Api_Live->getUserList(43010, '43010_161450070...', 1)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getUserLists()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-02-28 16:31:21|ERROR|Live.GetUserLists|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT id FROM ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1741): NotORM_Result->queryRows('SELECT id FROM ...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1711): Api_Live->getUserList(43010, '43010_161450070...', 1)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getUserLists()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-02-28 16:31:26|ERROR|Live.GetUserLists|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT id FROM ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1741): NotORM_Result->queryRows('SELECT id FROM ...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1711): Api_Live->getUserList(43010, '43010_161450070...', 1)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getUserLists()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-02-28 16:31:29|ERROR|Live.GetUserLists|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT id FROM ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1741): NotORM_Result->queryRows('SELECT id FROM ...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1711): Api_Live->getUserList(43008, '43008_161448930...', 1)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getUserLists()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-02-28 16:31:31|ERROR|Live.GetUserLists|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT id FROM ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1741): NotORM_Result->queryRows('SELECT id FROM ...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1711): Api_Live->getUserList(43010, '43010_161450070...', 1)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getUserLists()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-02-28 16:31:36|ERROR|Live.GetUserLists|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT id FROM ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1741): NotORM_Result->queryRows('SELECT id FROM ...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1711): Api_Live->getUserList(43010, '43010_161450070...', 1)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getUserLists()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-02-28 16:31:41|ERROR|Live.GetUserLists|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT id FROM ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1741): NotORM_Result->queryRows('SELECT id FROM ...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1711): Api_Live->getUserList(43010, '43010_161450070...', 1)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getUserLists()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-02-28 16:31:46|ERROR|Live.GetUserLists|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT id FROM ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1741): NotORM_Result->queryRows('SELECT id FROM ...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1711): Api_Live->getUserList(43010, '43010_161450070...', 1)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getUserLists()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-02-28 16:31:50|ERROR|Live.GetUserLists|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT id FROM ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1741): NotORM_Result->queryRows('SELECT id FROM ...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1711): Api_Live->getUserList(43008, '43008_161448930...', 1)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getUserLists()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-02-28 16:31:51|ERROR|Live.GetUserLists|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT id FROM ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1741): NotORM_Result->queryRows('SELECT id FROM ...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1711): Api_Live->getUserList(43010, '43010_161450070...', 1)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getUserLists()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-02-28 16:31:54|ERROR|Live.GetUserLists|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT id FROM ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1741): NotORM_Result->queryRows('SELECT id FROM ...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1711): Api_Live->getUserList(43008, '43008_161448930...', 1)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getUserLists()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-02-28 16:31:54|ERROR|Live.GetUserLists|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT id FROM ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1741): NotORM_Result->queryRows('SELECT id FROM ...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1711): Api_Live->getUserList(43008, '43008_161448930...', 1)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getUserLists()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-02-28 16:31:54|ERROR|Live.GetUserLists|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT id FROM ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1741): NotORM_Result->queryRows('SELECT id FROM ...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1711): Api_Live->getUserList(43008, '43008_161448930...', 1)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getUserLists()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-02-28 16:31:54|ERROR|Live.GetUserLists|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT id FROM ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1741): NotORM_Result->queryRows('SELECT id FROM ...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1711): Api_Live->getUserList(43008, '43008_161448930...', 1)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getUserLists()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-02-28 16:31:55|ERROR|Live.GetUserLists|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT id FROM ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1741): NotORM_Result->queryRows('SELECT id FROM ...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1711): Api_Live->getUserList(43008, '43008_161448930...', 1)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getUserLists()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-02-28 16:31:55|ERROR|Live.GetUserLists|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT id FROM ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1741): NotORM_Result->queryRows('SELECT id FROM ...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1711): Api_Live->getUserList(43008, '43008_161448930...', 1)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getUserLists()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-02-28 16:31:55|ERROR|Live.GetUserLists|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT id FROM ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1741): NotORM_Result->queryRows('SELECT id FROM ...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1711): Api_Live->getUserList(43008, '43008_161448930...', 1)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getUserLists()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-02-28 16:31:55|ERROR|Live.GetUserLists|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT id FROM ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1741): NotORM_Result->queryRows('SELECT id FROM ...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1711): Api_Live->getUserList(43008, '43008_161448930...', 1)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getUserLists()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-02-28 16:31:55|ERROR|Live.GetUserLists|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT id FROM ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1741): NotORM_Result->queryRows('SELECT id FROM ...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1711): Api_Live->getUserList(43008, '43008_161448930...', 1)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getUserLists()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-02-28 16:31:56|ERROR|Live.GetUserLists|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT id FROM ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1741): NotORM_Result->queryRows('SELECT id FROM ...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1711): Api_Live->getUserList(43008, '43008_161448930...', 1)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getUserLists()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-02-28 16:31:56|ERROR|Live.GetUserLists|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT id FROM ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1741): NotORM_Result->queryRows('SELECT id FROM ...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1711): Api_Live->getUserList(43008, '43008_161448930...', 1)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getUserLists()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-02-28 16:31:56|ERROR|Live.GetUserLists|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT id FROM ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1741): NotORM_Result->queryRows('SELECT id FROM ...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1711): Api_Live->getUserList(43008, '43008_161448930...', 1)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getUserLists()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-02-28 16:31:56|ERROR|Live.GetUserLists|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT id FROM ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1741): NotORM_Result->queryRows('SELECT id FROM ...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1711): Api_Live->getUserList(43008, '43008_161448930...', 1)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getUserLists()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-02-28 16:31:56|ERROR|Live.GetUserLists|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT id FROM ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1741): NotORM_Result->queryRows('SELECT id FROM ...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1711): Api_Live->getUserList(43010, '43010_161450070...', 1)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getUserLists()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-02-28 16:32:01|ERROR|Live.GetUserLists|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('SELECT id FROM ...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1741): NotORM_Result->queryRows('SELECT id FROM ...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1711): Api_Live->getUserList(43010, '43010_161450070...', 1)
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->getUserLists()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-02-28 20:43:12|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210228/06678601922423200.png
+2021-02-28 20:47:13|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210228/06678604336720462.png

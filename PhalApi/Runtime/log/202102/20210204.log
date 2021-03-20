@@ -1,0 +1,905 @@
+2021-02-04 09:08:12|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210204/06657448928701449.png
+2021-02-04 09:12:13|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210204/06657451339227403.png
+2021-02-04 13:04:13|ERROR|Live.SetPhoneCoin|PDOException: Unknown column 'phone_coin' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_live...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(252): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->setPhoneCoin()
+#3 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#4 {main}
+2021-02-04 15:23:03|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210204/06657673833009437.png
+2021-02-04 15:24:39|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210204/06657674799932266.png
+2021-02-04 16:50:47|ERROR|User.UpdateFields|PDOException: Data truncated for column 'birthday' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(85): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42896, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1714): Domain_User->userUpdate(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 16:50:48|ERROR|User.UpdateFields|PDOException: Data truncated for column 'birthday' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(85): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42896, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1714): Domain_User->userUpdate(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 16:51:23|ERROR|User.UpdateFields|PDOException: Data truncated for column 'birthday' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(85): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42896, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1714): Domain_User->userUpdate(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 16:51:54|ERROR|User.UpdateFields|PDOException: Data truncated for column 'birthday' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(85): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42896, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1714): Domain_User->userUpdate(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 16:53:55|ERROR|User.UpdateFields|PDOException: Data truncated for column 'birthday' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(85): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42896, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1714): Domain_User->userUpdate(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 16:53:58|ERROR|User.UpdateFields|PDOException: Data truncated for column 'birthday' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(85): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42896, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1714): Domain_User->userUpdate(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 16:53:59|ERROR|User.UpdateFields|PDOException: Data truncated for column 'birthday' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(85): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42896, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1714): Domain_User->userUpdate(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:00:12|ERROR|User.UpdateFields|PDOException: Data truncated for column 'birthday' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(85): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42896, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1714): Domain_User->userUpdate(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:00:40|ERROR|User.UpdateFields|PDOException: Data truncated for column 'birthday' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(85): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42896, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1714): Domain_User->userUpdate(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:07:18|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210204/06657736389938022.png
+2021-02-04 17:07:19|ERROR|Live.createRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_live...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(37): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42930, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42930, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:07:22|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210204/06657736421561983.png
+2021-02-04 17:07:22|ERROR|Live.createRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_live...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(37): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42930, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42930, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:07:23|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210204/06657736431233532.png
+2021-02-04 17:07:23|ERROR|Live.createRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_live...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(37): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42930, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42930, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:07:25|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210204/06657736459008640.png
+2021-02-04 17:07:25|ERROR|Live.createRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_live...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(37): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42930, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42930, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:07:26|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210204/06657736465018316.png
+2021-02-04 17:07:26|ERROR|Live.createRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_live...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(37): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42930, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42930, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:07:27|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210204/06657736471128929.png
+2021-02-04 17:07:27|ERROR|Live.createRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_live...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(37): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42930, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42930, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:07:27|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210204/06657736476462451.png
+2021-02-04 17:07:27|ERROR|Live.createRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_live...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(37): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42930, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42930, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:07:28|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210204/06657736482644632.png
+2021-02-04 17:07:28|ERROR|Live.createRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_live...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(37): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42930, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42930, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:07:37|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210204/06657736575807644.png
+2021-02-04 17:07:37|ERROR|Live.createRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_live...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(37): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42930, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42930, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:07:41|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210204/06657736611509845.png
+2021-02-04 17:07:41|ERROR|Live.createRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_live...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(37): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42930, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42930, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:07:41|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210204/06657736617973112.png
+2021-02-04 17:07:41|ERROR|Live.createRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_live...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(37): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42930, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42930, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:07:43|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210204/06657736635512335.png
+2021-02-04 17:07:43|ERROR|Live.createRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_live...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(37): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42930, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42930, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:07:48|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210204/06657736685923956.png
+2021-02-04 17:07:48|ERROR|Live.createRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_live...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(37): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42930, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42930, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:07:49|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210204/06657736693015214.png
+2021-02-04 17:07:49|ERROR|Live.createRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_live...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(37): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42930, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42930, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:07:49|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210204/06657736698283433.png
+2021-02-04 17:07:49|ERROR|Live.createRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_live...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(37): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42930, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42930, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:07:50|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210204/06657736706244784.png
+2021-02-04 17:07:50|ERROR|Live.createRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_live...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(37): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42930, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42930, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:07:54|ERROR|User.UpdateFields|PDOException: Data truncated for column 'birthday' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(85): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42896, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1714): Domain_User->userUpdate(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:07:56|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210204/06657736765457526.png
+2021-02-04 17:07:56|ERROR|Live.createRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_live...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(37): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42930, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42930, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:07:57|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210204/06657736773424350.png
+2021-02-04 17:07:57|ERROR|Live.createRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_live...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(37): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42930, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42930, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:07:59|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210204/06657736793491637.png
+2021-02-04 17:07:59|ERROR|Live.createRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_live...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(37): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42930, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42930, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:08:00|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210204/06657736809509009.png
+2021-02-04 17:08:00|ERROR|Live.createRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_live...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(37): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42930, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42930, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:08:02|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210204/06657736820976724.png
+2021-02-04 17:08:02|ERROR|Live.createRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_live...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(37): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42930, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42930, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:08:02|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210204/06657736828130703.png
+2021-02-04 17:08:02|ERROR|Live.createRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_live...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(37): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42930, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42930, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:08:03|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210204/06657736834672394.png
+2021-02-04 17:08:03|ERROR|Live.createRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_live...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(37): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42930, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42930, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:08:04|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210204/06657736842496115.png
+2021-02-04 17:08:04|ERROR|Live.createRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_live...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(37): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42930, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42930, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:08:23|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210204/06657737037375610.png
+2021-02-04 17:08:23|ERROR|Live.createRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_live...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(37): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42930, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42930, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:08:24|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210204/06657737046047782.png
+2021-02-04 17:08:24|ERROR|Live.createRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_live...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(37): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42930, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42930, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:08:25|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210204/06657737052750180.png
+2021-02-04 17:08:25|ERROR|Live.createRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_live...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(37): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42930, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42930, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:08:47|ERROR|User.UpdateFields|PDOException: Data truncated for column 'birthday' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(85): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42896, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1714): Domain_User->userUpdate(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:10:23|ERROR|User.UpdateFields|PDOException: Data truncated for column 'birthday' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(85): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42896, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1714): Domain_User->userUpdate(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:10:26|ERROR|User.UpdateFields|PDOException: Data truncated for column 'birthday' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(85): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42896, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1714): Domain_User->userUpdate(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:10:27|ERROR|User.UpdateFields|PDOException: Data truncated for column 'birthday' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(85): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42896, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1714): Domain_User->userUpdate(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:10:27|ERROR|User.UpdateFields|PDOException: Data truncated for column 'birthday' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(85): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42896, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1714): Domain_User->userUpdate(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:10:27|ERROR|User.UpdateFields|PDOException: Data truncated for column 'birthday' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(85): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42896, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1714): Domain_User->userUpdate(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:10:27|ERROR|User.UpdateFields|PDOException: Data truncated for column 'birthday' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(85): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42896, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1714): Domain_User->userUpdate(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:10:27|ERROR|User.UpdateFields|PDOException: Data truncated for column 'birthday' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(85): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42896, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1714): Domain_User->userUpdate(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:10:27|ERROR|User.UpdateFields|PDOException: Data truncated for column 'birthday' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(85): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42896, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1714): Domain_User->userUpdate(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:10:28|ERROR|User.UpdateFields|PDOException: Data truncated for column 'birthday' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(85): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42896, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1714): Domain_User->userUpdate(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:11:39|ERROR|User.UpdateFields|PDOException: Data truncated for column 'birthday' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(85): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42896, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1714): Domain_User->userUpdate(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:16:50|ERROR|User.UpdateFields|PDOException: Data truncated for column 'birthday' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(85): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42896, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1715): Domain_User->userUpdate(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:20:45|ERROR|User.UpdateFields|PDOException: Incorrect integer value: '' for column 'sex' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(85): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42896, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1715): Domain_User->userUpdate(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:26:08|ERROR|User.UpdateFields|PDOException: Incorrect integer value: '' for column 'sex' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(85): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42896, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1716): Domain_User->userUpdate(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:26:08|ERROR|User.UpdateFields|PDOException: Incorrect integer value: '' for column 'sex' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(85): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42896, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1716): Domain_User->userUpdate(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:26:08|ERROR|User.UpdateFields|PDOException: Incorrect integer value: '' for column 'sex' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(85): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42896, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1716): Domain_User->userUpdate(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:26:13|ERROR|User.UpdateFields|PDOException: Incorrect integer value: '' for column 'sex' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(85): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42896, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1716): Domain_User->userUpdate(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:26:13|ERROR|User.UpdateFields|PDOException: Incorrect integer value: '' for column 'sex' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(85): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42896, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1716): Domain_User->userUpdate(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:26:21|ERROR|User.UpdateFields|PDOException: Incorrect integer value: '' for column 'sex' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(85): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42896, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1716): Domain_User->userUpdate(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:26:23|ERROR|User.UpdateFields|PDOException: Incorrect integer value: '' for column 'sex' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(85): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42896, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1716): Domain_User->userUpdate(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:26:23|ERROR|User.UpdateFields|PDOException: Incorrect integer value: '' for column 'sex' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(85): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42896, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1716): Domain_User->userUpdate(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:26:23|ERROR|User.UpdateFields|PDOException: Incorrect integer value: '' for column 'sex' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(85): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42896, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1716): Domain_User->userUpdate(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:26:23|ERROR|User.UpdateFields|PDOException: Incorrect integer value: '' for column 'sex' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(85): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42896, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1716): Domain_User->userUpdate(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:27:14|ERROR|User.UpdateFields|PDOException: Incorrect integer value: '' for column 'sex' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(85): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42896, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1716): Domain_User->userUpdate(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:29:01|ERROR|User.UpdateFields|PDOException: Incorrect integer value: '' for column 'sex' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(85): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42879, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1716): Domain_User->userUpdate(42879, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:29:12|ERROR|User.UpdateFields|PDOException: Incorrect integer value: '' for column 'sex' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(85): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42879, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1716): Domain_User->userUpdate(42879, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:46:57|ERROR|User.UpdateFields|PDOException: Data truncated for column 'birthday' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(85): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42897, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1724): Domain_User->userUpdate(42897, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 17:49:16|ERROR|User.UpdateFields|PDOException: Data truncated for column 'birthday' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(85): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42897, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1724): Domain_User->userUpdate(42897, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 18:26:42|ERROR|Live.CreateRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(41): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42896, Array)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-04 18:26:48|ERROR|Live.CreateRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(41): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42896, Array)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-04 18:27:35|ERROR|Live.CreateRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(41): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42896, Array)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-04 18:28:18|ERROR|Live.CreateRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(41): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42896, Array)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-04 18:28:19|ERROR|Live.CreateRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(41): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42896, Array)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-04 18:28:22|ERROR|Live.CreateRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(41): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42896, Array)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-04 18:28:22|ERROR|Live.CreateRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(41): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42896, Array)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-04 18:28:22|ERROR|Live.CreateRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(41): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42896, Array)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-04 18:28:23|ERROR|Live.CreateRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(41): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42896, Array)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-04 18:28:23|ERROR|Live.CreateRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(41): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42896, Array)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-04 18:28:23|ERROR|Live.CreateRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(41): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42896, Array)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-04 18:28:23|ERROR|Live.CreateRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(41): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42896, Array)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-04 18:28:23|ERROR|Live.CreateRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(41): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42896, Array)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-04 18:29:30|ERROR|Live.CreateRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(41): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42896, Array)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-04 18:29:48|ERROR|Live.CreateRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(41): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42896, Array)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-04 18:29:50|ERROR|Live.CreateRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(41): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42896, Array)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-04 18:29:50|ERROR|Live.CreateRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(41): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42896, Array)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-04 18:29:50|ERROR|Live.CreateRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(41): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42896, Array)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-04 18:30:48|ERROR|Live.CreateRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(41): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42896, Array)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-04 18:30:50|ERROR|Live.CreateRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(41): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42896, Array)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-04 18:31:57|ERROR|Live.CreateRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(41): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42896, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42896, Array)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-02-04 18:32:46|ERROR|Live.CreateRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_live...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(37): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42879, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42879, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 18:32:54|ERROR|Live.CreateRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_live...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(37): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42879, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42879, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 18:33:30|ERROR|Live.CreateRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_live...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(37): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42879, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42879, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 18:34:28|ERROR|Live.CreateRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_live...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(37): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42879, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42879, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 18:34:30|ERROR|Live.CreateRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_live...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(37): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42879, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42879, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 18:34:41|ERROR|Live.CreateRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_live...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(37): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42879, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42879, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 18:35:38|ERROR|Live.CreateRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_live...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(37): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42879, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42879, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-02-04 18:37:21|ERROR|Live.CreateRoom|PDOException: Column 'pull' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_live...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(37): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(17): Model_Live->createRoom(42879, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(561): Domain_Live->createRoom(42879, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->createRoom()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}

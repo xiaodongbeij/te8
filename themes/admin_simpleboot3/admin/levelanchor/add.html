@@ -1,0 +1,104 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li ><a href="{:url('levelanchor/index')}">主播等级列表</a></li>
+			<li class="active"><a >{:lang('ADD')}</a></li>
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('levelanchor/addPost')}">
+
+            <div class="form-group">
+				<label for="input-levelid" class="col-sm-2 control-label"><span class="form-required">*</span>等级</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-levelid" placeholder="1-99999999之间的整数" name="levelid">
+					<p class="help-block">请填写1-99999999之间的整数</p>
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-levelname" class="col-sm-2 control-label"><span class="form-required">*</span>等级名称</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-levelname" name="levelname">
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-level_up" class="col-sm-2 control-label"><span class="form-required">*</span>等级经验上限</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-level_up" name="level_up" maxlength="9" placeholder="1-99999999之间的整数">
+					<p class="help-block">请填写1-99999999之间的整数</p>
+
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-thumb" class="col-sm-2 control-label"><span class="form-required">*</span>图标</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="hidden" name="thumb" id="thumbnail" value="">
+                    <a href="javascript:uploadOneImage('图片上传','#thumbnail');">
+                        <img src="__TMPL__/public/assets/images/default-thumbnail.png"
+                                 id="thumbnail-preview"
+                                 style="cursor: pointer;max-width:100px;max-height:100px;"/>
+                    </a>
+                    <input type="button" class="btn btn-sm btn-cancel-thumbnail" value="取消图片"> 图片尺寸： 90 X 45
+				</div>
+			</div>
+            
+            <div class="form-group" id="">
+				<label for="input-thumb_mark" class="col-sm-2 control-label"><span class="form-required">*</span>头像角标</label>
+				<div class="col-md-6 col-sm-10">
+                    <input type="hidden" name="thumb_mark" id="thumbnail2" value="">
+                    <a href="javascript:uploadOneImage('图片上传','#thumbnail2');">
+                        <img src="__TMPL__/public/assets/images/default-thumbnail.png"
+                                 id="thumbnail2-preview"
+                                 style="cursor: pointer;max-width:100px;max-height:100px;"/>
+                    </a>
+                    <input type="button" class="btn btn-sm btn-cancel-thumbnail2" value="取消图片"> 图片尺寸： 40 X 40
+				</div>
+			</div>
+            
+            <div class="form-group" id="">
+				<label for="input-bg" class="col-sm-2 control-label"><span class="form-required">*</span>背景</label>
+				<div class="col-md-6 col-sm-10">
+                    <input type="hidden" name="bg" id="thumbnail3" value="">
+                    <a href="javascript:uploadOneImage('图片上传','#thumbnail3');">
+                        <img src="__TMPL__/public/assets/images/default-thumbnail.png"
+                                 id="thumbnail3-preview"
+                                 style="cursor: pointer;max-width:100px;max-height:100px;"/>
+                    </a>
+                    <input type="button" class="btn btn-sm btn-cancel-thumbnail3" value="取消图片"> 图片尺寸： 200 X 90
+				</div>
+			</div>
+            
+           
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-primary js-ajax-submit">{:lang('ADD')}</button>
+					<a class="btn btn-default" href="javascript:history.back(-1);">{:lang('BACK')}</a>
+				</div>
+			</div>
+            
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+    <script>
+        (function(){
+            $('.btn-cancel-thumbnail').click(function () {
+                $('#thumbnail-preview').attr('src', '__TMPL__/public/assets/images/default-thumbnail.png');
+                $('#thumbnail').val('');
+            });
+            
+            $('.btn-cancel-thumbnail2').click(function () {
+                $('#thumbnail2-preview').attr('src', '__TMPL__/public/assets/images/default-thumbnail.png');
+                $('#thumbnail2').val('');
+            });
+
+            $('.btn-cancel-thumbnail3').click(function () {
+                $('#thumbnail3-preview').attr('src', '__TMPL__/public/assets/images/default-thumbnail.png');
+                $('#thumbnail3').val('');
+            });
+        })()
+    </script>
+</body>
+</html>

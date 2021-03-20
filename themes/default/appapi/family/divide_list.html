@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <include file="appapi@head"/>
+	<link type="text/css" rel="stylesheet" href="__STATIC__/appapi/css/family.css?t=1543197377"/>
+	<style type="text/css">
+		.user-list ul li .action{
+			height: 40px;line-height: 40px;right: 25px;font-weight: bold;font-size: 0.3rem;
+		}
+
+		.user-list ul li .action .red{
+			color: #F00;
+		}
+
+		.user-list ul li .action .green{
+			color: green;
+		}
+
+		.user-list ul li .action .orange{
+			color:orange; 
+		}
+	</style>	
+    <title>家族成员分成比例</title>
+</head>
+<body class="member">
+	<div class="user-list">
+		<ul>
+			<volist name="list" id="v">
+			<li>
+				<div class="thumb">
+					<img src="{$v['userinfo']['avatar']}">
+				</div>
+				<div class="info">
+					<p class="info-title">
+                        {$v['userinfo']['user_nicename']}
+                        <img src="__STATIC__/appapi/images/<if condition="$v['userinfo']['sex'] eq 1">man<else/>woman</if>.png" class="sex"> 
+                        <img src="{$levellist[$v['userinfo']['level']]['thumb']}" class="level">
+                    </p>
+					<p class="info-des2"><span>粉丝数：{$v['userinfo']['fansnum']}</span><span>抽成：<i class="divide_family">{$v['userinfo']['divide_family']}</i>%</span></p>
+				</div>
+				
+				<div class="action">
+					
+					<p <if condition="$v['status'] eq '-1'"> class="red" <elseif condition="$v['status'] eq '0'" />class="orange"<else />class="green"</if> >{$status[$v['status']]}</p>
+
+				</div>
+				
+			</li>
+			</volist>
+		</ul>
+	</div>
+    <empty name="list">
+        <div class="li_empty">
+            <p class="title">您还没有申请家族成员的分成比例</p>
+            <p class="des">～赶快去申请吧～</p>
+        </div>
+    </empty>
+	<script>
+		var familyid='{$familyid}';
+	</script>
+	<include file="appapi@footer"/>
+	<script src="__STATIC__/appapi/js/family.js"></script>
+	
+</body>
+</html>

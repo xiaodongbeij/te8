@@ -1,0 +1,38 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap">
+		<form method="post" class="js-ajax-form" action="">
+			<table class="table table-hover table-bordered">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>用户</th>
+						<th>内容</th>
+						<th>点赞数</th>
+						<th>时间</th>
+						<th>{:lang('ACTIONS')}</th>
+					</tr>
+				</thead>
+				<tbody>
+					<foreach name="lists" item="vo">
+					<tr>
+						<td>{$vo.id}</td>
+						<td>{$vo['userinfo']['user_nicename']} ({$vo['uid']})</td>
+						<td>{$vo['content']}</td>
+						<td>{$vo['likes']}</td>
+						<td>{:date('Y-m-d H:i',$vo['addtime'])}</td>
+						<td>
+							<a class="btn btn-xs btn-danger js-ajax-delete" href="{:url('videocom/del',array('id'=>$vo['id']))}">{:lang('DELETE')}</a>
+
+						</td>
+					</tr>
+					</foreach>
+				</tbody>
+			</table>
+			<div class="pagination">{$page}</div>
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

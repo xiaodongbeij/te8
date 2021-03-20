@@ -1,0 +1,53 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a >坐骑列表</a></li>
+			<li><a href="{:url('Car/add')}">{:lang('ADD')}</a></li>
+		</ul>
+		<form method="post" class="js-ajax-form" action="{:url('Car/listOrder')}">
+			<div class="table-actions">
+                <button class="btn btn-primary btn-sm js-ajax-submit" type="submit">{:lang('SORT')}</button>
+            </div>
+		
+			<table class="table table-hover table-bordered">
+				<thead>
+					<tr>
+						<th>排序</th>
+						<th>ID</th>
+						<th>名称</th>
+						<th>{$configpub.name_coin}/月</th>
+						<th>{$configpub.name_score}/月</th>
+						<th>图标</th>
+						<th>发布时间</th>
+						<th>{:lang('ACTIONS')}</th>
+					</tr>
+				</thead>
+				<tbody>
+					<foreach name="lists" item="vo">
+					<tr>
+                        <td>
+                            <input name="list_orders[{$vo.id}]" class="input-order" type="text" value="{$vo.list_order}">
+                        </td>
+						<td>{$vo.id}</td>
+						<td>{$vo['name']}</td>
+						<td>{$vo['needcoin']}</td>
+						<td>{$vo['score']}</td>
+						<td><img src="{$vo['thumb']}" class="imgtip" style="max-height:30px;max-width:30px;"/></td>
+						<td>{:date('Y-m-d H:i',$vo['addtime'])}</td>
+						<td>
+                            <a class="btn btn-xs btn-primary" href='{:url("Car/edit",array("id"=>$vo["id"]))}'>{:lang('EDIT')}</a>
+							<a class="btn btn-xs btn-danger js-ajax-delete" href="{:url('Car/del',array('id'=>$vo['id']))}">{:lang('DELETE')}</a>
+
+						</td>
+					</tr>
+					</foreach>
+				</tbody>
+			</table>
+			<div class="pagination">{$page}</div>
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

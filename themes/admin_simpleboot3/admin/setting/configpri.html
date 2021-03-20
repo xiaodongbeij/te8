@@ -1,0 +1,921 @@
+<include file="public@header"/>
+<style>
+.cdnhide{
+	display:none;
+}
+.codehide{
+	display:none;
+}
+</style>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#A" data-toggle="tab">基本设置</a></li>
+        <li><a href="#B" data-toggle="tab">登录配置</a></li>
+        <li><a href="#C" data-toggle="tab">直播配置</a></li>
+        <li><a href="#D" data-toggle="tab">提现配置</a></li>
+        <li><a href="#E" data-toggle="tab">推送配置</a></li>
+        <!--<li><a href="#F" data-toggle="tab">支付配置</a></li>-->
+        <li><a href="#G" data-toggle="tab">邀请奖励</a></li>
+        <li><a href="#H" data-toggle="tab">统计配置</a></li>
+        <li><a href="#I" data-toggle="tab">视频配置</a></li>
+        <!--<li><a href="#J" data-toggle="tab">店铺/商品配置</a></li>-->
+        <li><a href="#K" data-toggle="tab">动态配置</a></li>
+        <li><a href="#L" data-toggle="tab">游戏配置</a></li>
+        <!--<li><a href="#M" data-toggle="tab">物流配置</a></li>-->
+        <li><a href="#N" data-toggle="tab">每日任务</a></li>
+        <li><a href="#T" data-toggle="tab">三方游戏配置</a></li>
+        <li><a href="#O" data-toggle="tab">三方彩票配置</a></li>
+        <li><a href="#P" data-toggle="tab">百度翻译</a></li>
+        <li><a href="#Q" data-toggle="tab">七牛云配置</a></li>
+
+    </ul>
+    <form class="form-horizontal js-ajax-form margin-top-20" role="form" action="{:url('setting/configpriPost')}" method="post">
+        <fieldset>
+            <div class="tabbable">
+                <div class="tab-content">
+                    <div class="tab-pane" id="Q">
+                        <div class="form-group">
+                            <label for="input-telegram" class="col-sm-2 control-label">accessKey</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-qiniu_accesskey"
+                                       name="options[qiniu_accesskey]" value="{$config.qiniu_accesskey|default=''}">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input-potato" class="col-sm-2 control-label">secretKey</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-qiniu_secretkey"
+                                       name="options[qiniu_secretkey]" value="{$config.qiniu_secretkey|default=''}">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input-potato" class="col-sm-2 control-label">存储空间</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-qiniu_space_bucket"
+                                       name="options[qiniu_space_bucket]" value="{$config.qiniu_space_bucket|default=''}">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input-potato" class="col-sm-2 control-label">cdn加速域名</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-qiniu_space_host"
+                                       name="options[qiniu_space_host]" value="{$config.qiniu_space_host|default=''}">
+                                <p class="help-block">格式：http(s)://a.com，结尾不带/</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input-potato" class="col-sm-2 control-label">区域上传域名(服务端)</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-qiniu_uphost"
+                                       name="options[qiniu_uphost]" value="{$config.qiniu_uphost|default=''}">
+                                <p class="help-block">参考文档：https://developer.qiniu.com/kodo/manual/1671/region-endpoint</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input-potato" class="col-sm-2 control-label">七牛云存储区域</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-qiniu_region"
+                                       name="options[qiniu_region]" value="{$config.qiniu_region|default=''}">
+                                <p class="help-block">华东：z0，华北：z1，华南：z2，北美：na0，东南亚：as0，参考文档：https://developer.qiniu.com/kodo/manual/1671/</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-primary js-ajax-submit" data-refresh="0">
+                                    {:lang('SAVE')}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="P">
+                        <div class="form-group">
+                            <label for="input-telegram" class="col-sm-2 control-label">地址</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-bai_du_url"
+                                       name="options[bai_du_url]" value="{$config.bai_du_url|default=''}">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input-potato" class="col-sm-2 control-label">APPID</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-bai_du_app_id"
+                                       name="options[bai_du_app_id]" value="{$config.bai_du_app_id|default=''}">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input-potato" class="col-sm-2 control-label">密钥</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-bai_du_sec_key"
+                                       name="options[bai_du_sec_key]" value="{$config.bai_du_sec_key|default=''}">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-primary js-ajax-submit" data-refresh="0">
+                                    {:lang('SAVE')}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="O">
+                        <div class="form-group">
+                            <label for="input-telegram" class="col-sm-2 control-label">链接地址</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-tripartite_game_url"
+                                       name="options[tripartite_game_url]" value="{$config.tripartite_game_url|default=''}">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input-potato" class="col-sm-2 control-label">密钥</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-tripartite_game_key"
+                                       name="options[tripartite_game_key]" value="{$config.tripartite_game_key|default=''}">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-primary js-ajax-submit" data-refresh="0">
+                                    {:lang('SAVE')}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="T">
+                        <div class="form-group">
+                            <label for="input-telegram" class="col-sm-2 control-label">域名</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-tripartite_domain"
+                                       name="options[tripartite_domain]" value="{$config.tripartite_domain|default=''}">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input-potato" class="col-sm-2 control-label">代理账号</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-tripartite_agent"
+                                       name="options[tripartite_agent]" value="{$config.tripartite_agent|default=''}">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input-potato" class="col-sm-2 control-label">密钥</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-tripartite_key"
+                                       name="options[tripartite_key]" value="{$config.tripartite_key|default=''}">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-primary js-ajax-submit" data-refresh="0">
+                                    {:lang('SAVE')}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane active" id="A">
+                        <div class="form-group">
+                            <label for="input-family_switch" class="col-sm-2 control-label">家族控制</label>
+                            <div class="col-md-6 col-sm-10">
+                                <select class="form-control" name="options[family_switch]">
+                                    <option value="0">关闭</option>
+                                    <option value="1" <eq name="config['family_switch']" value="1">selected</eq>>开启</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-family_member_divide_switch" class="col-sm-2 control-label">家族长修改成员分成比例是否管理员审核</label>
+                            <div class="col-md-6 col-sm-10">
+                                <select class="form-control" name="options[family_member_divide_switch]">
+                                    <option value="0">否</option>
+                                    <option value="1" <eq name="config['family_member_divide_switch']" value="1">selected</eq>>是</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-service_switch" class="col-sm-2 control-label">客服</label>
+                            <div class="col-md-6 col-sm-10">
+                                <select class="form-control" name="options[service_switch]">
+                                    <option value="0">关闭</option>
+                                    <option value="1" <eq name="config['service_switch']" value="1">selected</eq>>开启</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="input-service_switch" class="col-sm-2 control-label">静态CDN域名</label>
+                            <div class="col-md-6 col-sm-10">
+                                    <input type="text" class="form-control" id="input-static_cdn"
+                                       name="options[static_cdn]" value="{$config.static_cdn|default=''}">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="input-service_url" class="col-sm-2 control-label">客服链接</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-service_url"
+                                       name="options[service_url]" value="{$config.service_url|default=''}">
+                                       <p class="help-block">注册链接：http://www.53kf.com/reg/index?yx_from=210260</p>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="input-sensitive_words" class="col-sm-2 control-label">敏感词</label>
+                            <div class="col-md-6 col-sm-10">
+                                <textarea class="form-control" id="input-sensitive_words" name="options[sensitive_words]" >{$config.sensitive_words|default=''}</textarea><p class="help-block">设置多个敏感字，请用英文状态下逗号隔开</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-primary js-ajax-submit" data-refresh="1">
+                                    {:lang('SAVE')}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="B">
+                        <div class="form-group">
+                            <label for="input-reg_reward" class="col-sm-2 control-label">注册奖励</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-reg_reward"
+                                       name="options[reg_reward]" value="{$config.reg_reward|default=''}">
+                                       <p class="help-block">新用户注册奖励（整数）</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-bonus_switch" class="col-sm-2 control-label">登录奖励开关</label>
+                            <div class="col-md-6 col-sm-10">
+                                <select class="form-control" name="options[bonus_switch]">
+                                    <option value="0">关闭</option>
+                                    <option value="1" <eq name="config['bonus_switch']" value="1">selected</eq>>开启</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="input-sendcode_switch" class="col-sm-2 control-label">短信验证码开关</label>
+                            <div class="col-md-6 col-sm-10">
+                                <select class="form-control" name="options[sendcode_switch]">
+                                    <option value="0">关闭</option>
+                                    <option value="1" <eq name="config['sendcode_switch']" value="1">selected</eq>>开启</option>
+                                </select>
+                                <p class="help-block">短信验证码开关,关闭后不再发送真实验证码，采用默认验证码123456</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-aly_keydi" class="col-sm-2 control-label">短信网关</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-aly_keydi" name="options[aly_keydi]" value="{$config['aly_keydi']|default=''}">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input-aly_secret" class="col-sm-2 control-label">短信平台账号</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-aly_secret" name="options[aly_secret]" value="{$config['aly_secret']|default=''}">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input-aly_signName" class="col-sm-2 control-label">短信平台密码</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-aly_signName" name="options[aly_signName]" value="{$config['aly_signName']|default=''}">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input-aly_templateCode" class="col-sm-2 control-label">短信签名</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-aly_templateCode" name="options[aly_templateCode]" value="{$config['aly_templateCode']|default=''}">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input-iplimit_switch" class="col-sm-2 control-label">短信验证码IP限制开关</label>
+                            <div class="col-md-6 col-sm-10">
+								<select class="form-control" name="options[iplimit_switch]">
+                                    <option value="0">关闭</option>
+                                    <option value="1" <eq name="config['iplimit_switch']" value="1">selected</eq>>开启</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="input-iplimit_times" class="col-sm-2 control-label">短信验证码IP限制次数</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-iplimit_times" name="options[iplimit_times]" value="{$config['iplimit_times']|default=''}"> 
+                                <p class="help-block">同一IP每天可以发送验证码的最大次数</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-primary js-ajax-submit" data-refresh="0">
+                                    {:lang('SAVE')}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="C">
+                        <div class="form-group">
+                            <label for="input-auth_islimit" class="col-sm-2 control-label">认证限制</label>
+                            <div class="col-md-6 col-sm-10">
+								<select class="form-control" name="options[auth_islimit]">
+                                    <option value="0">关闭</option>
+                                    <option value="1" <eq name="config['auth_islimit']" value="1">selected</eq>>开启</option>
+                                </select>
+                                <p class="help-block">主播开播是否需要身份认证</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-level_islimit" class="col-sm-2 control-label">直播等级控制</label>
+                            <div class="col-md-6 col-sm-10">
+								<select class="form-control" name="options[level_islimit]">
+                                    <option value="0">关闭</option>
+                                    <option value="1" <eq name="config['level_islimit']" value="1">selected</eq>>开启</option>
+                                </select>
+                                <p class="help-block">直播等级控制是否开启</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-level_limit" class="col-sm-2 control-label">直播限制等级</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-level_limit" name="options[level_limit]" value="{$config['level_limit']|default=''}"> 
+                                <p class="help-block">直播等级限制开启时，最低开播等级（用户等级）</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-speak_limit" class="col-sm-2 control-label">发言等级限制</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-speak_limit" name="options[speak_limit]" value="{$config['speak_limit']|default=''}">
+                                <p class="help-block"> 0表示无限制</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-barrage_limit" class="col-sm-2 control-label">弹幕等级限制</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-barrage_limit" name="options[barrage_limit]" value="{$config['barrage_limit']|default=''}"> <p class="help-block">0表示无限制</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-barrage_fee" class="col-sm-2 control-label">弹幕费用</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-barrage_fee" name="options[barrage_fee]" value="{$config['barrage_fee']|default=''}"> 
+                                <p class="help-block">每条弹幕的价格（整数）</p>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="input-userlist_time" class="col-sm-2 control-label">用户列表请求间隔(秒)</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-userlist_time" name="options[userlist_time]" value="{$config['userlist_time']|default=''}"> <p class="help-block">直播间用户列表刷新间隔时间  注：不小于5s</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-mic_limit" class="col-sm-2 control-label">连麦等级限制</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-mic_limit" name="options[mic_limit]" value="{$config['mic_limit']|default=''}"> 
+                               <p class="help-block"> 0表示无限制</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-chatserver" class="col-sm-2 control-label">聊天服务器带端口</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-chatserver" name="options[chatserver]" value="{$config['chatserver']|default=''}"> 
+                               <p class="help-block"> 格式：http://域名(:端口) 或者 http://IP(:端口)</p>
+                            </div>
+                        </div>
+                      
+                        <div class="form-group">
+                            <label for="input-live_sdk" class="col-sm-2 control-label">模式选择</label>
+                            <div class="col-md-6 col-sm-10" id="sdk">
+                                <label class="radio-inline"><input type="radio" value="0" name="options[live_sdk]" <in value="0" name="config['live_sdk']">checked="checked"</in>>直播模式</label>
+                                <!--<label class="radio-inline"><input type="radio" value="1" name="options[live_sdk]" <in value="1" name="config['live_sdk']">checked="checked"</in>>直播+连麦模式</label>-->
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input-sensitive_words" class="col-sm-2 control-label">直播公告</label>
+                            <div class="col-md-6 col-sm-10">
+                                <textarea class="form-control" id="input-live_notice" name="options[live_notice]" >{$config.live_notice|default=''}</textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input-sensitive_words" class="col-sm-2 control-label">录播彩种ID</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-lbcz_setup" name="options[lbcz_setup]" value="{$config['lbcz_setup']|default=''}">
+                                <p class="help-block">多个用英文逗号（,）分隔</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-sensitive_words" class="col-sm-2 control-label">录播微信名片设置</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-card" name="options[card]" value="{$config['card']|default=''}">
+                                <p class="help-block">多个用英文逗号（,）分隔</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-sensitive_words" class="col-sm-2 control-label">录播名片查看金额</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-card_money" name="options[card_money]" value="{$config['card_money']|default=''}">
+                                <p class="help-block">多个用英文逗号（,）分隔</p>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-primary js-ajax-submit" data-refresh="0">
+                                    {:lang('SAVE')}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="D">
+
+                        <div class="form-group">
+                            <label for="input-cash_rate" class="col-sm-2 control-label">提现手续费</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-withdrawal_procedures" name="options[withdrawal_procedures]" value="{$config['withdrawal_procedures']|default=0}">
+                                <p class="help-block">(%-整数)百分比<br/>说明: 提现手续费设置为10%,用户提现1000时则会扣除 1000乘于10%=100 ,用户实则到账900元</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input-cash_rate" class="col-sm-2 control-label">提现比例</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-cash_rate" name="options[cash_rate]" value="{$config['cash_rate']|default=''}">
+                                <p class="help-block">(整数)提现一元人民币需要的票数</p>
+                            </div>
+                        </div>
+						<div class="form-group">
+                            <label for="input-cash_take" class="col-sm-2 control-label">提现抽成(元)</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-cash_take" name="options[cash_take]" value="{$config['cash_take']|default=''}">
+                                <p class="help-block">(%-整数)百分比<br/>说明: 当提现比例设置为100映票等于1元时,提现抽成比例设置为10%,那么用户提现1000映票时,通过提现比例转换为10元,平台在从10元的基础上抽成10%,用户最终提现到账金额为9元</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-cash_min" class="col-sm-2 control-label">提现最低额度（元）</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-cash_min" name="options[cash_min]" value="{$config['cash_min']|default=1}">
+                                <p class="help-block">可提现的最小额度，低于该额度无法提现</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-cash_start" class="col-sm-2 control-label">每月提现期</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-cash_start" name="options[cash_start]" value="{$config['cash_start']|default=''}" style="width:100px;display:inline-block;"> - 
+                                <input type="text" class="form-control" id="input-cash_end" name="options[cash_end]" value="{$config['cash_end']|default=''}" style="width:100px;display:inline-block;">
+                                <p class="help-block">每月提现期限，不在时间段无法提现</p> 
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="input-cash_max_times" class="col-sm-2 control-label">每月提现次数</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-cash_max_times" name="options[cash_max_times]" value="{$config['cash_max_times']|default=0}">
+                                <p class="help-block">每月可提现最大次数，0表示不限制</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-primary js-ajax-submit" data-refresh="0">
+                                    {:lang('SAVE')}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="E">
+                        <div class="form-group">
+                            <label for="input-letter_switch" class="col-sm-2 control-label">私信开关</label>
+                            <div class="col-md-6 col-sm-10">
+								<select class="form-control" name="options[letter_switch]">
+                                    <option value="0">关闭</option>
+                                    <option value="1" <eq name="config['letter_switch']" value="1">selected</eq>>开启</option>
+                                </select>
+                                <p class="help-block">关闭后用户间不可私信</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-jpush_sandbox" class="col-sm-2 control-label">极光推送模式</label>
+                            <div class="col-md-6 col-sm-10">
+								<select class="form-control" name="options[jpush_sandbox]">
+                                    <option value="0">开发</option>
+                                    <option value="1" <eq name="config['jpush_sandbox']" value="1">selected</eq>>生产</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-jpush_key" class="col-sm-2 control-label">极光推送APP_KEY</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-jpush_key" name="options[jpush_key]" value="{$config['jpush_key']|default=''}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-jpush_secret" class="col-sm-2 control-label">极光推送master_secret</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-jpush_secret" name="options[jpush_secret]" value="{$config['jpush_secret']|default=''}">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-primary js-ajax-submit" data-refresh="0">
+                                    {:lang('SAVE')}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="G">
+                        <div class="form-group">
+                            <label for="input-agent_switch" class="col-sm-2 control-label">邀请开关</label>
+                            <div class="col-md-6 col-sm-10">
+								<select class="form-control" name="options[agent_switch]">
+                                    <option value="0">关闭</option>
+                                    <option value="1" <eq name="config['agent_switch']" value="1">selected</eq>>开启</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-distribut1" class="col-sm-2 control-label">一级分成</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-distribut1" name="options[distribut1]" value="{$config['distribut1']|default=''}">%
+                                <p class="help-block">一级分成(整数) 注：比例小于40%</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input-reward" class="col-sm-2 control-label">邀请奖励(钱)</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="number" class="form-control" id="input-reward" name="options[reward]" value="{$config['reward']|default=0}">
+                                <p class="help-block">成功邀请一个人奖励多少钱</p>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="input-reward" class="col-sm-2 control-label">邀请奖励(视频)</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="number" class="form-control" id="input-look_video" name="options[look_video]" value="{$config['look_video']|default=1}">
+                                <p class="help-block">成功邀请几个人奖励免费观影一天</p>
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-primary js-ajax-submit" data-refresh="0">
+                                    {:lang('SAVE')}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="H">
+                        <div class="form-group">
+                            <label for="input-um_apikey" class="col-sm-2 control-label">友盟OpenApi-apiKey</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-um_apikey" name="options[um_apikey]" value="{$config['um_apikey']|default=''}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-um_apisecurity" class="col-sm-2 control-label">友盟OpenApi-apiSecurity</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-um_apisecurity" name="options[um_apisecurity]" value="{$config['um_apisecurity']|default=''}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-um_appkey_android" class="col-sm-2 control-label">友盟Android应用-appkey</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-um_appkey_android" name="options[um_appkey_android]" value="{$config['um_appkey_android']|default=''}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-um_appkey_ios" class="col-sm-2 control-label">友盟IOS应用-appkey</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-um_appkey_ios" name="options[um_appkey_ios]" value="{$config['um_appkey_ios']|default=''}">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-primary js-ajax-submit" data-refresh="0">
+                                    {:lang('SAVE')}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="I">
+                        
+                        <div class="form-group">
+                            <label for="input-video_audit_switch" class="col-sm-2 control-label">视频审核开关</label>
+                            <div class="col-md-6 col-sm-10">
+								<select class="form-control" name="options[video_audit_switch]">
+                                    <option value="0">关闭</option>
+                                    <option value="1" <eq name="config['video_audit_switch']" value="1">selected</eq>>开启</option>
+                                </select>
+								<p class="help-block">当开关关闭时用户发布视频则无需审核</p>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="form-group">
+                            <label for="input-video_watermark" class="col-sm-2 control-label">视频水印图片</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="hidden" name="options[video_watermark]" id="thumbnail2" value="{$config['video_watermark']|default=''}">
+                                <a href="javascript:uploadOneImage('图片上传','#thumbnail2');">
+                                    <if condition="empty($config.video_watermark)">
+                                    <img src="__TMPL__/public/assets/images/default-thumbnail.png"
+                                             id="thumbnail2-preview"
+                                             style="cursor: pointer;max-width:150px;max-height:150px;"/>
+                                    <else/>
+                                    <img src="{:cmf_get_image_preview_url($config.video_watermark)}"
+                                         id="thumbnail2-preview"
+                                         style="cursor: pointer;max-width:150px;max-height:150px;"/>
+                                    </if>
+                                </a>
+                                <input type="button" class="btn btn-sm btn-cancel-thumbnail2" value="取消图片">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-primary js-ajax-submit" data-refresh="0">
+                                    {:lang('SAVE')}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="K">
+                        <div class="form-group">
+                            <label for="input-dynamic_auth" class="col-sm-2 control-label">动态认证开关</label>
+                            <div class="col-md-6 col-sm-10">
+								<select class="form-control" name="options[dynamic_auth]">
+                                    <option value="0">关闭</option>
+                                    <option value="1" <eq name="config['dynamic_auth']" value="1">selected</eq>>开启</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="input-dynamic_switch" class="col-sm-2 control-label">动态审核</label>
+                            <div class="col-md-6 col-sm-10">
+								<select class="form-control" name="options[dynamic_switch]">
+                                    <option value="0">关闭</option>
+                                    <option value="1" <eq name="config['dynamic_switch']" value="1">selected</eq>>开启</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="input-comment_weight" class="col-sm-2 control-label">评论权重值</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-comment_weight" name="options[comment_weight]" value="{$config['comment_weight']|default=''}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-like_weight" class="col-sm-2 control-label">点赞权重值</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-like_weight" name="options[like_weight]" value="{$config['like_weight']|default=''}">
+                            </div>
+                        </div>
+                        
+                        
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-primary js-ajax-submit" data-refresh="0">
+                                    {:lang('SAVE')}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="L">
+                        <div class="form-group">
+                            <label for="input-dynamic_auth" class="col-sm-2 control-label"></label>
+                            <div class="col-md-6 col-sm-10">
+								<span style="color:#ff0000">系统干预：人为控制游戏结果，保证平台收益<br>
+                                    &nbsp;&nbsp;&nbsp;当进行系统干预时，<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;普通游戏：总是下注金额最少的位置获胜<br>
+                                    <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;上庄游戏：庄家全胜<br> -->
+                                    &nbsp;&nbsp;&nbsp;&nbsp;不进行系统干预时：<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;游戏结果完全随机
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-shop_fans" class="col-sm-2 control-label">游戏开关</label>
+                            <div class="col-md-6 col-sm-10">
+                                <php>
+									$game1='1';
+									$game3='3';
+									$game4='4';
+								</php>
+								<label class="checkbox-inline"><input type="checkbox" value="1" name="game_switch[]" <in value="$config['game_switch']" name="game1">checked="checked"</in>>智勇三张</label>
+								<label class="checkbox-inline"><input type="checkbox" value="3" name="game_switch[]" <in value="$config['game_switch']" name="game3">checked="checked"</in>>转盘</label>
+								<label class="checkbox-inline" style="display:none;"><input type="checkbox" value="4" name="game_switch[]" <in value="$config['game_switch']" name="game4">checked="checked"</in>>开心牛仔</label>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="form-group" style="display:none;">
+                            <label for="input-game_banker_limit" class="col-sm-2 control-label">上庄限制</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-game_banker_limit" name="options[game_banker_limit]" value="{$config['game_banker_limit']|default=''}"> 上庄游戏 申请上庄的用户拥有的钻石数的最低值
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-game_odds" class="col-sm-2 control-label">普通游戏赔率</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-game_odds" name="options[game_odds]" value="{$config['game_odds']|default=''}">% 
+                                <p class="help-block">游戏结果不进行系统干预的概率，0 表示 完全进行 系统干预，平台绝对不会赔，100 表示完全随机</p>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group" style="display:none;">
+                            <label for="input-game_odds_p" class="col-sm-2 control-label">系统坐庄游戏赔率</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-game_odds_p" name="options[game_odds_p]" value="{$config['game_odds_p']|default=''}">% 
+                                <p class="help-block">游戏结果不进行系统干预的概率 0 表示 完全进行 系统干预，庄家绝对不会赔，100 表示完全随机</p>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group" style="display:none;">
+                            <label for="input-game_odds_u" class="col-sm-2 control-label">用户坐庄游戏赔率</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-game_odds_u" name="options[game_odds_u]" value="{$config['game_odds_u']|default=''}">% 
+                                <p class="help-block">游戏结果不进行系统干预的概率 0 表示 完全进行 系统干预，庄家绝对不会赔，100 表示完全随机</p>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="input-game_pump" class="col-sm-2 control-label">游戏抽水</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-game_pump" name="options[game_pump]" value="{$config['game_pump']|default=''}">% 
+                                <p class="help-block">用户获胜后，去除本金部分的抽成比例 </p>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="input-turntable_switch" class="col-sm-2 control-label">直播间大转盘开关</label>
+                            <div class="col-md-6 col-sm-10">
+                                <select class="form-control" name="options[turntable_switch]">
+                                    <option value="0">关闭</option>
+                                    <option value="1" <eq name="config['turntable_switch']" value="1">selected</eq>>开启</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-primary js-ajax-submit" data-refresh="0">
+                                    {:lang('SAVE')}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="N">
+                        
+                        <div class="form-group">
+                            <label for="input-watch_live_term" class="col-sm-2 control-label">观看直播</label>
+                            <div class="col-md-6 col-sm-10"><br />
+                                条件(分钟)：<input type="text" class="form-control" id="input-watch_live_term" name="options[watch_live_term]" value="{$config['watch_live_term']|default='0'}"><br />
+                                奖励(钻石)：<input type="text" class="form-control" id="input-watch_live_coin" name="options[watch_live_coin]" value="{$config['watch_live_coin']|default='0'}">
+								
+								<br />注：切记!填写的条件和奖励一定要填写整数;例: 当用户观看直播时长达到X分钟时奖励X钻石
+                            </div>
+							
+                        </div>
+                       
+						
+						 <div class="form-group">
+                            <label for="input-watch_video_term" class="col-sm-2 control-label">观看视频</label>
+                            <div class="col-md-6 col-sm-10"><br />
+                                条件(分钟)：<input type="text" class="form-control" id="input-watch_video_term" name="options[watch_video_term]" value="{$config['watch_video_term']|default='0'}"><br />
+                                奖励(钻石)：<input type="text" class="form-control" id="input-watch_video_coin" name="options[watch_video_coin]" value="{$config['watch_video_coin']|default='0'}">
+								<br />注：切记!填写的条件和奖励一定要填写整数;例: 当用户观看视频时长达到X分钟时奖励X钻石
+                            </div>
+							
+                        </div>
+						
+						<div class="form-group">
+                            <label for="input-open_live_term" class="col-sm-2 control-label">直播奖励</label>
+                            <div class="col-md-6 col-sm-10"><br />
+                                条件(小时)：<input type="text" class="form-control" id="input-open_live_term" name="options[open_live_term]" value="{$config['open_live_term']|default='0'}"><br />
+                                奖励(钻石)：<input type="text" class="form-control" id="input-open_live_coin" name="options[open_live_coin]" value="{$config['open_live_coin']|default='0'}">
+								<br />注：切记!填写的条件和奖励一定要填写整数;例: 当主播每天开播满足X小时可获得奖励X钻石
+                            </div>
+							
+                        </div>
+						
+						
+						<div class="form-group">
+                            <label for="input-award_live_term" class="col-sm-2 control-label">打赏奖励</label>
+                            <div class="col-md-6 col-sm-10"><br />
+                                条件(钻石)：<input type="text" class="form-control" id="input-award_live_term" name="options[award_live_term]" value="{$config['award_live_term']|default='0'}"><br />
+                                奖励(钻石)：<input type="text" class="form-control" id="input-award_live_coin" name="options[award_live_coin]" value="{$config['award_live_coin']|default='0'}">
+								<br />注：切记!填写的条件和奖励一定要填写整数;例: 当用户打赏主播超过X钻石，奖励X钻石
+                            </div>
+							
+                        </div>
+						
+						<div class="form-group">
+                            <label for="input-share_live_term" class="col-sm-2 control-label">分享奖励</label>
+                            <div class="col-md-6 col-sm-10"><br />
+                                条件(次)：<input type="text" class="form-control" id="input-share_live_term" name="options[share_live_term]" value="{$config['share_live_term']|default='0'}"><br />
+                                奖励(钻石)：<input type="text" class="form-control" id="input-share_live_coin" name="options[share_live_coin]" value="{$config['share_live_coin']|default='0'}">
+								<br />注：切记!填写的条件和奖励一定要填写整数;例:用户每日分享直播间X次可获得奖励X钻石
+                            </div>
+							
+                        </div>
+                        
+                       
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-primary js-ajax-submit" data-refresh="0">
+                                    {:lang('SAVE')}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </fieldset>
+    </form>
+
+</div>
+<script type="text/javascript" src="__STATIC__/js/admin.js"></script>
+<script>
+(function(){
+
+    $('.btn-cancel-thumbnail2').click(function () {
+        $('#thumbnail2-preview').attr('src', '__TMPL__/public/assets/images/default-thumbnail.png');
+        $('#thumbnail2').val('');
+    });
+    
+
+    $("#sdk label").on('click',function(){
+        var v=$("input",this).val();
+        if(v==1){
+            $("#cdn label input[type=radio]").attr('disabled','disabled');
+            $("#cdn label input[type=radio][value=2]").removeAttr('disabled');
+            $("#cdn label").eq(1).click();
+        }else{
+            $("#cdn label input[type=radio]").removeAttr('disabled');
+        }
+    })
+    
+    $("#cdn label").on('click',function(){
+        var v_d=$("input",this).attr('disabled');
+        if(v_d=='disabled'){
+            return !1;
+        }
+        var v=$("input",this).val();
+        var b=$("#cdn_switch_"+v);
+        $(".cdn_bd").hide();
+        b.show();
+    })
+    
+    $("#cloudtype label").on('click',function(){
+        var v=$("input",this).val();
+        var b=$("#cloudtype_"+v);
+        $(".cloudtype_bd").siblings('.cloudtype_bd').hide();
+        b.show();
+    })
+	
+	$("#duanxin label").on('click',function(){
+        var v_d=$("input",this).attr('disabled');
+        if(v_d=='disabled'){
+            return !1;
+        }
+        var v=$("input",this).val();
+        var b=$("#typecode_switch_"+v);
+        $(".code_bd").hide();
+        b.show();
+    })
+
+       
+    
+})()
+</script>
+</body>
+</html>

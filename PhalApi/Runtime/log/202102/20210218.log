@@ -1,0 +1,11 @@
+2021-02-18 13:53:09|ERROR|Login.getCancelCondition|PDOException: Unknown column 'balance' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT coin,vot...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Login.php(660): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Login.php(69): Model_Login->getCancelCondition('109285')
+#5 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Login.php(493): Domain_Login->getCancelCondition('109285')
+#6 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Login->getCancelCondition()
+#7 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#8 {main}

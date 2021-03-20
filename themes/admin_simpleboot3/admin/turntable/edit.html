@@ -1,0 +1,127 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li ><a href="{:url('turntable/index')}">大转盘奖品列表</a></li>
+			<li class="active"><a >{:lang('EDIT')}</a></li>
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('turntable/editPost')}">
+            <div class="form-group">
+				<label for="input-name" class="col-sm-2 control-label"><span class="form-required">*</span>类型</label>
+				<div class="col-md-6 col-sm-10">
+					<select class="form-control" name="type" id="type">
+                        <volist name="type" id="v">
+                        <option value="{$key}" <eq name="data['type']" value="$key">selected</eq>>{$v}</option>
+                        </volist>
+                    </select>
+				</div>
+			</div>
+            
+            <div class="form-group" id="coin" <if condition="$data['type'] neq 1">style="display:none"</if>>
+				<label for="input-coin" class="col-sm-2 control-label"><span class="form-required">*</span>钻石数</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-coin" name="coin" value="{$data['type_val']}">整数
+				</div>
+			</div>
+            
+            <div id="offline" <if condition="$data['type'] neq 3">style="display:none"</if>>
+            <div class="form-group">
+				<label for="input-name" class="col-sm-2 control-label"><span class="form-required">*</span>线下奖品名称</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-name" name="name" value="{$data['type_val']}">
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>奖品图片</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="hidden" name="thumb" id="thumbnail" value="{$data['thumb']}">
+                    <a href="javascript:uploadOneImage('图片上传','#thumbnail');">
+                        <if condition="empty($data.thumb)">
+                        <img src="__TMPL__/public/assets/images/default-thumbnail.png"
+                                 id="thumbnail-preview"
+                                 style="cursor: pointer;max-width:100px;max-height:100px;"/>
+                        <else/>
+                        <img src="{:cmf_get_image_preview_url($data.thumb)}"
+                             id="thumbnail-preview"
+                             style="cursor: pointer;max-width:100px;max-height:100px;"/>
+                        </if>
+                    </a>
+                    <input type="button" class="btn btn-sm btn-cancel-thumbnail" value="取消图片"> 建议尺寸：100X100
+				</div>
+			</div>
+            </div>
+            
+            <div class="form-group" id="gift" <if condition="$data['type'] neq 2">style="display:none"</if>>
+				<label for="input-name" class="col-sm-2 control-label"><span class="form-required">*</span>礼物</label>
+				<div class="col-md-6 col-sm-10">
+					<select class="form-control" name="giftid" id="giftid">
+                        <volist name="gift" id="v">
+                        <option value="{$v['id']}" <eq name="data['type_val']" value="$v['id']">selected</eq>>{$v['giftname']}</option>
+                        </volist>
+                    </select>
+				</div>
+			</div>
+            
+            <div class="form-group" id="rate" <if condition="$data['type'] eq 0">style="display:none"</if>>
+				<label for="input-rate" class="col-sm-2 control-label"><span class="form-required">*</span>中奖比例</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-rate" name="rate" value="{$data['rate']}">% 范围：0.001% - 100% 
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<input type="hidden" name="id" value="{$data.id}" />
+					<button type="submit" class="btn btn-primary js-ajax-submit">{:lang('EDIT')}</button>
+					<a class="btn btn-default" href="javascript:history.back(-1);">{:lang('BACK')}</a>
+				</div>
+			</div>
+
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+    <script type="text/javascript">
+        (function(){
+            $('.btn-cancel-thumbnail').click(function () {
+                $('#thumbnail-preview').attr('src', '__TMPL__/public/assets/images/default-thumbnail.png');
+                $('#thumbnail').val('');
+            });
+            
+            $("#type").change(function(){
+                var type=$(this).val();
+                if(type==0){
+                    $("#coin").hide();
+                    $("#gift").hide();
+                    $("#offline").hide();
+                    $("#rate").hide();
+                }
+                
+                if(type==1){
+                    $("#coin").show();
+                    $("#gift").hide();
+                    $("#offline").hide();
+                    $("#rate").show();
+                }
+                
+                if(type==2){
+                    $("#coin").hide();
+                    $("#gift").show();
+                    $("#offline").hide();
+                    $("#rate").show();
+                }
+                
+                if(type==3){
+                    $("#coin").hide();
+                    $("#gift").hide();
+                    $("#offline").show();
+                    $("#rate").show();
+                }
+                
+            })
+        })()
+
+    </script>
+</body>
+</html>

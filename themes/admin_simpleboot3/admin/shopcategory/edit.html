@@ -1,0 +1,68 @@
+<include file="public@header" />
+<style type="text/css">
+	.red_tips{
+		color: #F00;
+	}
+</style>
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li ><a href="{:url('Shopcategory/index')}">经营类目申请列表</a></li>
+			<li class="active"><a >{:lang('EDIT')}</a></li>
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('Shopcategory/editPost')}">
+            <div class="form-group">
+				<label class="col-sm-2 control-label"><span class="form-required">*</span>会员</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" value="{$data['userinfo']['user_nicename']} ({$data['uid']})" readonly>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="input-name" class="col-sm-2 control-label"><span class="form-required">*</span>经营类目</label>
+				<div class="col-md-6 col-sm-10">
+					<volist name="oneGoodsClass" id="vo">
+
+                    	<label class="checkbox-inline">
+                    		<if condition="$vo['gc_isshow'] eq '1'"><input type="checkbox" value="{$vo['gc_id']}" name="classids[]" <in value="$data['goods_classid']" name="$vo['gc_id']">checked="checked"</in>></if>{$vo['gc_name']}<if condition="$vo['gc_isshow'] eq '0'"><span class="red_tips">(不显示)</span><elseif condition="$vo['gc_isshow'] eq '3'" /><span class="red_tips">(已存在)</span></if>
+                    	</label>
+                    </volist>
+ 
+				</div>
+			</div>
+
+            <div class="form-group">
+				<label for="input-needcoin" class="col-sm-2 control-label"><span class="form-required">*</span>审核状态</label>
+				<div class="col-md-6 col-sm-10">
+					<select class="form-control" name="status">
+                        <volist name="status" id="v">
+                        <option value="{$key}" <eq name="data['status']" value="$key">selected</eq>>{$v}</option>
+                        </volist>
+                    </select>
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-needcoin" class="col-sm-2 control-label"><span class="form-required"></span>审核意见</label>
+				<div class="col-md-6 col-sm-10">
+                    <textarea class="form-control" name="reason" id="reason">{$data['reason']}</textarea>
+				</div>
+			</div>
+
+
+
+            <div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<input type="hidden" name="id" value="{$data.id}" />
+					<input type="hidden" name="uid" value="{$data.uid}" />
+					<button type="submit" class="btn btn-primary js-ajax-submit">{:lang('EDIT')}</button>
+					<a class="btn btn-default" href="{:url('Shopcategory/index')}">{:lang('BACK')}</a>
+				</div>
+			</div>
+
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

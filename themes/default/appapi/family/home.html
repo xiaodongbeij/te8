@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <include file="appapi@head"/>
+	<link type="text/css" rel="stylesheet" href="__STATIC__/appapi/css/family.css?t=1561712925"/>
+    <title>我的家族</title>
+</head>
+<body >
+	<div class="home">
+        <div class="detai_top">
+            <div class="user-list user-list-fillet">
+                <ul>
+                    <li>
+                        <div class="thumb">
+                            <img src="{$familyinfo['badge']}">
+                        </div>
+                        <div class="info">
+                            <p class="info-title">{$familyinfo['name']}</p>
+                            <p class="info-des"></p>
+                            <p class="info-des2">ID：{$familyinfo['id']}</p>
+                        </div>
+                        <div class="action">
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="line10"></div>
+		<div class="home_info">
+			<ul>
+				<li>
+					<span class="home_info_t">族长</span>
+					<span class="home_info_b">{$familyinfo['userinfo']['user_nicename']}</span>
+				</li>
+				<if condition="$type eq '1'">
+				<li>
+					<span class="home_info_t">家族默认抽成</span>
+					<span class="home_info_b edit_divide color_default"  data-divide="{$familyinfo['divide_family']}"><span id="divide_family">{$familyinfo['divide_family']}</span>%</span>
+				</li>
+				<else/>
+				<li>
+					<span class="home_info_t">家族抽成比例</span>
+					<span class="home_info_b color_default"><span id="divide_family">{$divide_family}</span>%</span>
+				</li>
+				</if>
+			</ul>
+		</div>
+        <div class="des">
+            <div class="des_title">家族简介 <a href="/Appapi/Family/setdes?familyid={$familyinfo['id']}&uid={$uid}&token={$token}"><span class="edit_des"></span></a></div>
+            <div class="des_body">{$familyinfo['briefing']}</div>
+        </div>
+		<div class="line10"></div>
+		<div class="family_home clearfix">
+			<ul class="family_home_ul">
+				<li class="family_home_li">
+					<a class="family_home_a" href="/Appapi/family/member?familyid={$familyinfo['id']}&uid={$uid}&token={$token}">
+						<img class="family_home_img" src="__STATIC__/appapi/images/family/member.png"/><br>
+						<span>家族成员</span>
+					</a>
+				</li>
+				<li class="family_home_li">
+					<a class="family_home_a" href="/Appapi/family/long?familyid={$familyinfo['id']}&uid={$uid}&token={$token}">
+						<img class="family_home_img" src="__STATIC__/appapi/images/family/live.png"/><br>
+						<span>主播数据</span>
+					</a>
+				</li>
+				<li class="family_home_li">
+					<a class="family_home_a" href="/Appapi/family/profit?familyid={$familyinfo['id']}&uid={$uid}&token={$token}">
+						<img class="family_home_img" src="__STATIC__/appapi/images/family/profit.png"/><br>
+						<span>家族盈利</span>
+					</a>
+				</li>
+				<if condition="$type eq '1'">
+				<li class="family_home_li">
+					<a class="family_home_a" href="/Appapi/family/examine?familyid={$familyinfo['id']}&uid={$uid}&token={$token}">
+						<img class="family_home_img" src="__STATIC__/appapi/images/family/examine.png"/><br>
+						<span>签约审核</span>
+					</a>
+				</li>
+				<li class="family_home_li">
+					<a class="family_home_a" href="/Appapi/family/signout?familyid={$familyinfo['id']}&uid={$uid}&token={$token}">
+						<img class="family_home_img" src="__STATIC__/appapi/images/family/quit.png"/><br>
+						<span>解约审核</span>
+					</a>
+				</li>
+				<!-- 后台家族成员审核开关打开 -->
+				<if condition="$divide_switch eq '1'">
+					<li class="family_home_li">
+						<a class="family_home_a" href="/Appapi/family/divide_list?familyid={$familyinfo['id']}&uid={$uid}&token={$token}">
+							<img class="family_home_img" src="__STATIC__/appapi/images/family/apply.png"/><br>
+							<span>分成申请</span>
+						</a>
+					</li>
+				</if>
+
+				<else/>
+				<li class="family_home_li">
+					<a class="family_home_a" href="/Appapi/family/relieve?uid={$uid}&token={$token}">
+						<img class="family_home_img" src="__STATIC__/appapi/images/family/relieve.png"/><br>
+						<span>解除签约</span>
+					</a>
+				</li>
+				</if>
+				
+			</ul>
+		</div>
+	</div>
+	<script>
+		var familyid='{$familyinfo['id']}';
+	</script>
+	<include file="appapi@footer"/>
+	<script src="__STATIC__/appapi/js/family.js"></script>
+</body>
+</html>

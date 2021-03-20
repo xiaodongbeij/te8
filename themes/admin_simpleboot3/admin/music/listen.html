@@ -1,0 +1,15 @@
+<include file="public@header" />
+</head>
+<body>
+	<div style="padding:30px 10px;">
+		
+		<audio autoplay="autoplay" controls="controls" preload="auto">
+		  <source src="{:get_upload_path($data['file_url'])}" type="audio/ogg" />
+		  <source src="{:get_upload_path($data['file_url'])}" type="audio/mpeg" />
+            Your browser does not support the audio element.
+		</audio>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+	
+</body>
+</html>

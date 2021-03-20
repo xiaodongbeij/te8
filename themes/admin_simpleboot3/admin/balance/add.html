@@ -1,0 +1,37 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li ><a href="{:url('Balance/index')}">余额手动充值列表</a></li>
+			<li class="active"><a >充值</a></li>
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('Balance/addPost')}">
+
+            <div class="form-group">
+				<label for="input-touid" class="col-sm-2 control-label"><span class="form-required">*</span>会员ID</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-touid" name="touid">
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-balance" class="col-sm-2 control-label"><span class="form-required">*</span>充值金额</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-balance" name="balance" maxlength="7" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" />
+					<p class="help-block">注(最多7位数): 填写正数表示加金额, 负数表示扣金额;</p>
+				</div>
+			</div>
+            
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-primary js-ajax-submit">{:lang('ADD')}</button>
+					<a class="btn btn-default" href="javascript:history.back(-1);">{:lang('BACK')}</a>
+				</div>
+			</div>
+            
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

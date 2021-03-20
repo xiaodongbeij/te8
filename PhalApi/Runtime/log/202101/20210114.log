@@ -1,0 +1,128 @@
+2021-01-14 08:57:12|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210114/06639298321961382.png
+2021-01-14 09:08:18|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210114/06639304981791353.png
+2021-01-14 09:30:28|ERROR|Daili.GetMemberList|PDOException: Unknown column 'ur.ticket_rate' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('select u.id,u.u...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('select u.id,u.u...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Daili.php(134): NotORM_Result->queryAll('select u.id,u.u...', Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Daili.php(193): Domain_Daili->getMemberList(42900, NULL, NULL, NULL, NULL, 1, 20)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Daili->getMemberList()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-01-14 09:30:33|ERROR|Daili.GetMemberList|PDOException: Unknown column 'ur.ticket_rate' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('select u.id,u.u...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('select u.id,u.u...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Daili.php(134): NotORM_Result->queryAll('select u.id,u.u...', Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Daili.php(193): Domain_Daili->getMemberList(42900, NULL, NULL, NULL, NULL, 1, 20)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Daili->getMemberList()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-01-14 09:31:05|ERROR|Daili.GetMemberList|PDOException: Unknown column 'ur.ticket_rate' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('select u.id,u.u...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('select u.id,u.u...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Daili.php(134): NotORM_Result->queryAll('select u.id,u.u...', Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Daili.php(193): Domain_Daili->getMemberList(42900, NULL, NULL, NULL, NULL, 1, 20)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Daili->getMemberList()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-01-14 11:13:52|ERROR|Daili.EditMember|PDOException: Unknown column 'ticket_rate' in 'field list' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Daili.php(316): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Daili.php(220): Domain_Daili->editMember(42885, 42886, 0.5, 'ticket_rate')
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Daili->editMember()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#5 {main}
+2021-01-14 14:46:46|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210114/06639508069997852.png
+2021-01-14 21:13:05|ERROR|User.UpdateFields|PDOException: Incorrect integer value: '' for column 'sex' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(76): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42879, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1593): Domain_User->userUpdate(42879, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-01-14 21:13:18|ERROR|User.UpdateFields|PDOException: Incorrect integer value: '' for column 'sex' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(76): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42879, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1593): Domain_User->userUpdate(42879, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-01-14 21:13:19|ERROR|User.UpdateFields|PDOException: Incorrect integer value: '' for column 'sex' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(76): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42879, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1593): Domain_User->userUpdate(42879, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-01-14 21:13:20|ERROR|User.UpdateFields|PDOException: Incorrect integer value: '' for column 'sex' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(76): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42879, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1593): Domain_User->userUpdate(42879, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-01-14 21:13:21|ERROR|User.UpdateFields|PDOException: Incorrect integer value: '' for column 'sex' at row 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/User.php(76): NotORM_Result->update(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/User.php(27): Model_User->userUpdate(42879, Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1593): Domain_User->userUpdate(42879, Array)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->updateFields()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-01-14 21:30:03|ERROR|Daili.GetMemberList|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('select * from c...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('select * from c...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Daili.php(223): NotORM_Result->queryAll('select * from c...')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Daili.php(193): Domain_Daili->getMemberList(42879, NULL, '0', NULL, NULL, 1, 99)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Daili->getMemberList()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-01-14 21:31:46|ERROR|Daili.GetMemberList|PDOException: Unknown column 'u.create_time' in 'where clause' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('select id,user_...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('select id,user_...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Daili.php(196): NotORM_Result->queryAll('select id,user_...', Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Daili.php(193): Domain_Daili->getMemberList(42879, NULL, '0', '2021-01-14', '2021-01-19', 1, 99)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Daili->getMemberList()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-01-14 21:31:53|ERROR|Daili.GetMemberList|PDOException: Unknown column 'u.create_time' in 'where clause' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('select id,user_...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('select id,user_...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Daili.php(196): NotORM_Result->queryAll('select id,user_...', Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Daili.php(193): Domain_Daili->getMemberList(42879, NULL, '0', '2004-01-14', '2021-01-19', 1, 99)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Daili->getMemberList()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-01-14 21:31:54|ERROR|Daili.GetMemberList|PDOException: Unknown column 'u.create_time' in 'where clause' in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('select id,user_...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('select id,user_...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Daili.php(196): NotORM_Result->queryAll('select id,user_...', Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Daili.php(193): Domain_Daili->getMemberList(42879, NULL, '0', '2004-01-14', '2021-01-19', 1, 99)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Daili->getMemberList()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-01-14 21:32:18|ERROR|Daili.GetMemberList|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('select * from c...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('select * from c...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Daili.php(223): NotORM_Result->queryAll('select * from c...')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Daili.php(193): Domain_Daili->getMemberList(42879, NULL, '0', NULL, NULL, 1, 99)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Daili->getMemberList()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}

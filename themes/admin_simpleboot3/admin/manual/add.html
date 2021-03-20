@@ -1,0 +1,52 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li ><a href="{:url('Manual/index')}">手动充值{$configpub['name_coin']}列表</a></li>
+			<li class="active"><a >充值/减分</a></li>
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('Manual/addPost')}">
+
+            <div class="form-group">
+				<label for="input-touid" class="col-sm-2 control-label"><span class="form-required">*</span>会员ID</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-touid" name="touid">
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-coin" class="col-sm-2 control-label"><span class="form-required">*</span>充值点数</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-coin" name="coin" maxlength='7' onkeyup="this.value=this.value.replace(/[^\-?\d.]/g,'')" />
+					<p class="help-block">注(最多7位数): 填写正数表示加点数, 负数表示扣点数;</p>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="input-touid" class="col-sm-2 control-label"><span class="form-required">*</span>备注</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-remarks" name="remarks">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="input-coin" class="col-sm-2 control-label"><span class="form-required">*</span>谷歌口令</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-coin" name="google_token" maxlength='6' />
+					
+				</div>
+			</div>
+            
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-primary js-ajax-submit">{:lang('ADD')}</button>
+					<a class="btn btn-default" href="javascript:history.back(-1);">{:lang('BACK')}</a>
+				</div>
+			</div>
+            
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

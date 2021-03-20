@@ -1,0 +1,72 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li ><a href="{:url('Guide/index')}">列表</a></li>
+			<li class="active"><a >{:lang('EDIT')}</a></li>
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('Guide/editPost')}">
+            <if condition="$data['type'] eq 0">
+            <div class="form-group">
+				<label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>图片</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="hidden" name="thumb" id="thumbnail" value="{$data['thumb']}">
+                    <a href="javascript:uploadOneImage('图片上传','#thumbnail');">
+                        <if condition="empty($data.thumb)">
+                        <img src="__TMPL__/public/assets/images/default-thumbnail.png"
+                                 id="thumbnail-preview"
+                                 style="cursor: pointer;max-width:100px;max-height:100px;"/>
+                        <else/>
+                        <img src="{:cmf_get_image_preview_url($data.thumb)}"
+                             id="thumbnail-preview"
+                             style="cursor: pointer;max-width:100px;max-height:100px;"/>
+                        </if>
+                    </a>
+                    <input type="button" class="btn btn-sm btn-cancel-thumbnail" value="取消图片"> 建议尺寸： 9:16
+				</div>
+			</div>
+            </if>
+            <if condition="$data['type']  eq 1">
+            <div class="form-group">
+                <label class="col-sm-2 control-label" for="file"><span class="form-required">*</span>视频</label>
+                <div class="col-md-6 col-sm-10">
+                    <div>
+                        <input class="form-control" id="js-file-input" type="text" name="thumb" value="{$data.thumb}" style="width: 300px;display: inline-block;" title="文件名称">
+                        <a href="javascript:uploadOne('文件上传','#js-file-input','file');">上传文件</a>
+                    </div>
+                    <p class="help-block">仅限MP4格式 10M以内</p>
+                </div>
+            </div>
+            </if>
+            
+            <div class="form-group">
+				<label for="input-href" class="col-sm-2 control-label"><span class="form-required"></span>链接</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-href" name="href" value="{$data['href']}">点击打开的页面链接 http开头
+				</div>
+			</div>
+            
+
+            <div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<input type="hidden" name="id" value="{$data.id}" />
+					<button type="submit" class="btn btn-primary js-ajax-submit">{:lang('EDIT')}</button>
+					<a class="btn btn-default" href="javascript:history.back(-1);">{:lang('BACK')}</a>
+				</div>
+			</div>
+
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+    <script type="text/javascript">
+        (function(){
+            $('.btn-cancel-thumbnail').click(function () {
+                $('#thumbnail-preview').attr('src', '__TMPL__/public/assets/images/default-thumbnail.png');
+                $('#thumbnail').val('');
+            });
+        })()
+
+    </script>
+</body>
+</html>

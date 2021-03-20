@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="baidu-site-verification" content="AMLIogUqEe" />
+		<meta charset="utf-8" />
+		<title itemprop="name">404</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+		<!--百度站长优先收录-->
+		<meta name="baidu-site-verification" content="Xy1GpyhckZ" />
+		<!--百度站长优先收录-->
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+		<meta name="description" content="" />
+		<meta name="renderer" content="webkit">
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="stylesheet" href="/static/css/404.css"/>
+	</head>
+	<body>
+		<div class="content">
+			<div class="feiji">
+				<img src="/static/images/404.png">
+			</div>
+			<div class="info">
+				<div class="error">出错啦！</div>
+				<div class="sorry">很抱歉，您要访问的页面不存在~</div>
+				<!-- <div class="countdown"><span id="timer">5</span>s&nbsp;&nbsp;后自动跳转到首页</div> -->
+				<div class="return">
+					<a href="/" class="button">返回首页</a>
+					<a href="javascript:history.go(-1)" class="button">上一页</a>
+				</div>
+				
+			</div>
+		</div>
+		<script src="/static/js/jquery.js"></script>
+		<script>
+			function countDown(){
+				
+				var time = document.getElementById("timer");
+				if(time.innerHTML == 0){
+					<!-- window.location.href="/"; -->
+				}else{
+					time.innerHTML = time.innerHTML-1;
+					$("#timer").text(time.innerHTM);
+				}
+			}
+			//1000毫秒调用一次
+			//window.setInterval("countDown()",1000);
+		</script>
+	</body>
+</html>

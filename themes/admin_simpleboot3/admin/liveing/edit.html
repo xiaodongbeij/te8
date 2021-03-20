@@ -1,0 +1,109 @@
+
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li ><a href="{:url('Liveing/index')}">直播列表</a></li>
+			<li class="active"><a >{:lang('EDIT')}</a></li>
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('Liveing/editPost')}">
+            <div class="form-group">
+				<label for="input-uid" class="col-sm-2 control-label"><span class="form-required">*</span>用户ID</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-uid" name="uid" value="{$data['uid']}" readonly>
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-type" class="col-sm-2 control-label"><span class="form-required">*</span>直播分类</label>
+				<div class="col-md-6 col-sm-10">
+                    <select class="form-control" name="liveclassid">
+                    	<option value="0" <eq name="data['liveclassid']" value="0">selected</eq>>默认分类</option>
+                        <volist name="liveclass" id="v">
+                        <option value="{$key}" <if condition="$data['liveclassid'] gt 0 and $data['liveclassid'] eq $key">selected</if>>{$v}</option>
+                        </volist>
+                    </select>
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-type" class="col-sm-2 control-label"><span class="form-required">*</span>房间类型</label>
+				<div class="col-md-6 col-sm-10">
+                    <select class="form-control" name="type" id="cdn">
+                        <volist name="type" id="v">
+                        <option value="{$key}" <eq name="data['type']" value="$key">selected</eq>>{$v}</option>
+                        </volist>
+                    </select>
+				</div>
+			</div>
+            
+            <div class="form-group" id="cdn_switch_1" <eq name="data['type']" value="0">style="display:none;"</eq>>
+				<label for="input-type_val" class="col-sm-2 control-label"><span class="form-required">*</span>密码或价格</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-type_val" name="type_val" value="{$data['type_val']}">
+				</div>
+			</div>
+            
+            
+            <div class="form-group">
+				<label for="input-pull" class="col-sm-2 control-label"><span class="form-required">*</span>视频地址</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-pull" name="pull" value="{$data['pull']}">视频格式：MP4
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-words" class="col-sm-2 control-label"><span class="form-required">*</span>视频类型</label>
+				<div class="col-md-6 col-sm-10">
+					<select class="form-control" name="anyway">
+                        <option value="0" >竖屏</option>
+                        <option value="1" <eq name="data['anyway']" value="1">selected</eq>>横屏</option>
+                    </select>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="input-words" class="col-sm-2 control-label"><span class="form-required">*</span>选择彩种</label>
+				<div class="col-md-6 col-sm-10">
+					<select class="form-control" name="c_id">
+						<foreach name="cz" item="v">
+							<option value="{$v.id}" <eq name="data['c_id']" value="$v.id">selected</eq>>{$v.show_name}</option>
+						</foreach>>
+					</select>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="input-pull" class="col-sm-2 control-label"><span class="form-required">*</span>联系方式所需金额</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="number" class="form-control" id="input-reward_amount" name="reward_amount" value="{$data['reward_amount']}">
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-primary js-ajax-submit">{:lang('EDIT')}</button>
+					<a class="btn btn-default" href="{:url('Liveing/index')}">{:lang('BACK')}</a>
+				</div>
+			</div>
+
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+    <script type="text/javascript">
+    (function(){
+		$("#cdn").on('change',function(){
+			var v=$(this).val();
+			var b=$("#cdn_switch_1");
+			if(v==0){
+				b.hide();
+				$("#input-type_val").val('');
+			}else{
+				b.show();
+			}
+		})
+	})()
+    </script>
+</body>
+</html>

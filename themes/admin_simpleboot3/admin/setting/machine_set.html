@@ -1,0 +1,95 @@
+<include file="public@header" />
+</head>
+<body>
+<div class="wrap">
+
+    <form class="form-horizontal js-ajax-form margin-top-20" method="post" action="{:url('setting/machine_set')}">
+        <div class="form-group">
+            <label for="input-telegram" class="col-sm-2 control-label">进场频率</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="number" class="form-control" id="input-approach_frequency"
+                       name="approach_frequency" oninput="if(value>99)value=99;if(value<1)value=1" value="{$info.approach_frequency|default=''}" >
+                <p class="help-block">设置值 越大 发送频率越慢</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-potato" class="col-sm-2 control-label">聊天频率</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="number" class="form-control" id="input-chat_frequency"
+                       name="chat_frequency" oninput="if(value>99)value=99;if(value<1)value=1" value="{$info.chat_frequency|default=''}">
+                <p class="help-block">设置值 越大 发送频率越慢</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-potato" class="col-sm-2 control-label">关注频率</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="number" class="form-control" id="input-focus_frequency"
+                       name="focus_frequency" oninput="if(value>99)value=99;if(value<1)value=1" value="{$info.focus_frequency|default=''}">
+                <p class="help-block">设置值 越大 发送频率越慢</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-potato" class="col-sm-2 control-label">刷礼物频率</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="number" class="form-control" id="input-gift_frequency"
+                       name="gift_frequency" oninput="if(value>99)value=99;if(value<1)value=1" value="{$info.gift_frequency|default=''}">
+                <p class="help-block">设置值 越大 发送频率越慢</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-potato" class="col-sm-2 control-label">礼物ID</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="text" class="form-control" id="input-gift_id"
+                       name="gift_id" value="{$info.gift_id|default=''}">
+                <p class="help-block">多个礼物用英文逗号隔开：1,2,3....</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-potato" class="col-sm-2 control-label">等级经验最小值</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="number" class="form-control" id="input-min_grade"
+                       name="min_grade" oninput="if(value>100)value=100;if(value<1)value=1" value="{$info.min_grade|default=''}">
+                <p class="help-block">用户等级列表里面的，等级经验上限值</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-potato" class="col-sm-2 control-label">等级经验最大值</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="number" class="form-control" id="input-max_grade"
+                       name="max_grade" oninput="if(value>100)value=100;if(value<1)value=1" value="{$info.max_grade|default=''}">
+               <p class="help-block">用户等级列表里面的，等级经验上限值</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-potato" class="col-sm-2 control-label">开奖金额</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="number" class="form-control" id="input-open_coin"
+                       name="open_coin" value="{$info.open_coin|default=''}">
+                <p class="help-block">大于等于设置的金额，全直播间推送</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-potato" class="col-sm-2 control-label">直播间最多人数</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="number" class="form-control" id="input-max_people"
+                       name="max_people" value="{$info.max_people|default=''}">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-primary js-ajax-submit">{:lang('SAVE')}</button>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

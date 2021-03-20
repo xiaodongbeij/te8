@@ -1,0 +1,55 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap">
+        <ul class="nav nav-tabs">
+			<li class="active"><a >充值规则列表</a></li>
+			<li><a href="{:url('Chargerules/add')}">{:lang('ADD')}</a></li>
+		</ul>
+		<form method="post" class="js-ajax-form" action="{:url('Chargerules/listOrder')}">
+            <div class="table-actions">
+                <button class="btn btn-primary btn-sm js-ajax-submit" type="submit">{:lang('SORT')}</button>
+            </div>
+			<table class="table table-hover table-bordered">
+				<thead>
+					<tr>
+                        <th>序号</th>
+						<th>ID</th>
+						<th>名称</th>
+						<th>价格</th>
+                        <th>钻石</th>
+						<th>苹果支付钻石</th>
+						<th>苹果项目ID</th>
+						<th>赠送钻石</th>
+						<th>发布时间</th>
+
+						<th>{:lang('ACTIONS')}</th>
+					</tr>
+				</thead>
+				<tbody>
+					<foreach name="lists" item="vo">
+					<tr>
+                        <td><input name="list_orders[{$vo.id}]" class="input-order" type="text" value="{$vo.list_order}"></td>
+						<td>{$vo.id}</td>
+						<td>{$vo['name']}</td>
+						<td>{$vo['money']}</td>
+                        <td>{$vo['coin']}</td>
+						<td>{$vo['coin_ios']}</td>
+						<td>{$vo['product_id']}</td>
+						<td>{$vo['give']}</td>
+						<td>{:date('Y-m-d H:i',$vo['addtime'])}</td>
+						<td>
+                            <a class="btn btn-xs btn-primary" href='{:url("Chargerules/edit",array("id"=>$vo["id"]))}'>{:lang('EDIT')}</a>
+							<a class="btn btn-xs btn-danger js-ajax-delete" href="{:url('Chargerules/del',array('id'=>$vo['id']))}">{:lang('DELETE')}</a>
+						</td>
+					</tr>
+					</foreach>
+				</tbody>
+			</table>
+			<div class="pagination">{$page}</div>
+			
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

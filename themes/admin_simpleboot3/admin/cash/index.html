@@ -1,0 +1,92 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a>{$configpub['name_votes']}提现记录列表</a></li>
+
+		</ul>
+		<form class="well form-inline margin-top-20" name="form1" method="post" action="">
+		  订单状态：
+			<select class="form-control" name="status">
+				<option value="">全部</option>
+                <volist name="status" id="v">
+                    <option value="{$key}" <if condition="input('request.status') neq '' && input('request.status') eq $key">selected</if> >{$v}</option>
+                </volist>		
+			</select>
+			提交时间：
+			<input class="form-control js-bootstrap-date" name="start_time" id="start_time" autocomplete="off" value="{:input('request.start_time')}" aria-invalid="false" style="width: 110px;"> - 
+            <input class="form-control js-bootstrap-date" name="end_time" id="end_time" autocomplete="off" value="{:input('request.end_time')}" aria-invalid="false" style="width: 110px;">
+            
+            用户ID：
+            <input class="form-control" type="text" name="uid" style="width: 200px;" value="{:input('request.uid')}"
+                   placeholder="请输入用户ID、靓号">
+                   
+			关键字： 
+            <input class="form-control" type="text" name="keyword" style="width: 200px;" value="{:input('request.keyword')}"
+                   placeholder="请输入订单号">
+			<input type="button" class="btn btn-primary" value="搜索" onclick="form1.action='{:url('Cash/index')}';form1.submit();"/>
+			<input type="button" class="btn btn-success" value="导出" onclick="form1.action='{:url('Cash/export')}';form1.submit();"/>
+			<div class="admin_main" style="margin-top:10px">
+				当前提现总金额：{$cash['total']}
+				<if condition="$cash['type'] eq '0'" >
+					成功提现金额：{$cash['success']}
+					待处理金额：{$cash['fail']}
+				</if>
+			</div>
+		</form>	
+		
+		<form method="post" class="js-ajax-form" >
+			<table class="table table-hover table-bordered">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>主播名称</th>						
+						<th>兑换{$configpub['name_votes']}</th>
+						<th>提现金额</th>
+						<th>提现账号</th>
+						<th>第三方支付订单号</th>
+						<th>状态</th>
+						<th>提交时间</th>
+						<th>处理时间</th>
+						<th>{:lang('ACTIONS')}</th>
+					</tr>
+				</thead>
+				<tbody>
+					<foreach name="lists" item="vo">
+					<tr>
+						<td align="center">{$vo.id}</td>
+						<td>{$vo['userinfo']['user_nicename']} ({$vo['uid']})</td>	
+						<td>{$vo['votes']}</td>
+						<td>{$vo['money']}</td>				
+						<td>
+                            {$type[$vo['type']]}<br>{$vo['name']}<br>{$vo['account']}<br>{$vo['account_bank']}
+                        </td>				
+						<td>{$vo['trade_no']}</td>
+						<td>{$status[$vo['status']]}</td>
+						<td>{:date('Y-m-d H:i:s',$vo['addtime'])}</td>						
+						<td>
+						 <if condition="$vo['status'] eq '0'" >
+						    --
+						 <else/>
+                             {:date('Y-m-d H:i:s',$vo['uptime'])}
+						 </if>						
+						 </td>
+						<td>	
+						<if condition="$vo['status'] eq '0'" >
+                        <a class="btn btn-xs btn-primary" href='{:url("Cash/edit",array("id"=>$vo["id"]))}'>{:lang('EDIT')}</a>
+						 </if>
+                         
+                        <!-- <a class="btn btn-xs btn-danger js-ajax-delete" href="{:url('Cash/del',array('id'=>$vo['id']))}">{:lang('DELETE')}</a> -->
+						</td>
+					</tr>
+					</foreach>
+				</tbody>
+			</table>
+			<div class="pagination">{$page}</div>
+
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<include file="public@header" />
+
+
+<link href="__STATIC__/css/fSelect.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<div class="wrap">
+    <ul class="nav nav-tabs">
+        <li ><a href="{:url('Active/index')}">列表</a></li>
+        <li class="active"><a >{:lang('ADD')}</a></li>
+    </ul>
+    <form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('Active/add')}">
+
+        <div class="form-group">
+            <label for="input-user_login" class="col-sm-2 control-label">封面</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="hidden" name="img" id="thumbnail" value="">
+                <a href="javascript:uploadOneImage('封面上传','#thumbnail');">
+                    <img src="__TMPL__/public/assets/images/default-thumbnail.png"
+                         id="thumbnail-preview"
+                         style="cursor: pointer;max-width:200px;max-height:100px;"/>
+                </a>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-cate" class="col-sm-2 control-label"><span class="form-required">*</span>活动分类</label>
+            <div class="col-md-6 col-sm-10">
+                <select class="form-control" name="cate">
+                    <option value="" selected>请选择分类</option>
+                    <option value="1">直播活动</option>
+                    <option value="2">游戏活动</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-title" class="col-sm-2 control-label"><span class="form-required">*</span>标题</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="text" class="form-control" id="input-title" name="title">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-url" class="col-sm-2 control-label"><span class="form-required">*</span>跳转地址</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="text" class="form-control" id="input-url" name="url">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-url" class="col-sm-2 control-label"><span class="form-required">*</span>开始时间</label>
+            <div class="col-md-6 col-sm-10">
+                <input class="form-control js-bootstrap-date" name="start" id="start" autocomplete='off' aria-invalid="false" style="width: 300px;">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-url" class="col-sm-2 control-label"><span class="form-required">*</span>结束时间</label>
+            <div class="col-md-6 col-sm-10">
+                <input class="form-control js-bootstrap-date" name="end" id="end" autocomplete='off' aria-invalid="false" style="width: 300px;">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-primary js-ajax-submit">{:lang('ADD')}</button>
+                <a class="btn btn-default" href="{:url('Active/index')}">{:lang('BACK')}</a>
+            </div>
+        </div>
+
+    </form>
+</div>
+<script src="__STATIC__/js/admin.js"></script>
+<script src="__STATIC__/js/fSelect.js"></script>
+<script>
+    (function(){
+        $('.btn-cancel-thumbnail').click(function () {
+            $('#thumbnail-preview').attr('src', '__TMPL__/public/assets/images/default-thumbnail.png');
+            $('#thumbnail').val('');
+        });
+
+        $('.btn-cancel-thumbnail2').click(function () {
+            $('#thumbnail2-preview').attr('src', '__TMPL__/public/assets/images/default-thumbnail.png');
+            $('#thumbnail2').val('');
+        });
+    })()
+</script>
+</body>
+</html>

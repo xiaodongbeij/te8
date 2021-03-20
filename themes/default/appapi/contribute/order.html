@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<include file="appapi@head"/>
+		<title>贡献</title>
+		<link href='__STATIC__/appapi/css/order.css' rel="stylesheet" type="text/css" >
+	</head>
+	<body>
+
+		<div>
+			<ul class="list">
+				<volist name="list" id="v">
+					<if condition="$i eq 1">
+					<li class="order1">
+						<div class="info">
+							<div class="avatar">
+								<img src="{$v['userinfo']['avatar']}" onerror="this.src='__STATIC__/images/headicon.png'">
+								<span></span>
+							</div>
+							<div class="name">
+								{$v['userinfo']['user_nicename']} 
+								<img src="__STATIC__/appapi/images/<if condition="$v['userinfo']['sex'] eq 1">man<else/>woman</if>.png" class="sex"> 
+                                <img src="{$levelanchorlist[$v['userinfo']['level_anchor']]['thumb']}" class="level">
+                                <img src="{$levellist[$v['userinfo']['level']]['thumb']}" class="level">
+							</div>
+							<div class="contribute">
+								贡献<span class="contribute-nums">{$v['total']}</span>收入
+							</div>
+						</div>				
+					</li>	
+					<else/>
+					<li>
+						<div class="nums">{$i}</div>
+						<div class="avatar">
+							<img src="{$v['userinfo']['avatar']}" onerror="this.src='__STATIC__/images/headicon.png'">
+						</div>
+						<div class="info">
+							<div class="name">
+								<span>{$v['userinfo']['user_nicename']}</span> 
+								<img src="__STATIC__/appapi/images/<if condition="$v['userinfo']['sex'] eq 1">man<else/>woman</if>.png" class="sex"> 
+								<img src="{$levelanchorlist[$v['userinfo']['level_anchor']]['thumb']}" class="level">
+                                <img src="{$levellist[$v['userinfo']['level']]['thumb']}" class="level">
+							</div>
+							<div class="contribute">
+								<span class="contribute-nums">{$v['total']}</span>
+							</div>
+						</div>
+					</li>	
+					</if>
+				
+				</volist>
+
+
+			</ul>
+		</div>
+    <include file="appapi@footer"/>
+	</body>
+</html>

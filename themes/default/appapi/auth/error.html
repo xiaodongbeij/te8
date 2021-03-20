@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <include file="appapi@head"/>
+    <title>身份信息</title>
+    <style type="text/css">
+        .title2{color: #526165;text-align: center;margin-top: 4%;}
+        img{width: 18%;margin: 30% 41% 9%;}
+        p{color: #B4C1C7;text-align: left;margin-left: 23%;line-height: 150%}
+        .alink{color:#00D8C9;text-decoration:underline; }
+    </style>
+</head>
+<body>
+<img src="__STATIC__/appapi/images/auth/error.jpg">
+<div class="title2">
+    您的认证没有通过，请<a class="alink" href="/Appapi/auth/index?uid={$uid}&token={$token}&reset=1">重新认证</a>
+    <br/>
+    <br/>
+    <p>{$reason}<br></p>
+</div>
+
+<include file="appapi@footer"/>
+</body>
+</html>

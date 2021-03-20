@@ -1,0 +1,170 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li ><a href="{:url('Refundlist/index')}">退款申请列表</a></li>
+			<li class="active"><a >{:lang('EDIT')}</a></li>
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('Refundlist/edit_post')}">
+            
+            
+            <div class="form-group">
+				<label for="input-orderid" class="col-sm-2 control-label"><span class="form-required">*</span>订单ID</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-orderid" name="orderid" value="{$data['orderid']}" readonly="readonly">
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-orderno" class="col-sm-2 control-label"><span class="form-required">*</span>订单编号</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-orderno" value="{$data['orderno']}" readonly="readonly">
+				</div>
+			</div>
+
+            <div class="form-group">
+                <label for="input-user_nicename" class="col-sm-2 control-label"><span class="form-required">*</span>买家信息</label>
+                <div class="col-md-6 col-sm-10">
+                    <input type="text" class="form-control" id="input-user_nicename" value="{$data['buyer_info']['user_nicename']}（{$data['uid']}）" readonly="readonly">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-buyer_phone" class="col-sm-2 control-label"><span class="form-required">*</span>买家联系方式</label>
+                <div class="col-md-6 col-sm-10">
+                    <input type="text" class="form-control" id="input-buyer_phone" value="{$data['phone']}" readonly="readonly">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-seller_user_nicename" class="col-sm-2 control-label"><span class="form-required">*</span>商家信息</label>
+                <div class="col-md-6 col-sm-10">
+                    <input type="text" class="form-control" id="input-seller_user_nicename" value="{$data['seller_info']['user_nicename']}（{$data['shop_uid']}）" readonly="readonly">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-reason" class="col-sm-2 control-label"><span class="form-required">*</span>退款原因</label>
+                <div class="col-md-6 col-sm-10">
+                    <input type="text" class="form-control" id="input-reason" value="{$data['reason']}" readonly="readonly">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-content" class="col-sm-2 control-label"><span class="form-required">*</span>退款说明</label>
+                <div class="col-md-6 col-sm-10">
+                    
+                    <textarea readonly="readonly" style="width: 100%;min-height: 100px;">{$data['content']}</textarea>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="input-type" class="col-sm-2 control-label"><span class="form-required">*</span>退款类型</label>
+                <div class="col-md-6 col-sm-10">
+                    <input type="text" class="form-control" id="input-type" value="{$type[$data['type']]}" readonly="readonly">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="input-addtime" class="col-sm-2 control-label"><span class="form-required">*</span>申请时间</label>
+                <div class="col-md-6 col-sm-10">
+                    <input type="text" class="form-control" id="input-addtime" value="{:date('Y-m-d H:i',$data['addtime'])}" readonly="readonly">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-shop_result" class="col-sm-2 control-label"><span class="form-required">*</span>店铺处理结果</label>
+                <div class="col-md-6 col-sm-10">
+                    <input type="text" class="form-control" id="input-shop_result" value="{$shop_result[$data['shop_result']]}" readonly="readonly">
+                </div>
+            </div>
+
+            <if condition="$data['shop_process_time'] gt 0">
+                <div class="form-group">
+                    <label for="input-shop_process_time" class="col-sm-2 control-label"><span class="form-required">*</span>店铺处理时间</label>
+                    <div class="col-md-6 col-sm-10">
+                        <input type="text" class="form-control" id="input-shop_process_time" value="{:date('Y-m-d H:i',$data['shop_process_time'])}" readonly="readonly">
+                    </div>
+                </div>
+            </if>
+
+            <if condition="$data['shop_process_num'] gt 0">
+                <div class="form-group">
+                    <label for="input-shop_process_num" class="col-sm-2 control-label"><span class="form-required">*</span>店铺驳回次数</label>
+                    <div class="col-md-6 col-sm-10">
+                        <input type="text" class="form-control" id="input-shop_process_num" value="{$data['shop_process_num']}" readonly="readonly">
+                    </div>
+                </div>
+            </if>
+
+            
+            <div class="form-group">
+                <label for="input-is_platform_interpose" class="col-sm-2 control-label"><span class="form-required">*</span>是否申请平台介入</label>
+                <div class="col-md-6 col-sm-10">
+                    <input type="text" class="form-control" id="input-is_platform_interpose" <if condition="$data['is_platform_interpose'] eq 1"> value="是" <else />value="否"</if> readonly="readonly">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="input-platform_interpose_reason" class="col-sm-2 control-label"><span class="form-required">*</span>申请平台介入理由</label>
+                <div class="col-md-6 col-sm-10">
+                    <input type="text" class="form-control" id="input-platform_interpose_reason" value="{$data['platform_interpose_reason']}" readonly="readonly">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-platform_interpose_desc" class="col-sm-2 control-label"><span class="form-required">*</span>申请平台介入说明</label>
+                <div class="col-md-6 col-sm-10">
+                    
+                    <textarea readonly="readonly" style="width: 100%;min-height: 100px;">{$data['platform_interpose_desc']}</textarea>
+                </div>
+            </div>
+
+            <if condition="$data['platform_interpose_thumb'] neq ''">
+                <div class="form-group">
+                    <label for="input-platform_interpose_reason" class="col-sm-2 control-label"><span class="form-required">*</span>申请平台介入图片</label>
+                    <div class="col-md-6 col-sm-10">
+                        <img src="{$data['platform_interpose_thumb']}" width="200" class="imgtip">
+                    </div>
+                </div>
+            </if>
+
+            <div class="form-group">
+                <label for="input-platform_result" class="col-sm-2 control-label"><span class="form-required">*</span>平台处理结果</label>
+                <div class="col-md-6 col-sm-10" id="platform_result">
+
+                    <if condition="$data['platform_result'] neq 0">
+                        <label class="radio-inline"><input type="radio" name="platform_result" value="0" <if condition="$data['platform_result'] eq -1">checked="checked"</if>>拒绝退款</label>
+                        <label class="radio-inline"><input type="radio" name="platform_result" value="1" <if condition="$data['platform_result'] eq 1">checked="checked"</if>>同意退款</label>
+                    <else />
+                        <label class="radio-inline"><input type="radio" name="platform_result" value="0">拒绝退款</label>
+                        <label class="radio-inline"><input type="radio" name="platform_result" value="1" checked="checked">同意退款</label>
+                    </if>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-content" class="col-sm-2 control-label"><span class="form-required">*</span>平台处理意见</label>
+                <div class="col-md-6 col-sm-10">
+                    
+                    <textarea name="desc" style="width: 100%;min-height: 100px;" placeholder="请输入平台的处理意见,300字以内">{$data['platform_handle_desc']}</textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<input type="hidden" name="id" value="{$data.id}" />
+                    <if condition="$data['platform_result'] eq 0">
+					   <button type="submit" class="btn btn-primary js-ajax-submit">{:lang('EDIT')}</button>
+                    </if>
+					<a class="btn btn-default" href="{:url('Refundlist/index')}">{:lang('BACK')}</a>
+				</div>
+			</div>
+
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+    
+</body>
+</html>

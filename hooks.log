@@ -1,0 +1,3192 @@
+================ Update Start ===============
+
+Request on [2021-02-27 16:31:32] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   7d937510..26bf8204  master     -> origin/master
+Updating 7d937510..26bf8204
+Fast-forward
+ .idea/workspace.xml | 9 +++++----
+ app/common.php      | 4 ++--
+ 2 files changed, 7 insertions(+), 6 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-02-28 19:28:42] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   26bf8204..f948c4b2  master     -> origin/master
+Updating 26bf8204..f948c4b2
+Fast-forward
+ .idea/workspace.xml           |  10 +++-
+ PhalApi/Appapi/Api/Family.php | 134 +++++++++++++++++++++++++++++++++++++++---
+ 2 files changed, 133 insertions(+), 11 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-02-28 20:37:22] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   f948c4b2..1e7c21d9  master     -> origin/master
+error: Your local changes to the following files would be overwritten by merge:
+	PhalApi/Appapi/Api/Live.php
+Please commit your changes or stash them before you merge.
+Aborting
+Updating f948c4b2..1e7c21d9
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-02-28 21:29:25] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   1e7c21d9..6f088c17  master     -> origin/master
+error: Your local changes to the following files would be overwritten by merge:
+	PhalApi/Appapi/Api/Live.php
+Please commit your changes or stash them before you merge.
+Aborting
+Updating f948c4b2..6f088c17
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-02-28 21:32:34] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   6f088c17..c6c6539a  master     -> origin/master
+error: Your local changes to the following files would be overwritten by merge:
+	PhalApi/Appapi/Api/Live.php
+Please commit your changes or stash them before you merge.
+Aborting
+Updating f948c4b2..c6c6539a
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-02-28 21:36:13] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   c6c6539a..bdbf45aa  master     -> origin/master
+error: Your local changes to the following files would be overwritten by merge:
+	PhalApi/Appapi/Api/Live.php
+Please commit your changes or stash them before you merge.
+Aborting
+Updating f948c4b2..bdbf45aa
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-02-28 22:05:49] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   bdbf45aa..9b65df9d  master     -> origin/master
+error: Your local changes to the following files would be overwritten by merge:
+	PhalApi/Appapi/Api/Live.php
+Please commit your changes or stash them before you merge.
+Aborting
+Updating f948c4b2..9b65df9d
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-02-28 22:41:57] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   9b65df9d..3b384aa1  master     -> origin/master
+error: Your local changes to the following files would be overwritten by merge:
+	PhalApi/Appapi/Api/Live.php
+Please commit your changes or stash them before you merge.
+Aborting
+Updating f948c4b2..3b384aa1
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-02-28 23:01:47] from [47.242.217.200]
+Info:Already up-to-date.
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-02-28 23:10:52] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   b54e05a7..90627f85  master     -> origin/master
+Updating b54e05a7..90627f85
+Fast-forward
+ .idea/workspace.xml                          | 3 +--
+ app/user/controller/AdminIndexController.php | 4 +++-
+ 2 files changed, 4 insertions(+), 3 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-02-28 23:11:43] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   90627f85..164e0925  master     -> origin/master
+Updating 90627f85..164e0925
+Fast-forward
+ .idea/workspace.xml                          | 3 +--
+ app/user/controller/AdminIndexController.php | 8 ++++++--
+ 2 files changed, 7 insertions(+), 4 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-02-28 23:12:55] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   164e0925..b0a1fa88  master     -> origin/master
+Updating 164e0925..b0a1fa88
+Fast-forward
+ .idea/workspace.xml                          |  3 ++-
+ app/user/controller/AdminIndexController.php | 24 ++++++++++++------------
+ 2 files changed, 14 insertions(+), 13 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-02-28 23:14:37] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   b0a1fa88..88877e35  master     -> origin/master
+Updating b0a1fa88..88877e35
+Fast-forward
+ .idea/workspace.xml                          | 2 +-
+ app/user/controller/AdminIndexController.php | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-02-28 23:15:27] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   88877e35..d1270bae  master     -> origin/master
+Updating 88877e35..d1270bae
+Fast-forward
+ .idea/workspace.xml                          | 2 +-
+ app/user/controller/AdminIndexController.php | 7 +------
+ 2 files changed, 2 insertions(+), 7 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-02-28 23:16:59] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   d1270bae..a5f677ce  master     -> origin/master
+Updating d1270bae..a5f677ce
+Fast-forward
+ .idea/workspace.xml | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-02-28 23:19:14] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   a5f677ce..f2cf1ab1  master     -> origin/master
+Updating a5f677ce..f2cf1ab1
+Fast-forward
+ .idea/workspace.xml                                  | 3 ++-
+ themes/admin_simpleboot3/user/admin_index/index.html | 8 ++++++--
+ 2 files changed, 8 insertions(+), 3 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-02-28 23:27:10] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   f2cf1ab1..98dbc9d4  master     -> origin/master
+Updating f2cf1ab1..98dbc9d4
+Fast-forward
+ .idea/workspace.xml                                  |  5 ++++-
+ PhalApi/Appapi/Api/Live.php                          |  1 +
+ app/admin/controller/AuthController.php              |  1 +
+ app/user/controller/AdminIndexController.php         | 12 ++++++------
+ themes/admin_simpleboot3/user/admin_index/index.html | 18 +++++++++---------
+ 5 files changed, 21 insertions(+), 16 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-01 14:29:29] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   98dbc9d4..a8ba9f72  master     -> origin/master
+Updating 98dbc9d4..a8ba9f72
+Fast-forward
+ PhalApi/Appapi/Api/Paidprogram.php       |  2 +-
+ themes/default/appapi/auth/authstep.html | 30 +++++++++++++++---------------
+ 2 files changed, 16 insertions(+), 16 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-01 14:35:10] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   a8ba9f72..66989753  master     -> origin/master
+Updating a8ba9f72..66989753
+Fast-forward
+ app/appapi/controller/AuthController.php | 28 ++++++++++++++--------------
+ 1 file changed, 14 insertions(+), 14 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-01 16:33:55] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   66989753..0c77b2bf  master     -> origin/master
+Updating 66989753..0c77b2bf
+Fast-forward
+ app/appapi/controller/AuthController.php | 92 ++++++++++++++++----------------
+ 1 file changed, 46 insertions(+), 46 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-01 16:35:02] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   0c77b2bf..a981ce4b  master     -> origin/master
+Updating 0c77b2bf..a981ce4b
+Fast-forward
+ themes/default/appapi/auth/authstep.html | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-01 17:35:07] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   a981ce4b..ec511d7e  master     -> origin/master
+Updating a981ce4b..ec511d7e
+Fast-forward
+ app/appapi/controller/AuthController.php | 77 +++++++++++++++++++++-----------
+ themes/default/appapi/auth/authstep.html |  2 +-
+ 2 files changed, 51 insertions(+), 28 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-01 17:36:52] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   ec511d7e..37099d91  master     -> origin/master
+Updating ec511d7e..37099d91
+Fast-forward
+ app/appapi/controller/AuthController.php | 1 +
+ 1 file changed, 1 insertion(+)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-01 17:37:56] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   37099d91..af857a6d  master     -> origin/master
+Updating 37099d91..af857a6d
+Fast-forward
+ app/appapi/controller/AuthController.php | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-01 17:38:30] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   af857a6d..55ce56e1  master     -> origin/master
+Updating af857a6d..55ce56e1
+Fast-forward
+ themes/default/appapi/auth/authstep.html | 7 +------
+ 1 file changed, 1 insertion(+), 6 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-01 17:38:53] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   55ce56e1..1353cbf1  master     -> origin/master
+Updating 55ce56e1..1353cbf1
+Fast-forward
+ app/appapi/controller/AuthController.php | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-01 18:00:03] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   1353cbf1..36c3a8f1  master     -> origin/master
+Updating 1353cbf1..36c3a8f1
+Fast-forward
+ public/static/appapi/js/auth.js          |  8 +++-----
+ themes/default/appapi/auth/authstep.html | 19 +++++++++++++++++--
+ 2 files changed, 20 insertions(+), 7 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-01 18:03:25] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   36c3a8f1..ae29710f  master     -> origin/master
+Updating 36c3a8f1..ae29710f
+Fast-forward
+ themes/default/appapi/auth/authstep.html | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-01 18:09:31] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   ae29710f..ef033e17  master     -> origin/master
+Updating ae29710f..ef033e17
+Fast-forward
+ themes/default/appapi/auth/authstep.html | 3 +++
+ 1 file changed, 3 insertions(+)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-01 18:10:54] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   ef033e17..e5e843ea  master     -> origin/master
+Updating ef033e17..e5e843ea
+Fast-forward
+ themes/default/appapi/auth/authstep.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-01 18:11:50] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   e5e843ea..8136a0cf  master     -> origin/master
+Updating e5e843ea..8136a0cf
+Fast-forward
+ themes/default/appapi/auth/authstep.html | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-01 18:13:25] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   8136a0cf..66efd7c9  master     -> origin/master
+Updating 8136a0cf..66efd7c9
+Fast-forward
+ themes/default/appapi/auth/authstep.html | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-02 11:43:32] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   66efd7c9..862bb059  master     -> origin/master
+Updating 66efd7c9..862bb059
+Fast-forward
+ PhalApi/Appapi/Api/Paidprogram.php | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-02 11:52:42] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   862bb059..603af4dd  master     -> origin/master
+Updating 862bb059..603af4dd
+Fast-forward
+ PhalApi/Appapi/Api/Paidprogram.php | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-02 15:18:01] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   603af4dd..3e3910e9  master     -> origin/master
+Updating 603af4dd..3e3910e9
+Fast-forward
+ PhalApi/Appapi/Api/Paidprogram.php | 29 ++++++++++++++++++++---------
+ 1 file changed, 20 insertions(+), 9 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-03 13:34:22] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   3e3910e9..ce3622c2  master     -> origin/master
+Updating 3e3910e9..ce3622c2
+Fast-forward
+ app/admin/controller/WordController.php        | 35 ++++++++++++++++++
+ themes/admin_simpleboot3/admin/word/index.html | 49 ++++++++++++++++++++++++++
+ 2 files changed, 84 insertions(+)
+ create mode 100644 app/admin/controller/WordController.php
+ create mode 100644 themes/admin_simpleboot3/admin/word/index.html
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-03 13:36:23] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   ce3622c2..7541bd6e  master     -> origin/master
+Updating ce3622c2..7541bd6e
+Fast-forward
+ themes/admin_simpleboot3/admin/word/index.html | 4 ----
+ 1 file changed, 4 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-03 13:37:31] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   7541bd6e..a35e74e2  master     -> origin/master
+Updating 7541bd6e..a35e74e2
+Fast-forward
+ themes/admin_simpleboot3/admin/word/index.html | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-03 13:45:14] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   a35e74e2..ddaafd7f  master     -> origin/master
+Updating a35e74e2..ddaafd7f
+Fast-forward
+ app/admin/controller/WordController.php      |  5 +++
+ themes/admin_simpleboot3/admin/word/add.html | 48 ++++++++++++++++++++++++++++
+ 2 files changed, 53 insertions(+)
+ create mode 100644 themes/admin_simpleboot3/admin/word/add.html
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-03 13:48:51] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   ddaafd7f..2aa57d1e  master     -> origin/master
+Updating ddaafd7f..2aa57d1e
+Fast-forward
+ themes/admin_simpleboot3/admin/word/index.html | 1 +
+ 1 file changed, 1 insertion(+)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-03 13:51:18] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   2aa57d1e..d0c840d1  master     -> origin/master
+Updating 2aa57d1e..d0c840d1
+Fast-forward
+ themes/admin_simpleboot3/admin/word/index.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-03 13:52:08] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   d0c840d1..148e82f4  master     -> origin/master
+Updating d0c840d1..148e82f4
+Fast-forward
+ themes/admin_simpleboot3/admin/word/add.html | 9 +--------
+ 1 file changed, 1 insertion(+), 8 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-03 13:54:23] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   148e82f4..6272a49e  master     -> origin/master
+Updating 148e82f4..6272a49e
+Fast-forward
+ themes/admin_simpleboot3/admin/vip/add.html    | 14 +++-----------
+ themes/admin_simpleboot3/admin/word/index.html |  2 +-
+ 2 files changed, 4 insertions(+), 12 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-03 13:56:27] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   6272a49e..f0f6d63f  master     -> origin/master
+Updating 6272a49e..f0f6d63f
+Fast-forward
+ themes/admin_simpleboot3/admin/vip/add.html  | 14 +++++++++++---
+ themes/admin_simpleboot3/admin/word/add.html | 13 +++----------
+ 2 files changed, 14 insertions(+), 13 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-03 13:58:56] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   f0f6d63f..2b0dbfbe  master     -> origin/master
+Updating f0f6d63f..2b0dbfbe
+Fast-forward
+ app/admin/controller/WordController.php      | 25 +++++++++++++++++++++++++
+ themes/admin_simpleboot3/admin/word/add.html |  2 +-
+ 2 files changed, 26 insertions(+), 1 deletion(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-03 14:01:24] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   2b0dbfbe..ee8fd6a5  master     -> origin/master
+Updating 2b0dbfbe..ee8fd6a5
+Fast-forward
+ themes/admin_simpleboot3/admin/word/add.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-03 14:02:06] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   ee8fd6a5..9097b89a  master     -> origin/master
+Updating ee8fd6a5..9097b89a
+Fast-forward
+ app/admin/controller/WordController.php | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-03 14:04:30] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   9097b89a..cbe1af3a  master     -> origin/master
+Updating 9097b89a..cbe1af3a
+Fast-forward
+ app/admin/controller/WordController.php        | 16 ++++++++++++++++
+ themes/admin_simpleboot3/admin/word/index.html |  8 ++++----
+ 2 files changed, 20 insertions(+), 4 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-03 14:10:17] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   cbe1af3a..0a08511c  master     -> origin/master
+Updating cbe1af3a..0a08511c
+Fast-forward
+ app/admin/controller/WordController.php        |  4 ++++
+ themes/admin_simpleboot3/admin/word/index.html | 11 +++--------
+ 2 files changed, 7 insertions(+), 8 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-03 14:11:46] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   0a08511c..25138887  master     -> origin/master
+Updating 0a08511c..25138887
+Fast-forward
+ app/admin/controller/WordController.php | 7 ++-----
+ 1 file changed, 2 insertions(+), 5 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-03 14:12:19] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   25138887..4884cfa6  master     -> origin/master
+Updating 25138887..4884cfa6
+Fast-forward
+ app/admin/controller/WordController.php | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-03 14:13:09] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   4884cfa6..3b68e0d7  master     -> origin/master
+Updating 4884cfa6..3b68e0d7
+Fast-forward
+ themes/admin_simpleboot3/admin/word/index.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-03 14:16:55] from [47.242.217.200]
+Info:Already up-to-date.
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-03 14:25:14] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   a77da66f..30d0326e  master     -> origin/master
+Updating a77da66f..30d0326e
+Fast-forward
+ app/admin/controller/WordController.php        | 17 +++++++++++++
+ themes/admin_simpleboot3/admin/word/edit.html  | 35 ++++++++++++++++++++++++++
+ themes/admin_simpleboot3/admin/word/index.html |  1 +
+ 3 files changed, 53 insertions(+)
+ create mode 100644 themes/admin_simpleboot3/admin/word/edit.html
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-03 14:26:04] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   30d0326e..6150e79f  master     -> origin/master
+Updating 30d0326e..6150e79f
+Fast-forward
+ .idea/workspace.xml                          | 11 ++++++-----
+ app/user/controller/UserChangeController.php |  4 ++--
+ 2 files changed, 8 insertions(+), 7 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-03 14:26:51] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   6150e79f..48027bb5  master     -> origin/master
+Updating 6150e79f..48027bb5
+Fast-forward
+ app/admin/controller/WordController.php | 2 --
+ 1 file changed, 2 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-03 14:32:05] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   48027bb5..dd34158f  master     -> origin/master
+Updating 48027bb5..dd34158f
+Fast-forward
+ app/admin/controller/WordController.php | 22 ++++++++++++++++++++++
+ 1 file changed, 22 insertions(+)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-03 14:32:29] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   dd34158f..d6cdaa2c  master     -> origin/master
+Updating dd34158f..d6cdaa2c
+Fast-forward
+ .idea/workspace.xml                          | 3 +--
+ app/user/controller/UserChangeController.php | 2 +-
+ 2 files changed, 2 insertions(+), 3 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-03 14:33:53] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   d6cdaa2c..f7a21199  master     -> origin/master
+Updating d6cdaa2c..f7a21199
+Fast-forward
+ app/admin/controller/WordController.php | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-03 14:40:33] from [47.242.217.200]
+Info:Already up-to-date.
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-03 14:56:48] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   c34851ae..084e8dc3  master     -> origin/master
+Updating c34851ae..084e8dc3
+Fast-forward
+ .idea/workspace.xml                                  | 6 ++++--
+ themes/admin_simpleboot3/admin/setting/app_set.html  | 6 +++---
+ themes/admin_simpleboot3/game/game_detail/index.html | 2 +-
+ 3 files changed, 8 insertions(+), 6 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-03 14:57:46] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   084e8dc3..10d382bd  master     -> origin/master
+Updating 084e8dc3..10d382bd
+Fast-forward
+ .idea/workspace.xml                        | 5 ++---
+ app/admin/controller/SettingController.php | 4 ++++
+ 2 files changed, 6 insertions(+), 3 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-03 14:58:25] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   10d382bd..9eb00597  master     -> origin/master
+Updating 10d382bd..9eb00597
+Fast-forward
+ .idea/workspace.xml                        | 2 +-
+ app/admin/controller/SettingController.php | 6 +-----
+ 2 files changed, 2 insertions(+), 6 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-04 15:42:05] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   9eb00597..de64e9f3  master     -> origin/master
+Updating 9eb00597..de64e9f3
+Fast-forward
+ .idea/workspace.xml                                |  5 +-
+ app/admin/controller/SettingController.php         | 24 +++++++++
+ .../admin_simpleboot3/admin/setting/configpri.html | 59 ++++++++++++++++++++++
+ 3 files changed, 87 insertions(+), 1 deletion(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-04 15:43:16] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   de64e9f3..0b6bd5d9  master     -> origin/master
+Updating de64e9f3..0b6bd5d9
+Fast-forward
+ .idea/workspace.xml                                   |  4 +---
+ themes/admin_simpleboot3/admin/setting/configpri.html | 10 +++++-----
+ 2 files changed, 6 insertions(+), 8 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-04 15:52:29] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   0b6bd5d9..fe41eb45  master     -> origin/master
+Updating 0b6bd5d9..fe41eb45
+Fast-forward
+ .idea/workspace.xml                                |  4 +-
+ app/admin/controller/SettingController.php         | 21 +++++++
+ .../admin_simpleboot3/admin/setting/configpri.html | 59 --------------------
+ .../admin/setting/machine_set.html                 | 64 ++++++++++++++++++++++
+ 4 files changed, 88 insertions(+), 60 deletions(-)
+ create mode 100644 themes/admin_simpleboot3/admin/setting/machine_set.html
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-04 15:54:36] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   fe41eb45..2fb5ba87  master     -> origin/master
+Updating fe41eb45..2fb5ba87
+Fast-forward
+ .idea/workspace.xml                        | 3 +--
+ app/admin/controller/SettingController.php | 2 ++
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-04 15:55:37] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   2fb5ba87..42dae71d  master     -> origin/master
+Updating 2fb5ba87..42dae71d
+Fast-forward
+ .idea/workspace.xml                                     |  5 ++---
+ themes/admin_simpleboot3/admin/setting/machine_set.html | 12 ++++++------
+ 2 files changed, 8 insertions(+), 9 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-04 15:56:44] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   42dae71d..f5123f6c  master     -> origin/master
+Updating 42dae71d..f5123f6c
+Fast-forward
+ .idea/workspace.xml                        | 4 ++--
+ app/admin/controller/SettingController.php | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-04 16:07:20] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   f5123f6c..6c06943b  master     -> origin/master
+Updating f5123f6c..6c06943b
+Fast-forward
+ .idea/workspace.xml                                   | 4 +++-
+ app/admin/controller/SettingController.php            | 4 ++++
+ themes/admin_simpleboot3/admin/setting/configpri.html | 7 +++++++
+ 3 files changed, 14 insertions(+), 1 deletion(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-04 16:08:33] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   6c06943b..c5124976  master     -> origin/master
+Updating 6c06943b..c5124976
+Fast-forward
+ .idea/workspace.xml                        |  4 +---
+ app/admin/controller/SettingController.php | 24 ------------------------
+ 2 files changed, 1 insertion(+), 27 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-04 17:29:03] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   c5124976..c2ca66fe  master     -> origin/master
+Updating c5124976..c2ca66fe
+Fast-forward
+ .idea/workspace.xml                                |  25 ++---
+ app/admin/controller/RobotBet.php                  | 110 +++++++++++++++++++++
+ app/admin/model/RobotBet.php                       |  26 +++++
+ themes/admin_simpleboot3/admin/robot_bet/add.html  |  74 ++++++++++++++
+ themes/admin_simpleboot3/admin/robot_bet/edit.html |  75 ++++++++++++++
+ .../admin_simpleboot3/admin/robot_bet/index.html   |  88 +++++++++++++++++
+ .../admin/setting/machine_set.html                 |  12 ++-
+ 7 files changed, 395 insertions(+), 15 deletions(-)
+ create mode 100644 app/admin/controller/RobotBet.php
+ create mode 100644 app/admin/model/RobotBet.php
+ create mode 100644 themes/admin_simpleboot3/admin/robot_bet/add.html
+ create mode 100644 themes/admin_simpleboot3/admin/robot_bet/edit.html
+ create mode 100644 themes/admin_simpleboot3/admin/robot_bet/index.html
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-04 17:33:14] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   c2ca66fe..41788e81  master     -> origin/master
+Updating c2ca66fe..41788e81
+Fast-forward
+ .idea/workspace.xml                                | 34 ++++++++++++++++++++--
+ .../{RobotBet.php => RobotBetController.php}       |  2 +-
+ 2 files changed, 32 insertions(+), 4 deletions(-)
+ rename app/admin/controller/{RobotBet.php => RobotBetController.php} (98%)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-04 17:53:05] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   41788e81..6dde1213  master     -> origin/master
+Updating 41788e81..6dde1213
+Fast-forward
+ .idea/workspace.xml         |  5 +++--
+ PhalApi/Appapi/Api/Home.php | 13 +++++++++++++
+ 2 files changed, 16 insertions(+), 2 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-04 17:56:45] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   6dde1213..cd202432  master     -> origin/master
+Updating 6dde1213..cd202432
+Fast-forward
+ .idea/workspace.xml         | 2 +-
+ PhalApi/Appapi/Api/Home.php | 5 ++++-
+ 2 files changed, 5 insertions(+), 2 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-04 17:57:37] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   cd202432..280bac47  master     -> origin/master
+Updating cd202432..280bac47
+Fast-forward
+ .idea/workspace.xml         | 2 +-
+ PhalApi/Appapi/Api/Home.php | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-04 18:58:33] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   280bac47..19f42678  master     -> origin/master
+error: Your local changes to the following files would be overwritten by merge:
+	app/admin/controller/RobotBetController.php
+	app/admin/controller/SettingController.php
+Please commit your changes or stash them before you merge.
+Aborting
+Updating 280bac47..19f42678
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-04 18:59:40] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   19f42678..8dcb5e6c  master     -> origin/master
+error: Your local changes to the following files would be overwritten by merge:
+	app/admin/controller/RobotBetController.php
+	app/admin/controller/SettingController.php
+Please commit your changes or stash them before you merge.
+Aborting
+Updating 280bac47..8dcb5e6c
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-04 19:17:17] from [47.242.217.200]
+Info:Already up-to-date.
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-04 20:03:49] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   935386f7..ca9e6470  master     -> origin/master
+Updating 935386f7..ca9e6470
+Fast-forward
+ .idea/workspace.xml                         | 8 ++++++--
+ app/admin/controller/RobotBetController.php | 1 +
+ 2 files changed, 7 insertions(+), 2 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-04 20:06:35] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   ca9e6470..05c9cb25  master     -> origin/master
+Updating ca9e6470..05c9cb25
+Fast-forward
+ .idea/workspace.xml                                 |  3 ++-
+ app/admin/controller/RobotBetController.php         |  3 +--
+ themes/admin_simpleboot3/admin/robot_bet/index.html | 18 +++++++++---------
+ 3 files changed, 12 insertions(+), 12 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-05 15:14:16] from [47.242.217.200]
+Info:Already up-to-date.
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-05 15:15:38] from [47.242.217.200]
+Info:Already up-to-date.
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-05 16:07:28] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   f316d4a8..809b21bf  master     -> origin/master
+Updating f316d4a8..809b21bf
+Fast-forward
+ .idea/workspace.xml                                    | 10 +++++++---
+ app/admin/controller/SettingController.php             |  2 ++
+ .../admin_simpleboot3/admin/setting/machine_set.html   | 18 ++++++++++++++++++
+ 3 files changed, 27 insertions(+), 3 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-05 16:11:35] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   809b21bf..d1b469a3  master     -> origin/master
+Updating 809b21bf..d1b469a3
+Fast-forward
+ .idea/workspace.xml                                     | 3 ++-
+ app/admin/controller/SettingController.php              | 4 ++++
+ themes/admin_simpleboot3/admin/setting/configpri.html   | 8 ++++++++
+ themes/admin_simpleboot3/admin/setting/machine_set.html | 2 --
+ 4 files changed, 14 insertions(+), 3 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-05 16:18:43] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   d1b469a3..97513d57  master     -> origin/master
+Updating d1b469a3..97513d57
+Fast-forward
+ .idea/workspace.xml                                |   4 +-
+ .../admin_simpleboot3/admin/setting/configpri.html | 173 ++++++++++++---------
+ 2 files changed, 100 insertions(+), 77 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-05 16:20:28] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   97513d57..1c23e16d  master     -> origin/master
+Updating 97513d57..1c23e16d
+Fast-forward
+ .idea/workspace.xml                                |  3 +-
+ app/admin/controller/SettingController.php         |  8 ++--
+ .../admin_simpleboot3/admin/setting/configpri.html | 52 +++++++++++-----------
+ 3 files changed, 32 insertions(+), 31 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-05 16:21:07] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   1c23e16d..d52bcb57  master     -> origin/master
+Updating 1c23e16d..d52bcb57
+Fast-forward
+ .idea/workspace.xml                                |  4 +-
+ .../admin_simpleboot3/admin/setting/configpri.html | 52 +++++++++++-----------
+ 2 files changed, 27 insertions(+), 29 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-05 16:22:06] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   d52bcb57..f61a5d44  master     -> origin/master
+Updating d52bcb57..f61a5d44
+Fast-forward
+ .idea/workspace.xml                                |  3 +-
+ .../admin_simpleboot3/admin/setting/configpri.html | 69 +---------------------
+ 2 files changed, 3 insertions(+), 69 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-05 16:32:55] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   f61a5d44..09894f04  master     -> origin/master
+Updating f61a5d44..09894f04
+Fast-forward
+ .idea/workspace.xml                                |  3 +-
+ app/admin/controller/SettingController.php         | 24 ++++++
+ .../admin_simpleboot3/admin/setting/configpri.html | 96 +++++++++++++++-------
+ 3 files changed, 91 insertions(+), 32 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-05 18:05:50] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   09894f04..05eab618  master     -> origin/master
+Updating 09894f04..05eab618
+Fast-forward
+ .idea/workspace.xml         | 6 +++---
+ PhalApi/Appapi/Api/Home.php | 1 +
+ 2 files changed, 4 insertions(+), 3 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-05 18:06:58] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   05eab618..e9265aac  master     -> origin/master
+error: Your local changes to the following files would be overwritten by merge:
+	PhalApi/Common/functions.php
+Please commit your changes or stash them before you merge.
+Aborting
+Updating 05eab618..e9265aac
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-05 18:07:45] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   e9265aac..cb11c5a5  master     -> origin/master
+error: Your local changes to the following files would be overwritten by merge:
+	PhalApi/Common/functions.php
+Please commit your changes or stash them before you merge.
+Aborting
+Updating 05eab618..cb11c5a5
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-05 18:08:17] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   cb11c5a5..29b51107  master     -> origin/master
+error: Your local changes to the following files would be overwritten by merge:
+	PhalApi/Common/functions.php
+Please commit your changes or stash them before you merge.
+Aborting
+Updating 05eab618..29b51107
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-05 18:09:19] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   29b51107..b9124f83  master     -> origin/master
+error: Your local changes to the following files would be overwritten by merge:
+	PhalApi/Common/functions.php
+Please commit your changes or stash them before you merge.
+Aborting
+Updating 05eab618..b9124f83
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-05 18:11:08] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   b9124f83..648752be  master     -> origin/master
+error: Your local changes to the following files would be overwritten by merge:
+	PhalApi/Common/functions.php
+Please commit your changes or stash them before you merge.
+Aborting
+Updating 05eab618..648752be
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-05 18:23:46] from [47.242.217.200]
+Info:Already up-to-date.
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-05 20:09:09] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   8f6d6c7d..07319934  master     -> origin/master
+warning: inexact rename detection was skipped due to too many files.
+warning: you may want to set your merge.renamelimit variable to at least 1327 and retry the command.
+Auto-merging PhalApi/Config/app.php
+Merge made by the 'recursive' strategy.
+ .idea/workspace.xml    |  6 ++++--
+ PhalApi/Config/app.php | 10 +++++-----
+ 2 files changed, 9 insertions(+), 7 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-05 20:20:46] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   07319934..b86d568a  master     -> origin/master
+warning: inexact rename detection was skipped due to too many files.
+warning: you may want to set your merge.renamelimit variable to at least 1327 and retry the command.
+Auto-merging PhalApi/Appapi/Api/Live.php
+Merge made by the 'recursive' strategy.
+ .idea/workspace.xml         |   4 +-
+ PhalApi/Appapi/Api/Live.php | 172 +++++++++++++++++++++++---------------------
+ 2 files changed, 93 insertions(+), 83 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-05 20:25:09] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   b86d568a..3c53d5ce  master     -> origin/master
+warning: inexact rename detection was skipped due to too many files.
+warning: you may want to set your merge.renamelimit variable to at least 1327 and retry the command.
+Auto-merging PhalApi/Appapi/Api/Live.php
+Merge made by the 'recursive' strategy.
+ .idea/workspace.xml         | 2 +-
+ PhalApi/Appapi/Api/Live.php | 4 ++++
+ 2 files changed, 5 insertions(+), 1 deletion(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-05 20:27:17] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   3c53d5ce..099e9619  master     -> origin/master
+warning: inexact rename detection was skipped due to too many files.
+warning: you may want to set your merge.renamelimit variable to at least 1327 and retry the command.
+Auto-merging PhalApi/Appapi/Api/Live.php
+Merge made by the 'recursive' strategy.
+ .idea/workspace.xml         | 2 +-
+ PhalApi/Appapi/Api/Live.php | 6 ++++--
+ 2 files changed, 5 insertions(+), 3 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-05 20:28:00] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   099e9619..33714734  master     -> origin/master
+warning: inexact rename detection was skipped due to too many files.
+warning: you may want to set your merge.renamelimit variable to at least 1327 and retry the command.
+Auto-merging PhalApi/Appapi/Api/Live.php
+Merge made by the 'recursive' strategy.
+ .idea/workspace.xml         | 3 +--
+ PhalApi/Appapi/Api/Live.php | 5 -----
+ 2 files changed, 1 insertion(+), 7 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-05 21:10:33] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   33714734..8d9fa38f  master     -> origin/master
+warning: inexact rename detection was skipped due to too many files.
+warning: you may want to set your merge.renamelimit variable to at least 1327 and retry the command.
+Auto-merging PhalApi/Config/app.php
+Merge made by the 'recursive' strategy.
+ .idea/workspace.xml    | 6 ++++--
+ PhalApi/Config/app.php | 2 +-
+ 2 files changed, 5 insertions(+), 3 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-06 12:46:08] from [47.242.217.200]
+Info:Already up-to-date.
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-06 12:47:58] from [47.242.217.200]
+Info:Already up-to-date.
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-06 14:58:36] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   1565e8c4..e267c0d3  master     -> origin/master
+Updating 1565e8c4..e267c0d3
+Fast-forward
+ PhalApi/Appapi/Domain/Daili.php                | 3 +++
+ PhalApi/Appapi/Model/Login.php                 | 8 ++++----
+ app/game/controller/GameDetailController.php   | 6 +++++-
+ app/report/controller/UserProfitController.php | 2 ++
+ app/user/controller/AdminIndexController.php   | 2 +-
+ app/user/controller/LiverController.php        | 2 +-
+ 6 files changed, 16 insertions(+), 7 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-06 15:25:27] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   e267c0d3..bc3e0d16  master     -> origin/master
+Updating e267c0d3..bc3e0d16
+Fast-forward
+ PhalApi/Appapi/Model/Login.php | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-06 15:26:18] from [47.242.217.200]
+Info:Already up-to-date.
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-06 15:48:56] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   f28d8910..9f0baecc  master     -> origin/master
+Updating f28d8910..9f0baecc
+Fast-forward
+ app/appapi/controller/RateController.php | 122 -------------------------------
+ 1 file changed, 122 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-06 16:00:18] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   9f0baecc..51b5ecee  master     -> origin/master
+Updating 9f0baecc..51b5ecee
+Fast-forward
+ app/appapi/controller/RateController.php | 18 +++++++++---------
+ 1 file changed, 9 insertions(+), 9 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-06 16:04:48] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   51b5ecee..2715c1f7  master     -> origin/master
+Updating 51b5ecee..2715c1f7
+Fast-forward
+ app/appapi/controller/RateController.php | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-06 16:37:53] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   2715c1f7..8c62e74b  master     -> origin/master
+Updating 2715c1f7..8c62e74b
+Fast-forward
+ PhalApi/Appapi/Api/Family.php | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-06 20:28:28] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   8c62e74b..c5c9ee09  master     -> origin/master
+error: Your local changes to the following files would be overwritten by merge:
+	PhalApi/Appapi/Api/Ticket.php
+	PhalApi/Config/app.php
+Please commit your changes or stash them before you merge.
+Aborting
+Updating 8c62e74b..c5c9ee09
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-06 20:30:33] from [47.242.217.200]
+Info:Already up-to-date.
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-06 20:34:01] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   3987ad21..9df5e9f5  master     -> origin/master
+Updating 3987ad21..9df5e9f5
+Fast-forward
+ .idea/workspace.xml           | 2 +-
+ PhalApi/Appapi/Api/Ticket.php | 2 ++
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-06 20:35:11] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   9df5e9f5..2b91da92  master     -> origin/master
+Updating 9df5e9f5..2b91da92
+Fast-forward
+ .idea/workspace.xml           | 2 +-
+ PhalApi/Appapi/Api/Ticket.php | 6 +++---
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-06 20:35:33] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   2b91da92..3443fbb3  master     -> origin/master
+Updating 2b91da92..3443fbb3
+Fast-forward
+ .idea/workspace.xml           | 2 +-
+ PhalApi/Appapi/Api/Ticket.php | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-06 20:36:17] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   3443fbb3..54e99d5a  master     -> origin/master
+Updating 3443fbb3..54e99d5a
+Fast-forward
+ .idea/workspace.xml           | 2 +-
+ PhalApi/Appapi/Api/Ticket.php | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-06 20:37:09] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   54e99d5a..d34134d9  master     -> origin/master
+Updating 54e99d5a..d34134d9
+Fast-forward
+ .idea/workspace.xml           | 2 +-
+ PhalApi/Appapi/Api/Ticket.php | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-06 20:37:37] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   d34134d9..100c6bd5  master     -> origin/master
+Updating d34134d9..100c6bd5
+Fast-forward
+ .idea/workspace.xml           | 2 +-
+ PhalApi/Appapi/Api/Ticket.php | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-06 20:40:19] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   100c6bd5..800857cd  master     -> origin/master
+Updating 100c6bd5..800857cd
+Fast-forward
+ .idea/workspace.xml           | 3 +--
+ PhalApi/Appapi/Api/Ticket.php | 3 +++
+ 2 files changed, 4 insertions(+), 2 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-06 20:41:45] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   800857cd..e45888e9  master     -> origin/master
+Updating 800857cd..e45888e9
+Fast-forward
+ .idea/workspace.xml           | 3 ++-
+ PhalApi/Appapi/Api/Ticket.php | 3 +++
+ 2 files changed, 5 insertions(+), 1 deletion(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-06 20:42:11] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   e45888e9..6c1ab2a7  master     -> origin/master
+Updating e45888e9..6c1ab2a7
+Fast-forward
+ .idea/workspace.xml           | 3 +--
+ PhalApi/Appapi/Api/Ticket.php | 2 +-
+ 2 files changed, 2 insertions(+), 3 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-06 20:42:52] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   6c1ab2a7..f4dbc3f5  master     -> origin/master
+Updating 6c1ab2a7..f4dbc3f5
+Fast-forward
+ .idea/workspace.xml           | 3 ++-
+ PhalApi/Appapi/Api/Ticket.php | 7 -------
+ 2 files changed, 2 insertions(+), 8 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-07 12:43:18] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   f4dbc3f5..b05db27c  master     -> origin/master
+Updating f4dbc3f5..b05db27c
+Fast-forward
+ PhalApi/Config/app.php | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-07 12:52:27] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   b05db27c..9878fd25  master     -> origin/master
+Updating b05db27c..9878fd25
+Fast-forward
+ PhalApi/Config/app.php | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-07 14:01:02] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   9878fd25..0271aa96  master     -> origin/master
+Updating 9878fd25..0271aa96
+Fast-forward
+ PhalApi/Appapi/Domain/Daili.php | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-07 14:08:18] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   0271aa96..dcc44965  master     -> origin/master
+Updating 0271aa96..dcc44965
+Fast-forward
+ PhalApi/Appapi/Domain/Daili.php | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-07 14:09:28] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   dcc44965..c7ef9ed7  master     -> origin/master
+Updating dcc44965..c7ef9ed7
+Fast-forward
+ PhalApi/Appapi/Domain/Daili.php | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-07 14:09:51] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   c7ef9ed7..fd2a2504  master     -> origin/master
+Updating c7ef9ed7..fd2a2504
+Fast-forward
+ PhalApi/Appapi/Domain/Daili.php | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-07 14:19:10] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   fd2a2504..edb123e7  master     -> origin/master
+Updating fd2a2504..edb123e7
+Fast-forward
+ .idea/workspace.xml                              | 5 +++--
+ themes/admin_simpleboot3/admin/setting/site.html | 2 +-
+ 2 files changed, 4 insertions(+), 3 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-07 19:13:58] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   edb123e7..8eaa9900  master     -> origin/master
+Updating edb123e7..8eaa9900
+Fast-forward
+ .idea/workspace.xml         |  4 ++--
+ PhalApi/Appapi/Api/User.php | 36 ++++++++++++++++++++++++++++++++++++
+ 2 files changed, 38 insertions(+), 2 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-07 22:23:11] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   8eaa9900..1f4aa6b1  master     -> origin/master
+Updating 8eaa9900..1f4aa6b1
+Fast-forward
+ PhalApi/Appapi/Api/User.php | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-07 22:24:40] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   1f4aa6b1..6ff2c330  master     -> origin/master
+Updating 1f4aa6b1..6ff2c330
+Fast-forward
+ PhalApi/Appapi/Api/User.php | 1 +
+ 1 file changed, 1 insertion(+)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-07 22:26:41] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   6ff2c330..3d859136  master     -> origin/master
+Updating 6ff2c330..3d859136
+Fast-forward
+ PhalApi/Appapi/Api/User.php | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-07 22:29:12] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   3d859136..3d85d6ec  master     -> origin/master
+Updating 3d859136..3d85d6ec
+Fast-forward
+ PhalApi/Appapi/Api/User.php | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-08 17:01:45] from [47.242.217.200]
+Info:Already up-to-date.
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-08 17:02:32] from [47.242.217.200]
+Info:Already up-to-date.
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-08 17:49:09] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   3e5b2d69..b8b95c1f  master     -> origin/master
+Updating 3e5b2d69..b8b95c1f
+Fast-forward
+ .idea/workspace.xml                                   | 11 +++++++++--
+ app/user/controller/AdminIndexController.php          |  6 +++---
+ app/user/controller/DaiLiController.php               | 10 +++++-----
+ app/user/controller/LiverController.php               |  6 +++---
+ themes/admin_simpleboot3/user/admin_index/is_dai.html |  2 +-
+ themes/admin_simpleboot3/user/dai_li/is_dai.html      |  2 +-
+ themes/admin_simpleboot3/user/liver/is_dai.html       |  2 +-
+ 7 files changed, 23 insertions(+), 16 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-08 17:51:09] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   b8b95c1f..be5a372d  master     -> origin/master
+Updating b8b95c1f..be5a372d
+Fast-forward
+ .idea/workspace.xml                                   | 6 +-----
+ themes/admin_simpleboot3/user/admin_index/is_dai.html | 2 +-
+ themes/admin_simpleboot3/user/dai_li/is_dai.html      | 2 +-
+ themes/admin_simpleboot3/user/liver/is_dai.html       | 2 +-
+ 4 files changed, 4 insertions(+), 8 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-08 17:53:15] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   be5a372d..4c83e901  master     -> origin/master
+Updating be5a372d..4c83e901
+Fast-forward
+ .idea/workspace.xml                                   | 2 +-
+ themes/admin_simpleboot3/user/admin_index/is_dai.html | 2 +-
+ themes/admin_simpleboot3/user/dai_li/is_dai.html      | 2 +-
+ themes/admin_simpleboot3/user/liver/is_dai.html       | 2 +-
+ 4 files changed, 4 insertions(+), 4 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-08 18:20:13] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   4c83e901..b2b59503  master     -> origin/master
+Updating 4c83e901..b2b59503
+Fast-forward
+ .idea/workspace.xml          |  7 +++----
+ PhalApi/Appapi/Api/Daili.php | 10 ++++++++--
+ 2 files changed, 11 insertions(+), 6 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-08 18:24:14] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   b2b59503..17ffe56b  master     -> origin/master
+Updating b2b59503..17ffe56b
+Fast-forward
+ .idea/workspace.xml          | 2 +-
+ PhalApi/Appapi/Api/Daili.php | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-08 20:33:36] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   17ffe56b..9afc5ace  master     -> origin/master
+error: Your local changes to the following files would be overwritten by merge:
+	app/appapi/controller/LiveController.php
+Please commit your changes or stash them before you merge.
+Aborting
+Updating 17ffe56b..9afc5ace
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-09 13:28:58] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   9afc5ace..4b3f56d8  master     -> origin/master
+error: Your local changes to the following files would be overwritten by merge:
+	app/appapi/controller/LiveController.php
+Please commit your changes or stash them before you merge.
+Aborting
+Updating 17ffe56b..4b3f56d8
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-09 13:42:46] from [47.242.217.200]
+Info:Already up-to-date.
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-09 13:53:18] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   c448ce1f..1ec80136  master     -> origin/master
+Updating c448ce1f..1ec80136
+Fast-forward
+ .idea/workspace.xml                       |  6 ++++--
+ PhalApi/Appapi/Model/User.php             | 11 +++++++++++
+ app/admin/controller/ActiveController.php |  1 -
+ 3 files changed, 15 insertions(+), 3 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-09 16:38:04] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   1ec80136..a7a0b912  master     -> origin/master
+Updating 1ec80136..a7a0b912
+Fast-forward
+ PhalApi/Appapi/Api/Family.php | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-09 17:37:35] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   a7a0b912..05dc1e70  master     -> origin/master
+Updating a7a0b912..05dc1e70
+Fast-forward
+ .idea/workspace.xml         | 3 ++-
+ PhalApi/Appapi/Api/Live.php | 7 +++++++
+ 2 files changed, 9 insertions(+), 1 deletion(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-09 17:40:44] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   05dc1e70..600e1d00  master     -> origin/master
+Updating 05dc1e70..600e1d00
+Fast-forward
+ .idea/workspace.xml         | 3 +--
+ PhalApi/Appapi/Api/Live.php | 2 +-
+ 2 files changed, 2 insertions(+), 3 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-09 20:05:32] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   600e1d00..75e803bd  master     -> origin/master
+Updating 600e1d00..75e803bd
+Fast-forward
+ PhalApi/Appapi/Model/Live.php | 2 ++
+ 1 file changed, 2 insertions(+)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-09 20:09:10] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   75e803bd..d7485479  master     -> origin/master
+Updating 75e803bd..d7485479
+Fast-forward
+ app/appapi/controller/RateController.php | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-09 20:14:30] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   d7485479..a42c44ba  master     -> origin/master
+Updating d7485479..a42c44ba
+Fast-forward
+ PhalApi/Appapi/Model/Live.php | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-09 20:27:41] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   a42c44ba..349dce84  master     -> origin/master
+Updating a42c44ba..349dce84
+Fast-forward
+ app/appapi/controller/RateController.php | 19 ++++++++++---------
+ 1 file changed, 10 insertions(+), 9 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-09 21:57:04] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   349dce84..a89a64f4  master     -> origin/master
+Updating 349dce84..a89a64f4
+Fast-forward
+ app/user/controller/AdminIndexController.php | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-09 21:59:17] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   a89a64f4..47d3d23d  master     -> origin/master
+Updating a89a64f4..47d3d23d
+Fast-forward
+ app/user/controller/AdminIndexController.php | 1 +
+ 1 file changed, 1 insertion(+)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-09 22:02:34] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   47d3d23d..95c0672f  master     -> origin/master
+Updating 47d3d23d..95c0672f
+Fast-forward
+ app/user/controller/AdminIndexController.php | 12 +++++++-----
+ 1 file changed, 7 insertions(+), 5 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-09 22:03:42] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   95c0672f..390bc4d7  master     -> origin/master
+Updating 95c0672f..390bc4d7
+Fast-forward
+ app/user/controller/AdminIndexController.php | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-10 16:36:57] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   390bc4d7..61321b83  master     -> origin/master
+Updating 390bc4d7..61321b83
+Fast-forward
+ .idea/workspace.xml           |  8 +++++---
+ .idea/yunbao.com.iml          |  5 ++++-
+ PhalApi/Appapi/Model/User.php | 11 -----------
+ 3 files changed, 9 insertions(+), 15 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-10 17:07:22] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   61321b83..42868a92  master     -> origin/master
+Updating 61321b83..42868a92
+Fast-forward
+ PhalApi/Appapi/Api/User.php | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-11 17:48:20] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   42868a92..200600d1  master     -> origin/master
+Updating 42868a92..200600d1
+Fast-forward
+ .idea/workspace.xml                              |  9 ++++++---
+ app/admin/controller/FamilyController.php        |  2 ++
+ themes/admin_simpleboot3/admin/family/add.html   |  7 +++++++
+ themes/admin_simpleboot3/admin/family/edit.html  | 10 ++++++++--
+ themes/admin_simpleboot3/admin/family/index.html |  2 ++
+ 5 files changed, 25 insertions(+), 5 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-11 18:13:38] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   200600d1..af22415f  master     -> origin/master
+error: Your local changes to the following files would be overwritten by merge:
+	PhalApi/Common/functions.php
+Please commit your changes or stash them before you merge.
+Aborting
+Updating 200600d1..af22415f
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-11 18:14:42] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   af22415f..9acdc9e1  master     -> origin/master
+error: Your local changes to the following files would be overwritten by merge:
+	PhalApi/Common/functions.php
+Please commit your changes or stash them before you merge.
+Aborting
+Updating 200600d1..9acdc9e1
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-11 18:17:16] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   9acdc9e1..a9a1fb84  master     -> origin/master
+error: Your local changes to the following files would be overwritten by merge:
+	PhalApi/Appapi/Api/Family.php
+Please commit your changes or stash them before you merge.
+Aborting
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-11 18:18:30] from [47.242.217.200]
+Info:Already up-to-date.
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-11 18:25:50] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   cf1e5dbc..6b34aab2  master     -> origin/master
+Updating cf1e5dbc..6b34aab2
+Fast-forward
+ .idea/workspace.xml          | 6 ++++--
+ PhalApi/Common/functions.php | 2 +-
+ 2 files changed, 5 insertions(+), 3 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-11 18:27:42] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   6b34aab2..c55417dc  master     -> origin/master
+Updating 6b34aab2..c55417dc
+Fast-forward
+ .idea/workspace.xml          | 3 ++-
+ PhalApi/Common/functions.php | 2 +-
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-11 19:54:52] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   c55417dc..8fffab46  master     -> origin/master
+Updating c55417dc..8fffab46
+Fast-forward
+ app/appapi/controller/RateController.php | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-11 19:56:19] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   8fffab46..02d30dd1  master     -> origin/master
+Updating 8fffab46..02d30dd1
+Fast-forward
+ .idea/workspace.xml           |  4 ++--
+ PhalApi/Appapi/Api/Search.php | 42 ++++++++++++++++++++++++++++++------------
+ 2 files changed, 32 insertions(+), 14 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-11 20:11:10] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   02d30dd1..10f85a2b  master     -> origin/master
+Updating 02d30dd1..10f85a2b
+Fast-forward
+ app/appapi/controller/RateController.php | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-11 20:11:57] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   10f85a2b..a6fa4a37  master     -> origin/master
+Updating 10f85a2b..a6fa4a37
+Fast-forward
+ app/appapi/controller/RateController.php | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-13 20:12:27] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   a6fa4a37..3cee102b  master     -> origin/master
+Updating a6fa4a37..3cee102b
+Fast-forward
+ .idea/workspace.xml                            | 7 +++++--
+ themes/admin_simpleboot3/admin/manual/add.html | 8 ++++++++
+ 2 files changed, 13 insertions(+), 2 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-13 20:13:44] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   3cee102b..53f64fb0  master     -> origin/master
+Updating 3cee102b..53f64fb0
+Fast-forward
+ .idea/workspace.xml                              | 5 ++---
+ themes/admin_simpleboot3/admin/manual/index.html | 2 ++
+ 2 files changed, 4 insertions(+), 3 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-13 20:38:14] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   53f64fb0..e9c02eb1  master     -> origin/master
+Updating 53f64fb0..e9c02eb1
+Fast-forward
+ .idea/workspace.xml                                |   5 +-
+ app/user/controller/UserChangeController.php       | 120 ++++++++++++++++++++-
+ themes/admin_simpleboot3/admin/manual/index.html   |   2 +-
+ .../admin_simpleboot3/user/user_change/index.html  |   7 +-
+ 4 files changed, 124 insertions(+), 10 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-13 20:40:08] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   e9c02eb1..a9e36516  master     -> origin/master
+Updating e9c02eb1..a9e36516
+Fast-forward
+ .idea/workspace.xml                                  |  3 +--
+ app/user/controller/UserChangeController.php         | 10 ++++++++++
+ themes/admin_simpleboot3/user/user_change/index.html |  4 ++++
+ 3 files changed, 15 insertions(+), 2 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-13 20:41:25] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   a9e36516..89f33e08  master     -> origin/master
+Updating a9e36516..89f33e08
+Fast-forward
+ .idea/workspace.xml                                  | 4 +---
+ themes/admin_simpleboot3/user/user_change/index.html | 2 +-
+ 2 files changed, 2 insertions(+), 4 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-13 20:51:15] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   89f33e08..2ff5ec76  master     -> origin/master
+Updating 89f33e08..2ff5ec76
+Fast-forward
+ .idea/workspace.xml                                           |  7 +++++--
+ app/user/controller/UserChangeController.php                  |  8 ++++----
+ app/user/model/UserChange.php                                 | 10 ++++++++++
+ themes/admin_simpleboot3/user/user_change/withdraw_index.html |  2 +-
+ 4 files changed, 20 insertions(+), 7 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-13 20:52:10] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   2ff5ec76..819e6857  master     -> origin/master
+Auto packing the repository in background for optimum performance.
+See "git help gc" for manual housekeeping.
+Updating 2ff5ec76..819e6857
+Fast-forward
+Auto packing the repository in background for optimum performance.
+See "git help gc" for manual housekeeping.
+ .idea/workspace.xml                                           | 4 +---
+ themes/admin_simpleboot3/user/user_change/withdraw_index.html | 4 ++++
+ 2 files changed, 5 insertions(+), 3 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-13 20:52:43] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   819e6857..e8ba7b5f  master     -> origin/master
+Updating 819e6857..e8ba7b5f
+Fast-forward
+ .idea/workspace.xml           | 5 ++---
+ app/user/model/UserChange.php | 5 +++--
+ 2 files changed, 5 insertions(+), 5 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-13 21:00:12] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   e8ba7b5f..0e6e48a4  master     -> origin/master
+Updating e8ba7b5f..0e6e48a4
+Fast-forward
+ .idea/workspace.xml                                |  6 +-
+ app/user/controller/UserChangeController.php       | 81 ++++++++++++++++++++--
+ .../user/user_change/withdraw_index.html           |  5 +-
+ 3 files changed, 84 insertions(+), 8 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-13 21:02:00] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   0e6e48a4..373d9faf  master     -> origin/master
+Updating 0e6e48a4..373d9faf
+Fast-forward
+ .idea/workspace.xml                          | 3 +--
+ app/user/controller/UserChangeController.php | 7 +++++--
+ 2 files changed, 6 insertions(+), 4 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-13 21:06:11] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   373d9faf..fa6298dd  master     -> origin/master
+Updating 373d9faf..fa6298dd
+Fast-forward
+ .idea/workspace.xml                              | 3 ++-
+ app/user/controller/UserChangeController.php     | 4 ++--
+ themes/admin_simpleboot3/user/deposit/index.html | 2 +-
+ 3 files changed, 5 insertions(+), 4 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-13 21:09:26] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   fa6298dd..470b8b63  master     -> origin/master
+Updating fa6298dd..470b8b63
+Fast-forward
+ .idea/workspace.xml                                           | 4 +++-
+ app/user/controller/DepositController.php                     | 2 +-
+ app/user/controller/UserChangeController.php                  | 5 ++---
+ themes/admin_simpleboot3/user/deposit/index.html              | 2 +-
+ themes/admin_simpleboot3/user/user_change/game_paragraph.html | 6 +++---
+ 5 files changed, 10 insertions(+), 9 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-13 21:19:13] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   470b8b63..a274629b  master     -> origin/master
+Updating 470b8b63..a274629b
+Fast-forward
+ .idea/workspace.xml                                |  8 +--
+ app/game/controller/GameTicketController.php       | 64 ++++------------------
+ .../admin_simpleboot3/game/game_ticket/index.html  | 13 ++++-
+ 3 files changed, 23 insertions(+), 62 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-13 21:26:06] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   a274629b..0c53b9b4  master     -> origin/master
+Updating a274629b..0c53b9b4
+Fast-forward
+ .idea/workspace.xml                                |  8 +++++---
+ app/user/controller/UserInfoController.php         |  5 ++---
+ app/user/model/UserInfo.php                        |  4 ++--
+ themes/admin_simpleboot3/user/user_info/add.html   | 11 +++--------
+ themes/admin_simpleboot3/user/user_info/index.html |  4 ++--
+ 5 files changed, 14 insertions(+), 18 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-13 21:27:28] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   0c53b9b4..f108d1ae  master     -> origin/master
+Updating 0c53b9b4..f108d1ae
+Fast-forward
+ .idea/workspace.xml                        | 5 +----
+ app/user/controller/UserInfoController.php | 2 +-
+ 2 files changed, 2 insertions(+), 5 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-13 21:31:30] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   f108d1ae..95500261  master     -> origin/master
+Updating f108d1ae..95500261
+Fast-forward
+ .idea/workspace.xml                                | 7 +++++--
+ app/user/controller/UserBankController.php         | 5 ++---
+ themes/admin_simpleboot3/user/user_bank/add.html   | 9 ++-------
+ themes/admin_simpleboot3/user/user_bank/edit.html  | 8 ++------
+ themes/admin_simpleboot3/user/user_bank/index.html | 4 ++--
+ 5 files changed, 13 insertions(+), 20 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-13 21:36:10] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   95500261..a1abff5f  master     -> origin/master
+Updating 95500261..a1abff5f
+Fast-forward
+ .idea/workspace.xml         | 7 ++-----
+ app/user/model/UserBank.php | 4 ++--
+ 2 files changed, 4 insertions(+), 7 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-14 13:59:25] from [47.242.217.200]
+Info:Already up-to-date.
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-14 13:59:53] from [47.242.217.200]
+Info:Already up-to-date.
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-14 14:00:41] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   ed2fdb85..f83aac19  master     -> origin/master
+Updating ed2fdb85..f83aac19
+Fast-forward
+ .idea/workspace.xml                            | 5 +++--
+ themes/admin_simpleboot3/admin/manual/add.html | 2 +-
+ 2 files changed, 4 insertions(+), 3 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-14 14:03:18] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   f83aac19..1906f2bc  master     -> origin/master
+Updating f83aac19..1906f2bc
+Fast-forward
+ .idea/workspace.xml                            | 2 +-
+ themes/admin_simpleboot3/admin/manual/add.html | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-14 14:12:59] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   1906f2bc..1a636ade  master     -> origin/master
+Updating 1906f2bc..1a636ade
+Fast-forward
+ app/user/controller/AdminIndexController.php | 11 ++++++++++-
+ 1 file changed, 10 insertions(+), 1 deletion(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-14 14:17:34] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   1a636ade..8de4765b  master     -> origin/master
+Updating 1a636ade..8de4765b
+Fast-forward
+ .idea/workspace.xml                             | 4 +++-
+ app/admin/controller/OrderController.php        | 5 ++---
+ themes/admin_simpleboot3/admin/manual/add.html  | 2 +-
+ themes/admin_simpleboot3/admin/order/index.html | 4 ++--
+ 4 files changed, 8 insertions(+), 7 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-14 14:26:11] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   8de4765b..30a2dda1  master     -> origin/master
+Updating 8de4765b..30a2dda1
+Fast-forward
+ PhalApi/Appapi/Domain/Daili.php | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-14 15:13:34] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   30a2dda1..adc87a1a  master     -> origin/master
+Updating 30a2dda1..adc87a1a
+Fast-forward
+ app/appapi/controller/RateController.php | 92 ++++++++++++++++----------------
+ 1 file changed, 46 insertions(+), 46 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-14 15:22:43] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   adc87a1a..4753623b  master     -> origin/master
+Updating adc87a1a..4753623b
+Fast-forward
+ app/appapi/controller/RateController.php | 110 +++++++++++++++----------------
+ 1 file changed, 55 insertions(+), 55 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-14 15:24:19] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   4753623b..0223d3bb  master     -> origin/master
+Updating 4753623b..0223d3bb
+Fast-forward
+ app/appapi/controller/RateController.php | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-14 15:26:29] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   0223d3bb..ba8b66be  master     -> origin/master
+Updating 0223d3bb..ba8b66be
+Fast-forward
+ app/appapi/controller/RateController.php | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-14 15:29:50] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   ba8b66be..a2fd9c70  master     -> origin/master
+Updating ba8b66be..a2fd9c70
+Fast-forward
+ app/appapi/controller/RateController.php | 1 +
+ 1 file changed, 1 insertion(+)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-14 15:30:18] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   a2fd9c70..9de9f583  master     -> origin/master
+Updating a2fd9c70..9de9f583
+Fast-forward
+ app/appapi/controller/RateController.php | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-14 15:31:03] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   9de9f583..225aa979  master     -> origin/master
+Updating 9de9f583..225aa979
+Fast-forward
+ app/appapi/controller/RateController.php | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-14 15:31:23] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   225aa979..958450ad  master     -> origin/master
+Updating 225aa979..958450ad
+Fast-forward
+ app/appapi/controller/RateController.php | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-14 16:50:40] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   958450ad..553a5b3e  master     -> origin/master
+Updating 958450ad..553a5b3e
+Fast-forward
+ app/appapi/controller/RateController.php | 210 +++++++++++++++----------------
+ 1 file changed, 105 insertions(+), 105 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-14 17:52:53] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   553a5b3e..99e47379  master     -> origin/master
+Updating 553a5b3e..99e47379
+Fast-forward
+ app/report/controller/UserProfitController.php     | 119 ++++++++++++++++++++-
+ .../report/user_profit/system_report.html          |   8 +-
+ 2 files changed, 124 insertions(+), 3 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-14 17:59:15] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   99e47379..8e7b1566  master     -> origin/master
+Updating 99e47379..8e7b1566
+Fast-forward
+ app/report/controller/UserProfitController.php | 167 ++++++++++---------------
+ 1 file changed, 68 insertions(+), 99 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-14 18:05:44] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   8e7b1566..ae3390e5  master     -> origin/master
+Updating 8e7b1566..ae3390e5
+Fast-forward
+ app/game/controller/GameDetailController.php       | 71 ++++++++++++++++++++++
+ app/report/controller/UserProfitController.php     | 49 +--------------
+ .../game/game_detail/system_report.html            |  5 +-
+ 3 files changed, 75 insertions(+), 50 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-14 18:18:26] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   ae3390e5..d249489e  master     -> origin/master
+Updating ae3390e5..d249489e
+Fast-forward
+ app/admin/controller/CoinrecordController.php | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-14 18:23:21] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   d249489e..b6a1fb59  master     -> origin/master
+Updating d249489e..b6a1fb59
+Fast-forward
+ app/report/controller/UserProfitController.php | 64 +++++++++++++-------------
+ 1 file changed, 32 insertions(+), 32 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-14 18:25:36] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   b6a1fb59..fe2a7b73  master     -> origin/master
+Updating b6a1fb59..fe2a7b73
+Fast-forward
+ app/report/controller/UserProfitController.php | 64 +++++++++++++-------------
+ 1 file changed, 32 insertions(+), 32 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-14 18:27:42] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   fe2a7b73..ce5fdd24  master     -> origin/master
+Updating fe2a7b73..ce5fdd24
+Fast-forward
+ app/report/controller/UserProfitController.php | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-14 18:30:38] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   ce5fdd24..f918ced3  master     -> origin/master
+Updating ce5fdd24..f918ced3
+Fast-forward
+ app/report/controller/UserProfitController.php | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-14 18:32:12] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   f918ced3..19b48e3f  master     -> origin/master
+Updating f918ced3..19b48e3f
+Fast-forward
+ app/report/controller/UserProfitController.php | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-14 18:33:27] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   19b48e3f..faa2660b  master     -> origin/master
+Updating 19b48e3f..faa2660b
+Fast-forward
+ app/report/controller/UserProfitController.php | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-14 18:36:49] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   faa2660b..62fdb2dd  master     -> origin/master
+Updating faa2660b..62fdb2dd
+Fast-forward
+ themes/admin_simpleboot3/report/user_profit/team_report.html | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-14 18:39:25] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   62fdb2dd..6a3585f4  master     -> origin/master
+Updating 62fdb2dd..6a3585f4
+Fast-forward
+ app/report/controller/UserProfitController.php         | 2 +-
+ themes/admin_simpleboot3/report/user_profit/index.html | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-14 18:41:42] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   6a3585f4..70b219c0  master     -> origin/master
+Updating 6a3585f4..70b219c0
+Fast-forward
+ app/game/controller/GameDetailController.php | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-14 18:43:41] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   70b219c0..9f767ca1  master     -> origin/master
+Updating 70b219c0..9f767ca1
+Fast-forward
+ themes/admin_simpleboot3/game/game_detail/team_report.html | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-14 18:48:42] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   9f767ca1..df680c93  master     -> origin/master
+Updating 9f767ca1..df680c93
+Fast-forward
+ app/game/controller/GameDetailController.php | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-14 22:05:18] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   df680c93..f4834b9a  master     -> origin/master
+Updating df680c93..f4834b9a
+Fast-forward
+ .idea/workspace.xml                               |  9 +++---
+ app/admin/controller/LiveingController.php        | 35 +++++++++++++++++++++--
+ themes/admin_simpleboot3/admin/liveing/add.html   | 31 ++++++++++++++++++++
+ themes/admin_simpleboot3/admin/liveing/edit.html  | 18 ++++++++++++
+ themes/admin_simpleboot3/admin/liveing/index.html |  2 ++
+ 5 files changed, 89 insertions(+), 6 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-14 22:53:27] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   f4834b9a..5fdab32d  master     -> origin/master
+Updating f4834b9a..5fdab32d
+Fast-forward
+ .idea/workspace.xml                     |  8 +++-----
+ app/user/controller/DaiLiController.php | 34 ++++++++++++++++++++++++++++-----
+ app/user/controller/LiverController.php | 34 ++++++++++++++++++++++++++++-----
+ 3 files changed, 61 insertions(+), 15 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-14 23:21:14] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   5fdab32d..88b8e88a  master     -> origin/master
+Updating 5fdab32d..88b8e88a
+Fast-forward
+ app/appapi/controller/RateController.php | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-15 11:39:00] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   88b8e88a..2be4d6fd  master     -> origin/master
+Updating 88b8e88a..2be4d6fd
+Fast-forward
+ .idea/workspace.xml                             |  6 +++---
+ themes/admin_simpleboot3/admin/index/index.html | 28 ++++++++++++-------------
+ 2 files changed, 17 insertions(+), 17 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-15 13:17:12] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   2be4d6fd..b1a884a8  master     -> origin/master
+error: Your local changes to the following files would be overwritten by merge:
+	PhalApi/Appapi/Model/Login.php
+Please commit your changes or stash them before you merge.
+Aborting
+Updating 2be4d6fd..b1a884a8
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-15 13:20:11] from [47.242.217.200]
+Info:Already up-to-date.
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-15 13:31:26] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   7845b86b..f81cd899  master     -> origin/master
+Updating 7845b86b..f81cd899
+Fast-forward
+ PhalApi/Appapi/Model/Login.php | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-15 13:31:58] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   f81cd899..3905d765  master     -> origin/master
+Updating f81cd899..3905d765
+Fast-forward
+ PhalApi/Appapi/Model/Login.php | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-15 13:36:26] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   3905d765..885b1e6b  master     -> origin/master
+Updating 3905d765..885b1e6b
+Fast-forward
+ PhalApi/Config/app.php | 18 +++++++++---------
+ 1 file changed, 9 insertions(+), 9 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-15 13:36:59] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   885b1e6b..93e05180  master     -> origin/master
+Updating 885b1e6b..93e05180
+Fast-forward
+ PhalApi/Appapi/Model/Login.php | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-15 14:05:15] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   93e05180..73efbda9  master     -> origin/master
+Updating 93e05180..73efbda9
+Fast-forward
+ .idea/workspace.xml                          |  5 +++--
+ app/app.php                                  | 13 +++++++++++++
+ app/user/controller/AdminIndexController.php | 15 +++------------
+ 3 files changed, 19 insertions(+), 14 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-15 14:09:45] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   73efbda9..5bcfb976  master     -> origin/master
+Updating 73efbda9..5bcfb976
+Fast-forward
+ .idea/workspace.xml                          | 3 +--
+ app/user/controller/AdminIndexController.php | 4 ++--
+ 2 files changed, 3 insertions(+), 4 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-15 14:15:03] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   5bcfb976..83e12069  master     -> origin/master
+Updating 5bcfb976..83e12069
+Fast-forward
+ .idea/workspace.xml                          |  4 +++-
+ app/user/controller/AdminIndexController.php |  7 -------
+ app/user/controller/DaiLiController.php      | 13 +++----------
+ app/user/controller/LiverController.php      | 13 +++----------
+ 4 files changed, 9 insertions(+), 28 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-15 14:19:14] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   83e12069..790487c3  master     -> origin/master
+Updating 83e12069..790487c3
+Fast-forward
+ .idea/workspace.xml                          | 4 +---
+ app/user/controller/AdminIndexController.php | 4 ++++
+ 2 files changed, 5 insertions(+), 3 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-15 14:23:14] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   790487c3..04085627  master     -> origin/master
+Updating 790487c3..04085627
+Fast-forward
+ app/user/controller/AdminIndexController.php | 4 ----
+ 1 file changed, 4 deletions(-)
+
+
+================ Update End ===============
+
+================ Update Start ===============
+
+Request on [2021-03-15 14:26:47] from [47.242.217.200]
+Info:From 47.242.217.200:root/yunbao.com
+   04085627..df8804ff  master     -> origin/master
+Updating 04085627..df8804ff
+Fast-forward
+ .idea/workspace.xml                          | 4 +++-
+ app/user/controller/AdminIndexController.php | 2 ++
+ app/user/controller/DaiLiController.php      | 2 ++
+ app/user/controller/LiverController.php      | 2 ++
+ 4 files changed, 9 insertions(+), 1 deletion(-)
+
+
+================ Update End ===============
+

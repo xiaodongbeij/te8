@@ -1,0 +1,58 @@
+<include file="public@header" />
+</head>
+<body>
+<link href="__STATIC__/css/fSelect.css" rel="stylesheet" type="text/css">
+<div class="wrap">
+    <ul class="nav nav-tabs">
+        <li ><a href="{:url('UserChannel/index')}">列表</a></li>
+        <li class="active"><a >{:lang('EDIT')}</a></li>
+    </ul>
+    <form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('UserChannel/edit')}">
+
+        <input type="hidden" name="id" value="{$info.id}">
+        <div class="form-group">
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>等级名称</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="text" class="form-control" id="input-name" name="name" value="{$info.name}">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>累计充值最小金额</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="number" class="form-control" id="input-min_money" name="min_money" value="{$info.min_money}">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>等级通道</label>
+            <div class="col-md-6 col-sm-10">
+                <select class="form-control demo" multiple="multiple" name="channel_id[]">
+                    <foreach name="channels" item="v">
+<!--                        <option value="{$v.id}" <eq name="info['channel_id']" value="$v.id">selected</eq>>{$v.channel_name}</option>-->
+                        <option value="{$v.id}" <php>if( in_array($v['id'],$info['channel_id']) ) echo 'selected';</php>>{$v.channel_name}</option>
+                    </foreach>
+                </select>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-primary js-ajax-submit">{:lang('EDIT')}</button>
+                <a class="btn btn-default" href="{:url('UserChannel/index')}">{:lang('BACK')}</a>
+            </div>
+        </div>
+
+    </form>
+</div>
+<script src="__STATIC__/js/admin.js"></script>
+<!--<script src="__STATIC__/js/jquery.min.js"></script>-->
+<script src="__STATIC__/js/fSelect.js"></script>
+<script>
+    $(function() {
+        $('.demo').fSelect();
+    });
+</script>
+</body>
+</html>

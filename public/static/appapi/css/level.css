@@ -1,0 +1,264 @@
+body{
+    background:#f5f5f5;
+}
+.main {
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.tab{
+    background:#fff;
+    height:1.1rem;
+}
+.tab ul{}
+.tab ul li{
+    float:left;
+    width:48%;
+    height:1rem;
+    line-height:1rem;
+    text-align:center;
+    color:#969696;
+    font-size:0.32rem;
+}
+.tab ul li .tab_line{
+    display:none;
+    width: 0.6rem;
+    height: 0.1rem;
+    margin: 0 auto;
+    border-radius: 0.04rem;
+}
+.tab ul li.on{
+    color:#323232;
+}
+.tab ul li.on .tab_line{
+    display:block;
+}
+.top-body{
+    background:#fff;
+}
+
+.main .title{
+	height:1rem;
+	line-height:1rem;
+	color:#646464;
+    border-bottom:0.02rem solid #f5f5f5;
+    margin:0 0.2rem;
+}
+
+
+.level {
+	position: relative;
+	padding-top:0.4rem;
+	padding-bottom:0.4rem;
+    background:url("../images/level/level_bg.png") no-repeat center bottom;
+    background-size:7.5rem;
+}
+
+.level .speed
+{
+	overflow: hidden;
+}
+.level .speed .info
+{
+	height:2.4rem;
+    text-align:center;
+}
+
+
+.level .speed .info .name{
+    position:relative;
+    margin: 0 auto;
+    padding-top: 0.18rem;
+	width:1.92rem;
+	height: 1.92rem;
+	text-align:center;
+    z-index:0;
+}
+.level .speed .info .avatar_bg{
+    position:relative;
+    margin-top:-2.08rem;
+ 	height:2.4rem;
+	background:url(../images/level/level_thumb_bg.png) no-repeat top center;
+    background-size:auto 2.4rem;
+    text-align:center;  
+    z-index:1
+}
+.level .speed .info .name img{
+    width:100%;
+    height:100%;
+    border-radius:50%;
+}
+
+.level .speed .info .tip{
+    position:relative;
+    margin:-0.56rem auto 0;
+	width:3.6rem;
+	height: 0.48rem;
+	line-height:0.48rem;
+	color: #fff;
+	text-align:center;
+    z-index:3;
+}
+
+.level .speed .level_val {
+	text-align: center;
+    line-height: 1rem;
+	color:#646464;
+}
+
+.level .speed .level_jindu{
+    display: -webkit-flex; /* Safari */
+    display: flex;    
+    margin:0 15%;
+    justify-content: center;
+    align-items: center;
+}
+.level .speed .level_jindu_l{
+    
+    color:#c7c7c7;
+    font-size:0.24rem;
+}
+.level .speed .level_jindu_r{
+    
+    color:#c7c7c7;
+    font-size:0.24rem;
+}
+.level .speed .jindu{
+	width:6rem;
+	height:0.08rem;
+	overflow: hidden;
+	margin:0 0.3rem;
+}
+
+.level .speed .jindu .levelnp {
+  display: block;
+  height: 0.08rem;
+  width: 7.35rem;
+  z-index: 10;
+  background: #ededeb;
+  border-radius: 0.08rem;
+  text-align: center;
+}
+.level .speed .jindu .leveln {
+    height: 0.08rem;
+    z-index: 5;
+}
+
+.level .speed .jindu .n1 {
+    background-color: #fff300;
+}
+.level .speed .jindu .n2 {
+    background-color: #ffc900;
+}
+
+.privilege{
+	padding:0.2rem 0 0.4rem;
+}
+.privilege ul {
+    padding-top: 0.4rem;
+    margin: 0 1.2rem;
+}
+.privilege ul li{
+	float:left;
+	width:48%;
+	text-align:center;
+}
+.privilege ul li img{
+	max-width:0.918rem;
+}
+.privilege ul li .privilege_t{
+    color:#646464;
+    font-size:0.24rem;
+    font-weight:bold;
+	text-align:center;
+}
+.upgrade{
+	padding:0.2rem 0 0.4rem;
+}
+
+.upgrade .body{
+	text-align:center;
+}
+.upgrade .body img{
+	max-width:7.5rem;
+}
+
+.tips{
+    margin:0 0.2rem;
+	height:1rem;
+	line-height:1rem;
+    background:url('../images/right.png') no-repeat right center;
+    background-size:0.4rem;
+}
+
+.tips a{
+    display:block;
+	color:#888888;
+	text-decoration:none;
+}
+
+/* 等级说明 */
+.explain{
+	
+}
+.explain .explain-top{
+	line-height:1.1rem;
+	padding:0 0.2rem;
+}
+
+.explain-top fieldset{
+  padding:0.2rem 0;
+  border-top:#dfdfdf solid 0.02rem;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+} 
+
+.explain-top legend{
+  color:#000;
+  padding:0 0.2rem 0 0;
+  background:#fff;
+} 
+
+.explain .list{
+
+}
+.list table{
+	width:7.5rem;
+}
+
+.list table tr:nth-child(odd){
+	background: #fcfcfc;
+}
+
+.list table tr:nth-child(even){
+	background: #fcfcfc;
+}
+
+.list table tr:first-child{
+	background:#fff;
+}
+.list table th,.list table td{
+	text-align:center;
+	line-height: 0.8rem;
+    border-bottom:0.02rem solid #f5f5f5;
+    border-left:0.02rem solid #f5f5f5;
+    margin-left:-0.02rem;
+}
+.list table td{
+	color:#646464;
+
+}
+.list table th td:first-child{
+    border-left:none;
+    margin-left:0;
+}
+.list table tr td:first-child{
+    border-left:none;
+    margin-left:0;
+}
+
+.list table img{
+    height:0.48rem;
+}

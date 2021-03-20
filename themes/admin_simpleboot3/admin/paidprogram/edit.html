@@ -1,0 +1,167 @@
+<include file="public@header" />
+
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li ><a href="{:url('Paidprogram/index')}">付费内容列表</a></li>
+			<li class="active"><a >{:lang('EDIT')}</a></li>
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('Paidprogram/edit_post')}">
+
+            <div class="form-group">
+				<label for="input-userinfo" class="col-sm-2 control-label"><span class="form-required">*</span>用户信息</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-userinfo" value="{$data['userinfo']['user_nicename']}({$data['uid']})" readonly="readonly">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="input-title" class="col-sm-2 control-label"><span class="form-required">*</span>标题</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-title" value="{$data['title']}" readonly="readonly">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="input-name" class="col-sm-2 control-label"><span class="form-required">*</span>封面</label>
+				<div class="col-md-6 col-sm-10">
+					<img src="{$data['thumb']}" width="200" class="imgtip">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="input-name" class="col-sm-2 control-label"><span class="form-required">*</span>简介</label>
+				<div class="col-md-6 col-sm-10">
+					<textarea style="width: 100%;min-height: 100px;" readonly="readonly">{$data['content']}</textarea>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="input-classname" class="col-sm-2 control-label"><span class="form-required">*</span>分类</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-classname" value="{$data['classname']}" readonly="readonly">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="input-money" class="col-sm-2 control-label"><span class="form-required">*</span>价格</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-money" value="{$data['money']}" readonly="readonly">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="input-name" class="col-sm-2 control-label"><span class="form-required">*</span>人物简介</label>
+				<div class="col-md-6 col-sm-10">
+					<textarea style="width: 100%;min-height: 100px;" readonly="readonly">{$data['personal_desc']}</textarea>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="input-type" class="col-sm-2 control-label"><span class="form-required">*</span>类型</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-type" value="{$type[$data['type']]}" readonly="readonly">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="input-name" class="col-sm-2 control-label"><span class="form-required">*</span>视频列表</label>
+				<div class="col-md-6 col-sm-10">
+
+					<foreach name="$data['video_arr']" id="vl">
+						<if condition="$data['type'] eq 1">
+							<p>视频标题:{$vl['video_title']}</p>
+						</if>
+						<p>视频地址:{$vl['video_url']}<a href="javaScript:void(0)" class="view" data-url="{$vl['video_url']}">观看</a></p>
+						<p>视频长度:{:getSeconds($vl['video_length'])}</p>
+						<if condition="$data['type'] eq 1">
+							<if condition="$vl['is_see'] eq 1">
+								<p>是否可试看:是</p>
+							<else />
+								<p>是否可试看:否</p>
+							</if>
+						</if>
+						<hr>
+					</foreach>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="input-sale_nums" class="col-sm-2 control-label"><span class="form-required">*</span>购买数量</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-sale_nums" value="{$data['sale_nums']}" readonly="readonly">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="input-evaluate_nums" class="col-sm-2 control-label"><span class="form-required">*</span>评价人数</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-evaluate_nums" value="{$data['evaluate_nums']}" readonly="readonly">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="input-evaluate_total" class="col-sm-2 control-label"><span class="form-required">*</span>评价总分</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-evaluate_total" value="{$data['evaluate_total']}" readonly="readonly">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="input-evaluate_point" class="col-sm-2 control-label"><span class="form-required">*</span>评价等级</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-evaluate_point" value="{$data['evaluate_point']}" readonly="readonly">
+				</div>
+			</div>
+
+			
+
+			<div class="form-group">
+				<label for="input-status" class="col-sm-2 control-label"><span class="form-required">*</span>审核状态</label>
+				<div class="col-md-6 col-sm-10" id="status">
+                    <volist name="status" id="v">
+						<label class="radio-inline">
+							<input type="radio" name="status" value="{$key}" <if condition="$data['status'] eq $key">checked</if>>{$v}
+						</label>
+                    </volist>
+				</div>
+			</div>
+
+            <div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<input type="hidden" name="id" value="{$data.id}" />
+					<input type="hidden" name="uid" value="{$data.uid}" />
+					<button type="submit" class="btn btn-primary js-ajax-submit">{:lang('EDIT')}</button>
+					<a class="btn btn-default" href="{:url('Paidprogram/index')}">{:lang('BACK')}</a>
+				</div>
+			</div>
+
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			Wind.use('layer');
+
+			$('.view').click(function(){
+                var _this=$(this);
+                var url=_this.data('url');
+
+                layer.open({
+                    type: 2,
+                    title: '查看视频',
+                    shadeClose: true,
+                    shade: 0.8,
+                    area: ['500px', '600px'],
+                    content: '/Admin/Paidprogram/videoplay?url='+url
+                }); 
+                
+            });
+		});
+
+		
+	</script>
+    
+</body>
+</html>

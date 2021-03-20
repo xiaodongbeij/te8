@@ -1,0 +1,46 @@
+2021-01-11 09:01:22|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///avatar/20210111/06636708827977632.png
+2021-01-11 09:09:11|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210111/06636713518498723.png
+2021-01-11 10:06:20|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///thumb/20210111/06636747806610027.png
+2021-01-11 11:42:46|ERROR|Video.GetLikeVideos|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%666%) ORDER BY addtime desc LIMIT 0,20' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT * FROM c...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Video.php(234): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Video->getLikeVideos()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#5 {main}
+2021-01-11 11:42:53|ERROR|Video.GetLikeVideos|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%666%) ORDER BY addtime desc LIMIT 0,20' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT * FROM c...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Video.php(234): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Video->getLikeVideos()
+#4 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#5 {main}
+2021-01-11 17:47:06|ERROR|Daili.GetMemberList|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(0,10) and u.create_time >= 1604160000 and u.create_time <= 1635696000' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('select u.id,u.u...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('select u.id,u.u...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Daili.php(153): NotORM_Result->queryAll('select u.id,u.u...', Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Daili.php(187): Domain_Daili->getMemberList(42885, NULL, NULL, '2020-11-01', '2021-11-01', 1, 10)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Daili->getMemberList()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-01-11 17:47:16|ERROR|Daili.GetMemberList|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(0,10) and u.create_time >= 1604160000 and u.create_time <= 1635696000' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('select u.id,u.u...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('select u.id,u.u...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Daili.php(153): NotORM_Result->queryAll('select u.id,u.u...', Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Daili.php(187): Domain_Daili->getMemberList(42885, NULL, NULL, '2020-11-01', '2021-11-01', 1, 10)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Daili->getMemberList()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-01-11 18:20:47|ERROR|Daili.GetMemberList|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(0,10)' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(931): NotORM_Result->query('select u.id,u.u...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(918): NotORM_Result->queryRows('select u.id,u.u...', Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Daili.php(154): NotORM_Result->queryAll('select u.id,u.u...', Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Daili.php(187): Domain_Daili->getMemberList(42885, NULL, NULL, '2020-11-01', '2021-11-01', 1, 10)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Daili->getMemberList()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}

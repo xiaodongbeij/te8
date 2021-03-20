@@ -1,0 +1,84 @@
+2021-01-03 15:32:31|ERROR|Home.getNearby|PDOException: The user specified as a definer ('livenew'@'127.0.0.1') does not exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT uid,titl...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Home.php(285): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Home.php(61): Model_Home->getNearby('0.0', '0.0', '1')
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Home.php(537): Domain_Home->getNearby('0.0', '0.0', '1')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Home->getNearby()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-01-03 15:59:57|ERROR|User.WithdrawList|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT bank_id,...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1000): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->withdrawList()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-01-03 16:00:42|ERROR|User.WithdrawList|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT bank_id,...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(887): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(875): NotORM_Result->fetchRow('')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/User.php(1000): NotORM_Result->fetchOne()
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_User->withdrawList()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-01-03 18:04:05|ERROR|Home.getNearby|PDOException: The user specified as a definer ('livenew'@'127.0.0.1') does not exist in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(811): NotORM_Result->query('SELECT uid,titl...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(896): NotORM_Result->execute()
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Home.php(285): NotORM_Result->fetchAll()
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Home.php(61): Model_Home->getNearby('0.0', '0.0', '1')
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Home.php(537): Domain_Home->getNearby('0.0', '0.0', '1')
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Home->getNearby()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#7 {main}
+2021-01-03 19:42:40|ERROR|Daili.GetMemberList|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as user_money) FROM cmf_user WHERE (invite_level LIKE '42885-42886%')' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(748): NotORM_Result->query('SELECT SUM(coin...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(790): NotORM_Result->aggregation('SUM(coin as use...')
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Daili.php(142): NotORM_Result->sum('coin as user_mo...')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Daili.php(184): Domain_Daili->getMemberList(42885, NULL, '0', NULL, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Daili->getMemberList()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-01-03 19:42:46|ERROR|Daili.GetMemberList|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as user_money) FROM cmf_user WHERE (invite_level LIKE '42885-42886%')' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(748): NotORM_Result->query('SELECT SUM(coin...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(790): NotORM_Result->aggregation('SUM(coin as use...')
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Daili.php(142): NotORM_Result->sum('coin as user_mo...')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Daili.php(184): Domain_Daili->getMemberList(42885, NULL, '0', NULL, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Daili->getMemberList()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-01-03 19:51:06|DEBUG|succeed to upload file to UCloud_Engine_Local|https://www.qingwazb.com/upload///avatar/20210103/06630186660806899.png
+2021-01-03 20:50:18|ERROR|Daili.GetMemberList|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as user_money) FROM cmf_user WHERE (invite_level LIKE '42885-42886%')' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(748): NotORM_Result->query('SELECT SUM(coin...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(790): NotORM_Result->aggregation('SUM(coin as use...')
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Daili.php(142): NotORM_Result->sum('coin as user_mo...')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Daili.php(184): Domain_Daili->getMemberList(42885, NULL, '0', NULL, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Daili->getMemberList()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-01-03 21:35:56|ERROR|Daili.GetMemberList|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as user_money) FROM cmf_user WHERE (invite_level LIKE '42885-42886%')' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(748): NotORM_Result->query('SELECT SUM(coin...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(790): NotORM_Result->aggregation('SUM(coin as use...')
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Daili.php(142): NotORM_Result->sum('coin as user_mo...')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Daili.php(184): Domain_Daili->getMemberList(42885, NULL, '0', NULL, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Daili->getMemberList()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}
+2021-01-03 21:39:32|ERROR|Daili.GetMemberList|PDOException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as user_money) FROM cmf_user WHERE (invite_level LIKE '42885-42886%')' at line 1 in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(748): NotORM_Result->query('SELECT SUM(coin...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(790): NotORM_Result->aggregation('SUM(coin as use...')
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Daili.php(142): NotORM_Result->sum('coin as user_mo...')
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Daili.php(184): Domain_Daili->getMemberList(42885, NULL, '0', NULL, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Daili->getMemberList()
+#5 /www/wwwroot/yunbao.com/public/appapi/index.php(15): PhalApi->response()
+#6 {main}

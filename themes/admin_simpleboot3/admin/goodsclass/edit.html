@@ -1,0 +1,103 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li ><a href="{:url('Goodsclass/index')}">商品分类列表</a></li>
+			<li class="active"><a >{:lang('EDIT')}</a></li>
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('Goodsclass/editPost')}">
+            
+            <div class="form-group">
+				<label for="input-name" class="col-sm-2 control-label"><span class="form-required">*</span>上级分类</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="hidden" name="gc_id" value="{$info['gc_id']}">
+					<select class="form-control" name="gc_parentid">
+						<option value="0">作为一级分类</option>
+                        <volist name="lists" id="v" key="k">
+                        	<option value="{$v['gc_id']}" <if condition="$v['gc_id'] eq $info['gc_parentid']"> selected </if>>
+                        		<if condition="$k lt $one_nums">
+                        		├─
+                        		<else />
+                        		└─
+                        		</if>
+                        		{$v['gc_name']}
+                        	</option>
+                        	<volist name="v['two_list']" id="vo" key="k1">
+
+                        		
+                        			<option value="{$vo['gc_id']}" <if condition="$vo['gc_id'] eq $info['gc_parentid']"> selected </if>>
+	                        			&nbsp;&nbsp;&nbsp;&nbsp;
+		                        		
+		                        		├─
+		                        		
+	                        			{$vo['gc_name']}
+	                        		</option>
+                        		
+                        		
+                        	</volist>
+                        </volist>
+                    </select>
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-gc_name" class="col-sm-2 control-label"><span class="form-required">*</span>分类名称</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-gc_name" name="gc_name" maxlength="30" value="{$info['gc_name']}">
+					<p class="help-block">30字符以内，不要带逗号</p>
+				</div>
+			</div>
+			
+			
+			<div class="form-group <if condition="$info.gc_grade neq '2'">hide</if>">
+				<label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>分类图标</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="hidden" name="gc_icon" id="thumbnail" value="{$info['gc_icon']}">
+                    <a href="javascript:uploadOneImage('图片上传','#thumbnail');">
+                        <if condition="empty($info.gc_icon)">
+                        <img src="__TMPL__/public/assets/images/default-thumbnail.png"
+                                 id="thumbnail-preview"
+                                 style="cursor: pointer;max-width:100px;max-height:100px;"/>
+                        <else/>
+                        <img src="{:cmf_get_image_preview_url($info.gc_icon)}"
+                             id="thumbnail-preview"
+                             style="cursor: pointer;max-width:100px;max-height:100px;"/>
+                        </if>
+                    </a>
+                    <input type="button" class="btn btn-sm btn-cancel-thumbnail" value="取消图片"> 
+                    <p class="help-block">建议尺寸： 80 X 80 太大会造成加载图片加载慢等各种问题</p>
+				</div>
+			</div>
+            
+            <div class="form-group">
+                <label for="input-gc_isshow" class="col-sm-2 control-label"><span class="form-required">*</span>是否显示</label>
+                <div class="col-md-6 col-sm-10">
+                    <label class="radio-inline"><input type="radio" name="gc_isshow" value="0" <if condition="$info['gc_isshow'] eq 0"> checked="checked" </if>>否</label>
+                    <label class="radio-inline"><input type="radio" name="gc_isshow" value="1" <if condition="$info['gc_isshow'] eq 1"> checked="checked" </if> >是</label>
+                    
+                </div>
+
+            </div>
+            
+            <div class="form-group">
+				<label for="input-gc_sort" class="col-sm-2 control-label"><span class="form-required">*</span>排序号</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-gc_sort" name="gc_sort" placeholder="0-999999之间的整数" value="{$info['gc_sort']}" onkeyup="value=value.replace(/[^\d]/g,'')">
+					<p class="help-block">请填写0-999999之间的整数</p>
+				</div>
+			</div>
+            
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-primary js-ajax-submit">{:lang('EDIT')}</button>
+					<a class="btn btn-default" href="javascript:history.back(-1);">{:lang('BACK')}</a>
+				</div>
+			</div>
+            
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+    
+</body>
+</html>

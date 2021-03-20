@@ -1,0 +1,46 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+            <li><a href="{:url('Gift/index')}">礼物列表</a></li>
+			<li class="active"><a >列表</a></li>
+			<li><a href="{:url('Jackpotrate/add',array('giftid'=>$giftid))}">{:lang('ADD')}</a></li>
+		</ul>
+        <form class="well form-inline margin-top-20" name="form1" method="post" action="">
+            	{$giftinfo['giftname']}
+		</form>
+		<form method="post" class="js-ajax-form">
+			<table class="table table-hover table-bordered">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>数量</th>
+						<th>奖池概率</th>
+						<th>{:lang('ACTIONS')}</th>
+					</tr>
+				</thead>
+				<tbody>
+					<foreach name="lists" item="vo">
+					<tr>
+						<td>{$vo.id}</td>
+                        <td>{$vo['nums']}</td>
+                        <td>
+                        <volist name="jackpot_level" id="v">
+                            {$v['levelid']}级：{$vo['rate_jackpot'][$v['levelid']]}% <br>
+                        </volist>
+                        </td>
+						<td>
+                            <a class="btn btn-xs btn-primary" href='{:url("Jackpotrate/edit",array("id"=>$vo["id"]))}'>{:lang('EDIT')}</a>
+							<a class="btn btn-xs btn-danger js-ajax-delete" href="{:url('Jackpotrate/del',array('id'=>$vo['id']))}">{:lang('DELETE')}</a>
+						</td>
+					</tr>
+					</foreach>
+				</tbody>
+			</table>
+			<div class="pagination">{$page}</div>
+		</form>
+	</div>
+	 <script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<include file="public@header" />
+</head>
+<body>
+<div class="wrap">
+    <ul class="nav nav-tabs">
+        <li ><a href="{:url('userInfo/index')}">列表</a></li>
+        <li class="active"><a >{:lang('ADD')}</a></li>
+    </ul>
+    <form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('userInfo/add')}">
+
+        <div class="form-group">
+            <label for="input-user_login" class="col-sm-2 control-label">微信收款码</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="hidden" name="wxpay_img" id="thumbnail" value="">
+                <a href="javascript:uploadOneImage('图片上传','#thumbnail');">
+                    <img src="__TMPL__/public/assets/images/default-thumbnail.png"
+                         id="thumbnail-preview"
+                         style="cursor: pointer;max-width:100px;max-height:100px;"/>
+                </a>
+                <input type="button" class="btn btn-sm btn-cancel-thumbnail" value="取消图片">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>用户ID</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="number" class="form-control" id="input-user_id" name="user_id">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>微信收款账户</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="number" class="form-control" id="input-wxpay_account" name="wxpay_account">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>资金密码</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="password" class="form-control" id="input-money_passwd" name="money_passwd">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-primary js-ajax-submit">{:lang('ADD')}</button>
+                <a class="btn btn-default" href="{:url('userInfo/index')}">{:lang('BACK')}</a>
+            </div>
+        </div>
+
+    </form>
+</div>
+<script src="__STATIC__/js/admin.js"></script>
+<script>
+    (function(){
+        $('.btn-cancel-thumbnail').click(function () {
+            $('#thumbnail-preview').attr('src', '__TMPL__/public/assets/images/default-thumbnail.png');
+            $('#thumbnail').val('');
+        });
+
+        $('.btn-cancel-thumbnail2').click(function () {
+            $('#thumbnail2-preview').attr('src', '__TMPL__/public/assets/images/default-thumbnail.png');
+            $('#thumbnail2').val('');
+        });
+    })()
+</script>
+</body>
+</html>

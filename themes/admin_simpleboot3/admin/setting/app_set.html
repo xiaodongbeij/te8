@@ -1,0 +1,42 @@
+<include file="public@header" />
+</head>
+<body>
+<div class="wrap">
+
+    <form class="form-horizontal js-ajax-form margin-top-20" method="post" action="{:url('setting/app_set')}">
+        <div class="form-group">
+            <label for="input-community_convention" class="col-sm-2 control-label">社区公约</label>
+            <div class="col-md-6 col-sm-10">
+                <textarea class="form-control" id="input-community_convention" cols="30" rows="10" name="community_convention" >{$info.community_convention|default=''}</textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="input-privacy_policy" class="col-sm-2 control-label">隐私政策</label>
+            <div class="col-md-6 col-sm-10">
+                <textarea class="form-control" id="input-privacy_policy" cols="30" rows="10" name="privacy_policy" >{$info.privacy_policy|default=''}</textarea>
+
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="input-clause" class="col-sm-2 control-label">服务条款</label>
+            <div class="col-md-6 col-sm-10">
+                <textarea class="form-control" id="input-clause" cols="30" rows="10" name="clause" >{$info.clause|default=''}</textarea>
+
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="input-contact_us" class="col-sm-2 control-label">联系我们</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="text" class="form-control" id="input-contact_us" name="contact_us" value="{$info.contact_us|default=''}">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-primary js-ajax-submit">{:lang('SAVE')}</button>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

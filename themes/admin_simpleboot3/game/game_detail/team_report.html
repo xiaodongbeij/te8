@@ -1,0 +1,163 @@
+<include file="public@header"/>
+<style>
+    .table img {
+        width: 25px;
+        height: 25px;
+    }
+
+    #pop {
+        display: none;
+    }
+</style>
+<link rel="stylesheet" href="__STATIC__/team_report/layui/css/layui.css">
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a>团队结算报表</a></li>
+        <!--        <li><a href="{:url('userChange/add')}">{:lang('ADD')}</a></li>-->
+    </ul>
+    <form class="well form-inline margin-top-20" method="post" action="">
+
+        手机号：
+        <input class="form-control" type="text" id="uid" name="uid" style="width: 200px;" value="{:input('request.uid')}"
+               placeholder="请输入手机号">
+
+        <input id="submit" class="btn btn-primary" value="搜索"/>
+        <a class="btn btn-danger" href="{:url('report/UserProfit/team_report')}">清空</a>
+        <br>
+        <br>
+    </form>
+    <table class="layui-hide layui-table" lay-data="{id:'idTest'}" id="tableId" lay-filter="tableEvent"></table>
+</div>
+
+
+<script src="__STATIC__/js/admin.js"></script>
+<script src="__STATIC__/js/laydate/laydate.js"></script>
+<script src="__STATIC__/team_report/layui/layui.js"></script>
+<script>
+    layui.config({
+        base: "__STATIC__/team_report/module/"
+    }).extend({
+        tableEdit:'js/tableEdit'  //表格树依赖我另外写的tableEdit模块，本项目就有。
+        ,tableTree:'js/tableTree'
+    }).use(['table','layer',"tableTree"], function () {
+        // console.log(1111)
+        var table = layui.table
+            ,$ = layui.$
+            ,tableTree = layui.tableTree;
+        var params = [
+            {user_login:1,value:"张三1"}
+            ,{user_login:2,value:"张三2"}
+            ,{user_login:3,value:"张三3"}
+            ,{user_login:4,value:"张三4"}
+            ,{user_login:5,value:"张三5"}
+        ];
+        function templet(d,field){
+            if(!d[field])return '';
+            if(typeof d[field] === 'string')return d[field];
+            if(!Array.isArray(d[field]))return d[field].value ? d[field].value : '';
+            var str = [];
+            d[field].forEach(function (e) {str.push(e.value)});
+            return str.join(' || ');
+        }
+        var treeTable = tableTree.render({
+            elem: '#tableId'
+            ,id:'tableTree'
+            ,url:"team_data"
+            ,height: 'full-90'
+            ,page: true
+            ,treeConfig:{ //表格树所需配置
+                showField:'id' //表格树显示的字段
+                ,treeid:'id' //treeid所对应字段的值在表格数据中必须是唯一的，且不能为空。
+                ,treepid:'pid'//父级id字段名称
+                ,iconClass:'layui-icon-triangle-r' //小图标class样式 窗口图标 layui-icon-layer
+            }
+            ,cols: [[
+                // {type:'checkbox'}
+                // {field:'mobile',title: '手机号',width:200}
+                {field:'id',title: 'id',width:200}
+                ,{field:'level_count',title: '团队人数'}
+                ,{field:'recharge',title:'存款'}
+                ,{field:'withdrawal',title:'取款'}
+                ,{field:'bonus',title:'奖金'}
+                ,{field:'xia',title:'下注'}
+                ,{field:'rate',title:'返点'}
+                ,{field:'activity',title:'活动'}
+                // ,{field:'recharge',title:'存款'}
+                ,{field:'yin',title:'盈亏'}
+                ,{field:'pin_yin',title:'平台盈亏'}
+            ]]
+        });
+
+
+        $('#submit').click(function (){
+            let uid = $('#uid').val()
+            //这里以搜索为例
+            treeTable.reload({
+                where: { //设定异步数据接口的额外参数，任意设
+                    uid: uid
+                }
+                ,page: {
+                    curr: 1 //重新从第 1 页开始
+                }
+            });
+        })
+
+
+
+        // $('.btn-primary').click(function (){
+        //     table.reload('idTest', {
+        //         url: 'team_data'
+        //         ,where: {
+        //             uid : $('#uid').val(),
+        //         } //设定异步数据接口的额外参数
+        //         //,height: 300
+        //     });
+        // })
+
+
+        /**
+         /**表格的增删改都会回调此方法
+         * 与table.on(tool(lay-filter))用法一致。
+         **/
+        treeTable.on('tool(tableEvent)',function (obj) {
+            var field = obj.field; //单元格字段
+            var value = obj.value; //修改后的值
+            var data = obj.data; //当前行数据
+            var event = obj.event; //当前单元格事件属性值
+            //event为del为删除 add则新增 edit则修改。这个三个值固定死了，切莫定义与之三个重复的event。
+            if(event !== 'del' && event !== 'add' ){
+                var update = {};
+                update[field] = value;
+                obj.update(update);
+                console.log(obj)
+            }
+
+            if(event === 'del'){
+                obj.del();
+            }
+            if(event === 'add'){
+                //可ajax异步请求后台,后台返回数据后用 obj.add(,rs) 进行回调生成表格树。
+                setTimeout(function () {
+                    $.post("get_sub", {user_id: data.id}, function (result) {
+                        if (result.code == 0) {
+                            layer.msg(result.msg)
+                            return false;
+                        }
+                        let rs = result.data;
+                        console.log(rs)
+                        obj.add(rs);
+                        $('.layui-tableTree-edit').show();
+                    });
+                    //在此模拟ajax异步的请求，返回数据调用以下函数。
+                    //该方法新增下级节点，可以直接新表格树。
+                    // obj.add(rs);
+                },500);
+            }
+        });
+
+    });
+</script>
+</body>
+</html>

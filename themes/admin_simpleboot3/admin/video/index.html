@@ -1,0 +1,198 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a >视频列表</a></li>
+            <if condition="$status2 eq 1">
+            <li><a href="{:url('Video/add')}">{:lang('ADD')}</a></li>
+            </if>
+		</ul>
+		
+		<form class="well form-inline margin-top-20" method="post" action='{:url("Video/index")}'>
+			排序：
+            <select class="form-control" name="ordertype">
+				<option value="">默认</option>
+                <volist name="ordertype" id="v">
+                    <option value="{$key}" <if condition="input('request.ordertype') neq '' && input('request.ordertype') eq $key">selected</if>>{$v}</option>
+                </volist>
+			</select>
+            
+			
+            标题：
+            <input class="form-control" type="text" name="keyword1" style="width: 200px;" value="{:input('request.keyword1')}"
+                   placeholder="请输入视频标题">
+            用户ID：
+            <input class="form-control" type="text" name="uid" style="width: 200px;" value="{:input('request.uid')}"
+                   placeholder="请输入用户ID、靓号">
+                   
+            关键字：
+            <input class="form-control" type="text" name="keyword" style="width: 200px;" value="{:input('request.keyword')}"
+                   placeholder="请输入视频ID">
+            <input type="hidden" name="status" value="{$status2}"/>
+            <input type="hidden" name="isdel" value="{$isdel2}"/>
+			<input type="submit" class="btn btn-primary" value="搜索">
+		</form>		
+		
+		<form method="post" class="js-ajax-form">
+            <div class="table-actions">
+                <button class="btn btn-danger btn-sm js-ajax-submit" type="submit" data-action="{:url('Video/del')}"
+                        data-subcheck="true">{:lang('DELETE')}
+                </button>
+            </div>
+			<table class="table table-hover table-bordered">
+				<thead>
+					<tr>
+                        <th width="16">
+                            <label>
+                                <input type="checkbox" class="js-check-all" data-direction="x" data-checklist="js-check-x">
+                            </label>
+                        </th>
+						<th>ID</th>
+						<th>会员昵称（ID）</th>
+						<th>分类</th>
+						<th width="10%">标题</th>
+						<th>图片</th>
+						<th>点赞数</th>
+						<th>评论数</th>
+						<th>分享数</th>
+						<th>视频状态</th>
+                        <if condition="isset($sign) and $sign neq 'wait' and $sign neq 'nopass'">
+						  <th>上下架状态</th>
+                        </if>
+						<th>是否绑定商品</th>
+						<th>发布时间</th>
+						<th>{:lang('ACTIONS')}</th>
+					</tr>
+				</thead>
+				<tbody>
+					<foreach name="lists" item="vo">
+					<tr>
+                        <td>
+                            <input type="checkbox" class="js-check" data-yid="js-check-y" data-xid="js-check-x" name="ids[]" value="{$vo.id}">
+                        </td>
+						<td>{$vo.id}</td>
+						<td>{$vo['userinfo']['user_nicename']} ({$vo['uid']})</td>
+                        <td>{$class[$vo['classid']]['name']|default='默认'}</td>
+						<td>{$vo['title']}</td>
+						<td><img src="{$vo['thumb']}" class="imgtip" style="max-width:100px;max-height:100px;"/></td>
+						<td>{$vo['likes']}</td>
+						<td>{$vo['comments']}</td>
+						<td>{$vo['shares']}</td>
+						<td>{$status[$vo['status']]}</td>
+                        <if condition="isset($sign) and $sign neq 'wait' and $sign neq 'nopass'">
+						  <td>{$isdel[$vo['isdel']]}</td>
+                        </if>
+						<td><if condition="$vo['type'] eq '1'">是<else />否</if></td>
+						<td>{:date('Y-m-d H:i:s',$vo['addtime'])}</td>
+						<td>
+                            <a class="btn btn-xs btn-info view" data-id="{$vo['id']}">查看视频</a>
+                            
+                            <if condition="$vo['isdel'] eq '0' and $vo['status'] neq '0'">
+                            <a class="btn btn-xs btn-info comment" data-id="{$vo['id']}">评论列表</a>
+                            </if>
+                            
+                            <if condition="$vo['isdel'] eq '0' and $vo['status'] neq '0' and $vo['status'] neq '2'">
+                            <a class="btn btn-xs btn-warning xiajia" data-id="{$vo['id']}">下架视频</a>
+                            </if>
+                            <if condition="$vo['isdel'] eq '1'">
+                            <a class="btn btn-xs btn-success js-ajax-dialog-btn" href="{:url('Video/setDel',array('id'=>$vo['id'],'isdel'=>0,'reason'=>''))}">上架</a>
+                            </if>
+                            
+                            <if condition="$vo['status'] eq 0">
+                                <a class="btn btn-xs btn-success js-ajax-dialog-btn" href="{:url('Video/setstatus',array('id'=>$vo['id'],'status'=>1))}">同意</a>
+                                <a class="btn btn-xs btn-warning js-ajax-dialog-btn" href="{:url('Video/setstatus',array('id'=>$vo['id'],'status'=>2))}">拒绝</a>
+                            </if>
+                            
+                            <if condition="$vo['status'] eq 1">
+                                <!-- <a class="btn btn-xs btn-warning js-ajax-dialog-btn" href="{:url('Video/setstatus',array('id'=>$vo['id'],'status'=>2))}">拒绝</a> -->
+                            </if>
+                            
+                            <if condition="$vo['status'] eq -1">
+                                <!-- <a class="btn btn-xs btn-success js-ajax-dialog-btn" href="{:url('Video/setstatus',array('id'=>$vo['id'],'status'=>1))}">同意</a> -->
+                            </if>
+                            
+                            
+                            <a class="btn btn-xs btn-primary" href='{:url("Video/edit",array("id"=>$vo["id"]))}'>{:lang('EDIT')}</a>
+							<a class="btn btn-xs btn-danger js-ajax-delete" href="{:url('Video/del',array('id'=>$vo['id']))}">{:lang('DELETE')}</a>
+						</td>
+					</tr>
+					</foreach>
+				</tbody>
+			</table>
+			<div class="pagination">{$page}</div>
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+	<script type="text/javascript">
+        $(function(){
+            
+            Wind.use('layer');
+            $('.comment').click(function(){
+                var _this=$(this);
+                var id=_this.data('id');
+
+                layer.open({
+                    type: 2,
+                    title: '评论列表',
+                    shadeClose: true,
+                    shade: 0.8,
+                    area: ['800px', '90%'],
+                    content: '/admin/videocom/index?videoid='+id
+                }); 
+                
+            });
+            
+            $('.view').click(function(){
+                var _this=$(this);
+                var id=_this.data('id');
+
+                layer.open({
+                    type: 2,
+                    title: '查看',
+                    shadeClose: true,
+                    shade: 0.8,
+                    area: ['500px', '600px'],
+                    content: '/admin/Video/see?id='+id
+                }); 
+                
+            });
+            
+            $('.xiajia').click(function(){
+                var _this=$(this);
+                var id=_this.data('id');
+                
+                layer.prompt({
+                    formType: 2,
+                    title: '请输入下架原因',
+                    area: ['800px', '100px'] //自定义文本域宽高
+                }, function(value, index, elem){
+                    $.ajax({
+                        url:'{:url('video/setDel')}',
+                        type:'POST',
+                        data:{id:id,isdel:1,reason:value},
+                        dataType:'json',
+                        success:function(data){
+                            var code=data.code;
+                            if(code==0){
+                                layer.msg(data.msg);
+                                return !1;
+                            }
+                            layer.msg(data.msg,{},function(){
+                                layer.closeAll();
+                                reloadPage(window);
+                            });
+                            
+                        },
+                        error:function(){
+                            layer.msg('操作失败，请重试')
+                        }
+                    });
+                    
+                });
+                
+            })
+        })
+	</script>
+</body>
+</html>

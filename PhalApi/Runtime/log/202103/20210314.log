@@ -1,0 +1,1550 @@
+2021-03-14 01:49:19|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(166069, 165933, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(166069, 165933, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 01:55:18|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(166300, 165940, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(166300, 165940, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 01:55:23|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(168845, 165940, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(168845, 165940, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 01:55:55|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(169209, 165940, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(169209, 165940, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 01:56:18|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(169729, 165940, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(169729, 165940, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 01:57:31|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(170342, 165924, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(170342, 165924, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 01:57:32|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(167700, 165924, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(167700, 165924, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 01:57:34|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(166304, 165924, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(166304, 165924, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 01:57:48|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(166949, 165940, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(166949, 165940, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 01:58:46|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(169605, 165940, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(169605, 165940, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 01:58:49|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(168223, 165940, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(168223, 165940, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 01:58:54|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(170004, 165940, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(170004, 165940, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 01:59:06|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(169967, 165940, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(169967, 165940, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 01:59:17|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(166182, 165940, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(166182, 165940, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 01:59:20|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(169006, 165940, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(169006, 165940, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 01:59:42|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(169617, 165940, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(169617, 165940, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 02:00:39|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(166278, 165940, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(166278, 165940, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 02:00:58|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(170688, 165940, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(170688, 165940, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 02:38:31|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(167327, 165929, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(167327, 165929, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 02:38:35|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(167051, 165929, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(167051, 165929, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 02:38:38|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(170565, 165929, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(170565, 165929, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 02:41:41|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(167443, 165938, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(167443, 165938, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 02:41:46|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(168333, 165938, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(168333, 165938, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 03:01:07|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(167355, 165976, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(167355, 165976, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 03:01:31|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(167774, 165972, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(167774, 165972, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 03:01:35|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(170267, 165971, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(170267, 165971, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 03:03:05|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(170764, 165968, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(170764, 165968, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 03:03:54|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(169819, 165971, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(169819, 165971, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 03:05:52|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(168761, 165975, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(168761, 165975, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 06:10:58|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(167302, 165933, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(167302, 165933, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 06:11:12|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(168556, 165933, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(168556, 165933, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 06:11:28|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(169321, 165933, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(169321, 165933, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 06:13:09|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(167378, 165933, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(167378, 165933, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 06:13:16|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(170776, 165933, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(170776, 165933, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 06:13:35|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(166255, 165933, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(166255, 165933, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 06:14:04|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(168669, 165933, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(168669, 165933, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 12:15:10|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(166741, 165934, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(166741, 165934, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 12:15:42|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(170004, 165934, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(170004, 165934, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 12:16:06|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(166668, 165934, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(166668, 165934, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 12:16:15|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(169653, 165934, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(169653, 165934, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 12:17:16|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(168565, 165934, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(168565, 165934, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 12:17:35|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(169100, 165934, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(169100, 165934, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 12:18:11|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(166222, 165934, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(166222, 165934, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 12:18:40|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(166610, 165934, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(166610, 165934, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 12:19:19|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(166182, 165934, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(166182, 165934, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 12:19:41|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(167381, 165934, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(167381, 165934, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 12:25:56|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(167319, 165941, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(167319, 165941, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 12:35:09|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(167933, 165927, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(167933, 165927, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 12:35:24|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(166917, 165927, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(166917, 165927, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 12:36:07|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(167339, 165927, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(167339, 165927, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 12:36:22|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(170842, 165927, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(170842, 165927, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 12:36:34|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(168959, 165927, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(168959, 165927, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 12:36:56|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(166507, 165927, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(166507, 165927, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 12:37:24|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(167195, 165927, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(167195, 165927, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 12:37:32|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(169758, 165927, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(169758, 165927, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 12:38:00|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(169034, 165927, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(169034, 165927, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:06:27|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(169958, 165929, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(169958, 165929, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:06:36|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(166554, 165927, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(166554, 165927, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:10:47|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(166208, 165934, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(166208, 165934, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:11:19|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(166705, 165934, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(166705, 165934, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:11:29|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(166129, 165934, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(166129, 165934, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:11:31|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(169710, 165934, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(169710, 165934, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:11:38|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(167586, 165934, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(167586, 165934, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:11:44|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(169900, 165934, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(169900, 165934, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:12:07|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(169765, 165934, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(169765, 165934, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:12:10|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(170264, 165934, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(170264, 165934, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:13:01|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(166967, 165934, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(166967, 165934, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:13:06|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(169646, 165934, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(169646, 165934, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:13:33|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(170129, 165934, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(170129, 165934, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:13:43|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(168608, 165934, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(168608, 165934, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:14:29|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(167477, 165934, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(167477, 165934, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:14:58|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(166136, 165934, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(166136, 165934, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:15:20|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(166960, 165934, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(166960, 165934, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:15:25|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(169485, 165934, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(169485, 165934, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:15:38|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(168070, 165934, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(168070, 165934, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:15:41|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(168568, 165934, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(168568, 165934, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:16:00|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(167132, 165934, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(167132, 165934, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:16:11|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(166338, 165934, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(166338, 165934, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:16:16|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(170347, 165934, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(170347, 165934, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:16:27|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(170517, 165934, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(170517, 165934, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:17:46|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(168679, 165934, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(168679, 165934, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:17:50|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(167349, 165934, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(167349, 165934, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:18:12|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(168185, 165934, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(168185, 165934, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:18:20|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(170275, 165934, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(170275, 165934, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:18:40|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(169579, 165934, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(169579, 165934, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:19:10|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(170136, 165934, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(170136, 165934, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:19:25|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(170577, 165934, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(170577, 165934, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:19:28|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(169726, 165934, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(169726, 165934, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:19:35|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(168318, 165934, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(168318, 165934, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:19:58|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(168205, 165934, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(168205, 165934, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:25:05|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(166051, 165934, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(166051, 165934, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:25:09|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(168627, 165934, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(168627, 165934, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:25:13|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(167472, 165934, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(167472, 165934, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:25:35|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(168997, 165934, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(168997, 165934, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:26:03|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(169071, 165998, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(169071, 165998, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:26:26|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(170784, 165998, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(170784, 165998, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:26:38|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(170006, 165934, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(170006, 165934, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:27:08|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(168756, 165934, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(168756, 165934, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:27:55|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(170036, 165934, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(170036, 165934, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:28:40|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(167665, 165934, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(167665, 165934, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:29:13|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(167588, 165934, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(167588, 165934, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:29:26|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(166381, 165934, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(166381, 165934, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:29:38|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(166714, 165934, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(166714, 165934, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:29:57|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(170073, 165934, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(170073, 165934, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 13:32:06|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(169240, 165965, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(169240, 165965, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 14:02:00|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(174485, 165963, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(174485, 165963, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 14:02:43|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(173836, 165958, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(173836, 165958, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 14:03:26|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(174985, 165949, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(174985, 165949, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 14:03:56|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(174542, 165948, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(174542, 165948, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 14:04:47|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(171802, 165963, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(171802, 165963, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 14:06:36|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(175249, 165958, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(175249, 165958, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 14:07:32|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(173875, 165969, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(173875, 165969, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 14:07:55|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(174963, 165963, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(174963, 165963, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 14:10:12|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(173760, 165959, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(173760, 165959, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 14:10:24|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(171392, 165959, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(171392, 165959, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 14:10:32|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(174277, 165959, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(174277, 165959, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 14:11:11|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(174912, 165959, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(174912, 165959, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 14:22:07|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(175062, 165924, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(175062, 165924, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 14:22:26|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(171753, 165924, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(171753, 165924, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 14:22:56|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(173233, 165924, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(173233, 165924, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 14:23:04|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(175429, 165924, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(175429, 165924, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 14:59:37|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(175868, 165924, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(175868, 165924, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 14:59:53|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(174462, 165924, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(174462, 165924, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 15:00:08|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(174977, 165924, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(174977, 165924, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 15:00:44|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(176058, 165924, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(176058, 165924, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 15:21:02|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(175773, 165924, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(175773, 165924, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 15:21:10|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(171798, 165924, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(171798, 165924, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 15:21:38|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(172266, 165924, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(172266, 165924, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 15:21:42|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(171384, 165924, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(171384, 165924, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 15:22:22|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(173205, 165924, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(173205, 165924, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 15:22:57|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(175479, 165924, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(175479, 165924, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 15:23:17|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(173978, 165924, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(173978, 165924, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 15:59:18|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(173010, 165924, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(173010, 165924, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 15:59:24|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(172418, 165924, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(172418, 165924, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 15:59:48|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(172585, 165924, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(172585, 165924, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 16:00:58|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(173886, 165924, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(173886, 165924, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 16:01:07|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(174398, 165924, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(174398, 165924, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 16:01:21|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(171652, 165924, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(171652, 165924, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 16:02:03|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(173941, 165924, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(173941, 165924, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 16:02:07|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(171178, 165924, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(171178, 165924, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 16:02:35|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(175021, 165924, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(175021, 165924, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 16:02:42|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(174270, 165924, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(174270, 165924, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 16:02:47|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(171920, 165924, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(171920, 165924, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 16:03:52|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(172688, 165924, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(172688, 165924, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 16:04:12|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(172343, 165924, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(172343, 165924, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 16:04:51|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(175589, 165924, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(175589, 165924, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 16:04:58|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(173721, 165924, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(173721, 165924, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 16:05:28|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(173406, 165924, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(173406, 165924, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 16:05:34|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(174427, 165924, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(174427, 165924, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 16:05:40|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(172361, 165924, NULL, 121, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(172361, 165924, NULL, 121, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 16:05:53|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(175420, 165924, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(175420, 165924, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 16:06:29|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(175120, 165924, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(175120, 165924, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 16:06:41|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(172907, 165924, NULL, 122, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(172907, 165924, NULL, 122, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 16:10:21|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(175130, 165924, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(175130, 165924, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-14 16:20:11|ERROR|Live.zombieSendGift|PDOException: Column 'showid' cannot be null in /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/yunbao.com/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/yunbao.com/PhalApi/Appapi/Model/Live.php(476): NotORM_Result->insert(Array)
+#3 /www/wwwroot/yunbao.com/PhalApi/Appapi/Domain/Live.php(155): Model_Live->sendGift(174774, 171225, NULL, 127, 1, NULL)
+#4 /www/wwwroot/yunbao.com/PhalApi/Appapi/Api/Live.php(1864): Domain_Live->sendGift(174774, 171225, NULL, 127, 1, NULL)
+#5 /www/wwwroot/yunbao.com/PhalApi/PhalApi/PhalApi.php(57): Api_Live->zombieSendGift()
+#6 /www/wwwroot/yunbao.com/public/appapi/index.php(19): PhalApi->response()
+#7 {main}

@@ -1,0 +1,74 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li ><a href="{:url('Shopcash/index')}">店铺余额提现列表</a></li>
+			<li class="active"><a >{:lang('EDIT')}</a></li>
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('Shopcash/editPost')}">
+            <div class="form-group">
+				<label for="input-name" class="col-sm-2 control-label"><span class="form-required">*</span>会员</label>
+				<div class="col-md-6 col-sm-10" style="padding-top:7px;">
+					{$data['userinfo']['user_nicename']} ({$data['uid']})
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-money" class="col-sm-2 control-label"><span class="form-required">*</span>提现金额</label>
+				<div class="col-md-6 col-sm-10" style="padding-top:7px;">
+					{$data['money']}
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-name" class="col-sm-2 control-label"><span class="form-required">*</span>提现账号</label>
+				<div class="col-md-6 col-sm-10" style="padding-top:7px;">
+					{$type[$data['type']]}  <br>
+                    {$data['name']}  <br>
+                    {$data['account']}
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-trade_no" class="col-sm-2 control-label"><span class="form-required">*</span>第三方支付订单号</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-trade_no" name="trade_no" value="{$data['trade_no']}">
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-trade_no" class="col-sm-2 control-label"><span class="form-required">*</span>状态</label>
+				<div class="col-md-6 col-sm-10">
+					<select class="form-control" name="status">
+                        <volist name="status" id="v">
+                        <option value="{$key}" <eq name="data['status']" value="$key">selected</eq>>{$v}</option>
+                        </volist>
+                    </select>
+				</div>
+			</div>
+            
+            <if condition="$data['status'] eq 0">
+	            <div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<input type="hidden" name="id" value="{$data.id}" />
+						<input type="hidden" name="uid" value="{$data.uid}" />
+						<input type="hidden" name="money" value="{$data.money}" />
+						<button type="submit" class="btn btn-primary js-ajax-submit">{:lang('EDIT')}</button>
+						<a class="btn btn-default" href="{:url('Shopcash/index')}">{:lang('BACK')}</a>
+					</div>
+				</div>
+			<else />
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						
+						<a class="btn btn-default" href="{:url('Shopcash/index')}">{:lang('BACK')}</a>
+					</div>
+				</div>
+            </if>
+
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>
