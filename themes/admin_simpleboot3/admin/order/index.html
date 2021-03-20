@@ -80,7 +80,7 @@
 
         <input type="submit" class="btn btn-primary" value="搜索"/>
         <a class="btn btn-danger" href="{:url('admin/Order/index')}">清空</a>
-        <input type="button" class="btn btn-success" value="导出" onclick="form1.action='{:url('order/export')}';form1.submit();"/>
+        <input type="button" class="btn btn-success" value="导出" onclick="form1.action='{:url('order/export')}';"/>
         <br>
         <br>
         订单数量：{$list_count} / 充值人数：{$list_users} / 金额：{$list_money} (根据条件统计)
