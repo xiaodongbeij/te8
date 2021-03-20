@@ -306,6 +306,167 @@ class Api_Home extends PhalApi_Api {
 
         return $rs;
     }
+    
+    
+    
+    /**
+     * 天鹅配置信息
+     * @desc 用于获取配置信息
+     * @return int code 操作码，0表示成功
+     * @return array info 
+     * @return array info[0] 配置信息
+     * @return object info[0].guide 引导页
+	 * @return string info[0].guide.switch 开关，0关1开
+	 * @return string info[0].guide.type 类型，0图片1视频
+	 * @return string info[0].guide.time 图片时间
+	 * @return array  info[0].guide.list
+	 * @return string info[0].guide.list[].thumb 图片、视频链接
+	 * @return string info[0].guide.list[].href 页面链接
+     * @return string msg 提示信息
+     */
+    public function getPubConfig() {
+        $rs = array('code' => 0, 'msg' => '', 'info' => array());
+        $key = 'gethome';
+        
+        if($info = getcache($key))
+        {
+            $rs['info'][0] = $info;
+            return $rs;
+        }
+        $config = getConfigPub();
+        
+        $info['service_address'] = $config['service_address'];
+        
+        $info['apk_ver'] = $config['apk_ver'];
+        $info['apk_url'] = $config['apk_url'];
+        $info['apk_des'] = $config['apk_des'];
+        $info['ipa_ver'] = $config['ipa_ver'];
+        $info['ipa_url'] = $config['ipa_url'];
+        $info['ipa_des'] = $config['ipa_des'];
+        $info['telegram'] = $config['telegram'];
+        $info['potato'] = $config['potato'];
+        $info['chatserver'] = $config['chatserver'];
+        
+        
+        // $ConfigPri = getConfigPri();
+        // unset($info['site_url']);
+        // unset($info['site_seo_title']);
+        // unset($info['site_seo_keywords']);
+        // unset($info['site_seo_description']);
+        // unset($info['site_icp']);
+        // unset($info['site_gwa']);
+        // unset($info['site_admin_email']);
+        // unset($info['site_analytics']);
+        // unset($info['copyright']);
+
+        // unset($info['sina_icon']);
+        // unset($info['sina_title']);
+        // unset($info['sina_desc']);
+        // unset($info['sina_url']);
+        // unset($info['qq_icon']);
+        // unset($info['qq_title']);
+        // unset($info['qq_desc']);
+        // unset($info['qq_url']);
+        // unset($info['payment_des']);
+
+        // $info_pri = getConfigPri();
+
+        // $list = getLiveClass();
+        // $videoclasslist = getVideoClass();
+        // $level= getLevelList();
+
+        // foreach($level as $k=>$v){
+        //     unset($v['level_up']);
+        //     unset($v['addtime']);
+        //     unset($v['id']);
+        //     unset($v['levelname']);
+        //     $level[$k]=$v;
+        // }
+
+        // $levelanchor= getLevelAnchorList();
+
+        // foreach($levelanchor as $k=>$v){
+        //     unset($v['level_up']);
+        //     unset($v['addtime']);
+        //     unset($v['id']);
+        //     unset($v['levelname']);
+        //     $levelanchor[$k]=$v;
+        // }
+        // $info['chatserver'] = $ConfigPri['chatserver'];
+        // $info['liveclass']=$list;
+
+        // $info['videoclass']=$videoclasslist;
+
+        // $info['level']=$level;
+
+        // $info['levelanchor']=$levelanchor;
+
+        // $info['tximgfolder']='';//腾讯云图片存储目录
+        // $info['txvideofolder']='';//腾讯云视频存储目录
+        // $info['txcloud_appid']='';//腾讯云视频APPID
+        // $info['txcloud_region']='';//腾讯云视频地区
+        // $info['txcloud_bucket']='';//腾讯云视频存储桶
+        // $info['cloudtype']='1';//视频云存储类型
+
+        // $info['qiniu_domain']=DI()->config->get('app.Qiniu.space_host').'/';//七牛云存储空间地址
+        // $info['qiniu_uphost']=DI()->config->get('app.Qiniu.uphost');//七牛上传域名（小程序使用）
+        // $info['qiniu_region']=DI()->config->get('app.Qiniu.region');//七牛上存储区域（小程序使用）
+        // $info['video_audit_switch']=$info_pri['video_audit_switch']; //视频审核是否开启
+
+        // /* 私信开关 */
+        // $info['letter_switch']=$info_pri['letter_switch']; //视频审核是否开启
+
+        // /* 引导页 */
+        // $domain = new Domain_Guide();
+        // $guide_info = $domain->getGuide();
+
+        // $info['guide']=$guide_info;
+
+        // /** 敏感词集合*/
+        // $dirtyarr=array();
+        // if($info_pri['sensitive_words']){
+        //     $dirtyarr=explode(',',$info_pri['sensitive_words']);
+        // }
+        // $info['sensitive_words']=$dirtyarr;
+        // //视频水印图片
+        // $info['video_watermark']=get_upload_path($info_pri['video_watermark']); //视频审核是否开启
+
+        // $info['shopexplain_url']=$info['site']."/portal/page/index?id=38";
+        // $info['stricker_url']=$info['site']."/portal/page/index?id=39";
+
+        // $info['shop_system_name']=$info_pri['shop_system_name']; //系统店铺名称
+
+        // $info['login_private_url']=get_upload_path($info['login_private_url']);
+        // $info['login_service_url']=get_upload_path($info['login_service_url']);
+
+        // $info['socket_url']=$info_pri['chatserver']; //socket url地址（小程序用）
+
+        // $info['share_img'] = DI()->config->get('app.share_img');
+
+        // $info['slide_app'] = $level = DI()->notorm->slide_item
+        //     ->select("title,image,url,target,description,content")
+        //     ->where('status = 1 and slide_id = 2')
+        //     ->order("list_order desc")
+        //     ->fetchAll();
+
+        // //APP设置
+        // $app_set = DI()->notorm->option
+        //     ->select("id,option_value")
+        //     ->where('id = 10')
+        //     ->fetchOne();
+        // $info['app_set'] = json_decode($app_set['option_value'], true);
+        
+
+
+        setcaches($key,$info);
+        $rs['info'][0] = $info;
+
+        return $rs;
+    }
+    
+    
+    
+    
 
     /**
      * 登录方式开关信息
