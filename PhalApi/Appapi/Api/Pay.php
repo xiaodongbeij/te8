@@ -102,6 +102,21 @@ class Api_Pay extends PhalApi_Api
         $info['order_id'] = $this->getOrderid($uid);
         //金额
         $info['money'] = $money;
+
+        //判断首冲二充三充
+        $charge_num = 0;
+        $order_num = DI()->notorm->order->where('user_id = ?', $uid)->count();
+        switch ($order_num) {
+            case 1:
+                $charge_num = 1;
+                break;
+            case 2:
+                $charge_num = 2;
+                break;
+            case 3:
+                $charge_num = 3;
+                break;    
+        }
     
         //生成订单
         $order = [
@@ -114,7 +129,8 @@ class Api_Pay extends PhalApi_Api
             'channel_id' => $info['id'],
             'order_money' => $info['money'],
             'addtime' => time(),
-            'type' => 1
+            'type' => 1,
+            'charge_num' => $charge_num,
         ];
 
         // 判断银行卡充值
