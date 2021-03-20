@@ -120,3 +120,91 @@ Stack trace:
 #4 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/PhalApi.php(57): Api_Gaming->withdrawals()
 #5 /www/wwwroot/admgl68.te8.tv/public/appapi/index.php(19): PhalApi->response()
 #6 {main}
+2021-03-20 18:40:25|ERROR|Pay.GetChannelOrder|PDOException: Unknown column 'charge_num' in 'field list' in /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/admgl68.te8.tv/PhalApi/Appapi/Api/Pay.php(143): NotORM_Result->insert(Array)
+#3 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/PhalApi.php(57): Api_Pay->getChannelOrder()
+#4 /www/wwwroot/admgl68.te8.tv/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-20 18:40:52|ERROR|Pay.GetChannelOrder|PDOException: Unknown column 'charge_num' in 'field list' in /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/admgl68.te8.tv/PhalApi/Appapi/Api/Pay.php(143): NotORM_Result->insert(Array)
+#3 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/PhalApi.php(57): Api_Pay->getChannelOrder()
+#4 /www/wwwroot/admgl68.te8.tv/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-20 18:40:59|ERROR|Pay.GetChannelOrder|PDOException: Unknown column 'charge_num' in 'field list' in /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/admgl68.te8.tv/PhalApi/Appapi/Api/Pay.php(143): NotORM_Result->insert(Array)
+#3 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/PhalApi.php(57): Api_Pay->getChannelOrder()
+#4 /www/wwwroot/admgl68.te8.tv/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-20 18:41:30|ERROR|Pay.GetChannelOrder|PDOException: Unknown column 'charge_num' in 'field list' in /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/admgl68.te8.tv/PhalApi/Appapi/Api/Pay.php(143): NotORM_Result->insert(Array)
+#3 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/PhalApi.php(57): Api_Pay->getChannelOrder()
+#4 /www/wwwroot/admgl68.te8.tv/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-20 18:41:35|ERROR|Pay.GetChannelOrder|PDOException: Unknown column 'charge_num' in 'field list' in /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/admgl68.te8.tv/PhalApi/Appapi/Api/Pay.php(143): NotORM_Result->insert(Array)
+#3 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/PhalApi.php(57): Api_Pay->getChannelOrder()
+#4 /www/wwwroot/admgl68.te8.tv/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-20 18:42:28|ERROR|Pay.GetChannelOrder|PDOException: Unknown column 'charge_num' in 'field list' in /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/admgl68.te8.tv/PhalApi/Appapi/Api/Pay.php(143): NotORM_Result->insert(Array)
+#3 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/PhalApi.php(57): Api_Pay->getChannelOrder()
+#4 /www/wwwroot/admgl68.te8.tv/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-20 18:42:36|ERROR|Pay.GetChannelOrder|PDOException: Unknown column 'charge_num' in 'field list' in /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/admgl68.te8.tv/PhalApi/Appapi/Api/Pay.php(143): NotORM_Result->insert(Array)
+#3 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/PhalApi.php(57): Api_Pay->getChannelOrder()
+#4 /www/wwwroot/admgl68.te8.tv/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-20 18:42:42|ERROR|Pay.GetChannelOrder|PDOException: Unknown column 'charge_num' in 'field list' in /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/admgl68.te8.tv/PhalApi/Appapi/Api/Pay.php(143): NotORM_Result->insert(Array)
+#3 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/PhalApi.php(57): Api_Pay->getChannelOrder()
+#4 /www/wwwroot/admgl68.te8.tv/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-20 18:43:16|ERROR|Pay.GetChannelOrder|PDOException: Unknown column 'charge_num' in 'field list' in /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/admgl68.te8.tv/PhalApi/Appapi/Api/Pay.php(143): NotORM_Result->insert(Array)
+#3 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/PhalApi.php(57): Api_Pay->getChannelOrder()
+#4 /www/wwwroot/admgl68.te8.tv/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-20 18:43:23|ERROR|Pay.GetChannelOrder|PDOException: Unknown column 'charge_num' in 'field list' in /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/admgl68.te8.tv/PhalApi/Appapi/Api/Pay.php(143): NotORM_Result->insert(Array)
+#3 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/PhalApi.php(57): Api_Pay->getChannelOrder()
+#4 /www/wwwroot/admgl68.te8.tv/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
+2021-03-20 18:43:35|ERROR|Pay.GetChannelOrder|PDOException: Unknown column 'charge_num' in 'field list' in /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php(339): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php(356): NotORM_Result->insert_multi(Array)
+#2 /www/wwwroot/admgl68.te8.tv/PhalApi/Appapi/Api/Pay.php(143): NotORM_Result->insert(Array)
+#3 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/PhalApi.php(57): Api_Pay->getChannelOrder()
+#4 /www/wwwroot/admgl68.te8.tv/public/appapi/index.php(19): PhalApi->response()
+#5 {main}
