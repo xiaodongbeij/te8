@@ -81,6 +81,7 @@ class NotifyController extends HomebaseController
 //                'next_money' => $user['user_money'] + $order['order_money'],
                 'next_money' => $user['coin'] + $order['order_money'],
                 'change_money' => $order['order_money'],
+                'remark' => '充值',
                 'addtime' => time()
             ];
             $res2 = Db::table('cmf_user_change')->insert($change);
@@ -266,6 +267,7 @@ class NotifyController extends HomebaseController
                 'money' => $user['coin'],
                 'next_money' => $user['coin'] + ($data['transAmount'] / 100),
                 'change_money' => $data['transAmount'] / 100,
+                'remark' => '充值',
                 'addtime' => time()
             ];
             $res2 = Db::table('cmf_user_change')->insert($change);
