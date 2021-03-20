@@ -22,3 +22,101 @@ Stack trace:
 #3 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/PhalApi.php(57): Api_Live->enterRoom()
 #4 /www/wwwroot/admgl68.te8.tv/public/appapi/index.php(19): PhalApi->response()
 #5 {main}
+2021-03-20 16:05:46|ERROR|Gaming.AllWithdrawals|PDOException: Lock wait timeout exceeded; try restarting transaction in /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/admgl68.te8.tv/PhalApi/Common/functions.php(4196): NotORM_Result->update(Array)
+#2 /www/wwwroot/admgl68.te8.tv/PhalApi/Appapi/Api/Gaming.php(378): user_change_action(196420, 23, '100', '\xE6\xB8\xB8\xE6\x88\x8F\xE5\x8F\x96\xE6\xAC\xBE', '', '', '', '', '0016')
+#3 /www/wwwroot/admgl68.te8.tv/PhalApi/Appapi/Api/Gaming.php(196): Api_Gaming->money_change('http://hsl.yath...', '100', '\xE6\xB8\xB8\xE6\x88\x8F\xE5\x8F\x96\xE6\xAC\xBE', '0016')
+#4 /www/wwwroot/admgl68.te8.tv/PhalApi/Appapi/Api/Gaming.php(215): Api_Gaming->withdrawals()
+#5 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/PhalApi.php(57): Api_Gaming->allWithdrawals()
+#6 /www/wwwroot/admgl68.te8.tv/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-20 16:05:46|ERROR|Gaming.AllWithdrawals|PDOException: Lock wait timeout exceeded; try restarting transaction in /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/admgl68.te8.tv/PhalApi/Common/functions.php(4196): NotORM_Result->update(Array)
+#2 /www/wwwroot/admgl68.te8.tv/PhalApi/Appapi/Api/Gaming.php(378): user_change_action(196420, 23, '100', '\xE6\xB8\xB8\xE6\x88\x8F\xE5\x8F\x96\xE6\xAC\xBE', '', '', '', '', '0016')
+#3 /www/wwwroot/admgl68.te8.tv/PhalApi/Appapi/Api/Gaming.php(196): Api_Gaming->money_change('http://hsl.yath...', '100', '\xE6\xB8\xB8\xE6\x88\x8F\xE5\x8F\x96\xE6\xAC\xBE', '0016')
+#4 /www/wwwroot/admgl68.te8.tv/PhalApi/Appapi/Api/Gaming.php(215): Api_Gaming->withdrawals()
+#5 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/PhalApi.php(57): Api_Gaming->allWithdrawals()
+#6 /www/wwwroot/admgl68.te8.tv/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-20 16:05:47|ERROR|Gaming.AllWithdrawals|PDOException: Lock wait timeout exceeded; try restarting transaction in /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/admgl68.te8.tv/PhalApi/Common/functions.php(4196): NotORM_Result->update(Array)
+#2 /www/wwwroot/admgl68.te8.tv/PhalApi/Appapi/Api/Gaming.php(378): user_change_action(196420, 23, '100', '\xE6\xB8\xB8\xE6\x88\x8F\xE5\x8F\x96\xE6\xAC\xBE', '', '', '', '', '0016')
+#3 /www/wwwroot/admgl68.te8.tv/PhalApi/Appapi/Api/Gaming.php(196): Api_Gaming->money_change('http://hsl.yath...', '100', '\xE6\xB8\xB8\xE6\x88\x8F\xE5\x8F\x96\xE6\xAC\xBE', '0016')
+#4 /www/wwwroot/admgl68.te8.tv/PhalApi/Appapi/Api/Gaming.php(215): Api_Gaming->withdrawals()
+#5 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/PhalApi.php(57): Api_Gaming->allWithdrawals()
+#6 /www/wwwroot/admgl68.te8.tv/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-20 16:05:49|ERROR|Gaming.AllWithdrawals|PDOException: Lock wait timeout exceeded; try restarting transaction in /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/admgl68.te8.tv/PhalApi/Common/functions.php(4196): NotORM_Result->update(Array)
+#2 /www/wwwroot/admgl68.te8.tv/PhalApi/Appapi/Api/Gaming.php(378): user_change_action(196420, 23, '100', '\xE6\xB8\xB8\xE6\x88\x8F\xE5\x8F\x96\xE6\xAC\xBE', '', '', '', '', '0016')
+#3 /www/wwwroot/admgl68.te8.tv/PhalApi/Appapi/Api/Gaming.php(196): Api_Gaming->money_change('http://hsl.yath...', '100', '\xE6\xB8\xB8\xE6\x88\x8F\xE5\x8F\x96\xE6\xAC\xBE', '0016')
+#4 /www/wwwroot/admgl68.te8.tv/PhalApi/Appapi/Api/Gaming.php(215): Api_Gaming->withdrawals()
+#5 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/PhalApi.php(57): Api_Gaming->allWithdrawals()
+#6 /www/wwwroot/admgl68.te8.tv/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-20 16:05:49|ERROR|Gaming.AllWithdrawals|PDOException: Lock wait timeout exceeded; try restarting transaction in /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/admgl68.te8.tv/PhalApi/Common/functions.php(4196): NotORM_Result->update(Array)
+#2 /www/wwwroot/admgl68.te8.tv/PhalApi/Appapi/Api/Gaming.php(378): user_change_action(196420, 23, '100', '\xE6\xB8\xB8\xE6\x88\x8F\xE5\x8F\x96\xE6\xAC\xBE', '', '', '', '', '0016')
+#3 /www/wwwroot/admgl68.te8.tv/PhalApi/Appapi/Api/Gaming.php(196): Api_Gaming->money_change('http://hsl.yath...', '100', '\xE6\xB8\xB8\xE6\x88\x8F\xE5\x8F\x96\xE6\xAC\xBE', '0016')
+#4 /www/wwwroot/admgl68.te8.tv/PhalApi/Appapi/Api/Gaming.php(215): Api_Gaming->withdrawals()
+#5 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/PhalApi.php(57): Api_Gaming->allWithdrawals()
+#6 /www/wwwroot/admgl68.te8.tv/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-20 16:05:51|ERROR|Gaming.AllWithdrawals|PDOException: Lock wait timeout exceeded; try restarting transaction in /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/admgl68.te8.tv/PhalApi/Common/functions.php(4196): NotORM_Result->update(Array)
+#2 /www/wwwroot/admgl68.te8.tv/PhalApi/Appapi/Api/Gaming.php(378): user_change_action(196420, 23, '100', '\xE6\xB8\xB8\xE6\x88\x8F\xE5\x8F\x96\xE6\xAC\xBE', '', '', '', '', '0016')
+#3 /www/wwwroot/admgl68.te8.tv/PhalApi/Appapi/Api/Gaming.php(196): Api_Gaming->money_change('http://hsl.yath...', '100', '\xE6\xB8\xB8\xE6\x88\x8F\xE5\x8F\x96\xE6\xAC\xBE', '0016')
+#4 /www/wwwroot/admgl68.te8.tv/PhalApi/Appapi/Api/Gaming.php(215): Api_Gaming->withdrawals()
+#5 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/PhalApi.php(57): Api_Gaming->allWithdrawals()
+#6 /www/wwwroot/admgl68.te8.tv/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-20 16:05:51|ERROR|Gaming.AllWithdrawals|PDOException: Lock wait timeout exceeded; try restarting transaction in /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/admgl68.te8.tv/PhalApi/Common/functions.php(4196): NotORM_Result->update(Array)
+#2 /www/wwwroot/admgl68.te8.tv/PhalApi/Appapi/Api/Gaming.php(378): user_change_action(196420, 23, '100', '\xE6\xB8\xB8\xE6\x88\x8F\xE5\x8F\x96\xE6\xAC\xBE', '', '', '', '', '0016')
+#3 /www/wwwroot/admgl68.te8.tv/PhalApi/Appapi/Api/Gaming.php(196): Api_Gaming->money_change('http://hsl.yath...', '100', '\xE6\xB8\xB8\xE6\x88\x8F\xE5\x8F\x96\xE6\xAC\xBE', '0016')
+#4 /www/wwwroot/admgl68.te8.tv/PhalApi/Appapi/Api/Gaming.php(215): Api_Gaming->withdrawals()
+#5 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/PhalApi.php(57): Api_Gaming->allWithdrawals()
+#6 /www/wwwroot/admgl68.te8.tv/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-20 16:05:51|ERROR|Gaming.AllWithdrawals|PDOException: Lock wait timeout exceeded; try restarting transaction in /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/admgl68.te8.tv/PhalApi/Common/functions.php(4196): NotORM_Result->update(Array)
+#2 /www/wwwroot/admgl68.te8.tv/PhalApi/Appapi/Api/Gaming.php(378): user_change_action(196420, 23, '100', '\xE6\xB8\xB8\xE6\x88\x8F\xE5\x8F\x96\xE6\xAC\xBE', '', '', '', '', '0016')
+#3 /www/wwwroot/admgl68.te8.tv/PhalApi/Appapi/Api/Gaming.php(196): Api_Gaming->money_change('http://hsl.yath...', '100', '\xE6\xB8\xB8\xE6\x88\x8F\xE5\x8F\x96\xE6\xAC\xBE', '0016')
+#4 /www/wwwroot/admgl68.te8.tv/PhalApi/Appapi/Api/Gaming.php(215): Api_Gaming->withdrawals()
+#5 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/PhalApi.php(57): Api_Gaming->allWithdrawals()
+#6 /www/wwwroot/admgl68.te8.tv/public/appapi/index.php(19): PhalApi->response()
+#7 {main}
+2021-03-20 16:06:19|ERROR|Gaming.Withdrawals|PDOException: Lock wait timeout exceeded; try restarting transaction in /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/admgl68.te8.tv/PhalApi/Common/functions.php(4196): NotORM_Result->update(Array)
+#2 /www/wwwroot/admgl68.te8.tv/PhalApi/Appapi/Api/Gaming.php(378): user_change_action(196420, 23, '100', '\xE6\xB8\xB8\xE6\x88\x8F\xE5\x8F\x96\xE6\xAC\xBE', '', '', '', '', '0016')
+#3 /www/wwwroot/admgl68.te8.tv/PhalApi/Appapi/Api/Gaming.php(196): Api_Gaming->money_change('http://hsl.yath...', '100', '\xE6\xB8\xB8\xE6\x88\x8F\xE5\x8F\x96\xE6\xAC\xBE', '0016')
+#4 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/PhalApi.php(57): Api_Gaming->withdrawals()
+#5 /www/wwwroot/admgl68.te8.tv/public/appapi/index.php(19): PhalApi->response()
+#6 {main}
+2021-03-20 16:06:20|ERROR|Gaming.Withdrawals|PDOException: Lock wait timeout exceeded; try restarting transaction in /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php:258
+Stack trace:
+#0 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/NotORM/NotORM/Result.php(410): NotORM_Result->query('UPDATE cmf_user...', Array)
+#1 /www/wwwroot/admgl68.te8.tv/PhalApi/Common/functions.php(4196): NotORM_Result->update(Array)
+#2 /www/wwwroot/admgl68.te8.tv/PhalApi/Appapi/Api/Gaming.php(378): user_change_action(196420, 23, '100', '\xE6\xB8\xB8\xE6\x88\x8F\xE5\x8F\x96\xE6\xAC\xBE', '', '', '', '', '0016')
+#3 /www/wwwroot/admgl68.te8.tv/PhalApi/Appapi/Api/Gaming.php(196): Api_Gaming->money_change('http://hsl.yath...', '100', '\xE6\xB8\xB8\xE6\x88\x8F\xE5\x8F\x96\xE6\xAC\xBE', '0016')
+#4 /www/wwwroot/admgl68.te8.tv/PhalApi/PhalApi/PhalApi.php(57): Api_Gaming->withdrawals()
+#5 /www/wwwroot/admgl68.te8.tv/public/appapi/index.php(19): PhalApi->response()
+#6 {main}
