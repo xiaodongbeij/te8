@@ -40,7 +40,7 @@ class GameController extends HomebaseController
             ]);
         }
 
-        $this->start = date("Y-m-d H:i:s",strtotime('-10 minute'));
+        $this->start = date("Y-m-d H:i:s",strtotime('-1 day'));
         $this->end = date("Y-m-d H:i:s",strtotime('+10 minute'));
 //        $con = getConfigPri();
 //        $this->domain = $con['tripartite_domain'];
@@ -108,7 +108,7 @@ class GameController extends HomebaseController
                 $insert[] = $temp;
             }
         }
-//        var_dump($insert);die;
+        var_dump($insert);die;
         $res = Db::table('cmf_game_record')->insertAll($insert,true);
         var_dump($res);
     }
