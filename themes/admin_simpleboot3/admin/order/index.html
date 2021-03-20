@@ -16,7 +16,7 @@
         <li class="active"><a>订单管理</a></li>
 <!--        <li><a href="{:url('Channel/add')}">{:lang('ADD')}</a></li>-->
     </ul>
-    <form class="well form-inline margin-top-20" method="post" action="{:url('admin/Order/index')}">
+    <form class="well form-inline margin-top-20" method="post" name="form1" action="{:url('admin/Order/index')}">
 
         订单编号：
         <input class="form-control" type="text" name="order_sn" style="width: 200px;" value="{:input('request.order_sn')}"
@@ -46,6 +46,13 @@
             <option value="3" <if condition="input('request.payway') neq '' && input('request.payway') eq 3">selected</if>>银行卡</option>
         </select>
         <p></p>
+        首冲：
+        <select class="form-control" name="charge_num">
+            <option value="">全部</option>
+            <option value="1" <if condition="input('request.charge_num') neq '' && input('request.charge_num') eq 1">selected</if>>首冲</option>
+            <option value="2" <if condition="input('request.charge_num') neq '' && input('request.charge_num') eq 2">selected</if>>二充</option>
+            <option value="3" <if condition="input('request.charge_num') neq '' && input('request.charge_num') eq 3">selected</if>>三充</option>
+        </select>
         订单状态：
         <select class="form-control" name="order_status">
             <option value="">全部</option>
@@ -73,8 +80,10 @@
 
         <input type="submit" class="btn btn-primary" value="搜索"/>
         <a class="btn btn-danger" href="{:url('admin/Order/index')}">清空</a>
+        <input type="button" class="btn btn-success" value="导出" onclick="form1.action='{:url('order/export')}';form1.submit();"/>
         <br>
         <br>
+        订单数量：{$list_count} / 充值人数：{$list_users} / 金额：{$list_money} (根据条件统计)
     </form>
     <form method="post" class="js-ajax-form">
 

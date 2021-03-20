@@ -56,12 +56,23 @@ class OrderController extends AdminBaseController
         $pay_status = isset($data['pay_status']) ? $data['pay_status']: '';
         if($pay_status != '') $where[]=['pay_status', '=', $pay_status];
 
+        $charge_num = isset($data['charge_num']) ? $data['charge_num']: '';
+        if($charge_num != '') $where[]=['charge_num', '=', $charge_num];
+
         $list = Order::with(['channel'])->where($where)->order('id desc')->paginate(20);
+        $list_count = Order::where($where)->count();
+        $list_users = Order::where($where)->field('id,user_id')->group('user_id')->count();
+        $list_money = Order::where($where)->sum('order_money');
+        if(!$list_money) $list_money = 0;
         $list->appends($data);
         $page = $list->render();
         $channels = Channel::where('status', 1)->where('del_status', 0)->field('id,channel_name')->select();
         $this->assign('list', $list);
         $this->assign('page', $page);
+        $this->assign('list_count', $list_count);
+        $this->assign('list_users', $list_users);
+        $this->assign('list_money', $list_money);
+
         $this->assign('channels', $channels);
 
         // 渲染模板输出
@@ -185,5 +196,99 @@ class OrderController extends AdminBaseController
 
             $this->success('回调成功2');
         }
+    }
+
+    function export()
+    {
+         $data = input();
+        $where = [];
+
+        $where[] = ['del_status', '=', 0];
+        $start_time = isset($data['start_time']) ? $data['start_time']: '';
+        if($start_time != '') $where[]=['addtime', '>=' ,strtotime($start_time)];
+
+        $end_time = isset($data['end_time']) ? $data['end_time']: '';
+        if($end_time != '') $where[]=['addtime', '<=' ,strtotime($end_time) + 60*60*24];
+
+        $pay_start_time = isset($data['pay_start_time']) ? $data['pay_start_time']: '';
+        if($pay_start_time != '') $where[]=['pay_time', '>=' ,strtotime($pay_start_time)];
+
+        $pay_end_time = isset($data['pay_end_time']) ? $data['pay_end_time']: '';
+        if($pay_end_time != '') $where[]=['pay_time', '<=', strtotime($pay_end_time) + 60*60*24];
+
+        $order_sn = isset($data['order_sn']) ? $data['order_sn']: '';
+        if($order_sn != '') $where[]=['order_sn', '=', $order_sn];
+
+        $third_order_sn = isset($data['third_order_sn']) ? $data['third_order_sn']: '';
+        if($third_order_sn != '') $where[]=['third_order_sn', '=', $third_order_sn];
+
+        $user_id = isset($data['user_id']) ? $data['user_id']: '';
+        if($user_id != '') {
+            $where[]=['user_id', '=', $user_id];
+        }
+
+        $channel_id = isset($data['channel_id']) ? $data['channel_id']: '';
+        if($channel_id != '') $where[]=['channel_id', '=', $channel_id];
+
+        $payway = isset($data['payway']) ? $data['payway']: '';
+        if($payway != '') $where[]=['payway', '=', $payway];
+
+        $order_status = isset($data['order_status']) ? $data['order_status']: '';
+        if($order_status != '') $where[]=['order_status', '=', $order_status];
+
+        $pay_status = isset($data['pay_status']) ? $data['pay_status']: '';
+        if($pay_status != '') $where[]=['pay_status', '=', $pay_status];
+
+        $charge_num = isset($data['charge_num']) ? $data['charge_num']: '';
+        if($charge_num != '') $where[]=['charge_num', '=', $charge_num];
+
+        $xlsName  = "订单管理";
+        $xlsData = Order::where($where)->order('id desc')->select();
+
+        $order_status = [
+            1 => '支付中',
+            2 => '取消',
+            3 => '无效',
+            4 => '完成',
+            5 => '退款',
+        ];
+
+        $pay_status = [
+            0 => '未支付',
+            1 => '已支付',
+        ];   
+
+        $pay_way = [
+            1 => '支付宝',
+            2 => '微信',
+            3 => '银行卡',
+        ];   
+
+        foreach ($xlsData as $k => $v){
+            $xlsData[$k]['order_status'] = $order_status[$v['order_status']];
+            $xlsData[$k]['pay_status'] = $pay_status[$v['pay_status']];
+            $xlsData[$k]['payway'] = $pay_way[$v['payway']];
+        }
+
+        $action="导出订单：".Db::name("order")->getLastSql();
+        setAdminLog($action);
+        $cellName = array('A','B','C','D','E','F','G','H','I','J','K','L','M');
+        $xlsCell  = array(
+            array('id','序号'),
+            array('order_sn','订单编号'),
+            array('third_order_sn','三方订单号'),
+            array('order_status','订单状态'),
+            array('pay_status','支付状态'),
+            array('user_id','用户ID'),
+            array('payway','支付方式'),
+            array('channel.channel_name','支付通道'),
+
+            array('order_money','订单金额'),
+            array('pay_money','支付金额'),
+            array('addtime','下单时间'),
+            array('pay_time','支付时间'),
+            array('remark','备注'),
+        );
+        exportExcel($xlsName,$xlsCell,$xlsData,$cellName);
     }
 }
