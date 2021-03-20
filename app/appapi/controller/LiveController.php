@@ -89,9 +89,7 @@ class LiveController extends HomebaseController{
             // if(strstr($pull,'.mp4')) continue;
             if(strstr($pull,'anhuazhujiu.cn') || strstr($pull,'llhappy.xyz')  || strstr($pull,'czrk.net.cn') || true)
             {
-                
-           
-                echo $pull . "\n";
+
                 // if(!strstr($pull,'llhappy.xyz')) continue;
         
                 $nowtime=time();

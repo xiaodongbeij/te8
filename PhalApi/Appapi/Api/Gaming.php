@@ -158,18 +158,24 @@ class Api_Gaming extends PhalApi_Api {
      */
     public function deposit()
     {
-        delcache($this->getAllBalanceKey());
-        $money = checkNull($this->money);
-        // 请求地址
-        $url = $this->domain . "/api/{$this->agent}/deposit";
-        // 订单号
-        $this->param['billno'] = date('YmdHis') . random_int(1111, 9999);
-        // 转账金额
-        $this->param['credit'] = checkNull($money);
-//        // 转账成功数据要做数据库金额减少
-        // return json_decode($this->getHttpQuery($url, $this->param),true);
-
-        return $this->money_change($url, -1 * $money,'游戏存款',$this->param['platform']);
+        $deposit = 'deposit:' . $this->agent . ':' . $this->uid;
+        $withdrawalskye = 'withdrawals:' . $this->agent . ':' . $this->uid;
+        if(DI()->redis->get($deposit) != 1 && DI()->redis->get($withdrawalskye) != 1)
+        {
+            DI()->redis->set($deposit, 1);
+            delcache($this->getAllBalanceKey());
+            $money = checkNull($this->money);
+            // 请求地址
+            $url = $this->domain . "/api/{$this->agent}/deposit";
+            // 订单号
+            $this->param['billno'] = date('YmdHis') . random_int(1111, 9999);
+            // 转账金额
+            $this->param['credit'] = checkNull($money);
+    //        // 转账成功数据要做数据库金额减少
+            // return json_decode($this->getHttpQuery($url, $this->param),true);
+               
+            return $this->money_change($url, -1 * $money,'游戏存款',$this->param['platform']);
+        }
     }
     
     /**
@@ -181,19 +187,26 @@ class Api_Gaming extends PhalApi_Api {
      */
     public function withdrawals()
     {
-        // 获取前端传过来的金额
-        $money = checkNull($this->money);
+        $deposit = 'deposit:' . $this->agent . ':' . $this->uid;
+        $withdrawalskye = 'withdrawals:' . $this->agent . ':' . $this->uid;
+        if(DI()->redis->get($withdrawalskye) != 1 && DI()->redis->get($deposit) != 1)
+        {
+            DI()->redis->set($withdrawalskye,1);
+            // 获取前端传过来的金额
+            $money = checkNull($this->money);
+        
+            // 请求地址
+            $url = $this->domain . "/api/{$this->agent}/Withdrawals";
+            // 订单号
+            $this->param['billno'] = date('YmdHis') . random_int(1111, 9999);
+            // 取款金额
+            $this->param['credit'] = $money;
+    //        // 取款回来数据要做数据库金额增加
+    //        return json_decode($this->getHttpQuery($url, $this->param));
     
-        // 请求地址
-        $url = $this->domain . "/api/{$this->agent}/Withdrawals";
-        // 订单号
-        $this->param['billno'] = date('YmdHis') . random_int(1111, 9999);
-        // 取款金额
-        $this->param['credit'] = $money;
-//        // 取款回来数据要做数据库金额增加
-//        return json_decode($this->getHttpQuery($url, $this->param));
-
-        return $this->money_change($url,$money,'游戏取款',$this->param['platform']);
+            return $this->money_change($url,$money,'游戏取款',$this->param['platform']);
+        }
+        
     }
     
     /**
@@ -372,6 +385,8 @@ class Api_Gaming extends PhalApi_Api {
 
     //存取款
     protected function money_change($url,$money,$remark,$platform){
+        $depositkye = 'deposit:' . $this->agent . ':' . $this->uid;
+        $withdrawalskye = 'withdrawals:' . $this->agent . ':' . $this->uid;
         //开启事务
         DI()->notorm->beginTransaction('db_appapi');
         //账变
@@ -387,8 +402,12 @@ class Api_Gaming extends PhalApi_Api {
                 //回滚
                 DI()->notorm->rollback('db_appapi');
             }
+            DI()->redis->set($withdrawalskye, 2);
+            DI()->redis->set($depositkye, 2);
             return $return;
         }elseif($res === 2){
+            DI()->redis->set($depositkye, 2);
+            DI()->redis->set($withdrawalskye, 2);
             return [
 //                'hRet' => 1001,
                 'code' => 1001,
@@ -397,6 +416,8 @@ class Api_Gaming extends PhalApi_Api {
         }else{
             //回滚
             DI()->notorm->rollback('db_appapi');
+            DI()->redis->set($depositkye, 2);
+            DI()->redis->set($withdrawalskye, 2);
             return [
 //                'hRet' => 1002,
                 'code' => 1002,

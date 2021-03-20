@@ -19,7 +19,7 @@ class UserChangeController extends AdminbaseController
     {
         $data = input();
         $where = [];
-        $where[] = ['change_money','>',0];
+        // $where[] = ['change_money','>',0];
         $change_type = isset($data['change_type']) ? $data['change_type']: '';
         if($change_type != ''){
             $where[] = ['change_type', '=', $change_type];
@@ -370,7 +370,7 @@ class UserChangeController extends AdminbaseController
         if($change_type != ''){
             $where[] = ['uc.change_type', '=', $change_type];
         }
-        $iszombie = isset($data['iszombie']) ? $data['iszombie']: '';
+        $iszombie = isset($data['iszombie']) ? $data['iszombie']: 0;
   
         $uid = isset($data['uid']) ? $data['uid']: '';
         if($uid != ''){

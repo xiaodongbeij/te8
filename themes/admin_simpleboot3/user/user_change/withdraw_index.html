@@ -58,10 +58,10 @@
                 <th>ID</th>
                 <th>用户</th>
                 <th>变动类型</th>
+                <th>提现金额</th>
+                <th>手续费</th>
                 <th>变动前金额</th>
                 <th>变动后金额</th>
-                <th>变动金额</th>
-                <th>手续费</th>
                 <th>提现类型</th>
                 <th>提现去向(姓名-卡名-卡号)</th>
                 <th>审核状态</th>
@@ -82,10 +82,11 @@
                     <td>
                         <eq name="$vo.change_type" value="2">提现</eq>
                     </td>
-                    <td>{$vo.money}</td>
-                    <td>{$vo.next_money}</td>
                     <td><span style="color: red">{$vo.change_money}</span></td>
                     <td><span style="color: red">{$vo.service_charge}</span></td>
+                    <td>{$vo.money}</td>
+                    <td>{$vo.next_money}</td>
+                    
                     <td>
                         <eq name="$vo.withdraw_type" value="1">银行卡</eq>
                         <eq name="$vo.withdraw_type" value="2">微信</eq>
