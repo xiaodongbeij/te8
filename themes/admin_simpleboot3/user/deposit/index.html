@@ -16,14 +16,15 @@
         <li class="active"><a>存取统计</a></li>
 <!--        <li><a href="{:url('Deposit/add')}">{:lang('ADD')}</a></li>-->
     </ul>
-    <form class="well form-inline margin-top-20" method="post" action="{:url('user/Deposit/index')}">
+    <form class="well form-inline margin-top-20" method="post" name="form1">
 
         用户：
         <input class="form-control" type="text" name="user_login" style="width: 200px;" value="{:input('request.user_login')}"
                placeholder="请输入用户ID">
 
-        <input type="submit" class="btn btn-primary" value="搜索"/>
+        <input type="submit" class="btn btn-primary" value="搜索" onclick="form1.action='{:url('Deposit/index')}';form1.submit();"/>
         <a class="btn btn-danger" href="{:url('user/Deposit/index')}">清空</a>
+        <input type="button" class="btn btn-success" value="导出" onclick="form1.action='{:url('Deposit/export')}';form1.submit();"/>
         <br>
         <br>
     </form>
