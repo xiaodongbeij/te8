@@ -222,6 +222,10 @@ class Api_Live extends PhalApi_Api {
             'anchorData'=>array(
                 'liverid' => array('name' => 'liverid', 'type' => 'int', 'min' => 1, 'require' => true, 'desc' => '主播id'),
             ),
+            'giftRankNew' => array(
+                'uid' => array('name' => 'uid', 'type' => 'int', 'desc' => '主播id'),
+                'type' => array('name' => 'type', 'require' => true, 'type' => 'string', 'desc' => 'day = 天, week = 周, month = 月, all = 总'),
+            ),
 		);
 	}
 
@@ -249,6 +253,131 @@ class Api_Live extends PhalApi_Api {
 		if(!$info['cash_num']) $info['cash_num'] = 0;
 
 		return ['code' => 0, 'msg' => 'ok', 'info' => $info];
+	}
+
+	/**
+     * NEW_new获取直播间排行
+     * @desc NEW_new获取直播间排行
+     * @return int code 操作码，0表示成功
+     * @return array info
+     * @return array info[list_day] 日榜
+     * @return array info[list_day_total] 日榜总
+     * @return array info[list_week] 周榜
+     * @return array info[list_week_total] 周榜总
+     * @return array info[list_month] 月榜
+     * @return array info[list_month_total] 月榜总
+     * @return array info[list_all] 总榜
+     * @return array info[list_all_total] 总榜总计
+     * @return string msg 提示信息
+     */
+	public function giftRankNew()
+	{
+		$uid = $this->uid;
+        $type=checkNull($this->type);
+
+        $nowtime=time();
+
+        $p=1;
+        $page_nums=20;
+        $start=($p-1)*$page_nums;
+
+        switch ($type){
+            case 'day':
+                /* 日榜 */
+                //当天0点
+		        $today=date("Ymd",$nowtime);
+		        $starttime=strtotime($today);
+		        //当天 23:59:59
+		        $endtime=strtotime("{$today} + 1 day");
+		        $sql = "SELECT user_id as uid,(sum(change_money) * -1) total,cu.user_nicename,cu.avatar,cu.consumption FROM cmf_user_change cv join cmf_user cu on cv.user_id = cu.id WHERE  cv.change_type in (11,12) and cv.touid = :uid and addtime >= :starttime and addtime <= :endtime GROUP BY uid ORDER BY cv.change_money asc limit :pagenums";
+        		$params = array(':uid' => $uid, ':pagenums' => $page_nums, ':starttime' => $starttime, ':endtime' => $endtime);
+
+        		$list = DI()->notorm->user_change->queryAll($sql, $params);
+        		$info['list_day'] = $list;
+
+        		$list_total=DI()->notorm->user_change
+                    ->where(" change_type in (11,12) and touid='{$uid}' and addtime >={$starttime} and addtime < {$endtime} ")
+                    ->sum('change_money');
+                if(!$list_total){
+                	$list_total = 0;
+                }else{
+                	$list_total = $list_total * -1;
+                }    
+				$info['list_day_total'] = $list_total;
+                break;
+            case 'week':
+                /* 周榜 */
+				$w=date('w',$nowtime);
+		        //获取本周开始日期，如果$w是0，则表示周日，减去 6 天
+		        $first=1;
+		        //周一
+		        $week=date('Y-m-d H:i:s',strtotime( date("Ymd")."-".($w ? $w - $first : 6).' days'));
+		        $starttime=strtotime( date("Ymd")."-".($w ? $w - $first : 6).' days');
+
+		        //本周结束日期
+		        //周天
+		        $endtime=strtotime("{$week} +1 week");
+		        $sql = "SELECT user_id as uid,(sum(change_money) * -1) total,cu.user_nicename,cu.avatar,cu.consumption FROM cmf_user_change cv join cmf_user cu on cv.user_id = cu.id WHERE  cv.change_type in (11,12) and cv.touid = :uid and addtime >= :starttime and addtime <= :endtime GROUP BY uid ORDER BY cv.change_money asc limit :pagenums";
+        		$params = array(':uid' => $uid, ':pagenums' => $page_nums, ':starttime' => $starttime, ':endtime' => $endtime);
+
+        		$list = DI()->notorm->user_change->queryAll($sql, $params);
+        		$info['list_week'] = $list;
+
+        		$list_total=DI()->notorm->user_change
+                    ->where(" change_type in (11,12) and touid='{$uid}' and addtime >={$starttime} and addtime < {$endtime} ")
+                    ->sum('change_money');
+                if(!$list_total){
+                	$list_total = 0;
+                }else{
+                	$list_total = $list_total * -1;
+                }
+				$info['list_week_total'] = $list_total;
+                break;
+            case 'month':
+                /* 月榜 */
+                //本月第一天
+		        $month=date("Y-m",$nowtime).'-01';
+		        $starttime=strtotime($month);
+
+		        //本月最后一天
+		        $endtime=strtotime("{$month} +1 month");
+		        $sql = "SELECT user_id as uid,(sum(change_money) * -1) total,cu.user_nicename,cu.avatar,cu.consumption FROM cmf_user_change cv join cmf_user cu on cv.user_id = cu.id WHERE  cv.change_type in (11,12) and cv.touid = :uid and addtime >= :starttime and addtime <= :endtime GROUP BY uid ORDER BY cv.change_money asc limit :pagenums";
+        		$params = array(':uid' => $uid, ':pagenums' => $page_nums, ':starttime' => $starttime, ':endtime' => $endtime);
+
+        		$list = DI()->notorm->user_change->queryAll($sql, $params);
+        		$info['list_month'] = $list;
+
+        		$list_total=DI()->notorm->user_change
+                    ->where(" change_type in (11,12) and touid='{$uid}' and addtime >={$starttime} and addtime < {$endtime} ")
+                    ->sum('change_money');
+                if(!$list_total){
+                	$list_total = 0;
+                }else{
+                	$list_total = $list_total * -1;
+                }
+				$info['list_month_total'] = $list_total;
+                break;
+            case 'all':
+                /* 总榜 */
+                $sql = "SELECT user_id as uid,(sum(change_money) * -1) total,cu.user_nicename,cu.avatar,cu.consumption FROM cmf_user_change cv join cmf_user cu on cv.user_id = cu.id WHERE  cv.change_type in (11,12) and cv.touid = :uid GROUP BY uid ORDER BY cv.change_money asc limit :pagenums";
+			    $params = array(':uid' => $uid, ':pagenums' => $page_nums);
+
+			    $list = DI()->notorm->user_change->queryAll($sql, $params);
+			    $info['list_all'] = $list;
+
+			    $list_total=DI()->notorm->user_change
+                    ->where(" change_type in (11,12) and touid='{$uid}' ")
+                    ->sum('change_money');
+                if(!$list_total){
+                	$list_total = 0;
+                }else{
+                	$list_total = $list_total * -1;
+                }
+                $info['list_all_total'] = $list_total;    
+                break;
+        }
+
+        return ['code' => 0, 'msg' => 'ok', 'info' => $info];
 	}
 
     /**
