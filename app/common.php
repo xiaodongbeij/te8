@@ -9,6 +9,7 @@ error_reporting(E_ALL);
 //error_reporting(E_ERROR | E_WARNING | E_PARSE);
 require_once dirname(__FILE__) . '/redis.php';
 
+
 //获取真实ip
 function getIP()
 {

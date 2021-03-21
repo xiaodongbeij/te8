@@ -20,11 +20,7 @@ class Api_Pay extends PhalApi_Api
                 'name' => array('name' => 'name', 'type' => 'string',  'desc' => '姓名(通道id为3传入)'),
                 'postscript' => array('name' => 'postscript', 'type' => 'string',  'desc' => '附言(通道id为3传入)'),
             ),
-            'sfPay' => array(
-            'uid' => array('name' => 'uid', 'type' => 'int', 'min' => 1, 'require' => true, 'desc' => '用户ID'),
-            'token' => array('name' => 'token', 'type' => 'string', 'min' => 1, 'require' => true, 'desc' => 'token'),
-            'money' => array('name' => 'money', 'type' => 'string', 'require' => true, 'desc' => '充值金额'),
-            ),
+            
         );
     }
 
@@ -182,63 +178,5 @@ class Api_Pay extends PhalApi_Api
     }
     
     
-    public function sfPay()
-    {
- 
-        $uid = checkNull($this->uid);
-        $token = checkNull($this->token);
-        $coin = checkNull($this->money);
-        $checkToken = checkToken($uid, $token);
-        if ($checkToken == 700) {
-            $rs['code'] = $checkToken;
-            $rs['msg'] = '您的登陆状态失效，请重新登陆！';
-            return $rs;
-        }
     
-        $info = DI()->notorm->channel->where('shop_id = ?', 'sh892')->fetchOne();
-    
-        if (!$info) return ['code' => 1, 'msg' => '支付通道异常'];
-        if ($info['status'] == 0) return ['code' => 1, 'msg' => '该支付通道已被禁用'];
-        if ($coin < $info['min_money']) return ['code' => 1, 'msg' => '单笔最小充值' . $info['min_money'] . '元哦'];
-        if ($coin > $info['max_money']) return ['code' => 1, 'msg' => '单笔最大充值' . $info['max_money'] . '元哦'];
-    
-        $key = $info['shop_id'];
-        $secret = $info['key'];
-        $url = $info['action'];
-    
-        $order_id = $this->getOrderid($uid);
-        $ip = getIP();
-       
-    //3.设置请求参数
-        $arrAccount = array(
-            "merchantCode" => $key,
-            "orderNo" => $order_id,
-            "orderPrice" => round($coin) * 100,
-            "clientIp" => $ip, //交易类型
-            "returnUrl" => $info['return_url'],
-            "notifyUrl" => $info['notify_url'],
-            "payType" => '10000',
-            "terminal" => 0,//页面通知地址
-        );
-    
-        $arrAccount["sign"] = md5Sign($arrAccount, $secret);
-    
-        $order = [
-            'order_sn' => $order_id,
-            'order_status' => 1,
-            'pay_status' => 0,
-            'user_id' => $uid,
-            'payway' => $info['pay_type'],
-            'channel_id' => $info['id'],
-            'order_money' => round($coin),
-            'addtime' => time(),
-            'type' => 1
-        ];
-    
-        $res = DI()->notorm->order->insert($order);
-    
-        $pageContents = buildRequestForm($url, $arrAccount);
-        die;
-    }
-
 }
