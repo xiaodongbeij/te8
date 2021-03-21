@@ -9,27 +9,6 @@ error_reporting(E_ALL);
 //error_reporting(E_ERROR | E_WARNING | E_PARSE);
 require_once dirname(__FILE__) . '/redis.php';
 
-function md5Sign($arr=array(),$secretKey){
-        ksort($arr);
-        return strtolower(md5(signStr($arr,$secretKey)));
-    }
-    
-function signStr($array,$secretKey){
-        $str = "";
-        $i = 0;
-        foreach ($array as $key => $val) {
-            if($key != "sign" && $key != "secretKey"){
-                if($i == 0 ){
-                    $str = $str."$key=$val";
-                }else {
-                    $str = $str."&$key=$val";
-                }
-                $i++;
-            }
-        }
-        $str = $str."&key=".$secretKey;
-        return  $str;
-    }
 
 //获取真实ip
 function getIP()
