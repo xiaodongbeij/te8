@@ -40,7 +40,7 @@ class GameController extends HomebaseController
             ]);
         }
 
-        $this->start = date("Y-m-d H:i:s",strtotime('-1 day'));
+        $this->start = date("Y-m-d H:i:s",strtotime('-2 day'));
         $this->end = date("Y-m-d H:i:s",strtotime('+10 minute'));
 //        $con = getConfigPri();
 //        $this->domain = $con['tripartite_domain'];
@@ -82,6 +82,8 @@ class GameController extends HomebaseController
         $this->param['currentpage'] = 1;
         // 每页的记录数
         $this->param['pagesize'] = 100000;
+
+        dump($this->param);die;
 
         $insert = [];
         foreach ($platforms as $val){
