@@ -40,15 +40,14 @@ class GameController extends HomebaseController
             ]);
         }
 
-        $this->start = date("Y-m-d H:i:s",strtotime('-4 day'));
+        $this->start = date("Y-m-d H:i:s");
         $this->end = date("Y-m-d H:i:s",strtotime('+10 minute'));
-//        $con = getConfigPri();
-//        $this->domain = $con['tripartite_domain'];
-//        $this->agent = $con['tripartite_agent'];
-//        $this->key = $con['tripartite_key'];
-        $this->domain = 'http://hsl.yathal.com';
-        $this->agent = 'f44_tae';
-        $this->key = '7DzkrVntyi';
+        connectionRedis();
+        $con = getConfigPri();
+        $this->domain = $con['tripartite_domain'];
+        $this->agent = $con['tripartite_agent'];
+        $this->key = $con['tripartite_key'];
+
         /**
          *  上线查询数据库获取数据，并赋值
          */
@@ -66,7 +65,7 @@ class GameController extends HomebaseController
      */
     public function SaveBettingRecord()
     {
-//        dump($this->domain);die;
+
         $platforms = Db::table('cmf_game_cate')->field('platform')->select()->toArray();
         // 请求地址
         $url = $this->domain . "/api/{$this->agent}/GetBettingRecord";
@@ -83,7 +82,7 @@ class GameController extends HomebaseController
         // 每页的记录数
         $this->param['pagesize'] = 100000;
 
-//        dump($this->param);die;
+
 
         $insert = [];
         foreach ($platforms as $val){
@@ -93,6 +92,7 @@ class GameController extends HomebaseController
 //            if ($res['hRet'] !== 1) die('无数据或请求错误');
             if ($res['hRet'] !== 1) continue;
             foreach ($res['list'] as $v){
+
                 $temp = [
                     'rec_id' => $v['RecId'],
                     'platform_code' => $v['PlatformCode'],
@@ -111,7 +111,7 @@ class GameController extends HomebaseController
                 $insert[] = $temp;
             }
         }
-        dump($insert);die;
+     
         $res = Db::table('cmf_game_record')->insertAll($insert,true);
         var_dump($res);
     }

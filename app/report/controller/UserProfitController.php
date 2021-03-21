@@ -44,7 +44,7 @@ class UserProfitController extends AdminBaseController
             ->join('cmf_user u','u.id=gt.user_id')
             ->where($where)
             ->order('gt.id desc')
-            ->field("u.id,u.user_login,FROM_UNIXTIME(gt.addtime,'%Y-%m-%d') date,gt.short_name,sum(gt.prize) bonus,sum(gt.money) money,sum(gt.prize) - sum(gt.money) yin")
+            ->field("u.id,u.user_login,FROM_UNIXTIME(gt.addtime,'%Y-%m-%d') date,gt.short_name,gt.show_name,sum(gt.prize) bonus,sum(gt.money) money,sum(gt.prize) - sum(gt.money) yin")
             ->paginate(20);
         $list->appends($data);
         $page = $list->render();
