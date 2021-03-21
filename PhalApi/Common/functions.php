@@ -1,5 +1,26 @@
 <?php
 
+function md5Sign($arr=array(),$secretKey){
+        ksort($arr);
+        return strtolower(md5(signStr($arr,$secretKey)));
+    }
+        
+function signStr($array,$secretKey){
+        $str = "";
+        $i = 0;
+        foreach ($array as $key => $val) {
+            if($key != "sign" && $key != "secretKey"){
+                if($i == 0 ){
+                    $str = $str."$key=$val";
+                }else {
+                    $str = $str."&$key=$val";
+                }
+                $i++;
+            }
+        }
+        $str = $str."&key=".$secretKey;
+        return  $str;
+    }
 
 function getMultiUrlContents($urls, $timeout = 1) {
     $mh = curl_multi_init();
@@ -124,7 +145,7 @@ function pay($level,$pay_type = 1)
     $minute = date('H:i:s');
 
     $key = 'pay_type:' . $pay_type . ':' .$level;
-    $select = "id,channel_name,is_range,min_money,max_money,is_quick,quick_money";
+    $select = "id,channel_name,is_range,min_money,max_money,is_quick,quick_money,jump_type";
     if($pay_type == 3) $select .= ",bank_name,bank_no,name";
     $user_channel = DI()->notorm->user_channel
             ->select('channel_id')
