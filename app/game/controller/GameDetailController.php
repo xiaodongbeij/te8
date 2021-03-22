@@ -29,7 +29,7 @@ class GameDetailController extends AdminBaseController
         $rate_status = isset($data['rate_status']) ? $data['rate_status'] : '';
         if ($rate_status != '') $where[] = ['rate_status', '=', $rate_status];
 
-        $list = Db::table('cmf_game_record')->field('*,FROM_UNIXTIME(bet_time,"%Y-%m-%d %H:%i:%s") as bet_time')->where($where)->order('bet_time desc')->paginate(20);
+        $list = Db::table('cmf_game_record')->alias('cr')->leftJoin('cmf_game_cate gc','gc.platform=cr.platform_code')->field('cr.*,FROM_UNIXTIME(cr.bet_time,"%Y-%m-%d %H:%i:%s") as bet_time,gc.name')->where($where)->order('bet_time desc')->paginate(20);
 
         $list->appends($data);
         $page = $list->render();
