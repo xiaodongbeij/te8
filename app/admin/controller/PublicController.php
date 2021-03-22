@@ -102,14 +102,14 @@ class PublicController extends AdminBaseController
                     $this->error(lang('USE_DISABLED'));
                 }
                 //登入成功页面跳转
-                session('ADMIN_ID', $result["id"],3600);
-                session('name', $result["user_login"],3600);
-                session('google_token',$result["google_token"],3600);
+                session('ADMIN_ID', $result["id"]);
+                session('name', $result["user_login"]);
+                session('google_token',$result["google_token"]);
                 $result['last_login_ip']   = get_client_ip(0, true);
                 $result['last_login_time'] = time();
                 $token                     = cmf_generate_user_token($result["id"], 'web');
                 if (!empty($token)) {
-                    session('token', $token,3600);
+                    session('token', $token);
                 }
                 Db::name('user')->update($result);
                 cookie("admin_username", $name, 3600 * 24 * 30);
