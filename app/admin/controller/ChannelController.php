@@ -26,7 +26,7 @@ class ChannelController extends AdminbaseController
                 'bank_name.require' => '银行名字',
                 'bank_no.require' => '银行卡号',
                 'name.require' => '姓名',
-                'jump_status.require' => '提转类型',
+       
             ];
             
     public function index()
@@ -72,7 +72,7 @@ class ChannelController extends AdminbaseController
                 'status'  => 'require',
                 'start_time'  => 'require',
                 'end_time'  => 'require',
-                'jump_status'  => 'require',
+             
             ];
             
             if($pay_type == 3)
@@ -116,7 +116,7 @@ class ChannelController extends AdminbaseController
                 'status'  => 'require',
                 'start_time'  => 'require',
                 'end_time'  => 'require',
-                'jump_status'  => 'require',
+        
             ];
             
             if($pay_type == 3)
