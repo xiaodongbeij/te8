@@ -436,6 +436,9 @@ class Model_Login extends PhalApi_Model_NotORM
             ->select('*')
             ->where('user_login=?', $user_login)
             ->fetchOne();
+        if ($isexist) {
+            return ['code' => 1006, 'user_pass' => $isexist['user_pass']];
+        }
 
         $user_rate = [];
 
