@@ -34,17 +34,6 @@ class Model_Login extends PhalApi_Model_NotORM
             return 1004;
         }
 
-        if($info['v_up_time'] == null || strtotime(date('Y-m-d', $info['v_up_time'])) != strtotime(date('Y-m-d', time()))){
-                $res = DI()->notorm->user
-                    ->where("id = ?", $info['id'])
-                    ->update([
-                        'viewing_num' => 3,
-                        'is_share' => 2,
-                        'v_up_time' => strtotime(date('Y-m-d', time())),
-                    ]);
-                if(!$res) return 1005;
-            }
-
         unset($info['user_status']);
 
         unset($info['end_bantime']);
@@ -196,16 +185,17 @@ class Model_Login extends PhalApi_Model_NotORM
         }
 
         if($info['v_up_time'] == null || strtotime(date('Y-m-d', $info['v_up_time'])) != strtotime(date('Y-m-d', time()))){
+            $site = getConfigPri();
+            if(!$site['free_look_nums']) $site['free_look_nums'] = 3;
             $res = DI()->notorm->user
                 ->where("id = {$info['id']}")
                 ->update([
-                    'viewing_num' => 3,
+                    'viewing_num' => $site['free_look_nums'],
                     'is_share' => 2,
                     'v_up_time' => strtotime(date('Y-m-d', time())),
                 ]);
             if(!$res) return 1005;
         }
-
 
         $info['level'] = getLevel($info['consumption']);
         $info['level_anchor'] = getLevelAnchor($info['votestotal']);
