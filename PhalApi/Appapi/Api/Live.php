@@ -293,9 +293,7 @@ class Api_Live extends PhalApi_Api {
         		$params = array(':uid' => $uid, ':pagenums' => $page_nums, ':starttime' => $starttime, ':endtime' => $endtime);
 
         		$list = DI()->notorm->user_change->queryAll($sql, $params);
-        		
-        		$info['list_day'] = $list;
-
+    
         		$list_total=DI()->notorm->user_change
                     ->where(" change_type in (11,12) and touid='{$uid}' and addtime >={$starttime} and addtime < {$endtime} ")
                     ->sum('change_money');
@@ -323,8 +321,6 @@ class Api_Live extends PhalApi_Api {
 
         		$list = DI()->notorm->user_change->queryAll($sql, $params);
         		
-        		$info['list_week'] = $list;
-
         		$list_total=DI()->notorm->user_change
                     ->where(" change_type in (11,12) and touid='{$uid}' and addtime >={$starttime} and addtime < {$endtime} ")
                     ->sum('change_money');
@@ -348,9 +344,6 @@ class Api_Live extends PhalApi_Api {
 
         		$list = DI()->notorm->user_change->queryAll($sql, $params);
         		
-        		
-        		$info['list_month'] = $list;
-
         		$list_total=DI()->notorm->user_change
                     ->where(" change_type in (11,12) and touid='{$uid}' and addtime >={$starttime} and addtime < {$endtime} ")
                     ->sum('change_money');
@@ -368,7 +361,7 @@ class Api_Live extends PhalApi_Api {
 
 			    $list = DI()->notorm->user_change->queryAll($sql, $params);
 			    
-			    $info['list_all'] = $list;
+			 
 			    $list_total=DI()->notorm->user_change
                     ->where(" change_type in (11,12) and touid='{$uid}' ")
                     ->sum('change_money');
@@ -380,7 +373,7 @@ class Api_Live extends PhalApi_Api {
                 $info['list_all_total'] = $list_total;    
                 break;
         }
-
+        $info['list'] = $list;
         return ['code' => 0, 'msg' => 'ok', 'info' => $info];
 	}
 
