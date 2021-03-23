@@ -371,10 +371,12 @@ class Model_Video extends PhalApi_Model_NotORM {
             ->fetchOne();
 
 	    if($user['v_up_time'] == null || strtotime(date('Y-m-d', $user['v_up_time'])) != strtotime(date('Y-m-d', time()))) {
+	    	$site = getConfigPri();
+	    	if(!$site['free_look_nums']) $site['free_look_nums'] = 3;
             $res = DI()->notorm->user
                 ->where("id = ?",$uid)
                 ->update([
-                    'viewing_num' => 3,
+                    'viewing_num' => $site['free_look_nums'],
                     'is_share' => 2,
                     'v_up_time' => strtotime(date('Y-m-d', time())),
                 ]);

@@ -1165,6 +1165,10 @@ class SettingController extends AdminBaseController
                 $video_audit_switch=$options['video_audit_switch']?'开':'关';
                 $action.='视频审核开关 '.$video_audit_switch.' ';
             }
+
+            if($options['free_look_nums'] !=$oldconfigpri['free_look_nums']){
+                $action.='每日免费观影次数 '.$options['free_look_nums'].' ';
+            }
 			
 //			if($options['shop_system_name'] !=$oldconfigpri['shop_system_name']){
 //                $action.='系统店铺名称 '.$options['shop_system_name'].' ';
