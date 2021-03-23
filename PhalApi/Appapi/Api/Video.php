@@ -462,7 +462,12 @@ class Api_Video extends PhalApi_Api {
 		$parentid=$this->parentid;
 		$content=checkNull($this->content);
 		$at_info=$this->at_info;
-
+        if(mb_strlen($content) < 1)
+        {
+            $rs['code'] = 10011;
+			$rs['msg'] = '请输入内容';
+			return $rs;
+        }
 		//$arr = json_decode($at_info,true);
 		if(!$at_info){
 			$at_info='';
@@ -475,7 +480,7 @@ class Api_Video extends PhalApi_Api {
 			return $rs;
 		}
 		$sensitivewords=sensitiveField($content);
-		if($sensitivewords==1001){
+		if($sensitivewords==1001 ){
 			$rs['code'] = 10011;
 			$rs['msg'] = '输入非法，请重新输入';
 			return $rs;

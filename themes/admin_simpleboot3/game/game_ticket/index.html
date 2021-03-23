@@ -16,7 +16,7 @@
         <li class="active"><a>彩种</a></li>
 <!--        <li><a href="{:url('GameTicket/add')}">{:lang('ADD')}</a></li>-->
     </ul>
-    <form class="well form-inline margin-top-20" method="post" action="{:url('game/GameTicket/index')}">
+    <form class="well form-inline margin-top-20" name="form1" method="post" action="{:url('game/GameTicket/index')}">
 
         订单号：
         <input class="form-control" type="text" name="order_id" style="width: 200px;" value="{:input('request.order_id')}"
@@ -50,9 +50,14 @@
             <option value="1" <if condition="input('request.ok') neq '' && input('request.ok') eq 1">selected</if>>已中奖</option>
             <option value="2" <if condition="input('request.ok') neq '' && input('request.ok') eq 2">selected</if>>未中奖</option>
         </select>
+        <br />
+        下注时间：
+        <input class="form-control js-bootstrap-date" name="start_time" id="pay_start_time" autocomplete="off" value="{:input('request.start_time')}" aria-invalid="false" style="width: 110px;"> -
+        <input class="form-control js-bootstrap-date" name="end_time" id="pay_end_time" autocomplete='off' value="{:input('request.end_time')}" aria-invalid="false" style="width: 110px;">
 
         <input type="submit" class="btn btn-primary" value="搜索"/>
         <a class="btn btn-danger" href="{:url('game/GameTicket/index')}">清空</a>
+        <input type="button" class="btn btn-success" value="导出" onclick="form1.action='{:url('game_ticket/export')}';form1.submit();"/>
         <br>
         <br>
     </form>

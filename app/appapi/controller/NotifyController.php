@@ -303,6 +303,36 @@ class NotifyController extends HomebaseController
     }
     
     
+    //四海回调
+    public function sihai_notify()
+    {
+        $data = input();
+        
+        if($data['status'] != 1)
+        {
+            die('参数错误');
+        }
+        
+        // file_put_contents('sihai.txt',json_encode($data));
+        $order = Db::table('cmf_order')->where('order_sn', $data['orderId'])->field('channel_id,order_status,pay_status,user_id,pay_money')->find();
+        
+        $message = "天鹅四海支付收款通知:\n 平台单号：" . $data['orderId'] . "\n 商户订单号:" . $data['sysOrderId'] ."\n 会员账号:" . $order['user_id'] . "\n 充值金额:" . $data['orderAmt'];
+        
+        if (!$order) die('订单异常');
+        if ($order['order_status'] == 4 && $order['pay_status'] == 1) die('已处理');
+        $key = Db::table('cmf_channel')->where('id', $order['channel_id'])->value('key');
+        
+   
+        $result = $this->call_logic($data['orderId'], $data['orderAmt'], $data['sysOrderId']);
+        if ($result) {
+            $this->telegram($message);
+            echo 'success';
+        } else {
+            echo 'error';
+        }
+    }
+    
+    
     public function telegram($message = '测试')
     {
         $telegram =  config('telegram');

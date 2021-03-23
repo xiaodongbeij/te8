@@ -417,82 +417,12 @@ class Model_Video extends PhalApi_Model_NotORM {
         }
 		$nums=20;
 		$start=($p-1)*$nums;
-		$comments=DI()->notorm->video_comments
-					->select("*")
-					->where("videoid='{$videoid}' and parentid='0'")
-					->order("addtime desc")
-					->limit($start,$nums)
-					->fetchAll();
+
+		$sql = "SELECT vc.addtime,vc.uid,vc.commentid,content,likes,user_nicename,avatar,IF($uid=vcl.uid,1,0) islike FROM cmf_video_comments vc LEFT JOIN cmf_user cu on vc.uid=cu.id LEFT JOIN cmf_video_comments_like vcl on vcl.commentid=vc.id where vc.videoid = $videoid order by vc.id desc limit $start,$nums ";
+		$comments=DI()->notorm->video_comments->queryAll($sql);
 		foreach($comments as $k=>$v){
-			$comments[$k]['userinfo']=getUserInfo($v['uid']);				
 			$comments[$k]['datetime']=datetime($v['addtime']);	
 			$comments[$k]['likes']=NumberFormat($v['likes']);	
-			if($uid){
-				$comments[$k]['islike']=(string)$this->ifCommentLike($uid,$v['id']);	
-			}else{
-				$comments[$k]['islike']='0';	
-			}
-			
-			if($v['touid']>0){
-				$touserinfo=getUserInfo($v['touid']);
-			}
-			if(!$touserinfo){
-				$touserinfo=(object)array();
-				$comments[$k]['touid']='0';
-			}
-			$comments[$k]['touserinfo']=$touserinfo;
-
-			$count=DI()->notorm->video_comments
-					->where("commentid='{$v['id']}'")
-					->count();
-			$comments[$k]['replys']=$count;
-            
-            /* 回复 */
-//            $reply=DI()->notorm->video_comments
-//					->select("*")
-//					->where("commentid='{$v['id']}'")
-//					->order("addtime desc")
-//					->limit(0,1)
-//					->fetchAll();
-            $reply=DI()->notorm->video_comments
-                ->select("*")
-                ->where("commentid='{$v['id']}' and parentid = {$v['id']}")
-                ->order("addtime desc")
-                ->limit(0,1)
-                ->fetchAll();
-
-            foreach($reply as $k1=>$v1){
-                
-                $v1['userinfo']=getUserInfo($v1['uid']);				
-                $v1['datetime']=datetime($v1['addtime']);	
-                $v1['likes']=NumberFormat($v1['likes']);	
-                $v1['islike']=(string)$this->ifCommentLike($uid,$v1['id']);
-                if($v1['touid']>0){
-                    $touserinfo=getUserInfo($v1['touid']);
-                }
-                if(!$touserinfo){
-                    $touserinfo=(object)array();
-                    $v1['touid']='0';
-                }
-                
-                if($v1['parentid']>0 && $v1['parentid']!=$v['id']){
-                    $tocommentinfo=DI()->notorm->video_comments
-                        ->select("content,at_info")
-                        ->where("id='{$v1['parentid']}'")
-                        ->fetchOne();
-                }else{
-                    $tocommentinfo=(object)array();
-                    $touserinfo=(object)array();
-                    $v1['touid']='0';
-                }
-                $v1['touserinfo']=$touserinfo;
-                $v1['tocommentinfo']=$tocommentinfo;
-
-
-                $reply[$k1]=$v1;
-            }
-            
-            $comments[$k]['replylist']=$reply;
 		}
 		
 		$commentnum=DI()->notorm->video_comments

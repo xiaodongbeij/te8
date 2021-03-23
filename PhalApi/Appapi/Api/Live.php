@@ -289,12 +289,11 @@ class Api_Live extends PhalApi_Api {
 		        $starttime=strtotime($today);
 		        //当天 23:59:59
 		        $endtime=strtotime("{$today} + 1 day");
-		        $sql = "SELECT user_id as uid,(sum(change_money) * -1) total,cu.user_nicename,cu.avatar,cu.consumption FROM cmf_user_change cv join cmf_user cu on cv.user_id = cu.id WHERE  cv.change_type in (11,12) and cv.touid = :uid and addtime >= :starttime and addtime <= :endtime GROUP BY uid ORDER BY cv.change_money asc limit :pagenums";
+		        $sql = "SELECT user_id as uid,(sum(change_money) * -1) total,cu.user_nicename,cu.avatar FROM cmf_user_change cv join cmf_user cu on cv.user_id = cu.id WHERE  cv.change_type in (11,12) and cv.touid = :uid and addtime >= :starttime and addtime <= :endtime GROUP BY uid ORDER BY cv.change_money asc limit :pagenums";
         		$params = array(':uid' => $uid, ':pagenums' => $page_nums, ':starttime' => $starttime, ':endtime' => $endtime);
 
         		$list = DI()->notorm->user_change->queryAll($sql, $params);
-        		$info['list_day'] = $list;
-
+    
         		$list_total=DI()->notorm->user_change
                     ->where(" change_type in (11,12) and touid='{$uid}' and addtime >={$starttime} and addtime < {$endtime} ")
                     ->sum('change_money');
@@ -317,12 +316,11 @@ class Api_Live extends PhalApi_Api {
 		        //本周结束日期
 		        //周天
 		        $endtime=strtotime("{$week} +1 week");
-		        $sql = "SELECT user_id as uid,(sum(change_money) * -1) total,cu.user_nicename,cu.avatar,cu.consumption FROM cmf_user_change cv join cmf_user cu on cv.user_id = cu.id WHERE  cv.change_type in (11,12) and cv.touid = :uid and addtime >= :starttime and addtime <= :endtime GROUP BY uid ORDER BY cv.change_money asc limit :pagenums";
+		        $sql = "SELECT user_id as uid,(sum(change_money) * -1) total,cu.user_nicename,cu.avatar FROM cmf_user_change cv join cmf_user cu on cv.user_id = cu.id WHERE  cv.change_type in (11,12) and cv.touid = :uid and addtime >= :starttime and addtime <= :endtime GROUP BY uid ORDER BY cv.change_money asc limit :pagenums";
         		$params = array(':uid' => $uid, ':pagenums' => $page_nums, ':starttime' => $starttime, ':endtime' => $endtime);
 
         		$list = DI()->notorm->user_change->queryAll($sql, $params);
-        		$info['list_week'] = $list;
-
+        		
         		$list_total=DI()->notorm->user_change
                     ->where(" change_type in (11,12) and touid='{$uid}' and addtime >={$starttime} and addtime < {$endtime} ")
                     ->sum('change_money');
@@ -341,12 +339,11 @@ class Api_Live extends PhalApi_Api {
 
 		        //本月最后一天
 		        $endtime=strtotime("{$month} +1 month");
-		        $sql = "SELECT user_id as uid,(sum(change_money) * -1) total,cu.user_nicename,cu.avatar,cu.consumption FROM cmf_user_change cv join cmf_user cu on cv.user_id = cu.id WHERE  cv.change_type in (11,12) and cv.touid = :uid and addtime >= :starttime and addtime <= :endtime GROUP BY uid ORDER BY cv.change_money asc limit :pagenums";
+		        $sql = "SELECT user_id as uid,(sum(change_money) * -1) total,cu.user_nicename,cu.avatar FROM cmf_user_change cv join cmf_user cu on cv.user_id = cu.id WHERE  cv.change_type in (11,12) and cv.touid = :uid and addtime >= :starttime and addtime <= :endtime GROUP BY uid ORDER BY cv.change_money asc limit :pagenums";
         		$params = array(':uid' => $uid, ':pagenums' => $page_nums, ':starttime' => $starttime, ':endtime' => $endtime);
 
         		$list = DI()->notorm->user_change->queryAll($sql, $params);
-        		$info['list_month'] = $list;
-
+        		
         		$list_total=DI()->notorm->user_change
                     ->where(" change_type in (11,12) and touid='{$uid}' and addtime >={$starttime} and addtime < {$endtime} ")
                     ->sum('change_money');
@@ -359,12 +356,12 @@ class Api_Live extends PhalApi_Api {
                 break;
             case 'all':
                 /* 总榜 */
-                $sql = "SELECT user_id as uid,(sum(change_money) * -1) total,cu.user_nicename,cu.avatar,cu.consumption FROM cmf_user_change cv join cmf_user cu on cv.user_id = cu.id WHERE  cv.change_type in (11,12) and cv.touid = :uid GROUP BY uid ORDER BY cv.change_money asc limit :pagenums";
+                $sql = "SELECT user_id as uid,(sum(change_money) * -1) total,cu.user_nicename,cu.avatar FROM cmf_user_change cv join cmf_user cu on cv.user_id = cu.id WHERE  cv.change_type in (11,12) and cv.touid = :uid GROUP BY uid ORDER BY cv.change_money asc limit :pagenums";
 			    $params = array(':uid' => $uid, ':pagenums' => $page_nums);
 
 			    $list = DI()->notorm->user_change->queryAll($sql, $params);
-			    $info['list_all'] = $list;
-
+			    
+			 
 			    $list_total=DI()->notorm->user_change
                     ->where(" change_type in (11,12) and touid='{$uid}' ")
                     ->sum('change_money');
@@ -376,7 +373,7 @@ class Api_Live extends PhalApi_Api {
                 $info['list_all_total'] = $list_total;    
                 break;
         }
-
+        $info['list'] = $list;
         return ['code' => 0, 'msg' => 'ok', 'info' => $info];
 	}
 
@@ -2682,6 +2679,8 @@ class Api_Live extends PhalApi_Api {
 		return $rs;	
 	}
 	
+
+	
 	
 	/**
 	 * 用户分享直播间
@@ -2709,5 +2708,9 @@ class Api_Live extends PhalApi_Api {
 
 		return $rs;	
 	}
+	
+	
+	
+	
 
 }

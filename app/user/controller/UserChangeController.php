@@ -438,7 +438,7 @@ class UserChangeController extends AdminbaseController
          
         $usersql = Db::name("user")->field('id ids,iszombie')->where('iszombie',$iszombie)->buildSql();
     
-        Db::name('user_change')->alias('uc')->leftJoin([$usersql => 'u'],'uc.user_id=u.ids')->where($where)->chunk(100,function($list)use($change_type_list,$withdraw_type_list,$status_list,&$xlsData,$iszombie){
+        Db::name('user_change')->alias('uc')->join([$usersql => 'u'],'uc.user_id=u.ids')->where($where)->chunk(100,function($list)use($change_type_list,$withdraw_type_list,$status_list,&$xlsData,$iszombie){
             foreach ($list as $k => $v){
     
                 $v['addtime'] = date('Y-m-d H:i:s', $v['addtime']);

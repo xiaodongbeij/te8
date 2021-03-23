@@ -1,8 +1,0 @@
-2020-12-12 14:28:56|DEBUG|failed to upload file to qiniu|{"Err":"bad token","Reqid":"5fgAAAAvxXY75E8W","Details":"","Code":401}
-2020-12-12 14:29:06|DEBUG|failed to upload file to qiniu|{"Err":"bad token","Reqid":"zqgAAAA1R-o95E8W","Details":"","Code":401}
-2020-12-12 14:30:35|DEBUG|failed to upload file to qiniu|{"Err":"bad token","Reqid":"MaUAAABWcHxS5E8W","Details":"","Code":401}
-2020-12-12 14:31:13|DEBUG|failed to upload file to qiniu|{"Err":"bad token","Reqid":"4ZMAAADOkFZb5E8W","Details":"","Code":401}
-2020-12-12 14:31:35|DEBUG|failed to upload file to qiniu|{"Err":"bad token","Reqid":"gVIAAAD4159g5E8W","Details":"","Code":401}
-2020-12-12 14:32:48|DEBUG|failed to upload file to qiniu|{"Err":"bad token","Reqid":"2_QAAACLyKVx5E8W","Details":"","Code":401}
-2020-12-12 14:37:08|DEBUG|succeed to upload file to UCloud_Engine_Local|http://x.com/upload//avatar/20201212/06610990287644005.jpeg
-2020-12-12 14:39:10|DEBUG|succeed to upload file to UCloud_Engine_Local|http://x.com/upload//wx_img/20201212/06610991502460756.jpeg

@@ -334,7 +334,7 @@ class Api_Home extends PhalApi_Api {
             return $rs;
         }
         $config = getConfigPub();
-        
+        $ConfigPri = getConfigPri();
         $info['service_address'] = $config['service_address'];
         
         $info['apk_ver'] = $config['apk_ver'];
@@ -346,7 +346,7 @@ class Api_Home extends PhalApi_Api {
         $info['telegram'] = $config['telegram'];
         $info['potato'] = $config['potato'];
         $info['chatserver'] = $config['chatserver'];
-        
+        $info['chatserver'] = $ConfigPri['chatserver'];
         
         // $ConfigPri = getConfigPri();
         // unset($info['site_url']);
