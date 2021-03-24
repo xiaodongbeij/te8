@@ -252,11 +252,11 @@ class GameDetailController extends AdminBaseController
         $cellName = array('A','B','C','D','E','F');
         $xlsCell  = array(
             array('id','用户ID'),
-            array('name','日期'),
+            array('date','日期'),
             array('game_name','游戏名称'),
-            array('user_login','派彩'),
-            array('bet_id','有效投注额'),
-            array('bet_time','盈亏'),
+            array('bonus','派彩'),
+            array('money','有效投注额'),
+            array('yin','盈亏'),
         );
         exportExcel($xlsName,$xlsCell,$list,$cellName);
     }
