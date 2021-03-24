@@ -204,76 +204,76 @@ class GameDetailController extends AdminBaseController
         return $this->fetch();
     }
 
-    function user_export(){
-        $data = input();
-        $where = [];
+//     function user_export(){
+//         $data = input();
+//         $where = [];
 
-        $user_login = isset($data['user_login']) ? $data['user_login'] : '';
-        if ($user_login != '') {
-            $where[] = ['gr.user_login', '=', $user_login];
-        }
+//         $user_login = isset($data['user_login']) ? $data['user_login'] : '';
+//         if ($user_login != '') {
+//             $where[] = ['gr.user_login', '=', $user_login];
+//         }
 
-        $short_name = isset($data['short_name']) ? $data['short_name'] : '';
-        if ($short_name != '') {
-            $where[] = ['platform_code', '=', $short_name];
-        }
+//         $short_name = isset($data['short_name']) ? $data['short_name'] : '';
+//         if ($short_name != '') {
+//             $where[] = ['platform_code', '=', $short_name];
+//         }
 
-        $start_time = isset($data['start_time']) ? $data['start_time'] : '';
-        $end_time = isset($data['end_time']) ? $data['end_time'] : '';
-        if ($start_time != "") {
-            $where[] = ['bet_time', '>=', strtotime($start_time)];
-        }
-        if ($end_time != "") {
-            $where[] = ['bet_time', '<=', strtotime($end_time) + 60 * 60 * 24];
-        }
+//         $start_time = isset($data['start_time']) ? $data['start_time'] : '';
+//         $end_time = isset($data['end_time']) ? $data['end_time'] : '';
+//         if ($start_time != "") {
+//             $where[] = ['bet_time', '>=', strtotime($start_time)];
+//         }
+//         if ($end_time != "") {
+//             $where[] = ['bet_time', '<=', strtotime($end_time) + 60 * 60 * 24];
+//         }
 
-        $cai = Db::table('cmf_game_cate')
-            ->field('name,platform')
-            ->where('platform', '<>', 1)
-            ->where('del_status', '=', 0)
-            ->select();
-        $this->assign('cai', $cai);
+//         $cai = Db::table('cmf_game_cate')
+//             ->field('name,platform')
+//             ->where('platform', '<>', 1)
+//             ->where('del_status', '=', 0)
+//             ->select();
+//         $this->assign('cai', $cai);
 
-        $list = Db::table('cmf_game_record')
-            ->alias('gr')
-            ->group("gr.user_login,gr.platform_code,FROM_UNIXTIME(gr.bet_time,'%Y-%m-%d')")
-//            ->join('cmf_user u', 'u.user_login=gr.user_login')
-            ->join('cmf_user u', 'u.id=gr.user_login')
-            ->where($where)
-            ->order('gr.id desc')
-            ->field("u.id,gr.user_login,FROM_UNIXTIME(gr.bet_time,'%Y-%m-%d') date,gr.game_name,sum(gr.pay_off) bonus,sum(gr.bet_amount) money,sum(gr.profit) yin")
-            ->paginate(20);
+//         $list = Db::table('cmf_game_record')
+//             ->alias('gr')
+//             ->group("gr.user_login,gr.platform_code,FROM_UNIXTIME(gr.bet_time,'%Y-%m-%d')")
+// //            ->join('cmf_user u', 'u.user_login=gr.user_login')
+//             ->join('cmf_user u', 'u.id=gr.user_login')
+//             ->where($where)
+//             ->order('gr.id desc')
+//             ->field("u.id,gr.user_login,FROM_UNIXTIME(gr.bet_time,'%Y-%m-%d') date,gr.game_name,sum(gr.pay_off) bonus,sum(gr.bet_amount) money,sum(gr.profit) yin")
+//             ->paginate(20);
 
-        $list_status = [ 3 => '输', 4 => '赢'];
-        $list_rate_status = [ 1 => '已结算', 2 => '未结算'];
+//         $list_status = [ 3 => '输', 4 => '赢'];
+//         $list_rate_status = [ 1 => '已结算', 2 => '未结算'];
 
-        foreach($list as $key => $value){
-            $list[$key]['status'] = $list_status[$value['status']];
-            $list[$key]['rate_status'] = $list_rate_status[$value['rate_status']];
-        }
+//         foreach($list as $key => $value){
+//             $list[$key]['status'] = $list_status[$value['status']];
+//             $list[$key]['rate_status'] = $list_rate_status[$value['rate_status']];
+//         }
 
-        $xlsName  = "三方游戏记录";
+//         $xlsName  = "三方游戏记录";
 
-        $action="三方游戏记录导出：".Db::name("cmf_game_record")->getLastSql();
-        setAdminLog($action);
+//         $action="三方游戏记录导出：".Db::name("cmf_game_record")->getLastSql();
+//         setAdminLog($action);
 
-        $cellName = array('A','B','C','D','E','F','G','H','I','J','K','L');
-        $xlsCell  = array(
-            array('id','ID'),
-            array('name','平台'),
-            array('game_name','游戏名称'),
-            array('user_login','用户'),
-            array('bet_id','订单号'),
-            array('bet_time','下注时间'),
-            array('bet_amount','有效投注额'),
-            array('pay_off','派彩'),
-            array('profit','盈亏'),
-            array('status','订单状态'),
-            array('remark','交易备注'),
-            array('rate_status','返点结算状态'),
-        );
-        exportExcel($xlsName,$xlsCell,$list,$cellName);
-    }
+//         $cellName = array('A','B','C','D','E','F','G','H','I','J','K','L');
+//         $xlsCell  = array(
+//             array('id','ID'),
+//             array('name','平台'),
+//             array('game_name','游戏名称'),
+//             array('user_login','用户'),
+//             array('bet_id','订单号'),
+//             array('bet_time','下注时间'),
+//             array('bet_amount','有效投注额'),
+//             array('pay_off','派彩'),
+//             array('profit','盈亏'),
+//             array('status','订单状态'),
+//             array('remark','交易备注'),
+//             array('rate_status','返点结算状态'),
+//         );
+//         exportExcel($xlsName,$xlsCell,$list,$cellName);
+//     }
 
 
     function index_export(){
