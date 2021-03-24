@@ -314,12 +314,14 @@ class GameDetailController extends AdminBaseController
         $list_status = [ 3 => '输', 4 => '赢'];
         $list_rate_status = [ 1 => '已结算', 2 => '未结算'];
 
+        var_dump($list);die;
+
         foreach($list as $key => $value){
             $list[$key]['status'] = $list_status[$value['status']];
             $list[$key]['rate_status'] = $list_rate_status[$value['rate_status']];
         }
 
-        var_dump($list);die;
+
 
         $xlsName  = "三方游戏记录";
 
