@@ -111,7 +111,7 @@ class UserProfitController extends AdminBaseController
             $where[] = ['addtime', '<=', strtotime($end_time) + 60*60*24];
         }
 
-        $list = Db::table('cmf_game_ticket')
+        $lists = Db::table('cmf_game_ticket')
             ->alias('gt')
             ->group("gt.user_id,gt.short_name,FROM_UNIXTIME(gt.addtime,'%Y-%m-%d')")
             ->join('cmf_user u','u.id=gt.user_id')
