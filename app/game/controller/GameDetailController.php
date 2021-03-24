@@ -317,6 +317,7 @@ class GameDetailController extends AdminBaseController
             2 => '未结算'
         ];
 
+            var_dump($list);die;
         foreach($list as $key => $value){
             if($value['status']&&$value['status']>0) $list[$key]['status'] = $list_status[$value['status']];
             if($value['rate_status']&&$value['rate_status']>0) $list[$key]['rate_status'] = $list_rate_status[$value['rate_status']];
