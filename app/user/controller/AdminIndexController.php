@@ -804,13 +804,14 @@ class AdminIndexController extends AdminBaseController{
                     $game = config('app.rate_plat');
 
                     if($game && $game['platform'] == $v) $remark = $game['name'];
+                    var_dump(1);die;
                     $insert = [
                         'user_id' => $user_id,
                         'rate' => $data['rate'][$k] / 100,
                         'platform' => $v,
                         'remark' => $remark
                     ];
-                    var_dump($insert);die;
+                    
                     $res = UserRate::create($insert);
                     if(!$res) $this->error("设置代理失败");
                 }
