@@ -55,7 +55,7 @@
         <a class="btn btn-danger" id="csv">导出</a>
         <br>
         <br>
-        用户数：{$user_nums} / 已中奖笔数：{$list_status_ok} / 未中奖笔数：{$list_status_no} / 有效投注额：{$list_count.bet_amount} / 派彩：{$list_count.pay_off} / 盈亏：{$list_count.profit}
+        用户数：{$user_nums} / 已中奖笔数：{$list_status_ok} / 未中奖笔数：{$list_status_no} / 有效投注额：{:abs($list_count.bet_amount)} / 派彩：{:abs($list_count.pay_off)} / 盈亏：{$list_count.profit}
     </form>
 
 
