@@ -93,6 +93,7 @@ class GameDetailController extends AdminBaseController
         $cai = Db::table('cmf_game_cate')
             ->field('name,platform')
             ->where('platform', '<>', 1)
+            ->where('del_status', '=', 0)
             ->select();
         $this->assign('cai', $cai);
 
@@ -103,12 +104,22 @@ class GameDetailController extends AdminBaseController
             ->join('cmf_user u', 'u.id=gr.user_login')
             ->where($where)
             ->order('gr.id desc')
-            ->field("u.user_login,FROM_UNIXTIME(gr.bet_time,'%Y-%m-%d') date,gr.game_name,sum(gr.pay_off) bonus,sum(gr.bet_amount) money,sum(gr.profit) yin")
+            ->field("gr.user_login,FROM_UNIXTIME(gr.bet_time,'%Y-%m-%d') date,gr.game_name,sum(gr.pay_off) bonus,sum(gr.bet_amount) money,sum(gr.profit) yin")
             ->paginate(20);
+
+        $user_nums =  Db::table('cmf_game_record')->alias('gr')->where($where)
+            ->field('gr.id,gr.user_login')
+            ->group("gr.user_login")
+            ->count();
+
+        $list_count = Db::table('cmf_game_record')->alias('gr')->where($where)->field('sum(gr.bet_amount) bet_amount, sum(gr.pay_off) pay_off, sum(gr.profit) profit')->find();    
+
         $list->appends($data);
         $page = $list->render();
         $this->assign('list', $list);
         $this->assign('page', $page);
+        $this->assign('user_nums', $user_nums);
+        $this->assign('list_count', $list_count);
         // 渲染模板输出
         return $this->fetch();
     }

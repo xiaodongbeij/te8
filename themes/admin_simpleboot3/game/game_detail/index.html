@@ -51,11 +51,11 @@
         <input class="form-control js-bootstrap-date" name="end_time" id="pay_end_time" autocomplete='off' value="{:input('request.end_time')}" aria-invalid="false" style="width: 110px;">
 
         <input type="submit" class="btn btn-primary" value="搜索"/>
-        <a class="btn btn-danger" href="{:url('game/GameTicket/index')}">清空</a>
+        <a class="btn btn-danger" href="{:url('game/GameDetail/index')}">清空</a>
         <a class="btn btn-danger" id="csv">导出</a>
         <br>
         <br>
-        用户数：{$user_nums} / 已中奖笔数：{$list_status_ok} / 未中奖笔数：{$list_status_no} / 有效投注额：{:abs($list_count.bet_amount)} / 派彩：{:abs($list_count.pay_off)} / 盈亏：{$list_count.profit}
+        用户数：{$user_nums} / 已中奖笔数：{$list_status_ok} / 未中奖笔数：{$list_status_no} / 有效投注额：{:abs($list_count.bet_amount)} / 派彩：{:abs($list_count.pay_off)} / 盈亏：{:abs($list_count.profit)}
     </form>
 
 
