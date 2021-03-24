@@ -46,10 +46,14 @@ class UserProfitController extends AdminBaseController
             ->order('gt.id desc')
             ->field("u.id,u.user_login,FROM_UNIXTIME(gt.addtime,'%Y-%m-%d') date,gt.short_name,gt.show_name,sum(gt.prize) bonus,sum(gt.money) money,sum(gt.prize) - sum(gt.money) yin")
             ->paginate(20);
+        $list_count = Db::table('cmf_game_ticket')->where($where)->field('sum(money) money, sum(prize) prize, sum(prize) - sum(money) yin')->find();    
+        $user_nums = Db::table('cmf_game_ticket')->where($where)->field('id,user_id')->group('user_id')->count();
         $list->appends($data);
         $page = $list->render();
         $this->assign('list', $list);
         $this->assign('page', $page);
+        $this->assign('list_count', $list_count);
+        $this->assign('user_nums', $user_nums);
         // 渲染模板输出
         return $this->fetch();
     }
