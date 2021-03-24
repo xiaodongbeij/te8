@@ -758,7 +758,7 @@ class AdminIndexController extends AdminBaseController{
     {
         if($request->isPost()){
             $data = input();
-            // var_dump($data);die;
+            var_dump($data);die;
             $user_id = $data['id'];
             $is_dai = $data['is_dai'];
             $user = Db::name('user')->where('id', $user_id)->find();
@@ -804,7 +804,6 @@ class AdminIndexController extends AdminBaseController{
                     $game = config('app.rate_plat');
 
                     if($game && $game['platform'] == $v) $remark = $game['name'];
-                    var_dump(1);die;
                     $insert = [
                         'user_id' => $user_id,
                         'rate' => $data['rate'][$k] / 100,
