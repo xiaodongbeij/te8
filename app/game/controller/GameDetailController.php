@@ -302,9 +302,6 @@ class GameDetailController extends AdminBaseController
         $end_time = isset($data['end_time']) ? $data['end_time']: '';
         if($end_time != '') $where[]=['bet_time', '<=' ,strtotime($end_time) + 60*60*24];
 
-        $list_status_ok = Db::table('cmf_game_record')->where($where)->where('status', '=', 4)->count();
-        $list_status_no = Db::table('cmf_game_record')->where($where)->where('status', '=', 3)->count();
-
         $status = isset($data['status']) ? $data['status'] : '';
         if ($status != '') {
             $where[] = ['status', '=', $status];
@@ -314,7 +311,7 @@ class GameDetailController extends AdminBaseController
         $list_status = [ 3 => '输', 4 => '赢'];
         $list_rate_status = [ 1 => '已结算', 2 => '未结算'];
 
-        var_dump($list);die;
+        // var_dump($list);die;
 
         foreach($list as $key => $value){
             $list[$key]['status'] = $list_status[$value['status']];
