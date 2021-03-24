@@ -16,11 +16,11 @@
         <li class="active"><a>游戏用户盈亏</a></li>
         <!--        <li><a href="{:url('userChange/add')}">{:lang('ADD')}</a></li>-->
     </ul>
-    <form class="well form-inline margin-top-20" method="post" action="{:url('game/GameDetail/user_profit')}">
+    <form class="well form-inline margin-top-20" method="post" name="form1" action="{:url('game/GameDetail/user_profit')}">
 
         用户：
         <input class="form-control" type="text" name="user_login" style="width: 200px;" value="{:input('request.user_login')}"
-               placeholder="请输入用户名">
+               placeholder="请输入用户ID">
 
         平台：
         <select class="form-control" name="short_name">
@@ -52,7 +52,7 @@
                 <!--                    </label>-->
                 <!--                </th>-->
                 <!--                <th>ID</th>-->
-                <th>登录名</th>
+                <th>用户ID</th>
                 <th>日期</th>
                 <th>游戏</th>
                 <th>派彩</th>
