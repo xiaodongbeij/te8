@@ -241,9 +241,7 @@ class GameDetailController extends AdminBaseController
         $list = Db::table('cmf_game_record')->alias('cr')->leftJoin('cmf_game_cate gc','gc.platform=cr.platform_code')->field('cr.*,FROM_UNIXTIME(cr.bet_time,"%Y-%m-%d %H:%i:%s") as bet_time,gc.name')->where($where)->order('bet_time desc')->all();
 
         $list_status = [ 3 => '输', 4 => '赢'];
-        $list_rate_status = [ 1 => '已结算', 2 => '未结算']
-
-        dump($list);die;
+        $list_rate_status = [ 1 => '已结算', 2 => '未结算'];
 
         foreach($list as $key => $value){
             $list[$key]['status'] = $list_status[$value['status']];
