@@ -8,6 +8,7 @@ class Api_Gaming extends PhalApi_Api {
     protected $domain;
     // 三方游戏账号
     protected $agent;
+    protected $t_money;
     // 三方游戏秘钥
     protected $key;
     protected $username;
@@ -20,6 +21,7 @@ class Api_Gaming extends PhalApi_Api {
         
         //getConfigPri;
         $config = getConfigPri();
+        $this->t_money = $config['tripartite_money'] ?? 50;
         $this->domain = $config['tripartite_domain'];
         $this->agent = $config['tripartite_agent'];
         $this->key = $config['tripartite_key'];
@@ -158,6 +160,12 @@ class Api_Gaming extends PhalApi_Api {
      */
     public function deposit()
     {
+        
+        if($this->money < $this->t_money)
+        {
+            return ['code' => 1, 'msg' => '转存金额不能低于'. $this->t_money . '元', 'remoteMsg' => '转存金额不能低于'. $this->t_money . '元'];
+        }
+        
         $deposit = 'deposit:' . $this->agent . ':' . $this->uid;
         $withdrawalskye = 'withdrawals:' . $this->agent . ':' . $this->uid;
         if(DI()->redis->get($deposit) != 1 && DI()->redis->get($withdrawalskye) != 1)
