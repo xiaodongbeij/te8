@@ -104,7 +104,7 @@ class GameDetailController extends AdminBaseController
             ->join('cmf_user u', 'u.id=gr.user_login')
             ->where($where)
             ->order('gr.id desc')
-            ->field("gr.user_login,FROM_UNIXTIME(gr.bet_time,'%Y-%m-%d') date,gr.game_name,sum(gr.pay_off) bonus,sum(gr.bet_amount) money,sum(gr.profit) yin")
+            ->field("u.id,gr.user_login,FROM_UNIXTIME(gr.bet_time,'%Y-%m-%d') date,gr.game_name,sum(gr.pay_off) bonus,sum(gr.bet_amount) money,sum(gr.profit) yin")
             ->paginate(20);
 
         $user_nums =  Db::table('cmf_game_record')->alias('gr')->where($where)
