@@ -125,12 +125,12 @@ class UserProfitController extends AdminBaseController
 
         $cellName = array('A','B','C','D','E','F');
         $xlsCell  = array(
-            array('id','日期'),
-            array('date','存款'),
-            array('short_name','取款'),
+            array('id','id'),
+            array('date','日期'),
+            array('show_name','彩种'),
             array('bonus','奖金'),
             array('money','下注'),
-            array('yin','返点'),
+            array('yin','盈亏'),
         );
         exportExcel($xlsName,$xlsCell,$lists,$cellName);
     }
