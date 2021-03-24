@@ -810,10 +810,10 @@ class AdminIndexController extends AdminBaseController{
                         'platform' => $v,
                         'remark' => $remark
                     ];
-                    var_dump($insert);
+                    var_dump($insert);die;
                     $res = UserRate::create($insert);
                     if(!$res) $this->error("设置代理失败");
-                }die;
+                }
             }
 
             $this->success("ok");
