@@ -792,14 +792,17 @@ class AdminIndexController extends AdminBaseController{
             $temp2 = Db::name('user_rate')->where('user_id','in',$down)->where('rate','>',0)->find();
             if ($temp2) $this->error("下级已有返点，无法修改");
 
-            var_dump($data['platform']);die;
+
 
             foreach ($data['platform'] as $k => $v){
                 $user_rate = UserRate::where('user_id',$user_id)->where('platform',$v)->find();
+                dump(1);
                 if($user_rate) {
+                    dump(2);
                     $user_rate->rate = $data['rate'][$k] / 100;
                     $user_rate->save();
                 }else{
+                    dump(3);
                     $remark = '';
                     $game = config('app.rate_plat');
                     if($game && $game['platform'] == $v) $remark = $game['name'];
@@ -811,6 +814,7 @@ class AdminIndexController extends AdminBaseController{
                     ];
                     $res = UserRate::create($insert);
                     if(!$res) $this->error("设置代理失败");
+                    dump(4);die;
                 }
             }
 
