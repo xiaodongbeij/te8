@@ -13,7 +13,7 @@
 <body>
 <div class="wrap js-check-wrap">
     <ul class="nav nav-tabs">
-        <li class="active"><a>彩种</a></li>
+        <li class="active"><a>下注记录</a></li>
 <!--        <li><a href="{:url('GameTicket/add')}">{:lang('ADD')}</a></li>-->
     </ul>
     <form class="well form-inline margin-top-20" name="form1" method="post" action="{:url('game/GameTicket/index')}">
@@ -60,6 +60,7 @@
         <input type="button" class="btn btn-success" value="导出" onclick="form1.action='{:url('game_ticket/export')}';form1.submit();"/>
         <br>
         <br>
+        用户数：{$user_nums} / 已中奖笔数： {$list_oks} / 未中奖笔数：{$list_nos} / 下注金额：{:abs($list_count.money)} / 奖金金额：{:abs($list_count.prize)}
     </form>
 
 

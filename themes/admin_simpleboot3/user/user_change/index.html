@@ -55,6 +55,7 @@
         <input type="button" class="btn btn-success" value="导出" onclick="form1.action='{:url('userChange/export')}';form1.submit();"/>
         <br>
         <br>
+        笔数：{$list_count.num} / 用户数： {$user_nums} / 变动金额：{:abs($list_count.money)}
     </form>
     <form method="post" class="js-ajax-form">
 

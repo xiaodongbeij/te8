@@ -37,23 +37,32 @@ class GameTicketController extends AdminBaseController
         $status = isset($data['status']) ? $data['status']: '';
         if($status != '') $where[] = ['status', '=', $status];
 
-        $ok = isset($data['ok']) ? $data['ok']: '';
-        if($ok != '') $where[] = ['ok', '=', $ok];
-
         $start_time = isset($data['start_time']) ? $data['start_time']: '';
         if($start_time != '') $where[]=['addtime', '>=' ,strtotime($start_time)];
 
         $end_time = isset($data['end_time']) ? $data['end_time']: '';
         if($end_time != '') $where[]=['addtime', '<=' ,strtotime($end_time) + 60*60*24];
 
+        $list_oks = GameTicket::where($where)->where('ok', '=', 1)->count();
+        $list_nos = GameTicket::where($where)->where('ok', '=', 2)->count();
 
+        $ok = isset($data['ok']) ? $data['ok']: '';
+        if($ok != '') {
+            $where[] = ['ok', '=', $ok];
+        }
         $list = GameTicket::with(['user'])->where($where)->order('addtime desc')->paginate(20);
+        $user_nums = GameTicket::where($where)->field('id,user_id')->group('user_id')->count();
+        $list_count = GameTicket::where($where)->field('sum(money) money, sum(prize) prize')->find();
 
         $caizhong = GameCaizhong::field('show_name,short_name')->all();
 
         $list->appends($data);
         $page = $list->render();
         $this->assign('list', $list);
+        $this->assign('list_oks', $list_oks);
+        $this->assign('list_nos', $list_nos);
+        $this->assign('user_nums', $user_nums);
+        $this->assign('list_count', $list_count);
         $this->assign('cz', $caizhong);
         $this->assign('page', $page);
 
