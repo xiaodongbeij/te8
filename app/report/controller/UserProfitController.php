@@ -119,7 +119,7 @@ class UserProfitController extends AdminBaseController
             ->order('gt.id desc')
             ->field("u.id,u.user_login,FROM_UNIXTIME(gt.addtime,'%Y-%m-%d') date,gt.short_name,gt.show_name,sum(gt.prize) bonus,sum(gt.money) money,sum(gt.prize) - sum(gt.money) yin")
             ->all();
-
+        $xlsName  = "彩票用户盈亏报表";
         $action="彩票用户盈亏报表导出：".Db::name("cmf_game_ticket")->getLastSql();
         setAdminLog($action);
 
