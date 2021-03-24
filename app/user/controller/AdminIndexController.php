@@ -758,6 +758,7 @@ class AdminIndexController extends AdminBaseController{
     {
         if($request->isPost()){
             $data = input();
+            var_dump($data);die;
             $user_id = $data['id'];
             $is_dai = $data['is_dai'];
             $user = Db::name('user')->where('id', $user_id)->find();
