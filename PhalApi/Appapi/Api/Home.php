@@ -343,6 +343,8 @@ class Api_Home extends PhalApi_Api {
         $info['ipa_ver'] = $config['ipa_ver'];
         $info['ipa_url'] = $config['ipa_url'];
         $info['ipa_des'] = $config['ipa_des'];
+        $info['popup'] = $config['popup'];
+        $info['ispopup'] = $config['ispopup'];
         $info['telegram'] = $config['telegram'];
         $info['potato'] = $config['potato'];
         $info['chatserver'] = $config['chatserver'];

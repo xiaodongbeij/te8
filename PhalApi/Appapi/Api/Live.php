@@ -1530,10 +1530,9 @@ class Api_Live extends PhalApi_Api {
         /* 守护 */
         $info['guard']=$guard_info;
         $info['guard_nums']=$guard_nums;
- 
-       
-
-
+        $info['wechat'] = $userinfo['wechat'];
+        $info['qq'] = $userinfo['qq'];
+        
 		//获取直播间在彩票
 		$info['show_lottery']=DI()->notorm->live
 			->select("c_id,hot,c_type,icon,show_name,short_name")

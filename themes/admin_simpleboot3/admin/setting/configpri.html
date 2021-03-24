@@ -437,6 +437,13 @@
                             </div>
                         </div>
                         <div class="form-group">
+                            <label for="input-sensitive_words" class="col-sm-2 control-label">录播QQ名片设置</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-card" name="options[card_qq]" value="{$config['card_qq']|default=''}">
+                                <p class="help-block">多个用英文逗号（,）分隔</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
                             <label for="input-sensitive_words" class="col-sm-2 control-label">录播名片查看金额</label>
                             <div class="col-md-6 col-sm-10">
                                 <input type="text" class="form-control" id="input-card_money" name="options[card_money]" value="{$config['card_money']|default=''}">

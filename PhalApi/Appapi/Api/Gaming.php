@@ -238,7 +238,7 @@ class Api_Gaming extends PhalApi_Api {
         }
         
 //        return ['hRet' => 1, 'msg' => 'successful', 'remoteMsg' => '成功'];
-        return ['code' => 0, 'msg' => 'successful', 'remoteMsg' => '成功'];
+        return ['code' => 0, 'msg' => '转入成功', 'remoteMsg' => '成功'];
     }
     
     
@@ -341,7 +341,7 @@ class Api_Gaming extends PhalApi_Api {
             }
             return $rs;
         }
-        return ['code' => 1, 'msg' => 'error', 'info' => ''];
+        return ['code' => 1, 'msg' => '转入失败', 'info' => ''];
     }
     
     /**
@@ -429,7 +429,7 @@ class Api_Gaming extends PhalApi_Api {
             return [
 //                'hRet' => 1002,
                 'code' => 1002,
-                'msg' => 'location error'
+                'msg' => '转入失败'
             ];
         }
     }

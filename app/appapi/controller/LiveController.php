@@ -66,8 +66,12 @@ class LiveController extends HomebaseController{
         
 
         $config = getConfigPri();
+
         // 名片
         $card = explode(',',$config['card']);
+        $card_qq = explode(',',$config['card_qq']);
+        
+    
         // 金额
         $card_money = explode(',', $config['card_money']);
         // 彩种
@@ -135,7 +139,8 @@ class LiveController extends HomebaseController{
                     'reward_amount' => $card_money[array_rand($card_money)]
                 );
                 DB::name('live')->insert($data2,true);
-                DB::name('user')->where('id', $uid)->setField('wechat',$card[array_rand($card)]);
+                delcache('userinfo_' . $uid);
+                DB::name('user')->where('id', $uid)->update(['wechat'=>$card[array_rand($card)], 'qq' => $card_qq[array_rand($card_qq)]]);
             }
         }
         

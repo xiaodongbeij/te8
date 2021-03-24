@@ -1032,8 +1032,7 @@ function getUserInfo($uid, $type = 0)
 
         if (!$info) {
             $info = DI()->notorm->user
-                ->select('id,user_nicename,avatar,user_login,avatar_thumb,sex,signature,consumption,votestotal,birthday,user_status,issuper,iszombie')
-                // ->select('id,user_nicename,avatar,user_login,avatar_thumb,sex,signature,consumption,votestotal,birthday,user_status,issuper,location')
+                ->select('id,user_nicename,avatar,user_login,avatar_thumb,sex,signature,consumption,votestotal,birthday,user_status,issuper,iszombie,qq,wechat')
                 ->where('id=? and user_type="2"', $uid)
                 ->fetchOne();
             if ($info) {

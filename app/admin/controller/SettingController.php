@@ -252,6 +252,11 @@ class SettingController extends AdminBaseController
                 $isup=$options['isup']?'开':'关';
                 $action.='修改强制更新 '.$isup.' ';
             }
+         
+            if($options['ispopup'] !=$oldconfig['ispopup']){
+                $ispopup=$options['ispopup']?'开':'关';
+                $action.='修改直播间弹窗 '.$ispopup.' ';
+            }
             if($options['apk_ver'] !=$oldconfig['apk_ver']){
                 $action.='修改APK版本号 '.$options['apk_ver'].' ';
             }
@@ -291,36 +296,36 @@ class SettingController extends AdminBaseController
                     }
                 }
             }
-            if($options['share_type'] !=$oldconfig['share_type']){
-                $action.='修改分享方式 ';
+            // if($options['share_type'] !=$oldconfig['share_type']){
+            //     $action.='修改分享方式 ';
                 
-                $old_l=explode(',',$oldconfig['share_type']);
-                $new_l=explode(',',$options['share_type']);
-                foreach($old_l as $k=>$v){
-                    if(!in_array($v,$new_l)){
-                        $action.='关闭'.$v.' ';
-                    }
-                }
+            //     $old_l=explode(',',$oldconfig['share_type']);
+            //     $new_l=explode(',',$options['share_type']);
+            //     foreach($old_l as $k=>$v){
+            //         if(!in_array($v,$new_l)){
+            //             $action.='关闭'.$v.' ';
+            //         }
+            //     }
                 
-                foreach($new_l as $k=>$v){
-                    if(!in_array($v,$old_l)){
-                        $action.='开启'.$v.' ';
-                    }
-                }
-            }
+            //     foreach($new_l as $k=>$v){
+            //         if(!in_array($v,$old_l)){
+            //             $action.='开启'.$v.' ';
+            //         }
+            //     }
+            // }
 			
 			
-			if($options['wx_siteurl'] !=$oldconfig['wx_siteurl']){
-                $action.='修改微信推广域名 '.$options['wx_siteurl'].' ';
-            }
+// 			if($options['wx_siteurl'] !=$oldconfig['wx_siteurl']){
+//                 $action.='修改微信推广域名 '.$options['wx_siteurl'].' ';
+//             }
 			
-			if($options['share_title'] !=$oldconfig['share_title']){
-                $action.='修改直播分享标题 '.$options['share_title'].' ';
-            }
+// 			if($options['share_title'] !=$oldconfig['share_title']){
+//                 $action.='修改直播分享标题 '.$options['share_title'].' ';
+//             }
 			
-			if($options['share_des'] !=$oldconfig['share_des']){
-                $action.='修改直播分享话术 '.$options['share_des'].' ';
-            }
+// 			if($options['share_des'] !=$oldconfig['share_des']){
+//                 $action.='修改直播分享话术 '.$options['share_des'].' ';
+//             }
 			
 			if($options['app_android'] !=$oldconfig['app_android']){
                 $action.='修改AndroidAPP下载链接 '.$options['app_android'].' ';
@@ -330,13 +335,13 @@ class SettingController extends AdminBaseController
 //                 $action.='修改IOSAPP下载链接 '.$options['app_ios'].' ';
 //             }
 			
-			if($options['video_share_title'] !=$oldconfig['video_share_title']){
-                $action.='修改短视频分享标题 '.$options['video_share_title'].' ';
-            }
+// 			if($options['video_share_title'] !=$oldconfig['video_share_title']){
+//                 $action.='修改短视频分享标题 '.$options['video_share_title'].' ';
+//             }
 			
-			if($options['video_share_des'] !=$oldconfig['video_share_des']){
-                $action.='修改短视频分享话术 '.$options['video_share_des'].' ';
-            }
+// 			if($options['video_share_des'] !=$oldconfig['video_share_des']){
+//                 $action.='修改短视频分享话术 '.$options['video_share_des'].' ';
+//             }
 			
 			
             
@@ -357,9 +362,9 @@ class SettingController extends AdminBaseController
                     }
                 }
             }
-            if($options['live_time_coin'] !=$oldconfig['live_time_coin']){
-                $action.='修改计时直播收费 ';
-            }
+            // if($options['live_time_coin'] !=$oldconfig['live_time_coin']){
+            //     $action.='修改计时直播收费 ';
+            // }
 			
 			/*if($options['sprout_isp'] !=$oldconfig['sprout_isp']){
 				
@@ -436,36 +441,36 @@ class SettingController extends AdminBaseController
 			if($options['lengthen_noseLift'] !=$oldconfig['lengthen_noseLift']){
                 $action.='修改磨皮默认值-长鼻 '.$options['lengthen_noseLift'].' ';
             }
-			if($options['payment_des'] !=$oldconfig['payment_des']){
-                $action.='修改付费内容申请说明 '.$options['payment_des'].' ';
-            }
-			if($options['payment_time'] !=$oldconfig['payment_time']){
-                $action.='修改申请付费内容间隔天数(天) '.$options['payment_time'].' ';
-            }
-			if($options['payment_percent'] !=$oldconfig['payment_percent']){
-                $action.='修改付费内容默认抽水比例 '.$options['payment_percent'].' ';
-            }
-			if($options['login_alert_title'] !=$oldconfig['login_alert_title']){
-                $action.='修改弹框标题 '.$options['login_alert_title'].' ';
-            }
-			if($options['login_alert_content'] !=$oldconfig['login_alert_content']){
-                $action.='修改弹框内容 '.$options['login_alert_content'].' ';
-            }
-			if($options['login_clause_title'] !=$oldconfig['login_clause_title']){
-                $action.='修改APP登录界面底部协议标题 '.$options['login_clause_title'].' ';
-            }
-			if($options['login_private_title'] !=$oldconfig['login_private_title']){
-                $action.='修改隐私政策名称 '.$options['login_private_title'].' ';
-            }
-			if($options['login_private_url'] !=$oldconfig['login_private_url']){
-                $action.='修改隐私政策跳转链接 '.$options['login_private_url'].' ';
-            }
-			if($options['login_service_title'] !=$oldconfig['login_service_title']){
-                $action.='修改服务协议名称 '.$options['login_service_title'].' ';
-            }
-			if($options['login_service_url'] !=$oldconfig['login_service_url']){
-                $action.='修改服务协议跳转链接 '.$options['login_service_url'].' ';
-            }
+// 			if($options['payment_des'] !=$oldconfig['payment_des']){
+//                 $action.='修改付费内容申请说明 '.$options['payment_des'].' ';
+//             }
+// 			if($options['payment_time'] !=$oldconfig['payment_time']){
+//                 $action.='修改申请付费内容间隔天数(天) '.$options['payment_time'].' ';
+//             }
+// 			if($options['payment_percent'] !=$oldconfig['payment_percent']){
+//                 $action.='修改付费内容默认抽水比例 '.$options['payment_percent'].' ';
+//             }
+// 			if($options['login_alert_title'] !=$oldconfig['login_alert_title']){
+//                 $action.='修改弹框标题 '.$options['login_alert_title'].' ';
+//             }
+// 			if($options['login_alert_content'] !=$oldconfig['login_alert_content']){
+//                 $action.='修改弹框内容 '.$options['login_alert_content'].' ';
+//             }
+// 			if($options['login_clause_title'] !=$oldconfig['login_clause_title']){
+//                 $action.='修改APP登录界面底部协议标题 '.$options['login_clause_title'].' ';
+//             }
+// 			if($options['login_private_title'] !=$oldconfig['login_private_title']){
+//                 $action.='修改隐私政策名称 '.$options['login_private_title'].' ';
+//             }
+// 			if($options['login_private_url'] !=$oldconfig['login_private_url']){
+//                 $action.='修改隐私政策跳转链接 '.$options['login_private_url'].' ';
+//             }
+// 			if($options['login_service_title'] !=$oldconfig['login_service_title']){
+//                 $action.='修改服务协议名称 '.$options['login_service_title'].' ';
+//             }
+// 			if($options['login_service_url'] !=$oldconfig['login_service_url']){
+//                 $action.='修改服务协议跳转链接 '.$options['login_service_url'].' ';
+//             }
 			
 		
 		   
