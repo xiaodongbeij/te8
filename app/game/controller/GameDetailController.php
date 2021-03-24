@@ -46,7 +46,7 @@ class GameDetailController extends AdminBaseController
         }
         $list = Db::table('cmf_game_record')->alias('cr')->leftJoin('cmf_game_cate gc','gc.platform=cr.platform_code')->field('cr.*,FROM_UNIXTIME(cr.bet_time,"%Y-%m-%d %H:%i:%s") as bet_time,gc.name')->where($where)->order('bet_time desc')->paginate(20);
 
-        $user_nums = Db::table('cmf_game_record')->where($where)->field('id,user_login')->group('group')->count();
+        $user_nums = Db::table('cmf_game_record')->where($where)->field('id,user_login')->group('user_login')->count();
         $list_count = Db::table('cmf_game_record')->where($where)->field('sum(bet_amount) bet_amount, sum(pay_off) pay_off, sum(profit) profit')->find();
 
         $platform = Db::table('cmf_game_cate')->where('del_status', '=', 0)->field('platform,name')->all();
