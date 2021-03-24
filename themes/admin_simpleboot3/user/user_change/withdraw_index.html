@@ -47,7 +47,7 @@
         <input type="button" class="btn btn-success" value="导出" onclick="form1.action='{:url('userChange/w_export')}';form1.submit();"/>
         <br>
         <br>
-        订单数：{$num_money.num} 提现人数 {$user_nums} 提现金额: {:abs($num_money.money)} 手续费：{$num_money.service}
+        订单数：{$num_money.num} 提现人数 {$user_nums} 提现金额: {:abs($num_money.money)} 手续费：{:abs($num_money.service)}
     </form>
     <form method="post" class="js-ajax-form">
 
