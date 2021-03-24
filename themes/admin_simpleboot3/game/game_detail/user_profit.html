@@ -36,6 +36,7 @@
 
         <input type="submit" class="btn btn-primary" value="搜索"/>
         <a class="btn btn-danger" href="{:url('user/userChange/index')}">清空</a>
+        <input type="button" class="btn btn-success" value="导出" onclick="form1.action='{:url('GameDetail/user_export')}';form1.submit();"/>
         <br>
         <br>
         用户数：{$user_nums} / 派彩：{$list_count.pay_off} / 有效投注：{$list_count.bet_amount} / 盈亏：{$list_count.profit}
