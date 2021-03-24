@@ -19,7 +19,6 @@ class MainController extends AdminbaseController {
         $today_start=strtotime($today);
         //当天 23:59:59
         $today_end=strtotime("{$today} + 1 day");
-
         
         /* 总注册数 */
         $users_total=Db::name('user')->where("user_type=2")->count();
@@ -46,8 +45,7 @@ class MainController extends AdminbaseController {
             $basic_today_ios=$this->getDailyData($appkey,$today);
         }
 
-        // $basic_today['newUsers']=number_format($basic_today_android['newUsers']+$basic_today_ios['newUsers']);
-        $basic_today['newUsers']=number_format(Db::name('user')->where("user_type=2")->where('create_time','>=',$today_start)->where('create_time','<',$today_end)->count());
+        $basic_today['newUsers']=number_format($basic_today_android['newUsers']+$basic_today_ios['newUsers']);
         $basic_today['totalUsers']=number_format($basic_today_android['totalUsers']+$basic_today_ios['totalUsers']);
         $basic_today['activityUsers']=number_format($basic_today_android['activityUsers']+$basic_today_ios['activityUsers']);
         $basic_today['launches']=number_format($basic_today_android['launches']+$basic_today_ios['launches']);
