@@ -862,6 +862,9 @@ class LiverController extends AdminbaseController
             }
             $temp2 = Db::name('user_rate')->where('user_id','in',$down)->where('rate','>',0)->find();
             if ($temp2) $this->error("下级已有返点，无法修改");
+
+
+
             foreach ($data['platform'] as $k => $v){
                 $user_rate = UserRate::where('user_id',$user_id)->where('platform',$v)->find();
                 if($user_rate) {
@@ -869,14 +872,15 @@ class LiverController extends AdminbaseController
                     $user_rate->save();
                 }else{
                     $remark = '';
-                    $game = config('app.rate_plat');
-                    if($game && $game['platform'] == $v) $remark = $game['name'];
+                
+                    $remark = $data['remark'][$k];
                     $insert = [
                         'user_id' => $user_id,
                         'rate' => $data['rate'][$k] / 100,
                         'platform' => $v,
                         'remark' => $remark
                     ];
+                    
                     $res = UserRate::create($insert);
                     if(!$res) $this->error("设置代理失败");
                 }
