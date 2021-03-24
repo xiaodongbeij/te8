@@ -19,6 +19,9 @@ class MainController extends AdminbaseController {
         $today_start=strtotime($today);
         //当天 23:59:59
         $today_end=strtotime("{$today} + 1 day");
+
+        var_dump($today_start);
+        var_dump($today_end);die;
         
         /* 总注册数 */
         $users_total=Db::name('user')->where("user_type=2")->count();
