@@ -796,15 +796,13 @@ class AdminIndexController extends AdminBaseController{
 
             foreach ($data['platform'] as $k => $v){
                 $user_rate = UserRate::where('user_id',$user_id)->where('platform',$v)->find();
-                dump(1);
                 if($user_rate) {
-                    dump(2);
                     $user_rate->rate = $data['rate'][$k] / 100;
                     $user_rate->save();
                 }else{
-                    dump(3);
                     $remark = '';
                     $game = config('app.rate_plat');
+                    var_dump($game);die;
                     if($game && $game['platform'] == $v) $remark = $game['name'];
                     $insert = [
                         'user_id' => $user_id,
@@ -814,7 +812,6 @@ class AdminIndexController extends AdminBaseController{
                     ];
                     $res = UserRate::create($insert);
                     if(!$res) $this->error("设置代理失败");
-                    dump(4);die;
                 }
             }
 
