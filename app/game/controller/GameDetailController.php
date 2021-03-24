@@ -37,6 +37,8 @@ class GameDetailController extends AdminBaseController
 
         $list = Db::table('cmf_game_record')->alias('cr')->leftJoin('cmf_game_cate gc','gc.platform=cr.platform_code')->field('cr.*,FROM_UNIXTIME(cr.bet_time,"%Y-%m-%d %H:%i:%s") as bet_time,gc.name')->where($where)->order('bet_time desc')->paginate(20);
 
+        // $user_nums = Db::table('cmf_game_record')->where($where)->field('id,');
+
         $list->appends($data);
         $page = $list->render();
         $this->assign('list', $list);
