@@ -802,7 +802,7 @@ class AdminIndexController extends AdminBaseController{
                 }else{
                     $remark = '';
                     $game = config('app.rate_plat');
-                    var_dump($game);die;
+
                     if($game && $game['platform'] == $v) $remark = $game['name'];
                     $insert = [
                         'user_id' => $user_id,
@@ -810,9 +810,10 @@ class AdminIndexController extends AdminBaseController{
                         'platform' => $v,
                         'remark' => $remark
                     ];
+                    var_dump($insert);
                     $res = UserRate::create($insert);
                     if(!$res) $this->error("设置代理失败");
-                }
+                }die;
             }
 
             $this->success("ok");
