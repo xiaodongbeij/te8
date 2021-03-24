@@ -146,12 +146,14 @@ class UserChangeController extends AdminbaseController
         }
 
         $list = UserChange::where($where)->order('id desc')->paginate(20);
-        $num_money = UserChange::where($where)->field("count(*) num, sum(change_money) money")->find();
+        $num_money = UserChange::where($where)->field("count(*) num, sum(change_money) money, sum(service_charge) service")->find();
+        $user_nums = UserChange::where($where)->field('id,user_id')->group('user_id')->count();
         
         $list->appends($data);
         $page = $list->render();
         createToken();
         $this->assign('num_money', $num_money);
+        $this->assign('user_nums', $user_nums);
         $this->assign('list', $list);
         $this->assign('page', $page);
 
