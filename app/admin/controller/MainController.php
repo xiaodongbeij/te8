@@ -47,7 +47,7 @@ class MainController extends AdminbaseController {
         }
 
         // $basic_today['newUsers']=number_format($basic_today_android['newUsers']+$basic_today_ios['newUsers']);
-        $basic_today['newUsers']=number_format(Db::name('user')->where("user_type=2")->where('addtime','>=',$today_start)->where('addtime','<',$today_end)->count(););
+        $basic_today['newUsers']=number_format(Db::name('user')->where("user_type=2")->where('addtime','>=',$today_start)->where('addtime','<',$today_end)->count());
         $basic_today['totalUsers']=number_format($basic_today_android['totalUsers']+$basic_today_ios['totalUsers']);
         $basic_today['activityUsers']=number_format($basic_today_android['activityUsers']+$basic_today_ios['activityUsers']);
         $basic_today['launches']=number_format($basic_today_android['launches']+$basic_today_ios['launches']);
