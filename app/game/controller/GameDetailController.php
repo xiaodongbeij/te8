@@ -204,75 +204,131 @@ class GameDetailController extends AdminBaseController
         return $this->fetch();
     }
 
-    //彩票综合报表导出
-    function export(){
+    function user_export(){
         $data = input();
         $where = [];
-        $where2 = [];
+
+        $user_login = isset($data['user_login']) ? $data['user_login'] : '';
+        if ($user_login != '') {
+            $where[] = ['gr.user_login', '=', $user_login];
+        }
+
+        $short_name = isset($data['short_name']) ? $data['short_name'] : '';
+        if ($short_name != '') {
+            $where[] = ['platform_code', '=', $short_name];
+        }
 
         $start_time = isset($data['start_time']) ? $data['start_time'] : '';
         $end_time = isset($data['end_time']) ? $data['end_time'] : '';
         if ($start_time != "") {
-            $where[] = ['addtime', '>=', strtotime($start_time)];
-//            $where2[] = ['bet_time', '>=', strtotime($start_time)];
+            $where[] = ['bet_time', '>=', strtotime($start_time)];
         }
         if ($end_time != "") {
-            $where[] = ['addtime', '<=', strtotime($end_time) + 60 * 60 * 24];
-//            $where2[] = ['bet_time', '<=', strtotime($end_time) + 60*60*24];
-        }
-
-        $short_name = isset($data['short_name']) ? $data['short_name'] : '0016';
-        if ($short_name != '') {
-            $where[] = ['platform', '=', $short_name];
-            $where2[] = ['platform_code', '=', $short_name];
+            $where[] = ['bet_time', '<=', strtotime($end_time) + 60 * 60 * 24];
         }
 
         $cai = Db::table('cmf_game_cate')
             ->field('name,platform')
             ->where('platform', '<>', 1)
+            ->where('del_status', '=', 0)
             ->select();
         $this->assign('cai', $cai);
 
-        $list = Db::table('cmf_user_change')
+        $list = Db::table('cmf_game_record')
+            ->alias('gr')
+            ->group("gr.user_login,gr.platform_code,FROM_UNIXTIME(gr.bet_time,'%Y-%m-%d')")
+//            ->join('cmf_user u', 'u.user_login=gr.user_login')
+            ->join('cmf_user u', 'u.id=gr.user_login')
             ->where($where)
-            ->group("FROM_UNIXTIME(addtime,'%Y-%m-%d')")
-            ->order('id desc')
-            ->field("FROM_UNIXTIME(addtime,'%Y-%m-%d') date,sum(if(change_type=23&&change_money<0,change_money,0)) recharge,sum(if(change_type=23&&change_money>0,change_money,0)) withdrawal,sum(if(change_type=7,change_money,0)) rate,sum(if(change_type=6,change_money,0)) activity")
-            ->paginate(20);
+            ->order('gr.id desc')
+            ->field("u.id,gr.user_login,FROM_UNIXTIME(gr.bet_time,'%Y-%m-%d') date,gr.game_name,sum(gr.pay_off) bonus,sum(gr.bet_amount) money,sum(gr.profit) yin")
+            ->select()->toArray();
 
-        $res = $list->items();
+        $xlsName  = "游戏用户盈亏";
 
-        foreach ($res as $k => $v) {
-            $info = Db::table('cmf_game_record')
-                ->where($where2)
-                ->where("bet_time", '>=', strtotime($v['date']))
-                ->where("bet_time", '<', strtotime($v['date']) + 3600 * 24)
-                ->field('sum(pay_off) pay_off,sum(bet_amount) bet_amount,sum(profit) profit')
-                ->find();
-            $res[$k]['pay_off'] = is_null($info['pay_off']) ? 0 : $info['pay_off'];
-            $res[$k]['bet_amount'] = is_null($info['bet_amount']) ? 0 : $info['bet_amount'];
-            $res[$k]['yin'] = is_null($info['profit']) ? 0 : $info['profit'] + $v['rate'] + $v['activity'];
-
-
-        }
-
-        $xlsName  = "三方游戏报表";
-
-        $action="三方游戏报表导出：".Db::name("cmf_game_record")->getLastSql();
+        $action="游戏用户盈亏导出：".Db::name("cmf_game_record")->getLastSql();
         setAdminLog($action);
 
-        $cellName = array('A','B','C','D','E','F','G','H');
+        $cellName = array('A','B','C','D','E','F');
         $xlsCell  = array(
+            array('id','用户ID'),
             array('date','日期'),
-            array('recharge','存款'),
-            array('withdrawal','取款'),
-            array('pay_off','派彩'),
-            array('bet_amount','有效投注'),
-            array('rate','返点'),
-            array('activity','活动'),
+            array('game_name','游戏名称'),
+            array('bonus','派彩'),
+            array('money','有效投注额'),
             array('yin','盈亏'),
         );
-        exportExcel($xlsName,$xlsCell,$res,$cellName);
+        exportExcel($xlsName,$xlsCell,$list,$cellName);
+    }
+
+
+    function index_export(){
+        $where = [];
+        $data = input();
+
+        $order_id = isset($data['order_id']) ? $data['order_id'] : '';
+        if ($order_id != '') $where[] = ['bet_id', '=', $order_id];
+
+        $username = isset($data['username']) ? $data['username'] : '';
+        if ($username != '') {
+            $where[] = ['user_login', '=', $username];
+        }
+
+        $platform_code = isset($data['platform_code']) ? $data['platform_code'] : '';
+        if ($platform_code != '') {
+            $where[] = ['platform_code', '=', $platform_code];
+        }
+
+        $rate_status = isset($data['rate_status']) ? $data['rate_status'] : '';
+        if ($rate_status != '') $where[] = ['rate_status', '=', $rate_status];
+
+        $start_time = isset($data['start_time']) ? $data['start_time']: '';
+        if($start_time != '') $where[]=['bet_time', '>=' ,strtotime($start_time)];
+
+        $end_time = isset($data['end_time']) ? $data['end_time']: '';
+        if($end_time != '') $where[]=['bet_time', '<=' ,strtotime($end_time) + 60*60*24];
+
+        $status = isset($data['status']) ? $data['status'] : '';
+        if ($status != '') {
+            $where[] = ['status', '=', $status];
+        }
+        $list = Db::table('cmf_game_record')->alias('cr')->leftJoin('cmf_game_cate gc','gc.platform=cr.platform_code')->field('cr.*,FROM_UNIXTIME(cr.bet_time,"%Y-%m-%d %H:%i:%s") as bet_time,gc.name')->where($where)->order('bet_time desc')->select()->toArray();
+
+        $list_status = [ 
+            3 => '输', 
+            4 => '赢'
+        ];
+        $list_rate_status = [ 
+            1 => '已结算', 
+            2 => '未结算'
+        ];
+        foreach($list as $key => $value){
+            if($value['status']&&$value['status']>0) $list[$key]['status'] = $list_status[$value['status']];
+            if($value['rate_status']&&$value['rate_status']>0) $list[$key]['rate_status'] = $list_rate_status[$value['rate_status']];
+        }
+
+
+        $xlsName  = "三方游戏记录";
+
+        $action="三方游戏记录导出：".Db::name("cmf_game_record")->getLastSql();
+        setAdminLog($action);
+
+        $cellName = array('A','B','C','D','E','F','G','H','I','J','K','L');
+        $xlsCell  = array(
+            array('id','ID'),
+            array('name','平台'),
+            array('game_name','游戏名称'),
+            array('user_login','用户'),
+            array('bet_id','订单号'),
+            array('bet_time','下注时间'),
+            array('bet_amount','有效投注额'),
+            array('pay_off','派彩'),
+            array('profit','盈亏'),
+            array('status','订单状态'),
+            array('remark','交易备注'),
+            array('rate_status','返点结算状态'),
+        );
+        exportExcel($xlsName,$xlsCell,$list,$cellName);
     }
 
     //团队结算报表
