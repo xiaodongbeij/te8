@@ -177,7 +177,7 @@ class Api_Gaming extends PhalApi_Api {
         $this->param['credit'] = checkNull($money);
 
            
-        return $this->money_change($url, -1 * $money,'游戏存款',$this->param['platform']);
+        return $this->game_in($url, -1 * $money,'游戏存款',$this->param['platform']);
  
     }
     
@@ -204,7 +204,7 @@ class Api_Gaming extends PhalApi_Api {
 //        // 取款回来数据要做数据库金额增加
 //        return json_decode($this->getHttpQuery($url, $this->param));
 
-        return $this->money_change($url,$money,'游戏取款',$this->param['platform']);
+        return $this->game_out($url,$money,'游戏取款',$this->param['platform']);
        
         
     }
