@@ -392,6 +392,7 @@ class Api_Gaming extends PhalApi_Api {
             $return['msg'] ='成功';
             //账变
             $res = $this->game_change($this->uid,23,$money,$remark,$platform);
+            return $return;
         }else{
             //取款失败
             return $return;
