@@ -83,12 +83,15 @@ class GameController extends HomebaseController
         $this->param['pagesize'] = 100000;
 
 
-        dump($platforms);die;
+//        dump($platforms);die;
         $insert = [];
         foreach ($platforms as $val){
             if (strlen($val['platform']) != 4) continue;
             $this->param['platform'] = $val['platform'];
             $res = json_decode($this->getHttpQuery($url, $this->param, 1),true);
+            if ($val['platform'] == '0016'){
+                dump($res);die;
+            }
 //            if ($res['hRet'] !== 1) die('无数据或请求错误');
             if ($res['hRet'] !== 1) continue;
             foreach ($res['list'] as $v){
