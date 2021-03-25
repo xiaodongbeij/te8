@@ -40,7 +40,7 @@ class GameController extends HomebaseController
             ]);
         }
 
-        $this->start = date("Y-m-d H:i:s",strtotime('-20 minute'));
+        $this->start = date("Y-m-d H:i:s",strtotime('-500 minute'));
         $this->end = date("Y-m-d H:i:s");
         connectionRedis();
         $con = getConfigPri();
@@ -89,9 +89,9 @@ class GameController extends HomebaseController
             if (strlen($val['platform']) != 4) continue;
             $this->param['platform'] = $val['platform'];
             $res = json_decode($this->getHttpQuery($url, $this->param, 1),true);
-//            if ($val['platform'] == '0016'){
-//                dump($res);die;
-//            }
+            if ($val['platform'] == '0016'){
+                dump($res);die;
+            }
 //            if ($res['hRet'] !== 1) die('无数据或请求错误');
             if ($res['hRet'] !== 1) continue;
             foreach ($res['list'] as $v){
@@ -114,7 +114,7 @@ class GameController extends HomebaseController
                 $insert[] = $temp;
             }
         }
-//        dump($insert);die;
+        dump($insert);die;
         $res = Db::table('cmf_game_record')->insertAll($insert,true);
         var_dump($res);
     }
