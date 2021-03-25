@@ -59,41 +59,42 @@ class LiveingController extends AdminbaseController {
         $this->configpri=getConfigPri();
             
 
-        $lists = Db::name("live")
+        $lists = Db::name("live")->alias('lv')->leftJoin('cmf_user u','lv.uid=u.id')
+                ->field('uid,starttime,type,liveclassid,pull,show_name,user_nicename,thumb,qq,wechat,isvideo')
                 ->where($map)
                 ->order("starttime DESC")
                 ->paginate(20);
         
         $lists->each(function($v,$k){
 
-             $v['userinfo']=getUserInfo($v['uid']);
-             $where=[];
-             $where['action']=1;
-             $where['touid']=$v['uid'];
-             $where['showid']=$v['showid'];
-             /* 本场总收益 */
-             $totalcoin=Db::name("user_coinrecord")->where($where)->sum('totalcoin');
-             if(!$totalcoin){
-                $totalcoin=0;
-             }
-             /* 送礼物总人数 */
-             $total_nums=Db::name("user_coinrecord")->where($where)->group("uid")->count();
-             if(!$total_nums){
-                $total_nums=0;
-             }
-             /* 人均 */
-             $total_average=0;
-             if($totalcoin && $total_nums){
-                $total_average=round($totalcoin/$total_nums,2);
-             }
+            //  $v['userinfo']=getUserInfo($v['uid']);
+            //  $where=[];
+            //  $where['action']=1;
+            //  $where['touid']=$v['uid'];
+            //  $where['showid']=$v['showid'];
+            //  /* 本场总收益 */
+            //  $totalcoin=Db::name("user_coinrecord")->where($where)->sum('totalcoin');
+            //  if(!$totalcoin){
+            //     $totalcoin=0;
+            //  }
+            //  /* 送礼物总人数 */
+            //  $total_nums=Db::name("user_coinrecord")->where($where)->group("uid")->count();
+            //  if(!$total_nums){
+            //     $total_nums=0;
+            //  }
+            //  /* 人均 */
+            //  $total_average=0;
+            //  if($totalcoin && $total_nums){
+            //     $total_average=round($totalcoin/$total_nums,2);
+            //  }
              
-             /* 人数 */
-            $nums=zSize('user_'.$v['stream']);
+            //  /* 人数 */
+            // $nums=zSize('user_'.$v['stream']);
             
-            $v['totalcoin']=$totalcoin;
-            $v['total_nums']=$total_nums;
-            $v['total_average']=$total_average;
-            $v['nums']=$nums;
+            // $v['totalcoin']=$totalcoin;
+            // $v['total_nums']=$total_nums;
+            // $v['total_average']=$total_average;
+            // $v['nums']=$nums;
             
             if($v['isvideo']==0 && true){
                 $v['pull']=PrivateKeyA('rtmp',$v['stream'],0);
@@ -102,7 +103,7 @@ class LiveingController extends AdminbaseController {
             return $v;           
         });
 
-        $caizhong = GameCaizhong::where('status', 1)->field('id,show_name')->all();
+        
         
         $lists->appends($data);
         $page = $lists->render();
@@ -116,8 +117,8 @@ class LiveingController extends AdminbaseController {
         
         $this->assign("liveclass", $liveclass);
         
-        $this->assign("type", $this->getTypes());
-        $this->assign("cz", $caizhong);
+       
+      
 
         return $this->fetch();
 

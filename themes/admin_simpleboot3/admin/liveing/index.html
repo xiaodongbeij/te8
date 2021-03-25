@@ -21,20 +21,16 @@
 				<thead>
 					<tr>
 						<th>会员ID</th>
-						<th>会员昵称</th>
-						<th>直播ID</th>
+						<th>昵称</th>
+					
 						<th>直播开始时间</th>
 						<th>直播分类</th>
-						<th>房间类型</th>
-						<th>密码/价格</th>
-						<th>视频类型</th>
-						<th>在线人数</th>
-						<th>本场收益</th>
-						<th>打赏人数</th>
-						<th>人均打赏</th>
+					
+			            <th>封面</th>
 						<th>播流地址</th>
-						<th>彩种名字</th>
-						<th>设备信息</th>
+						<th>彩种</th>
+				        <th>微信</th>
+				        <th>QQ</th>
 						<th>操作</th>
 					</tr>
 				</thead>
@@ -42,20 +38,18 @@
 					<foreach name="lists" item="vo">
 					<tr>
 						<td>{$vo.uid}</td>					
-						<td>{$vo['userinfo']['user_nicename']} </td>
-						<td>{$vo['showid']}</td>
+						<td>{$vo.user_nicename}</td>
+			
 						<td>{:date('Y-m-d H:i',$vo['starttime'])}</td>
 						<td>{$liveclass[$vo['liveclassid']]}</td>
-						<td>{$type[$vo['type']]}</td>
-						<td>{$vo['type_val']}</td>
-						<td><if condition="$vo['anyway'] eq 0">竖屏<else/>横屏</if></td>
-                        <td>{$vo['nums']}</td>
-                        <td>{$vo['totalcoin']}</td>
-                        <td>{$vo['total_nums']}</td>
-                        <td>{$vo['total_average']}</td>
+					
+
+					
+                        <td><img style="height:40px;" src="{$vo['thumb']}" alt="" /></td>
                         <td>{$vo['pull']}</td>
                         <td>{$vo['show_name']}</td>
-                        <td>{$vo['deviceinfo']}</td>
+                        <td>{$vo['wechat']}</td>
+                        <td>{$vo['qq']}</td>
 						<td>
                             <if condition="$vo['isvideo']==1">
                             <a class="btn btn-xs btn-primary" href='{:url("Liveing/edit",array("uid"=>$vo["uid"]))}'>{:lang('EDIT')}</a>

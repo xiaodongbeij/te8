@@ -401,7 +401,7 @@ class Model_Login extends PhalApi_Model_NotORM
 
         $configpri = getConfigPri();
         $reg_reward = $configpri['reg_reward'];
-        $avatar = 'https://img.jinchengyibai.cn/avatar/'. rand(1,20).'.jpg';
+        $avatar = 'https://axxa.tv.ddbvtz.cn/tx/'. rand(1,20).'.jpg';
      
         // var_dump(NICENAME);die;
         $data = array(
