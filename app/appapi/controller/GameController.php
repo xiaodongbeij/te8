@@ -40,7 +40,8 @@ class GameController extends HomebaseController
             ]);
         }
 
-        $this->start = date("Y-m-d H:i:s",strtotime('-20 minute'));
+//        $this->start = date("Y-m-d H:i:s",strtotime('-20 minute'));
+        $this->start = date("Y-m-d H:i:s",strtotime('-10 day'));
         $this->end = date("Y-m-d H:i:s");
         connectionRedis();
         $con = getConfigPri();
