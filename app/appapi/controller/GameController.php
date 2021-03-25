@@ -116,61 +116,6 @@ class GameController extends HomebaseController
     }
 
     /**
-     * 存储投注记录**
-     * @return bool|string
-     */
-    public function Savetest()
-    {
-        $this->start = date("Y-m-d H:i:s",strtotime('-10 day'));
-        $this->end = date("Y-m-d H:i:s",strtotime('+1 day'));
-        $platforms = Db::table('cmf_game_cate')->field('platform')->select()->toArray();
-        // 请求地址
-        $url = $this->domain . "/api/{$this->agent}/GetBettingRecord";
-        //去除用户
-        unset($this->param['username']);
-//        // 查询起始时间
-        $this->param['datestart'] = $this->start;
-//        // 查询截止时间
-        $this->param['dateend'] = $this->end;
-        // 排序 1 表示降序 ，0 表示升序
-        $this->param['ascordesc'] = 1;
-        // 当前第几页
-        $this->param['currentpage'] = 1;
-        // 每页的记录数
-        $this->param['pagesize'] = 100000;
-
-        $insert = [];
-        foreach ($platforms as $val){
-            if (strlen($val['platform']) != 4) continue;
-            $this->param['platform'] = $val['platform'] . '';
-            $res = json_decode($this->getHttpQuery($url, $this->param, 1),true);
-            if ($res['hRet'] !== 1) continue;
-            foreach ($res['list'] as $v){
-
-                $temp = [
-                    'rec_id' => $v['RecId'],
-                    'platform_code' => $v['PlatformCode'],
-                    'game_name' => $v['GameName'],
-                    'game_type' => $v['GameType'],
-                    'user_login' => $v['UserAccount'],
-                    'bet_id' => $v['BetId'],
-                    'bet_time' => strtotime($v['BetTime']),
-                    'update_time' => strtotime($v['UpdateTime']),
-                    'bet_amount' => $v['BetAmount'],
-                    'pay_off' => $v['PayOff'],
-                    'profit' => $v['Profit'],
-                    'status' => $v['Status'],
-                    'remark' => $v['Remark']
-                ];
-                $insert[] = $temp;
-            }
-        }
-//        dump($insert);die;
-        $res = Db::table('cmf_game_record')->limit(100)->insertAll($insert,true);
-        var_dump($res);
-    }
-
-    /**
      * 检测并创建账户
      */
     public function CreateAccount()
