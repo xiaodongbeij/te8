@@ -83,7 +83,7 @@ class GameController extends HomebaseController
         $this->param['pagesize'] = 100000;
 
 
-//        dump($url);die;
+        dump($this->param);die;
         $insert = [];
         foreach ($platforms as $val){
             if (strlen($val['platform']) != 4) continue;
