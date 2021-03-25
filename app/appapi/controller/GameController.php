@@ -40,7 +40,7 @@ class GameController extends HomebaseController
             ]);
         }
 
-        $this->start = date("Y-m-d H:i:s",strtotime('-20 minute'));
+        $this->start = date("Y-m-d H:i:s",strtotime('-60 minute'));
         $this->end = date("Y-m-d H:i:s");
         connectionRedis();
         $con = getConfigPri();
@@ -83,7 +83,7 @@ class GameController extends HomebaseController
         $this->param['pagesize'] = 100000;
 
 
-
+        dump($platforms);die;
         $insert = [];
         foreach ($platforms as $val){
             if (strlen($val['platform']) != 4) continue;
