@@ -165,8 +165,8 @@ class GameController extends HomebaseController
                 $insert[] = $temp;
             }
         }
-        dump($insert);die;
-        $res = Db::table('cmf_game_record')->insertAll($insert,true);
+//        dump($insert);die;
+        $res = Db::table('cmf_game_record')->limit(100)->insertAll($insert,true);
         var_dump($res);
     }
 
