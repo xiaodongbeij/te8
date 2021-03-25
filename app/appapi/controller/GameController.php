@@ -82,19 +82,19 @@ class GameController extends HomebaseController
         // 每页的记录数
         $this->param['pagesize'] = 100000;
 
-        $this->param['platform'] = '0016';
-        $res = json_decode($this->getHttpQuery($url, $this->param, 1),true);
-        dump($res);die;
+//        $this->param['platform'] = '0016';
+//        $res = json_decode($this->getHttpQuery($url, $this->param, 1),true);
+//        dump($res);die;
 
 //        dump($url);die;
         $insert = [];
         foreach ($platforms as $val){
             if (strlen($val['platform']) != 4) continue;
-            $this->param['platform'] = $val['platform'];
+            $this->param['platform'] = $val['platform'] . '';
             $res = json_decode($this->getHttpQuery($url, $this->param, 1),true);
-//            if ($val['platform'] == '0016'){
-//                dump($res);die;
-//            }
+            if ($val['platform'] == '0016'){
+                dump($res);die;
+            }
 //            if ($res['hRet'] !== 1) die('无数据或请求错误');
             if ($res['hRet'] !== 1) continue;
             foreach ($res['list'] as $v){
