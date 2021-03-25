@@ -383,45 +383,128 @@ class Api_Gaming extends PhalApi_Api {
         return 'game:' . $this->param['platform'] . ':' . $this->param['username'];
     }
 
-    //存取款
-    protected function money_change($url,$money,$remark,$platform){
-       
-        //开启事务
-        DI()->notorm->beginTransaction('db_appapi');
+    //取款
+    protected function game_out($url,$money,$remark,$platform){
+        $return = $this->getHttpQuery($url, $this->param);
+        $return['balance'] = abs($money);
+        if ($return['code'] == 0){
+            //取款成功
+            $return['msg'] ='成功';
+            //账变
+            $res = $this->game_change($this->uid,23,$money,$remark,$platform);
+        }else{
+            //取款失败
+            return $return;
+        }
+    }
+
+    //存款
+    protected function game_in($url,$money,$remark,$platform){
         //账变
-        $res = user_change_action($this->uid,23,$money,$remark,'','','','',$platform);
+        $res = $this->game_change($this->uid,23,$money,$remark,$platform);
         if ($res === 1){
-            
             $return = $this->getHttpQuery($url, $this->param);
-         
             $return['balance'] = abs($money);
             if ($return['code'] == 0){
                 $return['msg'] ='成功';
-                //事务提交
-                DI()->notorm->commit('db_appapi');
             }else{
-                //回滚
-                DI()->notorm->rollback('db_appapi');
+                //请求失败,余额退回
+                $money = -1 * $money;
+                $remark = '游戏存款失败，金额退回';
+                $res = $this->game_change($this->uid,23,$money,$remark,$platform);
+                $return['msg'] = '请求失败';
             }
-           
             return $return;
         }elseif($res === 2){
-           
             return [
-//                'hRet' => 1001,
                 'code' => 1001,
                 'msg' => '余额不足'
             ];
         }else{
-            //回滚
-            DI()->notorm->rollback('db_appapi');
-           
             return [
-//                'hRet' => 1002,
                 'code' => 1002,
                 'msg' => '转入失败'
             ];
         }
+    }
+
+    //存取款
+//    protected function money_change($url,$money,$remark,$platform){
+//
+//        //开启事务
+//        DI()->notorm->beginTransaction('db_appapi');
+//        //账变
+//        $res = user_change_action($this->uid,23,$money,$remark,'','','','',$platform);
+//        if ($res === 1){
+//
+//            $return = $this->getHttpQuery($url, $this->param);
+//
+//            $return['balance'] = abs($money);
+//            if ($return['code'] == 0){
+//                $return['msg'] ='成功';
+//                //事务提交
+//                DI()->notorm->commit('db_appapi');
+//            }else{
+//                //回滚
+//                DI()->notorm->rollback('db_appapi');
+//            }
+//
+//            return $return;
+//        }elseif($res === 2){
+//
+//            return [
+////                'hRet' => 1001,
+//                'code' => 1001,
+//                'msg' => '余额不足'
+//            ];
+//        }else{
+//            //回滚
+//            DI()->notorm->rollback('db_appapi');
+//
+//            return [
+////                'hRet' => 1002,
+//                'code' => 1002,
+//                'msg' => '转入失败'
+//            ];
+//        }
+//    }
+
+    //游戏账变
+    protected function game_change($user_id,$type,$money,$remark,$platform){
+        //开启事务
+        DI()->notorm->beginTransaction('db_appapi');
+        $info=DI()->notorm->user
+            ->where("id=?",$user_id)
+            ->select("id,coin,freeze_money")
+            ->fetchOne();
+
+            if ($info['coin'] + $money < 0) return 2;
+            $coin = $info['coin'] + $money;
+            //资金更新
+            $res1 = DI()->notorm->user
+                ->where('id=?',$user_id)
+                ->update(['coin'=>$coin]);
+            //更新记录
+            $insert = [
+                'user_id' => $user_id,
+                'change_type' => $type,
+                'money' => $info['coin'],
+                'next_money' => $coin,
+                'change_money' => $money,
+                'remark' => $remark,
+                'addtime' => time(),
+                'platform' =>$platform
+            ];
+
+        $res2 = DI()->notorm->user_change->insert($insert);
+        if ($res1 && $res2){
+            //事务提交
+            DI()->notorm->commit('db_appapi');
+            return 1;
+        }
+        //回滚
+        DI()->notorm->rollback('db_appapi');
+        return false;
     }
     
 }
