@@ -166,24 +166,19 @@ class Api_Gaming extends PhalApi_Api {
             return ['code' => 1, 'msg' => '转存金额不能低于'. $this->t_money . '元', 'remoteMsg' => '转存金额不能低于'. $this->t_money . '元'];
         }
         
-        $deposit = 'deposit:' . $this->agent . ':' . $this->uid;
-        $withdrawalskye = 'withdrawals:' . $this->agent . ':' . $this->uid;
-        if(DI()->redis->get($deposit) != 1 && DI()->redis->get($withdrawalskye) != 1)
-        {
-            DI()->redis->set($deposit, 1);
-            delcache($this->getAllBalanceKey());
-            $money = checkNull($this->money);
-            // 请求地址
-            $url = $this->domain . "/api/{$this->agent}/deposit";
-            // 订单号
-            $this->param['billno'] = date('YmdHis') . random_int(1111, 9999);
-            // 转账金额
-            $this->param['credit'] = checkNull($money);
-    //        // 转账成功数据要做数据库金额减少
-            // return json_decode($this->getHttpQuery($url, $this->param),true);
-               
-            return $this->money_change($url, -1 * $money,'游戏存款',$this->param['platform']);
-        }
+ 
+
+        $money = checkNull($this->money);
+        // 请求地址
+        $url = $this->domain . "/api/{$this->agent}/deposit";
+        // 订单号
+        $this->param['billno'] = date('YmdHis') . random_int(1111, 9999);
+        // 转账金额
+        $this->param['credit'] = checkNull($money);
+
+           
+        return $this->money_change($url, -1 * $money,'游戏存款',$this->param['platform']);
+ 
     }
     
     /**
@@ -195,25 +190,22 @@ class Api_Gaming extends PhalApi_Api {
      */
     public function withdrawals()
     {
-        $deposit = 'deposit:' . $this->agent . ':' . $this->uid;
-        $withdrawalskye = 'withdrawals:' . $this->agent . ':' . $this->uid;
-        if(DI()->redis->get($withdrawalskye) != 1 && DI()->redis->get($deposit) != 1)
-        {
-            DI()->redis->set($withdrawalskye,1);
-            // 获取前端传过来的金额
-            $money = checkNull($this->money);
         
-            // 请求地址
-            $url = $this->domain . "/api/{$this->agent}/Withdrawals";
-            // 订单号
-            $this->param['billno'] = date('YmdHis') . random_int(1111, 9999);
-            // 取款金额
-            $this->param['credit'] = $money;
-    //        // 取款回来数据要做数据库金额增加
-    //        return json_decode($this->getHttpQuery($url, $this->param));
+        
+        // 获取前端传过来的金额
+        $money = checkNull($this->money);
     
-            return $this->money_change($url,$money,'游戏取款',$this->param['platform']);
-        }
+        // 请求地址
+        $url = $this->domain . "/api/{$this->agent}/Withdrawals";
+        // 订单号
+        $this->param['billno'] = date('YmdHis') . random_int(1111, 9999);
+        // 取款金额
+        $this->param['credit'] = $money;
+//        // 取款回来数据要做数据库金额增加
+//        return json_decode($this->getHttpQuery($url, $this->param));
+
+        return $this->money_change($url,$money,'游戏取款',$this->param['platform']);
+       
         
     }
     
@@ -321,7 +313,7 @@ class Api_Gaming extends PhalApi_Api {
     {
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($curl, CURLOPT_TIMEOUT, 500);
+        curl_setopt($curl, CURLOPT_TIMEOUT, 10);
         curl_setopt($curl, CURLOPT_URL, $url);
         $res = curl_exec($curl);
         curl_close($curl);
@@ -393,8 +385,7 @@ class Api_Gaming extends PhalApi_Api {
 
     //存取款
     protected function money_change($url,$money,$remark,$platform){
-        $depositkye = 'deposit:' . $this->agent . ':' . $this->uid;
-        $withdrawalskye = 'withdrawals:' . $this->agent . ':' . $this->uid;
+       
         //开启事务
         DI()->notorm->beginTransaction('db_appapi');
         //账变
@@ -402,20 +393,20 @@ class Api_Gaming extends PhalApi_Api {
         if ($res === 1){
             
             $return = $this->getHttpQuery($url, $this->param);
+         
             $return['balance'] = abs($money);
             if ($return['code'] == 0){
+                $return['msg'] ='成功';
                 //事务提交
                 DI()->notorm->commit('db_appapi');
             }else{
                 //回滚
                 DI()->notorm->rollback('db_appapi');
             }
-            DI()->redis->set($withdrawalskye, 2);
-            DI()->redis->set($depositkye, 2);
+           
             return $return;
         }elseif($res === 2){
-            DI()->redis->set($depositkye, 2);
-            DI()->redis->set($withdrawalskye, 2);
+           
             return [
 //                'hRet' => 1001,
                 'code' => 1001,
@@ -424,8 +415,7 @@ class Api_Gaming extends PhalApi_Api {
         }else{
             //回滚
             DI()->notorm->rollback('db_appapi');
-            DI()->redis->set($depositkye, 2);
-            DI()->redis->set($withdrawalskye, 2);
+           
             return [
 //                'hRet' => 1002,
                 'code' => 1002,

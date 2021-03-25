@@ -20,11 +20,13 @@ class GameDetailController extends AdminBaseController
 
         $username = isset($data['username']) ? $data['username'] : '';
         if ($username != '') {
-            $where[] = ['user_login', 'like', '%' . $username . '%'];
+            $where[] = ['user_login', '=', $username];
         }
 
-        $status = isset($data['status']) ? $data['status'] : '';
-        if ($status != '') $where[] = ['status', '=', $status];
+        $platform_code = isset($data['platform_code']) ? $data['platform_code'] : '';
+        if ($platform_code != '') {
+            $where[] = ['platform_code', '=', $platform_code];
+        }
 
         $rate_status = isset($data['rate_status']) ? $data['rate_status'] : '';
         if ($rate_status != '') $where[] = ['rate_status', '=', $rate_status];
@@ -35,14 +37,29 @@ class GameDetailController extends AdminBaseController
         $end_time = isset($data['end_time']) ? $data['end_time']: '';
         if($end_time != '') $where[]=['bet_time', '<=' ,strtotime($end_time) + 60*60*24];
 
+        $list_status_ok = Db::table('cmf_game_record')->where($where)->where('status', '=', 4)->count();
+        $list_status_no = Db::table('cmf_game_record')->where($where)->where('status', '=', 3)->count();
+
+        $status = isset($data['status']) ? $data['status'] : '';
+        if ($status != '') {
+            $where[] = ['status', '=', $status];
+        }
         $list = Db::table('cmf_game_record')->alias('cr')->leftJoin('cmf_game_cate gc','gc.platform=cr.platform_code')->field('cr.*,FROM_UNIXTIME(cr.bet_time,"%Y-%m-%d %H:%i:%s") as bet_time,gc.name')->where($where)->order('bet_time desc')->paginate(20);
 
-        // $user_nums = Db::table('cmf_game_record')->where($where)->field('id,');
+        $user_nums = Db::table('cmf_game_record')->where($where)->field('id,user_login')->group('user_login')->count();
+        $list_count = Db::table('cmf_game_record')->where($where)->field('sum(bet_amount) bet_amount, sum(pay_off) pay_off, sum(profit) profit')->find();
+
+        $platform = Db::table('cmf_game_cate')->where('del_status', '=', 0)->field('platform,name')->all();
 
         $list->appends($data);
         $page = $list->render();
         $this->assign('list', $list);
         $this->assign('page', $page);
+        $this->assign('list_status_ok', $list_status_ok);
+        $this->assign('list_status_no', $list_status_no);
+        $this->assign('user_nums', $user_nums);
+        $this->assign('list_count', $list_count);
+        $this->assign('platform', $platform);
 
         // 渲染模板输出
         return $this->fetch();
@@ -76,6 +93,7 @@ class GameDetailController extends AdminBaseController
         $cai = Db::table('cmf_game_cate')
             ->field('name,platform')
             ->where('platform', '<>', 1)
+            ->where('del_status', '=', 0)
             ->select();
         $this->assign('cai', $cai);
 
@@ -86,12 +104,22 @@ class GameDetailController extends AdminBaseController
             ->join('cmf_user u', 'u.id=gr.user_login')
             ->where($where)
             ->order('gr.id desc')
-            ->field("u.user_login,FROM_UNIXTIME(gr.bet_time,'%Y-%m-%d') date,gr.game_name,sum(gr.pay_off) bonus,sum(gr.bet_amount) money,sum(gr.profit) yin")
+            ->field("u.id,gr.user_login,FROM_UNIXTIME(gr.bet_time,'%Y-%m-%d') date,gr.game_name,sum(gr.pay_off) bonus,sum(gr.bet_amount) money,sum(gr.profit) yin")
             ->paginate(20);
+
+        $user_nums =  Db::table('cmf_game_record')->alias('gr')->where($where)
+            ->field('gr.id,gr.user_login')
+            ->group("gr.user_login")
+            ->count();
+
+        $list_count = Db::table('cmf_game_record')->alias('gr')->where($where)->field('sum(gr.bet_amount) bet_amount, sum(gr.pay_off) pay_off, sum(gr.profit) profit')->find();    
+
         $list->appends($data);
         $page = $list->render();
         $this->assign('list', $list);
         $this->assign('page', $page);
+        $this->assign('user_nums', $user_nums);
+        $this->assign('list_count', $list_count);
         // 渲染模板输出
         return $this->fetch();
     }

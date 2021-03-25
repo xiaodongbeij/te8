@@ -16,7 +16,7 @@
         <li class="active"><a>用户盈亏报表</a></li>
         <!--        <li><a href="{:url('userChange/add')}">{:lang('ADD')}</a></li>-->
     </ul>
-    <form class="well form-inline margin-top-20" method="post" action="{:url('report/UserProfit/index')}">
+    <form class="well form-inline margin-top-20" method="post" name="form1" action="{:url('report/UserProfit/index')}">
 
         用户：
         <input class="form-control" type="text" name="user_login" style="width: 200px;" value="{:input('request.user_login')}"
@@ -36,8 +36,10 @@
 
         <input type="submit" class="btn btn-primary" value="搜索"/>
         <a class="btn btn-danger" href="{:url('user/userChange/index')}">清空</a>
+        <input type="button" class="btn btn-success" value="导出" onclick="form1.action='{:url('UserProfit/export')}';form1.submit();"/>
         <br>
         <br>
+        用户数：{$user_nums} / 奖金：{:abs($list_count.prize)} / 下注：{:abs($list_count.money)} / 盈亏：{$list_count.yin}
     </form>
     <form method="post" class="js-ajax-form">
 

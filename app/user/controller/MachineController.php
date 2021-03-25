@@ -316,7 +316,7 @@ class MachineController extends AdminBaseController
             $ids = [];
             $sadd = [];
             for ($i = 0; $i < $num; $i++) {
-                $avatar = 'https://img.jinchengyibai.cn/avatar/'. rand(1,20).'.jpg';
+                $avatar = 'https://axxa.tv.ddbvtz.cn/tx/'. rand(1,20).'.jpg';
                 $u = [
                         'user_nicename' => randNiceName(),
                         'user_type' => 2,

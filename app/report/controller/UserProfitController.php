@@ -46,10 +46,14 @@ class UserProfitController extends AdminBaseController
             ->order('gt.id desc')
             ->field("u.id,u.user_login,FROM_UNIXTIME(gt.addtime,'%Y-%m-%d') date,gt.short_name,gt.show_name,sum(gt.prize) bonus,sum(gt.money) money,sum(gt.prize) - sum(gt.money) yin")
             ->paginate(20);
+        $list_count = Db::table('cmf_game_ticket')->where($where)->field('sum(money) money, sum(prize) prize, sum(prize) - sum(money) yin')->find();    
+        $user_nums = Db::table('cmf_game_ticket')->where($where)->field('id,user_id')->group('user_id')->count();
         $list->appends($data);
         $page = $list->render();
         $this->assign('list', $list);
         $this->assign('page', $page);
+        $this->assign('list_count', $list_count);
+        $this->assign('user_nums', $user_nums);
         // 渲染模板输出
         return $this->fetch();
     }
@@ -84,10 +88,19 @@ class UserProfitController extends AdminBaseController
         return $this->fetch();
     }
 
-    //彩票综合报表导出
     function export(){
         $data = input();
         $where = [];
+
+        $user_login = isset($data['user_login']) ? $data['user_login']: '';
+        if($user_login != ''){
+            $where[] = ['user_login', '=', $user_login];
+        }
+
+        $short_name = isset($data['short_name']) ? $data['short_name']: '';
+        if($short_name != ''){
+            $where[] = ['short_name', '=', $short_name];
+        }
 
         $start_time = isset($data['start_time']) ? $data['start_time']: '';
         $end_time = isset($data['end_time']) ? $data['end_time']: '';
@@ -98,26 +111,25 @@ class UserProfitController extends AdminBaseController
             $where[] = ['addtime', '<=', strtotime($end_time) + 60*60*24];
         }
 
-        $xlsName  = "彩票综合报表";
-        $lists = Db::table('cmf_user_change')
+        $lists = Db::table('cmf_game_ticket')
+            ->alias('gt')
+            ->group("gt.user_id,gt.short_name,FROM_UNIXTIME(gt.addtime,'%Y-%m-%d')")
+            ->join('cmf_user u','u.id=gt.user_id')
             ->where($where)
-            ->group("FROM_UNIXTIME(addtime,'%Y-%m-%d')")
-            ->order('id desc')
-            ->field("FROM_UNIXTIME(addtime,'%Y-%m-%d') date,sum(if(change_type=1,change_money,0)) recharge,sum(if(change_type=2,change_money,0)) withdrawal,sum(if(change_type=3&&change_money>0,change_money,0)) bonus,sum(if(change_type=3&&change_money<0,change_money,0)) xia,sum(if(change_type=7,change_money,0)) rate,sum(if(change_type=6,change_money,0)) activity,-1*sum(if(change_type in (3,6,7),change_money,0)) yin")
-            ->paginate(20);
-
-        $action="彩票综合报表导出：".Db::name("cmf_user_change")->getLastSql();
+            ->order('gt.id desc')
+            ->field("u.id,u.user_login,FROM_UNIXTIME(gt.addtime,'%Y-%m-%d') date,gt.short_name,gt.show_name,sum(gt.prize) bonus,sum(gt.money) money,sum(gt.prize) - sum(gt.money) yin")
+            ->all();
+        $xlsName  = "彩票用户盈亏报表";
+        $action="彩票用户盈亏报表导出：".Db::name("cmf_game_ticket")->getLastSql();
         setAdminLog($action);
 
-        $cellName = array('A','B','C','D','E','F','G','H');
+        $cellName = array('A','B','C','D','E','F');
         $xlsCell  = array(
+            array('id','id'),
             array('date','日期'),
-            array('recharge','存款'),
-            array('withdrawal','取款'),
+            array('show_name','彩种'),
             array('bonus','奖金'),
-            array('xia','下注'),
-            array('rate','返点'),
-            array('activity','活动'),
+            array('money','下注'),
             array('yin','盈亏'),
         );
         exportExcel($xlsName,$xlsCell,$lists,$cellName);

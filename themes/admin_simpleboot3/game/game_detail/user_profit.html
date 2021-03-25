@@ -22,7 +22,7 @@
         <input class="form-control" type="text" name="user_login" style="width: 200px;" value="{:input('request.user_login')}"
                placeholder="请输入用户名">
 
-        游戏：
+        平台：
         <select class="form-control" name="short_name">
             <option value="">全部</option>
             <foreach name="cai" item="vo">
@@ -38,6 +38,7 @@
         <a class="btn btn-danger" href="{:url('user/userChange/index')}">清空</a>
         <br>
         <br>
+        用户数：{$user_nums} / 派彩：{$list_count.pay_off} / 有效投注：{$list_count.bet_amount} / 盈亏：{$list_count.profit}
     </form>
     <form method="post" class="js-ajax-form">
 
@@ -65,7 +66,7 @@
                 <tr>
 
 
-                    <td>{$vo.user_login}</td>
+                    <td>{$vo.id}</td>
                     <td>{$vo.date}</td>
                     <td>{$vo.game_name}</td>
                     <td>{$vo.bonus}</td>

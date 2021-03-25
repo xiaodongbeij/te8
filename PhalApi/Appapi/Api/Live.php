@@ -1425,11 +1425,13 @@ class Api_Live extends PhalApi_Api {
 		$rs = array('code' => 0, 'msg' => '', 'info' => array());
 		
 		$uid=$this->uid;
+		
+
 		$token=checkNull($this->token);
 		$liveuid=$this->liveuid;
 
 		$stream=checkNull($this->stream);
-        
+     
         $checkToken=checkToken($uid,$token);
 		if($checkToken==700){
 			$rs['code'] = $checkToken;
@@ -1450,9 +1452,9 @@ class Api_Live extends PhalApi_Api {
         
         $domain->checkShut($uid,$liveuid);
 		$userinfo=getUserInfo($uid);
-		
-		$carinfo=getUserCar($uid);
-		$userinfo['car']=$carinfo;
+
+// 		$carinfo=getUserCar($uid);
+// 		$userinfo['car']=$carinfo;
 		$issuper='0';
 		if($userinfo['issuper']==1){
 			$issuper='1';
@@ -1460,27 +1462,25 @@ class Api_Live extends PhalApi_Api {
 		}else{
 			DI()->redis  -> hDel('super',$userinfo['id']);
 		}
-		if(!$city){
-			$city='好像在火星';
-		}
+		
 		
 
-		$domain2 = new Domain_User();
-		$info = $domain2->userUpdate($uid,$data);
+// 		$domain2 = new Domain_User();
+// 		$info = $domain2->userUpdate($uid,$data);
 
-
-		$usertype = isAdmin($uid,$liveuid);
-		$userinfo['usertype'] = $usertype;
         
-        $stream2=explode('_',$stream);
-		$showid=$stream2[1];
+// 		$usertype = isAdmin($uid,$liveuid);
+// 		$userinfo['usertype'] = $usertype;
         
-        $contribution='0';
-        if($showid){
-            $contribution=$domain->getContribut($uid,$liveuid,$showid);
-        }
+//         $stream2=explode('_',$stream);
+// 		$showid=$stream2[1];
+        
+//         $contribution='0';
+//         if($showid){
+//             $contribution=$domain->getContribut($uid,$liveuid,$showid);
+//         }
 
-		$userinfo['contribution'] = $contribution;
+// 		$userinfo['contribution'] = $contribution;
 
 		
 		unset($userinfo['issuper']);
@@ -1490,48 +1490,56 @@ class Api_Live extends PhalApi_Api {
 		$guard_info=$domain_guard->getUserGuard($uid,$liveuid);
         
 		$guard_nums=$domain_guard->getGuardNums($liveuid);
-        $userinfo['guard_type']=$guard_info['type'];
+        // $userinfo['guard_type']=$guard_info['type'];
         /* 等级+100 保证等级位置位数相同，最后拼接1 防止末尾出现0 */
-        $userinfo['sign']=$userinfo['contribution'].'.'.($userinfo['level']+100).'1';
+        $userinfo['sign']=$userinfo['consumption'].'.'.($userinfo['level']+100).'1';
 		
 		DI()->redis  -> set($token,json_encode($userinfo));
 		
         /* 用户列表 */
-        $userlists=$this->getUserList($liveuid,$stream);
-
+        // $userlists=$this->getUserList($liveuid,$stream);
+        
+        
+        $liveUser = DI()->notorm->user
+                ->select('qq,wechat')
+                ->where('id=? and user_type="2"', $liveuid)
+                ->fetchOne();
 		$configpri=getConfigPri();
-
+        $configpub = getConfigPub();
+        $nums = DI()->redis->zCard('user_'.$stream);
+        $nums += rand(1000,3000);
+        $votestotal = $domain->getVotes($liveuid);
 	    $info=array(
-			'votestotal'=>$userlists['votestotal'],
-			'barrage_fee'=>$configpri['barrage_fee'],
+			'votestotal'=>$votestotal,
+// 			'barrage_fee'=>$configpri['barrage_fee'],
 			'userlist_time'=>$configpri['userlist_time'],
 			'chatserver'=>$configpri['chatserver'],
-			'linkmic_uid'=>$linkmic_uid,
-			'linkmic_pull'=>$linkmic_pull,
-			'nums'=>$userlists['nums'],
-			
+// 			'linkmic_uid'=>$linkmic_uid,
+// 			'linkmic_pull'=>$linkmic_pull,
+			'nums'=>$nums,
+			'ispopup' => $configpub['ispopup'],
 			'speak_limit'=>$configpri['speak_limit'],
-			'barrage_limit'=>$configpri['barrage_limit'],
+// 			'barrage_limit'=>$configpri['barrage_limit'],
 			'vip'=>$userinfo['vip'],
-			'liang'=>$userinfo['liang'],
-			'car'=>$userinfo['car'],
+// 			'liang'=>$userinfo['liang'],
+// 			'car'=>$userinfo['car'],
 			'issuper'=>(string)$issuper,
-			'usertype'=>(string)$usertype,
-			'turntable_switch'=>(string)$configpri['turntable_switch'],
+// 			'usertype'=>(string)$usertype,
+// 			'turntable_switch'=>(string)$configpri['turntable_switch'],
 		);
 		$info['isattention']=(string)isAttention($uid,$liveuid);
-		$info['userlists']=$userlists['userlist'];
+		// $info['userlists']=$userlists['userlist'];
         
         /* 用户余额 */
-        $domain2 = new Domain_User();
-		$usercoin=$domain2->getBalance($uid);
-        $info['coin']=$usercoin['coin'];
+//         $domain2 = new Domain_User();
+// 		$usercoin=$domain2->getBalance($uid);
+//         $info['coin']=$usercoin['coin'];
         
         /* 守护 */
         $info['guard']=$guard_info;
         $info['guard_nums']=$guard_nums;
-        $info['wechat'] = $userinfo['wechat'];
-        $info['qq'] = $userinfo['qq'];
+        $info['wechat'] = $liveUser['wechat'];
+        $info['qq'] = $liveUser['qq'];
         
 		//获取直播间在彩票
 		$info['show_lottery']=DI()->notorm->live
@@ -1552,7 +1560,7 @@ class Api_Live extends PhalApi_Api {
 		$rs['info'][0]=$info;
 		return $rs;
 	}	
-	
+
     /**
      * 连麦信息
      * @desc 用于主播同意连麦 写入redis
@@ -1729,7 +1737,9 @@ class Api_Live extends PhalApi_Api {
 
         return $rs;
 	}			
+    
 
+    
     protected function getUserList($liveuid,$stream,$p=1) {
 		/* 用户列表 */ 
 		$n=1;
@@ -1741,8 +1751,8 @@ class Api_Live extends PhalApi_Api {
 		$key="getUserLists_".$stream.'_'.$p;
 		$u_nums=DI()->redis->zCard('user_'.$stream);
 		$list=getcaches($key);
-		if(!$list){  
-            $list=array();
+		 if(!$list){  
+           $list=array();
             
             $uidlist=DI()->redis -> zRevRange('user_'.$stream,$start,$pnum,true);
             foreach($uidlist as $k=>$v){
