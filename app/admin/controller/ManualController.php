@@ -170,13 +170,14 @@ class ManualController extends AdminbaseController {
         
         $action="导出手动充值记录：".Db::name("charge_admin")->getLastSql();
         setAdminLog($action);
-        $cellName = array('A','B','C','D','E','F');
+        $cellName = array('A','B','C','D','E','F','G');
         $xlsCell  = array(
             array('id','序号'),
             array('admin','管理员'),
             array('user_nicename','会员 (账号)(ID)'),
             array('coin','充值点数'),
             array('ip','IP'),
+            array('remarks','备注'),
             array('addtime','时间'),
         );
         exportExcel($xlsName,$xlsCell,$xlsData,$cellName);
