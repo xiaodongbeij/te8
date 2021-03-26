@@ -15,14 +15,15 @@ class MonitorController extends AdminbaseController {
 		$this->config=$config;
 		$this->assign('config', $config);
         
-        $lists = Db::name("live")
+        $lists = Db::name("live")->alias('lv')->leftJoin('cmf_user u','u.id=lv.uid')
+            ->field('showid,uid,user_nicename,starttime,pull,stream,isvideo')
             ->where(['islive'=>1])
 			->order("starttime desc")
 			->paginate(20);
         
         $lists->each(function($v,$k){
     
-            $v['userinfo']=getUserInfo($v['uid']);
+            // $v['userinfo']=getUserInfo($v['uid']);
             if($v['isvideo'] != 1){
                 $auth_url=PrivateKeyA('http',$v['stream'].'.flv',0);
                 $v['url']=$auth_url;

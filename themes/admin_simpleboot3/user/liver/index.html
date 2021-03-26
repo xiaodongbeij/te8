@@ -13,23 +13,11 @@
 <body>
 <div class="wrap js-check-wrap">
     <ul class="nav nav-tabs">
-        <li class="active"><a>代理管理</a></li>
+        <li class="active"><a>主播管理</a></li>
     </ul>
     <form class="well form-inline margin-top-20" method="post" action="{:url('user/Liver/index')}">
 
-        僵尸粉开关：
-        <select class="form-control" name="iszombie">
-            <option value="">全部</option>
-                <option value="1" <if condition="input('request.iszombie') neq '' && input('request.iszombie') eq 1">selected</if>>开启</option>
-                <option value="0" <if condition="input('request.iszombie') neq '' && input('request.iszombie') eq 0">selected</if>>关闭</option>
-        </select>
-
-        僵尸粉：
-        <select class="form-control" name="iszombiep">
-            <option value="">全部</option>
-                <option value="1" <if condition="input('request.iszombiep') neq '' && input('request.iszombiep') eq 1">selected</if>>是</option>
-                <option value="0" <if condition="input('request.iszombiep') neq '' && input('request.iszombiep') eq 0">selected</if>>否</option>
-        </select>
+      
 
         禁用：
         <select class="form-control" name="isban">
@@ -38,26 +26,7 @@
                 <option value="0" <if condition="input('request.isban') neq '' && input('request.isban') eq 0">selected</if>>否</option>
         </select>
 
-        热门：
-        <select class="form-control" name="ishot">
-            <option value="">全部</option>
-                <option value="1" <if condition="input('request.ishot') neq '' && input('request.ishot') eq 1">selected</if>>是</option>
-                <option value="0" <if condition="input('request.ishot') neq '' && input('request.ishot') eq 0">selected</if>>否</option>
-        </select>
-
-        超管：
-        <select class="form-control" name="issuper">
-            <option value="">全部</option>
-                <option value="1" <if condition="input('request.issuper') neq '' && input('request.issuper') eq 1">selected</if>>是</option>
-                <option value="0" <if condition="input('request.issuper') neq '' && input('request.issuper') eq 0">selected</if>>否</option>
-        </select>
-        设备来源：
-        <select class="form-control" name="source">
-            <option value="">全部</option>
-                <option value="pc" <if condition="input('request.source') neq '' && input('request.source') eq 'pc'">selected</if>>PC</option>
-                <option value="android" <if condition="input('request.source') neq '' && input('request.source') eq 'android'">selected</if>>安卓APP</option>
-                <option value="ios" <if condition="input('request.source') neq '' && input('request.source') eq 'ios'">selected</if>>苹果APP</option>
-        </select>
+      
 
         提交时间：
         <input class="form-control js-bootstrap-date" name="start_time" id="start_time" autocomplete="off" value="{:input('request.start_time')}" aria-invalid="false" style="width: 110px;"> -
@@ -156,7 +125,7 @@
 
                     </td>
                     <td>
-                        <a class="btn btn-xs btn-primary" href="{:url('Liver/is_dai',array('id'=>$vo['id']))}">代理</a>
+                       
                         <if condition="$vo['user_status'] eq '3'">
                             <!-- 已注销 -->
 
@@ -183,46 +152,6 @@
                                 <a class="btn btn-xs btn-warning js-ajax-dialog-btn"
                                        href="{:url('Liver/ban',array('id'=>$vo['id']))}"
                                        data-msg="您确定要拉黑此用户吗？">拉黑</a>
-                            </if>
-
-                            <if condition="$vo.issuper eq '1'">
-                                <a class="btn btn-xs btn-info js-ajax-dialog-btn"
-                                       href="{:url('Liver/setsuper',array('id'=>$vo['id'],'issuper'=>0))}">取消超管</a>
-                            <else/>
-                                <a class="btn btn-xs btn-info js-ajax-dialog-btn"
-                                       href="{:url('Liver/setsuper',array('id'=>$vo['id'],'issuper'=>1))}">设置超管</a>
-                            </if>
-
-                            <if condition="$vo.ishot eq '1'">
-                                <a class="btn btn-xs btn-info js-ajax-dialog-btn"
-                                       href="{:url('Liver/sethot',array('id'=>$vo['id'],'ishot'=>0))}">取消热门</a>
-                            <else/>
-                                <a class="btn btn-xs btn-info js-ajax-dialog-btn"
-                                       href="{:url('Liver/sethot',array('id'=>$vo['id'],'ishot'=>1))}">热门</a>
-                            </if>
-
-                            <if condition="$vo.isrecommend eq '1'">
-                                <a class="btn btn-xs btn-info js-ajax-dialog-btn"
-                                       href="{:url('Liver/setrecommend',array('id'=>$vo['id'],'isrecommend'=>0))}">取消推荐</a>
-                            <else/>
-                                <a class="btn btn-xs btn-info js-ajax-dialog-btn"
-                                       href="{:url('Liver/setrecommend',array('id'=>$vo['id'],'isrecommend'=>1))}">推荐</a>
-                            </if>
-
-                            <if condition="$vo.iszombie eq '1'">
-                                <a class="btn btn-xs btn-info js-ajax-dialog-btn"
-                                       href="{:url('Liver/setzombie',array('id'=>$vo['id'],'iszombie'=>0))}">关闭僵尸粉</a>
-                            <else/>
-                                <a class="btn btn-xs btn-info js-ajax-dialog-btn"
-                                       href="{:url('Liver/setzombie',array('id'=>$vo['id'],'iszombie'=>1))}">开启僵尸粉</a>
-                            </if>
-
-                            <if condition="$vo.iszombiep eq '1'">
-                                <a class="btn btn-xs btn-info js-ajax-dialog-btn"
-                                       href="{:url('Liver/setzombiep',array('id'=>$vo['id'],'iszombiep'=>0))}">取消设置僵尸粉</a>
-                            <else/>
-                                <a class="btn btn-xs btn-info js-ajax-dialog-btn"
-                                       href="{:url('Liver/setzombiep',array('id'=>$vo['id'],'iszombiep'=>1))}">设置为僵尸粉</a>
                             </if>
 
                         </if>

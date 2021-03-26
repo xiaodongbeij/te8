@@ -289,6 +289,15 @@
                                 </select>
                             </div>
                         </div>
+                        
+                        <div class="form-group">
+                            <label for="input-isup" class="col-sm-2 control-label">APP下载页</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-down_url"
+                                       name="options[down_url]" value="{$site_info.down_url|default=''}">
+                                       <p class="help-block">安卓APP最新的版本号，请勿随意修改</p>
+                            </div>
+                        </div>
                         <div class="form-group">
                             <label for="input-apk_ver" class="col-sm-2 control-label">APK版本号</label>
                             <div class="col-md-6 col-sm-10">
@@ -313,30 +322,8 @@
                                           <p class="help-block">APK更新说明（200字以内）</p>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="input-anchor_apk_ver" class="col-sm-2 control-label">主播端APK版本号</label>
-                            <div class="col-md-6 col-sm-10">
-                                <input type="text" class="form-control" id="input-anchor_apk_ver"
-                                       name="options[anchor_apk_ver]" value="{$site_info.anchor_apk_ver|default=''}">
-                                <p class="help-block">主播端安卓APP最新的版本号，请勿随意修改</p>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="input-anchor_apk_url" class="col-sm-2 control-label">主播端APK下载链接</label>
-                            <div class="col-md-6 col-sm-10">
-                                <input type="text" class="form-control" id="input-anchor_apk_url"
-                                       name="options[anchor_apk_url]" value="{$site_info.anchor_apk_url|default=''}">
-                                <p class="help-block">主播端安卓最新版APK下载链接</p>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="input-anchor_apk_des" class="col-sm-2 control-label">主播端APK更新说明</label>
-                            <div class="col-md-6 col-sm-10">
-                                <textarea class="form-control" id="input-anchor_apk_des"
-                                          name="options[anchor_apk_des]">{$site_info.anchor_apk_des|default=''}</textarea>
-                                <p class="help-block">主播端APK更新说明（200字以内）</p>
-                            </div>
-                        </div>
+                      
+                       
                         <div class="form-group">
                             <label for="input-ipa_ver" class="col-sm-2 control-label">IPA版本号</label>
                             <div class="col-md-6 col-sm-10">
@@ -345,14 +332,7 @@
                                        <p class="help-block">IOS APP最新的版本号，请勿随意修改</p>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="input-ios_shelves" class="col-sm-2 control-label">IPA上架版本号</label>
-                            <div class="col-md-6 col-sm-10">
-                                <input type="text" class="form-control" id="input-ios_shelves"
-                                       name="options[ios_shelves]" value="{$site_info.ios_shelves|default=''}">
-                                       <p class="help-block">IOS上架审核中版本的版本号(用于上架期间隐藏上架版本部分功能,不要和IPA版本号相同)</p>
-                            </div>
-                        </div>
+                        
                         <div class="form-group">
                             <label for="input-ipa_url" class="col-sm-2 control-label">IPA下载链接</label>
                             <div class="col-md-6 col-sm-10">
@@ -369,38 +349,8 @@
                                           <p class="help-block">IPA更新说明（200字以内）</p>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="input-anchor_ipa_ver" class="col-sm-2 control-label">主播端IPA版本号</label>
-                            <div class="col-md-6 col-sm-10">
-                                <input type="text" class="form-control" id="input-anchor_ipa_ver"
-                                       name="options[anchor_ipa_ver]" value="{$site_info.anchor_ipa_ver|default=''}">
-                                <p class="help-block">主播端IOS APP最新的版本号，请勿随意修改</p>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="input-anchor_ios_shelves" class="col-sm-2 control-label">主播端IPA上架版本号</label>
-                            <div class="col-md-6 col-sm-10">
-                                <input type="text" class="form-control" id="input-anchor_ios_shelves"
-                                       name="options[anchor_ios_shelves]" value="{$site_info.anchor_ios_shelves|default=''}">
-                                <p class="help-block">主播端IOS上架审核中版本的版本号(用于上架期间隐藏上架版本部分功能,不要和IPA版本号相同)</p>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="input-anchor_ipa_url" class="col-sm-2 control-label">主播端IPA下载链接</label>
-                            <div class="col-md-6 col-sm-10">
-                                <input type="text" class="form-control" id="input-anchor_ipa_url"
-                                       name="options[anchor_ipa_url]" value="{$site_info.anchor_ipa_url|default=''}">
-                                <p class="help-block">主播端IOS最新版IPA下载链接</p>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="input-anchor_ipa_des" class="col-sm-2 control-label">主播端IPA更新说明</label>
-                            <div class="col-md-6 col-sm-10">
-                                <textarea class="form-control" id="input-anchor_ipa_des"
-                                          name="options[anchor_ipa_des]">{$site_info.anchor_ipa_des|default=''}</textarea>
-                                <p class="help-block">主播端IPA更新说明（200字以内）</p>
-                            </div>
-                        </div>
+                        
+                        
                         <div class="form-group">
                             <label for="input-qr_url" class="col-sm-2 control-label">二维码下载链接</label>
                             <div class="col-md-6 col-sm-10">

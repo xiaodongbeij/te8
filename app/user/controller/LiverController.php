@@ -813,7 +813,7 @@ class LiverController extends AdminbaseController
 
             //查询用户信息存入缓存中
             $info=Db::name("user")
-                ->field('id,user_nicename,avatar,avatar_thumb,sex,signature,consumption,votestotal,province,city,birthday,user_status,issuper,location')
+                ->field('id,user_nicename,avatar,avatar_thumb,sex,signature,consumption,votestotal,birthday,user_status,issuper,qq,wechat')
                 ->where("id={$data['id']} and user_type=2")
                 ->find();
 

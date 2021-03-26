@@ -14,11 +14,12 @@ class CdnController extends HomebaseController {
 		$url = [
 		    'code' => 0,
 		    'url' => [
+		        'haoworld.cn',
 		        'cdn.edison-elvis.com',
 		        'cdn.hanrunkeji.com',
 		        'cdn.lexiangtc.com',
 		        'cdn.hlledsolution.com',
-		      //  'cdn.qingxingu916.com'
+
 	        ]
 	    ];
 	    return json($url);

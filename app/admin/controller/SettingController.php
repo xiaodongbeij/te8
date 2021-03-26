@@ -263,18 +263,11 @@ class SettingController extends AdminBaseController
             if($options['apk_url'] !=$oldconfig['apk_url']){
                 $action.='修改APK下载链接 ';
             }
-            if($options['anchor_apk_ver'] !=$oldconfig['anchor_apk_ver']){
-                $action.='修改主播端APK版本号 '.$options['anchor_apk_ver'].' ';
-            }
-            if($options['anchor_apk_url'] !=$oldconfig['anchor_apk_url']){
-                $action.='修改主播端APK下载链接 ';
-            }
+            
             if($options['ipa_ver'] !=$oldconfig['ipa_ver']){
                 $action.='修改IPA版本号 '.$options['ipa_ver'].' ';
             }
-            if($options['ios_shelves'] !=$oldconfig['ios_shelves']){
-                $action.='修改IPA上架版本号 '.$options['ios_shelves'].' ';
-            }
+            
 			
 			if($options['ipa_url'] !=$oldconfig['ipa_url']){
                 $action.='修改IPA下载链接 '.$options['ipa_url'].' ';

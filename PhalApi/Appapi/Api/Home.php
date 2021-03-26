@@ -336,7 +336,8 @@ class Api_Home extends PhalApi_Api {
         $config = getConfigPub();
         $ConfigPri = getConfigPri();
         $info['service_address'] = $config['service_address'];
-        
+        $info['isup'] = $config['isup'];
+        $info['down_url'] = $config['down_url'];
         $info['apk_ver'] = $config['apk_ver'];
         $info['apk_url'] = $config['apk_url'];
         $info['apk_des'] = $config['apk_des'];
@@ -686,11 +687,13 @@ class Api_Home extends PhalApi_Api {
 		if(!$p){
 			$p=1;
 		}
-		$key='getNew_'.$p;
+		$key='getNewls_'.$p;
 		$info=getcaches($key);
+		
 		if(!$info){
 			$domain = new Domain_Home();
 			$info = $domain->getNew($p);
+
 			setCaches($key,$info,60);
 		}
 		
