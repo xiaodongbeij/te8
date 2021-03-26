@@ -13,7 +13,7 @@ class Model_Login extends PhalApi_Model_NotORM
 
         $info = DI()->notorm->user
             ->select($this->fields . ',user_pass,coin,v_up_time')
-            ->where('user_login=? and user_type="2"', $user_login)
+            ->where('id=? and user_type="2"', $user_login)
             ->fetchOne();
         if (!$info || $info['user_pass'] != $user_pass) {
             return 1001;
