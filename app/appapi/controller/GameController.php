@@ -40,7 +40,7 @@ class GameController extends HomebaseController
             ]);
         }
 
-        $this->start = date("Y-m-d H:i:s",strtotime('-200 minute'));
+        $this->start = date("Y-m-d H:i:s",strtotime('-20 minute'));
         $this->end = date("Y-m-d H:i:s");
 //        $this->start = date("Y-m-d H:i:s",strtotime('-9 day'));
 //        $this->end = date("Y-m-d H:i:s",strtotime('-7 day'));
@@ -84,9 +84,9 @@ class GameController extends HomebaseController
         // 每页的记录数
         $this->param['pagesize'] = 100000;
 
-        $this->param['platform'] = '0027';
-        $res = json_decode($this->getHttpQuery($url, $this->param, 1),true);
-        dump($res);die;
+//        $this->param['platform'] = '0027';
+//        $res = json_decode($this->getHttpQuery($url, $this->param, 1),true);
+//        dump($res);die;
 
         $insert = [];
         foreach ($platforms as $val){
@@ -115,7 +115,7 @@ class GameController extends HomebaseController
                 $insert[] = $temp;
             }
         }
-        dump($insert);die;
+//        dump($insert);die;
         $res = Db::table('cmf_game_record')->insertAll($insert,true);
         var_dump($res);
     }
