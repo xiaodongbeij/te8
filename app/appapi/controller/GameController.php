@@ -85,8 +85,8 @@ class GameController extends HomebaseController
         $this->param['pagesize'] = 100000;
 
         $this->param['platform'] = '0027';
-        $res = json_decode($this->getHttpQuery($url, $this->param, 1),true);
-        dump($res);die;
+//        $res = json_decode($this->getHttpQuery($url, $this->param, 1),true);
+//        dump($res);die;
 
         $insert = [];
         foreach ($platforms as $val){
@@ -115,7 +115,7 @@ class GameController extends HomebaseController
                 $insert[] = $temp;
             }
         }
-        dump($insert);die;
+//        dump($insert);die;
         $res = Db::table('cmf_game_record')->insertAll($insert,true);
         var_dump($res);
     }
