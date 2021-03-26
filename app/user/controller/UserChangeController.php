@@ -372,7 +372,7 @@ class UserChangeController extends AdminbaseController
         $data = input();
         $where = [];
 
-        // var_dump(1);die;
+        var_dump($data);die;
 
         $change_type = isset($data['change_type']) ? $data['change_type']: '';
         if($change_type != ''){
