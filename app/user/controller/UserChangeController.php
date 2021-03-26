@@ -380,7 +380,7 @@ class UserChangeController extends AdminbaseController
         }
         $iszombie = !empty($data['iszombie']) ? $data['iszombie']: 0;
 
-        var_dump($iszombie);die;
+        // var_dump($iszombie);die;
 
 
   
