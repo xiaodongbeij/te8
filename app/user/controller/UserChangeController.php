@@ -442,7 +442,7 @@ class UserChangeController extends AdminbaseController
         
         $xlsData = [];
          
-        $usersql = Db::name("user")->field('id ids,iszombie')->where('iszombie',$iszombie)->buildSql();
+        // $usersql = Db::name("user")->field('id ids,iszombie')->where('iszombie',$iszombie)->buildSql();
         $gameCatesql = Db::name("game_cate")->field('platform platform_code,name game_name')->where('del_status','=',0)->buildSql();
     
         Db::name('user_change')->alias('uc')->join([$gameCatesql => 'g'],'g.platform_code=uc.platform')->where($where)->chunk(100,function($list)use($change_type_list,$withdraw_type_list,$status_list,&$xlsData,$iszombie){
