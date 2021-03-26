@@ -445,9 +445,9 @@ class UserChangeController extends AdminbaseController
         // $usersql = Db::name("user")->field('id ids,iszombie')->where('iszombie',$iszombie)->buildSql();
         $gameCatesql = Db::name("game_cate")->field('platform platform_code,name game_name')->where('del_status','=',0)->buildSql();
     
-        Db::name('user_change')->alias('uc')->join([$gameCatesql => 'g'],'g.platform_code=uc.platform')->where($where)->chunk(100,function($list)use($change_type_list,$withdraw_type_list,$status_list,&$xlsData,$iszombie){
+        Db::name('user_change')->where($where)->chunk(100,function($list)use($change_type_list,$withdraw_type_list,$status_list,&$xlsData,$iszombie){
             foreach ($list as $k => $v){
-    
+                if($v['platform']) $v['platform'] = Db::name("game_cate")->where('del_status','=',0)->where('platform', '=', $v['platform'])->value('name');
                 $v['addtime'] = date('Y-m-d H:i:s', $v['addtime']);
                 $v['iszombie'] = $v['iszombie'] == 1 ? '是' : '否' ;
                 $v['status'] = $v['change_type'] != 2 ? '' : $status_list[$v['status']];
