@@ -410,9 +410,9 @@ class Api_Gaming extends PhalApi_Api {
                 $return['msg'] ='成功';
             }else{
                 //请求失败,余额退回
-                $money = -1 * $money;
-                $remark = '游戏存款失败，金额退回';
-                $res = $this->game_change($this->uid,23,$money,$remark,$platform);
+//                $money = -1 * $money;
+//                $remark = '游戏存款失败，金额退回';
+//                $res = $this->game_change($this->uid,23,$money,$remark,$platform);
                 $return['msg'] = '请求失败';
             }
             return $return;
