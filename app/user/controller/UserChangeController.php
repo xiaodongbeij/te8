@@ -481,7 +481,7 @@ class UserChangeController extends AdminbaseController
             array('addtime','生成时间'),
             array('withdraw_type','提现类型'),
             array('status','状态'),
-            array('game_name','三方游戏平台号'),
+            array('platform','三方游戏平台号'),
             array('bank_name','银行卡名称'),
             array('bank_card','卡号'),
             array('real_name','持卡人真实姓名'),
