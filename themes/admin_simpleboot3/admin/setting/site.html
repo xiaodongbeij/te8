@@ -12,7 +12,7 @@
         <li class="active"><a href="#A" data-toggle="tab">{:lang('WEB_SITE_INFOS')}</a></li>
         <!--<li><a href="#B" data-toggle="tab">{:lang('SEO_SETTING')}</a></li>-->
         <li><a href="#C" data-toggle="tab">APP版本管理</a></li>
-        <!--<li><a href="#D" data-toggle="tab">登录开关</a></li>-->
+        <li><a href="#D" data-toggle="tab">APP公告</a></li>
         <li><a href="#E" data-toggle="tab">分享设置</a></li>
         <li><a href="#H" data-toggle="tab">直播管理</a></li>
         <li><a href="#I" data-toggle="tab">美颜/萌颜</a></li>
@@ -379,7 +379,27 @@
                         </div>
                     </div>
                     
+                    <div class="tab-pane" id="D">
+                       
+                        
+                         <div class="form-group">
+                            <label for="input-app_notice" class="col-sm-2 control-label">首页弹窗公告</label>
+                            <div class="col-md-6 col-sm-10">
+                                <textarea class="form-control" id="input-app_notice" name="options[app_notice]" >{$site_info.app_notice|default=''}</textarea>
+                                <p class="help-block">App公告（200字以内）</p>
+                            </div>
+                        </div>
+                        
 
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-primary js-ajax-submit" data-refresh="0">
+                                    {:lang('SAVE')}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
                     
                     <div class="tab-pane" id="E">
                        

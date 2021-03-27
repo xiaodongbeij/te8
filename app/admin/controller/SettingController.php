@@ -126,7 +126,7 @@ class SettingController extends AdminBaseController
             $apps = array_diff($apps, $noNeedDirs);
             $this->assign('apps', $apps);
         }
-
+        
         $this->assign('site_info', cmf_get_option('site_info'));
         $this->assign("admin_styles", $adminStyles);
         $this->assign("templates", []);
@@ -170,7 +170,8 @@ class SettingController extends AdminBaseController
             $options['login_type']='';
             $options['share_type']='';
             $options['live_type']='';
-            
+  
+         
             if($login_type){
                 $options['login_type']=implode(',',$login_type);
             }
@@ -191,7 +192,7 @@ class SettingController extends AdminBaseController
             $bannedUsernames                 = preg_replace("/[^0-9A-Za-z_\\x{4e00}-\\x{9fa5}-]/u", ",", $cmfSettings['banned_usernames']);
             $cmfSettings['banned_usernames'] = $bannedUsernames;
             cmf_set_option('cmf_settings', $cmfSettings,true);
-
+        
             $cdnSettings = $this->request->param('cdn_settings/a');
             cmf_set_option('cdn_settings', $cdnSettings,true);
 
@@ -252,10 +253,17 @@ class SettingController extends AdminBaseController
                 $isup=$options['isup']?'开':'关';
                 $action.='修改强制更新 '.$isup.' ';
             }
-         
-            if($options['ispopup'] !=$oldconfig['ispopup']){
-                $ispopup=$options['ispopup']?'开':'关';
-                $action.='修改直播间弹窗 '.$ispopup.' ';
+            
+            if($options['isup'] !=$oldconfig['isup']){
+                $isup=$options['isup']?'开':'关';
+                $action.='修改强制更新 '.$isup.' ';
+            }
+            
+   
+            
+            if($options['app_notice'] !=$oldconfig['app_notice']){
+                
+                $action.='修改首页弹窗内容 '.$isapp_notice.' ';
             }
             if($options['apk_ver'] !=$oldconfig['apk_ver']){
                 $action.='修改APK版本号 '.$options['apk_ver'].' ';
