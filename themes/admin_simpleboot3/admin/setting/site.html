@@ -389,15 +389,24 @@
                                 <p class="help-block">App公告（200字以内）</p>
                             </div>
                         </div>
-                        
 
                         <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn btn-primary js-ajax-submit" data-refresh="0">
-                                    {:lang('SAVE')}
-                                </button>
+                            <label for="input-app_notice_turn" class="col-sm-2 control-label">首页弹窗开关</label>
+                            <div class="col-md-6 col-sm-10">
+                                <select class="form-control" name="options[app_notice_turn]">
+                                    <option value="0">关闭</option>
+                                    <option value="1" <eq name="site_info['app_notice_turn']" value="1">selected</eq>>开启</option>
+                                </select>
                             </div>
                         </div>
+
+<!--                        <div class="form-group">-->
+<!--                            <div class="col-sm-offset-2 col-sm-10">-->
+<!--                                <button type="submit" class="btn btn-primary js-ajax-submit" data-refresh="0">-->
+<!--                                    {:lang('SAVE')}-->
+<!--                                </button>-->
+<!--                            </div>-->
+<!--                        </div>-->
                     </div>
                     
                     
