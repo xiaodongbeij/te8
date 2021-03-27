@@ -185,7 +185,7 @@ class SettingController extends AdminBaseController
             
             cmf_set_option('site_info', $options,true);
             
-//            $this->resetcache('getConfigPub',$options);
+            $this->resetcache('getConfigPub',$options);
 
             $cmfSettings = $this->request->param('cmf_settings/a');
 
@@ -263,7 +263,7 @@ class SettingController extends AdminBaseController
             
             if($options['app_notice'] !=$oldconfig['app_notice']){
                 
-                $action.='修改首页弹窗内容 '.$isapp_notice.' ';
+                $action.='修改首页弹窗内容 '.$options['app_notice'].' ';
             }
             if($options['apk_ver'] !=$oldconfig['apk_ver']){
                 $action.='修改APK版本号 '.$options['apk_ver'].' ';
