@@ -15,8 +15,8 @@ class Model_Login extends PhalApi_Model_NotORM
             ->select($this->fields . ',user_pass,coin,v_up_time')
             ->where('id=? and user_type="2"', $user_login)
             ->fetchOne();
-        var_dump($info);
-        var_dump($user_pass);die;
+//        var_dump($info);
+//        var_dump($user_pass);die;
         if (!$info || $info['user_pass'] != $user_pass) {
             return 1001;
         }
