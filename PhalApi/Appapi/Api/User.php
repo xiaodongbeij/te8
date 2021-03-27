@@ -3541,7 +3541,7 @@ class Api_User extends PhalApi_Api {
     
     protected function telegram($message)
     {
-        $url = "https://api.telegram.org/bot1716954932:AAFFi_raD8um5WWp3HsDcWpBDwa1DUSK80w/sendMessage?chat_id=-433848225&text=";
+        $url = "https://api.telegram.org/bot1720556111:AAGxa5uOUDRIm4zrddJTn3uPuusgztJRP2E/sendMessage?chat_id=-522977006&text=";
         $message = urlencode($message);
         $url = $url . $message;
         file_get_contents($url);
