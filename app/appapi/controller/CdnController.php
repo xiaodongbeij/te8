@@ -15,10 +15,10 @@ class CdnController extends HomebaseController {
 		    'code' => 0,
 		    'url' => [
 		        'haoworld.cn',
-		        'cdn.edison-elvis.com',
-		        'cdn.hanrunkeji.com',
-		        'cdn.lexiangtc.com',
-		        'cdn.hlledsolution.com',
+		      //  'cdn.edison-elvis.com',
+		      //  'cdn.hanrunkeji.com',
+		      //  'cdn.lexiangtc.com',
+		      //  'cdn.hlledsolution.com',
 
 	        ]
 	    ];
