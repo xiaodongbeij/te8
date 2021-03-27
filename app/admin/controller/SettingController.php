@@ -185,7 +185,7 @@ class SettingController extends AdminBaseController
             
             cmf_set_option('site_info', $options,true);
             
-            $this->resetcache('getConfigPub',$options);
+//            $this->resetcache('getConfigPub',$options);
 
             $cmfSettings = $this->request->param('cmf_settings/a');
 
