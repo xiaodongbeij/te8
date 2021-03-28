@@ -1114,66 +1114,29 @@ class Api_Live extends PhalApi_Api {
 		$time=checkNull($this->time);
 		$sign=checkNull($this->sign);
 
-		if(!$source){ //非socket来源，app访问
+        $user = DI()->notorm->user
+				->where('id=?',$uid)->fetchOne();
+				
 
-			if(!$time){
-				$rs['code'] = 1001;
-				$rs['msg'] = '参数错误,请重试';
-				return $rs;
-			}
-
-			$now=time();
-			if($now-$time>300){
-				$rs['code']=1001;
-				$rs['msg']='参数错误';
-				return $rs;
-			}
-
-			if(!$sign){
-				$rs['code']=1001;
-				$rs['msg']="参数错误,请重试";
-				return $rs;
-			}
-	        
-	        $checkdata=array(
-	            'uid'=>$uid,
-	            'token'=>$token,
-	            'time'=>$time,
-	            'stream'=>$stream,
-	        );
-	        
-	        $issign=checkSign($checkdata,$sign);
-	        if(!$issign){
-	            $rs['code']=1001;
-	            $rs['msg']='签名错误';
-	            return $rs; 
-	        }
+		if($user['issuper'] != 1)
+		{
+		    $rs['code'] = 1;
+		    $rs['info'][0]['msg']='您权限不够！';
+	    	return $rs;
 		}
 		
-		$key='stopRoom_'.$stream;
-		$isexist=getcaches($key);
+		$isdel = DI()->notorm->live
+				->where('uid=?',$stream)
+				->delete();
+				
+		if(!$isdel){
+            $rs['code'] = 1;
+		    $rs['info'][0]['msg']='关闭失败！';
+	    	return $rs;
+        }
+            
         file_put_contents(API_ROOT.'/Runtime/stopRoom_'.date('Y-m-d').'.txt',date('Y-m-d H:i:s').' 提交参数信息 isexist:'.json_encode($isexist)."\r\n",FILE_APPEND);
-		//if(!$isexist && $type==1){
-		if(!$isexist ){
-
-			$domain = new Domain_Live();
-
-			$checkToken=checkToken($uid,$token);
-            file_put_contents(API_ROOT.'/Runtime/stopRoom_'.date('Y-m-d').'.txt',date('Y-m-d H:i:s').' 提交参数信息 checkToken:'.json_encode($checkToken)."\r\n",FILE_APPEND);
-            setcaches($key,'1',10);
-
-			if($checkToken==700){
-
-				$domain->stopRoom($uid,$stream);
-
-				$rs['code'] = $checkToken;
-				$rs['msg'] = '您的登陆状态失效，请重新登陆！';
-				return $rs;
-			}
-            
-            $info=$domain->stopRoom($uid,$stream);
-            
-		}
+        
 		delcache($uid.':nums');
 		delcache('live_record:'.$uid);
 		$rs['info'][0]['msg']='关播成功';

@@ -103,12 +103,14 @@ class Model_Live extends PhalApi_Model_NotORM {
 	
 	/* 关播 */
 	public function stopRoom($uid,$stream) {
-
+   
 		$info=DI()->notorm->live
 				->select("uid,showid,starttime,title,stream,type,type_val,liveclassid")
 				->where('uid=? and stream=? and islive="1"',$uid,$stream)
 				->fetchOne();
         /* file_put_contents(API_ROOT.'/Runtime/stopRoom_'.date('Y-m-d').'.txt',date('Y-m-d H:i:s').' 提交参数信息 info:'.json_encode($info)."\r\n",FILE_APPEND); */
+        
+
 		if($info){
 			$isdel=DI()->notorm->live
 				->where('uid=?',$uid)

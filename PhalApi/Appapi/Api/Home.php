@@ -696,7 +696,7 @@ class Api_Home extends PhalApi_Api {
 			$domain = new Domain_Home();
 			$info = $domain->getNew($p);
 
-			setCaches($key,$info,60);
+			setCaches($key,$info,6);
 		}
 		
         $rs['info'] = $info;
