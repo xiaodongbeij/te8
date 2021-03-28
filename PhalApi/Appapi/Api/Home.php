@@ -336,7 +336,7 @@ class Api_Home extends PhalApi_Api {
         $config = getConfigPub();
         $ConfigPri = getConfigPri();
         $info['service_address'] = $config['service_address'];
-        $info['isnotice'] = 1;
+        $info['isnotice'] = $config['isnotice'];;
         $info['notice'] = $config['app_notice'];
         $info['isup'] = $config['isup'];
         $info['down_url'] = $config['down_url'];

@@ -166,14 +166,18 @@ class SettingController extends AdminBaseController
             $login_type=isset($_POST['login_type'])?$_POST['login_type']:'';
             $share_type=isset($_POST['share_type'])?$_POST['share_type']:'';
             $live_type=isset($_POST['live_type'])?$_POST['live_type']:'';
-            
+            $isnotice =isset($_POST['isnotice'])?$_POST['isnotice']:'';
             $options['login_type']='';
             $options['share_type']='';
             $options['live_type']='';
-  
+            $options['isnotice']=0;
          
             if($login_type){
                 $options['login_type']=implode(',',$login_type);
+            }
+            
+            if($isnotice){
+                $options['isnotice']=$isnotice;
             }
             
             if($share_type){
@@ -249,9 +253,9 @@ class SettingController extends AdminBaseController
             }
 			
 			
-            if($options['isup'] !=$oldconfig['isup']){
-                $isup=$options['isup']?'开':'关';
-                $action.='修改强制更新 '.$isup.' ';
+            if($options['isnotice'] !=$oldconfig['isnotice']){
+                $isup=$options['isnotice']?'开':'关';
+                $action.='修改强首页弹窗开 '.$isup.' ';
             }
             
             if($options['isup'] !=$oldconfig['isup']){
