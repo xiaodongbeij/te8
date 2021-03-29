@@ -56,8 +56,8 @@ class Api_Uf extends PhalApi_Api {
         foreach ($data as $k => $v) {
             $str .= $k . '=' . $v . '&';
         }
-        $str = substr($str, 0, -1);
-        $str .= $key;
+//        $str = substr($str, 0, -1);
+        $str .= 'key=' . $key;
         return strtoupper(md5($str));
     }
 }
