@@ -344,6 +344,11 @@ class Domain_Daili
             ->where('platform', $platform)
             ->fetchOne();
 
+        $info_rate = DI()->notorm->user_rate
+            ->where('user_id', $id)
+            ->where('platform', $platform)
+            ->fetchOne();
+
         if (!$user_rate){
             $rs['code'] = 1001;
             $rs['msg'] = '返点信息不存在';
@@ -352,6 +357,12 @@ class Domain_Daili
         if ($rate >= $user_rate['rate'] * 100) {
             $rs['code'] = 1003;
             $rs['msg'] = '返点不能大于自身返点';
+            return $rs;
+        }
+
+        if ($rate <= $info_rate['rate'] * 100) {
+            $rs['code'] = 1003;
+            $rs['msg'] = '修改返点不能小于用户当前返点';
             return $rs;
         }
         //判断下级有无返点
