@@ -58,6 +58,6 @@ class Api_Uf extends PhalApi_Api {
         }
         $str = substr($str, 0, -1);
         $str .= $key;
-        return md5($str);
+        return strtoupper(md5($str));
     }
 }
