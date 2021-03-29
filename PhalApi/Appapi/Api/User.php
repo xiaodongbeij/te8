@@ -385,7 +385,7 @@ class Api_User extends PhalApi_Api {
         if ($share_code == $uinfo['invite_code']) return ['code' => 1, 'msg' => '不能填写自身邀请码'];
         if($uinfo && !empty($uinfo['parent_id'])) return ['code' => 1, 'msg' => '您已填写过邀请码'];
 
-//        var_dump($share_code);die;
+
         if (strlen($share_code) == 8){
             $share_uinfo = DI()->notorm->user->where('invite_code',$share_code)->fetchOne();
         }else{
