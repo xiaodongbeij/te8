@@ -482,7 +482,9 @@ class Model_Login extends PhalApi_Model_NotORM
         }
 //        var_dump($user_rate);die;
         $rs3 = DI()->notorm->user_rate->insert_multi($user_rate);
-    
+//        var_dump($parent_id);
+//        var_dump($invite_level);
+//        die;
         $rs2 = DI()->notorm->user
             ->where('id=?',$user_id)
             ->update(
