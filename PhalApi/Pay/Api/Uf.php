@@ -46,10 +46,13 @@ class Api_Uf extends PhalApi_Api {
 //        var_dump(json_encode($data));
 //        var_dump($info['action']);
 //        die;
-        $res = $this->curl->post($info['action'],$data);
-        var_dump($res);die;
+//        $res = $this->curl->post($info['action'],$data);
+//        var_dump($res);die;
 //        $res = curl($info['action'],$data,1);
 //        var_dump($res);die;
+        $res = buildRequestForm($info['action'], $data);
+        var_dump($res);
+        die;
 
 
         if (strpos($res, '订单创建成功') !== false) {
