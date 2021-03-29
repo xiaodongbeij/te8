@@ -251,7 +251,7 @@ class Api_Login extends PhalApi_Api {
         $info = $domain->userLogin($user_login,$user_pass,false);
   
         $rs['info'][0] = $info;
-
+        echo 2;die;
         if($invite){
             $user_info = DI()->notorm->user->where('invite_code = ?', $invite)->fetchOne();
             $today = strtotime(date('Y-m-d', time()));
