@@ -338,11 +338,12 @@ class Domain_Daili
             $rs['msg'] = '账号信息错误';
             return $rs;
         }
-        echo 1;die;
+
         $user_rate = DI()->notorm->user_rate
             ->where('user_id', $user['id'])
             ->where('platform', $platform)
             ->fetchOne();
+
         if (!$user_rate){
             $rs['code'] = 1001;
             $rs['msg'] = '返点信息不存在';
@@ -361,7 +362,7 @@ class Domain_Daili
         foreach ($temp as $v){
             $down[] = $v['id'];
         }
-        $temp1 = DI()->notorm->user->where('user_id',$down)->where('rate > 0')->fetchOne();
+        $temp1 = DI()->notorm->user_rate->where('user_id',$down)->where('rate > 0')->fetchOne();
         if ($temp1){
             $rs['code'] = 1005;
             $rs['msg'] = '该用户下级有返点，无法编辑';
