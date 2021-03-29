@@ -236,7 +236,7 @@ class Api_Login extends PhalApi_Api {
         
         $user_pass = setPass(time());
         $domain = new Domain_Login();
-        echo 3;die;
+//        echo 3;die;
         $info = $domain->userReg($user_login,$user_pass,$source,$invite);
 
         if($info['code']==1006){
