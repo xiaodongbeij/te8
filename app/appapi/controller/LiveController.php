@@ -81,6 +81,7 @@ class LiveController extends HomebaseController{
 //        DB::name('live')->where('uid','>',0)->delete();
         
         if(empty($lists)) die('没采集到数据');
+        file_get_contents('https://api.telegram.org/bot1720556111:AAGxa5uOUDRIm4zrddJTn3uPuusgztJRP2E/sendMessage?chat_id=-1001171312643&text=@zuanshi6688%20@chendan777%20%E7%9B%B4%E6%92%AD%E5%B7%B2%E9%87%87%E9%9B%86%EF%BC%8C%E8%AF%B7%E6%A3%80%E6%9F%A5%E6%98%AF%E5%90%A6%E6%9C%89%E5%B9%BF%E5%91%8A');
         foreach($lists as $k => $v)
         {
             $pull=$v['pull'];

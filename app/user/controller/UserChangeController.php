@@ -440,14 +440,30 @@ class UserChangeController extends AdminbaseController
             4 => '已打款',
         ];
         
+        $platform = [
+            '1' => '彩票',
+            '2' => '直播',
+            '0016' => '开元棋牌',
+            '0004' => 'AG游戏',
+            '0027' => 'OG游戏',
+            '0002' => 'PT游戏',
+            '0024' => '速博体育',
+            '0035' => '泛亚电竞',
+        ];
+        
         $xlsData = [];
          
-        // $usersql = Db::name("user")->field('id ids,iszombie')->where('iszombie',$iszombie)->buildSql();
-        $gameCatesql = Db::name("game_cate")->field('platform platform_code,name game_name')->where('del_status','=',0)->buildSql();
-    
-        Db::name('user_change')->where($where)->chunk(100,function($list)use($change_type_list,$withdraw_type_list,$status_list,&$xlsData,$iszombie){
+        $usersql = Db::name("user")->where('iszombie',$iszombie)->field('id ids,iszombie')->where('iszombie',$iszombie)->buildSql();
+
+        ini_set ("memory_limit","-1");
+        set_time_limit(0);
+        Db::name('user_change')->where($where)->alias('uc')->join([$usersql => 'u'],'u.ids=uc.user_id')->chunk(10,function($list)use($change_type_list,$withdraw_type_list,$status_list,&$xlsData,$platform){
             foreach ($list as $k => $v){
-                if($v['platform']) $v['platform'] = Db::name("game_cate")->where('del_status','=',0)->where('platform', '=', $v['platform'])->value('name');
+                if($v['platform'])
+                {
+
+                    $v['platform'] = $platform[$v['platform']];
+                }
                 $v['addtime'] = date('Y-m-d H:i:s', $v['addtime']);
                 $v['iszombie'] = $v['iszombie'] == 1 ? '是' : '否' ;
                 $v['status'] = $v['change_type'] != 2 ? '' : $status_list[$v['status']];
@@ -460,10 +476,12 @@ class UserChangeController extends AdminbaseController
                     $v['change_type'] = $change_type_list[$v['change_type']];
                 }
                 $xlsData[] = $v;
+                
             }
+ 
         });
+   
         
-      
         $action="导出资金动向记录：".Db::name("user_change")->getLastSql();
         setAdminLog($action);
         $cellName = array('A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q');
@@ -486,6 +504,8 @@ class UserChangeController extends AdminbaseController
             array('bank_card','卡号'),
             array('real_name','持卡人真实姓名'),
         );
+        
+    
         exportExcel($xlsName,$xlsCell,$xlsData,$cellName);
     }
 }

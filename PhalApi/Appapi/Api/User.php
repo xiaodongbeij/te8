@@ -371,7 +371,7 @@ class Api_User extends PhalApi_Api {
         $token = checkNull($this->token);
         $share_code = checkNull($this->share_code);
         
-        file_put_contents('share_code.txt', $share_code);
+ 
         
         $checkToken = checkToken($user_id,$token);
         if($checkToken == 700){
