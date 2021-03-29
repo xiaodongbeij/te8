@@ -52,8 +52,14 @@ class UserChangeController extends AdminbaseController
                 $query->where('iszombie',$iszombie);
             }
         }])->where($where)->order('id desc')->paginate(20);
-        $list_count = UserChange::where($where)->field('count(*) num, sum(change_money) money')->find();
-        $user_nums = UserChange::where($where)->field('id,user_id')->group('user_id')->count();
+        
+        $usersql = Db::name("user")->where('iszombie',$iszombie)->field('id ids,iszombie')->where('iszombie',$iszombie)->buildSql();
+
+        $list_count = Db::name('user_change')->where($where)->alias('uc')->join([$usersql => 'u'],'u.ids=uc.user_id')->field('count(*) num, sum(change_money) money')->find();
+        
+        $user_nums = Db::name('user_change')->where($where)->alias('uc')->join([$usersql => 'u'],'u.ids=uc.user_id')->field('count(*) num, sum(change_money) money')->group('user_id')->count();
+        // $list_count = UserChange::join()->where($where)->field('count(*) num, sum(change_money) money')->find();
+        // $user_nums = UserChange::where($where)->field('id,user_id')->group('user_id')->count();
 
         $change_type_list = [
             1 => '充值',
