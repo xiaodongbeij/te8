@@ -43,7 +43,7 @@ class Api_Uf extends PhalApi_Api {
         $data['pay_md5sign'] = $this->get_sign($data, $info['key']);
 //        $res = Post($data, $info['action']);
 //        var_dump($res);die;
-        var_dump($data);
+        var_dump(json_encode($data));
         var_dump($info['action']);
         die;
         $res = $this->curl->post($info['action'],$data);
