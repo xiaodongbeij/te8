@@ -367,7 +367,7 @@ class Domain_Daili
         }
         //判断下级有无返点
         $temp = DI()->notorm->user->where('invite_level like ?',$info['invite_level'].'%')
-            ->where('id <> ?',$uid)
+            ->where('id <> ?',$id)
             ->fetchAll();
         $down = [];
         foreach ($temp as $v){
