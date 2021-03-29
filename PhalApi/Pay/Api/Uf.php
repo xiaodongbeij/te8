@@ -8,6 +8,13 @@ class Api_Uf extends PhalApi_Api {
         );
     }
 
+    protected $curl;
+
+    public function __construct()
+    {
+        $this->curl = new PhalApi_CUrl(2);
+    }
+
     /**
      * 默认接口服务
      * @return string title 标题
@@ -33,7 +40,10 @@ class Api_Uf extends PhalApi_Api {
             'pay_amount' => $info['money'],
         ];
         $data['pay_md5sign'] = $this->get_sign($data, $info['key']);
-        $res = Post($data, $info['action']);
+//        $res = Post($data, $info['action']);
+//        var_dump($res);die;
+
+        $res = $this->curl->post($info['action'],$data);
         var_dump($res);die;
 
         if (strpos($res, '订单创建成功') !== false) {
