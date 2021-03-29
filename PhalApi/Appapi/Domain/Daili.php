@@ -338,6 +338,7 @@ class Domain_Daili
             $rs['msg'] = '账号信息错误';
             return $rs;
         }
+        echo 1;die;
         $user_rate = DI()->notorm->user_rate
             ->where('user_id', $user['id'])
             ->where('platform', $platform)
