@@ -528,7 +528,7 @@ class Domain_Daili
         $user_str = '';
         $user_login = '';
         foreach ($users as $v) {
-            if ($v['create_time'] >= $start && $v['create_time'] <= $end) {
+            if ($v['create_time'] >= $start && $v['create_time'] <= $end && $users['id'] != $info['id']) {
                 $reg_count++;
             }
             $user_str .= $v['id'] . ',';
