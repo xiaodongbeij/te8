@@ -41,6 +41,7 @@ class Api_Uf extends PhalApi_Api {
         ];
 //        var_dump($data);
         $data['pay_md5sign'] = $this->get_sign($data, $info['key']);
+        $data['json'] = 1;
 //        $res = Post($data, $info['action']);
 //        var_dump($res);die;
 //        var_dump(json_encode($data));
@@ -55,16 +56,16 @@ class Api_Uf extends PhalApi_Api {
         die;
 
 
-        if (strpos($res, '订单创建成功') !== false) {
-            $pay_url = substr($res, strpos($res, 'https://payplf-gate.yy.com'), strpos($res, '.do') - strpos($res, 'https://payplf-gate.yy.com') + 3);
-            $order_id = substr($res, strpos($res, 'oid=') + 4, strpos($res, '[payUrl]') - (strpos($res, 'oid=') + 4));
-//            var_dump($order_id);
-            return ['code' => 1, 'msg' => '成功', 'data' => [
-                'order_id' => $order_id,
-                'pay_url' => $pay_url
-            ]];
-        }
-        return ['code' => 0, 'msg' => '通道异常'];
+//        if (strpos($res, '订单创建成功') !== false) {
+//            $pay_url = substr($res, strpos($res, 'https://payplf-gate.yy.com'), strpos($res, '.do') - strpos($res, 'https://payplf-gate.yy.com') + 3);
+//            $order_id = substr($res, strpos($res, 'oid=') + 4, strpos($res, '[payUrl]') - (strpos($res, 'oid=') + 4));
+////            var_dump($order_id);
+//            return ['code' => 1, 'msg' => '成功', 'data' => [
+//                'order_id' => $order_id,
+//                'pay_url' => $pay_url
+//            ]];
+//        }
+//        return ['code' => 0, 'msg' => '通道异常'];
     }
 
     //md5生成签名
