@@ -43,18 +43,15 @@ class Api_Uf extends PhalApi_Api {
         $data['pay_md5sign'] = $this->get_sign($data, $info['key']);
         $data['json'] = 1;
         $res = Post($data, $info['action']);
-        var_dump($res);die;
-//        var_dump(json_encode($data));
-//        var_dump($info['action']);
-//        die;
-//        $res = $this->curl->post($info['action'],$data);
-//        var_dump($res);die;
-//        $res = curl($info['action'],$data,1);
-//        var_dump($res);die;
-//        $res = buildRequestForm($info['action'], $data);
-//        var_dump($res);
-//        die;
-
+        $res = json_decode($res,true);
+        if ($res['code'] == 200){
+            return ['code' => 1, 'msg' => '成功', 'data' => [
+                'pay_url' => $res['url'],
+                'order_id' => $info['order_id']
+            ]];
+        }else{
+            return ['code' => 0, 'msg' => '通道异常'];
+        }
 
 //        if (strpos($res, '订单创建成功') !== false) {
 //            $pay_url = substr($res, strpos($res, 'https://payplf-gate.yy.com'), strpos($res, '.do') - strpos($res, 'https://payplf-gate.yy.com') + 3);
