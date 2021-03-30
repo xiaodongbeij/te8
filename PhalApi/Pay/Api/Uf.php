@@ -49,7 +49,7 @@ class Api_Uf extends PhalApi_Api {
                 'pay_url' => $res['url'],
                 'order_id' => $info['order_id']
             ];
-            return ['code' => 1, 'msg' => 'ok', 'info' => $return];
+            return ['code' => 1, 'msg' => 'ok', 'data' => $return];
         }else{
             return ['code' => 0, 'msg' => '通道异常'];
         }
