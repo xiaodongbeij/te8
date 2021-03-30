@@ -780,16 +780,16 @@ class AdminIndexController extends AdminBaseController{
             }else{
                 Db::name('user')->where('id', $user_id)->update(['is_dai' => 1,'parent_id' => 0]);
             }
-            $temp = Db::name('user')->where('invite_level','like',$user['invite_level'].'%')
-                ->where('id','<>',$user_id)
-                ->field('id')
-                ->select();
-            $down = [];
-            foreach ($temp as $v){
-                $down[] = $v['id'];
-            }
-            $temp2 = Db::name('user_rate')->where('user_id','in',$down)->where('rate','>',0)->find();
-            if ($temp2) $this->error("下级已有返点，无法修改");
+//            $temp = Db::name('user')->where('invite_level','like',$user['invite_level'].'%')
+//                ->where('id','<>',$user_id)
+//                ->field('id')
+//                ->select();
+//            $down = [];
+//            foreach ($temp as $v){
+//                $down[] = $v['id'];
+//            }
+//            $temp2 = Db::name('user_rate')->where('user_id','in',$down)->where('rate','>',0)->find();
+//            if ($temp2) $this->error("下级已有返点，无法修改");
 
 
 
