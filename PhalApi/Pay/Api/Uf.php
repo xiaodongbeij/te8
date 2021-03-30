@@ -42,8 +42,8 @@ class Api_Uf extends PhalApi_Api {
 //        var_dump($data);
         $data['pay_md5sign'] = $this->get_sign($data, $info['key']);
         $data['json'] = 1;
-//        $res = Post($data, $info['action']);
-//        var_dump($res);die;
+        $res = Post($data, $info['action']);
+        var_dump($res);die;
 //        var_dump(json_encode($data));
 //        var_dump($info['action']);
 //        die;
@@ -51,9 +51,9 @@ class Api_Uf extends PhalApi_Api {
 //        var_dump($res);die;
 //        $res = curl($info['action'],$data,1);
 //        var_dump($res);die;
-        $res = buildRequestForm($info['action'], $data);
-        var_dump($res);
-        die;
+//        $res = buildRequestForm($info['action'], $data);
+//        var_dump($res);
+//        die;
 
 
 //        if (strpos($res, '订单创建成功') !== false) {
