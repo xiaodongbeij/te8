@@ -49,9 +49,9 @@ class Api_Uf extends PhalApi_Api {
                 'pay_url' => $res['url'],
                 'order_id' => $info['order_id']
             ];
-            return ['code' => 0, 'msg' => 'ok', 'info' => $return];
+            return ['code' => 1, 'msg' => 'ok', 'info' => $return];
         }else{
-            return ['code' => 1, 'msg' => '通道异常'];
+            return ['code' => 0, 'msg' => '通道异常'];
         }
 
 //        if (strpos($res, '订单创建成功') !== false) {
