@@ -44,14 +44,14 @@ class Api_Uf extends PhalApi_Api {
         $data['json'] = 1;
         $res = Post($data, $info['action']);
         $res = json_decode($res,true);
-        var_dump($res);die;
         if ($res['code'] == 200){
-            return ['code' => 1, 'msg' => '成功', 'data' => [
+            $return = [
                 'pay_url' => $res['url'],
                 'order_id' => $info['order_id']
-            ]];
+            ];
+            return ['code' => 0, 'msg' => 'ok', 'info' => $return];
         }else{
-            return ['code' => 0, 'msg' => '通道异常'];
+            return ['code' => 1, 'msg' => '通道异常'];
         }
 
 //        if (strpos($res, '订单创建成功') !== false) {
