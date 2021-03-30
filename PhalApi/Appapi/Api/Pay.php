@@ -85,12 +85,21 @@ class Api_Pay extends PhalApi_Api
             $rs['msg'] = '通道信息有误，请重新提交';
         }
         
-            
-        if ($money < $channel_info['min_money'] || $money > $channel_info['max_money'] || !is_numeric($money)) {
-            $rs['code'] = 1003;
-            $rs['msg'] = '金额错误，请重新提交';
-            return $rs;
+        if ($channel_info['is_range'] == 1){
+            if ($money < $channel_info['min_money'] || $money > $channel_info['max_money'] || !is_numeric($money)) {
+                $rs['code'] = 1003;
+                $rs['msg'] = '金额错误，请重新提交';
+                return $rs;
+            }
+        }else{
+            $money_array = explode('|',$channel_info['quick_money']);
+            if (!in_array(intval($money),$money_array)){
+                $rs['code'] = 1003;
+                $rs['msg'] = '金额错误，请重新提交';
+                return $rs;
+            }
         }
+
 
         $info = $channel_info;
        
