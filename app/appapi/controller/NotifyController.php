@@ -10,6 +10,52 @@ use think\Db;
 
 class NotifyController extends HomebaseController
 {
+
+    //U付回调
+    public function uf_notify()
+    {
+
+        $path = CMF_DATA . 'paylog/uf/'.date('Ym').'/';
+        $filename = date('dH').'.txt';
+        if(!is_dir($path)){
+            $flag = mkdir($path,0777,true);
+        }
+
+        $returnArray = array( // 返回字段
+            "memberid" => $_REQUEST["memberid"], // 商户ID
+            "orderid" =>  $_REQUEST["orderid"], // 订单号
+            "amount" =>  $_REQUEST["amount"], // 交易金额
+            "datetime" =>  $_REQUEST["datetime"], // 交易时间
+            "transaction_id" =>  $_REQUEST["transaction_id"], // 支付流水号
+            "returncode" => $_REQUEST["returncode"],
+        );
+
+        $order = Db::table('cmf_order')->where('order_sn', $returnArray['orderid'])->field('channel_id,order_status,pay_status,user_id,pay_money')->find();
+
+        $md5key = Db::table('cmf_channel')->where('id', $order['channel_id'])->value('key');
+        ksort($returnArray);
+        reset($returnArray);
+        $md5str = "";
+        foreach ($returnArray as $key => $val) {
+            $md5str = $md5str . $key . "=" . $val . "&";
+        }
+        $sign = strtoupper(md5($md5str . "key=" . $md5key));
+        if ($sign == $_REQUEST["sign"]) {
+            if ($_REQUEST["returncode"] == "00") {
+                $result = $this->call_logic($returnArray['orderid'], $returnArray['amount'], $returnArray['transaction_id']);
+                if ($result){
+                    $str = "交易成功！订单号：".$_REQUEST["orderid"];
+                    file_put_contents( $path.$filename,$str.PHP_EOL,FILE_APPEND);
+                    exit("OK");
+                }else{
+                    $str = "订单号：".$_REQUEST["orderid"].'本地数据库异常';
+                    file_put_contents( $path.$filename,$str.PHP_EOL,FILE_APPEND);
+                    die('error');
+                }
+
+            }
+        }
+    }
     //yy回调
     public function yy_notify()
     {
