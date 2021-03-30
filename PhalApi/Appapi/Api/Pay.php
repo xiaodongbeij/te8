@@ -79,10 +79,11 @@ class Api_Pay extends PhalApi_Api
         $channel_model = new Model_Channel();
       
         $channel_info = $channel_model->get_channel($channelid);
-        
+
         if ($channel_info == 1003) {
             $rs['code'] = 1003;
             $rs['msg'] = '通道信息有误或已关闭，请重新提交';
+            return $rs;
         }
         
         if ($channel_info['is_range'] == 1){
