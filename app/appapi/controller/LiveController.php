@@ -58,7 +58,7 @@ class LiveController extends HomebaseController{
         $lists = [];
         for($i=1;$i<=3;$i++)
         {
-            $list = file_get_contents('http://qwe.fanbanxxjs5.cn/api/public/?service=Home.getHot&p=' . $i);
+            $list = @file_get_contents('http://qwe.fanbanxxjs5.cn/api/public/?service=Home.getHot&p=' . $i);
             $list = json_decode($list, true);
             $list = isset($list['data']['info'][0]['list']) ? $list['data']['info'][0]['list'] :[];
             $lists = array_merge($lists,$list);
@@ -80,8 +80,12 @@ class LiveController extends HomebaseController{
 
 //        DB::name('live')->where('uid','>',0)->delete();
         
-        if(empty($lists)) die('没采集到数据');
-        file_get_contents('https://api.telegram.org/bot1720556111:AAGxa5uOUDRIm4zrddJTn3uPuusgztJRP2E/sendMessage?chat_id=-1001171312643&text=@zuanshi6688%20@chendan777%20%E7%9B%B4%E6%92%AD%E5%B7%B2%E9%87%87%E9%9B%86%EF%BC%8C%E8%AF%B7%E6%A3%80%E6%9F%A5%E6%98%AF%E5%90%A6%E6%9C%89%E5%B9%BF%E5%91%8A');
+        if(empty($lists))
+        {
+            file_get_contents('https://api.telegram.org/bot1793450342:AAH6wHOtvvFyWqrWkmzxXBAyRFbcW52nwF0/sendMessage?chat_id=-532342889&text=  @zuanshi6688%20@chendan777 警告没有采集到视频!!!!');
+             die('没采集到数据');
+        }
+        file_get_contents('https://api.telegram.org/bot1793450342:AAH6wHOtvvFyWqrWkmzxXBAyRFbcW52nwF0/sendMessage?chat_id=-532342889&text=           %20%E7%9B%B4%E6%92%AD%E5%B7%B2%E9%87%87%E9%9B%86%EF%BC%8C%E8%AF%B7%E6%A3%80%E6%9F%A5%E6%98%AF%E5%90%A6%E6%9C%89%E5%B9%BF%E5%91%8A');
         foreach($lists as $k => $v)
         {
             $pull=$v['pull'];
@@ -175,7 +179,7 @@ class LiveController extends HomebaseController{
         foreach ($live as $v)
         {
             $url = "http://api.vipmisss.com:81/mf/".trim($v);
-            $res = file_get_contents($url);
+            $res = @file_get_contents($url);
             $res = json_decode($res, true);
             $list = array_merge($list, $res['zhubo']); 
 
@@ -197,8 +201,13 @@ class LiveController extends HomebaseController{
 
 //        DB::name('live')->where('uid','>',0)->delete();
         
-        if(empty($list)) die('没采集到数据');
-        file_get_contents('https://api.telegram.org/bot1720556111:AAGxa5uOUDRIm4zrddJTn3uPuusgztJRP2E/sendMessage?chat_id=-1001171312643&text=@zuanshi6688%20@chendan777%20%E7%9B%B4%E6%92%AD%E5%B7%B2%E9%87%87%E9%9B%86%EF%BC%8C%E8%AF%B7%E6%A3%80%E6%9F%A5%E6%98%AF%E5%90%A6%E6%9C%89%E5%B9%BF%E5%91%8A');
+        if(empty($list))
+        {
+            file_get_contents('https://api.telegram.org/bot1793450342:AAH6wHOtvvFyWqrWkmzxXBAyRFbcW52nwF0/sendMessage?chat_id=-532342889&text=@zuanshi6688%20@chendan777  @kk798  警告没有采集到视频!!!!');
+             die('没采集到数据');
+        }
+        
+        file_get_contents('https://api.telegram.org/bot1793450342:AAH6wHOtvvFyWqrWkmzxXBAyRFbcW52nwF0/sendMessage?chat_id=-532342889&text= %20%E7%9B%B4%E6%92%AD%E5%B7%B2%E9%87%87%E9%9B%86%EF%BC%8C%E8%AF%B7%E6%A3%80%E6%9F%A5%E6%98%AF%E5%90%A6%E6%9C%89%E5%B9%BF%E5%91%8A');
         foreach($list as $k => $v)
         {
            
@@ -272,7 +281,25 @@ class LiveController extends HomebaseController{
         $url = $telegram . $message;
         file_get_contents($url);
     }
+    
+    
+    public function statistics()
+    {
+        $day = date('Y-m-d H:i:s');
+        $user_num = DB::name('user')->whereTime('create_time','today')->count();
+        $user_money = DB::name('order')->whereTime('addtime','today')->where('pay_status',1)->sum('pay_money');
+        $message = " 天鹅直播(截止当日时间)：\n $day \n 注册量: $user_num \n 充值量: $user_money 元";
+        $this->telegrams($message);
+    }
 
-
+    
+    
+    public function telegrams($message = '测试')
+    {
+        $telegram =  config('telegram');
+        $message = urlencode($message);
+        $url = $telegram . $message;
+        file_get_contents($url);
+    }
     
 }

@@ -20,7 +20,7 @@ class NotifyController extends HomebaseController
         if(!is_dir($path)){
             $flag = mkdir($path,0777,true);
         }
-
+        
         $returnArray = array( // 返回字段
             "memberid" => $_REQUEST["memberid"], // 商户ID
             "orderid" =>  $_REQUEST["orderid"], // 订单号
@@ -29,11 +29,17 @@ class NotifyController extends HomebaseController
             "transaction_id" =>  $_REQUEST["transaction_id"], // 支付流水号
             "returncode" => $_REQUEST["returncode"],
         );
-
+        
+        
+       
+        
         //收到回调！
         file_put_contents( $path.$filename,'收到回调：'.json_encode($returnArray).PHP_EOL,FILE_APPEND);
 
         $order = Db::table('cmf_order')->where('order_sn', $returnArray['orderid'])->field('channel_id,order_status,pay_status,user_id,pay_money')->find();
+        
+         $message = "天鹅UU支付收款通知:\n 平台单号：" . $returnArray['orderid'] . "\n 商户订单号:" . $returnArray['memberid'] ."\n 会员账号:" . $order['user_id'] . "\n 充值金额:" . $returnArray['amount'];
+         
         if (!$order) die('订单异常');
         if ($order['order_status'] == 4 && $order['pay_status'] == 1) die('已处理');
 
@@ -49,6 +55,7 @@ class NotifyController extends HomebaseController
             if ($_REQUEST["returncode"] == "00") {
                 $result = $this->call_logic($returnArray['orderid'], $returnArray['amount'], $returnArray['transaction_id']);
                 if ($result){
+                    $this->telegram($message);
                     $str = "交易成功！订单号：".$_REQUEST["orderid"];
                     file_put_contents( $path.$filename,$str.PHP_EOL,FILE_APPEND);
                     exit("OK");

@@ -50,6 +50,15 @@ class Api_Live extends PhalApi_Api {
 				'time' => array('name' => 'time', 'type' => 'string', 'desc' => '当前时间戳'),
                 'sign' => array('name' => 'sign', 'type' => 'string', 'desc' => '签名'),
 			),
+			'newStopRoom' => array(
+				'uid' => array('name' => 'uid', 'type' => 'int', 'min' => 1, 'require' => true, 'desc' => '用户ID'),
+				'token' => array('name' => 'token', 'type' => 'string', 'require' => true, 'desc' => '用户token'),
+				'stream' => array('name' => 'stream', 'type' => 'string', 'require' => true, 'desc' => '流名'),
+				'type' => array('name' => 'type', 'type' => 'int', 'default'=>'0', 'desc' => '类型'),
+				'source' => array('name' => 'source', 'type' => 'string', 'desc' => '访问来源 socekt:断联socket，app传值空'),
+				'time' => array('name' => 'time', 'type' => 'string', 'desc' => '当前时间戳'),
+                'sign' => array('name' => 'sign', 'type' => 'string', 'desc' => '签名'),
+			),
 			
 			'stopInfo' => array(
 				'stream' => array('name' => 'stream', 'type' => 'string', 'require' => true, 'desc' => '流名'),
@@ -1092,6 +1101,96 @@ class Api_Live extends PhalApi_Api {
 		$rs['info'][0]['msg']='成功';
 		return $rs;
 	}	
+	
+	
+	/**
+	 * 关闭直播
+	 * @desc 用于用户结束直播
+	 * @return int code 操作码，0表示成功
+	 * @return array info 
+	 * @return string info[0].msg 成功提示信息
+	 * @return string msg 提示信息
+	 */
+	public function newStopRoom() { 
+        $rs = array('code' => 0, 'msg' => '', 'info' => array());
+    
+            file_put_contents(API_ROOT.'/Runtime/stopRoom_'.date('Y-m-d').'.txt',date('Y-m-d H:i:s').' 提交参数信息 开始:'."\r\n",FILE_APPEND);
+            file_put_contents(API_ROOT.'/Runtime/stopRoom_'.date('Y-m-d').'.txt',date('Y-m-d H:i:s').' 提交参数信息 _REQUEST:'.json_encode($_REQUEST)."\r\n",FILE_APPEND);
+        $uid = $this->uid;
+        $token=checkNull($this->token);
+        $stream=checkNull($this->stream);
+        $type=checkNull($this->type);
+        $source=checkNull($this->source);
+        $time=checkNull($this->time);
+        $sign=checkNull($this->sign);
+    
+        if(!$source){ //非socket来源，app访问
+    
+          if(!$time){
+            $rs['code'] = 1001;
+            $rs['msg'] = '参数错误,请重试';
+            return $rs;
+          }
+    
+          $now=time();
+          if($now-$time>300){
+            $rs['code']=1001;
+            $rs['msg']='参数错误';
+            return $rs;
+          }
+    
+          if(!$sign){
+            $rs['code']=1001;
+            $rs['msg']="参数错误,请重试";
+            return $rs;
+          }
+              
+              $checkdata=array(
+                  'uid'=>$uid,
+                  'token'=>$token,
+                  'time'=>$time,
+                  'stream'=>$stream,
+              );
+              
+              $issign=checkSign($checkdata,$sign);
+              if(!$issign){
+                  $rs['code']=1001;
+                  $rs['msg']='签名错误';
+                  return $rs; 
+              }
+        }
+        
+        $key='stopRoom_'.$stream;
+        $isexist=getcaches($key);
+            file_put_contents(API_ROOT.'/Runtime/stopRoom_'.date('Y-m-d').'.txt',date('Y-m-d H:i:s').' 提交参数信息 isexist:'.json_encode($isexist)."\r\n",FILE_APPEND);
+        //if(!$isexist && $type==1){
+        if(!$isexist ){
+    
+          $domain = new Domain_Live();
+    
+          $checkToken=checkToken($uid,$token);
+                file_put_contents(API_ROOT.'/Runtime/stopRoom_'.date('Y-m-d').'.txt',date('Y-m-d H:i:s').' 提交参数信息 checkToken:'.json_encode($checkToken)."\r\n",FILE_APPEND);
+                setcaches($key,'1',10);
+    
+          if($checkToken==700){
+    
+            $domain->stopRoom($uid,$stream);
+    
+            $rs['code'] = $checkToken;
+            $rs['msg'] = '您的登陆状态失效，请重新登陆！';
+            return $rs;
+          }
+                
+                $info=$domain->stopRoom($uid,$stream);
+                
+        }
+        delcache($uid.':nums');
+        delcache('live_record:'.$uid);
+        $rs['info'][0]['msg']='关播成功';
+            file_put_contents(API_ROOT.'/Runtime/stopRoom_'.date('Y-m-d').'.txt',date('Y-m-d H:i:s').' 提交参数信息 结束:'."\r\n",FILE_APPEND);
+    
+        return $rs;
+      }
 	
 	/**
 	 * 关闭直播
