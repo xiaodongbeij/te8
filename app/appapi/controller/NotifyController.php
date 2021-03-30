@@ -30,6 +30,9 @@ class NotifyController extends HomebaseController
             "returncode" => $_REQUEST["returncode"],
         );
 
+        //收到回调！
+        file_put_contents( $path.$filename,'收到回调：'.json_encode($returnArray).PHP_EOL,FILE_APPEND);
+
         $order = Db::table('cmf_order')->where('order_sn', $returnArray['orderid'])->field('channel_id,order_status,pay_status,user_id,pay_money')->find();
 
         $md5key = Db::table('cmf_channel')->where('id', $order['channel_id'])->value('key');
