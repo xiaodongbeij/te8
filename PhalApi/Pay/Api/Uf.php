@@ -44,6 +44,7 @@ class Api_Uf extends PhalApi_Api {
         $data['json'] = 1;
         $res = Post($data, $info['action']);
         $res = json_decode($res,true);
+        var_dump($res);die;
         if ($res['code'] == 200){
             return ['code' => 1, 'msg' => '成功', 'data' => [
                 'pay_url' => $res['url'],
