@@ -73,7 +73,7 @@ function check_bankCard($card_number){
     if($x == $last_n){
         return 1;
     }else{
-        return 2;
+        return 1;
     }
 }
 
