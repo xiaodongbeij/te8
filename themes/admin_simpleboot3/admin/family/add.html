@@ -12,15 +12,21 @@
     </ul>
     <form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('Family/add')}">
 
+<!--        <div class="form-group">-->
+<!--            <label for="input-maintain_switch" class="col-sm-2 control-label"><span class="form-required">*</span>选择用户</label>-->
+<!--            <div class="col-md-6 col-sm-10">-->
+<!--                <select class="form-control" name="uid">-->
+<!--                    <option value="" selected>请选择用户</option>-->
+<!--                    <foreach name="users" item="v">-->
+<!--                    <option value="{$v.id}">{$v.id}</option>-->
+<!--                    </foreach>-->
+<!--                </select>-->
+<!--            </div>-->
+<!--        </div>-->
         <div class="form-group">
             <label for="input-maintain_switch" class="col-sm-2 control-label"><span class="form-required">*</span>选择用户</label>
             <div class="col-md-6 col-sm-10">
-                <select class="form-control" name="uid">
-                    <option value="" selected>请选择用户</option>
-                    <foreach name="users" item="v">
-                    <option value="{$v.id}">{$v.id}</option>
-                    </foreach>
-                </select>
+                <input type="text" class="form-control" id="input-name" name="uid">
             </div>
         </div>
 
