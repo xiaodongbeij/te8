@@ -117,6 +117,10 @@ class FamilyController extends AdminbaseController {
             if(!$result) $this->error($validate->getError());
             $data['addtime'] = time();
 
+            //判断用户存在
+            $info = DB::name('user')->where('id',$data['uid'])->find();
+            if (!$info) $this->error('用户不存在');
+
             $res = DB::name('family')->insert($data);
             if(!$res) $this->error("添加失败");
             $this->success("ok");
