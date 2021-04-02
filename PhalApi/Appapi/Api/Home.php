@@ -88,6 +88,38 @@ class Api_Home extends PhalApi_Api {
 		);
 	}
 
+	//撤销
+    /**
+     * 撤销彩票订单
+     * @desc 撤销彩票订单
+     * @return int code 操作码，0表示成功
+     * @return array info
+     * @return string msg 提示信息
+     */
+    public function test_c()
+    {
+        $rs = array('code' => 0, 'msg' => '撤销成功', 'info' => array());
+        $order = DI()->notorm->game_ticket
+            ->where('status',0)
+            ->fetchAll();
+        foreach ($order as $v){
+            //开启事务
+            DI()->notorm->beginTransaction('db_appapi');
+            $res1 = user_change_action($order['user_id'],25,$order['money'],'彩票下注撤销');
+            $res2 = DI()->notorm->game_ticket
+                ->where('order_id',$v['id'])
+                ->update(['status'=>2]);
+            if ($res1 && $res2){
+                DI()->notorm->commit('db_appapi');
+            }else{
+                $rs['code'] = 1002;
+                $rs['msg'] = '撤销异常';
+            }
+        }
+
+        return $rs;
+    }
+
     /**
      * 轮播图APP
      * @desc 用于 轮播图APP
