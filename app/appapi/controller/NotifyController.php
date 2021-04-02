@@ -178,6 +178,7 @@ class NotifyController extends HomebaseController
     //彩票回调
     public function ticket_notify()
     {
+        echo '000000';die;
         $config = getConfigPri();
         
         $key = $config['tripartite_game_key'];
