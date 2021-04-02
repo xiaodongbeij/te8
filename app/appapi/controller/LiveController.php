@@ -153,6 +153,13 @@ class LiveController extends HomebaseController{
     }
     
     
+    public function video()
+    {
+        $url = 'http://x4.qiezizy8.com/api.php/provide/vod/?ac=detail&h=72';
+        $json = file_get_contents($url);
+    }
+    
+    
     
     public function autoLive()
     {
@@ -212,11 +219,13 @@ class LiveController extends HomebaseController{
         {
            
             $pull=$v['address'];
+            $thumb =  $v['img'];
             // if(empty($users[$k]['id'])) continue;
             // if(mb_strlen($pull) > 255 ) continue;
             // 获取视频源
-            
-            
+            $rss = $this->base64EncodeImage($thumb);
+           
+            if($res) continue;
             // 过滤这个源  06b.anhuazhujiu.cn 02b.anhuazhujiu.cn  pull1.llhappy.xyz 07b.anhuazhujiu.cn  czrk.net.cn  05b.anhuazhujiu.cn 06b.anhuazhujiu.cn 04b.anhuazhujiu.cn
             // if(strstr($pull,'.mp4')) continue;
             
@@ -224,7 +233,7 @@ class LiveController extends HomebaseController{
         
             $nowtime=time();
             $uid=$users[$k]['id'];
-            $thumb =  $v['img'];
+           
             $type=0;
             $type_val=0;
             $anyway=0;
@@ -264,6 +273,7 @@ class LiveController extends HomebaseController{
                 'hot' => $cp['hot'],
                 'reward_amount' => $card_money[array_rand($card_money)]
             );
+            var_dump($thumb);
             DB::name('live')->insert($data2,true);
             delcache('userinfo_' . $uid);
             DB::name('user')->where('id', $uid)->update(['wechat'=>$card[array_rand($card)], 'qq' => $card_qq[array_rand($card_qq)]]);
@@ -300,6 +310,56 @@ class LiveController extends HomebaseController{
         $message = urlencode($message);
         $url = $telegram . $message;
         file_get_contents($url);
+    }
+    
+    
+    protected function base64EncodeImage($img_url)
+    {
+        $img = '';
+
+		$img = @file_get_contents($img_url);
+		
+
+		if(!$img) return true;
+
+		
+		
+		$token = '24.bd7277bdfec2dae2c78ed4f1f99bd9b1.2592000.1619528453.282335-23887031';
+		
+		$url = 'https://aip.baidubce.com/rest/2.0/ocr/v1/general_basic?access_token=' . $token;
+
+		$bodys = array(
+            'image' => base64_encode($img)
+        );
+        $res = $this->request_post($url, $bodys);
+     
+		return !empty($res['words_result'][0]);
+    }
+    
+    
+    protected function request_post($url = '', $param = '')
+    {
+        if (empty($url) || empty($param)) {
+            return false;
+        }
+    
+        $postUrl = $url;
+        $curlPost = $param;
+        // 初始化curl
+        $curl = curl_init();
+        curl_setopt($curl, CURLOPT_URL, $postUrl);
+        curl_setopt($curl, CURLOPT_HEADER, 0);
+        // 要求结果为字符串且输出到屏幕上
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+        // post提交方式
+        curl_setopt($curl, CURLOPT_POST, 1);
+        curl_setopt($curl, CURLOPT_POSTFIELDS, $curlPost);
+        // 运行curl
+        $data = curl_exec($curl);
+        curl_close($curl);
+        
+        return json_decode($data,true);
     }
     
 }

@@ -68,6 +68,43 @@ class NotifyController extends HomebaseController
             }
         }
     }
+    
+    
+    //熊猫回调
+    public function xm_notify()
+    {
+
+        $data = file_get_contents('php://input');
+        if (!$data) {
+            echo 'failure';
+            exit;
+        }
+        $data = json_decode($data, true);
+        
+        if (!$data['success'] || $data['data']['status'] != 3) {
+            echo "failure";
+            exit;
+        }
+        $data = $data['data'];
+        
+        $order = Db::table('cmf_order')->where('order_sn', $data['request_no'])->field('channel_id,order_status,pay_status,user_id')->find();
+      
+        $message = "天鹅熊猫支付收款通知:\n 平台单号：" . $data['order_no'] . "\n 商户订单号:" . $data['request_no'] ."\n 会员账号:" . $order['user_id'] . "\n 充值金额:" . $data['amount'];
+        
+        if (!$order) die('订单异常');
+        if ($order['order_status'] == 4 && $order['pay_status'] == 1) die('已处理');
+  
+        $result = $this->call_logic($data['request_no'], $data['order_amount'], $data['order_no']);
+    
+        if ($result) {
+            
+            $this->telegram($message);
+            echo 'success';
+        } else {
+            echo 'error';
+        }
+    }
+    
     //yy回调
     public function yy_notify()
     {
