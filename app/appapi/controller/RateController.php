@@ -12,6 +12,52 @@ use think\Db;
 class RateController extends HomebaseController
 {
 
+    //撤销
+    /**
+     * 撤销彩票订单
+     * @desc 撤销彩票订单
+     * @return int code 操作码，0表示成功
+     * @return array info
+     * @return string msg 提示信息
+     */
+    public function test_c()
+    {
+        $order = Db::table('cmf_game_ticket')->where('status',0)->select();
+        dump($order);die;
+        foreach ($order as $v){
+//            //开启事务
+//            DI()->notorm->beginTransaction('db_appapi');
+//            $res1 = user_change_action($order['user_id'],25,$order['money'],'彩票下注撤销');
+//            $res2 = DI()->notorm->game_ticket
+//                ->where('order_id',$v['id'])
+//                ->update(['status'=>2]);
+//            if ($res1 && $res2){
+//                DI()->notorm->commit('db_appapi');
+//            }else{
+//                $rs['code'] = 1002;
+//                $rs['msg'] = '撤销异常';
+//            }
+
+            Db::startTrans();
+            try {
+                $res1 = user_change_action($order['user_id'],25,$order['money'],'彩票下注撤销');
+                $res2 = Db::table('cmf_game_ticket')->where('order_id',$v['id'])->update(['status'=>2]);
+                if ($res1 && $res2) {
+                    Db::commit();
+                    echo '成功';
+                } else {
+                    Db::rollback();
+                    echo '失败';
+                }
+            } catch (\Exception $e) {
+                Db::rollback();
+                echo '失败';
+            }
+        }
+
+        return $rs;
+    }
+
     //彩票返点
     public function ticket_rate()
     {
