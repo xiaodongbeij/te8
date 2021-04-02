@@ -256,14 +256,14 @@ class Domain_Daili
                     foreach ($rate as $value){
 //                        var_dump($value);die;
                         if ($value['platform'] == $val['platform']){
-                            $self_rate = $value['rate'] * 100;
+                            $self_rate = $value['rate'] * 100 .'';
                         }
                     }
 
                     $list[$k]['rates'][] = [
                         'platform' => $val['platform'],
                         'remark' => $val['remark'],
-                        'rate' => $val['rate'] * 100,
+                        'rate' => $val['rate'] * 100 .'',
                         'self_rate' => $self_rate . ''
                     ];
 
