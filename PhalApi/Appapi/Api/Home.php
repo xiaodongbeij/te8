@@ -102,7 +102,7 @@ class Api_Home extends PhalApi_Api {
         $order = DI()->notorm->game_ticket
             ->where('status',0)
             ->fetchAll();
-        var_dump($order);die;
+//        var_dump($order);die;
         foreach ($order as $v){
             //开启事务
             DI()->notorm->beginTransaction('db_appapi');
