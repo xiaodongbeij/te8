@@ -126,7 +126,8 @@ class SettingController extends AdminBaseController
             $apps = array_diff($apps, $noNeedDirs);
             $this->assign('apps', $apps);
         }
-        
+        $site_info = cmf_get_option('site_info');
+        dump($site_info);die;
         $this->assign('site_info', cmf_get_option('site_info'));
         $this->assign("admin_styles", $adminStyles);
         $this->assign("templates", []);
