@@ -353,7 +353,9 @@ class Api_Ticket extends PhalApi_Api
 
         $return = $this->get_sign($data, $this->key);
         $url = $this->url . $url_route . $return['date'] . '&sign=' . $return['sign'];
+       
         $res = $this->curl->get($url, 3000);
+ 
         if ($res) {
             $res = json_decode($res, true);
             if ($res['code'] == '000000') {
