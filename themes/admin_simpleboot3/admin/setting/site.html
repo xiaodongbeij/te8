@@ -20,6 +20,7 @@
         <!--<li><a href="#K" data-toggle="tab">登录协议弹窗</a></li>-->
         <li><a href="#G" data-toggle="tab">直播助手版本管理</a></li>
         <li><a href="#L" data-toggle="tab">社区管理</a></li>
+        <li><a href="#M" data-toggle="tab">代理加盟</a></li>
 
     </ul>
     <form class="form-horizontal js-ajax-form margin-top-20" role="form" action="{:url('setting/sitePost')}"
@@ -27,6 +28,35 @@
         <fieldset>
             <div class="tabbable">
                 <div class="tab-content">
+
+                    <div class="tab-pane" id="M">
+                        <div class="form-group">
+                            <label for="input-site-name" class="col-sm-2 control-label"><span
+                                    class="form-required"></span>QQ</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-site-name" name="options[join_in_qq]"
+                                       value="{$site_info.join_in_qq|default=''}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-site-name" class="col-sm-2 control-label"><span
+                                    class="form-required"></span>微信</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-site-name" name="options[join_in_wx]"
+                                       value="{$site_info.join_in_wx|default=''}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-site-name" class="col-sm-2 control-label"><span
+                                    class="form-required"></span>纸飞机</label>
+                            <div class="col-md-6 col-sm-10">
+                                <input type="text" class="form-control" id="input-site-name" name="options[join_in_tg]"
+                                       value="{$site_info.join_in_tg|default=''}">
+                            </div>
+                        </div>
+                    </div>
+
+
                     <div class="tab-pane active" id="A">
                         <div class="form-group">
                             <label for="input-maintain_switch" class="col-sm-2 control-label">网站维护</label>
