@@ -3,7 +3,7 @@
  * 用户连麦
  */
 
-include API_ROOT.'/../vendor/tencentcloud/tencentcloud-sdk-php/vendor/autoload.php';
+//include API_ROOT.'/../vendor/tencentcloud/tencentcloud-sdk-php/vendor/autoload.php';
 
 use TencentCloud\Common\Credential;
 use TencentCloud\Common\Profile\ClientProfile;
