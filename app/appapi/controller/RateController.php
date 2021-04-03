@@ -22,8 +22,11 @@ class RateController extends HomebaseController
      */
     public function test_c()
     {
-        $order = Db::table('cmf_game_ticket')->where('status',0)->select();
-        dump($order);die;
+        $site_info = cmf_get_option('site_info');
+        dump($site_info);die;
+
+//        $order = Db::table('cmf_game_ticket')->where('status',0)->select();
+//        dump($order);die;
         foreach ($order as $v){
 //            //开启事务
 //            DI()->notorm->beginTransaction('db_appapi');
