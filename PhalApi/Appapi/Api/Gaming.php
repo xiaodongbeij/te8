@@ -166,8 +166,6 @@ class Api_Gaming extends PhalApi_Api {
             return ['code' => 1, 'msg' => '转存金额不能低于'. $this->t_money . '元', 'remoteMsg' => '转存金额不能低于'. $this->t_money . '元'];
         }
         
- 
-
         $money = checkNull($this->money);
         // 请求地址
         $url = $this->domain . "/api/{$this->agent}/deposit";
@@ -311,12 +309,13 @@ class Api_Gaming extends PhalApi_Api {
      */
     protected function curlGet(string $url = "")
     {
+        
+        
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($curl, CURLOPT_TIMEOUT, 10);
         curl_setopt($curl, CURLOPT_URL, $url);
         $res = curl_exec($curl);
-        curl_close($curl);
 
         if($res)
         {
@@ -405,6 +404,7 @@ class Api_Gaming extends PhalApi_Api {
         $res = $this->game_change($this->uid,23,$money,$remark,$platform);
         if ($res === 1){
             $return = $this->getHttpQuery($url, $this->param);
+   
             $return['balance'] = abs($money);
             if ($return['code'] == 0){
                 $return['msg'] ='成功';

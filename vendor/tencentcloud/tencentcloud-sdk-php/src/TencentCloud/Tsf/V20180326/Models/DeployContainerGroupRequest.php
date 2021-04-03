@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getGroupId() 获取部署组ID，分组唯一标识
  * @method void setGroupId(string $GroupId) 设置部署组ID，分组唯一标识
- * @method string getServer() 获取镜像server
- * @method void setServer(string $Server) 设置镜像server
  * @method string getTagName() 获取镜像版本名称,如v1
  * @method void setTagName(string $TagName) 设置镜像版本名称,如v1
  * @method integer getInstanceNum() 获取实例数量
  * @method void setInstanceNum(integer $InstanceNum) 设置实例数量
+ * @method string getServer() 获取镜像server
+ * @method void setServer(string $Server) 设置镜像server
  * @method string getReponame() 获取旧版镜像名，如/tsf/nginx
  * @method void setReponame(string $Reponame) 设置旧版镜像名，如/tsf/nginx
  * @method string getCpuLimit() 获取业务容器最大的 CPU 核数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
@@ -68,6 +68,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxSurge(string $MaxSurge) 设置kubernetes滚动更新策略的MaxSurge参数
  * @method string getMaxUnavailable() 获取kubernetes滚动更新策略的MaxUnavailable参数
  * @method void setMaxUnavailable(string $MaxUnavailable) 设置kubernetes滚动更新策略的MaxUnavailable参数
+ * @method HealthCheckSettings getHealthCheckSettings() 获取健康检查配置信息，若不指定该参数，则默认不设置健康检查。
+ * @method void setHealthCheckSettings(HealthCheckSettings $HealthCheckSettings) 设置健康检查配置信息，若不指定该参数，则默认不设置健康检查。
+ * @method array getEnvs() 获取部署组应用运行的环境变量。若不指定该参数，则默认不设置额外的环境变量。
+ * @method void setEnvs(array $Envs) 设置部署组应用运行的环境变量。若不指定该参数，则默认不设置额外的环境变量。
+ * @method ServiceSetting getServiceSetting() 获取容器部署组的网络设置。
+ * @method void setServiceSetting(ServiceSetting $ServiceSetting) 设置容器部署组的网络设置。
+ * @method boolean getDeployAgent() 获取是否部署 agent 容器。若不指定该参数，则默认不部署 agent 容器。
+ * @method void setDeployAgent(boolean $DeployAgent) 设置是否部署 agent 容器。若不指定该参数，则默认不部署 agent 容器。
+ * @method SchedulingStrategy getSchedulingStrategy() 获取节点调度策略。若不指定改参数，则默认不使用节点调度策略。
+ * @method void setSchedulingStrategy(SchedulingStrategy $SchedulingStrategy) 设置节点调度策略。若不指定改参数，则默认不使用节点调度策略。
  */
 class DeployContainerGroupRequest extends AbstractModel
 {
@@ -75,11 +85,6 @@ class DeployContainerGroupRequest extends AbstractModel
      * @var string 部署组ID，分组唯一标识
      */
     public $GroupId;
-
-    /**
-     * @var string 镜像server
-     */
-    public $Server;
 
     /**
      * @var string 镜像版本名称,如v1
@@ -90,6 +95,11 @@ class DeployContainerGroupRequest extends AbstractModel
      * @var integer 实例数量
      */
     public $InstanceNum;
+
+    /**
+     * @var string 镜像server
+     */
+    public $Server;
 
     /**
      * @var string 旧版镜像名，如/tsf/nginx
@@ -192,10 +202,35 @@ class DeployContainerGroupRequest extends AbstractModel
     public $MaxUnavailable;
 
     /**
+     * @var HealthCheckSettings 健康检查配置信息，若不指定该参数，则默认不设置健康检查。
+     */
+    public $HealthCheckSettings;
+
+    /**
+     * @var array 部署组应用运行的环境变量。若不指定该参数，则默认不设置额外的环境变量。
+     */
+    public $Envs;
+
+    /**
+     * @var ServiceSetting 容器部署组的网络设置。
+     */
+    public $ServiceSetting;
+
+    /**
+     * @var boolean 是否部署 agent 容器。若不指定该参数，则默认不部署 agent 容器。
+     */
+    public $DeployAgent;
+
+    /**
+     * @var SchedulingStrategy 节点调度策略。若不指定改参数，则默认不使用节点调度策略。
+     */
+    public $SchedulingStrategy;
+
+    /**
      * @param string $GroupId 部署组ID，分组唯一标识
-     * @param string $Server 镜像server
      * @param string $TagName 镜像版本名称,如v1
      * @param integer $InstanceNum 实例数量
+     * @param string $Server 镜像server
      * @param string $Reponame 旧版镜像名，如/tsf/nginx
      * @param string $CpuLimit 业务容器最大的 CPU 核数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
      * @param string $MemLimit 业务容器最大的内存 MiB 数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
@@ -216,6 +251,11 @@ class DeployContainerGroupRequest extends AbstractModel
      * @param string $IstioMemLimit istioproxy 容器最大的内存 MiB 数，对应 K8S 的 limit
      * @param string $MaxSurge kubernetes滚动更新策略的MaxSurge参数
      * @param string $MaxUnavailable kubernetes滚动更新策略的MaxUnavailable参数
+     * @param HealthCheckSettings $HealthCheckSettings 健康检查配置信息，若不指定该参数，则默认不设置健康检查。
+     * @param array $Envs 部署组应用运行的环境变量。若不指定该参数，则默认不设置额外的环境变量。
+     * @param ServiceSetting $ServiceSetting 容器部署组的网络设置。
+     * @param boolean $DeployAgent 是否部署 agent 容器。若不指定该参数，则默认不部署 agent 容器。
+     * @param SchedulingStrategy $SchedulingStrategy 节点调度策略。若不指定改参数，则默认不使用节点调度策略。
      */
     function __construct()
     {
@@ -234,16 +274,16 @@ class DeployContainerGroupRequest extends AbstractModel
             $this->GroupId = $param["GroupId"];
         }
 
-        if (array_key_exists("Server",$param) and $param["Server"] !== null) {
-            $this->Server = $param["Server"];
-        }
-
         if (array_key_exists("TagName",$param) and $param["TagName"] !== null) {
             $this->TagName = $param["TagName"];
         }
 
         if (array_key_exists("InstanceNum",$param) and $param["InstanceNum"] !== null) {
             $this->InstanceNum = $param["InstanceNum"];
+        }
+
+        if (array_key_exists("Server",$param) and $param["Server"] !== null) {
+            $this->Server = $param["Server"];
         }
 
         if (array_key_exists("Reponame",$param) and $param["Reponame"] !== null) {
@@ -324,6 +364,34 @@ class DeployContainerGroupRequest extends AbstractModel
 
         if (array_key_exists("MaxUnavailable",$param) and $param["MaxUnavailable"] !== null) {
             $this->MaxUnavailable = $param["MaxUnavailable"];
+        }
+
+        if (array_key_exists("HealthCheckSettings",$param) and $param["HealthCheckSettings"] !== null) {
+            $this->HealthCheckSettings = new HealthCheckSettings();
+            $this->HealthCheckSettings->deserialize($param["HealthCheckSettings"]);
+        }
+
+        if (array_key_exists("Envs",$param) and $param["Envs"] !== null) {
+            $this->Envs = [];
+            foreach ($param["Envs"] as $key => $value){
+                $obj = new Env();
+                $obj->deserialize($value);
+                array_push($this->Envs, $obj);
+            }
+        }
+
+        if (array_key_exists("ServiceSetting",$param) and $param["ServiceSetting"] !== null) {
+            $this->ServiceSetting = new ServiceSetting();
+            $this->ServiceSetting->deserialize($param["ServiceSetting"]);
+        }
+
+        if (array_key_exists("DeployAgent",$param) and $param["DeployAgent"] !== null) {
+            $this->DeployAgent = $param["DeployAgent"];
+        }
+
+        if (array_key_exists("SchedulingStrategy",$param) and $param["SchedulingStrategy"] !== null) {
+            $this->SchedulingStrategy = new SchedulingStrategy();
+            $this->SchedulingStrategy->deserialize($param["SchedulingStrategy"]);
         }
     }
 }

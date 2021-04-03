@@ -32,8 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(integer $EndTime) 设置结束时间（Unix 时间戳，秒级）, 为0 表示当前时间
  * @method string getContext() 获取搜索上下文, 用作查询游标
  * @method void setContext(string $Context) 设置搜索上下文, 用作查询游标
- * @method integer getSize() 获取单次获取的历史数据项目的最大数量
- * @method void setSize(integer $Size) 设置单次获取的历史数据项目的最大数量
+ * @method integer getSize() 获取单次获取的历史数据项目的最大数量, 缺省10
+ * @method void setSize(integer $Size) 设置单次获取的历史数据项目的最大数量, 缺省10
+ * @method string getEventId() 获取事件标识符，可以用来指定查询特定的事件，如果不指定，则查询所有事件。
+ * @method void setEventId(string $EventId) 设置事件标识符，可以用来指定查询特定的事件，如果不指定，则查询所有事件。
  */
 class ListEventHistoryRequest extends AbstractModel
 {
@@ -68,9 +70,14 @@ class ListEventHistoryRequest extends AbstractModel
     public $Context;
 
     /**
-     * @var integer 单次获取的历史数据项目的最大数量
+     * @var integer 单次获取的历史数据项目的最大数量, 缺省10
      */
     public $Size;
+
+    /**
+     * @var string 事件标识符，可以用来指定查询特定的事件，如果不指定，则查询所有事件。
+     */
+    public $EventId;
 
     /**
      * @param string $ProductId 产品ID
@@ -79,7 +86,8 @@ class ListEventHistoryRequest extends AbstractModel
      * @param integer $StartTime 起始时间（Unix 时间戳，秒级）, 为0 表示 当前时间 - 24h
      * @param integer $EndTime 结束时间（Unix 时间戳，秒级）, 为0 表示当前时间
      * @param string $Context 搜索上下文, 用作查询游标
-     * @param integer $Size 单次获取的历史数据项目的最大数量
+     * @param integer $Size 单次获取的历史数据项目的最大数量, 缺省10
+     * @param string $EventId 事件标识符，可以用来指定查询特定的事件，如果不指定，则查询所有事件。
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class ListEventHistoryRequest extends AbstractModel
 
         if (array_key_exists("Size",$param) and $param["Size"] !== null) {
             $this->Size = $param["Size"];
+        }
+
+        if (array_key_exists("EventId",$param) and $param["EventId"] !== null) {
+            $this->EventId = $param["EventId"];
         }
     }
 }

@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateGameServerSession请求参数结构体
  *
- * @method string getGameServerSessionId() 获取游戏服务器会话ID
- * @method void setGameServerSessionId(string $GameServerSessionId) 设置游戏服务器会话ID
- * @method integer getMaximumPlayerSessionCount() 获取最大玩家数量
- * @method void setMaximumPlayerSessionCount(integer $MaximumPlayerSessionCount) 设置最大玩家数量
- * @method string getName() 获取游戏服务器会话名称
- * @method void setName(string $Name) 设置游戏服务器会话名称
- * @method string getPlayerSessionCreationPolicy() 获取玩家会话创建策略（ACCEPT_ALL,DENY_ALL）
- * @method void setPlayerSessionCreationPolicy(string $PlayerSessionCreationPolicy) 设置玩家会话创建策略（ACCEPT_ALL,DENY_ALL）
- * @method string getProtectionPolicy() 获取保护策略(NoProtection,TimeLimitProtection,FullProtection)
- * @method void setProtectionPolicy(string $ProtectionPolicy) 设置保护策略(NoProtection,TimeLimitProtection,FullProtection)
+ * @method string getGameServerSessionId() 获取游戏服务器会话ID，最小长度1个ASCII字符，最大长度不超过256个ASCII字符
+ * @method void setGameServerSessionId(string $GameServerSessionId) 设置游戏服务器会话ID，最小长度1个ASCII字符，最大长度不超过256个ASCII字符
+ * @method integer getMaximumPlayerSessionCount() 获取最大玩家数量，最小值不小于0
+ * @method void setMaximumPlayerSessionCount(integer $MaximumPlayerSessionCount) 设置最大玩家数量，最小值不小于0
+ * @method string getName() 获取游戏服务器会话名称，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
+ * @method void setName(string $Name) 设置游戏服务器会话名称，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
+ * @method string getPlayerSessionCreationPolicy() 获取玩家会话创建策略，包括允许所有玩家加入和禁止所有玩家加入（ACCEPT_ALL,DENY_ALL）
+ * @method void setPlayerSessionCreationPolicy(string $PlayerSessionCreationPolicy) 设置玩家会话创建策略，包括允许所有玩家加入和禁止所有玩家加入（ACCEPT_ALL,DENY_ALL）
+ * @method string getProtectionPolicy() 获取保护策略，包括不保护、时限保护和完全保护(NoProtection,TimeLimitProtection,FullProtection)
+ * @method void setProtectionPolicy(string $ProtectionPolicy) 设置保护策略，包括不保护、时限保护和完全保护(NoProtection,TimeLimitProtection,FullProtection)
  */
 class UpdateGameServerSessionRequest extends AbstractModel
 {
     /**
-     * @var string 游戏服务器会话ID
+     * @var string 游戏服务器会话ID，最小长度1个ASCII字符，最大长度不超过256个ASCII字符
      */
     public $GameServerSessionId;
 
     /**
-     * @var integer 最大玩家数量
+     * @var integer 最大玩家数量，最小值不小于0
      */
     public $MaximumPlayerSessionCount;
 
     /**
-     * @var string 游戏服务器会话名称
+     * @var string 游戏服务器会话名称，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
      */
     public $Name;
 
     /**
-     * @var string 玩家会话创建策略（ACCEPT_ALL,DENY_ALL）
+     * @var string 玩家会话创建策略，包括允许所有玩家加入和禁止所有玩家加入（ACCEPT_ALL,DENY_ALL）
      */
     public $PlayerSessionCreationPolicy;
 
     /**
-     * @var string 保护策略(NoProtection,TimeLimitProtection,FullProtection)
+     * @var string 保护策略，包括不保护、时限保护和完全保护(NoProtection,TimeLimitProtection,FullProtection)
      */
     public $ProtectionPolicy;
 
     /**
-     * @param string $GameServerSessionId 游戏服务器会话ID
-     * @param integer $MaximumPlayerSessionCount 最大玩家数量
-     * @param string $Name 游戏服务器会话名称
-     * @param string $PlayerSessionCreationPolicy 玩家会话创建策略（ACCEPT_ALL,DENY_ALL）
-     * @param string $ProtectionPolicy 保护策略(NoProtection,TimeLimitProtection,FullProtection)
+     * @param string $GameServerSessionId 游戏服务器会话ID，最小长度1个ASCII字符，最大长度不超过256个ASCII字符
+     * @param integer $MaximumPlayerSessionCount 最大玩家数量，最小值不小于0
+     * @param string $Name 游戏服务器会话名称，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
+     * @param string $PlayerSessionCreationPolicy 玩家会话创建策略，包括允许所有玩家加入和禁止所有玩家加入（ACCEPT_ALL,DENY_ALL）
+     * @param string $ProtectionPolicy 保护策略，包括不保护、时限保护和完全保护(NoProtection,TimeLimitProtection,FullProtection)
      */
     function __construct()
     {

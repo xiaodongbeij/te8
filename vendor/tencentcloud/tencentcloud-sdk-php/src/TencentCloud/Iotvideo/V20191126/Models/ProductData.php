@@ -60,6 +60,34 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChipId(string $ChipId) 设置主芯片型号
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getProductCate() 获取产品类别，0：普通视频设备；1：NVR设备
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProductCate(integer $ProductCate) 设置产品类别，0：普通视频设备；1：NVR设备
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProductRegion() 获取产品地区
+China-Mainland（中国大陆）
+China-Hong Kong, Macao and Taiwan（港澳台地区）
+America（美国）
+Europe（欧洲）
+India（印度）
+Other-Overseas（其他境外地区）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProductRegion(string $ProductRegion) 设置产品地区
+China-Mainland（中国大陆）
+China-Hong Kong, Macao and Taiwan（港澳台地区）
+America（美国）
+Europe（欧洲）
+India（印度）
+Other-Overseas（其他境外地区）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAccessMode() 获取接入模型，bit0是0：公版小程序未接入，bit0是1：公版小程序已接入
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAccessMode(integer $AccessMode) 设置接入模型，bit0是0：公版小程序未接入，bit0是1：公版小程序已接入
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOs() 获取linux,android,liteos
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOs(string $Os) 设置linux,android,liteos
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProductData extends AbstractModel
 {
@@ -124,6 +152,36 @@ class ProductData extends AbstractModel
     public $ChipId;
 
     /**
+     * @var integer 产品类别，0：普通视频设备；1：NVR设备
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProductCate;
+
+    /**
+     * @var string 产品地区
+China-Mainland（中国大陆）
+China-Hong Kong, Macao and Taiwan（港澳台地区）
+America（美国）
+Europe（欧洲）
+India（印度）
+Other-Overseas（其他境外地区）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProductRegion;
+
+    /**
+     * @var integer 接入模型，bit0是0：公版小程序未接入，bit0是1：公版小程序已接入
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AccessMode;
+
+    /**
+     * @var string linux,android,liteos
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Os;
+
+    /**
      * @param string $ProductId 产品ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProductName 产品名称
@@ -143,6 +201,20 @@ class ProductData extends AbstractModel
      * @param string $ChipManufactureId 主芯片厂商id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChipId 主芯片型号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ProductCate 产品类别，0：普通视频设备；1：NVR设备
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProductRegion 产品地区
+China-Mainland（中国大陆）
+China-Hong Kong, Macao and Taiwan（港澳台地区）
+America（美国）
+Europe（欧洲）
+India（印度）
+Other-Overseas（其他境外地区）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AccessMode 接入模型，bit0是0：公版小程序未接入，bit0是1：公版小程序已接入
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Os linux,android,liteos
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -196,6 +268,22 @@ class ProductData extends AbstractModel
 
         if (array_key_exists("ChipId",$param) and $param["ChipId"] !== null) {
             $this->ChipId = $param["ChipId"];
+        }
+
+        if (array_key_exists("ProductCate",$param) and $param["ProductCate"] !== null) {
+            $this->ProductCate = $param["ProductCate"];
+        }
+
+        if (array_key_exists("ProductRegion",$param) and $param["ProductRegion"] !== null) {
+            $this->ProductRegion = $param["ProductRegion"];
+        }
+
+        if (array_key_exists("AccessMode",$param) and $param["AccessMode"] !== null) {
+            $this->AccessMode = $param["AccessMode"];
+        }
+
+        if (array_key_exists("Os",$param) and $param["Os"] !== null) {
+            $this->Os = $param["Os"];
         }
     }
 }

@@ -22,52 +22,84 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTemplateId() 获取模板 Id。
  * @method void setTemplateId(integer $TemplateId) 设置模板 Id。
- * @method string getVcodec() 获取视频编码：
-h264/h265。
- * @method void setVcodec(string $Vcodec) 设置视频编码：
-h264/h265。
- * @method string getAcodec() 获取音频编码：
-aac/mp3。
- * @method void setAcodec(string $Acodec) 设置音频编码：
-aac/mp3。
+ * @method string getVcodec() 获取视频编码：h264/h265/origin，默认origin。
+
+origin: 保持原始编码格式
+ * @method void setVcodec(string $Vcodec) 设置视频编码：h264/h265/origin，默认origin。
+
+origin: 保持原始编码格式
+ * @method string getAcodec() 获取音频编码：aac，默认aac。
+注意：当前该参数未生效，待后续支持！
+ * @method void setAcodec(string $Acodec) 设置音频编码：aac，默认aac。
+注意：当前该参数未生效，待后续支持！
  * @method integer getAudioBitrate() 获取音频码率，默认0。
 范围：0-500。
  * @method void setAudioBitrate(integer $AudioBitrate) 设置音频码率，默认0。
 范围：0-500。
  * @method string getDescription() 获取模板描述。
  * @method void setDescription(string $Description) 设置模板描述。
- * @method integer getVideoBitrate() 获取视频码率。范围：100kbps - 8000kbps。
-注意：码率必须是100的倍数。
- * @method void setVideoBitrate(integer $VideoBitrate) 设置视频码率。范围：100kbps - 8000kbps。
-注意：码率必须是100的倍数。
+ * @method integer getVideoBitrate() 获取视频码率。范围：0kbps - 8000kbps。
+0为保持原始码率。
+注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
+ * @method void setVideoBitrate(integer $VideoBitrate) 设置视频码率。范围：0kbps - 8000kbps。
+0为保持原始码率。
+注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
  * @method integer getWidth() 获取宽。0-3000。
+数值必须是2的倍数，0是原始宽度
  * @method void setWidth(integer $Width) 设置宽。0-3000。
+数值必须是2的倍数，0是原始宽度
  * @method integer getNeedVideo() 获取是否保留视频，0：否，1：是。默认1。
  * @method void setNeedVideo(integer $NeedVideo) 设置是否保留视频，0：否，1：是。默认1。
  * @method integer getNeedAudio() 获取是否保留音频，0：否，1：是。默认1。
  * @method void setNeedAudio(integer $NeedAudio) 设置是否保留音频，0：否，1：是。默认1。
  * @method integer getHeight() 获取高。0-3000。
+数值必须是2的倍数，0是原始宽度
  * @method void setHeight(integer $Height) 设置高。0-3000。
- * @method integer getFps() 获取帧率。0-200。
- * @method void setFps(integer $Fps) 设置帧率。0-200。
- * @method integer getGop() 获取关键帧间隔，单位：秒。0-50。
- * @method void setGop(integer $Gop) 设置关键帧间隔，单位：秒。0-50。
- * @method integer getRotate() 获取旋转角度。
-0 90 180 270。
- * @method void setRotate(integer $Rotate) 设置旋转角度。
-0 90 180 270。
+数值必须是2的倍数，0是原始宽度
+ * @method integer getFps() 获取帧率，默认0。
+范围0-60
+ * @method void setFps(integer $Fps) 设置帧率，默认0。
+范围0-60
+ * @method integer getGop() 获取关键帧间隔，单位：秒。
+范围2-6
+ * @method void setGop(integer $Gop) 设置关键帧间隔，单位：秒。
+范围2-6
+ * @method integer getRotate() 获取旋转角度，默认0。
+可取值：0，90，180，270
+ * @method void setRotate(integer $Rotate) 设置旋转角度，默认0。
+可取值：0，90，180，270
  * @method string getProfile() 获取编码质量：
 baseline/main/high。
  * @method void setProfile(string $Profile) 设置编码质量：
 baseline/main/high。
- * @method integer getBitrateToOrig() 获取是否不超过原始码率。0：否，1：是。默认0。
- * @method void setBitrateToOrig(integer $BitrateToOrig) 设置是否不超过原始码率。0：否，1：是。默认0。
- * @method integer getHeightToOrig() 获取是否不超过原始高。0：否，1：是。默认0。
- * @method void setHeightToOrig(integer $HeightToOrig) 设置是否不超过原始高。0：否，1：是。默认0。
- * @method integer getFpsToOrig() 获取是否不超过原始帧率。0：否，1：是。默认0。
- * @method void setFpsToOrig(integer $FpsToOrig) 设置是否不超过原始帧率。0：否，1：是。默认0。
- * @method float getAdaptBitratePercent() 获取极速高清相比 VideoBitrate 少多少码率，0.1到0.5。
- * @method void setAdaptBitratePercent(float $AdaptBitratePercent) 设置极速高清相比 VideoBitrate 少多少码率，0.1到0.5。
+ * @method integer getBitrateToOrig() 获取当设置的码率>原始码率时，是否以原始码率为准。
+0：否， 1：是
+默认 0。
+ * @method void setBitrateToOrig(integer $BitrateToOrig) 设置当设置的码率>原始码率时，是否以原始码率为准。
+0：否， 1：是
+默认 0。
+ * @method integer getHeightToOrig() 获取当设置的高度>原始高度时，是否以原始高度为准。
+0：否， 1：是
+默认 0。
+ * @method void setHeightToOrig(integer $HeightToOrig) 设置当设置的高度>原始高度时，是否以原始高度为准。
+0：否， 1：是
+默认 0。
+ * @method integer getFpsToOrig() 获取当设置的帧率>原始帧率时，是否以原始帧率为准。
+0：否， 1：是
+默认 0。
+ * @method void setFpsToOrig(integer $FpsToOrig) 设置当设置的帧率>原始帧率时，是否以原始帧率为准。
+0：否， 1：是
+默认 0。
+ * @method float getAdaptBitratePercent() 获取极速高清视频码率压缩比。
+极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)
+
+取值范围：0.0到0.5
+ * @method void setAdaptBitratePercent(float $AdaptBitratePercent) 设置极速高清视频码率压缩比。
+极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)
+
+取值范围：0.0到0.5
+ * @method integer getShortEdgeAsHeight() 获取是否以短边作为高度，0：否，1：是。默认0。
+ * @method void setShortEdgeAsHeight(integer $ShortEdgeAsHeight) 设置是否以短边作为高度，0：否，1：是。默认0。
  */
 class ModifyLiveTranscodeTemplateRequest extends AbstractModel
 {
@@ -77,14 +109,15 @@ class ModifyLiveTranscodeTemplateRequest extends AbstractModel
     public $TemplateId;
 
     /**
-     * @var string 视频编码：
-h264/h265。
+     * @var string 视频编码：h264/h265/origin，默认origin。
+
+origin: 保持原始编码格式
      */
     public $Vcodec;
 
     /**
-     * @var string 音频编码：
-aac/mp3。
+     * @var string 音频编码：aac，默认aac。
+注意：当前该参数未生效，待后续支持！
      */
     public $Acodec;
 
@@ -100,13 +133,15 @@ aac/mp3。
     public $Description;
 
     /**
-     * @var integer 视频码率。范围：100kbps - 8000kbps。
-注意：码率必须是100的倍数。
+     * @var integer 视频码率。范围：0kbps - 8000kbps。
+0为保持原始码率。
+注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
      */
     public $VideoBitrate;
 
     /**
      * @var integer 宽。0-3000。
+数值必须是2的倍数，0是原始宽度
      */
     public $Width;
 
@@ -122,22 +157,25 @@ aac/mp3。
 
     /**
      * @var integer 高。0-3000。
+数值必须是2的倍数，0是原始宽度
      */
     public $Height;
 
     /**
-     * @var integer 帧率。0-200。
+     * @var integer 帧率，默认0。
+范围0-60
      */
     public $Fps;
 
     /**
-     * @var integer 关键帧间隔，单位：秒。0-50。
+     * @var integer 关键帧间隔，单位：秒。
+范围2-6
      */
     public $Gop;
 
     /**
-     * @var integer 旋转角度。
-0 90 180 270。
+     * @var integer 旋转角度，默认0。
+可取值：0，90，180，270
      */
     public $Rotate;
 
@@ -148,50 +186,80 @@ baseline/main/high。
     public $Profile;
 
     /**
-     * @var integer 是否不超过原始码率。0：否，1：是。默认0。
+     * @var integer 当设置的码率>原始码率时，是否以原始码率为准。
+0：否， 1：是
+默认 0。
      */
     public $BitrateToOrig;
 
     /**
-     * @var integer 是否不超过原始高。0：否，1：是。默认0。
+     * @var integer 当设置的高度>原始高度时，是否以原始高度为准。
+0：否， 1：是
+默认 0。
      */
     public $HeightToOrig;
 
     /**
-     * @var integer 是否不超过原始帧率。0：否，1：是。默认0。
+     * @var integer 当设置的帧率>原始帧率时，是否以原始帧率为准。
+0：否， 1：是
+默认 0。
      */
     public $FpsToOrig;
 
     /**
-     * @var float 极速高清相比 VideoBitrate 少多少码率，0.1到0.5。
+     * @var float 极速高清视频码率压缩比。
+极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)
+
+取值范围：0.0到0.5
      */
     public $AdaptBitratePercent;
 
     /**
+     * @var integer 是否以短边作为高度，0：否，1：是。默认0。
+     */
+    public $ShortEdgeAsHeight;
+
+    /**
      * @param integer $TemplateId 模板 Id。
-     * @param string $Vcodec 视频编码：
-h264/h265。
-     * @param string $Acodec 音频编码：
-aac/mp3。
+     * @param string $Vcodec 视频编码：h264/h265/origin，默认origin。
+
+origin: 保持原始编码格式
+     * @param string $Acodec 音频编码：aac，默认aac。
+注意：当前该参数未生效，待后续支持！
      * @param integer $AudioBitrate 音频码率，默认0。
 范围：0-500。
      * @param string $Description 模板描述。
-     * @param integer $VideoBitrate 视频码率。范围：100kbps - 8000kbps。
-注意：码率必须是100的倍数。
+     * @param integer $VideoBitrate 视频码率。范围：0kbps - 8000kbps。
+0为保持原始码率。
+注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
      * @param integer $Width 宽。0-3000。
+数值必须是2的倍数，0是原始宽度
      * @param integer $NeedVideo 是否保留视频，0：否，1：是。默认1。
      * @param integer $NeedAudio 是否保留音频，0：否，1：是。默认1。
      * @param integer $Height 高。0-3000。
-     * @param integer $Fps 帧率。0-200。
-     * @param integer $Gop 关键帧间隔，单位：秒。0-50。
-     * @param integer $Rotate 旋转角度。
-0 90 180 270。
+数值必须是2的倍数，0是原始宽度
+     * @param integer $Fps 帧率，默认0。
+范围0-60
+     * @param integer $Gop 关键帧间隔，单位：秒。
+范围2-6
+     * @param integer $Rotate 旋转角度，默认0。
+可取值：0，90，180，270
      * @param string $Profile 编码质量：
 baseline/main/high。
-     * @param integer $BitrateToOrig 是否不超过原始码率。0：否，1：是。默认0。
-     * @param integer $HeightToOrig 是否不超过原始高。0：否，1：是。默认0。
-     * @param integer $FpsToOrig 是否不超过原始帧率。0：否，1：是。默认0。
-     * @param float $AdaptBitratePercent 极速高清相比 VideoBitrate 少多少码率，0.1到0.5。
+     * @param integer $BitrateToOrig 当设置的码率>原始码率时，是否以原始码率为准。
+0：否， 1：是
+默认 0。
+     * @param integer $HeightToOrig 当设置的高度>原始高度时，是否以原始高度为准。
+0：否， 1：是
+默认 0。
+     * @param integer $FpsToOrig 当设置的帧率>原始帧率时，是否以原始帧率为准。
+0：否， 1：是
+默认 0。
+     * @param float $AdaptBitratePercent 极速高清视频码率压缩比。
+极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)
+
+取值范围：0.0到0.5
+     * @param integer $ShortEdgeAsHeight 是否以短边作为高度，0：否，1：是。默认0。
      */
     function __construct()
     {
@@ -276,6 +344,10 @@ baseline/main/high。
 
         if (array_key_exists("AdaptBitratePercent",$param) and $param["AdaptBitratePercent"] !== null) {
             $this->AdaptBitratePercent = $param["AdaptBitratePercent"];
+        }
+
+        if (array_key_exists("ShortEdgeAsHeight",$param) and $param["ShortEdgeAsHeight"] !== null) {
+            $this->ShortEdgeAsHeight = $param["ShortEdgeAsHeight"];
         }
     }
 }

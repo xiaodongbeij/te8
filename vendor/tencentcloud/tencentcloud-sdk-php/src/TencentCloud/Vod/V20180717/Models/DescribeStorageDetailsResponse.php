@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeStorageDetails返回参数结构体
  *
- * @method array getData() 获取存储统计数据，每分钟/小时/天一条数据。
- * @method void setData(array $Data) 设置存储统计数据，每分钟/小时/天一条数据。
+ * @method array getData() 获取存储统计数据，每5分钟或每天一条数据。
+ * @method void setData(array $Data) 设置存储统计数据，每5分钟或每天一条数据。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeStorageDetailsResponse extends AbstractModel
 {
     /**
-     * @var array 存储统计数据，每分钟/小时/天一条数据。
+     * @var array 存储统计数据，每5分钟或每天一条数据。
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class DescribeStorageDetailsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Data 存储统计数据，每分钟/小时/天一条数据。
+     * @param array $Data 存储统计数据，每5分钟或每天一条数据。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

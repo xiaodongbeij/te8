@@ -34,11 +34,11 @@ use TencentCloud\Ecdn\V20191012\Models as Models;
 + 流量（单位为 byte）
 + 带宽（单位为 bps）
 + 请求数（单位为 次）
-+ 响应时间（单位为ms）
 + 状态码 2xx 汇总及各 2 开头状态码明细（单位为 个）
 + 状态码 3xx 汇总及各 3 开头状态码明细（单位为 个）
 + 状态码 4xx 汇总及各 4 开头状态码明细（单位为 个）
 + 状态码 5xx 汇总及各 5 开头状态码明细（单位为 个）
+ * @method Models\DescribeIpStatusResponse DescribeIpStatus(Models\DescribeIpStatusRequest $req) DescribeIpStatus 用于查询域名所在加速平台的所有节点信息, 如果您的源站有白名单设置,可以通过本接口获取ECDN服务的节点IP进行加白, 本接口为内测接口,请联系腾讯云工程师开白。
  * @method Models\DescribePurgeQuotaResponse DescribePurgeQuota(Models\DescribePurgeQuotaRequest $req) 查询刷新接口的用量配额。
  * @method Models\DescribePurgeTasksResponse DescribePurgeTasks(Models\DescribePurgeTasksRequest $req) DescribePurgeTasks 用于查询刷新任务提交历史记录及执行进度。
  * @method Models\PurgePathCacheResponse PurgePathCache(Models\PurgePathCacheRequest $req) PurgePathCache 用于批量刷新目录缓存，一次提交将返回一个刷新任务id。
@@ -55,6 +55,11 @@ class EcdnClient extends AbstractClient
      * @var string
      */
     protected $endpoint = "ecdn.tencentcloudapi.com";
+
+    /**
+     * @var string
+     */
+    protected $service = "ecdn";
 
     /**
      * @var string

@@ -64,6 +64,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) 设置分散置放群组ID列表，当前仅支持指定一个。
  * @method array getTags() 获取扩容节点绑定标签列表。
  * @method void setTags(array $Tags) 设置扩容节点绑定标签列表。
+ * @method string getHardwareResourceType() 获取扩容所选资源类型，可选范围为"host","pod"，host为普通的CVM资源，Pod为TKE集群提供的资源
+ * @method void setHardwareResourceType(string $HardwareResourceType) 设置扩容所选资源类型，可选范围为"host","pod"，host为普通的CVM资源，Pod为TKE集群提供的资源
+ * @method PodSpec getPodSpec() 获取使用Pod资源扩容时，指定的Pod规格以及来源等信息
+ * @method void setPodSpec(PodSpec $PodSpec) 设置使用Pod资源扩容时，指定的Pod规格以及来源等信息
+ * @method string getClickHouseClusterName() 获取使用clickhouse集群扩容时，选择的机器分组名称
+ * @method void setClickHouseClusterName(string $ClickHouseClusterName) 设置使用clickhouse集群扩容时，选择的机器分组名称
+ * @method string getClickHouseClusterType() 获取使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组
+ * @method void setClickHouseClusterType(string $ClickHouseClusterType) 设置使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组
+ * @method string getYarnNodeLabel() 获取规则扩容指定 yarn node label
+ * @method void setYarnNodeLabel(string $YarnNodeLabel) 设置规则扩容指定 yarn node label
+ * @method PodParameter getPodParameter() 获取POD自定义权限和自定义参数
+ * @method void setPodParameter(PodParameter $PodParameter) 设置POD自定义权限和自定义参数
+ * @method integer getMasterCount() 获取扩容的Master节点的数量。
+ * @method void setMasterCount(integer $MasterCount) 设置扩容的Master节点的数量。
  */
 class ScaleOutInstanceRequest extends AbstractModel
 {
@@ -146,6 +160,41 @@ class ScaleOutInstanceRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var string 扩容所选资源类型，可选范围为"host","pod"，host为普通的CVM资源，Pod为TKE集群提供的资源
+     */
+    public $HardwareResourceType;
+
+    /**
+     * @var PodSpec 使用Pod资源扩容时，指定的Pod规格以及来源等信息
+     */
+    public $PodSpec;
+
+    /**
+     * @var string 使用clickhouse集群扩容时，选择的机器分组名称
+     */
+    public $ClickHouseClusterName;
+
+    /**
+     * @var string 使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组
+     */
+    public $ClickHouseClusterType;
+
+    /**
+     * @var string 规则扩容指定 yarn node label
+     */
+    public $YarnNodeLabel;
+
+    /**
+     * @var PodParameter POD自定义权限和自定义参数
+     */
+    public $PodParameter;
+
+    /**
+     * @var integer 扩容的Master节点的数量。
+     */
+    public $MasterCount;
+
+    /**
      * @param string $TimeUnit 扩容的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
 <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
@@ -168,6 +217,13 @@ class ScaleOutInstanceRequest extends AbstractModel
      * @param array $ServiceNodeInfo 启动的进程。
      * @param array $DisasterRecoverGroupIds 分散置放群组ID列表，当前仅支持指定一个。
      * @param array $Tags 扩容节点绑定标签列表。
+     * @param string $HardwareResourceType 扩容所选资源类型，可选范围为"host","pod"，host为普通的CVM资源，Pod为TKE集群提供的资源
+     * @param PodSpec $PodSpec 使用Pod资源扩容时，指定的Pod规格以及来源等信息
+     * @param string $ClickHouseClusterName 使用clickhouse集群扩容时，选择的机器分组名称
+     * @param string $ClickHouseClusterType 使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组
+     * @param string $YarnNodeLabel 规则扩容指定 yarn node label
+     * @param PodParameter $PodParameter POD自定义权限和自定义参数
+     * @param integer $MasterCount 扩容的Master节点的数量。
      */
     function __construct()
     {
@@ -246,6 +302,36 @@ class ScaleOutInstanceRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("HardwareResourceType",$param) and $param["HardwareResourceType"] !== null) {
+            $this->HardwareResourceType = $param["HardwareResourceType"];
+        }
+
+        if (array_key_exists("PodSpec",$param) and $param["PodSpec"] !== null) {
+            $this->PodSpec = new PodSpec();
+            $this->PodSpec->deserialize($param["PodSpec"]);
+        }
+
+        if (array_key_exists("ClickHouseClusterName",$param) and $param["ClickHouseClusterName"] !== null) {
+            $this->ClickHouseClusterName = $param["ClickHouseClusterName"];
+        }
+
+        if (array_key_exists("ClickHouseClusterType",$param) and $param["ClickHouseClusterType"] !== null) {
+            $this->ClickHouseClusterType = $param["ClickHouseClusterType"];
+        }
+
+        if (array_key_exists("YarnNodeLabel",$param) and $param["YarnNodeLabel"] !== null) {
+            $this->YarnNodeLabel = $param["YarnNodeLabel"];
+        }
+
+        if (array_key_exists("PodParameter",$param) and $param["PodParameter"] !== null) {
+            $this->PodParameter = new PodParameter();
+            $this->PodParameter->deserialize($param["PodParameter"]);
+        }
+
+        if (array_key_exists("MasterCount",$param) and $param["MasterCount"] !== null) {
+            $this->MasterCount = $param["MasterCount"];
         }
     }
 }

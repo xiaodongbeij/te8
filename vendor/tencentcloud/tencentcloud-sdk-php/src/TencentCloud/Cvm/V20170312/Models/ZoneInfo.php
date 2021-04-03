@@ -24,6 +24,7 @@ use TencentCloud\Common\AbstractModel;
 全网可用区名称如下：
 <li> ap-chongqing-1 </li>
 <li> ap-seoul-1 </li>
+<li> ap-seoul-2 </li>
 <li> ap-chengdu-1 </li>
 <li> ap-chengdu-2 </li>
 <li> ap-hongkong-1 </li>
@@ -35,8 +36,10 @@ use TencentCloud\Common\AbstractModel;
 <li> ap-guangzhou-2（售罄）</li>
 <li> ap-guangzhou-3 </li>
 <li> ap-guangzhou-4 </li>
+<li> ap-guangzhou-6 </li>
 <li> ap-tokyo-1 </li>
 <li> ap-singapore-1 </li>
+<li> ap-singapore-2 </li>
 <li> ap-shanghai-fsi-1 </li>
 <li> ap-shanghai-fsi-2 </li>
 <li> ap-shanghai-fsi-3 </li>
@@ -45,6 +48,7 @@ use TencentCloud\Common\AbstractModel;
 <li> ap-shanghai-2 </li>
 <li> ap-shanghai-3 </li>
 <li> ap-shanghai-4 </li>
+<li> ap-shanghai-5 </li>
 <li> ap-mumbai-1 </li>
 <li> ap-mumbai-2 </li>
 <li> eu-moscow-1 </li>
@@ -52,6 +56,9 @@ use TencentCloud\Common\AbstractModel;
 <li> ap-beijing-2 </li>
 <li> ap-beijing-3 </li>
 <li> ap-beijing-4 </li>
+<li> ap-beijing-5 </li>
+<li> ap-beijing-6 </li>
+<li> ap-beijing-7 </li>
 <li> na-siliconvalley-1 </li>
 <li> na-siliconvalley-2 </li>
 <li> eu-frankfurt-1 </li>
@@ -64,6 +71,7 @@ use TencentCloud\Common\AbstractModel;
 全网可用区名称如下：
 <li> ap-chongqing-1 </li>
 <li> ap-seoul-1 </li>
+<li> ap-seoul-2 </li>
 <li> ap-chengdu-1 </li>
 <li> ap-chengdu-2 </li>
 <li> ap-hongkong-1 </li>
@@ -75,8 +83,10 @@ use TencentCloud\Common\AbstractModel;
 <li> ap-guangzhou-2（售罄）</li>
 <li> ap-guangzhou-3 </li>
 <li> ap-guangzhou-4 </li>
+<li> ap-guangzhou-6 </li>
 <li> ap-tokyo-1 </li>
 <li> ap-singapore-1 </li>
+<li> ap-singapore-2 </li>
 <li> ap-shanghai-fsi-1 </li>
 <li> ap-shanghai-fsi-2 </li>
 <li> ap-shanghai-fsi-3 </li>
@@ -85,6 +95,7 @@ use TencentCloud\Common\AbstractModel;
 <li> ap-shanghai-2 </li>
 <li> ap-shanghai-3 </li>
 <li> ap-shanghai-4 </li>
+<li> ap-shanghai-5 </li>
 <li> ap-mumbai-1 </li>
 <li> ap-mumbai-2 </li>
 <li> eu-moscow-1 </li>
@@ -92,6 +103,9 @@ use TencentCloud\Common\AbstractModel;
 <li> ap-beijing-2 </li>
 <li> ap-beijing-3 </li>
 <li> ap-beijing-4 </li>
+<li> ap-beijing-5 </li>
+<li> ap-beijing-6 </li>
+<li> ap-beijing-7 </li>
 <li> na-siliconvalley-1 </li>
 <li> na-siliconvalley-2 </li>
 <li> eu-frankfurt-1 </li>
@@ -114,6 +128,7 @@ class ZoneInfo extends AbstractModel
 全网可用区名称如下：
 <li> ap-chongqing-1 </li>
 <li> ap-seoul-1 </li>
+<li> ap-seoul-2 </li>
 <li> ap-chengdu-1 </li>
 <li> ap-chengdu-2 </li>
 <li> ap-hongkong-1 </li>
@@ -125,8 +140,10 @@ class ZoneInfo extends AbstractModel
 <li> ap-guangzhou-2（售罄）</li>
 <li> ap-guangzhou-3 </li>
 <li> ap-guangzhou-4 </li>
+<li> ap-guangzhou-6 </li>
 <li> ap-tokyo-1 </li>
 <li> ap-singapore-1 </li>
+<li> ap-singapore-2 </li>
 <li> ap-shanghai-fsi-1 </li>
 <li> ap-shanghai-fsi-2 </li>
 <li> ap-shanghai-fsi-3 </li>
@@ -135,6 +152,7 @@ class ZoneInfo extends AbstractModel
 <li> ap-shanghai-2 </li>
 <li> ap-shanghai-3 </li>
 <li> ap-shanghai-4 </li>
+<li> ap-shanghai-5 </li>
 <li> ap-mumbai-1 </li>
 <li> ap-mumbai-2 </li>
 <li> eu-moscow-1 </li>
@@ -142,6 +160,9 @@ class ZoneInfo extends AbstractModel
 <li> ap-beijing-2 </li>
 <li> ap-beijing-3 </li>
 <li> ap-beijing-4 </li>
+<li> ap-beijing-5 </li>
+<li> ap-beijing-6 </li>
+<li> ap-beijing-7 </li>
 <li> na-siliconvalley-1 </li>
 <li> na-siliconvalley-2 </li>
 <li> eu-frankfurt-1 </li>
@@ -173,6 +194,7 @@ class ZoneInfo extends AbstractModel
 全网可用区名称如下：
 <li> ap-chongqing-1 </li>
 <li> ap-seoul-1 </li>
+<li> ap-seoul-2 </li>
 <li> ap-chengdu-1 </li>
 <li> ap-chengdu-2 </li>
 <li> ap-hongkong-1 </li>
@@ -184,8 +206,10 @@ class ZoneInfo extends AbstractModel
 <li> ap-guangzhou-2（售罄）</li>
 <li> ap-guangzhou-3 </li>
 <li> ap-guangzhou-4 </li>
+<li> ap-guangzhou-6 </li>
 <li> ap-tokyo-1 </li>
 <li> ap-singapore-1 </li>
+<li> ap-singapore-2 </li>
 <li> ap-shanghai-fsi-1 </li>
 <li> ap-shanghai-fsi-2 </li>
 <li> ap-shanghai-fsi-3 </li>
@@ -194,6 +218,7 @@ class ZoneInfo extends AbstractModel
 <li> ap-shanghai-2 </li>
 <li> ap-shanghai-3 </li>
 <li> ap-shanghai-4 </li>
+<li> ap-shanghai-5 </li>
 <li> ap-mumbai-1 </li>
 <li> ap-mumbai-2 </li>
 <li> eu-moscow-1 </li>
@@ -201,6 +226,9 @@ class ZoneInfo extends AbstractModel
 <li> ap-beijing-2 </li>
 <li> ap-beijing-3 </li>
 <li> ap-beijing-4 </li>
+<li> ap-beijing-5 </li>
+<li> ap-beijing-6 </li>
+<li> ap-beijing-7 </li>
 <li> na-siliconvalley-1 </li>
 <li> na-siliconvalley-2 </li>
 <li> eu-frankfurt-1 </li>

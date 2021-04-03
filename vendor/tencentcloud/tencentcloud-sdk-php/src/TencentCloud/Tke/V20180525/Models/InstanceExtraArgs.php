@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 节点自定义参数
  *
- * @method array getKubelet() 获取kubelet自定义参数
+ * @method array getKubelet() 获取kubelet自定义参数，参数格式为["k1=v1", "k1=v2"]， 例如["root-dir=/var/lib/kubelet","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"]
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKubelet(array $Kubelet) 设置kubelet自定义参数
+ * @method void setKubelet(array $Kubelet) 设置kubelet自定义参数，参数格式为["k1=v1", "k1=v2"]， 例如["root-dir=/var/lib/kubelet","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"]
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceExtraArgs extends AbstractModel
 {
     /**
-     * @var array kubelet自定义参数
+     * @var array kubelet自定义参数，参数格式为["k1=v1", "k1=v2"]， 例如["root-dir=/var/lib/kubelet","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"]
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Kubelet;
 
     /**
-     * @param array $Kubelet kubelet自定义参数
+     * @param array $Kubelet kubelet自定义参数，参数格式为["k1=v1", "k1=v2"]， 例如["root-dir=/var/lib/kubelet","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"]
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

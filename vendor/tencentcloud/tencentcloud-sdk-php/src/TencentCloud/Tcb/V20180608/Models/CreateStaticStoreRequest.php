@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEnvId() 获取环境ID
  * @method void setEnvId(string $EnvId) 设置环境ID
+ * @method boolean getEnableUnion() 获取是否启用统一域名
+ * @method void setEnableUnion(boolean $EnableUnion) 设置是否启用统一域名
  */
 class CreateStaticStoreRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class CreateStaticStoreRequest extends AbstractModel
     public $EnvId;
 
     /**
+     * @var boolean 是否启用统一域名
+     */
+    public $EnableUnion;
+
+    /**
      * @param string $EnvId 环境ID
+     * @param boolean $EnableUnion 是否启用统一域名
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class CreateStaticStoreRequest extends AbstractModel
         }
         if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {
             $this->EnvId = $param["EnvId"];
+        }
+
+        if (array_key_exists("EnableUnion",$param) and $param["EnableUnion"] !== null) {
+            $this->EnableUnion = $param["EnableUnion"];
         }
     }
 }

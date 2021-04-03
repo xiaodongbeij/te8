@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
 节点个数（2-50个）
  * @method void setNodeNum(integer $NodeNum) 设置已废弃请使用NodeInfoList
 节点个数（2-50个）
- * @method string getEsConfig() 获取配置项（JSON格式字符串）。当前仅支持以下配置项：<li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
- * @method void setEsConfig(string $EsConfig) 设置配置项（JSON格式字符串）。当前仅支持以下配置项：<li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
+ * @method string getEsConfig() 获取ES配置项（JSON格式字符串）
+ * @method void setEsConfig(string $EsConfig) 设置ES配置项（JSON格式字符串）
  * @method string getPassword() 获取默认用户elastic的密码（8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号）
  * @method void setPassword(string $Password) 设置默认用户elastic的密码（8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号）
  * @method EsAcl getEsAcl() 获取访问控制列表
@@ -72,6 +72,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBasicSecurityType(integer $BasicSecurityType) 设置ES 6.8及以上版本基础版开启或关闭用户认证
  * @method integer getKibanaPrivatePort() 获取Kibana内网端口
  * @method void setKibanaPrivatePort(integer $KibanaPrivatePort) 设置Kibana内网端口
+ * @method integer getScaleType() 获取0: 蓝绿变更方式扩容，集群不重启 （默认） 1: 磁盘解挂载扩容，集群滚动重启
+ * @method void setScaleType(integer $ScaleType) 设置0: 蓝绿变更方式扩容，集群不重启 （默认） 1: 磁盘解挂载扩容，集群滚动重启
+ * @method array getMultiZoneInfo() 获取多可用区部署
+ * @method void setMultiZoneInfo(array $MultiZoneInfo) 设置多可用区部署
+ * @method integer getSceneType() 获取场景化模板类型 -1：不启用 1：通用 2：日志 3：搜索
+ * @method void setSceneType(integer $SceneType) 设置场景化模板类型 -1：不启用 1：通用 2：日志 3：搜索
+ * @method string getKibanaConfig() 获取Kibana配置项（JSON格式字符串）
+ * @method void setKibanaConfig(string $KibanaConfig) 设置Kibana配置项（JSON格式字符串）
  */
 class UpdateInstanceRequest extends AbstractModel
 {
@@ -92,7 +100,7 @@ class UpdateInstanceRequest extends AbstractModel
     public $NodeNum;
 
     /**
-     * @var string 配置项（JSON格式字符串）。当前仅支持以下配置项：<li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
+     * @var string ES配置项（JSON格式字符串）
      */
     public $EsConfig;
 
@@ -182,11 +190,31 @@ class UpdateInstanceRequest extends AbstractModel
     public $KibanaPrivatePort;
 
     /**
+     * @var integer 0: 蓝绿变更方式扩容，集群不重启 （默认） 1: 磁盘解挂载扩容，集群滚动重启
+     */
+    public $ScaleType;
+
+    /**
+     * @var array 多可用区部署
+     */
+    public $MultiZoneInfo;
+
+    /**
+     * @var integer 场景化模板类型 -1：不启用 1：通用 2：日志 3：搜索
+     */
+    public $SceneType;
+
+    /**
+     * @var string Kibana配置项（JSON格式字符串）
+     */
+    public $KibanaConfig;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
      * @param integer $NodeNum 已废弃请使用NodeInfoList
 节点个数（2-50个）
-     * @param string $EsConfig 配置项（JSON格式字符串）。当前仅支持以下配置项：<li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
+     * @param string $EsConfig ES配置项（JSON格式字符串）
      * @param string $Password 默认用户elastic的密码（8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号）
      * @param EsAcl $EsAcl 访问控制列表
      * @param integer $DiskSize 已废弃请使用NodeInfoList
@@ -208,6 +236,10 @@ class UpdateInstanceRequest extends AbstractModel
      * @param string $KibanaPrivateAccess Kibana内网访问状态
      * @param integer $BasicSecurityType ES 6.8及以上版本基础版开启或关闭用户认证
      * @param integer $KibanaPrivatePort Kibana内网端口
+     * @param integer $ScaleType 0: 蓝绿变更方式扩容，集群不重启 （默认） 1: 磁盘解挂载扩容，集群滚动重启
+     * @param array $MultiZoneInfo 多可用区部署
+     * @param integer $SceneType 场景化模板类型 -1：不启用 1：通用 2：日志 3：搜索
+     * @param string $KibanaConfig Kibana配置项（JSON格式字符串）
      */
     function __construct()
     {
@@ -308,6 +340,27 @@ class UpdateInstanceRequest extends AbstractModel
 
         if (array_key_exists("KibanaPrivatePort",$param) and $param["KibanaPrivatePort"] !== null) {
             $this->KibanaPrivatePort = $param["KibanaPrivatePort"];
+        }
+
+        if (array_key_exists("ScaleType",$param) and $param["ScaleType"] !== null) {
+            $this->ScaleType = $param["ScaleType"];
+        }
+
+        if (array_key_exists("MultiZoneInfo",$param) and $param["MultiZoneInfo"] !== null) {
+            $this->MultiZoneInfo = [];
+            foreach ($param["MultiZoneInfo"] as $key => $value){
+                $obj = new ZoneDetail();
+                $obj->deserialize($value);
+                array_push($this->MultiZoneInfo, $obj);
+            }
+        }
+
+        if (array_key_exists("SceneType",$param) and $param["SceneType"] !== null) {
+            $this->SceneType = $param["SceneType"];
+        }
+
+        if (array_key_exists("KibanaConfig",$param) and $param["KibanaConfig"] !== null) {
+            $this->KibanaConfig = $param["KibanaConfig"];
         }
     }
 }

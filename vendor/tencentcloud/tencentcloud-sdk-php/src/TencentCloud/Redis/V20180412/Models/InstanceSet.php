@@ -48,16 +48,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSize(float $Size) 设置实例容量大小，单位：MB
  * @method float getSizeUsed() 获取该字段已废弃
  * @method void setSizeUsed(float $SizeUsed) 设置该字段已废弃
- * @method integer getType() 获取实例类型，1：Redis2.8集群版；2：Redis2.8主从版；3：CKV主从版（Redis3.2）；4：CKV集群版（Redis3.2）；5：Redis2.8单机版；6：Redis4.0主从版；7：Redis4.0集群版；
- * @method void setType(integer $Type) 设置实例类型，1：Redis2.8集群版；2：Redis2.8主从版；3：CKV主从版（Redis3.2）；4：CKV集群版（Redis3.2）；5：Redis2.8单机版；6：Redis4.0主从版；7：Redis4.0集群版；
+ * @method integer getType() 获取实例类型：1 – Redis2.8内存版（集群架构），2 – Redis2.8内存版（标准架构），3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版（单机），6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构）
+ * @method void setType(integer $Type) 设置实例类型：1 – Redis2.8内存版（集群架构），2 – Redis2.8内存版（标准架构），3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版（单机），6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构）
  * @method integer getAutoRenewFlag() 获取实例是否设置自动续费标识，1：设置自动续费；0：未设置自动续费
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置实例是否设置自动续费标识，1：设置自动续费；0：未设置自动续费
  * @method string getDeadlineTime() 获取实例到期时间
  * @method void setDeadlineTime(string $DeadlineTime) 设置实例到期时间
  * @method string getEngine() 获取引擎：社区版Redis、腾讯云CKV
  * @method void setEngine(string $Engine) 设置引擎：社区版Redis、腾讯云CKV
- * @method string getProductType() 获取产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版（CKV主从版）、Redis3.2集群版（CKV集群版）、Redis2.8单机版、Redis4.0集群版
- * @method void setProductType(string $ProductType) 设置产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版（CKV主从版）、Redis3.2集群版（CKV集群版）、Redis2.8单机版、Redis4.0集群版
+ * @method string getProductType() 获取产品类型：standalone – 标准版，cluster – 集群版
+ * @method void setProductType(string $ProductType) 设置产品类型：standalone – 标准版，cluster – 集群版
  * @method string getUniqVpcId() 获取vpc网络id 如：vpc-fk33jsf43kgv
  * @method void setUniqVpcId(string $UniqVpcId) 设置vpc网络id 如：vpc-fk33jsf43kgv
  * @method string getUniqSubnetId() 获取vpc网络下子网id 如：subnet-fd3j6l35mm0
@@ -125,6 +125,30 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRemainBandwidthDuration() 获取内部参数，用户可忽略
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemainBandwidthDuration(string $RemainBandwidthDuration) 设置内部参数，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDiskSize() 获取Tendis实例的磁盘大小
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDiskSize(integer $DiskSize) 设置Tendis实例的磁盘大小
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMonitorVersion() 获取监控版本: 1m-分钟粒度监控，5s-5秒粒度监控
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMonitorVersion(string $MonitorVersion) 设置监控版本: 1m-分钟粒度监控，5s-5秒粒度监控
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getClientLimitMin() 获取客户端最大连接数可设置的最小值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClientLimitMin(integer $ClientLimitMin) 设置客户端最大连接数可设置的最小值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getClientLimitMax() 获取客户端最大连接数可设置的最大值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClientLimitMax(integer $ClientLimitMax) 设置客户端最大连接数可设置的最大值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getNodeSet() 获取实例的节点详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNodeSet(array $NodeSet) 设置实例的节点详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRegion() 获取实例所在的地域信息，比如ap-guangzhou
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRegion(string $Region) 设置实例所在的地域信息，比如ap-guangzhou
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceSet extends AbstractModel
@@ -200,7 +224,7 @@ class InstanceSet extends AbstractModel
     public $SizeUsed;
 
     /**
-     * @var integer 实例类型，1：Redis2.8集群版；2：Redis2.8主从版；3：CKV主从版（Redis3.2）；4：CKV集群版（Redis3.2）；5：Redis2.8单机版；6：Redis4.0主从版；7：Redis4.0集群版；
+     * @var integer 实例类型：1 – Redis2.8内存版（集群架构），2 – Redis2.8内存版（标准架构），3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版（单机），6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构）
      */
     public $Type;
 
@@ -220,7 +244,7 @@ class InstanceSet extends AbstractModel
     public $Engine;
 
     /**
-     * @var string 产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版（CKV主从版）、Redis3.2集群版（CKV集群版）、Redis2.8单机版、Redis4.0集群版
+     * @var string 产品类型：standalone – 标准版，cluster – 集群版
      */
     public $ProductType;
 
@@ -355,6 +379,42 @@ class InstanceSet extends AbstractModel
     public $RemainBandwidthDuration;
 
     /**
+     * @var integer Tendis实例的磁盘大小
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DiskSize;
+
+    /**
+     * @var string 监控版本: 1m-分钟粒度监控，5s-5秒粒度监控
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MonitorVersion;
+
+    /**
+     * @var integer 客户端最大连接数可设置的最小值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClientLimitMin;
+
+    /**
+     * @var integer 客户端最大连接数可设置的最大值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClientLimitMax;
+
+    /**
+     * @var array 实例的节点详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NodeSet;
+
+    /**
+     * @var string 实例所在的地域信息，比如ap-guangzhou
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Region;
+
+    /**
      * @param string $InstanceName 实例名称
      * @param string $InstanceId 实例Id
      * @param integer $Appid 用户的Appid
@@ -369,11 +429,11 @@ class InstanceSet extends AbstractModel
      * @param string $Createtime 实例创建时间
      * @param float $Size 实例容量大小，单位：MB
      * @param float $SizeUsed 该字段已废弃
-     * @param integer $Type 实例类型，1：Redis2.8集群版；2：Redis2.8主从版；3：CKV主从版（Redis3.2）；4：CKV集群版（Redis3.2）；5：Redis2.8单机版；6：Redis4.0主从版；7：Redis4.0集群版；
+     * @param integer $Type 实例类型：1 – Redis2.8内存版（集群架构），2 – Redis2.8内存版（标准架构），3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版（单机），6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构）
      * @param integer $AutoRenewFlag 实例是否设置自动续费标识，1：设置自动续费；0：未设置自动续费
      * @param string $DeadlineTime 实例到期时间
      * @param string $Engine 引擎：社区版Redis、腾讯云CKV
-     * @param string $ProductType 产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版（CKV主从版）、Redis3.2集群版（CKV集群版）、Redis2.8单机版、Redis4.0集群版
+     * @param string $ProductType 产品类型：standalone – 标准版，cluster – 集群版
      * @param string $UniqVpcId vpc网络id 如：vpc-fk33jsf43kgv
      * @param string $UniqSubnetId vpc网络下子网id 如：subnet-fd3j6l35mm0
      * @param integer $BillingMode 计费模式：0-按量计费，1-包年包月
@@ -407,6 +467,18 @@ class InstanceSet extends AbstractModel
      * @param string $Vip6 内部参数，用户可忽略
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RemainBandwidthDuration 内部参数，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DiskSize Tendis实例的磁盘大小
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MonitorVersion 监控版本: 1m-分钟粒度监控，5s-5秒粒度监控
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ClientLimitMin 客户端最大连接数可设置的最小值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ClientLimitMax 客户端最大连接数可设置的最大值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $NodeSet 实例的节点详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Region 实例所在的地域信息，比如ap-guangzhou
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -602,6 +674,35 @@ class InstanceSet extends AbstractModel
 
         if (array_key_exists("RemainBandwidthDuration",$param) and $param["RemainBandwidthDuration"] !== null) {
             $this->RemainBandwidthDuration = $param["RemainBandwidthDuration"];
+        }
+
+        if (array_key_exists("DiskSize",$param) and $param["DiskSize"] !== null) {
+            $this->DiskSize = $param["DiskSize"];
+        }
+
+        if (array_key_exists("MonitorVersion",$param) and $param["MonitorVersion"] !== null) {
+            $this->MonitorVersion = $param["MonitorVersion"];
+        }
+
+        if (array_key_exists("ClientLimitMin",$param) and $param["ClientLimitMin"] !== null) {
+            $this->ClientLimitMin = $param["ClientLimitMin"];
+        }
+
+        if (array_key_exists("ClientLimitMax",$param) and $param["ClientLimitMax"] !== null) {
+            $this->ClientLimitMax = $param["ClientLimitMax"];
+        }
+
+        if (array_key_exists("NodeSet",$param) and $param["NodeSet"] !== null) {
+            $this->NodeSet = [];
+            foreach ($param["NodeSet"] as $key => $value){
+                $obj = new RedisNodeInfo();
+                $obj->deserialize($value);
+                array_push($this->NodeSet, $obj);
+            }
+        }
+
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
         }
     }
 }

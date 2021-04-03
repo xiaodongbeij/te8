@@ -25,23 +25,35 @@ all：所有文件生效
 file：指定文件后缀生效
 directory：指定路径生效
 path：指定绝对路径生效
+index: 指定主页生效
  * @method void setMaxAgeType(string $MaxAgeType) 设置规则类型：
 all：所有文件生效
 file：指定文件后缀生效
 directory：指定路径生效
 path：指定绝对路径生效
+index: 指定主页生效
  * @method array getMaxAgeContents() 获取MaxAgeType 对应类型下的匹配内容：
 all 时填充 *
 file 时填充后缀名，如 jpg、txt
 directory 时填充路径，如 /xxx/test/
 path 时填充绝对路径，如 /xxx/test.html
+index 时填充 /
+注意：all规则不可删除，默认遵循源站，可修改。
  * @method void setMaxAgeContents(array $MaxAgeContents) 设置MaxAgeType 对应类型下的匹配内容：
 all 时填充 *
 file 时填充后缀名，如 jpg、txt
 directory 时填充路径，如 /xxx/test/
 path 时填充绝对路径，如 /xxx/test.html
+index 时填充 /
+注意：all规则不可删除，默认遵循源站，可修改。
  * @method integer getMaxAgeTime() 获取MaxAge 时间设置，单位秒
+注意：时间为0，即不缓存。
  * @method void setMaxAgeTime(integer $MaxAgeTime) 设置MaxAge 时间设置，单位秒
+注意：时间为0，即不缓存。
+ * @method string getFollowOrigin() 获取是否遵循源站，on或off，开启时忽略时间设置。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFollowOrigin(string $FollowOrigin) 设置是否遵循源站，on或off，开启时忽略时间设置。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MaxAgeRule extends AbstractModel
 {
@@ -51,6 +63,7 @@ all：所有文件生效
 file：指定文件后缀生效
 directory：指定路径生效
 path：指定绝对路径生效
+index: 指定主页生效
      */
     public $MaxAgeType;
 
@@ -60,13 +73,22 @@ all 时填充 *
 file 时填充后缀名，如 jpg、txt
 directory 时填充路径，如 /xxx/test/
 path 时填充绝对路径，如 /xxx/test.html
+index 时填充 /
+注意：all规则不可删除，默认遵循源站，可修改。
      */
     public $MaxAgeContents;
 
     /**
      * @var integer MaxAge 时间设置，单位秒
+注意：时间为0，即不缓存。
      */
     public $MaxAgeTime;
+
+    /**
+     * @var string 是否遵循源站，on或off，开启时忽略时间设置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FollowOrigin;
 
     /**
      * @param string $MaxAgeType 规则类型：
@@ -74,12 +96,18 @@ all：所有文件生效
 file：指定文件后缀生效
 directory：指定路径生效
 path：指定绝对路径生效
+index: 指定主页生效
      * @param array $MaxAgeContents MaxAgeType 对应类型下的匹配内容：
 all 时填充 *
 file 时填充后缀名，如 jpg、txt
 directory 时填充路径，如 /xxx/test/
 path 时填充绝对路径，如 /xxx/test.html
+index 时填充 /
+注意：all规则不可删除，默认遵循源站，可修改。
      * @param integer $MaxAgeTime MaxAge 时间设置，单位秒
+注意：时间为0，即不缓存。
+     * @param string $FollowOrigin 是否遵循源站，on或off，开启时忽略时间设置。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -104,6 +132,10 @@ path 时填充绝对路径，如 /xxx/test.html
 
         if (array_key_exists("MaxAgeTime",$param) and $param["MaxAgeTime"] !== null) {
             $this->MaxAgeTime = $param["MaxAgeTime"];
+        }
+
+        if (array_key_exists("FollowOrigin",$param) and $param["FollowOrigin"] !== null) {
+            $this->FollowOrigin = $param["FollowOrigin"];
         }
     }
 }

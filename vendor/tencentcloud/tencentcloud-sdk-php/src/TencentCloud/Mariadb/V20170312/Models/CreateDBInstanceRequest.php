@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(string $SubnetId) 设置虚拟私有网络子网 ID，VpcId 不为空时必填
  * @method integer getProjectId() 获取项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
  * @method void setProjectId(integer $ProjectId) 设置项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
- * @method string getDbVersionId() 获取数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。如果不传的话，默认为 Mariadb 10.1.9。
- * @method void setDbVersionId(string $DbVersionId) 设置数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。如果不传的话，默认为 Mariadb 10.1.9。
+ * @method string getDbVersionId() 获取数据库引擎版本，当前可选：8.0.18，10.1.9，5.7.17。如果不传的话，默认为 Percona 5.7.17。
+ * @method void setDbVersionId(string $DbVersionId) 设置数据库引擎版本，当前可选：8.0.18，10.1.9，5.7.17。如果不传的话，默认为 Percona 5.7.17。
  * @method string getInstanceName() 获取实例名称， 可以通过该字段自主的设置实例的名字
  * @method void setInstanceName(string $InstanceName) 设置实例名称， 可以通过该字段自主的设置实例的名字
  * @method array getSecurityGroupIds() 获取安全组ID列表
@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标志，1:自动续费，2:不自动续费
  * @method integer getIpv6Flag() 获取是否支持IPv6
  * @method void setIpv6Flag(integer $Ipv6Flag) 设置是否支持IPv6
+ * @method array getResourceTags() 获取标签键值对数组
+ * @method void setResourceTags(array $ResourceTags) 设置标签键值对数组
  */
 class CreateDBInstanceRequest extends AbstractModel
 {
@@ -120,7 +122,7 @@ class CreateDBInstanceRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var string 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。如果不传的话，默认为 Mariadb 10.1.9。
+     * @var string 数据库引擎版本，当前可选：8.0.18，10.1.9，5.7.17。如果不传的话，默认为 Percona 5.7.17。
      */
     public $DbVersionId;
 
@@ -145,6 +147,11 @@ class CreateDBInstanceRequest extends AbstractModel
     public $Ipv6Flag;
 
     /**
+     * @var array 标签键值对数组
+     */
+    public $ResourceTags;
+
+    /**
      * @param array $Zones 实例节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
      * @param integer $NodeCount 节点个数大小，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得。
@@ -159,11 +166,12 @@ class CreateDBInstanceRequest extends AbstractModel
      * @param string $VpcId 虚拟私有网络 ID，不传表示创建为基础网络
      * @param string $SubnetId 虚拟私有网络子网 ID，VpcId 不为空时必填
      * @param integer $ProjectId 项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
-     * @param string $DbVersionId 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。如果不传的话，默认为 Mariadb 10.1.9。
+     * @param string $DbVersionId 数据库引擎版本，当前可选：8.0.18，10.1.9，5.7.17。如果不传的话，默认为 Percona 5.7.17。
      * @param string $InstanceName 实例名称， 可以通过该字段自主的设置实例的名字
      * @param array $SecurityGroupIds 安全组ID列表
      * @param integer $AutoRenewFlag 自动续费标志，1:自动续费，2:不自动续费
      * @param integer $Ipv6Flag 是否支持IPv6
+     * @param array $ResourceTags 标签键值对数组
      */
     function __construct()
     {
@@ -240,6 +248,15 @@ class CreateDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("Ipv6Flag",$param) and $param["Ipv6Flag"] !== null) {
             $this->Ipv6Flag = $param["Ipv6Flag"];
+        }
+
+        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+            $this->ResourceTags = [];
+            foreach ($param["ResourceTags"] as $key => $value){
+                $obj = new ResourceTag();
+                $obj->deserialize($value);
+                array_push($this->ResourceTags, $obj);
+            }
         }
     }
 }

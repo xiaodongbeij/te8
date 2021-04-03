@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getServerSession() 获取服务端session信息，返回给JSSDK
  * @method void setServerSession(string $ServerSession) 设置服务端session信息，返回给JSSDK
+ * @method string getRoleNumber() 获取【已废弃】
+ * @method void setRoleNumber(string $RoleNumber) 设置【已废弃】
+ * @method string getRole() 获取【互动云游】角色；Player表示玩家；Viewer表示观察者
+ * @method void setRole(string $Role) 设置【互动云游】角色；Player表示玩家；Viewer表示观察者
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +37,24 @@ class CreateSessionResponse extends AbstractModel
     public $ServerSession;
 
     /**
+     * @var string 【已废弃】
+     */
+    public $RoleNumber;
+
+    /**
+     * @var string 【互动云游】角色；Player表示玩家；Viewer表示观察者
+     */
+    public $Role;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param string $ServerSession 服务端session信息，返回给JSSDK
+     * @param string $RoleNumber 【已废弃】
+     * @param string $Role 【互动云游】角色；Player表示玩家；Viewer表示观察者
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +72,14 @@ class CreateSessionResponse extends AbstractModel
         }
         if (array_key_exists("ServerSession",$param) and $param["ServerSession"] !== null) {
             $this->ServerSession = $param["ServerSession"];
+        }
+
+        if (array_key_exists("RoleNumber",$param) and $param["RoleNumber"] !== null) {
+            $this->RoleNumber = $param["RoleNumber"];
+        }
+
+        if (array_key_exists("Role",$param) and $param["Role"] !== null) {
+            $this->Role = $param["Role"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

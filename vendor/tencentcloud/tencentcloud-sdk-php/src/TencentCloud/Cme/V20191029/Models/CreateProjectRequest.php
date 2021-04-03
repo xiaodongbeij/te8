@@ -24,18 +24,30 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。
  * @method string getCategory() 获取项目类别，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
+<li>SWITCHER：导播台。</li>
+<li>VIDEO_SEGMENTATION：视频拆条。</li>
  * @method void setCategory(string $Category) 设置项目类别，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
+<li>SWITCHER：导播台。</li>
+<li>VIDEO_SEGMENTATION：视频拆条。</li>
  * @method string getName() 获取项目名称，不可超过30个字符。
  * @method void setName(string $Name) 设置项目名称，不可超过30个字符。
- * @method string getAspectRatio() 获取画布宽高比，取值有：
-<li>16:9；</li>
-<li>9:16。</li>
- * @method void setAspectRatio(string $AspectRatio) 设置画布宽高比，取值有：
-<li>16:9；</li>
-<li>9:16。</li>
- * @method Entity getOwner() 获取归属者。
- * @method void setOwner(Entity $Owner) 设置归属者。
+ * @method Entity getOwner() 获取项目归属者。
+ * @method void setOwner(Entity $Owner) 设置项目归属者。
+ * @method string getAspectRatio() 获取画布宽高比。
+该字段已经废弃，请使用具体项目输入中的 AspectRatio 字段。
+ * @method void setAspectRatio(string $AspectRatio) 设置画布宽高比。
+该字段已经废弃，请使用具体项目输入中的 AspectRatio 字段。
+ * @method string getDescription() 获取项目描述信息。
+ * @method void setDescription(string $Description) 设置项目描述信息。
+ * @method SwitcherProjectInput getSwitcherProjectInput() 获取导播台信息，仅当项目类型为 SWITCHER 时必填。
+ * @method void setSwitcherProjectInput(SwitcherProjectInput $SwitcherProjectInput) 设置导播台信息，仅当项目类型为 SWITCHER 时必填。
+ * @method LiveStreamClipProjectInput getLiveStreamClipProjectInput() 获取直播剪辑信息，暂未开放，请勿使用。
+ * @method void setLiveStreamClipProjectInput(LiveStreamClipProjectInput $LiveStreamClipProjectInput) 设置直播剪辑信息，暂未开放，请勿使用。
+ * @method VideoEditProjectInput getVideoEditProjectInput() 获取视频编辑信息，仅当项目类型为 VIDEO_EDIT 时必填。
+ * @method void setVideoEditProjectInput(VideoEditProjectInput $VideoEditProjectInput) 设置视频编辑信息，仅当项目类型为 VIDEO_EDIT 时必填。
+ * @method VideoSegmentationProjectInput getVideoSegmentationProjectInput() 获取视频拆条信息，仅当项目类型为 VIDEO_SEGMENTATION  时必填。
+ * @method void setVideoSegmentationProjectInput(VideoSegmentationProjectInput $VideoSegmentationProjectInput) 设置视频拆条信息，仅当项目类型为 VIDEO_SEGMENTATION  时必填。
  */
 class CreateProjectRequest extends AbstractModel
 {
@@ -47,6 +59,8 @@ class CreateProjectRequest extends AbstractModel
     /**
      * @var string 项目类别，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
+<li>SWITCHER：导播台。</li>
+<li>VIDEO_SEGMENTATION：视频拆条。</li>
      */
     public $Category;
 
@@ -56,26 +70,56 @@ class CreateProjectRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string 画布宽高比，取值有：
-<li>16:9；</li>
-<li>9:16。</li>
+     * @var Entity 项目归属者。
+     */
+    public $Owner;
+
+    /**
+     * @var string 画布宽高比。
+该字段已经废弃，请使用具体项目输入中的 AspectRatio 字段。
      */
     public $AspectRatio;
 
     /**
-     * @var Entity 归属者。
+     * @var string 项目描述信息。
      */
-    public $Owner;
+    public $Description;
+
+    /**
+     * @var SwitcherProjectInput 导播台信息，仅当项目类型为 SWITCHER 时必填。
+     */
+    public $SwitcherProjectInput;
+
+    /**
+     * @var LiveStreamClipProjectInput 直播剪辑信息，暂未开放，请勿使用。
+     */
+    public $LiveStreamClipProjectInput;
+
+    /**
+     * @var VideoEditProjectInput 视频编辑信息，仅当项目类型为 VIDEO_EDIT 时必填。
+     */
+    public $VideoEditProjectInput;
+
+    /**
+     * @var VideoSegmentationProjectInput 视频拆条信息，仅当项目类型为 VIDEO_SEGMENTATION  时必填。
+     */
+    public $VideoSegmentationProjectInput;
 
     /**
      * @param string $Platform 平台名称，指定访问的平台。
      * @param string $Category 项目类别，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
+<li>SWITCHER：导播台。</li>
+<li>VIDEO_SEGMENTATION：视频拆条。</li>
      * @param string $Name 项目名称，不可超过30个字符。
-     * @param string $AspectRatio 画布宽高比，取值有：
-<li>16:9；</li>
-<li>9:16。</li>
-     * @param Entity $Owner 归属者。
+     * @param Entity $Owner 项目归属者。
+     * @param string $AspectRatio 画布宽高比。
+该字段已经废弃，请使用具体项目输入中的 AspectRatio 字段。
+     * @param string $Description 项目描述信息。
+     * @param SwitcherProjectInput $SwitcherProjectInput 导播台信息，仅当项目类型为 SWITCHER 时必填。
+     * @param LiveStreamClipProjectInput $LiveStreamClipProjectInput 直播剪辑信息，暂未开放，请勿使用。
+     * @param VideoEditProjectInput $VideoEditProjectInput 视频编辑信息，仅当项目类型为 VIDEO_EDIT 时必填。
+     * @param VideoSegmentationProjectInput $VideoSegmentationProjectInput 视频拆条信息，仅当项目类型为 VIDEO_SEGMENTATION  时必填。
      */
     function __construct()
     {
@@ -102,13 +146,37 @@ class CreateProjectRequest extends AbstractModel
             $this->Name = $param["Name"];
         }
 
+        if (array_key_exists("Owner",$param) and $param["Owner"] !== null) {
+            $this->Owner = new Entity();
+            $this->Owner->deserialize($param["Owner"]);
+        }
+
         if (array_key_exists("AspectRatio",$param) and $param["AspectRatio"] !== null) {
             $this->AspectRatio = $param["AspectRatio"];
         }
 
-        if (array_key_exists("Owner",$param) and $param["Owner"] !== null) {
-            $this->Owner = new Entity();
-            $this->Owner->deserialize($param["Owner"]);
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("SwitcherProjectInput",$param) and $param["SwitcherProjectInput"] !== null) {
+            $this->SwitcherProjectInput = new SwitcherProjectInput();
+            $this->SwitcherProjectInput->deserialize($param["SwitcherProjectInput"]);
+        }
+
+        if (array_key_exists("LiveStreamClipProjectInput",$param) and $param["LiveStreamClipProjectInput"] !== null) {
+            $this->LiveStreamClipProjectInput = new LiveStreamClipProjectInput();
+            $this->LiveStreamClipProjectInput->deserialize($param["LiveStreamClipProjectInput"]);
+        }
+
+        if (array_key_exists("VideoEditProjectInput",$param) and $param["VideoEditProjectInput"] !== null) {
+            $this->VideoEditProjectInput = new VideoEditProjectInput();
+            $this->VideoEditProjectInput->deserialize($param["VideoEditProjectInput"]);
+        }
+
+        if (array_key_exists("VideoSegmentationProjectInput",$param) and $param["VideoSegmentationProjectInput"] !== null) {
+            $this->VideoSegmentationProjectInput = new VideoSegmentationProjectInput();
+            $this->VideoSegmentationProjectInput->deserialize($param["VideoSegmentationProjectInput"]);
         }
     }
 }

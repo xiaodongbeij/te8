@@ -46,6 +46,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置VPC实例ID。
  * @method string getZone() 获取NAT网关所在的可用区。
  * @method void setZone(string $Zone) 设置NAT网关所在的可用区。
+ * @method array getDirectConnectGatewayIds() 获取绑定的专线网关ID。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDirectConnectGatewayIds(array $DirectConnectGatewayIds) 设置绑定的专线网关ID。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSubnetId() 获取所属子网ID。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubnetId(string $SubnetId) 设置所属子网ID。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTagSet() 获取标签键值对。
+ * @method void setTagSet(array $TagSet) 设置标签键值对。
+ * @method array getSecurityGroupSet() 获取NAT网关绑定的安全组列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSecurityGroupSet(array $SecurityGroupSet) 设置NAT网关绑定的安全组列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NatGateway extends AbstractModel
 {
@@ -107,6 +121,29 @@ class NatGateway extends AbstractModel
     public $Zone;
 
     /**
+     * @var array 绑定的专线网关ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DirectConnectGatewayIds;
+
+    /**
+     * @var string 所属子网ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubnetId;
+
+    /**
+     * @var array 标签键值对。
+     */
+    public $TagSet;
+
+    /**
+     * @var array NAT网关绑定的安全组列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SecurityGroupSet;
+
+    /**
      * @param string $NatGatewayId NAT网关的ID。
      * @param string $NatGatewayName NAT网关的名称。
      * @param string $CreatedTime NAT网关创建的时间。
@@ -120,6 +157,13 @@ class NatGateway extends AbstractModel
      * @param array $DestinationIpPortTranslationNatRuleSet NAT网关的端口转发规则。
      * @param string $VpcId VPC实例ID。
      * @param string $Zone NAT网关所在的可用区。
+     * @param array $DirectConnectGatewayIds 绑定的专线网关ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SubnetId 所属子网ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TagSet 标签键值对。
+     * @param array $SecurityGroupSet NAT网关绑定的安全组列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -186,6 +230,27 @@ class NatGateway extends AbstractModel
 
         if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
             $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("DirectConnectGatewayIds",$param) and $param["DirectConnectGatewayIds"] !== null) {
+            $this->DirectConnectGatewayIds = $param["DirectConnectGatewayIds"];
+        }
+
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+            $this->TagSet = [];
+            foreach ($param["TagSet"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagSet, $obj);
+            }
+        }
+
+        if (array_key_exists("SecurityGroupSet",$param) and $param["SecurityGroupSet"] !== null) {
+            $this->SecurityGroupSet = $param["SecurityGroupSet"];
         }
     }
 }

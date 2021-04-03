@@ -104,6 +104,50 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsEncryptSupported(integer $IsEncryptSupported) 设置是否支持数据加密。1-支持；0-不支持
  * @method integer getCpu() 获取实例CPU核数
  * @method void setCpu(integer $Cpu) 设置实例CPU核数
+ * @method integer getIpv6Flag() 获取实例IPv6标志
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIpv6Flag(integer $Ipv6Flag) 设置实例IPv6标志
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVipv6() 获取内网IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVipv6(string $Vipv6) 设置内网IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getWanVipv6() 获取外网IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWanVipv6(string $WanVipv6) 设置外网IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getWanPortIpv6() 获取外网IPv6端口
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWanPortIpv6(integer $WanPortIpv6) 设置外网IPv6端口
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getWanStatusIpv6() 获取外网IPv6状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWanStatusIpv6(integer $WanStatusIpv6) 设置外网IPv6状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDbEngine() 获取数据库引擎
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDbEngine(string $DbEngine) 设置数据库引擎
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDbVersion() 获取数据库版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDbVersion(string $DbVersion) 设置数据库版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDcnFlag() 获取DCN标志，0-无，1-主实例，2-灾备实例
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDcnFlag(integer $DcnFlag) 设置DCN标志，0-无，1-主实例，2-灾备实例
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDcnStatus() 获取DCN状态，0-无，1-创建中，2-同步中，3-已断开
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDcnStatus(integer $DcnStatus) 设置DCN状态，0-无，1-创建中，2-同步中，3-已断开
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDcnDstNum() 获取DCN灾备实例数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDcnDstNum(integer $DcnDstNum) 设置DCN灾备实例数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getInstanceType() 获取1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceType(integer $InstanceType) 设置1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DBInstance extends AbstractModel
 {
@@ -306,6 +350,72 @@ class DBInstance extends AbstractModel
     public $Cpu;
 
     /**
+     * @var integer 实例IPv6标志
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Ipv6Flag;
+
+    /**
+     * @var string 内网IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Vipv6;
+
+    /**
+     * @var string 外网IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WanVipv6;
+
+    /**
+     * @var integer 外网IPv6端口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WanPortIpv6;
+
+    /**
+     * @var integer 外网IPv6状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WanStatusIpv6;
+
+    /**
+     * @var string 数据库引擎
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DbEngine;
+
+    /**
+     * @var string 数据库版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DbVersion;
+
+    /**
+     * @var integer DCN标志，0-无，1-主实例，2-灾备实例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DcnFlag;
+
+    /**
+     * @var integer DCN状态，0-无，1-创建中，2-同步中，3-已断开
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DcnStatus;
+
+    /**
+     * @var integer DCN灾备实例数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DcnDstNum;
+
+    /**
+     * @var integer 1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceType;
+
+    /**
      * @param string $InstanceId 实例 ID，唯一标识一个 TDSQL 实例
      * @param string $InstanceName 实例名称，用户可修改
      * @param integer $AppId 实例所属应用 ID
@@ -348,6 +458,28 @@ class DBInstance extends AbstractModel
      * @param string $Machine 机器型号
      * @param integer $IsEncryptSupported 是否支持数据加密。1-支持；0-不支持
      * @param integer $Cpu 实例CPU核数
+     * @param integer $Ipv6Flag 实例IPv6标志
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Vipv6 内网IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $WanVipv6 外网IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $WanPortIpv6 外网IPv6端口
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $WanStatusIpv6 外网IPv6状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DbEngine 数据库引擎
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DbVersion 数据库版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DcnFlag DCN标志，0-无，1-主实例，2-灾备实例
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DcnStatus DCN状态，0-无，1-创建中，2-同步中，3-已断开
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DcnDstNum DCN灾备实例数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $InstanceType 1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -516,6 +648,50 @@ class DBInstance extends AbstractModel
 
         if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
             $this->Cpu = $param["Cpu"];
+        }
+
+        if (array_key_exists("Ipv6Flag",$param) and $param["Ipv6Flag"] !== null) {
+            $this->Ipv6Flag = $param["Ipv6Flag"];
+        }
+
+        if (array_key_exists("Vipv6",$param) and $param["Vipv6"] !== null) {
+            $this->Vipv6 = $param["Vipv6"];
+        }
+
+        if (array_key_exists("WanVipv6",$param) and $param["WanVipv6"] !== null) {
+            $this->WanVipv6 = $param["WanVipv6"];
+        }
+
+        if (array_key_exists("WanPortIpv6",$param) and $param["WanPortIpv6"] !== null) {
+            $this->WanPortIpv6 = $param["WanPortIpv6"];
+        }
+
+        if (array_key_exists("WanStatusIpv6",$param) and $param["WanStatusIpv6"] !== null) {
+            $this->WanStatusIpv6 = $param["WanStatusIpv6"];
+        }
+
+        if (array_key_exists("DbEngine",$param) and $param["DbEngine"] !== null) {
+            $this->DbEngine = $param["DbEngine"];
+        }
+
+        if (array_key_exists("DbVersion",$param) and $param["DbVersion"] !== null) {
+            $this->DbVersion = $param["DbVersion"];
+        }
+
+        if (array_key_exists("DcnFlag",$param) and $param["DcnFlag"] !== null) {
+            $this->DcnFlag = $param["DcnFlag"];
+        }
+
+        if (array_key_exists("DcnStatus",$param) and $param["DcnStatus"] !== null) {
+            $this->DcnStatus = $param["DcnStatus"];
+        }
+
+        if (array_key_exists("DcnDstNum",$param) and $param["DcnDstNum"] !== null) {
+            $this->DcnDstNum = $param["DcnDstNum"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
         }
     }
 }

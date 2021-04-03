@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * MobileNetworkTimeVerification请求参数结构体
  *
- * @method string getMobile() 获取手机号码。不支持电信手机号。
- * @method void setMobile(string $Mobile) 设置手机号码。不支持电信手机号。
+ * @method string getMobile() 获取手机号码
+ * @method void setMobile(string $Mobile) 设置手机号码
+ * @method Encryption getEncryption() 获取敏感数据加密信息。对传入信息（手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+ * @method void setEncryption(Encryption $Encryption) 设置敏感数据加密信息。对传入信息（手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
  */
 class MobileNetworkTimeVerificationRequest extends AbstractModel
 {
     /**
-     * @var string 手机号码。不支持电信手机号。
+     * @var string 手机号码
      */
     public $Mobile;
 
     /**
-     * @param string $Mobile 手机号码。不支持电信手机号。
+     * @var Encryption 敏感数据加密信息。对传入信息（手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     */
+    public $Encryption;
+
+    /**
+     * @param string $Mobile 手机号码
+     * @param Encryption $Encryption 敏感数据加密信息。对传入信息（手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
      */
     function __construct()
     {
@@ -48,6 +56,11 @@ class MobileNetworkTimeVerificationRequest extends AbstractModel
         }
         if (array_key_exists("Mobile",$param) and $param["Mobile"] !== null) {
             $this->Mobile = $param["Mobile"];
+        }
+
+        if (array_key_exists("Encryption",$param) and $param["Encryption"] !== null) {
+            $this->Encryption = new Encryption();
+            $this->Encryption->deserialize($param["Encryption"]);
         }
     }
 }

@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getUserId() 获取游戏用户ID
  * @method void setUserId(string $UserId) 设置游戏用户ID
+ * @method string getHostUserId() 获取【多人游戏】游戏主机用户ID
+ * @method void setHostUserId(string $HostUserId) 设置【多人游戏】游戏主机用户ID
  */
 class StopGameRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class StopGameRequest extends AbstractModel
     public $UserId;
 
     /**
+     * @var string 【多人游戏】游戏主机用户ID
+     */
+    public $HostUserId;
+
+    /**
      * @param string $UserId 游戏用户ID
+     * @param string $HostUserId 【多人游戏】游戏主机用户ID
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class StopGameRequest extends AbstractModel
         }
         if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
             $this->UserId = $param["UserId"];
+        }
+
+        if (array_key_exists("HostUserId",$param) and $param["HostUserId"] !== null) {
+            $this->HostUserId = $param["HostUserId"];
         }
     }
 }

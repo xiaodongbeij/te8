@@ -70,8 +70,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMasterInfo(MasterInfo $MasterInfo) 设置主实例详细信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDeviceType() 获取实例类型，可能的返回值：“HA”-高可用版；“FE”-金融版；“BASIC”-基础版
- * @method void setDeviceType(string $DeviceType) 设置实例类型，可能的返回值：“HA”-高可用版；“FE”-金融版；“BASIC”-基础版
+ * @method string getDeviceType() 获取实例类型
+ * @method void setDeviceType(string $DeviceType) 设置实例类型
  * @method string getEngineVersion() 获取内核版本
  * @method void setEngineVersion(string $EngineVersion) 设置内核版本
  * @method string getInstanceName() 获取实例名称
@@ -118,6 +118,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneId(integer $ZoneId) 设置可用区 ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getInstanceNodes() 获取节点数
+ * @method void setInstanceNodes(integer $InstanceNodes) 设置节点数
  */
 class InstanceInfo extends AbstractModel
 {
@@ -231,7 +233,7 @@ class InstanceInfo extends AbstractModel
     public $MasterInfo;
 
     /**
-     * @var string 实例类型，可能的返回值：“HA”-高可用版；“FE”-金融版；“BASIC”-基础版
+     * @var string 实例类型
      */
     public $DeviceType;
 
@@ -335,6 +337,11 @@ class InstanceInfo extends AbstractModel
     public $ZoneId;
 
     /**
+     * @var integer 节点数
+     */
+    public $InstanceNodes;
+
+    /**
      * @param integer $WanStatus 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
      * @param string $Zone 可用区信息
      * @param integer $InitFlag 初始化标志，可能的返回值为：0-未初始化；1-已初始化
@@ -360,7 +367,7 @@ class InstanceInfo extends AbstractModel
      * @param integer $TaskStatus 实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成
      * @param MasterInfo $MasterInfo 主实例详细信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DeviceType 实例类型，可能的返回值：“HA”-高可用版；“FE”-金融版；“BASIC”-基础版
+     * @param string $DeviceType 实例类型
      * @param string $EngineVersion 内核版本
      * @param string $InstanceName 实例名称
      * @param array $DrInfo 灾备实例详细信息
@@ -384,6 +391,7 @@ class InstanceInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ZoneId 可用区 ID
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $InstanceNodes 节点数
      */
     function __construct()
     {
@@ -573,6 +581,10 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
             $this->ZoneId = $param["ZoneId"];
+        }
+
+        if (array_key_exists("InstanceNodes",$param) and $param["InstanceNodes"] !== null) {
+            $this->InstanceNodes = $param["InstanceNodes"];
         }
     }
 }

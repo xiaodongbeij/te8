@@ -164,9 +164,9 @@ readonly：域名存在特殊配置，被锁定
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxAge(MaxAge $MaxAge) 设置浏览器缓存过期规则配置（功能灰度中，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method Ipv6 getIpv6() 获取Ipv6 配置（功能灰度中，敬请期待）
+ * @method Ipv6 getIpv6() 获取Ipv6 回源配置（功能灰度中，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIpv6(Ipv6 $Ipv6) 设置Ipv6 配置（功能灰度中，敬请期待）
+ * @method void setIpv6(Ipv6 $Ipv6) 设置Ipv6 回源配置（功能灰度中，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method Compatibility getCompatibility() 获取是否兼容旧版本配置（内部兼容性字段）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -221,6 +221,58 @@ global：全球锁定
  * @method AccessControl getAccessControl() 获取访问控制
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccessControl(AccessControl $AccessControl) 设置访问控制
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAdvance() 获取是否支持高级配置项
+on：支持
+off：不支持
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAdvance(string $Advance) 设置是否支持高级配置项
+on：支持
+off：不支持
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method UrlRedirect getUrlRedirect() 获取URL重定向配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUrlRedirect(UrlRedirect $UrlRedirect) 设置URL重定向配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAccessPort() 获取访问端口配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAccessPort(array $AccessPort) 设置访问端口配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTag() 获取标签配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTag(array $Tag) 设置标签配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method AdvancedAuthentication getAdvancedAuthentication() 获取时间戳防盗链高级配置，白名单功能
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAdvancedAuthentication(AdvancedAuthentication $AdvancedAuthentication) 设置时间戳防盗链高级配置，白名单功能
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method OriginAuthentication getOriginAuthentication() 获取回源鉴权高级配置，白名单功能
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOriginAuthentication(OriginAuthentication $OriginAuthentication) 设置回源鉴权高级配置，白名单功能
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method Ipv6Access getIpv6Access() 获取Ipv6访问配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIpv6Access(Ipv6Access $Ipv6Access) 设置Ipv6访问配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAdvanceSet() 获取高级配置集合。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAdvanceSet(array $AdvanceSet) 设置高级配置集合。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method OfflineCache getOfflineCache() 获取离线缓存
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOfflineCache(OfflineCache $OfflineCache) 设置离线缓存
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method OriginCombine getOriginCombine() 获取合并回源
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOriginCombine(OriginCombine $OriginCombine) 设置合并回源
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method PostSize getPostMaxSize() 获取POST上传配置项
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPostMaxSize(PostSize $PostMaxSize) 设置POST上传配置项
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method Quic getQuic() 获取Quic配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setQuic(Quic $Quic) 设置Quic配置
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DetailDomain extends AbstractModel
@@ -430,7 +482,7 @@ readonly：域名存在特殊配置，被锁定
     public $MaxAge;
 
     /**
-     * @var Ipv6 Ipv6 配置（功能灰度中，敬请期待）
+     * @var Ipv6 Ipv6 回源配置（功能灰度中，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ipv6;
@@ -501,6 +553,80 @@ global：全球锁定
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccessControl;
+
+    /**
+     * @var string 是否支持高级配置项
+on：支持
+off：不支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Advance;
+
+    /**
+     * @var UrlRedirect URL重定向配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UrlRedirect;
+
+    /**
+     * @var array 访问端口配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AccessPort;
+
+    /**
+     * @var array 标签配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tag;
+
+    /**
+     * @var AdvancedAuthentication 时间戳防盗链高级配置，白名单功能
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AdvancedAuthentication;
+
+    /**
+     * @var OriginAuthentication 回源鉴权高级配置，白名单功能
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OriginAuthentication;
+
+    /**
+     * @var Ipv6Access Ipv6访问配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Ipv6Access;
+
+    /**
+     * @var array 高级配置集合。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AdvanceSet;
+
+    /**
+     * @var OfflineCache 离线缓存
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OfflineCache;
+
+    /**
+     * @var OriginCombine 合并回源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OriginCombine;
+
+    /**
+     * @var PostSize POST上传配置项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PostMaxSize;
+
+    /**
+     * @var Quic Quic配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Quic;
 
     /**
      * @param string $ResourceId 域名 ID
@@ -575,7 +701,7 @@ readonly：域名存在特殊配置，被锁定
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxAge $MaxAge 浏览器缓存过期规则配置（功能灰度中，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Ipv6 $Ipv6 Ipv6 配置（功能灰度中，敬请期待）
+     * @param Ipv6 $Ipv6 Ipv6 回源配置（功能灰度中，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Compatibility $Compatibility 是否兼容旧版本配置（内部兼容性字段）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -603,6 +729,32 @@ global：全球锁定
      * @param UserAgentFilter $UserAgentFilter UA黑白名单配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AccessControl $AccessControl 访问控制
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Advance 是否支持高级配置项
+on：支持
+off：不支持
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UrlRedirect $UrlRedirect URL重定向配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AccessPort 访问端口配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tag 标签配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AdvancedAuthentication $AdvancedAuthentication 时间戳防盗链高级配置，白名单功能
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OriginAuthentication $OriginAuthentication 回源鉴权高级配置，白名单功能
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Ipv6Access $Ipv6Access Ipv6访问配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AdvanceSet 高级配置集合。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OfflineCache $OfflineCache 离线缓存
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OriginCombine $OriginCombine 合并回源
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PostSize $PostMaxSize POST上传配置项
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Quic $Quic Quic配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -824,6 +976,72 @@ global：全球锁定
         if (array_key_exists("AccessControl",$param) and $param["AccessControl"] !== null) {
             $this->AccessControl = new AccessControl();
             $this->AccessControl->deserialize($param["AccessControl"]);
+        }
+
+        if (array_key_exists("Advance",$param) and $param["Advance"] !== null) {
+            $this->Advance = $param["Advance"];
+        }
+
+        if (array_key_exists("UrlRedirect",$param) and $param["UrlRedirect"] !== null) {
+            $this->UrlRedirect = new UrlRedirect();
+            $this->UrlRedirect->deserialize($param["UrlRedirect"]);
+        }
+
+        if (array_key_exists("AccessPort",$param) and $param["AccessPort"] !== null) {
+            $this->AccessPort = $param["AccessPort"];
+        }
+
+        if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
+            $this->Tag = [];
+            foreach ($param["Tag"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tag, $obj);
+            }
+        }
+
+        if (array_key_exists("AdvancedAuthentication",$param) and $param["AdvancedAuthentication"] !== null) {
+            $this->AdvancedAuthentication = new AdvancedAuthentication();
+            $this->AdvancedAuthentication->deserialize($param["AdvancedAuthentication"]);
+        }
+
+        if (array_key_exists("OriginAuthentication",$param) and $param["OriginAuthentication"] !== null) {
+            $this->OriginAuthentication = new OriginAuthentication();
+            $this->OriginAuthentication->deserialize($param["OriginAuthentication"]);
+        }
+
+        if (array_key_exists("Ipv6Access",$param) and $param["Ipv6Access"] !== null) {
+            $this->Ipv6Access = new Ipv6Access();
+            $this->Ipv6Access->deserialize($param["Ipv6Access"]);
+        }
+
+        if (array_key_exists("AdvanceSet",$param) and $param["AdvanceSet"] !== null) {
+            $this->AdvanceSet = [];
+            foreach ($param["AdvanceSet"] as $key => $value){
+                $obj = new AdvanceConfig();
+                $obj->deserialize($value);
+                array_push($this->AdvanceSet, $obj);
+            }
+        }
+
+        if (array_key_exists("OfflineCache",$param) and $param["OfflineCache"] !== null) {
+            $this->OfflineCache = new OfflineCache();
+            $this->OfflineCache->deserialize($param["OfflineCache"]);
+        }
+
+        if (array_key_exists("OriginCombine",$param) and $param["OriginCombine"] !== null) {
+            $this->OriginCombine = new OriginCombine();
+            $this->OriginCombine->deserialize($param["OriginCombine"]);
+        }
+
+        if (array_key_exists("PostMaxSize",$param) and $param["PostMaxSize"] !== null) {
+            $this->PostMaxSize = new PostSize();
+            $this->PostMaxSize->deserialize($param["PostMaxSize"]);
+        }
+
+        if (array_key_exists("Quic",$param) and $param["Quic"] !== null) {
+            $this->Quic = new Quic();
+            $this->Quic->deserialize($param["Quic"]);
         }
     }
 }

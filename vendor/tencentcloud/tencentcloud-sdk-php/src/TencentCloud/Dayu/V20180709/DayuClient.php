@@ -40,6 +40,7 @@ use TencentCloud\Dayu\V20180709\Models as Models;
  * @method Models\CreateNetReturnResponse CreateNetReturn(Models\CreateNetReturnRequest $req) 高防IP专业版一键切回源站
  * @method Models\CreateNewL4RulesResponse CreateNewL4Rules(Models\CreateNewL4RulesRequest $req) 添加L4转发规则
  * @method Models\CreateNewL7RulesResponse CreateNewL7Rules(Models\CreateNewL7RulesRequest $req) 添加7层转发规则
+ * @method Models\CreateNewL7RulesUploadResponse CreateNewL7RulesUpload(Models\CreateNewL7RulesUploadRequest $req) 批量上传7层转发规则
  * @method Models\CreateUnblockIpResponse CreateUnblockIp(Models\CreateUnblockIpRequest $req) IP解封操作
  * @method Models\DeleteCCFrequencyRulesResponse DeleteCCFrequencyRules(Models\DeleteCCFrequencyRulesRequest $req) 删除CC防护的访问频率控制规则
  * @method Models\DeleteCCSelfDefinePolicyResponse DeleteCCSelfDefinePolicy(Models\DeleteCCSelfDefinePolicyRequest $req) 删除CC自定义策略
@@ -55,6 +56,8 @@ use TencentCloud\Dayu\V20180709\Models as Models;
  * @method Models\DescribeBaradDataResponse DescribeBaradData(Models\DescribeBaradDataRequest $req) 为大禹子产品提供业务转发指标数据的接口
  * @method Models\DescribeBasicCCThresholdResponse DescribeBasicCCThreshold(Models\DescribeBasicCCThresholdRequest $req) 获取基础防护CC防护阈值
  * @method Models\DescribeBasicDeviceThresholdResponse DescribeBasicDeviceThreshold(Models\DescribeBasicDeviceThresholdRequest $req) 获取基础防护黑洞阈值
+ * @method Models\DescribeBizHttpStatusResponse DescribeBizHttpStatus(Models\DescribeBizHttpStatusRequest $req) 获取业务流量状态码统计
+ * @method Models\DescribeBizTrendResponse DescribeBizTrend(Models\DescribeBizTrendRequest $req) 获取业务流量曲线
  * @method Models\DescribeCCAlarmThresholdResponse DescribeCCAlarmThreshold(Models\DescribeCCAlarmThresholdRequest $req) 获取高防包、高防IP、高防IP专业版、棋牌盾产品设置CC攻击的告警通知阈值
  * @method Models\DescribeCCEvListResponse DescribeCCEvList(Models\DescribeCCEvListRequest $req) 获取CC攻击事件列表
  * @method Models\DescribeCCFrequencyRulesResponse DescribeCCFrequencyRules(Models\DescribeCCFrequencyRulesRequest $req) 获取CC防护的访问频率控制规则
@@ -141,6 +144,11 @@ class DayuClient extends AbstractClient
      * @var string
      */
     protected $endpoint = "dayu.tencentcloudapi.com";
+
+    /**
+     * @var string
+     */
+    protected $service = "dayu";
 
     /**
      * @var string

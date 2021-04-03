@@ -122,9 +122,9 @@ OPEN：公网属性， INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpireTime(string $ExpireTime) 设置负载均衡实例的过期时间，仅对预付费负载均衡生效
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getChargeType() 获取负载均衡实例的计费类型
+ * @method string getChargeType() 获取负载均衡实例的计费类型，PREPAID：包年包月，POSTPAID_BY_HOUR：按量计费
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setChargeType(string $ChargeType) 设置负载均衡实例的计费类型
+ * @method void setChargeType(string $ChargeType) 设置负载均衡实例的计费类型，PREPAID：包年包月，POSTPAID_BY_HOUR：按量计费
 注意：此字段可能返回 null，表示取不到有效值。
  * @method InternetAccessible getNetworkAttributes() 获取负载均衡实例的网络属性
 注意：此字段可能返回 null，表示取不到有效值。
@@ -170,13 +170,13 @@ OPEN：公网属性， INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIPv6Mode(string $IPv6Mode) 设置IP地址版本为ipv6时此字段有意义， IPv6Nat64 | IPv6FullChain
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getSnatPro() 获取是否开启SnatPro
+ * @method boolean getSnatPro() 获取是否开启SnatPro。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSnatPro(boolean $SnatPro) 设置是否开启SnatPro
+ * @method void setSnatPro(boolean $SnatPro) 设置是否开启SnatPro。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getSnatIps() 获取开启SnatPro负载均衡后，SnatIp列表
+ * @method array getSnatIps() 获取开启SnatPro负载均衡后，SnatIp列表。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSnatIps(array $SnatIps) 设置开启SnatPro负载均衡后，SnatIp列表
+ * @method void setSnatIps(array $SnatIps) 设置开启SnatPro负载均衡后，SnatIp列表。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSlaType() 获取性能保障规格
 注意：此字段可能返回 null，表示取不到有效值。
@@ -193,6 +193,22 @@ OPEN：公网属性， INTERNAL：内网属性。
  * @method boolean getLocalBgp() 获取IP类型是否是本地BGP
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocalBgp(boolean $LocalBgp) 设置IP类型是否是本地BGP
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClusterTag() 获取7层独占标签。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterTag(string $ClusterTag) 设置7层独占标签。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getMixIpTarget() 获取开启IPv6FullChain负载均衡7层监听器支持混绑IPv4/IPv6目标功能。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMixIpTarget(boolean $MixIpTarget) 设置开启IPv6FullChain负载均衡7层监听器支持混绑IPv4/IPv6目标功能。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getZones() 获取私有网络内网负载均衡，就近接入模式下规则所落在的可用区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZones(array $Zones) 设置私有网络内网负载均衡，就近接入模式下规则所落在的可用区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNfvInfo() 获取CLB是否为NFV，空：不是，l7nfv：七层是NFV。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNfvInfo(string $NfvInfo) 设置CLB是否为NFV，空：不是，l7nfv：七层是NFV。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class LoadBalancer extends AbstractModel
@@ -357,7 +373,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $ExpireTime;
 
     /**
-     * @var string 负载均衡实例的计费类型
+     * @var string 负载均衡实例的计费类型，PREPAID：包年包月，POSTPAID_BY_HOUR：按量计费
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChargeType;
@@ -429,13 +445,13 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $IPv6Mode;
 
     /**
-     * @var boolean 是否开启SnatPro
+     * @var boolean 是否开启SnatPro。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SnatPro;
 
     /**
-     * @var array 开启SnatPro负载均衡后，SnatIp列表
+     * @var array 开启SnatPro负载均衡后，SnatIp列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SnatIps;
@@ -463,6 +479,30 @@ OPEN：公网属性， INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LocalBgp;
+
+    /**
+     * @var string 7层独占标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterTag;
+
+    /**
+     * @var boolean 开启IPv6FullChain负载均衡7层监听器支持混绑IPv4/IPv6目标功能。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MixIpTarget;
+
+    /**
+     * @var array 私有网络内网负载均衡，就近接入模式下规则所落在的可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Zones;
+
+    /**
+     * @var string CLB是否为NFV，空：不是，l7nfv：七层是NFV。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NfvInfo;
 
     /**
      * @param string $LoadBalancerId 负载均衡实例 ID。
@@ -516,7 +556,7 @@ OPEN：公网属性， INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExpireTime 负载均衡实例的过期时间，仅对预付费负载均衡生效
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ChargeType 负载均衡实例的计费类型
+     * @param string $ChargeType 负载均衡实例的计费类型，PREPAID：包年包月，POSTPAID_BY_HOUR：按量计费
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InternetAccessible $NetworkAttributes 负载均衡实例的网络属性
 注意：此字段可能返回 null，表示取不到有效值。
@@ -540,9 +580,9 @@ OPEN：公网属性， INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IPv6Mode IP地址版本为ipv6时此字段有意义， IPv6Nat64 | IPv6FullChain
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $SnatPro 是否开启SnatPro
+     * @param boolean $SnatPro 是否开启SnatPro。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $SnatIps 开启SnatPro负载均衡后，SnatIp列表
+     * @param array $SnatIps 开启SnatPro负载均衡后，SnatIp列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SlaType 性能保障规格
 注意：此字段可能返回 null，表示取不到有效值。
@@ -551,6 +591,14 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param string $IsBlockTime 封堵或解封时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $LocalBgp IP类型是否是本地BGP
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClusterTag 7层独占标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $MixIpTarget 开启IPv6FullChain负载均衡7层监听器支持混绑IPv4/IPv6目标功能。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Zones 私有网络内网负载均衡，就近接入模式下规则所落在的可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NfvInfo CLB是否为NFV，空：不是，l7nfv：七层是NFV。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -765,6 +813,22 @@ OPEN：公网属性， INTERNAL：内网属性。
 
         if (array_key_exists("LocalBgp",$param) and $param["LocalBgp"] !== null) {
             $this->LocalBgp = $param["LocalBgp"];
+        }
+
+        if (array_key_exists("ClusterTag",$param) and $param["ClusterTag"] !== null) {
+            $this->ClusterTag = $param["ClusterTag"];
+        }
+
+        if (array_key_exists("MixIpTarget",$param) and $param["MixIpTarget"] !== null) {
+            $this->MixIpTarget = $param["MixIpTarget"];
+        }
+
+        if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
+            $this->Zones = $param["Zones"];
+        }
+
+        if (array_key_exists("NfvInfo",$param) and $param["NfvInfo"] !== null) {
+            $this->NfvInfo = $param["NfvInfo"];
         }
     }
 }

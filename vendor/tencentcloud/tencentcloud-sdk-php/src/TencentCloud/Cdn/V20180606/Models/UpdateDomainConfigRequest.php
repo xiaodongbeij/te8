@@ -96,6 +96,24 @@ global：全球加速
  * @method void setAwsPrivateAccess(AwsPrivateAccess $AwsPrivateAccess) 设置回源S3私有鉴权
  * @method UserAgentFilter getUserAgentFilter() 获取UA黑白名单配置
  * @method void setUserAgentFilter(UserAgentFilter $UserAgentFilter) 设置UA黑白名单配置
+ * @method AccessControl getAccessControl() 获取访问控制
+ * @method void setAccessControl(AccessControl $AccessControl) 设置访问控制
+ * @method UrlRedirect getUrlRedirect() 获取URL重定向配置
+ * @method void setUrlRedirect(UrlRedirect $UrlRedirect) 设置URL重定向配置
+ * @method array getAccessPort() 获取访问端口配置
+ * @method void setAccessPort(array $AccessPort) 设置访问端口配置
+ * @method AdvancedAuthentication getAdvancedAuthentication() 获取时间戳防盗链高级版配置，白名单功能
+ * @method void setAdvancedAuthentication(AdvancedAuthentication $AdvancedAuthentication) 设置时间戳防盗链高级版配置，白名单功能
+ * @method OriginAuthentication getOriginAuthentication() 获取回源鉴权高级版配置，白名单功能
+ * @method void setOriginAuthentication(OriginAuthentication $OriginAuthentication) 设置回源鉴权高级版配置，白名单功能
+ * @method Ipv6Access getIpv6Access() 获取Ipv6 访问配置
+ * @method void setIpv6Access(Ipv6Access $Ipv6Access) 设置Ipv6 访问配置
+ * @method OfflineCache getOfflineCache() 获取离线缓存
+ * @method void setOfflineCache(OfflineCache $OfflineCache) 设置离线缓存
+ * @method OriginCombine getOriginCombine() 获取合并回源
+ * @method void setOriginCombine(OriginCombine $OriginCombine) 设置合并回源
+ * @method Quic getQuic() 获取QUIC正在内测中，请先提交内测申请，详情请前往QUIC产品文档。
+ * @method void setQuic(Quic $Quic) 设置QUIC正在内测中，请先提交内测申请，详情请前往QUIC产品文档。
  */
 class UpdateDomainConfigRequest extends AbstractModel
 {
@@ -262,6 +280,51 @@ global：全球加速
     public $UserAgentFilter;
 
     /**
+     * @var AccessControl 访问控制
+     */
+    public $AccessControl;
+
+    /**
+     * @var UrlRedirect URL重定向配置
+     */
+    public $UrlRedirect;
+
+    /**
+     * @var array 访问端口配置
+     */
+    public $AccessPort;
+
+    /**
+     * @var AdvancedAuthentication 时间戳防盗链高级版配置，白名单功能
+     */
+    public $AdvancedAuthentication;
+
+    /**
+     * @var OriginAuthentication 回源鉴权高级版配置，白名单功能
+     */
+    public $OriginAuthentication;
+
+    /**
+     * @var Ipv6Access Ipv6 访问配置
+     */
+    public $Ipv6Access;
+
+    /**
+     * @var OfflineCache 离线缓存
+     */
+    public $OfflineCache;
+
+    /**
+     * @var OriginCombine 合并回源
+     */
+    public $OriginCombine;
+
+    /**
+     * @var Quic QUIC正在内测中，请先提交内测申请，详情请前往QUIC产品文档。
+     */
+    public $Quic;
+
+    /**
      * @param string $Domain 域名
      * @param integer $ProjectId 项目 ID
      * @param Origin $Origin 源站配置
@@ -300,6 +363,15 @@ global：全球加速
      * @param OriginPullTimeout $OriginPullTimeout 回源超时配置
      * @param AwsPrivateAccess $AwsPrivateAccess 回源S3私有鉴权
      * @param UserAgentFilter $UserAgentFilter UA黑白名单配置
+     * @param AccessControl $AccessControl 访问控制
+     * @param UrlRedirect $UrlRedirect URL重定向配置
+     * @param array $AccessPort 访问端口配置
+     * @param AdvancedAuthentication $AdvancedAuthentication 时间戳防盗链高级版配置，白名单功能
+     * @param OriginAuthentication $OriginAuthentication 回源鉴权高级版配置，白名单功能
+     * @param Ipv6Access $Ipv6Access Ipv6 访问配置
+     * @param OfflineCache $OfflineCache 离线缓存
+     * @param OriginCombine $OriginCombine 合并回源
+     * @param Quic $Quic QUIC正在内测中，请先提交内测申请，详情请前往QUIC产品文档。
      */
     function __construct()
     {
@@ -463,6 +535,50 @@ global：全球加速
         if (array_key_exists("UserAgentFilter",$param) and $param["UserAgentFilter"] !== null) {
             $this->UserAgentFilter = new UserAgentFilter();
             $this->UserAgentFilter->deserialize($param["UserAgentFilter"]);
+        }
+
+        if (array_key_exists("AccessControl",$param) and $param["AccessControl"] !== null) {
+            $this->AccessControl = new AccessControl();
+            $this->AccessControl->deserialize($param["AccessControl"]);
+        }
+
+        if (array_key_exists("UrlRedirect",$param) and $param["UrlRedirect"] !== null) {
+            $this->UrlRedirect = new UrlRedirect();
+            $this->UrlRedirect->deserialize($param["UrlRedirect"]);
+        }
+
+        if (array_key_exists("AccessPort",$param) and $param["AccessPort"] !== null) {
+            $this->AccessPort = $param["AccessPort"];
+        }
+
+        if (array_key_exists("AdvancedAuthentication",$param) and $param["AdvancedAuthentication"] !== null) {
+            $this->AdvancedAuthentication = new AdvancedAuthentication();
+            $this->AdvancedAuthentication->deserialize($param["AdvancedAuthentication"]);
+        }
+
+        if (array_key_exists("OriginAuthentication",$param) and $param["OriginAuthentication"] !== null) {
+            $this->OriginAuthentication = new OriginAuthentication();
+            $this->OriginAuthentication->deserialize($param["OriginAuthentication"]);
+        }
+
+        if (array_key_exists("Ipv6Access",$param) and $param["Ipv6Access"] !== null) {
+            $this->Ipv6Access = new Ipv6Access();
+            $this->Ipv6Access->deserialize($param["Ipv6Access"]);
+        }
+
+        if (array_key_exists("OfflineCache",$param) and $param["OfflineCache"] !== null) {
+            $this->OfflineCache = new OfflineCache();
+            $this->OfflineCache->deserialize($param["OfflineCache"]);
+        }
+
+        if (array_key_exists("OriginCombine",$param) and $param["OriginCombine"] !== null) {
+            $this->OriginCombine = new OriginCombine();
+            $this->OriginCombine->deserialize($param["OriginCombine"]);
+        }
+
+        if (array_key_exists("Quic",$param) and $param["Quic"] !== null) {
+            $this->Quic = new Quic();
+            $this->Quic->deserialize($param["Quic"]);
         }
     }
 }

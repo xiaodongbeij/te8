@@ -25,10 +25,12 @@ use TencentCloud\Gme\V20180711\Models as Models;
 /**
  * @method Models\CreateAppResponse CreateApp(Models\CreateAppRequest $req) 本接口(CreateApp)用于创建一个GME应用。
  * @method Models\DescribeAppStatisticsResponse DescribeAppStatistics(Models\DescribeAppStatisticsRequest $req) 本接口(DescribeAppStatistics)用于获取某个GME应用的用量数据。包括实时语音，语音消息及转文本，语音分析等。最长查询周期为最近30天。
+ * @method Models\DescribeApplicationDataResponse DescribeApplicationData(Models\DescribeApplicationDataRequest $req) 本接口(DescribeApplicationData)用于获取数据详情信息，最多可拉取最近90天的数据。
  * @method Models\DescribeFilterResultResponse DescribeFilterResult(Models\DescribeFilterResultRequest $req) 根据应用ID和文件ID查询识别结果
  * @method Models\DescribeFilterResultListResponse DescribeFilterResultList(Models\DescribeFilterResultListRequest $req) 根据日期查询识别结果列表
  * @method Models\DescribeScanResultListResponse DescribeScanResultList(Models\DescribeScanResultListRequest $req) 本接口(DescribeScanResultList)用于查询语音检测结果，查询任务列表最多支持100个。
 <p style="color:red">如果在提交语音检测任务时未设置 Callback 字段，则需要通过本接口获取检测结果</p>
+ * @method Models\DescribeUserInAndOutTimeResponse DescribeUserInAndOutTime(Models\DescribeUserInAndOutTimeRequest $req) 拉取用户在房间得进出时间
  * @method Models\ModifyAppStatusResponse ModifyAppStatus(Models\ModifyAppStatusRequest $req) 本接口(ModifyAppStatus)用于修改应用总开关状态。
  * @method Models\ScanVoiceResponse ScanVoice(Models\ScanVoiceRequest $req) 本接口(ScanVoice)用于提交语音检测任务，检测任务列表最多支持100个。使用前请您登录[控制台 - 服务配置](https://console.cloud.tencent.com/gamegme/conf)开启语音分析服务。
 </br></br>
@@ -178,6 +180,11 @@ class GmeClient extends AbstractClient
      * @var string
      */
     protected $endpoint = "gme.tencentcloudapi.com";
+
+    /**
+     * @var string
+     */
+    protected $service = "gme";
 
     /**
      * @var string

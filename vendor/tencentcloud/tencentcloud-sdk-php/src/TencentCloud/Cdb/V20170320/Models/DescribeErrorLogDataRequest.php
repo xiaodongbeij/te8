@@ -28,10 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(integer $EndTime) 设置结束时间戳。
  * @method array getKeyWords() 获取要匹配的关键字列表，最多支持15个关键字。
  * @method void setKeyWords(array $KeyWords) 设置要匹配的关键字列表，最多支持15个关键字。
- * @method integer getLimit() 获取分页的返回数量，最大为400。
- * @method void setLimit(integer $Limit) 设置分页的返回数量，最大为400。
+ * @method integer getLimit() 获取分页的返回数量，默认为100，最大为400。
+ * @method void setLimit(integer $Limit) 设置分页的返回数量，默认为100，最大为400。
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
+ * @method string getInstType() 获取仅在实例为主实例或者灾备实例时生效，可选值：slave，代表拉取从机的日志。
+ * @method void setInstType(string $InstType) 设置仅在实例为主实例或者灾备实例时生效，可选值：slave，代表拉取从机的日志。
  */
 class DescribeErrorLogDataRequest extends AbstractModel
 {
@@ -56,7 +58,7 @@ class DescribeErrorLogDataRequest extends AbstractModel
     public $KeyWords;
 
     /**
-     * @var integer 分页的返回数量，最大为400。
+     * @var integer 分页的返回数量，默认为100，最大为400。
      */
     public $Limit;
 
@@ -66,12 +68,18 @@ class DescribeErrorLogDataRequest extends AbstractModel
     public $Offset;
 
     /**
+     * @var string 仅在实例为主实例或者灾备实例时生效，可选值：slave，代表拉取从机的日志。
+     */
+    public $InstType;
+
+    /**
      * @param string $InstanceId 实例 ID 。
      * @param integer $StartTime 开始时间戳。
      * @param integer $EndTime 结束时间戳。
      * @param array $KeyWords 要匹配的关键字列表，最多支持15个关键字。
-     * @param integer $Limit 分页的返回数量，最大为400。
+     * @param integer $Limit 分页的返回数量，默认为100，最大为400。
      * @param integer $Offset 偏移量，默认为0。
+     * @param string $InstType 仅在实例为主实例或者灾备实例时生效，可选值：slave，代表拉取从机的日志。
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DescribeErrorLogDataRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("InstType",$param) and $param["InstType"] !== null) {
+            $this->InstType = $param["InstType"];
         }
     }
 }

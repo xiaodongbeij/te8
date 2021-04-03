@@ -80,9 +80,21 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxGroupNum(integer $MaxGroupNum) 设置最大分组数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCvm() 获取售卖类型
+ * @method integer getCvm() 获取售卖类型,0:标准版,1:专业版
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCvm(integer $Cvm) 设置售卖类型
+ * @method void setCvm(integer $Cvm) 设置售卖类型,0:标准版,1:专业版
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceType() 获取类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceType(string $InstanceType) 设置类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getFeatures() 获取表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFeatures(array $Features) 设置表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method DynamicRetentionTime getRetentionTimeConfig() 获取动态消息保留策略
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRetentionTimeConfig(DynamicRetentionTime $RetentionTimeConfig) 设置动态消息保留策略
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceAttributesResponse extends AbstractModel
@@ -218,10 +230,28 @@ class InstanceAttributesResponse extends AbstractModel
     public $MaxGroupNum;
 
     /**
-     * @var integer 售卖类型
+     * @var integer 售卖类型,0:标准版,1:专业版
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Cvm;
+
+    /**
+     * @var string 类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceType;
+
+    /**
+     * @var array 表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Features;
+
+    /**
+     * @var DynamicRetentionTime 动态消息保留策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RetentionTimeConfig;
 
     /**
      * @param string $InstanceId 实例ID
@@ -254,7 +284,13 @@ class InstanceAttributesResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxGroupNum 最大分组数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Cvm 售卖类型
+     * @param integer $Cvm 售卖类型,0:标准版,1:专业版
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceType 类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Features 表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DynamicRetentionTime $RetentionTimeConfig 动态消息保留策略
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -383,6 +419,19 @@ class InstanceAttributesResponse extends AbstractModel
 
         if (array_key_exists("Cvm",$param) and $param["Cvm"] !== null) {
             $this->Cvm = $param["Cvm"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("Features",$param) and $param["Features"] !== null) {
+            $this->Features = $param["Features"];
+        }
+
+        if (array_key_exists("RetentionTimeConfig",$param) and $param["RetentionTimeConfig"] !== null) {
+            $this->RetentionTimeConfig = new DynamicRetentionTime();
+            $this->RetentionTimeConfig->deserialize($param["RetentionTimeConfig"]);
         }
     }
 }

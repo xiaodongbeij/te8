@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例 ID 。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID 。
- * @method string getStartTime() 获取开始时间。
- * @method void setStartTime(string $StartTime) 设置开始时间。
- * @method string getEndTime() 获取截止时间。
- * @method void setEndTime(string $EndTime) 设置截止时间。
+ * @method string getStartTime() 获取开始时间，如“2019-09-10 12:13:14”。
+ * @method void setStartTime(string $StartTime) 设置开始时间，如“2019-09-10 12:13:14”。
+ * @method string getEndTime() 获取截止时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔最大可为7天。
+ * @method void setEndTime(string $EndTime) 设置截止时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔最大可为7天。
  * @method string getSortBy() 获取排序键，目前支持 QueryTime,ExecTimes,RowsSent,LockTime以及RowsExamined 等排序键。
  * @method void setSortBy(string $SortBy) 设置排序键，目前支持 QueryTime,ExecTimes,RowsSent,LockTime以及RowsExamined 等排序键。
  * @method string getOrderBy() 获取排序方式，支持ASC（升序）以及DESC（降序）。
@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
+ * @method array getSchemaList() 获取数据库名称数组。
+ * @method void setSchemaList(array $SchemaList) 设置数据库名称数组。
+ * @method string getProduct() 获取服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
+ * @method void setProduct(string $Product) 设置服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
  */
 class DescribeSlowLogTopSqlsRequest extends AbstractModel
 {
@@ -43,12 +47,12 @@ class DescribeSlowLogTopSqlsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 开始时间。
+     * @var string 开始时间，如“2019-09-10 12:13:14”。
      */
     public $StartTime;
 
     /**
-     * @var string 截止时间。
+     * @var string 截止时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔最大可为7天。
      */
     public $EndTime;
 
@@ -73,13 +77,25 @@ class DescribeSlowLogTopSqlsRequest extends AbstractModel
     public $Offset;
 
     /**
+     * @var array 数据库名称数组。
+     */
+    public $SchemaList;
+
+    /**
+     * @var string 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
+     */
+    public $Product;
+
+    /**
      * @param string $InstanceId 实例 ID 。
-     * @param string $StartTime 开始时间。
-     * @param string $EndTime 截止时间。
+     * @param string $StartTime 开始时间，如“2019-09-10 12:13:14”。
+     * @param string $EndTime 截止时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔最大可为7天。
      * @param string $SortBy 排序键，目前支持 QueryTime,ExecTimes,RowsSent,LockTime以及RowsExamined 等排序键。
      * @param string $OrderBy 排序方式，支持ASC（升序）以及DESC（降序）。
      * @param integer $Limit 返回数量，默认为20，最大值为100。
      * @param integer $Offset 偏移量，默认为0。
+     * @param array $SchemaList 数据库名称数组。
+     * @param string $Product 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
      */
     function __construct()
     {
@@ -120,6 +136,19 @@ class DescribeSlowLogTopSqlsRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("SchemaList",$param) and $param["SchemaList"] !== null) {
+            $this->SchemaList = [];
+            foreach ($param["SchemaList"] as $key => $value){
+                $obj = new SchemaItem();
+                $obj->deserialize($value);
+                array_push($this->SchemaList, $obj);
+            }
+        }
+
+        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
+            $this->Product = $param["Product"];
         }
     }
 }

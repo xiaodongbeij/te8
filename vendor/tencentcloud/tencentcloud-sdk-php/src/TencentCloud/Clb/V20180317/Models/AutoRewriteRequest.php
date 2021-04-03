@@ -24,8 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例ID。
  * @method string getListenerId() 获取HTTPS:443监听器的ID。
  * @method void setListenerId(string $ListenerId) 设置HTTPS:443监听器的ID。
- * @method array getDomains() 获取HTTPS:443监听器下需要重定向的域名，若不填，对HTTPS:443监听器下的所有域名都设置重定向。
- * @method void setDomains(array $Domains) 设置HTTPS:443监听器下需要重定向的域名，若不填，对HTTPS:443监听器下的所有域名都设置重定向。
+ * @method array getDomains() 获取HTTPS:443监听器下需要重定向的域名，若不填，则对HTTPS:443监听器下的所有域名都设置重定向。
+ * @method void setDomains(array $Domains) 设置HTTPS:443监听器下需要重定向的域名，若不填，则对HTTPS:443监听器下的所有域名都设置重定向。
+ * @method array getRewriteCodes() 获取重定向状态码，可取值301,302,307。
+ * @method void setRewriteCodes(array $RewriteCodes) 设置重定向状态码，可取值301,302,307。
+ * @method array getTakeUrls() 获取重定向是否携带匹配的URL。
+ * @method void setTakeUrls(array $TakeUrls) 设置重定向是否携带匹配的URL。
  */
 class AutoRewriteRequest extends AbstractModel
 {
@@ -40,14 +44,26 @@ class AutoRewriteRequest extends AbstractModel
     public $ListenerId;
 
     /**
-     * @var array HTTPS:443监听器下需要重定向的域名，若不填，对HTTPS:443监听器下的所有域名都设置重定向。
+     * @var array HTTPS:443监听器下需要重定向的域名，若不填，则对HTTPS:443监听器下的所有域名都设置重定向。
      */
     public $Domains;
 
     /**
+     * @var array 重定向状态码，可取值301,302,307。
+     */
+    public $RewriteCodes;
+
+    /**
+     * @var array 重定向是否携带匹配的URL。
+     */
+    public $TakeUrls;
+
+    /**
      * @param string $LoadBalancerId 负载均衡实例ID。
      * @param string $ListenerId HTTPS:443监听器的ID。
-     * @param array $Domains HTTPS:443监听器下需要重定向的域名，若不填，对HTTPS:443监听器下的所有域名都设置重定向。
+     * @param array $Domains HTTPS:443监听器下需要重定向的域名，若不填，则对HTTPS:443监听器下的所有域名都设置重定向。
+     * @param array $RewriteCodes 重定向状态码，可取值301,302,307。
+     * @param array $TakeUrls 重定向是否携带匹配的URL。
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class AutoRewriteRequest extends AbstractModel
 
         if (array_key_exists("Domains",$param) and $param["Domains"] !== null) {
             $this->Domains = $param["Domains"];
+        }
+
+        if (array_key_exists("RewriteCodes",$param) and $param["RewriteCodes"] !== null) {
+            $this->RewriteCodes = $param["RewriteCodes"];
+        }
+
+        if (array_key_exists("TakeUrls",$param) and $param["TakeUrls"] !== null) {
+            $this->TakeUrls = $param["TakeUrls"];
         }
     }
 }

@@ -60,8 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRole(string $Role) 设置函数绑定的角色
  * @method string getInstallDependency() 获取是否自动安装依赖
  * @method void setInstallDependency(string $InstallDependency) 设置是否自动安装依赖
- * @method string getStatus() 获取函数状态
- * @method void setStatus(string $Status) 设置函数状态
+ * @method string getStatus() 获取函数状态，状态值及流转[参考说明](https://cloud.tencent.com/document/product/583/47175)
+ * @method void setStatus(string $Status) 设置函数状态，状态值及流转[参考说明](https://cloud.tencent.com/document/product/583/47175)
  * @method string getStatusDesc() 获取状态描述
  * @method void setStatusDesc(string $StatusDesc) 设置状态描述
  * @method string getClsLogsetId() 获取日志投递到的Cls日志集
@@ -93,6 +93,24 @@ use TencentCloud\Common\AbstractModel;
  * @method string getOnsEnable() 获取是否启用Ons
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOnsEnable(string $OnsEnable) 设置是否启用Ons
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method CfsConfig getCfsConfig() 获取文件系统配置参数，用于云函数挂载文件系统
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCfsConfig(CfsConfig $CfsConfig) 设置文件系统配置参数，用于云函数挂载文件系统
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAvailableStatus() 获取函数的计费状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/47175#.E5.87.BD.E6.95.B0.E8.AE.A1.E8.B4.B9.E7.8A.B6.E6.80.81)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAvailableStatus(string $AvailableStatus) 设置函数的计费状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/47175#.E5.87.BD.E6.95.B0.E8.AE.A1.E8.B4.B9.E7.8A.B6.E6.80.81)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getQualifier() 获取函数版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setQualifier(string $Qualifier) 设置函数版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getInitTimeout() 获取函数初始化超时时间
+ * @method void setInitTimeout(integer $InitTimeout) 设置函数初始化超时时间
+ * @method array getStatusReasons() 获取函数状态失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatusReasons(array $StatusReasons) 设置函数状态失败原因
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -200,7 +218,7 @@ class GetFunctionResponse extends AbstractModel
     public $InstallDependency;
 
     /**
-     * @var string 函数状态
+     * @var string 函数状态，状态值及流转[参考说明](https://cloud.tencent.com/document/product/583/47175)
      */
     public $Status;
 
@@ -277,6 +295,35 @@ class GetFunctionResponse extends AbstractModel
     public $OnsEnable;
 
     /**
+     * @var CfsConfig 文件系统配置参数，用于云函数挂载文件系统
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CfsConfig;
+
+    /**
+     * @var string 函数的计费状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/47175#.E5.87.BD.E6.95.B0.E8.AE.A1.E8.B4.B9.E7.8A.B6.E6.80.81)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AvailableStatus;
+
+    /**
+     * @var string 函数版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Qualifier;
+
+    /**
+     * @var integer 函数初始化超时时间
+     */
+    public $InitTimeout;
+
+    /**
+     * @var array 函数状态失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StatusReasons;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -302,7 +349,7 @@ class GetFunctionResponse extends AbstractModel
      * @param string $Namespace 函数的命名空间
      * @param string $Role 函数绑定的角色
      * @param string $InstallDependency 是否自动安装依赖
-     * @param string $Status 函数状态
+     * @param string $Status 函数状态，状态值及流转[参考说明](https://cloud.tencent.com/document/product/583/47175)
      * @param string $StatusDesc 状态描述
      * @param string $ClsLogsetId 日志投递到的Cls日志集
      * @param string $ClsTopicId 日志投递到的Cls Topic
@@ -318,6 +365,15 @@ class GetFunctionResponse extends AbstractModel
      * @param PublicNetConfigOut $PublicNetConfig 公网访问配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OnsEnable 是否启用Ons
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CfsConfig $CfsConfig 文件系统配置参数，用于云函数挂载文件系统
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AvailableStatus 函数的计费状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/47175#.E5.87.BD.E6.95.B0.E8.AE.A1.E8.B4.B9.E7.8A.B6.E6.80.81)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Qualifier 函数版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $InitTimeout 函数初始化超时时间
+     * @param array $StatusReasons 函数状态失败原因
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -493,6 +549,32 @@ class GetFunctionResponse extends AbstractModel
 
         if (array_key_exists("OnsEnable",$param) and $param["OnsEnable"] !== null) {
             $this->OnsEnable = $param["OnsEnable"];
+        }
+
+        if (array_key_exists("CfsConfig",$param) and $param["CfsConfig"] !== null) {
+            $this->CfsConfig = new CfsConfig();
+            $this->CfsConfig->deserialize($param["CfsConfig"]);
+        }
+
+        if (array_key_exists("AvailableStatus",$param) and $param["AvailableStatus"] !== null) {
+            $this->AvailableStatus = $param["AvailableStatus"];
+        }
+
+        if (array_key_exists("Qualifier",$param) and $param["Qualifier"] !== null) {
+            $this->Qualifier = $param["Qualifier"];
+        }
+
+        if (array_key_exists("InitTimeout",$param) and $param["InitTimeout"] !== null) {
+            $this->InitTimeout = $param["InitTimeout"];
+        }
+
+        if (array_key_exists("StatusReasons",$param) and $param["StatusReasons"] !== null) {
+            $this->StatusReasons = [];
+            foreach ($param["StatusReasons"] as $key => $value){
+                $obj = new StatusReason();
+                $obj->deserialize($value);
+                array_push($this->StatusReasons, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

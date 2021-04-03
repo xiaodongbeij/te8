@@ -42,6 +42,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTokenValidTime(integer $TokenValidTime) 设置Token有效时间
  * @method string getInternalEndpoint() 获取实例内部访问地址
  * @method void setInternalEndpoint(string $InternalEndpoint) 设置实例内部访问地址
+ * @method TagSpecification getTagSpecification() 获取实例云标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTagSpecification(TagSpecification $TagSpecification) 设置实例云标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getExpiredAt() 获取实例过期时间（预付费）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExpiredAt(string $ExpiredAt) 设置实例过期时间（预付费）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPayMod() 获取实例付费类型，0表示后付费，1表示预付费
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPayMod(integer $PayMod) 设置实例付费类型，0表示后付费，1表示预付费
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRenewFlag() 获取预付费续费标识，0表示手动续费，1表示自动续费，2不续费并且不通知
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRenewFlag(integer $RenewFlag) 设置预付费续费标识，0表示手动续费，1表示自动续费，2不续费并且不通知
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Registry extends AbstractModel
 {
@@ -101,6 +117,30 @@ class Registry extends AbstractModel
     public $InternalEndpoint;
 
     /**
+     * @var TagSpecification 实例云标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TagSpecification;
+
+    /**
+     * @var string 实例过期时间（预付费）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExpiredAt;
+
+    /**
+     * @var integer 实例付费类型，0表示后付费，1表示预付费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PayMod;
+
+    /**
+     * @var integer 预付费续费标识，0表示手动续费，1表示自动续费，2不续费并且不通知
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RenewFlag;
+
+    /**
      * @param string $RegistryId 实例ID
      * @param string $RegistryName 实例名称
      * @param string $RegistryType 实例规格
@@ -112,6 +152,14 @@ class Registry extends AbstractModel
      * @param boolean $EnableAnonymous 是否支持匿名
      * @param integer $TokenValidTime Token有效时间
      * @param string $InternalEndpoint 实例内部访问地址
+     * @param TagSpecification $TagSpecification 实例云标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ExpiredAt 实例过期时间（预付费）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $PayMod 实例付费类型，0表示后付费，1表示预付费
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RenewFlag 预付费续费标识，0表示手动续费，1表示自动续费，2不续费并且不通知
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -168,6 +216,23 @@ class Registry extends AbstractModel
 
         if (array_key_exists("InternalEndpoint",$param) and $param["InternalEndpoint"] !== null) {
             $this->InternalEndpoint = $param["InternalEndpoint"];
+        }
+
+        if (array_key_exists("TagSpecification",$param) and $param["TagSpecification"] !== null) {
+            $this->TagSpecification = new TagSpecification();
+            $this->TagSpecification->deserialize($param["TagSpecification"]);
+        }
+
+        if (array_key_exists("ExpiredAt",$param) and $param["ExpiredAt"] !== null) {
+            $this->ExpiredAt = $param["ExpiredAt"];
+        }
+
+        if (array_key_exists("PayMod",$param) and $param["PayMod"] !== null) {
+            $this->PayMod = $param["PayMod"];
+        }
+
+        if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
+            $this->RenewFlag = $param["RenewFlag"];
         }
     }
 }

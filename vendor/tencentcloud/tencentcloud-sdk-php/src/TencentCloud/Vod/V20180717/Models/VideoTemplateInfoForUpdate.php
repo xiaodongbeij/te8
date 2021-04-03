@@ -30,9 +30,9 @@ use TencentCloud\Common\AbstractModel;
 <li>libx265：H.265 编码</li>
 <li>av1：AOMedia Video 1 编码</li>
 目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。av1 编码容器目前只支持 mp4 。
- * @method integer getFps() 获取视频帧率，取值范围：[0, 60]，单位：Hz。
+ * @method integer getFps() 获取视频帧率，取值范围：[0, 100]，单位：Hz。
 当取值为 0，表示帧率和原始视频保持一致。
- * @method void setFps(integer $Fps) 设置视频帧率，取值范围：[0, 60]，单位：Hz。
+ * @method void setFps(integer $Fps) 设置视频帧率，取值范围：[0, 100]，单位：Hz。
 当取值为 0，表示帧率和原始视频保持一致。
  * @method integer getBitrate() 获取视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
 当取值为 0，表示视频码率和原始视频保持一致。
@@ -59,11 +59,21 @@ use TencentCloud\Common\AbstractModel;
  * @method string getFillType() 获取填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
 <li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
 <li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
-默认值：black 。
+<li>white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。</li>
+<li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊填充。</li>
  * @method void setFillType(string $FillType) 设置填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
 <li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
 <li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
-默认值：black 。
+<li>white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。</li>
+<li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊填充。</li>
+ * @method integer getVcrf() 获取视频恒定码率控制因子。取值范围为[0, 51]，填0表示禁用该参数。
+如果没有特殊需求，不建议指定该参数。
+ * @method void setVcrf(integer $Vcrf) 设置视频恒定码率控制因子。取值范围为[0, 51]，填0表示禁用该参数。
+如果没有特殊需求，不建议指定该参数。
+ * @method integer getGop() 获取关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。
+当填 0 或不填时，系统将自动设置 gop 长度。
+ * @method void setGop(integer $Gop) 设置关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。
+当填 0 或不填时，系统将自动设置 gop 长度。
  */
 class VideoTemplateInfoForUpdate extends AbstractModel
 {
@@ -77,7 +87,7 @@ class VideoTemplateInfoForUpdate extends AbstractModel
     public $Codec;
 
     /**
-     * @var integer 视频帧率，取值范围：[0, 60]，单位：Hz。
+     * @var integer 视频帧率，取值范围：[0, 100]，单位：Hz。
 当取值为 0，表示帧率和原始视频保持一致。
      */
     public $Fps;
@@ -113,9 +123,22 @@ class VideoTemplateInfoForUpdate extends AbstractModel
      * @var string 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
 <li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
 <li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
-默认值：black 。
+<li>white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。</li>
+<li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊填充。</li>
      */
     public $FillType;
+
+    /**
+     * @var integer 视频恒定码率控制因子。取值范围为[0, 51]，填0表示禁用该参数。
+如果没有特殊需求，不建议指定该参数。
+     */
+    public $Vcrf;
+
+    /**
+     * @var integer 关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。
+当填 0 或不填时，系统将自动设置 gop 长度。
+     */
+    public $Gop;
 
     /**
      * @param string $Codec 视频流的编码格式，可选值：
@@ -123,7 +146,7 @@ class VideoTemplateInfoForUpdate extends AbstractModel
 <li>libx265：H.265 编码</li>
 <li>av1：AOMedia Video 1 编码</li>
 目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。av1 编码容器目前只支持 mp4 。
-     * @param integer $Fps 视频帧率，取值范围：[0, 60]，单位：Hz。
+     * @param integer $Fps 视频帧率，取值范围：[0, 100]，单位：Hz。
 当取值为 0，表示帧率和原始视频保持一致。
      * @param integer $Bitrate 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
 当取值为 0，表示视频码率和原始视频保持一致。
@@ -139,7 +162,12 @@ class VideoTemplateInfoForUpdate extends AbstractModel
      * @param string $FillType 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
 <li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
 <li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
-默认值：black 。
+<li>white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。</li>
+<li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊填充。</li>
+     * @param integer $Vcrf 视频恒定码率控制因子。取值范围为[0, 51]，填0表示禁用该参数。
+如果没有特殊需求，不建议指定该参数。
+     * @param integer $Gop 关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。
+当填 0 或不填时，系统将自动设置 gop 长度。
      */
     function __construct()
     {
@@ -180,6 +208,14 @@ class VideoTemplateInfoForUpdate extends AbstractModel
 
         if (array_key_exists("FillType",$param) and $param["FillType"] !== null) {
             $this->FillType = $param["FillType"];
+        }
+
+        if (array_key_exists("Vcrf",$param) and $param["Vcrf"] !== null) {
+            $this->Vcrf = $param["Vcrf"];
+        }
+
+        if (array_key_exists("Gop",$param) and $param["Gop"] !== null) {
+            $this->Gop = $param["Gop"];
         }
     }
 }

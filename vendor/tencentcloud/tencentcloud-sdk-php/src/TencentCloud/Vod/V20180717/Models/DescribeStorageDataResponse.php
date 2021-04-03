@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInfrequentStorage(integer $InfrequentStorage) 设置当前低频存储量，单位是字节。
  * @method integer getStandardStorage() 获取当前标准存储量，单位是字节。
  * @method void setStandardStorage(integer $StandardStorage) 设置当前标准存储量，单位是字节。
+ * @method array getStorageStat() 获取各计费区域的存储用量。
+ * @method void setStorageStat(array $StorageStat) 设置各计费区域的存储用量。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -54,6 +56,11 @@ class DescribeStorageDataResponse extends AbstractModel
     public $StandardStorage;
 
     /**
+     * @var array 各计费区域的存储用量。
+     */
+    public $StorageStat;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -63,6 +70,7 @@ class DescribeStorageDataResponse extends AbstractModel
      * @param integer $TotalStorage 当前总存储量，单位是字节。
      * @param integer $InfrequentStorage 当前低频存储量，单位是字节。
      * @param integer $StandardStorage 当前标准存储量，单位是字节。
+     * @param array $StorageStat 各计费区域的存储用量。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -92,6 +100,15 @@ class DescribeStorageDataResponse extends AbstractModel
 
         if (array_key_exists("StandardStorage",$param) and $param["StandardStorage"] !== null) {
             $this->StandardStorage = $param["StandardStorage"];
+        }
+
+        if (array_key_exists("StorageStat",$param) and $param["StorageStat"] !== null) {
+            $this->StorageStat = [];
+            foreach ($param["StorageStat"] as $key => $value){
+                $obj = new StorageStatData();
+                $obj->deserialize($value);
+                array_push($this->StorageStat, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

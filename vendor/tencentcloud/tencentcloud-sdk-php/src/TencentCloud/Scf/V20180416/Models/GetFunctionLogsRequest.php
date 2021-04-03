@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetFunctionLogs请求参数结构体
  *
- * @method string getFunctionName() 获取函数的名称
- * @method void setFunctionName(string $FunctionName) 设置函数的名称
+ * @method string getFunctionName() 获取函数的名称。
+- 为保证[获取函数运行日志](https://cloud.tencent.com/document/product/583/18583)接口`GetFunctionLogs`兼容性，输入参数`FunctionName`仍为非必填项，但建议填写该参数，否则可能导致日志获取失败。
+- 函数关联日志服务后，建议使用[日志服务](https://cloud.tencent.com/document/product/614/16875)相关接口以获得最佳日志检索体验。
+ * @method void setFunctionName(string $FunctionName) 设置函数的名称。
+- 为保证[获取函数运行日志](https://cloud.tencent.com/document/product/583/18583)接口`GetFunctionLogs`兼容性，输入参数`FunctionName`仍为非必填项，但建议填写该参数，否则可能导致日志获取失败。
+- 函数关联日志服务后，建议使用[日志服务](https://cloud.tencent.com/document/product/614/16875)相关接口以获得最佳日志检索体验。
  * @method integer getOffset() 获取数据的偏移量，Offset+Limit不能大于10000
  * @method void setOffset(integer $Offset) 设置数据的偏移量，Offset+Limit不能大于10000
  * @method integer getLimit() 获取返回数据的长度，Offset+Limit不能大于10000
@@ -42,13 +46,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置查询的具体日期，例如：2017-05-16 20:00:00，只能与endtime相差一天之内
  * @method string getEndTime() 获取查询的具体日期，例如：2017-05-16 20:59:59，只能与startTime相差一天之内
  * @method void setEndTime(string $EndTime) 设置查询的具体日期，例如：2017-05-16 20:59:59，只能与startTime相差一天之内
- * @method LogSearchContext getSearchContext() 获取服务日志相关参数，第一页日志 Offset 为空字符串，后续分页按响应字段里的SearchContext填写
- * @method void setSearchContext(LogSearchContext $SearchContext) 设置服务日志相关参数，第一页日志 Offset 为空字符串，后续分页按响应字段里的SearchContext填写
+ * @method LogSearchContext getSearchContext() 获取该字段已下线
+ * @method void setSearchContext(LogSearchContext $SearchContext) 设置该字段已下线
  */
 class GetFunctionLogsRequest extends AbstractModel
 {
     /**
-     * @var string 函数的名称
+     * @var string 函数的名称。
+- 为保证[获取函数运行日志](https://cloud.tencent.com/document/product/583/18583)接口`GetFunctionLogs`兼容性，输入参数`FunctionName`仍为非必填项，但建议填写该参数，否则可能导致日志获取失败。
+- 函数关联日志服务后，建议使用[日志服务](https://cloud.tencent.com/document/product/614/16875)相关接口以获得最佳日志检索体验。
      */
     public $FunctionName;
 
@@ -103,12 +109,14 @@ class GetFunctionLogsRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var LogSearchContext 服务日志相关参数，第一页日志 Offset 为空字符串，后续分页按响应字段里的SearchContext填写
+     * @var LogSearchContext 该字段已下线
      */
     public $SearchContext;
 
     /**
-     * @param string $FunctionName 函数的名称
+     * @param string $FunctionName 函数的名称。
+- 为保证[获取函数运行日志](https://cloud.tencent.com/document/product/583/18583)接口`GetFunctionLogs`兼容性，输入参数`FunctionName`仍为非必填项，但建议填写该参数，否则可能导致日志获取失败。
+- 函数关联日志服务后，建议使用[日志服务](https://cloud.tencent.com/document/product/614/16875)相关接口以获得最佳日志检索体验。
      * @param integer $Offset 数据的偏移量，Offset+Limit不能大于10000
      * @param integer $Limit 返回数据的长度，Offset+Limit不能大于10000
      * @param string $Order 以升序还是降序的方式对日志进行排序，可选值 desc和 asc
@@ -119,7 +127,7 @@ class GetFunctionLogsRequest extends AbstractModel
      * @param string $FunctionRequestId 执行该函数对应的requestId
      * @param string $StartTime 查询的具体日期，例如：2017-05-16 20:00:00，只能与endtime相差一天之内
      * @param string $EndTime 查询的具体日期，例如：2017-05-16 20:59:59，只能与startTime相差一天之内
-     * @param LogSearchContext $SearchContext 服务日志相关参数，第一页日志 Offset 为空字符串，后续分页按响应字段里的SearchContext填写
+     * @param LogSearchContext $SearchContext 该字段已下线
      */
     function __construct()
     {

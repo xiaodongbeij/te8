@@ -104,6 +104,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 * 密钥对是通过一种算法生成的一对密钥，在生成的密钥对中，一个向外界公开，称为公钥；另一个用户自己保留，称为私钥。密钥对的公钥内容可以通过这个接口查询，但私钥内容系统不保留。
  * @method Models\DescribeRegionsResponse DescribeRegions(Models\DescribeRegionsRequest $req) 本接口(DescribeRegions)用于查询地域信息。
  * @method Models\DescribeReservedInstancesResponse DescribeReservedInstances(Models\DescribeReservedInstancesRequest $req) 本接口(DescribeReservedInstances)可提供列出用户已购买的预留实例
+ * @method Models\DescribeReservedInstancesConfigInfosResponse DescribeReservedInstancesConfigInfos(Models\DescribeReservedInstancesConfigInfosRequest $req) 本接口(DescribeReservedInstancesConfigInfos)供用户列出可购买预留实例机型配置。预留实例当前只针对国际站白名单用户开放。
  * @method Models\DescribeReservedInstancesOfferingsResponse DescribeReservedInstancesOfferings(Models\DescribeReservedInstancesOfferingsRequest $req) 本接口(DescribeReservedInstancesOfferings)供用户列出可购买的预留实例配置
  * @method Models\DescribeZoneInstanceConfigInfosResponse DescribeZoneInstanceConfigInfos(Models\DescribeZoneInstanceConfigInfosRequest $req) 本接口(DescribeZoneInstanceConfigInfos) 获取可用区的机型信息。
  * @method Models\DescribeZonesResponse DescribeZones(Models\DescribeZonesRequest $req) 本接口(DescribeZones)用于查询可用区信息。
@@ -121,6 +122,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 * 本接口的功能是将密钥对导入到用户账户，并不会自动绑定到实例。如需绑定可以使用[AssociasteInstancesKeyPair](https://cloud.tencent.com/document/api/213/9404)接口。
 * 需指定密钥对名称以及该密钥对的公钥文本。
 * 如果用户只有私钥，可以通过 `SSL` 工具将私钥转换成公钥后再导入。
+ * @method Models\InquirePricePurchaseReservedInstancesOfferingResponse InquirePricePurchaseReservedInstancesOffering(Models\InquirePricePurchaseReservedInstancesOfferingRequest $req) 本接口(InquirePricePurchaseReservedInstancesOffering)用于创建预留实例询价。本接口仅允许针对购买限制范围内的预留实例配置进行询价。预留实例当前只针对国际站白名单用户开放。
  * @method Models\InquiryPriceModifyInstancesChargeTypeResponse InquiryPriceModifyInstancesChargeType(Models\InquiryPriceModifyInstancesChargeTypeRequest $req) 本接口 (InquiryPriceModifyInstancesChargeType) 用于切换实例的计费模式询价。
 
 * 只支持从 `POSTPAID_BY_HOUR` 计费模式切换为`PREPAID`计费模式。
@@ -250,6 +252,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 
 * 实例创建成功后将自动开机启动，[实例状态](https://cloud.tencent.com/document/product/213/15753#InstanceStatus)变为“运行中”。
 * 预付费实例的购买会预先扣除本次实例购买所需金额，按小时后付费实例购买会预先冻结本次实例购买一小时内所需金额，在调用本接口前请确保账户余额充足。
+* 调用本接口创建实例，支持代金券自动抵扣（注意，代金券不可用于抵扣后付费冻结金额），详情请参考[代金券选用规则](https://cloud.tencent.com/document/product/555/7428)。
 * 本接口允许购买的实例数量遵循[CVM实例购买限制](https://cloud.tencent.com/document/product/213/2664)，所创建的实例和官网入口创建的实例共用配额。
 * 本接口为异步接口，当创建实例请求下发成功后会返回一个实例`ID`列表和一个`RequestId`，此时创建实例操作并未立即完成。在此期间实例的状态将会处于“PENDING”，实例创建结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728)  接口查询，如果实例状态(InstanceState)由“PENDING”变为“RUNNING”，则代表实例创建成功，“LAUNCH_FAILED”代表实例创建失败。
  * @method Models\StartInstancesResponse StartInstances(Models\StartInstancesRequest $req) 本接口 (StartInstances) 用于启动一个或多个实例。
@@ -284,6 +287,11 @@ class CvmClient extends AbstractClient
      * @var string
      */
     protected $endpoint = "cvm.tencentcloudapi.com";
+
+    /**
+     * @var string
+     */
+    protected $service = "cvm";
 
     /**
      * @var string

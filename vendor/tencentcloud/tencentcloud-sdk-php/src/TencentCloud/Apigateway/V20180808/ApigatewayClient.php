@@ -48,7 +48,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
  * @method Models\DemoteServiceUsagePlanResponse DemoteServiceUsagePlan(Models\DemoteServiceUsagePlanRequest $req) 本接口（DemoteServiceUsagePlan）用于将某个服务在某个环境的使用计划，降级到API上。
 如果服务内没有API不允许进行此操作。
 如果当前环境没有发布，不允许进行此操作。
- * @method Models\DescribeApiResponse DescribeApi(Models\DescribeApiRequest $req) 本接口（DescribeApi）用于查询用户部署于 API 网关的 API 接口的详细信息。​
+ * @method Models\DescribeApiResponse DescribeApi(Models\DescribeApiRequest $req) 本接口（DescribeApi）用于查询用户 API 网关的 API 接口的详细信息。​
  * @method Models\DescribeApiEnvironmentStrategyResponse DescribeApiEnvironmentStrategy(Models\DescribeApiEnvironmentStrategyRequest $req) 本接口（DescribeApiEnvironmentStrategy）用于展示API绑定的限流策略。
  * @method Models\DescribeApiKeyResponse DescribeApiKey(Models\DescribeApiKeyRequest $req) 本接口（DescribeApiKey）用于查询密钥详情。
 用户在创建密钥后，可用此接口查询一个 API 密钥的详情，该接口会显示密钥 Key。
@@ -61,6 +61,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
  * @method Models\DescribeIPStrategyApisStatusResponse DescribeIPStrategyApisStatus(Models\DescribeIPStrategyApisStatusRequest $req) 本接口（DescribeIPStrategyApisStatus）用于查询IP策略可以绑定的API列表。即服务下所有API和该策略已绑定API的差集。
  * @method Models\DescribeIPStrategysStatusResponse DescribeIPStrategysStatus(Models\DescribeIPStrategysStatusRequest $req) 本接口（DescribeIPStrategysStatus）用于查询服务IP策略列表。
  * @method Models\DescribeLogSearchResponse DescribeLogSearch(Models\DescribeLogSearchRequest $req) 本接口DescribeLogSearch用于搜索日志
+ * @method Models\DescribePluginsResponse DescribePlugins(Models\DescribePluginsRequest $req) 展示插件列表和详情，支持分页，支持按照插件类型查询，支持按照插件ID批量查询，支持按照插件名称查询。
  * @method Models\DescribeServiceResponse DescribeService(Models\DescribeServiceRequest $req) 本接口（DescribeService）用于查询一个服务的详细信息、包括服务的描述、域名、协议、创建时间、发布情况等信息。
  * @method Models\DescribeServiceEnvironmentListResponse DescribeServiceEnvironmentList(Models\DescribeServiceEnvironmentListRequest $req) 本接口（DescribeServiceEnvironmentList）用于查询一个服务的环境列表，可查询到此服务下所有环境及其状态。
  * @method Models\DescribeServiceEnvironmentReleaseHistoryResponse DescribeServiceEnvironmentReleaseHistory(Models\DescribeServiceEnvironmentReleaseHistoryRequest $req) 本接口（DescribeServiceEnvironmentReleaseHistory）用于查询服务环境的发布历史。
@@ -111,6 +112,11 @@ class ApigatewayClient extends AbstractClient
      * @var string
      */
     protected $endpoint = "apigateway.tencentcloudapi.com";
+
+    /**
+     * @var string
+     */
+    protected $service = "apigateway";
 
     /**
      * @var string

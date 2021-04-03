@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSqlTemplate(string $SqlTemplate) 设置sql模板
  * @method string getSqlText() 获取带参数SQL（随机）
  * @method void setSqlText(string $SqlText) 设置带参数SQL（随机）
- * @method string getSchema() 获取schema
- * @method void setSchema(string $Schema) 设置schema
+ * @method string getSchema() 获取数据库名
+ * @method void setSchema(string $Schema) 设置数据库名
  * @method float getQueryTimeRatio() 获取总耗时占比
  * @method void setQueryTimeRatio(float $QueryTimeRatio) 设置总耗时占比
  * @method float getLockTimeRatio() 获取sql总锁等待时间占比
@@ -139,7 +139,7 @@ class SlowLogTopSqlItem extends AbstractModel
     public $SqlText;
 
     /**
-     * @var string schema
+     * @var string 数据库名
      */
     public $Schema;
 
@@ -179,7 +179,7 @@ class SlowLogTopSqlItem extends AbstractModel
      * @param integer $ExecTimes 执行次数
      * @param string $SqlTemplate sql模板
      * @param string $SqlText 带参数SQL（随机）
-     * @param string $Schema schema
+     * @param string $Schema 数据库名
      * @param float $QueryTimeRatio 总耗时占比
      * @param float $LockTimeRatio sql总锁等待时间占比
      * @param float $RowsExaminedRatio 总扫描行数占比

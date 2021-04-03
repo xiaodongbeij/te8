@@ -156,7 +156,37 @@ class LiveController extends HomebaseController{
     public function video()
     {
         $url = 'http://x4.qiezizy8.com/api.php/provide/vod/?ac=detail&h=72';
-        $json = file_get_contents($url);
+        $json = $this->http_request($url);
+        if(!$json) die('错误');
+        $json = json_decode($json, true);
+        $p = $json['pagecount'];
+        for($i=1;$i<=$p;$i++)
+        {
+
+            $list = $this->http_request("http://x4.qiezizy8.com/api.php/provide/vod/?ac=detail&h=72&pg=" . $i);
+            $list = json_decode($list, true);
+           
+            if(!empty($list['list']))
+            {
+                foreach ($list['list']  as $v)
+                {
+                    $param = [
+                        'uid' => 1,
+                        'title' => $v['vod_name'],
+                        'thumb' => $v['vod_pic'],
+                        'href' => mb_substr($v['vod_play_url'],4),
+                        'classid' => 7,
+                        'anyway' => '1.1',
+                        'addtime' => time(),
+                    ];
+                    var_dump($param);
+                    Db::name('video')->insert($param,true);
+                }
+            }
+        }
+        
+        echo '采集成功';
+        
     }
     
     
@@ -223,9 +253,9 @@ class LiveController extends HomebaseController{
             // if(empty($users[$k]['id'])) continue;
             // if(mb_strlen($pull) > 255 ) continue;
             // 获取视频源
-            $rss = $this->base64EncodeImage($thumb);
+            // $rss = $this->base64EncodeImage($thumb);
            
-            if($res) continue;
+            // if($res) continue;
             // 过滤这个源  06b.anhuazhujiu.cn 02b.anhuazhujiu.cn  pull1.llhappy.xyz 07b.anhuazhujiu.cn  czrk.net.cn  05b.anhuazhujiu.cn 06b.anhuazhujiu.cn 04b.anhuazhujiu.cn
             // if(strstr($pull,'.mp4')) continue;
             
@@ -273,7 +303,7 @@ class LiveController extends HomebaseController{
                 'hot' => $cp['hot'],
                 'reward_amount' => $card_money[array_rand($card_money)]
             );
-            var_dump($thumb);
+           
             DB::name('live')->insert($data2,true);
             delcache('userinfo_' . $uid);
             DB::name('user')->where('id', $uid)->update(['wechat'=>$card[array_rand($card)], 'qq' => $card_qq[array_rand($card_qq)]]);
@@ -360,6 +390,23 @@ class LiveController extends HomebaseController{
         curl_close($curl);
         
         return json_decode($data,true);
+    }
+    
+    
+    protected function http_request($url, $data = null)
+    {
+        $curl = curl_init();
+        curl_setopt($curl, CURLOPT_URL, $url);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, FALSE);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, FALSE);
+        if (!empty($data)){
+            curl_setopt($curl, CURLOPT_POST, 1);
+            curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+        }
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
+        $output = curl_exec($curl);
+        curl_close($curl);
+        return $output;
     }
     
 }

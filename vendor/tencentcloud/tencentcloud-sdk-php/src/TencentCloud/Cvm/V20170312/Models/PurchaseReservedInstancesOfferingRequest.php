@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDryRun(boolean $DryRun) 设置试运行
  * @method string getClientToken() 获取用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。<br>更多详细信息请参阅：如何保证幂等性
  * @method void setClientToken(string $ClientToken) 设置用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。<br>更多详细信息请参阅：如何保证幂等性
+ * @method string getReservedInstanceName() 获取预留实例显示名称。<br><li>不指定实例显示名称则默认显示‘未命名’。</li><li>最多支持60个字符（包含模式串）。</li>
+ * @method void setReservedInstanceName(string $ReservedInstanceName) 设置预留实例显示名称。<br><li>不指定实例显示名称则默认显示‘未命名’。</li><li>最多支持60个字符（包含模式串）。</li>
  */
 class PurchaseReservedInstancesOfferingRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class PurchaseReservedInstancesOfferingRequest extends AbstractModel
     public $ClientToken;
 
     /**
+     * @var string 预留实例显示名称。<br><li>不指定实例显示名称则默认显示‘未命名’。</li><li>最多支持60个字符（包含模式串）。</li>
+     */
+    public $ReservedInstanceName;
+
+    /**
      * @param integer $InstanceCount 购买预留实例计费数量
      * @param string $ReservedInstancesOfferingId 预留实例计费配置ID
      * @param boolean $DryRun 试运行
      * @param string $ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。<br>更多详细信息请参阅：如何保证幂等性
+     * @param string $ReservedInstanceName 预留实例显示名称。<br><li>不指定实例显示名称则默认显示‘未命名’。</li><li>最多支持60个字符（包含模式串）。</li>
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class PurchaseReservedInstancesOfferingRequest extends AbstractModel
 
         if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
             $this->ClientToken = $param["ClientToken"];
+        }
+
+        if (array_key_exists("ReservedInstanceName",$param) and $param["ReservedInstanceName"] !== null) {
+            $this->ReservedInstanceName = $param["ReservedInstanceName"];
         }
     }
 }

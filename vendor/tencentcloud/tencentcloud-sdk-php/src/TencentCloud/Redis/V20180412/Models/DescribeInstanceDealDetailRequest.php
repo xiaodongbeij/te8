@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceDealDetail请求参数结构体
  *
- * @method array getDealIds() 获取订单ID数组
- * @method void setDealIds(array $DealIds) 设置订单ID数组
+ * @method array getDealIds() 获取订单交易ID数组，即 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的输出参数DealId。
+ * @method void setDealIds(array $DealIds) 设置订单交易ID数组，即 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的输出参数DealId。
  */
 class DescribeInstanceDealDetailRequest extends AbstractModel
 {
     /**
-     * @var array 订单ID数组
+     * @var array 订单交易ID数组，即 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的输出参数DealId。
      */
     public $DealIds;
 
     /**
-     * @param array $DealIds 订单ID数组
+     * @param array $DealIds 订单交易ID数组，即 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的输出参数DealId。
      */
     function __construct()
     {

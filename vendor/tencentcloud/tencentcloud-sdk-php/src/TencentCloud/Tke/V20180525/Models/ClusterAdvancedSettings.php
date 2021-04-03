@@ -36,8 +36,34 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsNonStaticIpMode(boolean $IsNonStaticIpMode) 设置集群VPC-CNI模式是否为非固定IP，默认: FALSE 固定IP。
  * @method boolean getDeletionProtection() 获取是否启用集群删除保护
  * @method void setDeletionProtection(boolean $DeletionProtection) 设置是否启用集群删除保护
- * @method string getKubeProxyMode() 获取集群的网络代理模型
- * @method void setKubeProxyMode(string $KubeProxyMode) 设置集群的网络代理模型
+ * @method string getKubeProxyMode() 获取集群的网络代理模型，目前tke集群支持的网络代理模式有三种：iptables,ipvs,ipvs-bpf，此参数仅在使用ipvs-bpf模式时使用，三种网络模式的参数设置关系如下：
+iptables模式：IPVS和KubeProxyMode都不设置
+ipvs模式: 设置IPVS为true, KubeProxyMode不设置
+ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
+使用ipvs-bpf的网络模式需要满足以下条件：
+1. 集群版本必须为1.14及以上；
+2. 系统镜像必须是: Tencent Linux 2.4；
+ * @method void setKubeProxyMode(string $KubeProxyMode) 设置集群的网络代理模型，目前tke集群支持的网络代理模式有三种：iptables,ipvs,ipvs-bpf，此参数仅在使用ipvs-bpf模式时使用，三种网络模式的参数设置关系如下：
+iptables模式：IPVS和KubeProxyMode都不设置
+ipvs模式: 设置IPVS为true, KubeProxyMode不设置
+ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
+使用ipvs-bpf的网络模式需要满足以下条件：
+1. 集群版本必须为1.14及以上；
+2. 系统镜像必须是: Tencent Linux 2.4；
+ * @method boolean getAuditEnabled() 获取是否开启审计开关
+ * @method void setAuditEnabled(boolean $AuditEnabled) 设置是否开启审计开关
+ * @method string getAuditLogsetId() 获取审计日志上传到的logset日志集
+ * @method void setAuditLogsetId(string $AuditLogsetId) 设置审计日志上传到的logset日志集
+ * @method string getAuditLogTopicId() 获取审计日志上传到的topic
+ * @method void setAuditLogTopicId(string $AuditLogTopicId) 设置审计日志上传到的topic
+ * @method string getVpcCniType() 获取区分单网卡多IP模式和独立网卡模式
+ * @method void setVpcCniType(string $VpcCniType) 设置区分单网卡多IP模式和独立网卡模式
+ * @method string getRuntimeVersion() 获取运行时版本
+ * @method void setRuntimeVersion(string $RuntimeVersion) 设置运行时版本
+ * @method boolean getEnableCustomizedPodCIDR() 获取是否开节点podCIDR大小的自定义模式
+ * @method void setEnableCustomizedPodCIDR(boolean $EnableCustomizedPodCIDR) 设置是否开节点podCIDR大小的自定义模式
+ * @method integer getBasePodNumber() 获取自定义模式下的基础pod数量
+ * @method void setBasePodNumber(integer $BasePodNumber) 设置自定义模式下的基础pod数量
  */
 class ClusterAdvancedSettings extends AbstractModel
 {
@@ -82,9 +108,50 @@ class ClusterAdvancedSettings extends AbstractModel
     public $DeletionProtection;
 
     /**
-     * @var string 集群的网络代理模型
+     * @var string 集群的网络代理模型，目前tke集群支持的网络代理模式有三种：iptables,ipvs,ipvs-bpf，此参数仅在使用ipvs-bpf模式时使用，三种网络模式的参数设置关系如下：
+iptables模式：IPVS和KubeProxyMode都不设置
+ipvs模式: 设置IPVS为true, KubeProxyMode不设置
+ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
+使用ipvs-bpf的网络模式需要满足以下条件：
+1. 集群版本必须为1.14及以上；
+2. 系统镜像必须是: Tencent Linux 2.4；
      */
     public $KubeProxyMode;
+
+    /**
+     * @var boolean 是否开启审计开关
+     */
+    public $AuditEnabled;
+
+    /**
+     * @var string 审计日志上传到的logset日志集
+     */
+    public $AuditLogsetId;
+
+    /**
+     * @var string 审计日志上传到的topic
+     */
+    public $AuditLogTopicId;
+
+    /**
+     * @var string 区分单网卡多IP模式和独立网卡模式
+     */
+    public $VpcCniType;
+
+    /**
+     * @var string 运行时版本
+     */
+    public $RuntimeVersion;
+
+    /**
+     * @var boolean 是否开节点podCIDR大小的自定义模式
+     */
+    public $EnableCustomizedPodCIDR;
+
+    /**
+     * @var integer 自定义模式下的基础pod数量
+     */
+    public $BasePodNumber;
 
     /**
      * @param boolean $IPVS 是否启用IPVS
@@ -95,7 +162,20 @@ class ClusterAdvancedSettings extends AbstractModel
      * @param string $NetworkType 集群网络类型（包括GR(全局路由)和VPC-CNI两种模式，默认为GR。
      * @param boolean $IsNonStaticIpMode 集群VPC-CNI模式是否为非固定IP，默认: FALSE 固定IP。
      * @param boolean $DeletionProtection 是否启用集群删除保护
-     * @param string $KubeProxyMode 集群的网络代理模型
+     * @param string $KubeProxyMode 集群的网络代理模型，目前tke集群支持的网络代理模式有三种：iptables,ipvs,ipvs-bpf，此参数仅在使用ipvs-bpf模式时使用，三种网络模式的参数设置关系如下：
+iptables模式：IPVS和KubeProxyMode都不设置
+ipvs模式: 设置IPVS为true, KubeProxyMode不设置
+ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
+使用ipvs-bpf的网络模式需要满足以下条件：
+1. 集群版本必须为1.14及以上；
+2. 系统镜像必须是: Tencent Linux 2.4；
+     * @param boolean $AuditEnabled 是否开启审计开关
+     * @param string $AuditLogsetId 审计日志上传到的logset日志集
+     * @param string $AuditLogTopicId 审计日志上传到的topic
+     * @param string $VpcCniType 区分单网卡多IP模式和独立网卡模式
+     * @param string $RuntimeVersion 运行时版本
+     * @param boolean $EnableCustomizedPodCIDR 是否开节点podCIDR大小的自定义模式
+     * @param integer $BasePodNumber 自定义模式下的基础pod数量
      */
     function __construct()
     {
@@ -145,6 +225,34 @@ class ClusterAdvancedSettings extends AbstractModel
 
         if (array_key_exists("KubeProxyMode",$param) and $param["KubeProxyMode"] !== null) {
             $this->KubeProxyMode = $param["KubeProxyMode"];
+        }
+
+        if (array_key_exists("AuditEnabled",$param) and $param["AuditEnabled"] !== null) {
+            $this->AuditEnabled = $param["AuditEnabled"];
+        }
+
+        if (array_key_exists("AuditLogsetId",$param) and $param["AuditLogsetId"] !== null) {
+            $this->AuditLogsetId = $param["AuditLogsetId"];
+        }
+
+        if (array_key_exists("AuditLogTopicId",$param) and $param["AuditLogTopicId"] !== null) {
+            $this->AuditLogTopicId = $param["AuditLogTopicId"];
+        }
+
+        if (array_key_exists("VpcCniType",$param) and $param["VpcCniType"] !== null) {
+            $this->VpcCniType = $param["VpcCniType"];
+        }
+
+        if (array_key_exists("RuntimeVersion",$param) and $param["RuntimeVersion"] !== null) {
+            $this->RuntimeVersion = $param["RuntimeVersion"];
+        }
+
+        if (array_key_exists("EnableCustomizedPodCIDR",$param) and $param["EnableCustomizedPodCIDR"] !== null) {
+            $this->EnableCustomizedPodCIDR = $param["EnableCustomizedPodCIDR"];
+        }
+
+        if (array_key_exists("BasePodNumber",$param) and $param["BasePodNumber"] !== null) {
+            $this->BasePodNumber = $param["BasePodNumber"];
         }
     }
 }

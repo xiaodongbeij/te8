@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceId(string $ResourceId) 设置资源Id
  * @method string getResourceName() 获取资源名称
  * @method void setResourceName(string $ResourceName) 设置资源名称
- * @method integer getStatus() 获取资源状态
- * @method void setStatus(integer $Status) 设置资源状态
+ * @method integer getStatus() 获取资源状态，1表示资源为正常，2表示资源处于隔离状态
+ * @method void setStatus(integer $Status) 设置资源状态，1表示资源为正常，2表示资源处于隔离状态
  * @method string getVip() 获取资源IP
  * @method void setVip(string $Vip) 设置资源IP
  * @method string getVpcId() 获取资源所属Vpc
@@ -34,12 +34,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(string $SubnetId) 设置资源所属子网
  * @method string getModel() 获取资源所属HSM的规格
  * @method void setModel(string $Model) 设置资源所属HSM的规格
- * @method integer getVsmType() 获取资源类型
- * @method void setVsmType(integer $VsmType) 设置资源类型
- * @method integer getRegionId() 获取地域Id
- * @method void setRegionId(integer $RegionId) 设置地域Id
- * @method integer getZoneId() 获取区域Id
- * @method void setZoneId(integer $ZoneId) 设置区域Id
+ * @method integer getVsmType() 获取资源类型，17表示EVSM，33表示GVSM，49表示SVSM
+ * @method void setVsmType(integer $VsmType) 设置资源类型，17表示EVSM，33表示GVSM，49表示SVSM
+ * @method integer getRegionId() 获取地域Id，返回腾讯云地域代码，如广州为1，北京为8
+ * @method void setRegionId(integer $RegionId) 设置地域Id，返回腾讯云地域代码，如广州为1，北京为8
+ * @method integer getZoneId() 获取区域Id，返回腾讯云每个地域的可用区代码
+ * @method void setZoneId(integer $ZoneId) 设置区域Id，返回腾讯云每个地域的可用区代码
  * @method integer getExpireTime() 获取过期时间
  * @method void setExpireTime(integer $ExpireTime) 设置过期时间
  * @method array getSgList() 获取安全组详情信息
@@ -78,6 +78,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetCidrBlock(string $SubnetCidrBlock) 设置子网的CIDR
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取资源所关联的Tag
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置资源所关联的Tag
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRenewFlag() 获取资源续费标识，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRenewFlag(integer $RenewFlag) 设置资源续费标识，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -94,7 +102,7 @@ class DescribeVsmAttributesResponse extends AbstractModel
     public $ResourceName;
 
     /**
-     * @var integer 资源状态
+     * @var integer 资源状态，1表示资源为正常，2表示资源处于隔离状态
      */
     public $Status;
 
@@ -119,17 +127,17 @@ class DescribeVsmAttributesResponse extends AbstractModel
     public $Model;
 
     /**
-     * @var integer 资源类型
+     * @var integer 资源类型，17表示EVSM，33表示GVSM，49表示SVSM
      */
     public $VsmType;
 
     /**
-     * @var integer 地域Id
+     * @var integer 地域Id，返回腾讯云地域代码，如广州为1，北京为8
      */
     public $RegionId;
 
     /**
-     * @var integer 区域Id
+     * @var integer 区域Id，返回腾讯云每个地域的可用区代码
      */
     public $ZoneId;
 
@@ -193,6 +201,18 @@ class DescribeVsmAttributesResponse extends AbstractModel
     public $SubnetCidrBlock;
 
     /**
+     * @var array 资源所关联的Tag
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
+     * @var integer 资源续费标识，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RenewFlag;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -200,14 +220,14 @@ class DescribeVsmAttributesResponse extends AbstractModel
     /**
      * @param string $ResourceId 资源Id
      * @param string $ResourceName 资源名称
-     * @param integer $Status 资源状态
+     * @param integer $Status 资源状态，1表示资源为正常，2表示资源处于隔离状态
      * @param string $Vip 资源IP
      * @param string $VpcId 资源所属Vpc
      * @param string $SubnetId 资源所属子网
      * @param string $Model 资源所属HSM的规格
-     * @param integer $VsmType 资源类型
-     * @param integer $RegionId 地域Id
-     * @param integer $ZoneId 区域Id
+     * @param integer $VsmType 资源类型，17表示EVSM，33表示GVSM，49表示SVSM
+     * @param integer $RegionId 地域Id，返回腾讯云地域代码，如广州为1，北京为8
+     * @param integer $ZoneId 区域Id，返回腾讯云每个地域的可用区代码
      * @param integer $ExpireTime 过期时间
      * @param array $SgList 安全组详情信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -226,6 +246,10 @@ class DescribeVsmAttributesResponse extends AbstractModel
      * @param string $VpcCidrBlock VPC的IPv4 CIDR
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetCidrBlock 子网的CIDR
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags 资源所关联的Tag
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RenewFlag 资源续费标识，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -325,6 +349,19 @@ class DescribeVsmAttributesResponse extends AbstractModel
 
         if (array_key_exists("SubnetCidrBlock",$param) and $param["SubnetCidrBlock"] !== null) {
             $this->SubnetCidrBlock = $param["SubnetCidrBlock"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
+            $this->RenewFlag = $param["RenewFlag"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

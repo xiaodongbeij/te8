@@ -780,7 +780,7 @@ class Api_Video extends PhalApi_Api {
 				return $rs;
 			}
 			
-			setcaches($key,$info,600);
+			setcaches($key,$info,60);
 		}
 
         

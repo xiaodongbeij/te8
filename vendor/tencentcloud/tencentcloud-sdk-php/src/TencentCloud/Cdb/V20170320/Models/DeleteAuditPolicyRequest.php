@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPolicyId() 获取审计策略 ID。
  * @method void setPolicyId(string $PolicyId) 设置审计策略 ID。
+ * @method string getInstanceId() 获取实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。
  */
 class DeleteAuditPolicyRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DeleteAuditPolicyRequest extends AbstractModel
     public $PolicyId;
 
     /**
+     * @var string 实例 ID。
+     */
+    public $InstanceId;
+
+    /**
      * @param string $PolicyId 审计策略 ID。
+     * @param string $InstanceId 实例 ID。
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DeleteAuditPolicyRequest extends AbstractModel
         }
         if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
             $this->PolicyId = $param["PolicyId"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

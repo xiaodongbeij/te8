@@ -60,6 +60,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubProductCode(string $SubProductCode) 设置子产品编码
  * @method string getBigDealId() 获取大订单号
  * @method void setBigDealId(string $BigDealId) 设置大订单号
+ * @method string getFormula() 获取退费公式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFormula(string $Formula) 设置退费公式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRefReturnDeals() 获取退费涉及订单信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRefReturnDeals(string $RefReturnDeals) 设置退费涉及订单信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPayMode() 获取付费模式：prePay 预付费 postPay后付费 riPay预留实例
+ * @method void setPayMode(string $PayMode) 设置付费模式：prePay 预付费 postPay后付费 riPay预留实例
  */
 class Deal extends AbstractModel
 {
@@ -160,6 +170,23 @@ class Deal extends AbstractModel
     public $BigDealId;
 
     /**
+     * @var string 退费公式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Formula;
+
+    /**
+     * @var string 退费涉及订单信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RefReturnDeals;
+
+    /**
+     * @var string 付费模式：prePay 预付费 postPay后付费 riPay预留实例
+     */
+    public $PayMode;
+
+    /**
      * @param string $OrderId 订单号
      * @param integer $Status 订单状态
      * @param string $Payer 支付者
@@ -180,6 +207,11 @@ class Deal extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubProductCode 子产品编码
      * @param string $BigDealId 大订单号
+     * @param string $Formula 退费公式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RefReturnDeals 退费涉及订单信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PayMode 付费模式：prePay 预付费 postPay后付费 riPay预留实例
      */
     function __construct()
     {
@@ -273,6 +305,18 @@ class Deal extends AbstractModel
 
         if (array_key_exists("BigDealId",$param) and $param["BigDealId"] !== null) {
             $this->BigDealId = $param["BigDealId"];
+        }
+
+        if (array_key_exists("Formula",$param) and $param["Formula"] !== null) {
+            $this->Formula = $param["Formula"];
+        }
+
+        if (array_key_exists("RefReturnDeals",$param) and $param["RefReturnDeals"] !== null) {
+            $this->RefReturnDeals = $param["RefReturnDeals"];
+        }
+
+        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
+            $this->PayMode = $param["PayMode"];
         }
     }
 }

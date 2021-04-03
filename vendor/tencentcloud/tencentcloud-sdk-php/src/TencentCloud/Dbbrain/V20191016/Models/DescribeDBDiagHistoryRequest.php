@@ -22,10 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例 ID 。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID 。
- * @method string getStartTime() 获取开始时间。如“2019-09-10 12:13:14”。
- * @method void setStartTime(string $StartTime) 设置开始时间。如“2019-09-10 12:13:14”。
- * @method string getEndTime() 获取结束时间。如“2019-09-11 12:13:14”。
- * @method void setEndTime(string $EndTime) 设置结束时间。如“2019-09-11 12:13:14”。
+ * @method string getStartTime() 获取开始时间，如“2019-09-10 12:13:14”。
+ * @method void setStartTime(string $StartTime) 设置开始时间，如“2019-09-10 12:13:14”。
+ * @method string getEndTime() 获取结束时间，如“2019-09-11 12:13:14”，结束时间与开始时间的间隔最大可为2天。
+ * @method void setEndTime(string $EndTime) 设置结束时间，如“2019-09-11 12:13:14”，结束时间与开始时间的间隔最大可为2天。
+ * @method string getProduct() 获取服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
+ * @method void setProduct(string $Product) 设置服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
  */
 class DescribeDBDiagHistoryRequest extends AbstractModel
 {
@@ -35,19 +37,25 @@ class DescribeDBDiagHistoryRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 开始时间。如“2019-09-10 12:13:14”。
+     * @var string 开始时间，如“2019-09-10 12:13:14”。
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间。如“2019-09-11 12:13:14”。
+     * @var string 结束时间，如“2019-09-11 12:13:14”，结束时间与开始时间的间隔最大可为2天。
      */
     public $EndTime;
 
     /**
+     * @var string 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
+     */
+    public $Product;
+
+    /**
      * @param string $InstanceId 实例 ID 。
-     * @param string $StartTime 开始时间。如“2019-09-10 12:13:14”。
-     * @param string $EndTime 结束时间。如“2019-09-11 12:13:14”。
+     * @param string $StartTime 开始时间，如“2019-09-10 12:13:14”。
+     * @param string $EndTime 结束时间，如“2019-09-11 12:13:14”，结束时间与开始时间的间隔最大可为2天。
+     * @param string $Product 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeDBDiagHistoryRequest extends AbstractModel
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
+            $this->Product = $param["Product"];
         }
     }
 }

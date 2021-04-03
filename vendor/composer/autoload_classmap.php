@@ -15,6 +15,7 @@ return array(
     'DOMDocumentWrapper' => $vendorDir . '/electrolinux/phpquery/phpQuery/phpQuery/DOMDocumentWrapper.php',
     'DOMEvent' => $vendorDir . '/electrolinux/phpquery/phpQuery/phpQuery/DOMEvent.php',
     'ICallbackNamed' => $vendorDir . '/electrolinux/phpquery/phpQuery/phpQuery/Callback.php',
+    'QcloudApi' => $vendorDir . '/tencentcloud/tencentcloud-sdk-php/src/QcloudApi/QcloudApi.php',
     'phpQuery' => $vendorDir . '/electrolinux/phpquery/phpQuery/phpQuery.php',
     'phpQueryEvents' => $vendorDir . '/electrolinux/phpquery/phpQuery/phpQuery/phpQueryEvents.php',
     'phpQueryObject' => $vendorDir . '/electrolinux/phpquery/phpQuery/phpQuery/phpQueryObject.php',

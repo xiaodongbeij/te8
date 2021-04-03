@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageSize(integer $ImageSize) 设置镜像大小。单位：GB
  * @method SrcImage getSrcImage() 获取镜像来源信息
  * @method void setSrcImage(SrcImage $SrcImage) 设置镜像来源信息
+ * @method string getImageSource() 获取镜像来源类型
+ * @method void setImageSource(string $ImageSource) 设置镜像来源类型
+ * @method string getTaskId() 获取中间态和失败时候的任务ID
+ * @method void setTaskId(string $TaskId) 设置中间态和失败时候的任务ID
  */
 class Image extends AbstractModel
 {
@@ -122,6 +126,16 @@ class Image extends AbstractModel
     public $SrcImage;
 
     /**
+     * @var string 镜像来源类型
+     */
+    public $ImageSource;
+
+    /**
+     * @var string 中间态和失败时候的任务ID
+     */
+    public $TaskId;
+
+    /**
      * @param string $ImageId 镜像ID
      * @param string $ImageName 镜像名称
      * @param string $ImageState 镜像状态
@@ -136,6 +150,8 @@ class Image extends AbstractModel
      * @param integer $ImageOwner 镜像所有者
      * @param integer $ImageSize 镜像大小。单位：GB
      * @param SrcImage $SrcImage 镜像来源信息
+     * @param string $ImageSource 镜像来源类型
+     * @param string $TaskId 中间态和失败时候的任务ID
      */
     function __construct()
     {
@@ -205,6 +221,14 @@ class Image extends AbstractModel
         if (array_key_exists("SrcImage",$param) and $param["SrcImage"] !== null) {
             $this->SrcImage = new SrcImage();
             $this->SrcImage->deserialize($param["SrcImage"]);
+        }
+
+        if (array_key_exists("ImageSource",$param) and $param["ImageSource"] !== null) {
+            $this->ImageSource = $param["ImageSource"];
+        }
+
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
     }
 }

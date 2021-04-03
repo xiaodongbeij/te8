@@ -64,6 +64,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApigatewayServiceId(string $ApigatewayServiceId) 设置Apigateway的serviceId
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApplicationRemarkName() 获取应用备注名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApplicationRemarkName(string $ApplicationRemarkName) 设置应用备注名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getServiceConfigList() 获取服务配置信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setServiceConfigList(array $ServiceConfigList) 设置服务配置信息列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApplicationForPage extends AbstractModel
 {
@@ -134,6 +142,18 @@ class ApplicationForPage extends AbstractModel
     public $ApigatewayServiceId;
 
     /**
+     * @var string 应用备注名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApplicationRemarkName;
+
+    /**
+     * @var array 服务配置信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ServiceConfigList;
+
+    /**
      * @param string $ApplicationId 应用ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationName 应用名称
@@ -155,6 +175,10 @@ class ApplicationForPage extends AbstractModel
      * @param string $ApplicationRuntimeType 应用runtime类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApigatewayServiceId Apigateway的serviceId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApplicationRemarkName 应用备注名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ServiceConfigList 服务配置信息列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -212,6 +236,19 @@ class ApplicationForPage extends AbstractModel
 
         if (array_key_exists("ApigatewayServiceId",$param) and $param["ApigatewayServiceId"] !== null) {
             $this->ApigatewayServiceId = $param["ApigatewayServiceId"];
+        }
+
+        if (array_key_exists("ApplicationRemarkName",$param) and $param["ApplicationRemarkName"] !== null) {
+            $this->ApplicationRemarkName = $param["ApplicationRemarkName"];
+        }
+
+        if (array_key_exists("ServiceConfigList",$param) and $param["ServiceConfigList"] !== null) {
+            $this->ServiceConfigList = [];
+            foreach ($param["ServiceConfigList"] as $key => $value){
+                $obj = new ServiceConfig();
+                $obj->deserialize($value);
+                array_push($this->ServiceConfigList, $obj);
+            }
         }
     }
 }

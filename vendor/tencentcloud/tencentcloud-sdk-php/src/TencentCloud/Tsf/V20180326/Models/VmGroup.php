@@ -112,6 +112,50 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdatedTime(integer $UpdatedTime) 设置部署组更新时间戳
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDeployDesc() 获取部署应用描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeployDesc(string $DeployDesc) 设置部署应用描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getUpdateType() 获取滚动发布的更新方式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUpdateType(integer $UpdateType) 设置滚动发布的更新方式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getDeployBetaEnable() 获取发布是否启用beta批次
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeployBetaEnable(boolean $DeployBetaEnable) 设置发布是否启用beta批次
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getDeployBatch() 获取滚动发布的批次比例列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeployBatch(array $DeployBatch) 设置滚动发布的批次比例列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDeployExeMode() 获取滚动发布的批次执行方式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeployExeMode(string $DeployExeMode) 设置滚动发布的批次执行方式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDeployWaitTime() 获取滚动发布的每个批次的等待时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeployWaitTime(integer $DeployWaitTime) 设置滚动发布的每个批次的等待时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getEnableHealthCheck() 获取是否开启了健康检查
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableHealthCheck(boolean $EnableHealthCheck) 设置是否开启了健康检查
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method HealthCheckSettings getHealthCheckSettings() 获取健康检查配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHealthCheckSettings(HealthCheckSettings $HealthCheckSettings) 设置健康检查配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPackageType() 获取程序包类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPackageType(string $PackageType) 设置程序包类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStartScript() 获取启动脚本 base64编码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStartScript(string $StartScript) 设置启动脚本 base64编码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStopScript() 获取停止脚本 base64编码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStopScript(string $StopScript) 设置停止脚本 base64编码
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VmGroup extends AbstractModel
 {
@@ -254,6 +298,72 @@ class VmGroup extends AbstractModel
     public $UpdatedTime;
 
     /**
+     * @var string 部署应用描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeployDesc;
+
+    /**
+     * @var integer 滚动发布的更新方式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UpdateType;
+
+    /**
+     * @var boolean 发布是否启用beta批次
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeployBetaEnable;
+
+    /**
+     * @var array 滚动发布的批次比例列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeployBatch;
+
+    /**
+     * @var string 滚动发布的批次执行方式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeployExeMode;
+
+    /**
+     * @var integer 滚动发布的每个批次的等待时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeployWaitTime;
+
+    /**
+     * @var boolean 是否开启了健康检查
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableHealthCheck;
+
+    /**
+     * @var HealthCheckSettings 健康检查配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HealthCheckSettings;
+
+    /**
+     * @var string 程序包类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PackageType;
+
+    /**
+     * @var string 启动脚本 base64编码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StartScript;
+
+    /**
+     * @var string 停止脚本 base64编码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StopScript;
+
+    /**
      * @param string $GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 部署组名称
@@ -299,6 +409,28 @@ class VmGroup extends AbstractModel
      * @param string $GroupResourceType 部署组资源类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UpdatedTime 部署组更新时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DeployDesc 部署应用描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $UpdateType 滚动发布的更新方式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $DeployBetaEnable 发布是否启用beta批次
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $DeployBatch 滚动发布的批次比例列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DeployExeMode 滚动发布的批次执行方式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DeployWaitTime 滚动发布的每个批次的等待时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $EnableHealthCheck 是否开启了健康检查
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HealthCheckSettings $HealthCheckSettings 健康检查配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PackageType 程序包类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $StartScript 启动脚本 base64编码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $StopScript 停止脚本 base64编码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -404,6 +536,51 @@ class VmGroup extends AbstractModel
 
         if (array_key_exists("UpdatedTime",$param) and $param["UpdatedTime"] !== null) {
             $this->UpdatedTime = $param["UpdatedTime"];
+        }
+
+        if (array_key_exists("DeployDesc",$param) and $param["DeployDesc"] !== null) {
+            $this->DeployDesc = $param["DeployDesc"];
+        }
+
+        if (array_key_exists("UpdateType",$param) and $param["UpdateType"] !== null) {
+            $this->UpdateType = $param["UpdateType"];
+        }
+
+        if (array_key_exists("DeployBetaEnable",$param) and $param["DeployBetaEnable"] !== null) {
+            $this->DeployBetaEnable = $param["DeployBetaEnable"];
+        }
+
+        if (array_key_exists("DeployBatch",$param) and $param["DeployBatch"] !== null) {
+            $this->DeployBatch = $param["DeployBatch"];
+        }
+
+        if (array_key_exists("DeployExeMode",$param) and $param["DeployExeMode"] !== null) {
+            $this->DeployExeMode = $param["DeployExeMode"];
+        }
+
+        if (array_key_exists("DeployWaitTime",$param) and $param["DeployWaitTime"] !== null) {
+            $this->DeployWaitTime = $param["DeployWaitTime"];
+        }
+
+        if (array_key_exists("EnableHealthCheck",$param) and $param["EnableHealthCheck"] !== null) {
+            $this->EnableHealthCheck = $param["EnableHealthCheck"];
+        }
+
+        if (array_key_exists("HealthCheckSettings",$param) and $param["HealthCheckSettings"] !== null) {
+            $this->HealthCheckSettings = new HealthCheckSettings();
+            $this->HealthCheckSettings->deserialize($param["HealthCheckSettings"]);
+        }
+
+        if (array_key_exists("PackageType",$param) and $param["PackageType"] !== null) {
+            $this->PackageType = $param["PackageType"];
+        }
+
+        if (array_key_exists("StartScript",$param) and $param["StartScript"] !== null) {
+            $this->StartScript = $param["StartScript"];
+        }
+
+        if (array_key_exists("StopScript",$param) and $param["StopScript"] !== null) {
+            $this->StopScript = $param["StopScript"];
         }
     }
 }

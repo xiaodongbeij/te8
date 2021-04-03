@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNamespaceType(string $NamespaceType) 设置是否是全局命名空间(默认是DEF，表示普通命名空间；GLOBAL表示全局命名空间)
  * @method string getNamespaceId() 获取命名空间ID
  * @method void setNamespaceId(string $NamespaceId) 设置命名空间ID
+ * @method string getIsHaEnable() 获取是否开启高可用
+ * @method void setIsHaEnable(string $IsHaEnable) 设置是否开启高可用
+ * @method string getProgramId() 获取需要绑定的数据集ID
+ * @method void setProgramId(string $ProgramId) 设置需要绑定的数据集ID
  */
 class CreateNamespaceRequest extends AbstractModel
 {
@@ -66,12 +70,24 @@ class CreateNamespaceRequest extends AbstractModel
     public $NamespaceId;
 
     /**
+     * @var string 是否开启高可用
+     */
+    public $IsHaEnable;
+
+    /**
+     * @var string 需要绑定的数据集ID
+     */
+    public $ProgramId;
+
+    /**
      * @param string $NamespaceName 命名空间名称
      * @param string $ClusterId 集群ID
      * @param string $NamespaceDesc 命名空间描述
      * @param string $NamespaceResourceType 命名空间资源类型(默认值为DEF)
      * @param string $NamespaceType 是否是全局命名空间(默认是DEF，表示普通命名空间；GLOBAL表示全局命名空间)
      * @param string $NamespaceId 命名空间ID
+     * @param string $IsHaEnable 是否开启高可用
+     * @param string $ProgramId 需要绑定的数据集ID
      */
     function __construct()
     {
@@ -108,6 +124,14 @@ class CreateNamespaceRequest extends AbstractModel
 
         if (array_key_exists("NamespaceId",$param) and $param["NamespaceId"] !== null) {
             $this->NamespaceId = $param["NamespaceId"];
+        }
+
+        if (array_key_exists("IsHaEnable",$param) and $param["IsHaEnable"] !== null) {
+            $this->IsHaEnable = $param["IsHaEnable"];
+        }
+
+        if (array_key_exists("ProgramId",$param) and $param["ProgramId"] !== null) {
+            $this->ProgramId = $param["ProgramId"];
         }
     }
 }

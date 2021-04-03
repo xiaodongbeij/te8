@@ -42,6 +42,10 @@ blacklist：黑名单
 支持 X.X.X.X 形式 IP，或 /8、 /16、/24 形式网段
 最多可填充 50 个白名单或 50 个黑名单
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getFilterRules() 获取IP 黑白名单分路径配置，白名单功能
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFilterRules(array $FilterRules) 设置IP 黑白名单分路径配置，白名单功能
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class IpFilter extends AbstractModel
 {
@@ -69,6 +73,12 @@ blacklist：黑名单
     public $Filters;
 
     /**
+     * @var array IP 黑白名单分路径配置，白名单功能
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FilterRules;
+
+    /**
      * @param string $Switch IP 黑白名单配置开关
 on：开启
 off：关闭
@@ -79,6 +89,8 @@ blacklist：黑名单
      * @param array $Filters IP 黑白名单列表
 支持 X.X.X.X 形式 IP，或 /8、 /16、/24 形式网段
 最多可填充 50 个白名单或 50 个黑名单
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $FilterRules IP 黑白名单分路径配置，白名单功能
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -104,6 +116,15 @@ blacklist：黑名单
 
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
             $this->Filters = $param["Filters"];
+        }
+
+        if (array_key_exists("FilterRules",$param) and $param["FilterRules"] !== null) {
+            $this->FilterRules = [];
+            foreach ($param["FilterRules"] as $key => $value){
+                $obj = new IpFilterPathRule();
+                $obj->deserialize($value);
+                array_push($this->FilterRules, $obj);
+            }
         }
     }
 }

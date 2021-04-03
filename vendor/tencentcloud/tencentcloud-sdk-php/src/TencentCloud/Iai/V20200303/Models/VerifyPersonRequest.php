@@ -20,24 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * VerifyPerson请求参数结构体
  *
+ * @method string getPersonId() 获取待验证的人员ID。人员ID具体信息请参考人员库管理相关接口。
+ * @method void setPersonId(string $PersonId) 设置待验证的人员ID。人员ID具体信息请参考人员库管理相关接口。
  * @method string getImage() 获取图片 base64 数据。
+jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
  * @method void setImage(string $Image) 设置图片 base64 数据。
+jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- * @method string getUrl() 获取图片的 Url 。 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
+ * @method string getUrl() 获取图片的 Url 
+jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。。
+ 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- * @method void setUrl(string $Url) 设置图片的 Url 。 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
+ * @method void setUrl(string $Url) 设置图片的 Url 
+jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。。
+ 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- * @method string getPersonId() 获取待验证的人员ID。人员ID具体信息请参考人员库管理相关接口。
- * @method void setPersonId(string $PersonId) 设置待验证的人员ID。人员ID具体信息请参考人员库管理相关接口。
  * @method integer getQualityControl() 获取图片质量控制。 
 0: 不进行控制； 
 1:较低的质量要求，图像存在非常模糊，眼睛鼻子嘴巴遮挡至少其中一种或多种的情况； 
@@ -60,25 +66,28 @@ use TencentCloud\Common\AbstractModel;
 class VerifyPersonRequest extends AbstractModel
 {
     /**
+     * @var string 待验证的人员ID。人员ID具体信息请参考人员库管理相关接口。
+     */
+    public $PersonId;
+
+    /**
      * @var string 图片 base64 数据。
+jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public $Image;
 
     /**
-     * @var string 图片的 Url 。 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
+     * @var string 图片的 Url 
+jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。。
+ 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public $Url;
-
-    /**
-     * @var string 待验证的人员ID。人员ID具体信息请参考人员库管理相关接口。
-     */
-    public $PersonId;
 
     /**
      * @var integer 图片质量控制。 
@@ -98,15 +107,18 @@ class VerifyPersonRequest extends AbstractModel
     public $NeedRotateDetection;
 
     /**
+     * @param string $PersonId 待验证的人员ID。人员ID具体信息请参考人员库管理相关接口。
      * @param string $Image 图片 base64 数据。
+jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-     * @param string $Url 图片的 Url 。 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
+     * @param string $Url 图片的 Url 
+jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。。
+ 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-     * @param string $PersonId 待验证的人员ID。人员ID具体信息请参考人员库管理相关接口。
      * @param integer $QualityControl 图片质量控制。 
 0: 不进行控制； 
 1:较低的质量要求，图像存在非常模糊，眼睛鼻子嘴巴遮挡至少其中一种或多种的情况； 
@@ -130,16 +142,16 @@ class VerifyPersonRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("PersonId",$param) and $param["PersonId"] !== null) {
+            $this->PersonId = $param["PersonId"];
+        }
+
         if (array_key_exists("Image",$param) and $param["Image"] !== null) {
             $this->Image = $param["Image"];
         }
 
         if (array_key_exists("Url",$param) and $param["Url"] !== null) {
             $this->Url = $param["Url"];
-        }
-
-        if (array_key_exists("PersonId",$param) and $param["PersonId"] !== null) {
-            $this->PersonId = $param["PersonId"];
         }
 
         if (array_key_exists("QualityControl",$param) and $param["QualityControl"] !== null) {

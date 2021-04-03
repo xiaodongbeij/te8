@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMetricName(string $MetricName) 设置指标名
  * @method integer getValue() 获取指标的值
  * @method void setValue(integer $Value) 设置指标的值
+ * @method string getSubValue() 获取指标的附加值信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubValue(string $SubValue) 设置指标的附加值信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +44,12 @@ class DescribeQuotaDataResponse extends AbstractModel
     public $Value;
 
     /**
+     * @var string 指标的附加值信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubValue;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +57,8 @@ class DescribeQuotaDataResponse extends AbstractModel
     /**
      * @param string $MetricName 指标名
      * @param integer $Value 指标的值
+     * @param string $SubValue 指标的附加值信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -68,6 +80,10 @@ class DescribeQuotaDataResponse extends AbstractModel
 
         if (array_key_exists("Value",$param) and $param["Value"] !== null) {
             $this->Value = $param["Value"];
+        }
+
+        if (array_key_exists("SubValue",$param) and $param["SubValue"] !== null) {
+            $this->SubValue = $param["SubValue"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
