@@ -758,9 +758,8 @@ class AdminIndexController extends AdminBaseController{
 
 	//重置资金密码
     function re_money_pass(Request $request){
-        $id = input();
-        $this->assign('id', $id['id']);
-        return $this->fetch();
+        $data = input();
+        dump($data);die;
     }
 
 	function is_dai(Request $request)

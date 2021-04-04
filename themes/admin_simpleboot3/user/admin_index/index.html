@@ -364,6 +364,37 @@
                 }
             });
         }
+
+        function ret_submit(){
+		    var kou = $('#input-kou').val();
+            if(kou==''){
+                layer.msg("口令不能为空");
+                return;
+            }
+            $.ajax({
+                url: '{:url('user/adminIndex/re_money_pass')}',
+                type: 'POST',
+                dataType: 'json',
+                data: {id:clickuid,kou: kou},
+            success:function(data){
+                var code=data.code;
+                if(code==0){
+                    layer.msg(data.msg);
+                    return !1;
+                }
+
+                layer.msg("操作成功",{},function(){
+                    //layer.closeAll();
+                    clickuid=0;
+                    $("#input-kou").val("");
+                    layer.closeAll();
+                    reloadPage(window);
+                });
+            },
+            error:function(e){
+            }
+        });
+        }
 		
 		var xiajia_status=0;
 		function xiajia_submit(){
