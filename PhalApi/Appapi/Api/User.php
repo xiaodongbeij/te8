@@ -1232,6 +1232,7 @@ class Api_User extends PhalApi_Api {
             ->where("id = ?",$uid)
             ->select('coin as user_money')
             ->fetchOne();
+            var_dump($userinfo);
         if ($userinfo['user_money'] < $data['money']) return ['code' => 1, 'msg' => '余额不足'];
 
         //获取提现比例
