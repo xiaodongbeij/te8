@@ -108,9 +108,14 @@ class ManualController extends AdminbaseController {
             $data['addtime']=time();
             
 			$id = DB::name('charge_admin')->insertGetId($data);
+
+
             if(!$id){
                 $this->error("充值失败！");
             }
+
+            //手动充值账变记录
+            user_change_action($touid,1,$coin,'手动充值',$id);
 			
 			$action="手动充值虚拟币ID：".$id;
 			setAdminLog($action);
