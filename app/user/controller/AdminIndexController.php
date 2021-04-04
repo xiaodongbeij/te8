@@ -759,7 +759,19 @@ class AdminIndexController extends AdminBaseController{
 	//重置资金密码
     function re_money_pass(Request $request){
         $data = input();
-        dump($data);die;
+        //判断口令
+        if(!cmf_google_token_check(session('google_token'),$data['kou'])) {
+            return json(['code'=>0,'msg'=>'口令验证失败']);
+        }
+        $info = Db::table('cmf_user_info')->where('user_id',$data['id'])->find();
+        if ($info){
+            $res = Db::table('cmf_user_info')->where('user_id',$data['id'])->update(['money_passwd'=>'']);
+            return json(['code'=>1,"msg"=>'重置成功']);
+        }else{
+            return json(['code'=>0,'msg'=>'用户未设置资金密码']);
+        }
+        
+
     }
 
 	function is_dai(Request $request)
