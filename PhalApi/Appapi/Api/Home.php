@@ -334,7 +334,7 @@ class Api_Home extends PhalApi_Api {
             return $rs;
         }
         $config = getConfigPub();
-        var_dump($config);die;
+        // var_dump($config);die;
         $ConfigPri = getConfigPri();
         $info['service_address'] = $config['service_address'];
         $info['isnotice'] = $config['isnotice'];;
@@ -353,9 +353,9 @@ class Api_Home extends PhalApi_Api {
         $info['potato'] = $config['potato'];
         $info['chatserver'] = $config['chatserver'];
         $info['chatserver'] = $ConfigPri['chatserver'];
-        $info['join_in_qq'] = $ConfigPri['join_in_qq'];
-        $info['join_in_wx'] = $ConfigPri['join_in_wx'];
-        $info['join_in_tg'] = $ConfigPri['join_in_tg'];
+        $info['join_in_qq'] = $config['join_in_qq'];
+        $info['join_in_wx'] = $config['join_in_wx'];
+        $info['join_in_tg'] = $config['join_in_tg'];
         
         // $ConfigPri = getConfigPri();
         // unset($info['site_url']);
