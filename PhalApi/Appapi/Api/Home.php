@@ -352,6 +352,9 @@ class Api_Home extends PhalApi_Api {
         $info['potato'] = $config['potato'];
         $info['chatserver'] = $config['chatserver'];
         $info['chatserver'] = $ConfigPri['chatserver'];
+        $info['join_in_qq'] = $ConfigPri['join_in_qq'];
+        $info['join_in_wx'] = $ConfigPri['join_in_wx'];
+        $info['join_in_tg'] = $ConfigPri['join_in_tg'];
         
         // $ConfigPri = getConfigPri();
         // unset($info['site_url']);
