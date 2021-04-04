@@ -755,6 +755,20 @@ class AdminIndexController extends AdminBaseController{
             $this->success("修改成功！");
 		}
 	}
+	
+	
+	public function delGameAccount()
+	{
+	    $id = input('id');
+	    $key = "game:*:" . $id;
+	    $keys = $GLOBALS['redisdb']->Keys($key);
+        foreach($keys as $v)
+        {
+            delcache($v);
+        }
+        
+        return json(['code' => 0, 'message' => '成功']);
+	}
 
 	//重置资金密码
     function re_money_pass(Request $request){
