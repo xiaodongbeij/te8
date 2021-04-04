@@ -864,7 +864,7 @@ class AdminIndexController extends AdminBaseController{
                 $p_level .=  $id . '-';
                 Db::execute("update cmf_user set parent_id = {$parent_id} WHERE id = {$id}");
                 Db::execute("update cmf_user_rate set rate = 0 WHERE user_id in (SELECT id FROM cmf_user WHERE invite_level like '{$level}%')");
-                Db::execute("update cmf_user set invite_level = REPLACE(invite_level,$level,$p_level) WHERE invite_level like '{$level}%'");
+                Db::execute("update cmf_user set invite_level = REPLACE(invite_level,'$level','$p_level') WHERE invite_level like '{$level}%'");
                 DB::name('user')->update($data);
             });
         }else{
