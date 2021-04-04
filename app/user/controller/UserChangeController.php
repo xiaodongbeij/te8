@@ -208,14 +208,15 @@ class UserChangeController extends AdminbaseController
                 $this->error('令牌验证失败');
             }
             
-            $w = UserChange::where('id', '=', $data['id'])->find();
+            $w = UserChange::where('id', $data['id'])->where('status', 1)->where('change_type',2)->find();
             if($w['status'] != 1) $this->error('请勿此操作');
     
             //开启事务
             Db::startTrans();
     
             $user_info = User::where('id', $w['user_id'])->find();
-            if($user_info['freeze_money'] < $w['change_money']) $this->error("冻结资金不足");
+       
+            if(abs($user_info['freeze_money']) < abs($w['change_money'])) $this->error("冻结资金不足");
             $user_info->freeze_money = $user_info['freeze_money'] + $w['change_money'] + $w['service_charge'];
             $user_info->count_Withdrawal -= $w['change_money'];
             $res1 = $user_info->save();
