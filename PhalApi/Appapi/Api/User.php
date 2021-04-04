@@ -1238,13 +1238,13 @@ class Api_User extends PhalApi_Api {
         $configpri = DI()->notorm->option->where('option_name = ?', 'configpri')->fetchOne();
         $configpri = json_decode($configpri['option_value'], true);
         $procedures = $configpri['withdrawal_procedures'];
-        var_dump($procedures);
+        // var_dump($procedures);
         if($data['money'] < $configpri['cash_min']) return ['code' => 1, 'msg' => '小于最小提现额度'];
 
         //手续费
         $procedures_money = ($procedures/100) * $data['money'];
         $procedures_money = number_format($procedures_money, 4);
-        var_dump($procedures_money);
+        // var_dump($procedures_money);
         //扣除手续费的真实提现金额
         $withdraw_money = $data['money'] - $procedures_money;
 
@@ -1260,7 +1260,7 @@ class Api_User extends PhalApi_Api {
             'withdraw_type' => $data['withdraw_type'],
             'status' => 2,
         ];
-        var_dump($ins_data);die;
+        // var_dump($ins_data);die;
         if ($data['withdraw_type'] == 1){
             if(empty($data['withdraw_id'])) return ['code' => 1, 'msg' => '请输入提现去处'];
             $user_bank = DI()->notorm->user_bank
