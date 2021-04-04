@@ -179,6 +179,8 @@
                     </td>
                     <td>
                         <a class="btn btn-xs btn-primary" href="{:url('adminIndex/is_dai',array('id'=>$vo['id']))}">代理</a>
+                        <a class="btn btn-xs btn-primary" href="javascript:void(0);"
+                           onclick="showlayer({$vo['id']})">重置资金密码</a>
 <!--                        <if condition="$vo.live_state eq 0">-->
 <!--&lt;!&ndash;                            <a class="btn btn-xs btn-primary" href="{:url('adminIndex/live_status',array('id'=>$vo['id'],'live_state' => 1))}">禁止直播</a>&ndash;&gt;-->
 <!--                            <a class="btn btn-xs btn-info js-ajax-dialog-btn"-->
@@ -211,7 +213,7 @@
                                     <!--  -->
                                     <a class="btn btn-xs btn-warning"
                                        href="javascript:void(0);"
-                                       onclick="showlayer({$vo['id']})">禁用</a>
+                                       onclick="showret({$vo['id']})">禁用</a>
                                 </if>
                                 
                                 <a class="btn btn-xs btn-warning js-ajax-dialog-btn"
@@ -299,6 +301,25 @@
         </form>
     </div>
 </div>
+
+<div id="ret">
+    <div class="wrap" style="padding-bottom:40px;">
+        <form method="post" class="form-horizontal margin-top-20">
+            <div class="form-group">
+                <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>口令</label>
+                <div class="col-md-6 col-sm-10">
+                    <input class="form-control js-bootstrap-date" name="ban_long" contenteditable="off" id="kou" value="" aria-invalid="false">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <a href="javascript:void(0)" class="btn btn-primary" onclick="ret_submit()">重置</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
             
 <script src="__STATIC__/js/admin.js"></script>
 <script src="__STATIC__/js/laydate/laydate.js"></script>
@@ -322,7 +343,24 @@
                 }
             }); 
 		}
-	
+
+        function showret(id){
+            clickuid=id;
+            layer.open({
+                type: 1,
+                title: '重置资金密码',
+                shadeClose: true,
+                shade: 0.8,
+                area: ['800px', '300px'],
+                content: $('#ret'),
+                success:function(){
+                    laydate.render({
+                        elem: '#kou',//指定元素
+                        trigger: 'click'
+                    });
+                }
+            });
+        }
 		
 		var xiajia_status=0;
 		function xiajia_submit(){
