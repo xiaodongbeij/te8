@@ -90,7 +90,12 @@
 					<textarea class="form-control" id="input-signature" name="signature" >{$data['signature']}</textarea>
 				</div>
 			</div>
-            
+            <div class="form-group">
+				<label for="input-consumption" class="col-sm-2 control-label">上级ID</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-consumption" name="parent_id" value="{$data['parent_id'] | default = 0}">上级代理的ID
+				</div>
+			</div>
 
             <div class="form-group">
 				<div class="col-sm-offset-2 col-sm-10">

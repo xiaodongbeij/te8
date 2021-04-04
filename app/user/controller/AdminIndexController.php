@@ -689,9 +689,9 @@ class AdminIndexController extends AdminBaseController{
 		if ($this->request->isPost()) {
             
             $data = $this->request->param();
-            
+
             //获取用户的状态
-            $user_status=Db::name("user")->where("id={$data['id']}")->value("user_status");
+            $user_status=Db::name("user")->where("id={$data['id']}")->value('user_status');
 
             
 			$user_pass=$data['user_pass'];
@@ -731,7 +731,9 @@ class AdminIndexController extends AdminBaseController{
                 $data['avatar_thumb']='/default_thumb.jpg';
             }
             
-			$rs = DB::name('user')->update($data);
+            $rs = $this->editParentId($data);
+            
+
             if($rs===false){
                 $this->error("修改失败！");
             }
@@ -845,5 +847,27 @@ class AdminIndexController extends AdminBaseController{
             $this->assign('rates', $rates);
         }
         return $this->fetch();
+    }
+    
+    
+    protected function editParentId($data)
+    {
+        $u = Db::name('user')->where('id', $data['id'])->field('id,invite_level,parent_id')->find();
+        if($u['parent_id'] != $data['parent_id'])
+        {
+           return Db::transaction(function () use($data,$u){
+                $id = $u['id'];
+                $level = $u['invite_level'];
+                $parent_id = $data['parent_id'];
+                $p_level = Db::name('user')->where('id', $parent_id)->value('invite_level');
+                Db::execute("update cmf_user set parent_id = {$parent_id} WHERE id = {$id}");
+                Db::execute("update cmf_user_rate set rate = 0 WHERE user_id in (SELECT id FROM cmf_user WHERE invite_level like '{$level}%')");
+                Db::execute("update cmf_user set invite_level = CONCAT('{$p_level}',invite_level) WHERE invite_level like '{$level}%'");
+                DB::name('user')->update($data);
+            });
+        }else{
+           return DB::name('user')->update($data);
+        }
+        
     }
 }
