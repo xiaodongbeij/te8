@@ -1281,6 +1281,8 @@ class Api_User extends PhalApi_Api {
             'coin' => $userinfo['user_money'] - $data['money'],
             'freeze_money' => $userinfo['freeze_money'] + $data['money']
         ];
+        var_dump($userinfo['freeze_money']);
+        var_dump($data['money']);
         var_dump($up_data);die;
         //开启事务
         DI()->notorm->beginTransaction('db_appapi');
