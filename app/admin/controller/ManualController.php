@@ -120,7 +120,7 @@ class ManualController extends AdminbaseController {
 			$action="手动充值虚拟币ID：".$id;
 			setAdminLog($action);
             
-            Db::name("user")->where(["id"=>$touid])->setInc("coin",$coin);
+//            Db::name("user")->where(["id"=>$touid])->setInc("coin",$coin);
             $this->success("充值成功！");
             
 		}
