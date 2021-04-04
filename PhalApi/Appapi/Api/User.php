@@ -1258,6 +1258,7 @@ class Api_User extends PhalApi_Api {
             'withdraw_type' => $data['withdraw_type'],
             'status' => 2,
         ];
+        var_dump($ins_data);die;
         if ($data['withdraw_type'] == 1){
             if(empty($data['withdraw_id'])) return ['code' => 1, 'msg' => '请输入提现去处'];
             $user_bank = DI()->notorm->user_bank
