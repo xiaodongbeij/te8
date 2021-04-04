@@ -1230,9 +1230,9 @@ class Api_User extends PhalApi_Api {
 
         $userinfo = DI()->notorm->user
             ->where("id = ?",$uid)
-            ->select('coin as user_money')
+            ->select('coin as user_money,freeze_money')
             ->fetchOne();
-            var_dump($userinfo);
+            // var_dump($userinfo);
         if ($userinfo['user_money'] < $data['money']) return ['code' => 1, 'msg' => '余额不足'];
 
         //获取提现比例
@@ -1278,13 +1278,7 @@ class Api_User extends PhalApi_Api {
             if(!$user_info['wxpay_account']) return ['code' => 1, 'msg' => '请完善微信提现账户'];
             $ins_data['withdraw_id'] = $user_info['id'];
         }
-        $up_data = [
-            'coin' => $userinfo['user_money'] - $data['money'],
-            'freeze_money' => $userinfo['freeze_money'] + $data['money']
-        ];
-        var_dump($userinfo['freeze_money']);
-        var_dump($data['money']);
-        var_dump($up_data);die;
+        
         //开启事务
         DI()->notorm->beginTransaction('db_appapi');
 
