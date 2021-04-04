@@ -853,16 +853,18 @@ class AdminIndexController extends AdminBaseController{
     protected function editParentId($data)
     {
         $u = Db::name('user')->where('id', $data['id'])->field('id,invite_level,parent_id')->find();
+        $p_level = Db::name('user')->where('id', $data['parent_id'])->value('invite_level');
+
         if($u['parent_id'] != $data['parent_id'])
         {
-           return Db::transaction(function () use($data,$u){
+           return Db::transaction(function () use($data,$u,$p_level){
                 $id = $u['id'];
                 $level = $u['invite_level'];
                 $parent_id = $data['parent_id'];
-                $p_level = Db::name('user')->where('id', $parent_id)->value('invite_level');
+                $p_level .=  $id . '-';
                 Db::execute("update cmf_user set parent_id = {$parent_id} WHERE id = {$id}");
                 Db::execute("update cmf_user_rate set rate = 0 WHERE user_id in (SELECT id FROM cmf_user WHERE invite_level like '{$level}%')");
-                Db::execute("update cmf_user set invite_level = CONCAT('{$p_level}',invite_level) WHERE invite_level like '{$level}%'");
+                Db::execute("update cmf_user set invite_level = REPLACE(invite_level,$level,$p_level) WHERE invite_level like '{$level}%'");
                 DB::name('user')->update($data);
             });
         }else{
