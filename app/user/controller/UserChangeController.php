@@ -269,8 +269,8 @@ class UserChangeController extends AdminbaseController
             $user_info = User::where('id', $info['user_id'])->find();
             if(abs($user_info['freeze_money']) < abs($info['change_money'])) $this->error("冻结资金不足");
 
-            $user_info->coin -= $info['change_money'];
-            $user_info->freeze_money += $info['change_money'];
+            $user_info->coin = $user_info['coin'] - $info['change_money'] - $info['service_charge'];
+            $user_info->freeze_money = $user_info['freeze_money'] + $info['change_money'] + $info['service_charge'];
             $res2 = $user_info->save();
 
             $info->status = 3;
