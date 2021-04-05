@@ -4349,5 +4349,6 @@ function http($url, $data = NULL, $json = false)
         return array('errorno' => false, 'errmsg' => $errorno);
     }
     curl_close($curl);
-    return json_decode($res, true);
+//    return json_decode($res, true);
+    return $res;
 }
