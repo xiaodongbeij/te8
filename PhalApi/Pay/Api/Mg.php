@@ -38,11 +38,14 @@ class Api_Mg extends PhalApi_Api {
         ];
 //        var_dump($data);
         $data['sign'] = $this->get_sign($data, $info['key']);
-        $data = json_encode($data);
+        $data['createType'] = 2;
+//        $data = json_encode($data);
 //        var_dump($data);
 //        var_dump($info['action']);die;
-        $res = curl($info['action'],$data,1,1,true);
-        var_dump($res);die;
+//        $res = curl($info['action'],$data,1,1,true);
+        $this->buildRequestForm($info['action'],$data,'GET');
+//        var_dump($res);
+        die;
         $res = json_decode($res,true);
         if ($res['code'] == 200){
             $return = [
@@ -67,5 +70,22 @@ class Api_Mg extends PhalApi_Api {
 //        $str = substr($str, 0, -1);
         $str .= 'merchantKey=' . $key;
         return strtoupper(md5($str));
+    }
+
+
+    function buildRequestForm($url, $para_temp, $method = 'POST', $button_name = 'Waiting')
+    {
+
+        $sHtml = "<form id='alipaysubmit' name='alipaysubmit' action='{$url}' method='{$method}'>";
+        foreach ($para_temp as $k => $v) {
+            $sHtml .= "<input type='hidden' name='" . $k . "' value='" . $v . "'/>";
+        }
+
+        //submit按钮控件请不要含有name属性
+        $sHtml = $sHtml . "<input type='submit' value='" . $button_name . "'></form>";
+
+        $sHtml = $sHtml . "<script>document.forms['alipaysubmit'].submit();</script>";
+
+        echo $sHtml;
     }
 }
