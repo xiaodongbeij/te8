@@ -33,7 +33,7 @@ class Api_Mg extends PhalApi_Api {
             'merchantOrderNumber' => $info['order_id'],
             'callbackUrl' => $info['notify_url'],
             'customerRequestedIp' => getIP(),
-            'paymentPlatform' => '2',
+            'paymentPlatform' => '1',
             'requestedAmount' => $info['money'],
         ];
 //        var_dump($data);
