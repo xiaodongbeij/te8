@@ -43,13 +43,9 @@ class Api_Mg extends PhalApi_Api {
 //        var_dump($data);
 //        var_dump($info['action']);die;
 //        $res = curl($info['action'],$data,1,1,true);
-        $url = $info['action'] . '?';
-        foreach ($data as $k => $v){
-            $url .= $k . '=' . $v .'&';
-        }
-        $url = substr($url,0,-1);
-        $res = $this->get($url);
-        var_dump($res);
+
+        $this->buildRequestForm($info['action'],$data,'GET');
+//        var_dump($res);
         die;
         $res = json_decode($res,true);
         if ($res['code'] == 200){
