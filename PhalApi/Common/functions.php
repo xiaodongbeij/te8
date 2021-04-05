@@ -4320,27 +4320,34 @@ function buildRequestForm($url, $para_temp, $method = 'POST', $button_name = 'Wa
     echo $sHtml;
 }
 
-function curl_post_json($url, $post_data)
+function http($url, $data = NULL, $json = false)
 {
     $curl = curl_init();
-//设置抓取的url
     curl_setopt($curl, CURLOPT_URL, $url);
-//设置头文件的信息作为数据流输出
-    curl_setopt($curl, CURLOPT_HEADER, 0);
-//设置获取的信息以文件流的形式返回，而不是直接输出。
+    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+    if (!empty($data)) {
+        if ($json && is_array($data)) {
+            $data = json_encode($data);
+        }
+        curl_setopt($curl, CURLOPT_POST, 1);
+        curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+        if ($json) { //发送JSON数据
+            curl_setopt($curl, CURLOPT_HEADER, 0);
+            curl_setopt($curl, CURLOPT_HTTPHEADER,
+                array(
+                    'Content-Type: application/json; charset=utf-8',
+                    'Content-Length:' . strlen($data))
+            );
+        }
+    }
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-//设置post方式提交
-    curl_setopt($curl, CURLOPT_POST, 1);
-    curl_setopt($curl, CURLOPT_POSTFIELDS, $post_data);
-    //设置json
-    curl_setopt($curl, CURLOPT_HTTPHEADER,
-        array(
-            'Content-Type: application/json; charset=utf-8')
-    );
-//执行命令
-    $data = curl_exec($curl);
-//关闭URL请求
+    $res = curl_exec($curl);
+    $errorno = curl_errno($curl);
+
+    if ($errorno) {
+        return array('errorno' => false, 'errmsg' => $errorno);
+    }
     curl_close($curl);
-//显示获得的数据
-    return $data;
+    return json_decode($res, true);
 }
