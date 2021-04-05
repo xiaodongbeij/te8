@@ -4150,7 +4150,7 @@ function getShopOrderRefundList($where)
 }
 
 //curl请求
-function curl($url, $params = false, $ispost = 0, $https = 0)
+function curl($url, $params = false, $ispost = 0, $https = 0,$json=false)
 {
     $httpInfo = array();
     $ch = curl_init();
@@ -4159,6 +4159,13 @@ function curl($url, $params = false, $ispost = 0, $https = 0)
     curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 30);
     curl_setopt($ch, CURLOPT_TIMEOUT, 30);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    if ($json) { //发送JSON数据
+        curl_setopt($ch, CURLOPT_HEADER, 0);
+        curl_setopt($ch, CURLOPT_HTTPHEADER,
+            array(
+                'Content-Type: application/json; charset=utf-8')
+        );
+    }
     if ($https) {
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE); // 对认证证书来源的检查
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE); // 从证书中检查SSL加密算法是否存在
