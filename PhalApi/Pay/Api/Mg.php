@@ -23,7 +23,7 @@ class Api_Mg extends PhalApi_Api {
      */
     public function pay($info) {
         if ($info['pay_type'] == 1) {
-            $type = '5';
+            $type = '3';
         }
         if (!isset($type)) return ['code' => 0, 'msg' => '配置错误'];
 
@@ -39,8 +39,8 @@ class Api_Mg extends PhalApi_Api {
 //        var_dump($data);
         $data['sign'] = $this->get_sign($data, $info['key']);
         $data = json_encode($data);
-        var_dump($data);
-        var_dump($info['action']);die;
+//        var_dump($data);
+//        var_dump($info['action']);die;
         $res = http($info['action'],$data,true);
         var_dump($res);die;
         $res = json_decode($res,true);
