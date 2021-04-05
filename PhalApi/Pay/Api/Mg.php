@@ -73,7 +73,7 @@ class Api_Mg extends PhalApi_Api {
     }
 
     function get($url,$data){
-        $headers = array('Content-Type: application/x-www-form-urlencoded');
+        $headers = array('Content-Type: application/from-data');
         $curl = curl_init(); // 启动一个CURL会话
         curl_setopt($curl, CURLOPT_URL, $url); // 要访问的地址
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0); // 对认证证书来源的检查
