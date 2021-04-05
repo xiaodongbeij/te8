@@ -1,28 +1,31 @@
 <?php
 
-function md5Sign($arr=array(),$secretKey){
-        ksort($arr);
-        return strtolower(md5(signStr($arr,$secretKey)));
-    }
-        
-function signStr($array,$secretKey){
-        $str = "";
-        $i = 0;
-        foreach ($array as $key => $val) {
-            if($key != "sign" && $key != "secretKey"){
-                if($i == 0 ){
-                    $str = $str."$key=$val";
-                }else {
-                    $str = $str."&$key=$val";
-                }
-                $i++;
-            }
-        }
-        $str = $str."&key=".$secretKey;
-        return  $str;
-    }
+function md5Sign($arr = array(), $secretKey)
+{
+    ksort($arr);
+    return strtolower(md5(signStr($arr, $secretKey)));
+}
 
-function getMultiUrlContents($urls, $timeout = 1) {
+function signStr($array, $secretKey)
+{
+    $str = "";
+    $i = 0;
+    foreach ($array as $key => $val) {
+        if ($key != "sign" && $key != "secretKey") {
+            if ($i == 0) {
+                $str = $str . "$key=$val";
+            } else {
+                $str = $str . "&$key=$val";
+            }
+            $i++;
+        }
+    }
+    $str = $str . "&key=" . $secretKey;
+    return $str;
+}
+
+function getMultiUrlContents($urls, $timeout = 1)
+{
     $mh = curl_multi_init();
     $chArray = array();
     foreach ($urls as $i => $url) {
@@ -48,31 +51,32 @@ function getMultiUrlContents($urls, $timeout = 1) {
 
 
 //验证银行卡号
-function check_bankCard($card_number){
+function check_bankCard($card_number)
+{
     $arr_no = str_split($card_number);
-    $last_n = $arr_no[count($arr_no)-1];
+    $last_n = $arr_no[count($arr_no) - 1];
     krsort($arr_no);
     $i = 1;
     $total = 0;
-    foreach ($arr_no as $n){
-        if($i%2==0){
-            $ix = $n*2;
-            if($ix>=10){
+    foreach ($arr_no as $n) {
+        if ($i % 2 == 0) {
+            $ix = $n * 2;
+            if ($ix >= 10) {
                 $nx = 1 + ($ix % 10);
                 $total += $nx;
-            }else{
+            } else {
                 $total += $ix;
             }
-        }else{
+        } else {
             $total += $n;
         }
         $i++;
     }
     $total -= $last_n;
     $x = 10 - ($total % 10);
-    if($x == $last_n){
+    if ($x == $last_n) {
         return 1;
-    }else{
+    } else {
         return 1;
     }
 }
@@ -97,9 +101,9 @@ function getIP()
 
     if (getenv("HTTP_CLIENT_IP"))
         $ip = getenv("HTTP_CLIENT_IP");
-    else if(getenv("HTTP_X_FORWARDED_FOR"))
+    else if (getenv("HTTP_X_FORWARDED_FOR"))
         $ip = getenv("HTTP_X_FORWARDED_FOR");
-    else if(getenv("REMOTE_ADDR"))
+    else if (getenv("REMOTE_ADDR"))
         $ip = getenv("REMOTE_ADDR");
     else
         $ip = "Unknow";
@@ -112,17 +116,13 @@ function getIP()
 function randNiceName()
 {
     $key = 'nicename';
-    if(!DI()->redis->Exists($key))
-    {
+    if (!DI()->redis->Exists($key)) {
         $list = file(NICENAME);
-        DI()->redis->sadd($key,...$list);
+        DI()->redis->sadd($key, ...$list);
     }
-    
+
     return trim(DI()->redis->srandmember($key));
 }
-
-
-
 
 
 /* 设置缓存 */
@@ -140,44 +140,41 @@ function setcache($key, $info)
 }
 
 
-function pay($level,$pay_type = 1)
+function pay($level, $pay_type = 1)
 {
     $minute = date('H:i:s');
 
-    $key = 'pay_type:' . $pay_type . ':' .$level;
+    $key = 'pay_type:' . $pay_type . ':' . $level;
     $select = "id,channel_name,is_range,min_money,max_money,is_quick,quick_money,jump_type";
-    if($pay_type == 3) $select .= ",bank_name,bank_no,name";
+    if ($pay_type == 3) $select .= ",bank_name,bank_no,name";
     $user_channel = DI()->notorm->user_channel
-            ->select('channel_id')
-            ->where('id=?', $level)
-            ->fetchOne();
-    
+        ->select('channel_id')
+        ->where('id=?', $level)
+        ->fetchOne();
+
     $channel_ids = explode('|', $user_channel['channel_id']);
     $res = getcache($key);
     // if($res && false){
     //     return $res;
     // }else{
-        $list = DI()->notorm->channel
-            ->select($select)
-            ->where('pay_type=?',$pay_type)
-            ->where('status=?', 1)
-            ->where('id', $channel_ids)
-            ->where('start_time<=?',$minute)
-            ->where('end_time>=?',$minute)
-            ->fetchAll();
-        setcache($key,$list);
-        return $list;
+    $list = DI()->notorm->channel
+        ->select($select)
+        ->where('pay_type=?', $pay_type)
+        ->where('status=?', 1)
+        ->where('id', $channel_ids)
+        ->where('start_time<=?', $minute)
+        ->where('end_time>=?', $minute)
+        ->fetchAll();
+    setcache($key, $list);
+    return $list;
     // }
 }
-
-
-
 
 
 /* 设置缓存 可自定义时间*/
 function setcaches($key, $info, $time = 0)
 {
-    DI()->redis->set($key, json_encode($info,JSON_UNESCAPED_UNICODE));
+    DI()->redis->set($key, json_encode($info, JSON_UNESCAPED_UNICODE));
     if ($time > 0) {
         DI()->redis->expire($key, $time);
     }
@@ -219,12 +216,12 @@ function delcache($key)
 /**
  * 获取下注信息
  */
- 
-function getCpInfo($shortName,$rate_code,$rule_code)
+
+function getCpInfo($shortName, $rate_code, $rule_code)
 {
     $key = $shortName . ':' . $rate_code . ':' . $rule_code;
     $getCpInfo = getcaches($key);
-    if(!$getCpInfo){
+    if (!$getCpInfo) {
         $sql = "SELECT
         cz.id,
     	show_name,
@@ -247,7 +244,7 @@ function getCpInfo($shortName,$rate_code,$rule_code)
         $res = DI()->notorm->game_caizhong->queryRows($sql, $params);
         $getCpInfo = $res[0];
     }
-    
+
     return $getCpInfo;
 }
 
@@ -259,12 +256,11 @@ function getTicketsType()
 {
     $key = getTicketsTypeKey();
     $getTicketsType = getcaches($key);
-    if(!$getTicketsType)
-    {
+    if (!$getTicketsType) {
         $getTicketsType = DI()->notorm->game_caizhong
             ->select('type,type_name')
             ->where('status=?', 1)
-            ->where('cat_id=?',1)
+            ->where('cat_id=?', 1)
             ->group('type,type_name')
             ->order('type DESC')
             ->fetchAll();
@@ -285,30 +281,28 @@ function getTicketsTypeKey()
 
 function getCaizhong($short_name)
 {
-    $key = 'cp:'. $short_name;
+    $key = 'cp:' . $short_name;
     $getCaizhong = getcaches($key);
-    if(!$getCaizhong)
-    {
+    if (!$getCaizhong) {
         $getCaizhong = DI()->notorm->game_caizhong
-		->select("id,hot,type,icon,show_name")
-		->where('short_name = ?',$short_name)
-		->fetch();
-		setcaches($key, $getCaizhong);
+            ->select("id,hot,type,icon,show_name")
+            ->where('short_name = ?', $short_name)
+            ->fetch();
+        setcaches($key, $getCaizhong);
     }
     return $getCaizhong;
 }
- 
+
 
 /**
  * 获取彩票集合
  */
 
-function getCameCaizhong($cat_id,$type = '',$hot = '')
+function getCameCaizhong($cat_id, $type = '', $hot = '')
 {
-    $key = getCameCaizhongKey($cat_id,$type,$hot);
+    $key = getCameCaizhongKey($cat_id, $type, $hot);
     $getCameCaizhong = getcaches($key);
-    if(!$getCameCaizhong)
-    {
+    if (!$getCameCaizhong) {
         $url = DI()->config->get('app.api_host');
         $params = [
             ':status' => 1,
@@ -319,7 +313,7 @@ function getCameCaizhong($cat_id,$type = '',$hot = '')
             $sql .= ' and c.type = :type';
             $params[':type'] = $type;
         }
-        
+
         if ($cat_id) {
             $sql .= ' and c.cat_id = :cat_id';
             $params[':cat_id'] = $cat_id;
@@ -331,19 +325,19 @@ function getCameCaizhong($cat_id,$type = '',$hot = '')
         }
         $getGameCate = getGameCate();
         $getCameCaizhong = DI()->notorm->game_caizhong->queryAll($sql, $params);
-  
+
         setcaches($key, $getCameCaizhong);
     }
-    
+
     return $getCameCaizhong;
 }
 
 /**
  * 获取游戏集合key
  */
-function getCameCaizhongKey($cat_id,$type,$hot)
+function getCameCaizhongKey($cat_id, $type, $hot)
 {
-    return 'getCameCaizhong:' . $cat_id .":" . $type . ":" . $hot;
+    return 'getCameCaizhong:' . $cat_id . ":" . $type . ":" . $hot;
 }
 
 /**
@@ -353,8 +347,7 @@ function getGameCate()
 {
     $key = getGameCateKey();
     $game_cate = getcaches($key);
-    if(!$game_cate)
-    {
+    if (!$game_cate) {
         $game_cate = DI()->notorm->game_cate
             ->where("del_status = 0")
             ->select('id,name,icon,platform')
@@ -367,9 +360,8 @@ function getGameCate()
 
 function getIconUrl($data)
 {
-    foreach($data as $k=>$v)
-    {
-        
+    foreach ($data as $k => $v) {
+
         $data[$k]['icon'] = '/upload/' . $data[$k]['icon'];
         // $data[$k]['icon'] = get_upload_path($v['icon']);
     }
@@ -578,13 +570,13 @@ function sendCode($mobile, $code)
 }
 
 /* 发送验证码 -- 短信宝 */
-function sendsmscode($phone,$code)
+function sendsmscode($phone, $code)
 {
     $key = 'smscode';
     $sign = '天鹅社区';
     $sign = urlencode($sign);
     $url = "https://1mao.vip/api/send_sms?user=te8&pass=25d55ad283aa400af464c76d713c07ad&phone={$phone}&code={$code}&sign={$sign}";
-    DI()->redis->rpush($key,$url);
+    DI()->redis->rpush($key, $url);
     setSendcode(array('type' => '1', 'account' => $phone, 'content' => $code));
     return ['code' => 0, 'msg' => '成功'];
 }
@@ -881,25 +873,25 @@ function get_upload_path($file)
     if ($file == '') {
         return $file;
     }
-    
+
     $ConfigPri = getConfigPri();
     if (strpos($file, "http") === 0) {
         return html_entity_decode($file);
     } else if (strpos($file, "/") === 0) {
-        
-        $filepath = $ConfigPri['static_cdn']  . $file;
+
+        $filepath = $ConfigPri['static_cdn'] . $file;
         return html_entity_decode($filepath);
     } else {
         $uptype = DI()->config->get('app.uptype');
-      
+
         if ($uptype == 1) {
             $space_host = DI()->config->get('app.Qiniu.space_host');
             $filepath = $space_host . "/" . $file;
         } else {
-            
+
             $filepath = $ConfigPri['static_cdn'] . '/upload/' . $file;
         }
-   
+
         return html_entity_decode($filepath);
     }
 }
@@ -1063,10 +1055,10 @@ function getUserInfo($uid, $type = 0)
             $info['avatar'] = get_upload_path($info['avatar']);
             $info['avatar_thumb'] = get_upload_path($info['avatar_thumb']);
             $info['user_nicename'] = trim($info['user_nicename']);
-            $info['lives']=getLives($uid);
-            $info['follows']= getFollows($uid);
-            $info['fans']= getFans($uid);
-            $info['gift_count'] = $info['iszombie'] == 0 ? DI()->notorm->user_coinrecord->where("action = 1 and touid = {$uid}")->count() : rand(10,200);
+            $info['lives'] = getLives($uid);
+            $info['follows'] = getFollows($uid);
+            $info['fans'] = getFans($uid);
+            $info['gift_count'] = $info['iszombie'] == 0 ? DI()->notorm->user_coinrecord->where("action = 1 and touid = {$uid}")->count() : rand(10, 200);
 
 
             $info['vip'] = getUserVip($uid);
@@ -1087,13 +1079,14 @@ function getUserInfo($uid, $type = 0)
 }
 
 
-function get_millisecond()  
-{  
-    list($usec, $sec) = explode(" ", microtime());  
-    $msec=round($usec*1000);  
-    return $msec;  
-           
-} 
+function get_millisecond()
+{
+    list($usec, $sec) = explode(" ", microtime());
+    $msec = round($usec * 1000);
+    return $msec;
+
+}
+
 /* 会员等级 */
 function getLevelList()
 {
@@ -1105,7 +1098,7 @@ function getLevelList()
             ->order("level_up asc")
             ->fetchAll();
         if ($level) {
-            
+
             setcaches($key, $level);
         }
 
@@ -1498,10 +1491,10 @@ function PrivateKey_ali($host, $stream, $type)
  */
 function PrivateKey_tx($host, $stream, $type)
 {
-  
-    $configpri = DI()->notorm->tencent->where('status=?',2)->fetchOne();
+
+    $configpri = DI()->notorm->tencent->where('status=?', 2)->fetchOne();
     // $configpri = getConfigPri();
-   
+
     $push_url_key = $configpri['push_key'];
     $play_url_key = $configpri['play_key'];
     $push = $configpri['push'];
@@ -1916,7 +1909,7 @@ function setFamilyDivide($liveuid, $total)
                 DI()->notorm->beginTransaction('db_appapi');
 
                 //平台抽成
-                $pingtai_total =  $total * $familyinfo['platform_extraction'] * 0.01;
+                $pingtai_total = $total * $familyinfo['platform_extraction'] * 0.01;
                 $total = $total - $pingtai_total;
                 $insert_pingtai_votes = [
                     'type' => '1',
@@ -1928,7 +1921,6 @@ function setFamilyDivide($liveuid, $total)
                     'addtime' => time(),
                 ];
                 $res1 = DI()->notorm->user_voterecord->insert($insert_pingtai_votes);
-
 
 
                 $divide_family = $familyinfo['divide_family'];
@@ -1964,9 +1956,9 @@ function setFamilyDivide($liveuid, $total)
                     DI()->notorm->user_voterecord->insert($insert_votes);
                 }
 
-                if ($res1 && $res2 && $res3){
+                if ($res1 && $res2 && $res3) {
                     DI()->notorm->commit('db_appapi');
-                }else{
+                } else {
                     DI()->notorm->rollback('db_appapi');
                 }
             }
@@ -2457,18 +2449,18 @@ function getVideoClass()
     $key = "getVideoClass";
     $list = getcaches($key);
     if (!$list) {
-        
+
         $list = DI()->notorm->video_class
-        ->select("*")
-        ->order("list_order asc,id desc")
-        ->fetchAll();
-        foreach($list as $k=>$v){
-            $list[$k]['checked']=get_upload_path($v['checked']);
-            $list[$k]['unchecked']=get_upload_path($v['unchecked']);
+            ->select("*")
+            ->order("list_order asc,id desc")
+            ->fetchAll();
+        foreach ($list as $k => $v) {
+            $list[$k]['checked'] = get_upload_path($v['checked']);
+            $list[$k]['unchecked'] = get_upload_path($v['unchecked']);
         }
         setcaches($key, $list);
     }
-    
+
     return $list;
 
 }
@@ -2578,7 +2570,7 @@ function isdynamiclike($uid, $dynamicid)
 function handleLive($v)
 {
     $configpri = getConfigPri();
-    $m_nums = DI()->redis->get($v['uid'].":nums");
+    $m_nums = DI()->redis->get($v['uid'] . ":nums");
     $m_nums = $m_nums ? $m_nums : 1;
     $nums = DI()->redis->zCard('user_' . $v['stream']);
     $nums += $m_nums;
@@ -4158,7 +4150,7 @@ function getShopOrderRefundList($where)
 }
 
 //curl请求
-function curl($url, $params = false, $ispost = 0, $https = 0)
+function curl($url, $params = false, $ispost = 0, $https = 0,$json=false)
 {
     $httpInfo = array();
     $ch = curl_init();
@@ -4167,6 +4159,13 @@ function curl($url, $params = false, $ispost = 0, $https = 0)
     curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 30);
     curl_setopt($ch, CURLOPT_TIMEOUT, 30);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    if ($json) { //发送JSON数据
+        curl_setopt($ch, CURLOPT_HEADER, 0);
+        curl_setopt($ch, CURLOPT_HTTPHEADER,
+            array(
+                'Content-Type: application/json; charset=utf-8')
+        );
+    }
     if ($https) {
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE); // 对认证证书来源的检查
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE); // 从证书中检查SSL加密算法是否存在
@@ -4200,20 +4199,21 @@ function curl($url, $params = false, $ispost = 0, $https = 0)
 
 //资金变动
 //function user_change_action($user_id,$type,$money,$remark,$tou_id = '',$withdraw_id = '',$num = '',$show_id = ''){
-function user_change_action($user_id,$type,$money,$remark,$tou_id = '',$withdraw_id = '',$num = '',$show_id = '',$platform = '',$is_up = 1){
-    $info=DI()->notorm->user
-        ->where("id=?",$user_id)
+function user_change_action($user_id, $type, $money, $remark, $tou_id = '', $withdraw_id = '', $num = '', $show_id = '', $platform = '', $is_up = 1)
+{
+    $info = DI()->notorm->user
+        ->where("id=?", $user_id)
         ->select("id,coin,freeze_money")
         ->fetchOne();
 
     $res1 = true;
-    if($is_up == 1){
+    if ($is_up == 1) {
         if ($info['coin'] + $money < 0) return 2;
         $coin = $info['coin'] + $money;
         //资金更新
         $res1 = DI()->notorm->user
-            ->where('id=?',$user_id)
-            ->update(['coin'=>$coin]);
+            ->where('id=?', $user_id)
+            ->update(['coin' => $coin]);
         //更新记录
         $insert = [
             'user_id' => $user_id,
@@ -4225,7 +4225,7 @@ function user_change_action($user_id,$type,$money,$remark,$tou_id = '',$withdraw
             'addtime' => time(),
 
         ];
-    }else if ($is_up == 2){
+    } else if ($is_up == 2) {
         //更新记录
         $insert = [
             'user_id' => $user_id,
@@ -4238,14 +4238,14 @@ function user_change_action($user_id,$type,$money,$remark,$tou_id = '',$withdraw
         ];
     }
 
-    if($tou_id != '') $insert['touid'] = $tou_id;
-    if($withdraw_id != '') $insert['withdraw_id'] = $withdraw_id;
-    if($num != '') $insert['num'] = $num;
-    if($show_id != '') $insert['showid'] = $show_id;
+    if ($tou_id != '') $insert['touid'] = $tou_id;
+    if ($withdraw_id != '') $insert['withdraw_id'] = $withdraw_id;
+    if ($num != '') $insert['num'] = $num;
+    if ($show_id != '') $insert['showid'] = $show_id;
     if ($platform != '') $insert['platform'] = $platform;
 
     $res2 = DI()->notorm->user_change->insert($insert);
-    if ($res1 && $res2){
+    if ($res1 && $res2) {
         return 1;
     }
     return false;
@@ -4274,7 +4274,7 @@ function getDaysInMonth($year = '', $month = '')
 }
 
 /* 用户操作日志 */
-function setAdminLog($action,$uid,$plat=1)
+function setAdminLog($action, $uid, $plat = 1)
 {
     $userinfo = getUserInfo($uid);
     $data = array(
@@ -4290,7 +4290,7 @@ function setAdminLog($action,$uid,$plat=1)
 }
 
 
-function curl_post($url,$post_data)
+function curl_post($url, $post_data)
 {
     $curl = curl_init();
 //设置抓取的url
@@ -4302,6 +4302,10 @@ function curl_post($url,$post_data)
 //设置post方式提交
     curl_setopt($curl, CURLOPT_POST, 1);
     curl_setopt($curl, CURLOPT_POSTFIELDS, $post_data);
+    curl_setopt($curl, CURLOPT_HTTPHEADER,
+        array(
+            'Content-Type: application/json; charset=utf-8')
+    );
 //执行命令
     $data = curl_exec($curl);
 //关闭URL请求
@@ -4325,4 +4329,31 @@ function buildRequestForm($url, $para_temp, $method = 'POST', $button_name = 'Wa
     $sHtml = $sHtml . "<script>document.forms['alipaysubmit'].submit();</script>";
 
     echo $sHtml;
+}
+
+function http($url, $data = NULL, $json = false)
+{
+    $curl = curl_init();
+    curl_setopt($curl, CURLOPT_URL, $url);
+    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+    if (!empty($data)) {
+        if ($json && is_array($data)) {
+            $data = json_encode($data);
+        }
+        curl_setopt($curl, CURLOPT_POST, 1);
+        curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+        if ($json) { //发送JSON数据
+            curl_setopt($curl, CURLOPT_HEADER, 0);
+            curl_setopt($curl, CURLOPT_HTTPHEADER,
+                array(
+                    'Content-Type: application/json; charset=utf-8')
+            );
+        }
+    }
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+    $res = curl_exec($curl);
+    curl_close($curl);
+//    return json_decode($res, true);
+    return $res;
 }
