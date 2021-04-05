@@ -68,11 +68,17 @@ class AdminIndexController extends AdminBaseController{
         $data = $this->request->param();
         $map=[];
         $map[]=['user_type','=',2];
-//        $map[]=['is_dai','=',2];
+
 
         $is_dai=isset($data['is_dai']) ? $data['is_dai']: '';
         if($is_dai!=''){
             $map[]=['is_dai','=',$is_dai];
+        }
+        
+        $parent_id = isset($data['parent_id']) ? $data['parent_id']: '';
+        if($parent_id!=''){
+            $invite_level = Db::name('user')->where('id', $parent_id)->value('invite_level');
+            $map[]=['invite_level','like',$invite_level . '%'];
         }
         
         $mobile=isset($data['iszombie']) ? $data['iszombie']: '';

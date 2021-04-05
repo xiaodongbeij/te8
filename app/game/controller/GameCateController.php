@@ -48,7 +48,8 @@ class GameCateController extends AdminBaseController
 
             $res = GameCate::create($data);
             if(!$res) $this->error("添加失败");
-            delcache('game_cate');
+       
+            delcache('getGameCate');
             $this->success("添加成功");
         }
         return $this->fetch();
@@ -75,9 +76,10 @@ class GameCateController extends AdminBaseController
 
             $res = GameCate::update($data);
             if(!$res) $this->error("编辑失败");
-            delcache('game_cate');
+        
             $this->success("编辑成功");
         }
+        delcache('getGameCate');
         $id = input('id');
         $info = GameCate::get($id);
         $this->assign('info', $info);
@@ -89,7 +91,7 @@ class GameCateController extends AdminBaseController
         $ids = input();
         $res = GameCate::where('id', 'in', $ids)->update(['del_status' => 1]);
         if(!$res) $this->error("删除失败");
-        delcache('game_cate');
+        delcache('getGameCate');
         $this->success("删除成功");
     }
 }
