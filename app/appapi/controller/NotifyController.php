@@ -12,6 +12,56 @@ use think\Queue;
 class NotifyController extends HomebaseController
 {
 
+    //芒果回调
+    public function mg_notify(){
+
+        $path = CMF_DATA . 'paylog/mg/'.date('Ym').'/';
+        $filename = date('dH').'.txt';
+        if(!is_dir($path)){
+            $flag = mkdir($path,0777,true);
+        }
+
+        $data = file_get_contents("php://input");
+        if (!$data) {
+            echo 'failure';
+            exit;
+        }
+        //收到回调！
+        file_put_contents( $path.$filename,'收到回调：'.$data.PHP_EOL,FILE_APPEND);
+
+        $data = json_decode($data, true);
+        if ($data['code'] != 'S00') die('failure');
+
+        $order = Db::table('cmf_order')->where('order_sn', $data['merchantOrderNumber'])->field('channel_id,order_status,pay_status,user_id')->find();
+        if (!$order) die('订单异常');
+        if ($order['order_status'] == 4 && $order['pay_status'] == 1) die('已处理');
+
+        $message = "天鹅芒果支付收款通知:\n 平台单号：" . $data['orderNumber'] . "\n 商户订单号:" . $data['merchantOrderNumber'] ."\n 会员账号:" . $order['user_id'] . "\n 充值金额:" . $data['actualAmount'];
+
+        //验签
+        $md5key = Db::table('cmf_channel')->where('id', $order['channel_id'])->value('key');
+        $old_sign = $data['sign'];
+        unset($data['sign']);
+        ksort($data);
+        $md5str = "";
+        foreach ($data as $key => $val) {
+            $md5str = $md5str . $key . "=" . $val . "&";
+        }
+        $sign = strtoupper(md5($md5str . "merchantKey=" . $md5key));
+        if ($sign != $old_sign) die('sign error');
+        $result = $this->call_logic($data['merchantOrderNumber'], $data['actualAmount'], $data['orderNumber']);
+        if ($result){
+            $this->telegram($message);
+            $str = "交易成功！订单号：".$data["merchantOrderNumber"];
+            file_put_contents( $path.$filename,$str.PHP_EOL,FILE_APPEND);
+            exit("OK");
+        }else{
+            $str = "订单号：".$data["merchantOrderNumber"].'本地数据库异常';
+            file_put_contents( $path.$filename,$str.PHP_EOL,FILE_APPEND);
+            die('error');
+        }
+    }
+
     //U付回调
     public function uf_notify()
     {
@@ -150,7 +200,7 @@ class NotifyController extends HomebaseController
         }
     }
 
-    //回调逻辑
+    //回调逻辑,参数：天鹅订单号，金额，三方订单号
     protected function call_logic($order_sn, $money, $trade_no)
     {
         //开启事务
