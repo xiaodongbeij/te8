@@ -4343,11 +4343,7 @@ function http($url, $data = NULL, $json = false)
     }
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
     $res = curl_exec($curl);
-    $errorno = curl_errno($curl);
 
-    if ($errorno) {
-        return array('errorno' => false, 'errmsg' => $errorno);
-    }
     curl_close($curl);
 //    return json_decode($res, true);
     return $res;
