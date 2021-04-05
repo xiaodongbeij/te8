@@ -38,7 +38,7 @@ class Api_Mg extends PhalApi_Api {
         ];
 //        var_dump($data);
         $data['sign'] = $this->get_sign($data, $info['key']);
-        $data['createType'] = 2;
+        $data['createType'] = 1;
 //        $data = json_encode($data);
 //        var_dump($data);
 //        var_dump($info['action']);die;
