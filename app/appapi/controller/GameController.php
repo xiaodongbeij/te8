@@ -40,9 +40,9 @@ class GameController extends HomebaseController
             ]);
         }
 
-//        $this->start = date("Y-m-d H:i:s",strtotime('-20 minute'));
+        $this->start = date("Y-m-d H:i:s",strtotime('-20 minute'));
         $this->end = date("Y-m-d H:i:s");
-        $this->start = date("Y-m-d H:i:s",strtotime('-15 day'));
+//        $this->start = date("Y-m-d H:i:s",strtotime('-15 day'));
 //        $this->end = date("Y-m-d H:i:s",strtotime('-15 day'));
         connectionRedis();
         $con = getConfigPri();
@@ -59,6 +59,51 @@ class GameController extends HomebaseController
             'username' => $this->username,
         ],$param);
 
+    }
+
+    //补存游戏记录
+    public function Saveg(){
+        $this->param['platform'] = '0002';
+        $this->start = date("Y-m-d H:i:s",strtotime('-15 day'));
+        $this->end = date("Y-m-d H:i:s");
+        // 请求地址
+        $url = $this->domain . "/api/{$this->agent}/GetBettingRecord";
+        //去除用户
+        unset($this->param['username']);
+//        // 查询起始时间
+        $this->param['datestart'] = $this->start;
+//        // 查询截止时间
+        $this->param['dateend'] = $this->end;
+        // 排序 1 表示降序 ，0 表示升序
+        $this->param['ascordesc'] = 1;
+        // 当前第几页
+        $this->param['currentpage'] = 1;
+        // 每页的记录数
+        $this->param['pagesize'] = 100000;
+        $res = json_decode($this->getHttpQuery($url, $this->param, 1),true);
+//        dump($res);die;
+        if ($res['hRet'] !== 1) die('error');
+        $insert = [];
+        foreach ($res['list'] as $v){
+            $temp = [
+                'rec_id' => $v['RecId'],
+                'platform_code' => $v['PlatformCode'],
+                'game_name' => $v['GameName'],
+                'game_type' => $v['GameType'],
+                'user_login' => $v['UserAccount'],
+                'bet_id' => $v['BetId'],
+                'bet_time' => strtotime($v['BetTime']),
+                'update_time' => strtotime($v['UpdateTime']),
+                'bet_amount' => $v['BetAmount'],
+                'pay_off' => $v['PayOff'],
+                'profit' => $v['Profit'],
+                'status' => $v['Status'],
+                'remark' => $v['Remark']
+            ];
+            $insert[] = $temp;
+        }
+        $res = Db::table('cmf_game_record')->limit(100)->insertAll($insert,true);
+        var_dump($res);
     }
 
     /**
@@ -84,9 +129,9 @@ class GameController extends HomebaseController
         // 每页的记录数
         $this->param['pagesize'] = 100000;
 
-        $this->param['platform'] = '0002';
-        $res = json_decode($this->getHttpQuery($url, $this->param, 1),true);
-        dump($res);die;
+//        $this->param['platform'] = '0002';
+//        $res = json_decode($this->getHttpQuery($url, $this->param, 1),true);
+//        dump($res);die;
 
         $insert = [];
         foreach ($platforms as $val){
