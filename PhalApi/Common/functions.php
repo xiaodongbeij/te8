@@ -346,6 +346,7 @@ function getCameCaizhongKey($cat_id, $type, $hot)
 function getGameCate()
 {
     $key = getGameCateKey();
+//    delcache($key);
     $game_cate = getcaches($key);
     if (!$game_cate) {
         $game_cate = DI()->notorm->game_cate
