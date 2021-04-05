@@ -216,7 +216,7 @@ class UserChangeController extends AdminbaseController
     
             $user_info = User::where('id', $w['user_id'])->find();
             if($user_info['freeze_money'] < 0) $this->error("该用户冻结资金异常请联系技术人员");
-            if(abs($user_info['freeze_money']) < abs($w['change_money'])) $this->error("冻结资金不足");
+            if(abs($user_info['freeze_money']) < abs($w['change_money'] + $w['service_charge'])) $this->error("冻结资金不足");
             $user_info->freeze_money = $user_info['freeze_money'] + $w['change_money'] + $w['service_charge'];
             $user_info->count_Withdrawal -= $w['change_money'];
             $res1 = $user_info->save();
@@ -224,18 +224,21 @@ class UserChangeController extends AdminbaseController
             $w->status = 4;
             $w->examine_time = time();
             $res2 = $w->save();
-    
-            $insert = [
-                'user_id' => $user_info['id'],
-                'change_type' => 24,
-    //            'money' => $info['coin'],
-    //            'next_money' => $coin,
-                'change_money' => $w['service_charge'],
-                'withdraw_id' => $w['id'],
-                'remark' => '提现服务费',
-                'addtime' => time(),
-            ];
-            $res3 = UserChange::create($insert);
+
+            $res3 = true;
+            if(abs($w['service_charge']) > 0){
+                $insert = [
+                    'user_id' => $user_info['id'],
+                    'change_type' => 24,
+        //            'money' => $info['coin'],
+        //            'next_money' => $coin,
+                    'change_money' => $w['service_charge'],
+                    'withdraw_id' => $w['id'],
+                    'remark' => '提现服务费',
+                    'addtime' => time(),
+                ];
+                $res3 = UserChange::create($insert);
+            }
     
             if ($res1 && $res2 && $res3) {
                 Db::commit();
@@ -268,7 +271,7 @@ class UserChangeController extends AdminbaseController
 
             $user_info = User::where('id', $info['user_id'])->find();
             if($user_info['freeze_money'] < 0) $this->error("该用户冻结资金异常请联系技术人员");
-            if(abs($user_info['freeze_money']) < abs($info['change_money'])) $this->error("冻结资金不足");
+            if(abs($user_info['freeze_money']) < abs($info['change_money'] + $info['service_charge'])) $this->error("冻结资金不足");
 
             $user_info->coin = $user_info['coin'] - $info['change_money'] - $info['service_charge'];
             $user_info->freeze_money = $user_info['freeze_money'] + $info['change_money'] + $info['service_charge'];
