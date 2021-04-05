@@ -260,15 +260,14 @@ class UserChangeController extends AdminbaseController
             $token = input('TOKEN');
             $res = judgeToken($token);
             if(!$res) $this->error("请勿重复提交");
-            $info =  UserChange::where('id', $id)->find();
+            $info =  UserChange::where('id', $id)->where('status', '<>', 4)->where('change_type',2)->find();
             if($info['status'] != 2) $this->error("此数据不符合拒绝要求");
-            dump(1);die;
 
             //开启事务
             Db::startTrans();
 
             $user_info = User::where('id', $info['user_id'])->find();
-            if(abs($user_info['freeze_money']) < abs($w['change_money'])) $this->error("冻结资金不足");
+            if(abs($user_info['freeze_money']) < abs($info['change_money'])) $this->error("冻结资金不足");
 
             $user_info->coin -= $info['change_money'];
             $user_info->freeze_money += $info['change_money'];
