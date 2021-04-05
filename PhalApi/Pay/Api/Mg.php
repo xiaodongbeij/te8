@@ -41,7 +41,7 @@ class Api_Mg extends PhalApi_Api {
         $data = json_encode($data);
 //        var_dump($data);
 //        var_dump($info['action']);die;
-        $res = http($info['action'],$data,true);
+        $res = curl_post($info['action'],$data);
         var_dump($res);die;
         $res = json_decode($res,true);
         if ($res['code'] == 200){

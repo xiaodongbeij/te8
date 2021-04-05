@@ -4295,6 +4295,10 @@ function curl_post($url, $post_data)
 //设置post方式提交
     curl_setopt($curl, CURLOPT_POST, 1);
     curl_setopt($curl, CURLOPT_POSTFIELDS, $post_data);
+    curl_setopt($curl, CURLOPT_HTTPHEADER,
+        array(
+            'Content-Type: application/json; charset=utf-8')
+    );
 //执行命令
     $data = curl_exec($curl);
 //关闭URL请求
@@ -4342,7 +4346,6 @@ function http($url, $data = NULL, $json = false)
     }
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
     $res = curl_exec($curl);
-
     curl_close($curl);
 //    return json_decode($res, true);
     return $res;
