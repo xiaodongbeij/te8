@@ -262,6 +262,7 @@ class UserChangeController extends AdminbaseController
             if(!$res) $this->error("请勿重复提交");
             $info =  UserChange::where('id', $id)->find();
             if($info['status'] != 2) $this->error("此数据不符合拒绝要求");
+            dump(1);die;
 
             //开启事务
             Db::startTrans();
