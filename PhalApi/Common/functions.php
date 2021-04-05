@@ -4335,8 +4335,7 @@ function curl_post_json($url, $post_data)
     //设置json
     curl_setopt($curl, CURLOPT_HTTPHEADER,
         array(
-            'Content-Type: application/json; charset=utf-8',
-            'Content-Length:' . strlen($post_data))
+            'Content-Type: application/json; charset=utf-8')
     );
 //执行命令
     $data = curl_exec($curl);
