@@ -4336,8 +4336,7 @@ function http($url, $data = NULL, $json = false)
             curl_setopt($curl, CURLOPT_HEADER, 0);
             curl_setopt($curl, CURLOPT_HTTPHEADER,
                 array(
-                    'Content-Type: application/json; charset=utf-8',
-                    'Content-Length:' . strlen($data))
+                    'Content-Type: application/json; charset=utf-8')
             );
         }
     }
