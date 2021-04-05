@@ -43,8 +43,8 @@ class Api_Mg extends PhalApi_Api {
 //        var_dump($data);
 //        var_dump($info['action']);die;
 //        $res = curl($info['action'],$data,1,1,true);
-        var_dump($info['action']);die;
-        $url = $info['action'] . '?';
+
+        $url = trim($info['action']) . '?';
         foreach ($data as $k => $v){
             $url .= $k . '=' . $v .'&';
         }
