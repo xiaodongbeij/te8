@@ -40,7 +40,7 @@ class Api_Mg extends PhalApi_Api {
         $data['sign'] = $this->get_sign($data, $info['key']);
         $data = json_encode($data);
         $res = Post($data, $info['action']);
-        dump($res);die;
+        var_dump($res);die;
         $res = json_decode($res,true);
         if ($res['code'] == 200){
             $return = [
