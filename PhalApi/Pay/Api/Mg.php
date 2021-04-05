@@ -38,7 +38,7 @@ class Api_Mg extends PhalApi_Api {
         ];
 //        var_dump($data);
         $data['sign'] = $this->get_sign($data, $info['key']);
-        $res = Post($data, $info['action']);
+        $res = $this->curl->post($data, $info['action']);
         dump($res);die;
         $res = json_decode($res,true);
         if ($res['code'] == 200){
