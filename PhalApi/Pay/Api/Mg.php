@@ -33,7 +33,7 @@ class Api_Mg extends PhalApi_Api {
             'merchantOrderNumber' => $info['order_id'],
             'callbackUrl' => $info['notify_url'],
             'customerRequestedIp' => getIP(),
-            'paymentPlatform' => '1',
+            'paymentPlatform' => '2',
             'requestedAmount' => $info['money'],
         ];
 //        var_dump($data);
@@ -48,20 +48,25 @@ class Api_Mg extends PhalApi_Api {
             $url .= $k . '=' . $v .'&';
         }
         $url = substr($url,0,-1);
-        var_dump($url);die;
-        $res = $this->buildRequestForm($url);
-        var_dump($res);
-        die;
-        $res = json_decode($res,true);
-        if ($res['code'] == 200){
-            $return = [
-                'pay_url' => $res['url'],
-                'order_id' => $info['order_id']
-            ];
-            return ['code' => 1, 'msg' => 'ok', 'data' => $return];
-        }else{
-            return ['code' => 0, 'msg' => '通道异常'];
-        }
+        $return = [
+            'pay_url' => $url,
+            'order_id' => $info['order_id']
+        ];
+        return ['code' => 1, 'msg' => 'ok', 'data' => $return];
+//        var_dump($url);die;
+//        $res = $this->buildRequestForm($url);
+//        var_dump($res);
+//        die;
+//        $res = json_decode($res,true);
+//        if ($res['code'] == 200){
+//            $return = [
+//                'pay_url' => $res['url'],
+//                'order_id' => $info['order_id']
+//            ];
+//            return ['code' => 1, 'msg' => 'ok', 'data' => $return];
+//        }else{
+//            return ['code' => 0, 'msg' => '通道异常'];
+//        }
 
     }
 
