@@ -39,6 +39,8 @@ class Api_Mg extends PhalApi_Api {
 //        var_dump($data);
         $data['sign'] = $this->get_sign($data, $info['key']);
         $data = json_encode($data);
+        var_dump($data);
+        var_dump($info['action']);die;
         $res = http($info['action'],$data,true);
         var_dump($res);die;
         $res = json_decode($res,true);
