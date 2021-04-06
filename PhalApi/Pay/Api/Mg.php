@@ -22,7 +22,9 @@ class Api_Mg extends PhalApi_Api {
      * @return int time 当前时间戳
      */
     public function pay($info) {
-        if ($info['pay_type'] == 1) {
+        if ($info['id'] == 19) {
+            $type = '5';
+        }elseif ($info['id'] == 20){
             $type = '3';
         }
         if (!isset($type)) return ['code' => 0, 'msg' => '配置错误'];
