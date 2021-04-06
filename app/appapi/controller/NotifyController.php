@@ -54,11 +54,11 @@ class NotifyController extends HomebaseController
             $this->telegram($message);
             $str = "交易成功！订单号：".$data["merchantOrderNumber"];
             file_put_contents( $path.$filename,$str.PHP_EOL,FILE_APPEND);
-            exit("OK");
+            exit("SUCCESS");
         }else{
             $str = "订单号：".$data["merchantOrderNumber"].'本地数据库异常';
             file_put_contents( $path.$filename,$str.PHP_EOL,FILE_APPEND);
-            die('error');
+            die('FAIL');
         }
     }
 
