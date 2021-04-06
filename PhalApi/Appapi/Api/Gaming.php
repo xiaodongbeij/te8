@@ -245,7 +245,7 @@ class Api_Gaming extends PhalApi_Api {
         $this->param['gametype'] = 1;
         $this->param['gamecode'] = checkNull($this->gamecode);
         
-        if($this->param['platform'] == '0035' || $this->param['platform'] == '0027' || $this->param['platform'] == '0004')
+        if($this->param['platform'] == '0035' || $this->param['platform'] == '0027' )
         {
             
             $this->param['gamecode'] = '';
@@ -254,6 +254,7 @@ class Api_Gaming extends PhalApi_Api {
        
         // 进入指定房间游戏
         if($this->param['gamecode']){
+       
             return $this->PlayGame();
         }
         
@@ -344,6 +345,7 @@ class Api_Gaming extends PhalApi_Api {
     {
         // 请求地址
         $url = $this->domain . "/web/{$this->agent}/PlayGame";
+
         // 直接跳转到游戏
         return $this->getHttpQuery($url, $this->param, 2);
     }
