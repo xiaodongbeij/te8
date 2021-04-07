@@ -151,6 +151,9 @@ class UserChangeController extends AdminbaseController
             ->where($where)
             ->field('uc.*,u.parent_id')
             ->paginate(20);
+        foreach ($list as $k => $v){
+            $list[$k]['addtime'] = date('Y-m-d H:i:s',$v['addtime']);
+        }
         $list->appends($data);
         $page = $list->render();
         $this->assign('list', $list);
