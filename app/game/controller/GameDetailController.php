@@ -44,6 +44,19 @@ class GameDetailController extends AdminBaseController
         if ($status != '') {
             $where[] = ['status', '=', $status];
         }
+
+        //层级搜索
+        $parent_id = isset($data['parent_id']) ? $data['parent_id']: '';
+        if($parent_id != ''){
+            $path = Db::table('cmf_user')->where('id',$parent_id)->value('invite_level');
+            $user_ids = Db::table('cmf_user')->where('invite_level','like',$path.'%')->field('id')->select();
+            $users = [];
+            foreach ($user_ids as $v){
+                $users[] = $v['id'];
+            }
+            $where[]=['user_login', 'in', $users];
+        }
+
         $list = Db::table('cmf_game_record')->alias('cr')->leftJoin('cmf_game_cate gc','gc.platform=cr.platform_code')->field('cr.*,FROM_UNIXTIME(cr.bet_time,"%Y-%m-%d %H:%i:%s") as bet_time,gc.name')->where($where)->order('bet_time desc')->paginate(20);
 
         $user_nums = Db::table('cmf_game_record')->where($where)->field('id,user_login')->group('user_login')->count();
@@ -78,16 +91,28 @@ class GameDetailController extends AdminBaseController
 
         $short_name = isset($data['short_name']) ? $data['short_name'] : '';
         if ($short_name != '') {
-            $where[] = ['platform_code', '=', $short_name];
+            $where[] = ['gr.platform_code', '=', $short_name];
         }
 
         $start_time = isset($data['start_time']) ? $data['start_time'] : '';
         $end_time = isset($data['end_time']) ? $data['end_time'] : '';
         if ($start_time != "") {
-            $where[] = ['bet_time', '>=', strtotime($start_time)];
+            $where[] = ['gr.bet_time', '>=', strtotime($start_time)];
         }
         if ($end_time != "") {
-            $where[] = ['bet_time', '<=', strtotime($end_time) + 60 * 60 * 24];
+            $where[] = ['gr.bet_time', '<=', strtotime($end_time) + 60 * 60 * 24];
+        }
+
+        //层级搜索
+        $parent_id = isset($data['parent_id']) ? $data['parent_id']: '';
+        if($parent_id != ''){
+            $path = Db::table('cmf_user')->where('id',$parent_id)->value('invite_level');
+            $user_ids = Db::table('cmf_user')->where('invite_level','like',$path.'%')->field('id')->select();
+            $users = [];
+            foreach ($user_ids as $v){
+                $users[] = $v['id'];
+            }
+            $where[]=['gr.user_login', 'in', $users];
         }
 
         $cai = Db::table('cmf_game_cate')

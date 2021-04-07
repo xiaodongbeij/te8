@@ -18,6 +18,10 @@
     </ul>
     <form class="well form-inline margin-top-20" method="post" name="form1" action="{:url('game/GameDetail/user_profit')}">
 
+        上级ID：
+        <input class="form-control" type="text" name="parent_id" style="width: 200px;" value="{:input('request.parent_id')}"
+               placeholder="上级ID">
+
         用户：
         <input class="form-control" type="text" name="user_login" style="width: 200px;" value="{:input('request.user_login')}"
                placeholder="请输入用户ID">
