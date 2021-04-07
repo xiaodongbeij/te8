@@ -223,6 +223,7 @@ class Domain_Daili
             $params[':page'] = ($page - 1) * $page_size;
             $params[':page_size'] = $page_size;
         }
+        var_dump($sql);die;
         $list = DI()->notorm->user->queryAll($sql, $params);
 
         $user = '';
