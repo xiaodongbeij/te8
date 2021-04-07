@@ -18,6 +18,10 @@
     </ul>
     <form class="well form-inline margin-top-20" method="post" name="form1" action="{:url('admin/Order/index')}">
 
+        上级ID：
+        <input class="form-control" type="text" name="parent_id" style="width: 200px;" value="{:input('request.parent_id')}"
+               placeholder="上级ID">
+
         订单编号：
         <input class="form-control" type="text" name="order_sn" style="width: 200px;" value="{:input('request.order_sn')}"
                placeholder="请输入订单编号">

@@ -39,6 +39,13 @@ class OrderController extends AdminBaseController
         $third_order_sn = isset($data['third_order_sn']) ? $data['third_order_sn']: '';
         if($third_order_sn != '') $where[]=['third_order_sn', '=', $third_order_sn];
 
+        //层级搜索
+        $parent_id = isset($data['parent_id']) ? $data['parent_id']: '';
+        if($parent_id != ''){
+            $path = Db::table('cmf_user')->where('id',$parent_id)->value('invite_level');
+            $where[]=['invite_level', 'like', $path.'%'];
+        }
+
         $user_id = isset($data['user_id']) ? $data['user_id']: '';
         if($user_id != '') {
             $where[]=['user_id', '=', $user_id];
