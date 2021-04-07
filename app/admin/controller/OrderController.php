@@ -43,9 +43,13 @@ class OrderController extends AdminBaseController
         $parent_id = isset($data['parent_id']) ? $data['parent_id']: '';
         if($parent_id != ''){
             $path = Db::table('cmf_user')->where('id',$parent_id)->value('invite_level');
-            $user_ids = Db::table('cmf_user')->where('invite_level','like',$path.'%')->value('id');
-            dump($user_ids);die;
-            $where[]=['invite_level', 'like', $path.'%'];
+            $user_ids = Db::table('cmf_user')->where('invite_level','like',$path.'%')->field('id')->select();
+            $users = [];
+            foreach ($user_ids as $v){
+                $users[] = $v['id'];
+            }
+//            dump($user_ids);die;
+            $where[]=['user_id', 'in', $users];
         }
 
         $user_id = isset($data['user_id']) ? $data['user_id']: '';
