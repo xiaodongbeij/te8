@@ -212,9 +212,10 @@ class Domain_Daili
             return $rs;
         }
     $count = $temp;//总数
+        var_dump($where);
         var_dump(($page-1) * $page_size);
         var_dump($page_size);die;
-        
+
     $list = DI()->notorm->user
         ->where("$where")
         ->order('id desc')
