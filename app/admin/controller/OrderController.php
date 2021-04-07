@@ -48,7 +48,6 @@ class OrderController extends AdminBaseController
             foreach ($user_ids as $v){
                 $users[] = $v['id'];
             }
-//            dump($user_ids);die;
             $where[]=['user_id', 'in', $users];
         }
 

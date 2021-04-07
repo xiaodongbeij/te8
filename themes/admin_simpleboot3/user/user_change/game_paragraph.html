@@ -17,6 +17,10 @@
     </ul>
     <form class="well form-inline margin-top-20" method="post" action="{:url('user/userChange/gameParagraph')}">
 
+        上级ID：
+        <input class="form-control" type="text" name="parent_id" style="width: 200px;" value="{:input('request.parent_id')}"
+               placeholder="上级ID">
+
         用户：
         <input class="form-control" type="text" name="uid" style="width: 200px;" value="{:input('request.uid')}"
                placeholder="请输入用户ID">
@@ -42,6 +46,7 @@
                 </th>
                 <th>ID</th>
                 <th>用户</th>
+                <th>上级id</th>
                 <th>变动类型</th>
                 <th>变动前金额</th>
                 <th>变动后金额</th>
@@ -61,6 +66,7 @@
                     </td>
                     <td>{$vo.id}</td>
                     <td>{$vo.user_id}</td>
+                    <td>{$vo.parent_id}</td>
                     <td>
                         <eq name="$vo.change_type" value="23">游戏存取款</eq>
                     </td>

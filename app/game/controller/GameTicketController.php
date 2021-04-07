@@ -8,6 +8,7 @@ use app\game\model\GameCaizhong;
 use app\game\model\GameTicket;
 use app\user\model\User;
 use cmf\controller\AdminBaseController;
+use think\Db;
 use think\Request;
 
 
@@ -45,6 +46,18 @@ class GameTicketController extends AdminBaseController
 
         $list_oks = GameTicket::where($where)->where('ok', '=', 1)->count();
         $list_nos = GameTicket::where($where)->where('ok', '=', 2)->count();
+
+        //层级搜索
+        $parent_id = isset($data['parent_id']) ? $data['parent_id']: '';
+        if($parent_id != ''){
+            $path = Db::table('cmf_user')->where('id',$parent_id)->value('invite_level');
+            $user_ids = Db::table('cmf_user')->where('invite_level','like',$path.'%')->field('id')->select();
+            $users = [];
+            foreach ($user_ids as $v){
+                $users[] = $v['id'];
+            }
+            $where[]=['user_id', 'in', $users];
+        }
 
         $ok = isset($data['ok']) ? $data['ok']: '';
         if($ok != '') {

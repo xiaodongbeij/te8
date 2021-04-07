@@ -45,6 +45,17 @@ class UserChangeController extends AdminbaseController
             $where[] = ['addtime', '<=', strtotime($end_time) + 60*60*24];
         }
 
+        //层级搜索
+        $parent_id = isset($data['parent_id']) ? $data['parent_id']: '';
+        if($parent_id != ''){
+            $path = Db::table('cmf_user')->where('id',$parent_id)->value('invite_level');
+            $user_ids = Db::table('cmf_user')->where('invite_level','like',$path.'%')->field('id')->select();
+            $users = [];
+            foreach ($user_ids as $v){
+                $users[] = $v['id'];
+            }
+            $where[]=['user_id', 'in', $users];
+        }
         
         $list = UserChange::withJoin(['iszombie' => function($query)use($iszombie){
             if($iszombie !== '')
@@ -121,7 +132,25 @@ class UserChangeController extends AdminbaseController
             $where[] = ['addtime', '<=', strtotime($end_time) + 60*60*24];
         }
 
-        $list = UserChange::where($where)->order('id desc')->paginate(20);
+        //层级搜索
+        $parent_id = isset($data['parent_id']) ? $data['parent_id']: '';
+        if($parent_id != ''){
+            $path = Db::table('cmf_user')->where('id',$parent_id)->value('invite_level');
+            $user_ids = Db::table('cmf_user')->where('invite_level','like',$path.'%')->field('id')->select();
+            $users = [];
+            foreach ($user_ids as $v){
+                $users[] = $v['id'];
+            }
+            $where[]=['user_id', 'in', $users];
+        }
+
+//        $list = UserChange::where($where)->order('id desc')->paginate(20);
+        $list = Db::table('cmf_user_change')
+            ->alias('uc')
+            ->join('cmf_user u','u.id = uc.user_id')
+            ->where($where)
+            ->field('uc.*,u.parent_id')
+            ->paginate(20);
         $list->appends($data);
         $page = $list->render();
         $this->assign('list', $list);
@@ -153,6 +182,18 @@ class UserChangeController extends AdminbaseController
         }
         if($end_time != ""){
             $where[] = ['addtime', '<=', strtotime($end_time) + 60*60*24];
+        }
+
+        //层级搜索
+        $parent_id = isset($data['parent_id']) ? $data['parent_id']: '';
+        if($parent_id != ''){
+            $path = Db::table('cmf_user')->where('id',$parent_id)->value('invite_level');
+            $user_ids = Db::table('cmf_user')->where('invite_level','like',$path.'%')->field('id')->select();
+            $users = [];
+            foreach ($user_ids as $v){
+                $users[] = $v['id'];
+            }
+            $where[]=['user_id', 'in', $users];
         }
 
         $list = UserChange::where($where)->order('id desc')->paginate(20);

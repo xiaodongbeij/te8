@@ -18,6 +18,10 @@
     </ul>
     <form class="well form-inline margin-top-20" name="form1" method="post" action="{:url('user/userChange/withdrawIndex')}">
 
+        上级ID：
+        <input class="form-control" type="text" name="parent_id" style="width: 200px;" value="{:input('request.parent_id')}"
+               placeholder="上级ID">
+
         用户：
         <input class="form-control" type="text" name="uid" style="width: 200px;" value="{:input('request.uid')}"
                placeholder="请输入用户ID">
