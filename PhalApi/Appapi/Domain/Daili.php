@@ -189,42 +189,69 @@ class Domain_Daili
     //会员列表
     public function getMemberList($uid, $account, $type, $start, $end, $page, $page_size)
     {
-
-//        $sql = "select u.id,u.user_login,u.is_dai,u.create_time,u.invite_level,u.coin,ur.type,ur.rate from cmf_user u right join cmf_user_rate ur on u.id = ur.user_id where u.invite_level like :invite_level";
-        $sql = "select id,user_nicename,user_login,is_dai,create_time,invite_level,coin from cmf_user where parent_id = :parent_id";
-//        $params = [':invite_level' => $uid . '-%'];   //所有
-        $params = [':parent_id' => $uid ];  //一级
-        if ($account) {
-            $sql .= ' and user_login = :account';
-            $params[':account'] = $account;
-        }
-        if ($type) {
-            $sql .= ' and is_dai = :type';
-            $params[':type'] = $type;
-        }
-        if ($start) {
-            $sql .= ' and create_time >= :start';
-            $params[':start'] = strtotime($start);
-        }
-        if ($end) {
-            $sql .= ' and create_time <= :end';
-            $params[':end'] = strtotime($end);
-        }
-        $temp = DI()->notorm->user->queryAll($sql, $params);
-        if (!$temp){
+    $where = "parent_id = $uid";
+    if ($account){
+        $where .= " user_login = $account";
+    }
+    if ($type){
+        $where .= " is_dai = $type";
+    }
+    if ($start){
+        $start = strtotime($start);
+        $where .= " create_time >= $start";
+    }
+    if ($end){
+        $end = strtotime($end);
+        $where .= " create_time <= $end";
+    }
+    $temp = DI()->notorm->user->where("$where")->count();
+                if (!$temp){
             $rs['code'] = 1001;
             $rs['msg'] = '暂无用户';
             $rs['info'] = [];
             return $rs;
         }
-        $count = count($temp);//总数
-        if ($page && $page_size) {
-            $sql .= ' limit :page,:page_size';
-            $params[':page'] = ($page - 1) * $page_size;
-            $params[':page_size'] = $page_size;
-        }
-//        var_dump($sql);die;
-        $list = DI()->notorm->user->queryAll($sql, $params);
+    $count = $temp;//总数
+    $list = DI()->notorm->user
+        ->where("$where")
+        ->order('id desc')
+        ->limit(($page-1) * $page_size,$page_size)
+        ->fetchAll();
+////        $sql = "select u.id,u.user_login,u.is_dai,u.create_time,u.invite_level,u.coin,ur.type,ur.rate from cmf_user u right join cmf_user_rate ur on u.id = ur.user_id where u.invite_level like :invite_level";
+//        $sql = "select id,user_nicename,user_login,is_dai,create_time,invite_level,coin from cmf_user where parent_id = :parent_id";
+////        $params = [':invite_level' => $uid . '-%'];   //所有
+//        $params = [':parent_id' => $uid ];  //一级
+//        if ($account) {
+//            $sql .= ' and user_login = :account';
+//            $params[':account'] = $account;
+//        }
+//        if ($type) {
+//            $sql .= ' and is_dai = :type';
+//            $params[':type'] = $type;
+//        }
+//        if ($start) {
+//            $sql .= ' and create_time >= :start';
+//            $params[':start'] = strtotime($start);
+//        }
+//        if ($end) {
+//            $sql .= ' and create_time <= :end';
+//            $params[':end'] = strtotime($end);
+//        }
+//        $temp = DI()->notorm->user->queryAll($sql, $params);
+//        if (!$temp){
+//            $rs['code'] = 1001;
+//            $rs['msg'] = '暂无用户';
+//            $rs['info'] = [];
+//            return $rs;
+//        }
+//        $count = count($temp);//总数
+//        if ($page && $page_size) {
+//            $sql .= ' limit :page,:page_size';
+//            $params[':page'] = ($page - 1) * $page_size;
+//            $params[':page_size'] = $page_size;
+//        }
+////        var_dump($sql);die;
+//        $list = DI()->notorm->user->queryAll($sql, $params);
         $user = '';
 
         foreach ($list as $k => $v) {
