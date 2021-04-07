@@ -221,6 +221,12 @@ class Domain_Daili
         ->order('id desc')
         ->limit(($page-1) * $page_size,$page_size)
         ->fetchAll();
+    if (!$list){
+        $rs['code'] = 1001;
+        $rs['msg'] = '暂无更多用户';
+        $rs['info'] = [];
+        return $rs;
+    }
 ////        $sql = "select u.id,u.user_login,u.is_dai,u.create_time,u.invite_level,u.coin,ur.type,ur.rate from cmf_user u right join cmf_user_rate ur on u.id = ur.user_id where u.invite_level like :invite_level";
 //        $sql = "select id,user_nicename,user_login,is_dai,create_time,invite_level,coin from cmf_user where parent_id = :parent_id";
 ////        $params = [':invite_level' => $uid . '-%'];   //所有
