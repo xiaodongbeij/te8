@@ -43,6 +43,8 @@ class OrderController extends AdminBaseController
         $parent_id = isset($data['parent_id']) ? $data['parent_id']: '';
         if($parent_id != ''){
             $path = Db::table('cmf_user')->where('id',$parent_id)->value('invite_level');
+            $user_ids = Db::table('cmf_user')->where('invite_level','like',$path.'%')->value('id');
+            dump($user_ids);die;
             $where[]=['invite_level', 'like', $path.'%'];
         }
 
