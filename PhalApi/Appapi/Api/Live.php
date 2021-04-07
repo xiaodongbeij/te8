@@ -1353,7 +1353,7 @@ class Api_Live extends PhalApi_Api {
 	 */
 	public function roomCharge() { 
 		$rs = array('code' => 0, 'msg' => '', 'info' => array());
-		
+	    
 		$uid=$this->uid;
 		$token=checkNull($this->token);
 		$liveuid=$this->liveuid;
@@ -1365,7 +1365,7 @@ class Api_Live extends PhalApi_Api {
 			$rs['msg'] = '您的登陆状态失效，请重新登陆！';
 			return $rs;
 		}
-		
+
 		$domain = new Domain_Live();
 		$info=$domain->roomCharge($uid,$liveuid,$stream);
 		

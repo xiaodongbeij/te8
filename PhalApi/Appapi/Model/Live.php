@@ -300,6 +300,8 @@ class Model_Live extends PhalApi_Model_NotORM {
 	
 	/* 房间扣费 */
 	public function roomCharge($uid,$liveuid,$stream){
+	    
+	   
 		$islive=DI()->notorm->live
 					->select("islive,type,type_val,starttime")
 					->where('uid=? and stream=?',$liveuid,$stream)
@@ -316,6 +318,7 @@ class Model_Live extends PhalApi_Model_NotORM {
 		if($total<=0){
 			return 1007;
 		}
+        
         
         /* 更新用户余额 消费 */
 		$ifok=DI()->notorm->user

@@ -192,6 +192,7 @@ class Api_Home extends PhalApi_Api {
         }
         $info = getConfigPub();
         $ConfigPri = getConfigPri();
+
         unset($info['site_url']);
         unset($info['site_seo_title']);
         unset($info['site_seo_keywords']);
@@ -356,7 +357,7 @@ class Api_Home extends PhalApi_Api {
         $info['join_in_qq'] = $config['join_in_qq'];
         $info['join_in_wx'] = $config['join_in_wx'];
         $info['join_in_tg'] = $config['join_in_tg'];
-        
+        $info['live_type'] = $config['live_type'];
         // $ConfigPri = getConfigPri();
         // unset($info['site_url']);
         // unset($info['site_seo_title']);

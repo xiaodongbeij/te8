@@ -148,10 +148,14 @@ class Model_Home extends PhalApi_Model_NotORM {
         if($p<1){
             $p=1;
         }
-		$pnum=20;
+		$pnum=10;
 		$start=($p-1)*$pnum;
 		$where=" islive='1' ";
 
+        if($p > 3)
+        {
+            return [];
+        }
 		if($p!=1){
 			$endtime=$_SESSION['new_starttime'];
             if($endtime){
@@ -171,25 +175,7 @@ class Model_Home extends PhalApi_Model_NotORM {
             $v['thumb'] = get_upload_path($v['thumb']);
             $v['nums'] = DI()->redis->get($v['uid'].":nums");
         }
-// 		$result=DI()->notorm->live
-// 				->select($this->live_fields)
-// 				->where($where)
-// 				->order("starttime desc")
-// 				->limit(0,$pnum)
-// 				->fetchAll();
 
-// 		foreach($result as $k=>$v){
-            
-// 			$v=handleLive($v);
-			
-// 			$distance='好像在火星';
-
-// 			$v['distance']=$distance;
-	
-
-//             $result[$k]=$v;
-			
-// 		}	
 
 		if($result){
 			$last=end($result);

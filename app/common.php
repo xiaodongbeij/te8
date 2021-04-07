@@ -248,11 +248,11 @@ function getConfigPri()
     $key = 'getMachineSet';
     $configMachine = getcaches($key);
     if (!$configMachine) {
-        $configMachine = DI()->notorm->option
-            ->select('option_value')
-            ->where("option_name='machine_set'")
-            ->fetchOne();
-        $configMachine = json_decode($configMachine['option_value'], true);
+        
+        
+        $configMachine = Db::name('option')->where('option_name','machine_set')->value('option_value');
+        
+        $configMachine = json_decode($configMachine, true);
         if ($configMachine) {
             setcaches($key, $configMachine);
         }
