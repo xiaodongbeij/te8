@@ -199,12 +199,9 @@ class UserChangeController extends AdminbaseController
             ->join('cmf_user u','u.id = uc.user_id')
             ->order('id desc')
             ->where($where)
-            ->field('uc.*,u.parent_id')
+            ->field("uc.*,u.parent_id,FROM_UNIXTIME(uc.addtime , '%Y-%m-%d %H:%i:%s') addtime")
             ->paginate(20);
 
-        foreach ($xlsData as $k => $v){
-            $xlsData[$k]['addtime'] = date('Y-m-d H:i:s',$v['addtime']);
-        }
 
         $action="导出第三方转账明细：".Db::name("cmf_user_change")->getLastSql();
         setAdminLog($action);
