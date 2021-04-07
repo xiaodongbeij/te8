@@ -116,7 +116,7 @@ class Api_Daili extends PhalApi_Api
 
         $share_record = DI()->notorm->user
             ->where('parent_id = ?', $uid)
-            ->select('user_nicename,create_time')
+            ->select('id,user_nicename,create_time')
             ->limit(($page-1)*$page_size,$page_size)
             ->order('create_time DESC')
             ->fetchAll();
