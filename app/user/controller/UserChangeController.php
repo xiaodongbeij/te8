@@ -160,6 +160,67 @@ class UserChangeController extends AdminbaseController
         return $this->fetch();
     }
 
+    public function gameexport(){
+        $data = input();
+        $where = [];
+        $where[] = ['change_type', '=', 23];
+
+        $uid = isset($data['uid']) ? $data['uid']: '';
+        if($uid != ''){
+            $where[] = ['user_id','=',$uid];
+        }
+        $start_time = isset($data['start_time']) ? $data['start_time']: '';
+        $end_time = isset($data['end_time']) ? $data['end_time']: '';
+        if($start_time != ""){
+            $where[] = ['addtime', '>=', strtotime($start_time)];
+        }
+        if($end_time != ""){
+            $where[] = ['addtime', '<=', strtotime($end_time) + 60*60*24];
+        }
+
+        //层级搜索
+        $parent_id = isset($data['parent_id']) ? $data['parent_id']: '';
+        if($parent_id != ''){
+            $path = Db::table('cmf_user')->where('id',$parent_id)->value('invite_level');
+            $user_ids = Db::table('cmf_user')->where('invite_level','like',$path.'%')->field('id')->select();
+            $users = [];
+            foreach ($user_ids as $v){
+                $users[] = $v['id'];
+            }
+            $where[]=['user_id', 'in', $users];
+        }
+
+        $xlsName  = "第三方转账明细";
+//        $xlsData = Db::table('cmf_user_change')::where($where)->order('id desc')->select();
+//        $xlsData = Db::table('cmf_user_change')->where($where)->order('id desc')->select();
+        $xlsData = Db::table('cmf_user_change')
+            ->alias('uc')
+            ->join('cmf_user u','u.id = uc.user_id')
+            ->order('id desc')
+            ->where($where)
+            ->field('uc.*,u.parent_id')
+            ->paginate(20);
+
+        foreach ($xlsData as $k => $v){
+            $xlsData[$k]['addtime'] = date('Y-m-d H:i:s',$v['addtime']);
+        }
+
+        $action="导出第三方转账明细：".Db::name("cmf_user_change")->getLastSql();
+        setAdminLog($action);
+        $cellName = array('A','B','C','D','E','F','G','H','I');
+        $xlsCell  = array(
+            array('id','序号'),
+            array('user_id','用户id'),
+            array('parent_id','上级id'),
+            array('money','变动前金额'),
+            array('next_money','变动后金额'),
+            array('change_money','变动金额'),
+            array('remark','备注'),
+            array('addtime','添加时间'),
+        );
+        exportExcel($xlsName,$xlsCell,$xlsData,$cellName);
+    }
+
     public function withdrawIndex()
     {
         $data = input();
