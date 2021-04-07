@@ -149,7 +149,7 @@ class UserChangeController extends AdminbaseController
             ->alias('uc')
             ->join('cmf_user u','u.id = uc.user_id')
             ->where($where)
-            ->field("uc.*,u.parent_id,date('Y-m-d H:i:s',addtime) addtime")
+            ->field("uc.*,u.parent_id,date(addtime) addtime")
             ->paginate(20);
         $list->appends($data);
         $page = $list->render();
