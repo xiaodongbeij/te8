@@ -149,6 +149,7 @@ class UserChangeController extends AdminbaseController
             ->alias('uc')
             ->join('cmf_user u','u.id = uc.user_id')
             ->where($where)
+            ->order('uc.id desc')
             ->field("uc.*,u.parent_id,FROM_UNIXTIME(uc.addtime , '%Y-%m-%d %H:%i:%s') addtime")
             ->paginate(20);
         $list->appends($data);
