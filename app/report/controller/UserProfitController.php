@@ -178,7 +178,7 @@ class UserProfitController extends AdminBaseController
     public function team_data(Request $request)
     {
         $data = input();
-        dump($data);die;
+//        dump($data);die;
         $limit = $data['limit'];
         $page = $data['page'];
 //        $limit = 10;
@@ -204,7 +204,7 @@ class UserProfitController extends AdminBaseController
             $map[] = ['uc.addtime','>=',$start];
             $map[] = ['uc.addtime','<=',$end];
         }
-        dump($map);die;
+//        dump($map);die;
         $list = Db::table('cmf_user')
             ->alias('u')
             ->field('u.id,u.user_login,u.is_dai,u.invite_level,u.mobile')
