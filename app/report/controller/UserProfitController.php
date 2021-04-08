@@ -195,6 +195,14 @@ class UserProfitController extends AdminBaseController
             $where[] = ['u.iszombie','=','0'];
         }
 //        dump($where);die;
+        $map = [];
+        $date = isset($data['date']) ? $data['date']: '';
+        if ($date){
+            $start = strtotime($date);
+            $end = $start + 3600 * 24;
+            $map[] = ['uc.addtime','>=',$start];
+            $map[] = ['uc.addtime','<=',$end];
+        }
         $list = Db::table('cmf_user')
             ->alias('u')
             ->field('u.id,u.user_login,u.is_dai,u.invite_level,u.mobile')
@@ -214,6 +222,7 @@ class UserProfitController extends AdminBaseController
             $list[$k]['level_count'] = $level_count;
             $change = Db::table('cmf_user_change')
                 ->alias('uc')
+                ->where($map)
                 ->where('user_id','in',$ids)
                 ->field('sum(if(uc.change_type=1,uc.change_money,0)) recharge')
                 ->field('sum(if(uc.change_type=2,uc.change_money,0)) withdrawal')
@@ -232,6 +241,11 @@ class UserProfitController extends AdminBaseController
             $list[$k]['activity'] = is_null($change['activity']) ? '0.0000' : $change['activity'];
             $list[$k]['yin'] = is_null($change['yin']) ? '0.0000' : $change['yin'];
             $list[$k]['pin_yin'] = is_null($change['pin_yin']) ? '0.0000' : $change['pin_yin'];
+            if ($date){
+                $list[$k]['date'] = $date;
+            }else{
+                $list[$k]['date'] = '';
+            }
         }
 
         $count = Db::table('cmf_user')
