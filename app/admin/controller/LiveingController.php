@@ -96,9 +96,11 @@ class LiveingController extends AdminbaseController {
             // $v['total_average']=$total_average;
             // $v['nums']=$nums;
             
-            if($v['isvideo']==0 && true){
+            if($v['isvideo']==0){
                 $v['pull']=PrivateKeyA('rtmp',$v['stream'],0);
             }
+            
+            $v['pull'] = substr($v['pull'],0,24);
                 
             return $v;           
         });

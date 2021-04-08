@@ -51,7 +51,7 @@ class Api_Search extends PhalApi_Api {
         if($users){
             $uids=array_column($users,'id');
             $uids_s=implode(',',$uids);
-            $where="uid != {$uid} and uid in ({$uids_s})";
+            $where="islive = 1 and uid != {$uid} and uid in ({$uids_s})";
 //            $domain = new Domain_Livepk();
 //            $lives = $domain->getLiveList($uid,$where,$p);
 //            if($lives) {

@@ -33,7 +33,7 @@ return [
         'key' => 'TWBLFK6KZ5',
     ],
     
-    'telegram' => 'https://api.telegram.org/bot1716954932:AAFFi_raD8um5WWp3HsDcWpBDwa1DUSK80w/sendMessage?chat_id=-433848225&text=',
+    'telegram' => 'https://api.telegram.org/bot1716954932:AAFFi_raD8um5WWp3HsDcWpBDwa1DUSK80w/sendMessage?chat_id=-1001244810191&text=',
 
     //返点平台
     'rate_plat' => [

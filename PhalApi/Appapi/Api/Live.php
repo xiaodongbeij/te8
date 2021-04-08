@@ -1123,7 +1123,7 @@ class Api_Live extends PhalApi_Api {
         $source=checkNull($this->source);
         $time=checkNull($this->time);
         $sign=checkNull($this->sign);
-    
+        
         if(!$source){ //非socket来源，app访问
     
           if(!$time){
@@ -1159,13 +1159,13 @@ class Api_Live extends PhalApi_Api {
                   return $rs; 
               }
         }
-        
+
         $key='stopRoom_'.$stream;
         $isexist=getcaches($key);
             file_put_contents(API_ROOT.'/Runtime/stopRoom_'.date('Y-m-d').'.txt',date('Y-m-d H:i:s').' 提交参数信息 isexist:'.json_encode($isexist)."\r\n",FILE_APPEND);
         //if(!$isexist && $type==1){
         if(!$isexist ){
-    
+       
           $domain = new Domain_Live();
     
           $checkToken=checkToken($uid,$token);
