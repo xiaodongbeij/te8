@@ -364,7 +364,7 @@ class UserChangeController extends AdminbaseController
             $res = judgeToken($token);
             if(!$res) $this->error("请勿重复提交");
             $info =  UserChange::where('id', $id)->where('status', '<>', 4)->where('change_type',2)->find();
-            if($info['status'] != 2) $this->error("此数据不符合拒绝要求");
+            if($info['status'] != 2 || $info['status'] != 1) $this->error("此数据不符合拒绝要求");
 
             //开启事务
             Db::startTrans();
