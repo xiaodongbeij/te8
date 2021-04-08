@@ -203,6 +203,7 @@ class UserProfitController extends AdminBaseController
             $map[] = ['uc.addtime','>=',$start];
             $map[] = ['uc.addtime','<=',$end];
         }
+        dump($map);die;
         $list = Db::table('cmf_user')
             ->alias('u')
             ->field('u.id,u.user_login,u.is_dai,u.invite_level,u.mobile')
