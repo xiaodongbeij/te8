@@ -178,6 +178,7 @@ class UserProfitController extends AdminBaseController
     public function team_data(Request $request)
     {
         $data = input();
+        dump($data);die;
         $limit = $data['limit'];
         $page = $data['page'];
 //        $limit = 10;
