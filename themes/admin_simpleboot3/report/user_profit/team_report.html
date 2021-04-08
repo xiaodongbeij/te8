@@ -23,6 +23,9 @@
         <input class="form-control" type="text" id="uid" name="uid" style="width: 200px;" value="{:input('request.uid')}"
                placeholder="用户id">
 
+        日期：
+        <input class="form-control js-bootstrap-date" name="date" id="pay_start_time" autocomplete="off" value="{:input('request.date')}" aria-invalid="false" style="width: 110px;">
+
         <input id="submit" class="btn btn-primary" value="搜索"/>
         <a class="btn btn-danger" href="{:url('report/UserProfit/team_report')}">清空</a>
         <br>
@@ -85,6 +88,7 @@
                 ,{field:'xia',title:'下注'}
                 ,{field:'rate',title:'返点'}
                 ,{field:'activity',title:'活动'}
+                ,{field:'date',title:'日期'}
                 // ,{field:'recharge',title:'存款'}
                 ,{field:'yin',title:'盈亏'}
                 ,{field:'pin_yin',title:'平台盈亏'}
