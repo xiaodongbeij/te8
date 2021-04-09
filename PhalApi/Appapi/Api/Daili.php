@@ -176,7 +176,7 @@ class Api_Daili extends PhalApi_Api
         //查询列表
         $where = "";
         if ($start){
-            $where .= " and addtime >= ".strtotime($start);
+            $where .= " addtime >= ".strtotime($start);
         }
         if ($end){
             $where .= " and addtime <= ".strtotime($end);
