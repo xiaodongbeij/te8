@@ -186,7 +186,8 @@ class Api_Daili extends PhalApi_Api
         $list = DI()->notorm->user_change->queryAll($sql);
 
         foreach ($list as $k => $v){
-            $list[$k]['change_money'] = abs($v['change_money']);
+            $list[$k]['change_money'] = number_format(abs($v['change_money']),2);
+            $list[$k]['next_money'] = number_format(abs($v['next_money']),2);
             if ($type == 1) {
                 $list[$k]['status'] = 4;
             }
