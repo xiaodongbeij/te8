@@ -191,18 +191,18 @@ class Domain_Daili
     {
     $where = "parent_id = $uid";
     if ($account){
-        $where .= " user_login = $account";
+        $where .= " and user_login = $account";
     }
     if ($type){
-        $where .= " is_dai = $type";
+        $where .= " and is_dai = $type";
     }
     if ($start){
         $start = strtotime($start);
-        $where .= " create_time >= $start";
+        $where .= " and create_time >= $start";
     }
     if ($end){
         $end = strtotime($end);
-        $where .= " create_time <= $end";
+        $where .= " and create_time <= $end";
     }
     $temp = DI()->notorm->user->where("$where")->count();
                 if (!$temp){

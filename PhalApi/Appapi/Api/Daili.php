@@ -103,6 +103,8 @@ class Api_Daili extends PhalApi_Api
                 'start' => array('name' => 'start', 'type' => 'string', 'min' => 1, 'require' => true, 'desc' => '日期起始'),
                 'end' => array('name' => 'end', 'type' => 'string', 'min' => 1, 'require' => true, 'desc' => '日期结束'),
                 'cate' => array('name' => 'cate', 'type' => 'int', 'min' => 1, 'require' => true, 'desc' => '类型,1-个人，2-下级'),
+                'page' => array('name' => 'page', 'type' => 'int', 'min' => 1, 'require' => true, 'desc' => '页数,1开始'),
+                'page_size' => array('name' => 'page_size', 'type' => 'int', 'min' => 1, 'require' => true, 'desc' => '每页条数'),
             )
         );
     }
@@ -118,6 +120,13 @@ class Api_Daili extends PhalApi_Api
 
         $uid = $this->uid;
         $type = $this->type;
+        $start = $this->start;
+        $end = $this->end;
+        $id = $this->id;
+        $cate = $this->cate;
+        $page = $this->page;
+        $page_size = $this->page_size;
+        //统计固定
         $user = DI()->notorm->user->where('id',$uid)->fetchOne();
         $sql = "select sum(uc.change_money) total,sum(if(uc.user_id = :uid,change_money,0)) self FROM cmf_user_change uc WHERE uc.change_type = :type AND uc.user_id in ( select id from cmf_user where invite_level like :level);";
         $params = [
@@ -126,10 +135,48 @@ class Api_Daili extends PhalApi_Api
             ':level' => $user['invite_level'] . '%'
         ];
         $info = DI()->notorm->user_change->queryAll($sql,$params);
-        //统计固定
-        var_dump($info);die;
+        $return = [
+            'total' => $info[0]['total'],   //总充值金额
+            'self'  => $info[0]['self'],    //个人总额
+            'team'  => $info[0]['total'] - $info[0]['self']     //下级总额
+        ];
 
-
+        //查询列表
+        $where = "";
+        if ($type){
+            $where .= " change_type = ".$type;
+        }
+        if ($start){
+            $where .= " and addtime >= ".strtotime($start);
+        }
+        if ($end){
+            $where .= " and addtime <= ".strtotime($end);
+        }
+        if ($id){
+            $where .= " and user_id = $id";
+        }else{
+            if ($cate == 1){
+                $where .= " and user_id = $uid";
+            }else{
+                $ids = DI()->notorm->user->where('invite_level like ?',$user['invite_level'].'%')->select('id')->fetchAll();
+                $str = "";
+                foreach ($ids as $v){
+                    $str .= $v['id'].',';
+                }
+                $str = substr($str,0,-1);
+                $where .= " and user_id in ($str)";
+            }
+        }
+        $list = DI()->notorm->user_change
+            ->where("$where")
+            ->order('id desc')
+            ->limit(($page-1) * $page_size,$page_size)
+            ->fetchAll();
+        $return['list'] = $list;
+        $rs['code'] = 0;
+        $rs['msg'] = '获取成功';
+        $rs['info'] = $return;
+        return $rs;
     }
 
     /**
