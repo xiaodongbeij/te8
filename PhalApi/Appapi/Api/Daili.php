@@ -123,7 +123,7 @@ class Api_Daili extends PhalApi_Api
     }
 
     /**
-     * 投注明细
+     * 投注奖金明细
      * @desc 用于获取投注明细
      * @return int code 操作码，0表示成功
      * @return array info
@@ -132,11 +132,10 @@ class Api_Daili extends PhalApi_Api
      * @return string self 个人总金额
      * @return string team 下级总金额
      * @return string list.user_id 用户id
-     * @return string list.user_nicename 昵称
-     * @return string list.change_money 变动金额
-     * @return string list.next_money 变动后金额
-     * @return string list.status 状态，4为成功，其他不成功
+     * @return string list.money 下注奖金
+     * @return string list.prize 奖金
      * @return string list.addtime 时间
+     * @return string list.game_name 游戏名称
      */
     public function touDetail(){
 
