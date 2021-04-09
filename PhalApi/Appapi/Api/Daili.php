@@ -115,6 +115,15 @@ class Api_Daili extends PhalApi_Api
      * @return int code 操作码，0表示成功
      * @return array info
      * @return string msg 提示信息
+     * @return string total 个人+下级总金额
+     * @return string self 个人总金额
+     * @return string team 下级总金额
+     * @return string list.user_id 用户id
+     * @return string list.user_nicename 昵称
+     * @return string list.change_money 变动金额
+     * @return string list.next_money 变动后金额
+     * @return string list.status 状态，4为成功，其他不成功
+     * @return string list.addtime 时间
      */
     public function teamDetail(){
 
@@ -136,9 +145,9 @@ class Api_Daili extends PhalApi_Api
         ];
         $info = DI()->notorm->user_change->queryAll($sql,$params);
         $return = [
-            'total' => $info[0]['total'],   //总充值金额
-            'self'  => $info[0]['self'],    //个人总额
-            'team'  => $info[0]['total'] - $info[0]['self']     //下级总额
+            'total' => abs(number_format($info[0]['total'], 2)),   //总充值金额
+            'self'  => abs(number_format($info[0]['self'], 2)),    //个人总额
+            'team'  => abs(number_format($info[0]['total'] - $info[0]['self'],2))     //下级总额
         ];
 
         //查询列表
@@ -175,11 +184,14 @@ class Api_Daili extends PhalApi_Api
 //            ->fetchAll();
         $sql = "select uc.user_id,u.user_nicename,uc.change_money,uc.next_money,uc.status,FROM_UNIXTIME(uc.addtime, '%Y-%m-%d %H:%i:%s') addtime from cmf_user_change uc join cmf_user u on uc.user_id = u.id where $where";
         $list = DI()->notorm->user_change->queryAll($sql);
-        if ($type == 1){
-            foreach ($list as $k => $v){
+
+        foreach ($list as $k => $v){
+            $list[$k]['change_money'] = abs($v['change_money']);
+            if ($type == 1) {
                 $list[$k]['status'] = 4;
             }
         }
+
         $return['list'] = $list;
         $rs['code'] = 0;
         $rs['msg'] = '获取成功';
