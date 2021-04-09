@@ -175,15 +175,15 @@ class Api_Daili extends PhalApi_Api
 
         //查询列表
         $where = "";
-        if ($start){
-            $where .= " addtime >= ".strtotime($start);
-        }
-        if ($end){
-            $where .= " and addtime <= ".strtotime($end);
-        }
+
 
         if ($plat == 1){
-
+            if ($start){
+                $where .= " addtime >= ".strtotime($start);
+            }
+            if ($end){
+                $where .= " and addtime <= ".strtotime($end);
+            }
             if ($id){
                 $where .= " and user_id = $id";
             }else{
@@ -210,6 +210,12 @@ class Api_Daili extends PhalApi_Api
                 $list[$k]['game_name'] = "官方彩票";
             }
         }else{
+            if ($start){
+                $where .= " bet_time >= ".strtotime($start);
+            }
+            if ($end){
+                $where .= " and bet_time <= ".strtotime($end);
+            }
             if ($id){
                 $where .= " and user_login = $id";
             }else{
