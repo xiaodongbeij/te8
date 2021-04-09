@@ -95,7 +95,41 @@ class Api_Daili extends PhalApi_Api
                 'end' => array('name' => 'end', 'type' => 'string', 'min' => 1, 'require' => true, 'desc' => '日期结束'),
 
             ),
+            'teamDetail' => array(
+                'uid' => array('name' => 'uid', 'type' => 'int', 'min' => 1, 'require' => true, 'desc' => '用户ID'),
+                'token' => array('name' => 'token', 'type' => 'string', 'min' => 1, 'require' => true, 'desc' => 'token'),
+                'type' => array('name' => 'type', 'type' => 'int', 'min' => 1, 'require' => true, 'desc' => '类型,1-充值，2-提现'),
+                'id' => array('name' => 'id', 'type' => 'int', 'min' => 1, 'require' => false, 'desc' => '搜索账号'),
+                'start' => array('name' => 'start', 'type' => 'string', 'min' => 1, 'require' => true, 'desc' => '日期起始'),
+                'end' => array('name' => 'end', 'type' => 'string', 'min' => 1, 'require' => true, 'desc' => '日期结束'),
+                'cate' => array('name' => 'cate', 'type' => 'int', 'min' => 1, 'require' => true, 'desc' => '类型,1-个人，2-下级'),
+            )
         );
+    }
+
+    /**
+     * 团队明细（充值和提现）
+     * @desc 用于获取团队明细
+     * @return int code 操作码，0表示成功
+     * @return array info
+     * @return string msg 提示信息
+     */
+    public function teamDetail(){
+
+        $uid = $this->uid;
+        $type = $this->type;
+        $user = DI()->notorm->user->where('id',$uid)->fetchOne();
+        $sql = "select sum(uc.change_money) total,sum(if(uc.user_id = :uid,change_money,0)) self FROM cmf_user_change uc WHERE uc.change_type = :type AND uc.user_id in ( select id from cmf_user where invite_level like ':level%');";
+        $params = [
+            ':uid' => $uid,
+            ':type' => $type,
+            ':level' => $user['invite_level']
+        ];
+        $info = DI()->notorm->user_change->queryAll($sql,$params);
+        //统计固定
+        var_dump($info);die;
+
+
     }
 
     /**
