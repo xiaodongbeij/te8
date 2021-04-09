@@ -119,11 +119,11 @@ class Api_Daili extends PhalApi_Api
         $uid = $this->uid;
         $type = $this->type;
         $user = DI()->notorm->user->where('id',$uid)->fetchOne();
-        $sql = "select sum(uc.change_money) total,sum(if(uc.user_id = :uid,change_money,0)) self FROM cmf_user_change uc WHERE uc.change_type = :type AND uc.user_id in ( select id from cmf_user where invite_level like ':level%');";
+        $sql = "select sum(uc.change_money) total,sum(if(uc.user_id = :uid,change_money,0)) self FROM cmf_user_change uc WHERE uc.change_type = :type AND uc.user_id in ( select id from cmf_user where invite_level like :level);";
         $params = [
             ':uid' => $uid,
             ':type' => $type,
-            ':level' => $user['invite_level']
+            ':level' => $user['invite_level'] . '%'
         ];
         $info = DI()->notorm->user_change->queryAll($sql,$params);
         //统计固定
