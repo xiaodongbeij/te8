@@ -202,7 +202,7 @@ class Api_Daili extends PhalApi_Api
 
             $list = DI()->notorm->game_ticket
                 ->where("$where")
-                ->select("user_id,money,FROM_UNIXTIME(addtime, '%Y-%m-%d %H:%i:%s')")
+                ->select("user_id,money,FROM_UNIXTIME(addtime, '%Y-%m-%d %H:%i:%s') addtime")
                 ->order('id desc')
                 ->limit(($page-1) * $page_size,$page_size)
                 ->fetchAll();
@@ -225,9 +225,9 @@ class Api_Daili extends PhalApi_Api
                     $where .= " and user_login in ($str)";
                 }
             }
-            $list = DI()->notorm->game_ticket
+            $list = DI()->notorm->game_record
                 ->where("$where")
-                ->select("user_login,bet_amount,FROM_UNIXTIME(addtime, '%Y-%m-%d %H:%i:%s'),game_name")
+                ->select("user_login,bet_amount,FROM_UNIXTIME(addtime, '%Y-%m-%d %H:%i:%s') addtime,game_name")
                 ->order('id desc')
                 ->limit(($page-1) * $page_size,$page_size)
                 ->fetchAll();
