@@ -109,6 +109,7 @@ class Api_Daili extends PhalApi_Api
             'touDetail' => array(
                 'uid' => array('name' => 'uid', 'type' => 'int', 'min' => 1, 'require' => true, 'desc' => '用户ID'),
                 'token' => array('name' => 'token', 'type' => 'string', 'min' => 1, 'require' => true, 'desc' => 'token'),
+                'type' => array('name' => 'type', 'type' => 'int', 'min' => 1, 'require' => true, 'desc' => '类型,1-下注，2-奖金'),
                 'plat' => array('name' => 'plat', 'type' => 'string', 'min' => 1, 'require' => true, 'desc' => '平台号'),
                 'id' => array('name' => 'id', 'type' => 'int', 'min' => 1, 'require' => false, 'desc' => '搜索账号'),
                 'start' => array('name' => 'start', 'type' => 'string', 'min' => 1, 'require' => true, 'desc' => '日期起始'),
@@ -141,6 +142,7 @@ class Api_Daili extends PhalApi_Api
 
         $uid = $this->uid;
         $plat = $this->plat;
+        $type = $this->type;
         $start = $this->start;
         $end = $this->end;
         $id = $this->id;
@@ -149,17 +151,24 @@ class Api_Daili extends PhalApi_Api
         $page_size = $this->page_size;
         $of = ($page-1) * $page_size;
 
+        if ($type == 1){
+            $field1 = 'money';
+            $field2 = 'bet_amount';
+        }else{
+            $field1 = 'prize';
+            $field2 = 'pay_off';
+        }
         //统计固定
         $user = DI()->notorm->user->where('id',$uid)->fetchOne();
         if ($plat == 1){
-            $sql = "select sum(gt.money) total,sum(if(gt.user_id = :uid,money,0)) self FROM cmf_game_ticket gt WHERE gt.status in (0,1) AND gt.user_id in ( select id from cmf_user where invite_level like :level);";
+            $sql = "select sum(gt.$field1) total,sum(if(gt.user_id = :uid,$field1,0)) self FROM cmf_game_ticket gt WHERE gt.status in (0,1) AND gt.user_id in ( select id from cmf_user where invite_level like :level);";
             $params = [
                 ':uid' => $uid,
                 ':level' => $user['invite_level'] . '%'
             ];
             $info = DI()->notorm->game_ticket->queryAll($sql,$params);
         }else{
-            $sql = "select sum(gr.bet_amount) total,sum(if(gr.user_login= :uid,bet_amount,0)) self FROM cmf_game_record gr WHERE gr.platform_code = :plat and gr.user_login in ( select id from cmf_user where invite_level like :level);";
+            $sql = "select sum(gr.$field2) total,sum(if(gr.user_login= :uid,$field2,0)) self FROM cmf_game_record gr WHERE gr.platform_code = :plat and gr.user_login in ( select id from cmf_user where invite_level like :level);";
             $params = [
                 ':uid' => $uid,
                 ':level' => $user['invite_level'] . '%',
@@ -202,7 +211,7 @@ class Api_Daili extends PhalApi_Api
 
             $list = DI()->notorm->game_ticket
                 ->where("$where")
-                ->select("user_id,money,FROM_UNIXTIME(addtime, '%Y-%m-%d %H:%i:%s') addtime")
+                ->select("user_id,money,FROM_UNIXTIME(addtime, '%Y-%m-%d %H:%i:%s') addtime,prize")
                 ->order('id desc')
                 ->limit(($page-1) * $page_size,$page_size)
                 ->fetchAll();
@@ -233,7 +242,7 @@ class Api_Daili extends PhalApi_Api
             }
             $list = DI()->notorm->game_record
                 ->where("$where")
-                ->select("user_login user_id,bet_amount money,FROM_UNIXTIME(bet_time, '%Y-%m-%d %H:%i:%s') addtime,game_name")
+                ->select("user_login user_id,bet_amount money,FROM_UNIXTIME(bet_time, '%Y-%m-%d %H:%i:%s') addtime,game_name,pay_off prize")
                 ->order('id desc')
                 ->limit(($page-1) * $page_size,$page_size)
                 ->fetchAll();
