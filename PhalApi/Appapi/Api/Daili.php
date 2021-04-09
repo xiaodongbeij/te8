@@ -140,7 +140,7 @@ class Api_Daili extends PhalApi_Api
     public function touDetail(){
 
         $uid = $this->uid;
-        $plat = $this->type;
+        $plat = $this->plat;
         $start = $this->start;
         $end = $this->end;
         $id = $this->id;
