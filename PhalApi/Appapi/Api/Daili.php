@@ -145,9 +145,9 @@ class Api_Daili extends PhalApi_Api
         ];
         $info = DI()->notorm->user_change->queryAll($sql,$params);
         $return = [
-            'total' => abs(number_format($info[0]['total'], 2)),   //总充值金额
-            'self'  => abs(number_format($info[0]['self'], 2)),    //个人总额
-            'team'  => abs(number_format($info[0]['total'] - $info[0]['self'],2))     //下级总额
+            'total' => number_format(abs($info[0]['total']), 2),   //总充值金额
+            'self'  => number_format(abs($info[0]['self']), 2),    //个人总额
+            'team'  => number_format(abs($info[0]['total'] - $info[0]['self']),2)     //下级总额
         ];
 
         //查询列表
