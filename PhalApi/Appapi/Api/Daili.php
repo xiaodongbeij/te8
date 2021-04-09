@@ -139,6 +139,105 @@ class Api_Daili extends PhalApi_Api
      */
     public function touDetail(){
 
+        $uid = $this->uid;
+        $plat = $this->type;
+        $start = $this->start;
+        $end = $this->end;
+        $id = $this->id;
+        $cate = $this->cate;
+        $page = $this->page;
+        $page_size = $this->page_size;
+        $of = ($page-1) * $page_size;
+
+        //统计固定
+        $user = DI()->notorm->user->where('id',$uid)->fetchOne();
+        if ($plat == 1){
+            $sql = "select sum(gt.money) total,sum(if(gt.user_id = :uid,money,0)) self FROM cmf_game_ticket gt WHERE gt.status in (0,1) AND gt.user_id in ( select id from cmf_user where invite_level like :level);";
+            $params = [
+                ':uid' => $uid,
+                ':level' => $user['invite_level'] . '%'
+            ];
+            $info = DI()->notorm->game_ticket->queryAll($sql,$params);
+        }else{
+            $sql = "select sum(gr.bet_amount) total,sum(if(gr.user_login= :uid,bet_amount,0)) self FROM cmf_game_record gr WHERE gr.platform_code = :plat and gr.user_login in ( select id from cmf_user where invite_level like :level);";
+            $params = [
+                ':uid' => $uid,
+                ':level' => $user['invite_level'] . '%',
+                ':plat' => $plat
+            ];
+            $info = DI()->notorm->game_ticket->queryAll($sql,$params);
+        }
+        $return = [
+            'total' => number_format(abs($info[0]['total']), 2),   //总充值金额
+            'self'  => number_format(abs($info[0]['self']), 2),    //个人总额
+            'team'  => number_format(abs($info[0]['total'] - $info[0]['self']),2)     //下级总额
+        ];
+
+        //查询列表
+        $where = "";
+        if ($start){
+            $where .= " and addtime >= ".strtotime($start);
+        }
+        if ($end){
+            $where .= " and addtime <= ".strtotime($end);
+        }
+
+        if ($plat == 1){
+
+            if ($id){
+                $where .= " and user_id = $id";
+            }else{
+                if ($cate == 1){
+                    $where .= " and user_id = $uid";
+                }else{
+                    $ids = DI()->notorm->user->where('invite_level like ?',$user['invite_level'].'%')->select('id')->fetchAll();
+                    $str = "";
+                    foreach ($ids as $v){
+                        $str .= $v['id'].',';
+                    }
+                    $str = substr($str,0,-1);
+                    $where .= " and user_id in ($str)";
+                }
+            }
+
+            $list = DI()->notorm->game_ticket
+                ->where("$where")
+                ->select("user_id,money,FROM_UNIXTIME(addtime, '%Y-%m-%d %H:%i:%s')")
+                ->order('id desc')
+                ->limit(($page-1) * $page_size,$page_size)
+                ->fetchAll();
+            foreach ($list as $k => $v){
+                $list[$k]['game_name'] = "官方彩票";
+            }
+        }else{
+            if ($id){
+                $where .= " and user_login = $id";
+            }else{
+                if ($cate == 1){
+                    $where .= " and user_login = $uid";
+                }else{
+                    $ids = DI()->notorm->user->where('invite_level like ?',$user['invite_level'].'%')->select('id')->fetchAll();
+                    $str = "";
+                    foreach ($ids as $v){
+                        $str .= $v['id'].',';
+                    }
+                    $str = substr($str,0,-1);
+                    $where .= " and user_login in ($str)";
+                }
+            }
+            $list = DI()->notorm->game_ticket
+                ->where("$where")
+                ->select("user_login,bet_amount,FROM_UNIXTIME(addtime, '%Y-%m-%d %H:%i:%s'),game_name")
+                ->order('id desc')
+                ->limit(($page-1) * $page_size,$page_size)
+                ->fetchAll();
+        }
+
+        $return['list'] = $list;
+        $rs['code'] = 0;
+        $rs['msg'] = '获取成功';
+        $rs['info'] = $return;
+        return $rs;
     }
 
 
