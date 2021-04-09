@@ -105,9 +105,42 @@ class Api_Daili extends PhalApi_Api
                 'cate' => array('name' => 'cate', 'type' => 'int', 'min' => 1, 'require' => true, 'desc' => '类型,1-个人，2-下级'),
                 'page' => array('name' => 'page', 'type' => 'int', 'min' => 1, 'require' => true, 'desc' => '页数,1开始'),
                 'page_size' => array('name' => 'page_size', 'type' => 'int', 'min' => 1, 'require' => true, 'desc' => '每页条数'),
+            ),
+            'touDetail' => array(
+                'uid' => array('name' => 'uid', 'type' => 'int', 'min' => 1, 'require' => true, 'desc' => '用户ID'),
+                'token' => array('name' => 'token', 'type' => 'string', 'min' => 1, 'require' => true, 'desc' => 'token'),
+                'plat' => array('name' => 'plat', 'type' => 'string', 'min' => 1, 'require' => true, 'desc' => '平台号'),
+                'id' => array('name' => 'id', 'type' => 'int', 'min' => 1, 'require' => false, 'desc' => '搜索账号'),
+                'start' => array('name' => 'start', 'type' => 'string', 'min' => 1, 'require' => true, 'desc' => '日期起始'),
+                'end' => array('name' => 'end', 'type' => 'string', 'min' => 1, 'require' => true, 'desc' => '日期结束'),
+                'cate' => array('name' => 'cate', 'type' => 'int', 'min' => 1, 'require' => true, 'desc' => '类型,1-个人，2-下级'),
+                'page' => array('name' => 'page', 'type' => 'int', 'min' => 1, 'require' => true, 'desc' => '页数,1开始'),
+                'page_size' => array('name' => 'page_size', 'type' => 'int', 'min' => 1, 'require' => true, 'desc' => '每页条数'),
             )
+
         );
     }
+
+    /**
+     * 投注明细
+     * @desc 用于获取投注明细
+     * @return int code 操作码，0表示成功
+     * @return array info
+     * @return string msg 提示信息
+     * @return string total 个人+下级总金额
+     * @return string self 个人总金额
+     * @return string team 下级总金额
+     * @return string list.user_id 用户id
+     * @return string list.user_nicename 昵称
+     * @return string list.change_money 变动金额
+     * @return string list.next_money 变动后金额
+     * @return string list.status 状态，4为成功，其他不成功
+     * @return string list.addtime 时间
+     */
+    public function touDetail(){
+
+    }
+
 
     /**
      * 团队明细（充值和提现）
@@ -135,6 +168,7 @@ class Api_Daili extends PhalApi_Api
         $cate = $this->cate;
         $page = $this->page;
         $page_size = $this->page_size;
+        $of = ($page-1) * $page_size;
         //统计固定
         $user = DI()->notorm->user->where('id',$uid)->fetchOne();
         $sql = "select sum(uc.change_money) total,sum(if(uc.user_id = :uid,change_money,0)) self FROM cmf_user_change uc WHERE uc.change_type = :type AND uc.user_id in ( select id from cmf_user where invite_level like :level);";
@@ -182,7 +216,7 @@ class Api_Daili extends PhalApi_Api
 //            ->order('id desc')
 //            ->limit(($page-1) * $page_size,$page_size)
 //            ->fetchAll();
-        $sql = "select uc.user_id,u.user_nicename,uc.change_money,uc.next_money,uc.status,FROM_UNIXTIME(uc.addtime, '%Y-%m-%d %H:%i:%s') addtime from cmf_user_change uc join cmf_user u on uc.user_id = u.id where $where";
+        $sql = "select uc.user_id,u.user_nicename,uc.change_money,uc.next_money,uc.status,FROM_UNIXTIME(uc.addtime, '%Y-%m-%d %H:%i:%s') addtime from cmf_user_change uc join cmf_user u on uc.user_id = u.id where $where limit $of,$page_size";
         $list = DI()->notorm->user_change->queryAll($sql);
 
         foreach ($list as $k => $v){
