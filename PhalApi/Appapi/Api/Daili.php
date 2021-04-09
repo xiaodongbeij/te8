@@ -144,19 +144,19 @@ class Api_Daili extends PhalApi_Api
         //查询列表
         $where = "";
         if ($type){
-            $where .= " change_type = ".$type;
+            $where .= " uc.change_type = ".$type;
         }
         if ($start){
-            $where .= " and addtime >= ".strtotime($start);
+            $where .= " and uc.addtime >= ".strtotime($start);
         }
         if ($end){
-            $where .= " and addtime <= ".strtotime($end);
+            $where .= " and uc.addtime <= ".strtotime($end);
         }
         if ($id){
-            $where .= " and user_id = $id";
+            $where .= " and uc.user_id = $id";
         }else{
             if ($cate == 1){
-                $where .= " and user_id = $uid";
+                $where .= " and uc.user_id = $uid";
             }else{
                 $ids = DI()->notorm->user->where('invite_level like ?',$user['invite_level'].'%')->select('id')->fetchAll();
                 $str = "";
@@ -164,14 +164,17 @@ class Api_Daili extends PhalApi_Api
                     $str .= $v['id'].',';
                 }
                 $str = substr($str,0,-1);
-                $where .= " and user_id in ($str)";
+                $where .= " and uc.user_id in ($str)";
             }
         }
-        $list = DI()->notorm->user_change
-            ->where("$where")
-            ->order('id desc')
-            ->limit(($page-1) * $page_size,$page_size)
-            ->fetchAll();
+//        $list = DI()->notorm->user_change
+//            ->where("$where")
+//            ->select("user_id,change_money,next_money,FROM_UNIXTIME(addtime, '%Y-%m-%d %H:%i:%s'),status")
+//            ->order('id desc')
+//            ->limit(($page-1) * $page_size,$page_size)
+//            ->fetchAll();
+        $sql = "select uc.user_id,u.user_nicename,uc.change_money,uc.next_money,uc.status,FROM_UNIXTIME(uc.addtime, '%Y-%m-%d %H:%i:%s') from cmf_user_change uc join cmf_user on uc.user_id = u.id where $where";
+        $list = DI()->notorm->user_change->queryAll($sql);
         $return['list'] = $list;
         $rs['code'] = 0;
         $rs['msg'] = '获取成功';
