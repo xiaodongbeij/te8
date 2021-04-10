@@ -423,7 +423,7 @@ class GameDetailController extends AdminBaseController
                 ->find();
 
             $record = Db::table('cmf_game_record')
-                ->where('user_login','in',$users)
+                ->where('user_login','in',$ids)
                 ->field('sum(pay_off) bonus,sum(bet_amount) xia,sum(profit) profit')
                 ->find();
 
@@ -512,7 +512,7 @@ class GameDetailController extends AdminBaseController
                 ->find();
 
             $record = Db::table('cmf_game_record')
-                ->where('user_login','in',$users)
+                ->where('user_login','in',$ids)
                 ->field('sum(pay_off) bonus,sum(bet_amount) xia,sum(profit) profit')
                 ->find();
 
