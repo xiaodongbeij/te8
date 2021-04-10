@@ -197,12 +197,15 @@ class UserProfitController extends AdminBaseController
         }
 //        dump($where);die;
         $map = [];
-        $date = isset($data['date']) ? $data['date']: '';
-        if ($date){
-            $start = strtotime($date);
-            $end = $start + 3600 * 24;
+        $start = isset($data['start']) ? $data['start']: '';
+        $end = isset($data['end']) ? $data['end']: '';
+        if ($start){
+            $start = strtotime($start);
             $map[] = ['uc.addtime','>=',$start];
-            $map[] = ['uc.addtime','<=',$end];
+        }
+        if ($end){
+            $end = strtotime($end);
+            $map[] = ['uc.addtime','>=',$end];
         }
 //        dump($map);die;
         $list = Db::table('cmf_user')
