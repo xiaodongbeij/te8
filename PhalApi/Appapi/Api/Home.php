@@ -22,6 +22,10 @@ class Api_Home extends PhalApi_Api {
 			'getNew' => array(
 				'p' => array('name' => 'p', 'type' => 'int', 'default'=>'1' ,'desc' => '页数'),
             ),
+
+            'getCodeRoom' => array(
+                'p' => array('name' => 'p', 'type' => 'int', 'default'=>'1' ,'desc' => '页数'),
+            ),
 			
 			'search' => array(
 				'uid' => array('name' => 'uid', 'type' => 'int', 'require' => true, 'min'=>1 ,'desc' => '用户ID'),
@@ -708,6 +712,48 @@ class Api_Home extends PhalApi_Api {
 
         return $rs;
     }		
+
+    /**
+     * 获取密码房
+     * @desc 用于获取密码房
+     * @return int code 操作码，0表示成功
+     * @return array info 主播列表
+     * @return string info[].uid 主播id
+     * @return string info[].avatar 主播头像
+     * @return string info[].avatar_thumb 头像缩略图
+     * @return string info[].user_nicename 直播昵称
+     * @return string info[].title 直播标题
+     * @return string info[].city 主播位置
+     * @return string info[].stream 流名
+     * @return string info[].pull 播流地址
+     * @return string info[].nums 人数
+     * @return string info[].distance 距离
+     * @return string info[].thumb 直播封面
+     * @return string info[].level_anchor 主播等级
+     * @return string info[].type 直播类型
+     * @return string info[].goodnum 靓号
+     * @return string msg 提示信息
+     */
+    public function getCodeRoom() {
+        $rs = array('code' => 0, 'msg' => '', 'info' => array());
+        $p=checkNull($this->p);
+        if(!$p){
+            $p=1;
+        }
+        $key='getNewls_'.$p;
+        $info=getcaches($key);
+        
+        if(!$info){
+            $domain = new Domain_Home();
+            $info = $domain->getCodeRoom($p);
+
+            setCaches($key,$info,6);
+        }
+        
+        $rs['info'] = $info;
+
+        return $rs;
+    }       
 		
 	/**
      * 搜索
