@@ -152,6 +152,7 @@
             var value = obj.value; //修改后的值
             var data = obj.data; //当前行数据
             var event = obj.event; //当前单元格事件属性值
+            console.log(data)
             //event为del为删除 add则新增 edit则修改。这个三个值固定死了，切莫定义与之三个重复的event。
             if(event !== 'del' && event !== 'add' ){
                 var update = {};
@@ -166,7 +167,7 @@
             if(event === 'add'){
                 //可ajax异步请求后台,后台返回数据后用 obj.add(,rs) 进行回调生成表格树。
                 setTimeout(function () {
-                    $.post("get_sub", {user_id: data.id}, function (result) {
+                    $.post("get_sub", {user_id: data.id,start:data.start,end:data.end}, function (result) {
                         if (result.code == 0) {
                             layer.msg(result.msg)
                             return false;

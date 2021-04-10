@@ -246,11 +246,16 @@ class UserProfitController extends AdminBaseController
             $list[$k]['activity'] = is_null($change['activity']) ? '0.0000' : $change['activity'];
             $list[$k]['yin'] = is_null($change['yin']) ? '0.0000' : $change['yin'];
             $list[$k]['pin_yin'] = is_null($change['pin_yin']) ? '0.0000' : $change['pin_yin'];
-//            if ($date){
-//                $list[$k]['date'] = $date;
-//            }else{
-//                $list[$k]['date'] = '';
-//            }
+            if ($start){
+                $list[$k]['start'] = $start;
+            }else{
+                $list[$k]['start'] = '';
+            }
+            if ($end){
+                $list[$k]['end'] = $end;
+            }else{
+                $list[$k]['end'] = '';
+            }
         }
 
         $count = Db::table('cmf_user')
