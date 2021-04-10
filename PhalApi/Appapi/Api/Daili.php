@@ -218,8 +218,9 @@ class Api_Daili extends PhalApi_Api
                 $list[$k]['game_name'] = "官方彩票";
             }
         }else{
+            $where .= " platform_code = $plat";
             if ($start){
-                $where .= " bet_time >= ".strtotime($start);
+                $where .= " and bet_time >= ".strtotime($start);
             }
             if ($end){
                 $where .= " and bet_time <= ".strtotime($end);
@@ -253,6 +254,139 @@ class Api_Daili extends PhalApi_Api
         $rs['info'] = $return;
         return $rs;
     }
+
+//    /**
+//     * 投注奖金明细
+//     * @desc 用于获取投注明细
+//     * @return int code 操作码，0表示成功
+//     * @return array info
+//     * @return string msg 提示信息
+//     * @return string total 个人+下级总金额
+//     * @return string self 个人总金额
+//     * @return string team 下级总金额
+//     * @return string list.user_id 用户id
+//     * @return string list.money 下注奖金
+//     * @return string list.prize 奖金
+//     * @return string list.addtime 时间
+//     * @return string list.game_name 游戏名称
+//     */
+//    public function touDetail(){
+//
+//        $uid = $this->uid;
+//        $plat = $this->plat;
+//        $type = $this->type;
+//        $start = $this->start;
+//        $end = $this->end;
+//        $id = $this->id;
+//        $cate = $this->cate;
+//        $page = $this->page;
+//        $page_size = $this->page_size;
+//        $of = ($page-1) * $page_size;
+//
+//        if ($type == 1){
+//            $field1 = 'money';
+//            $field2 = 'bet_amount';
+//        }else{
+//            $field1 = 'prize';
+//            $field2 = 'pay_off';
+//        }
+//        //统计固定
+//        $user = DI()->notorm->user->where('id',$uid)->fetchOne();
+//        if ($plat == 1){
+//            $sql = "select sum(gt.$field1) total,sum(if(gt.user_id = :uid,$field1,0)) self FROM cmf_game_ticket gt WHERE gt.status in (0,1) AND gt.user_id in ( select id from cmf_user where invite_level like :level);";
+//            $params = [
+//                ':uid' => $uid,
+//                ':level' => $user['invite_level'] . '%'
+//            ];
+//            $info = DI()->notorm->game_ticket->queryAll($sql,$params);
+//        }else{
+//            $sql = "select sum(gr.$field2) total,sum(if(gr.user_login= :uid,$field2,0)) self FROM cmf_game_record gr WHERE gr.platform_code = :plat and gr.user_login in ( select id from cmf_user where invite_level like :level);";
+//            $params = [
+//                ':uid' => $uid,
+//                ':level' => $user['invite_level'] . '%',
+//                ':plat' => $plat
+//            ];
+//            $info = DI()->notorm->game_ticket->queryAll($sql,$params);
+//        }
+//        $return = [
+//            'total' => number_format(abs($info[0]['total']), 2),   //总充值金额
+//            'self'  => number_format(abs($info[0]['self']), 2),    //个人总额
+//            'team'  => number_format(abs($info[0]['total'] - $info[0]['self']),2)     //下级总额
+//        ];
+//
+//        //查询列表
+//        $where = "";
+//
+//
+//        if ($plat == 1){
+//            if ($start){
+//                $where .= " addtime >= ".strtotime($start);
+//            }
+//            if ($end){
+//                $where .= " and addtime <= ".strtotime($end);
+//            }
+//            if ($id){
+//                $where .= " and user_id = $id";
+//            }else{
+//                if ($cate == 1){
+//                    $where .= " and user_id = $uid";
+//                }else{
+//                    $ids = DI()->notorm->user->where('invite_level like ?',$user['invite_level'].'%')->select('id')->fetchAll();
+//                    $str = "";
+//                    foreach ($ids as $v){
+//                        $str .= $v['id'].',';
+//                    }
+//                    $str = substr($str,0,-1);
+//                    $where .= " and user_id in ($str)";
+//                }
+//            }
+//
+//            $list = DI()->notorm->game_ticket
+//                ->where("$where")
+//                ->select("user_id,money,FROM_UNIXTIME(addtime, '%Y-%m-%d %H:%i:%s') addtime,prize")
+//                ->order('id desc')
+//                ->limit(($page-1) * $page_size,$page_size)
+//                ->fetchAll();
+//            foreach ($list as $k => $v){
+//                $list[$k]['game_name'] = "官方彩票";
+//            }
+//        }else{
+//            $where .= " platform_code = $plat";
+//            if ($start){
+//                $where .= " and bet_time >= ".strtotime($start);
+//            }
+//            if ($end){
+//                $where .= " and bet_time <= ".strtotime($end);
+//            }
+//            if ($id){
+//                $where .= " and user_login = $id";
+//            }else{
+//                if ($cate == 1){
+//                    $where .= " and user_login = $uid";
+//                }else{
+//                    $ids = DI()->notorm->user->where('invite_level like ?',$user['invite_level'].'%')->select('id')->fetchAll();
+//                    $str = "";
+//                    foreach ($ids as $v){
+//                        $str .= $v['id'].',';
+//                    }
+//                    $str = substr($str,0,-1);
+//                    $where .= " and user_login in ($str)";
+//                }
+//            }
+//            $list = DI()->notorm->game_record
+//                ->where("$where")
+//                ->select("user_login user_id,bet_amount money,FROM_UNIXTIME(bet_time, '%Y-%m-%d %H:%i:%s') addtime,game_name,pay_off prize")
+//                ->order('id desc')
+//                ->limit(($page-1) * $page_size,$page_size)
+//                ->fetchAll();
+//        }
+//
+//        $return['list'] = $list;
+//        $rs['code'] = 0;
+//        $rs['msg'] = '获取成功';
+//        $rs['info'] = $return;
+//        return $rs;
+//    }
 
 
     /**
