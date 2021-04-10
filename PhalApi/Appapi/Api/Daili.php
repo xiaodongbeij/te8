@@ -121,7 +121,7 @@ class Api_Daili extends PhalApi_Api
             'ticketDetail' => array(
                 'uid' => array('name' => 'uid', 'type' => 'int', 'min' => 1, 'require' => true, 'desc' => '用户ID'),
                 'token' => array('name' => 'token', 'type' => 'string', 'min' => 1, 'require' => true, 'desc' => 'token'),
-                'type' => array('name' => 'type', 'type' => 'string', 'min' => 1, 'require' => true, 'desc' => '彩种,为空查询全部'),
+                'type' => array('name' => 'type', 'type' => 'string', 'min' => 1, 'require' => false, 'desc' => '彩种,为空查询全部'),
                 'id' => array('name' => 'id', 'type' => 'int', 'min' => 1, 'require' => false, 'desc' => '搜索账号'),
                 'start' => array('name' => 'start', 'type' => 'string', 'min' => 1, 'require' => true, 'desc' => '日期起始'),
                 'end' => array('name' => 'end', 'type' => 'string', 'min' => 1, 'require' => true, 'desc' => '日期结束'),
