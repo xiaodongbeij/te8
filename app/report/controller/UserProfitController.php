@@ -247,12 +247,12 @@ class UserProfitController extends AdminBaseController
             $list[$k]['yin'] = is_null($change['yin']) ? '0.0000' : $change['yin'];
             $list[$k]['pin_yin'] = is_null($change['pin_yin']) ? '0.0000' : $change['pin_yin'];
             if ($start){
-                $list[$k]['start'] = $start;
+                $list[$k]['start'] = date('Y-m-d',$start);
             }else{
                 $list[$k]['start'] = '';
             }
             if ($end){
-                $list[$k]['end'] = $end;
+                $list[$k]['end'] = date('Y-m-d',$end);
             }else{
                 $list[$k]['end'] = '';
             }
