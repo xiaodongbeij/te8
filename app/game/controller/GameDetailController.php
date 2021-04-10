@@ -381,6 +381,17 @@ class GameDetailController extends AdminBaseController
             $where[] = ['u.iszombiep','=','0'];
             $where[] = ['u.iszombie','=','0'];
         }
+        $map = [];
+        $start = isset($data['start']) ? $data['start']: '';
+        $end = isset($data['end']) ? $data['end']: '';
+        if ($start){
+            $start = strtotime($start);
+            $map[] = ['uc.addtime','>=',$start];
+        }
+        if ($end){
+            $end = strtotime($end);
+            $map[] = ['uc.addtime','>=',$end];
+        }
 
         $list = Db::table('cmf_user')
             ->alias('u')
@@ -403,6 +414,7 @@ class GameDetailController extends AdminBaseController
             $list[$k]['level_count'] = $level_count;
             $change = Db::table('cmf_user_change')
                 ->alias('uc')
+                ->where($map)
                 ->where('user_id','in',$ids)
                 ->field('sum(if(uc.change_type=7,uc.change_money,0)) rate')
                 ->field('sum(if(uc.change_type=6,uc.change_money,0)) activity')
