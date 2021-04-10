@@ -184,6 +184,49 @@ class Model_Home extends PhalApi_Model_NotORM {
       
 		return $result;
     }
+
+    	/* 密码房 */
+    public function getCodeRoom($p) {
+        if($p<1){
+            $p=1;
+        }
+		$pnum=10;
+		$start=($p-1)*$pnum;
+		$where=" islive='1' and type='1' ";
+
+        if($p > 3)
+        {
+            return [];
+        }
+		if($p!=1){
+			$endtime=$_SESSION['new_starttime'];
+            if($endtime){
+                $where.=" and starttime < {$endtime}";
+            }
+		}
+        $sql = "SELECT uid,title,type_val,type,stream,pull,thumb,show_name,short_name,c_id,c_type,icon,avatar,avatar_thumb,user_nicename,starttime FROM cmf_live cl join cmf_user cu on cl.uid=cu.id WHERE islive = 1 AND type = 1 ORDER BY starttime desc limit $start,$pnum";
+   
+        $result=DI()->notorm->live->queryAll($sql);
+
+     
+ 
+        foreach($result as &$v)
+        {
+            $v['avatar'] = get_upload_path($v['avatar']);
+            $v['avatar_thumb'] = get_upload_path($v['avatar_thumb']);
+            $v['thumb'] = get_upload_path($v['thumb']);
+            $v['nums'] = DI()->redis->get($v['uid'].":nums");
+        }
+
+
+		if($result){
+			$last=end($result);
+			$_SESSION['new_starttime']=$last['starttime'];
+		}
+      
+		return $result;
+    }
+
 		
 		/* 搜索 */
     public function search($uid,$key,$p) {

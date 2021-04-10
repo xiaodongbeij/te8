@@ -36,12 +36,21 @@ class Domain_Home {
         return $rs;
     }
 		
-	public function getNew($p) {
+	public function getCodeRoom($p) {
+        $rs = array();
+
+        $model = new Model_Home();
+        $rs = $model->getCodeRoom($p);
+				
+        return $rs;
+    }
+
+    public function getNew($p) {
         $rs = array();
 
         $model = new Model_Home();
         $rs = $model->getNew($p);
-				
+                
         return $rs;
     }
 		
