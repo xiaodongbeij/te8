@@ -436,12 +436,12 @@ class GameDetailController extends AdminBaseController
             $list[$k]['yin'] = $change['rate'] + $change['activity'] + $record['profit'];
             $list[$k]['pin_yin'] = -1 * ($change['rate'] + $change['activity'] + $record['profit']);
             if ($start){
-                $list[$k]['start'] = $start;
+                $list[$k]['start'] = date('Y-m-d',$start);
             }else{
                 $list[$k]['start'] = '';
             }
             if ($end){
-                $list[$k]['end'] = $end;
+                $list[$k]['end'] = date('Y-m-d',$end);
             }else{
                 $list[$k]['end'] = '';
             }
@@ -525,12 +525,12 @@ class GameDetailController extends AdminBaseController
             $list[$k]['yin'] = $change['rate'] + $change['activity'] + $record['profit'] . '';
             $list[$k]['pin_yin'] = -1 * ($change['rate'] + $change['activity'] + $record['profit']) . '';
             if ($start){
-                $list[$k]['start'] = $start;
+                $list[$k]['start'] = date('Y-m-d',$start);
             }else{
                 $list[$k]['start'] = '';
             }
             if ($end){
-                $list[$k]['end'] = $end;
+                $list[$k]['end'] = date('Y-m-d',$end);
             }else{
                 $list[$k]['end'] = '';
             }
