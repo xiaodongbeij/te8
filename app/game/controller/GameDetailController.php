@@ -374,7 +374,7 @@ class GameDetailController extends AdminBaseController
         if($uid != ''){
 //            $user = Db::name('user')->where('user_login', $uid)->find();
 //            $where[] = ['u.invite_level','like',$user['invite_level'].'%'];
-            $where[] = ['u.mobile','=',$uid];
+            $where[] = ['u.id','=',$uid];
         }else{
 //            $where[] = ['u.invite_level','not like','%-%'];
             $where[] = ['u.parent_id','=','0'];
