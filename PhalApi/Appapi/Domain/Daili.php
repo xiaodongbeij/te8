@@ -190,7 +190,7 @@ class Domain_Daili
     public function getMemberList($uid, $account, $type, $start, $end, $page, $page_size)
     {
     $user = DI()->notorm->user->where('id',$uid)->fetchOne();
-    $where = "id <> $uid and invite_level like ".$user['invite_level'].'%';
+    $where = "id <> $uid and invite_level like '".$user['invite_level']."%'";
     if ($account){
         $where .= " and id = $account";
     }
