@@ -205,7 +205,7 @@ class Domain_Daili
         $end = strtotime($end);
         $where .= " and create_time <= $end";
     }
-    var_dump($where);die;
+//    var_dump($where);die;
     $temp = DI()->notorm->user->where("$where")->count();
                 if (!$temp){
             $rs['code'] = 1001;
