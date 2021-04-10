@@ -192,6 +192,9 @@ class Api_Daili extends PhalApi_Api
             if ($end){
                 $where .= " and addtime <= ".strtotime($end);
             }
+            if ($type == 2){
+                $where .= " and prize > 0";
+            }
             if ($id){
                 $where .= " and user_id = $id";
             }else{
@@ -224,6 +227,9 @@ class Api_Daili extends PhalApi_Api
             }
             if ($end){
                 $where .= " and bet_time <= ".strtotime($end);
+            }
+            if ($type == 2){
+                $where .= " and pay_off > 0";
             }
             if ($id){
                 $where .= " and user_login = $id";
