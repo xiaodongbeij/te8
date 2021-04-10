@@ -18,12 +18,8 @@
         <!--        <li><a href="{:url('userChange/add')}">{:lang('ADD')}</a></li>-->
     </ul>
     <form class="well form-inline margin-top-20" method="post" action="">
-
-<<<<<<< HEAD
-        代理ID：
-=======
+        
         用户id：
->>>>>>> b3f48ddcf679ac6ca5ffbed2f546cb5f4199386a
         <input class="form-control" type="text" id="uid" name="uid" style="width: 200px;" value="{:input('request.uid')}"
                placeholder="用户id">
 
@@ -152,7 +148,7 @@
             if(event === 'add'){
                 //可ajax异步请求后台,后台返回数据后用 obj.add(,rs) 进行回调生成表格树。
                 setTimeout(function () {
-                    $.post("get_sub", {user_id: data.id}, function (result) {
+                    $.post("get_sub", {user_id: data.id,start:data.start,end:data.end}, function (result) {
                         if (result.code == 0) {
                             layer.msg(result.msg)
                             return false;

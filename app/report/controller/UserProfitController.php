@@ -281,6 +281,18 @@ class UserProfitController extends AdminBaseController
         if (!$data['user_id']) return json(['code'=>0,'msg'=>'获取失败']);
         $user_id = $data['user_id'];
 
+        $map = [];
+        $start = isset($data['start']) ? $data['start']: '';
+        $end = isset($data['end']) ? $data['end']: '';
+        if ($start){
+            $start = strtotime($start);
+            $map[] = ['uc.addtime','>=',$start];
+        }
+        if ($end){
+            $end = strtotime($end);
+            $map[] = ['uc.addtime','<=',$end];
+        }
+
         $list = Db::table('cmf_user')
             ->field('u.id,u.user_login,u.is_dai,u.invite_level')
             ->alias('u')
@@ -299,6 +311,7 @@ class UserProfitController extends AdminBaseController
             $list[$k]['level_count'] = $level_count;
             $change = Db::table('cmf_user_change')
                 ->alias('uc')
+                ->where($map)
                 ->where('user_id','in',$ids)
                 ->field('sum(if(uc.change_type=1,uc.change_money,0)) recharge')
                 ->field('sum(if(uc.change_type=2,uc.change_money,0)) withdrawal')
@@ -318,6 +331,16 @@ class UserProfitController extends AdminBaseController
             $list[$k]['activity'] = is_null($change['activity']) ? '0.0000' : $change['activity'];
             $list[$k]['yin'] = is_null($change['yin']) ? '0.0000' : $change['yin'];
             $list[$k]['pin_yin'] = is_null($change['pin_yin']) ? '0.0000' : $change['pin_yin'];
+            if ($start){
+                $list[$k]['start'] = $start;
+            }else{
+                $list[$k]['start'] = '';
+            }
+            if ($end){
+                $list[$k]['end'] = $end;
+            }else{
+                $list[$k]['end'] = '';
+            }
         }
 //        dump($list);die;
         if ($list){

@@ -435,6 +435,16 @@ class GameDetailController extends AdminBaseController
             $list[$k]['activity'] = is_null($change['activity']) ? '0.0000' : $change['activity'];
             $list[$k]['yin'] = $change['rate'] + $change['activity'] + $record['profit'];
             $list[$k]['pin_yin'] = -1 * ($change['rate'] + $change['activity'] + $record['profit']);
+            if ($start){
+                $list[$k]['start'] = $start;
+            }else{
+                $list[$k]['start'] = '';
+            }
+            if ($end){
+                $list[$k]['end'] = $end;
+            }else{
+                $list[$k]['end'] = '';
+            }
         }
 
         $count = Db::table('cmf_user')
@@ -459,6 +469,18 @@ class GameDetailController extends AdminBaseController
         if (!$data['user_id']) return json(['code'=>0,'msg'=>'获取失败']);
         $user_id = $data['user_id'];
 
+        $map = [];
+        $start = isset($data['start']) ? $data['start']: '';
+        $end = isset($data['end']) ? $data['end']: '';
+        if ($start){
+            $start = strtotime($start);
+            $map[] = ['uc.addtime','>=',$start];
+        }
+        if ($end){
+            $end = strtotime($end);
+            $map[] = ['uc.addtime','<=',$end];
+        }
+
         $list = Db::table('cmf_user')
             ->field('u.id,u.user_login,u.is_dai,u.invite_level')
             ->alias('u')
@@ -481,6 +503,7 @@ class GameDetailController extends AdminBaseController
             $list[$k]['level_count'] = $level_count;
             $change = Db::table('cmf_user_change')
                 ->alias('uc')
+                ->where($map)
                 ->where('user_id','in',$ids)
                 ->field('sum(if(uc.change_type=7,uc.change_money,0)) rate')
                 ->field('sum(if(uc.change_type=6,uc.change_money,0)) activity')
@@ -501,6 +524,16 @@ class GameDetailController extends AdminBaseController
             $list[$k]['activity'] = is_null($change['activity']) ? '0.0000' : $change['activity'];
             $list[$k]['yin'] = $change['rate'] + $change['activity'] + $record['profit'] . '';
             $list[$k]['pin_yin'] = -1 * ($change['rate'] + $change['activity'] + $record['profit']) . '';
+            if ($start){
+                $list[$k]['start'] = $start;
+            }else{
+                $list[$k]['start'] = '';
+            }
+            if ($end){
+                $list[$k]['end'] = $end;
+            }else{
+                $list[$k]['end'] = '';
+            }
         }
 //        dump($list);die;
         if ($list){
