@@ -400,7 +400,7 @@ class GameDetailController extends AdminBaseController
             ->where($where)
             ->paginate($limit,false,['page'=>$page])->items();
 //            ->paginate(20)->items();
-
+        dump($map);die;
         foreach ($list as $k => $v){
             $temp = Db::table('cmf_user')->where('invite_level','like',$v['invite_level'].'%')->field('id,user_login')->select();
             $ids=[];
