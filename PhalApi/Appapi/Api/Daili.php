@@ -140,10 +140,13 @@ class Api_Daili extends PhalApi_Api
      * @return array info
      * @return string msg 提示信息
      * @return string list.user_id 用户id
-     * @return string list.money 下注奖金
+     * @return string list.user_nicename 昵称
+     * @return string list.show_name 彩种
+     * @return string list.money 下注金额
      * @return string list.prize 奖金
      * @return string list.addtime 时间
-     * @return string list.game_name 游戏名称
+     * @return string list.expect 期号
+     * @return string list.ok 中奖状态，1-中奖，2-未中奖，3-未开奖
      */
     public function ticketDetail(){
         $uid = $this->uid;
