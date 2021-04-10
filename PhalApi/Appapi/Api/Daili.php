@@ -117,9 +117,84 @@ class Api_Daili extends PhalApi_Api
                 'cate' => array('name' => 'cate', 'type' => 'int', 'min' => 1, 'require' => true, 'desc' => '类型,1-个人，2-下级'),
                 'page' => array('name' => 'page', 'type' => 'int', 'min' => 1, 'require' => true, 'desc' => '页数,1开始'),
                 'page_size' => array('name' => 'page_size', 'type' => 'int', 'min' => 1, 'require' => true, 'desc' => '每页条数'),
+            ),
+            'ticketDetail' => array(
+                'uid' => array('name' => 'uid', 'type' => 'int', 'min' => 1, 'require' => true, 'desc' => '用户ID'),
+                'token' => array('name' => 'token', 'type' => 'string', 'min' => 1, 'require' => true, 'desc' => 'token'),
+                'type' => array('name' => 'type', 'type' => 'string', 'min' => 1, 'require' => true, 'desc' => '彩种,为空查询全部'),
+                'id' => array('name' => 'id', 'type' => 'int', 'min' => 1, 'require' => false, 'desc' => '搜索账号'),
+                'start' => array('name' => 'start', 'type' => 'string', 'min' => 1, 'require' => true, 'desc' => '日期起始'),
+                'end' => array('name' => 'end', 'type' => 'string', 'min' => 1, 'require' => true, 'desc' => '日期结束'),
+                'status' => array('name' => 'status', 'type' => 'int', 'min' => 1, 'require' => true, 'desc' => '状态,1全部，2未开奖，3已中奖，4未中奖，5已撤单'),
+                'page' => array('name' => 'page', 'type' => 'int', 'min' => 1, 'require' => true, 'desc' => '页数,1开始'),
+                'page_size' => array('name' => 'page_size', 'type' => 'int', 'min' => 1, 'require' => true, 'desc' => '每页条数'),
             )
 
         );
+    }
+
+    /**
+     * 团队彩票明细
+     * @desc 用于获取团队彩票明细
+     * @return int code 操作码，0表示成功
+     * @return array info
+     * @return string msg 提示信息
+     * @return string list.user_id 用户id
+     * @return string list.money 下注奖金
+     * @return string list.prize 奖金
+     * @return string list.addtime 时间
+     * @return string list.game_name 游戏名称
+     */
+    public function ticketDetail(){
+        $uid = $this->uid;
+        $type = $this->type;
+        $start = $this->start;
+        $end = $this->end;
+        $id = $this->id;
+        $status = $this->status;
+        $page = $this->page;
+        $page_size = $this->page_size;
+        $of = ($page-1) * $page_size;
+
+        //查询列表
+        $user = DI()->notorm->user->where('id',$uid)->fetchOne();
+        $ids = DI()->notorm->user->where('id <> ?',$uid)->where('invite_level like ?',$user['invite_level'].'%')->select('id')->fetchAll();
+        $str = "";
+        foreach ($ids as $v){
+            $str .= $v['id'].',';
+        }
+        $str = substr($str,0,-1);
+        $where = " user_id in ($str)";
+
+        if ($start){
+            $where .= " and addtime >= ".strtotime($start);
+        }
+        if ($end){
+            $where .= " and addtime <= ".strtotime($end);
+        }
+        if ($id){
+            $where .= " and user_id = $id";
+        }
+        if ($type){
+            $where .= " and short_name = $type";
+        }
+        if ($status == 2){
+            $where .= " and status = 0";
+        }elseif ($status == 3){
+            $where .= " and ok = 1";
+        }elseif ($status == 4){
+            $where .= " and ok = 2";
+        }elseif ($status == 5){
+            $where .= " and status = 2";
+        }
+
+        $sql = "select gt.user_id,u.user_nicename,gt.show_name,gt.expect,gt.money,gt.prize,gt.ok,FROM_UNIXTIME(uc.addtime, '%Y-%m-%d %H:%i:%s') addtime from cmf_game_ticket gt join cmf_user u on gt.user_id = u.id where $where limit $of,$page_size";
+        $list = DI()->notorm->game_ticket->queryAll($sql);
+
+        $rs['code'] = 0;
+        $rs['msg'] = '获取成功';
+        $rs['info'] = $list;
+        return $rs;
     }
 
     /**
