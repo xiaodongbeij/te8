@@ -189,7 +189,8 @@ class Domain_Daili
     //会员列表
     public function getMemberList($uid, $account, $type, $start, $end, $page, $page_size)
     {
-    $where = "parent_id = $uid";
+    $user = DI()->notorm->user->where('id',$uid)->fetchOne();
+    $where = "id <> $uid and invite_level like ".$user['invite_level'].'%';
     if ($account){
         $where .= " and id = $account";
     }
@@ -265,6 +266,14 @@ class Domain_Daili
         $user = '';
 
         foreach ($list as $k => $v) {
+
+            //是否直属
+            if ($v['parent_id'] == $uid){
+                $list[$k]['is_one'] = 1;
+            }else{
+                $list[$k]['is_one'] = 0;
+            }
+
             $user .= $v['id'] . ',';
             if ($v['is_dai'] == 1) {
                 $list[$k]['level'] = '代理';
