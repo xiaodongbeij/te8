@@ -191,7 +191,7 @@ class Domain_Daili
     {
     $where = "parent_id = $uid";
     if ($account){
-        $where .= " and user_login = $account";
+        $where .= " and id = $account";
     }
     if ($type){
         $where .= " and is_dai = $type";
