@@ -205,7 +205,7 @@ class UserProfitController extends AdminBaseController
         }
         if ($end){
             $end = strtotime($end);
-            $map[] = ['uc.addtime','>=',$end];
+            $map[] = ['uc.addtime','<=',$end];
         }
 //        dump($map);die;
         $list = Db::table('cmf_user')
