@@ -92,6 +92,7 @@ class ManualController extends AdminbaseController {
             if (!in_array($type,[1,2,3])){
                 $this->error("类型错误");
             }
+            unset($data['type']);
 
 			$coin=$data['coin'];
 			if($coin=="" || $coin<0){
