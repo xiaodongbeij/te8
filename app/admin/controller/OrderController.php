@@ -39,6 +39,9 @@ class OrderController extends AdminBaseController
         $third_order_sn = isset($data['third_order_sn']) ? $data['third_order_sn']: '';
         if($third_order_sn != '') $where[]=['third_order_sn', '=', $third_order_sn];
 
+        $charge_num = isset($data['charge_num']) ? $data['charge_num']: '';
+        if($charge_num != '') $where[]=['charge_num', '=', $charge_num];
+
         //层级搜索
         $parent_id = isset($data['parent_id']) ? $data['parent_id']: '';
         if($parent_id != ''){
