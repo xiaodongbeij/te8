@@ -18,6 +18,7 @@ class OrderController extends AdminBaseController
     public function index()
     {
         $data = input();
+        dump($data);die;
         $where = [];
 
         $where[] = ['del_status', '=', 0];
