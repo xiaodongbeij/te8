@@ -76,7 +76,7 @@ class ManualController extends AdminbaseController {
 		if ($this->request->isPost()) {
             
             $data      = $this->request->param();
-            dump($data);die;
+//            dump($data);die;
 			$touid=$data['touid'];
 
 			if($touid==""){
@@ -88,10 +88,14 @@ class ManualController extends AdminbaseController {
                 $this->error("会员不存在，请更正");
                 
             }
-            
+            $type = $data['type'];
+            if (!in_array($type,[1,2,3])){
+                $this->error("类型错误");
+            }
+
 			$coin=$data['coin'];
-			if($coin==""){
-				$this->error("请填写充值点数");
+			if($coin=="" || $coin<0){
+				$this->error("请填写正数点数");
 			}
 			if(!cmf_google_token_check(session('google_token'),$data['google_token'])) {
                 $this->error('令牌验证失败');
@@ -114,8 +118,15 @@ class ManualController extends AdminbaseController {
                 $this->error("充值失败！");
             }
 
+            $change_type = 1;
+            if ($type == 2){
+                $coin = -1 * $coin;
+            }elseif ($type == 3){
+                $change_type = 6;
+            }
+
             //手动充值账变记录
-            user_change_action($touid,1,$coin,'手动充值',$id);
+            user_change_action($touid,$change_type,$coin,$data['remarks'],$id);
 			
 			$action="手动充值虚拟币ID：".$id;
 			setAdminLog($action);
