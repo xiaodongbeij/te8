@@ -163,6 +163,12 @@ class Api_Daili extends PhalApi_Api
         $user = DI()->notorm->user->where('id',$uid)->fetchOne();
         $ids = DI()->notorm->user->where('id <> ?',$uid)->where('invite_level like ?',$user['invite_level'].'%')->select('id')->fetchAll();
         $str = "";
+        if(!$ids){
+            $rs['code'] = 0;
+            $rs['msg'] = '获取成功';
+            $rs['info'] = [];
+            return $rs;
+        }
         foreach ($ids as $v){
             $str .= $v['id'].',';
         }
