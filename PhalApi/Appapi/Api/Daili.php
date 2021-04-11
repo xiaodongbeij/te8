@@ -185,7 +185,7 @@ class Api_Daili extends PhalApi_Api
             $where .= " and user_id = $id";
         }
         if ($type){
-            $where .= " and short_name = $type";
+            $where .= " and short_name = '$type'";
         }
         if ($status == 2){
             $where .= " and status = 0";
