@@ -108,6 +108,7 @@
                 <th>备注</th>
                 <th>下单时间</th>
                 <th>支付时间</th>
+                <th>首冲</th>
 
                 <th>{:lang('ACTIONS')}</th>
             </tr>
@@ -146,6 +147,11 @@
                     <td>{$vo.remark}</td>
                     <td>{$vo.addtime}</td>
                     <td>{$vo.pay_time}</td>
+                    <td>
+                        <eq name="$vo.payway" value="1">首冲</eq>
+                        <eq name="$vo.payway" value="2">二充</eq>
+                        <eq name="$vo.payway" value="3">三充</eq>
+                    </td>
 
                     <td>
                         <eq name="$vo.order_status" value="1">
