@@ -19,7 +19,7 @@
 				<label for="input-coin" class="col-sm-2 control-label"><span class="form-required">*</span>充值点数</label>
 				<div class="col-md-6 col-sm-10">
 					<input type="text" class="form-control" id="input-coin" name="coin" maxlength='7' onkeyup="this.value=this.value.replace(/[^\-?\d.]/g,'')" />
-					<p class="help-block">注(最多7位数): 填写正数表示加点数, 负数表示扣点数;</p>
+					<p class="help-block">注(最多7位数)</p>
 				</div>
 			</div>
 
@@ -29,7 +29,14 @@
 					<input type="text" class="form-control" id="input-remarks" name="remarks">
 				</div>
 			</div>
-
+			<div class="form-group">
+				<label for="input-type" class="col-sm-2 control-label">类型</label>
+				<div class="col-md-6 col-sm-10" id="sdk">
+					<label class="radio-inline"><input type="radio" value="1" name="type" >手动加</label>
+					<label class="radio-inline"><input type="radio" value="2" name="type" >手动减</label>
+					<label class="radio-inline"><input type="radio" value="3" name="type" >赠送</label>
+				</div>
+			</div>
 			<div class="form-group">
 				<label for="input-coin" class="col-sm-2 control-label"><span class="form-required">*</span>谷歌口令</label>
 				<div class="col-md-6 col-sm-10">

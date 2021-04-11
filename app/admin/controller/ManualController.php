@@ -76,7 +76,7 @@ class ManualController extends AdminbaseController {
 		if ($this->request->isPost()) {
             
             $data      = $this->request->param();
-            
+            dump($data);die;
 			$touid=$data['touid'];
 
 			if($touid==""){
