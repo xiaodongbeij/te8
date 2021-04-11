@@ -42,6 +42,8 @@ class OrderController extends AdminBaseController
         $charge_num = isset($data['charge_num']) ? $data['charge_num']: '';
         if($charge_num != '') $where[]=['charge_num', '=', $charge_num];
 
+        dump($where);die;
+
         //层级搜索
         $parent_id = isset($data['parent_id']) ? $data['parent_id']: '';
         if($parent_id != ''){
