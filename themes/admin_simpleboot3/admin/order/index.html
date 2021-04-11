@@ -50,7 +50,7 @@
             <option value="3" <if condition="input('request.payway') neq '' && input('request.payway') eq 3">selected</if>>银行卡</option>
         </select>
         <p></p>
-        首冲：
+        首充：
         <select class="form-control" name="charge_num">
             <option value="">全部</option>
             <option value="1" <if condition="input('request.charge_num') neq '' && input('request.charge_num') eq 1">selected</if>>首充</option>
@@ -108,7 +108,7 @@
                 <th>备注</th>
                 <th>下单时间</th>
                 <th>支付时间</th>
-                <th>首冲</th>
+                <th>首充</th>
 
                 <th>{:lang('ACTIONS')}</th>
             </tr>
