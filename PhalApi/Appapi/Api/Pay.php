@@ -113,13 +113,13 @@ class Api_Pay extends PhalApi_Api
         $charge_num = 0;
         $order_num = DI()->notorm->order->where('user_id = ?', $uid)->count();
         switch ($order_num) {
-            case 1:
+            case 0:
                 $charge_num = 1;
                 break;
-            case 2:
+            case 1:
                 $charge_num = 2;
                 break;
-            case 3:
+            case 2:
                 $charge_num = 3;
                 break;    
         }
