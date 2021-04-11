@@ -53,7 +53,7 @@
         首冲：
         <select class="form-control" name="charge_num">
             <option value="">全部</option>
-            <option value="1" <if condition="input('request.charge_num') neq '' && input('request.charge_num') eq 1">selected</if>>首冲</option>
+            <option value="1" <if condition="input('request.charge_num') neq '' && input('request.charge_num') eq 1">selected</if>>首充</option>
             <option value="2" <if condition="input('request.charge_num') neq '' && input('request.charge_num') eq 2">selected</if>>二充</option>
             <option value="3" <if condition="input('request.charge_num') neq '' && input('request.charge_num') eq 3">selected</if>>三充</option>
         </select>
@@ -148,7 +148,7 @@
                     <td>{$vo.addtime}</td>
                     <td>{$vo.pay_time}</td>
                     <td>
-                        <eq name="$vo.charge_num" value="1">首冲</eq>
+                        <eq name="$vo.charge_num" value="1">首充</eq>
                         <eq name="$vo.charge_num" value="2">二充</eq>
                         <eq name="$vo.charge_num" value="3">三充</eq>
                     </td>
