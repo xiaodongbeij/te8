@@ -28,6 +28,11 @@ class ManualController extends AdminbaseController {
         if($status!=''){
             $map[]=['status','=',$status];
         }
+
+        $type=isset($data['type']) ? $data['type']: '';
+        if($type!=''){
+            $map[]=['type','=',$type];
+        }
         
         $uid=isset($data['uid']) ? $data['uid']: '';
         if($uid!=''){
@@ -88,11 +93,12 @@ class ManualController extends AdminbaseController {
                 $this->error("会员不存在，请更正");
                 
             }
-            $type = $data['type'];
-            if (!in_array($type,[1,2,3])){
+
+            $type = isset($data['type']) ? $data['type']: '';
+            if ($type == '' || !in_array($type,[1,2,3])){
                 $this->error("类型错误");
             }
-            unset($data['type']);
+            // unset($data['type']);
 
 			$coin=$data['coin'];
 			if($coin=="" || $coin<0){
@@ -175,6 +181,12 @@ class ManualController extends AdminbaseController {
 			->select()
             ->toArray();
 
+        $type_list = [
+            1 => '手动增',
+            2 => '手动减',
+            3 => '赠送',
+        ];    
+
 
         foreach ($xlsData as $k => $v){
 
@@ -183,17 +195,19 @@ class ManualController extends AdminbaseController {
             $xlsData[$k]['ip']=long2ip($v['ip']);
             $xlsData[$k]['user_nicename']= $userinfo['user_nicename'].'('.$v['touid'].')';
             $xlsData[$k]['addtime']=date("Y-m-d H:i:s",$v['addtime']); 
+            if(in_array($v['type'],[1,2,3])) $xlsData[$k]['type'] = $type_list[$v['type']];
         }
         
         $action="导出手动充值记录：".Db::name("charge_admin")->getLastSql();
         setAdminLog($action);
-        $cellName = array('A','B','C','D','E','F','G');
+        $cellName = array('A','B','C','D','E','F','G','H');
         $xlsCell  = array(
             array('id','序号'),
             array('admin','管理员'),
             array('user_nicename','会员 (账号)(ID)'),
             array('coin','充值点数'),
             array('ip','IP'),
+            array('type','类型'),
             array('remarks','备注'),
             array('addtime','时间'),
         );
