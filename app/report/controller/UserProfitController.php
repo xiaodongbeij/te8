@@ -175,6 +175,18 @@ class UserProfitController extends AdminBaseController
             'end'   => date('Y-m-d',strtotime('+1 day'))
         ];
         $this->assign('date',$date);
+        $change = Db::table('cmf_user_change')
+            ->alias('uc')
+            ->field('sum(if(uc.change_type=1,uc.change_money,0)) recharge')
+            ->field('sum(if(uc.change_type=2,uc.change_money,0)) withdrawal')
+            ->field('sum(if(uc.change_type=3&&uc.change_money>0,uc.change_money,0)) bonus')
+            ->field('sum(if(uc.change_type=7,uc.change_money,0)) rate')
+            ->field('sum(if(uc.change_type=3&&uc.change_money<0,uc.change_money,0)) xia')
+            ->field('sum(if(uc.change_type=6,uc.change_money,0)) activity')
+            ->field('sum(if(uc.change_type in (3,6,7),uc.change_money,0)) yin')
+            ->field('-1*sum(if(uc.change_type in (3,6,7),uc.change_money,0)) pin_yin')
+            ->find();
+        $this->assign('change',$change);
         // 渲染模板输出
         return $this->fetch();
     }
@@ -366,6 +378,28 @@ class UserProfitController extends AdminBaseController
             return json(['code'=>0,'msg'=>'无下级']);
         }
 
+    }
+
+    //团队结算报表获取统计
+    public function get_team_total(){
+        $change = Db::table('cmf_user_change')
+            ->alias('uc')
+            ->field('sum(if(uc.change_type=1,uc.change_money,0)) recharge')
+            ->field('sum(if(uc.change_type=2,uc.change_money,0)) withdrawal')
+            ->field('sum(if(uc.change_type=3&&uc.change_money>0,uc.change_money,0)) bonus')
+            ->field('sum(if(uc.change_type=7,uc.change_money,0)) rate')
+            ->field('sum(if(uc.change_type=3&&uc.change_money<0,uc.change_money,0)) xia')
+            ->field('sum(if(uc.change_type=6,uc.change_money,0)) activity')
+            ->field('sum(if(uc.change_type in (3,6,7),uc.change_money,0)) yin')
+            ->field('-1*sum(if(uc.change_type in (3,6,7),uc.change_money,0)) pin_yin')
+            ->find();
+        $return = [
+            'code' => 0,
+            'msg' => '',
+            'data' => $change
+        ];
+//        $return = $list;
+        return json($return);
     }
 
 ////    团队数据接口(展示个人)
