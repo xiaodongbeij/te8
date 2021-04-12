@@ -29,6 +29,7 @@
 						<th>会员(ID)</th>
 						<th>充值点数</th>
 						<th>IP</th>
+						<th>类型</th>
 						<th>备注</th>
 						<th>时间</th>
 					</tr>
@@ -41,6 +42,11 @@
 						<td>{$vo['userinfo']['user_nicename']} ({$vo['touid']})</td>
 						<td>{$vo['coin']}</td>
 						<td>{$vo['ip']}</td>
+						<td>
+                        	<eq name="$vo.type" value="1">手动增</eq>
+                        	<eq name="$vo.type" value="2">手动减</eq>
+                        	<eq name="$vo.type" value="3">赠送</eq>
+                    	</td>
 						<td>{$vo['remarks']}</td>
 						<td>{:date('Y-m-d H:i:s',$vo['addtime'])}</td>
 
