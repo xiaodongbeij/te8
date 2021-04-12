@@ -295,7 +295,7 @@ class UserProfitController extends AdminBaseController
             $end = strtotime($end);
             $map[] = ['uc.addtime','<=',$end];
         }else{
-            $end = strtotime('+1 day');
+            $end = strtotime(date('Y-m-d',strtotime('+1 day')));
             $map[] = ['uc.addtime','<=',$end];
         }
         dump($start);
