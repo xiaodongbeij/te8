@@ -287,12 +287,19 @@ class UserProfitController extends AdminBaseController
         if ($start){
             $start = strtotime($start);
             $map[] = ['uc.addtime','>=',$start];
+        }else{
+            $start = strtotime(date("Y-m-d"));
+            $map[] = ['uc.addtime','>=',$start];
         }
         if ($end){
             $end = strtotime($end);
             $map[] = ['uc.addtime','<=',$end];
+        }else{
+            $end = strtotime('+1 day');
+            $map[] = ['uc.addtime','<=',$end];
         }
-
+        dump($start);
+        dump($end);die;
         $list = Db::table('cmf_user')
             ->field('u.id,u.user_login,u.is_dai,u.invite_level')
             ->alias('u')
