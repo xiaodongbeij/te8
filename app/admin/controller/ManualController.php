@@ -181,6 +181,12 @@ class ManualController extends AdminbaseController {
 			->select()
             ->toArray();
 
+        $type_list = [
+            1 => '手动增',
+            2 => '手动减',
+            3 => '赠送',
+        ];    
+
 
         foreach ($xlsData as $k => $v){
 
@@ -189,17 +195,19 @@ class ManualController extends AdminbaseController {
             $xlsData[$k]['ip']=long2ip($v['ip']);
             $xlsData[$k]['user_nicename']= $userinfo['user_nicename'].'('.$v['touid'].')';
             $xlsData[$k]['addtime']=date("Y-m-d H:i:s",$v['addtime']); 
+            $xlsData[$k]['type'] = $type_list[$v['type']];
         }
         
         $action="导出手动充值记录：".Db::name("charge_admin")->getLastSql();
         setAdminLog($action);
-        $cellName = array('A','B','C','D','E','F','G');
+        $cellName = array('A','B','C','D','E','F','G','H');
         $xlsCell  = array(
             array('id','序号'),
             array('admin','管理员'),
             array('user_nicename','会员 (账号)(ID)'),
             array('coin','充值点数'),
             array('ip','IP'),
+            array('type','类型'),
             array('remarks','备注'),
             array('addtime','时间'),
         );
