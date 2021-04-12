@@ -24,8 +24,11 @@
                placeholder="用户id">
 
         日期：
-        <input class="form-control js-bootstrap-date" name="start" id="start" autocomplete="off" value="{:input('request.start')}" aria-invalid="false" style="width: 110px;">-
-        <input class="form-control js-bootstrap-date" name="end" id="end" autocomplete="off" value="{:input('request.end')}" aria-invalid="false" style="width: 110px;">
+<!--        <input class="form-control js-bootstrap-date" name="start" id="start" autocomplete="off" value="{:input('request.start')}" aria-invalid="false" style="width: 110px;">- -->
+<!--        <input class="form-control js-bootstrap-date" name="end" id="end" autocomplete="off" value="{:input('request.end')}" aria-invalid="false" style="width: 110px;">-->
+        <input class="form-control js-bootstrap-date" name="start" id="start" autocomplete="off" value="{$data.start}" aria-invalid="false" style="width: 110px;">-
+        <input class="form-control js-bootstrap-date" name="end" id="end" autocomplete="off" value="{$data.end}" aria-invalid="false" style="width: 110px;">
+
 
         <input id="submit" class="btn btn-primary" value="搜索"/>
         <a class="btn btn-danger" href="{:url('report/UserProfit/team_report')}">清空</a>

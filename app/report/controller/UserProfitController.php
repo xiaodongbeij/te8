@@ -170,6 +170,11 @@ class UserProfitController extends AdminBaseController
     //团队结算报表
     public function team_report()
     {
+        $date = [
+            'start' => date('Y-m-d'),
+            'end'   => date('Y-m-d',strtotime('+1 day'))
+        ];
+        $this->assign('date',$date);
         // 渲染模板输出
         return $this->fetch();
     }
@@ -202,9 +207,15 @@ class UserProfitController extends AdminBaseController
         if ($start){
             $start = strtotime($start);
             $map[] = ['uc.addtime','>=',$start];
+        }else{
+            $start = strtotime(date("Y-m-d"));
+            $map[] = ['uc.addtime','>=',$start];
         }
         if ($end){
             $end = strtotime($end);
+            $map[] = ['uc.addtime','<=',$end];
+        }else{
+            $end = strtotime(date('Y-m-d',strtotime('+1 day')));
             $map[] = ['uc.addtime','<=',$end];
         }
 //        dump($map);die;
@@ -298,8 +309,7 @@ class UserProfitController extends AdminBaseController
             $end = strtotime(date('Y-m-d',strtotime('+1 day')));
             $map[] = ['uc.addtime','<=',$end];
         }
-        dump($start);
-        dump($end);die;
+
         $list = Db::table('cmf_user')
             ->field('u.id,u.user_login,u.is_dai,u.invite_level')
             ->alias('u')
