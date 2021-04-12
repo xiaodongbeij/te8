@@ -237,6 +237,7 @@ class UserProfitController extends AdminBaseController
             ->alias('u')
             ->field('u.id,u.user_login,u.is_dai,u.invite_level,u.mobile')
             ->group('u.id')
+            ->order('u.id desc')
             ->where($where)
             ->paginate($limit,false,['page'=>$page])->items();
 //            ->paginate(20)->items();
