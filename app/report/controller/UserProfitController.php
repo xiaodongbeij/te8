@@ -234,11 +234,11 @@ class UserProfitController extends AdminBaseController
         $list = Db::table('cmf_user')
             ->alias('u')
             ->field('u.id,u.user_login,u.is_dai,u.invite_level,u.mobile')
-            ->group('u.id')
+            ->group('id')
             ->where($where)
             ->paginate($limit,false,['page'=>$page])->items();
 //            ->paginate(20)->items();
-        dump(Db::table('cmf_user')->getLastSql());die;
+//        dump(Db::table('cmf_user')->getLastSql());die;
 //        dump($list);die;
         foreach ($list as $k => $v){
             $temp = Db::table('cmf_user')->where('invite_level','like',$v['invite_level'].'%')->field('id')->select();
