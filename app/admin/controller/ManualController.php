@@ -195,7 +195,7 @@ class ManualController extends AdminbaseController {
             $xlsData[$k]['ip']=long2ip($v['ip']);
             $xlsData[$k]['user_nicename']= $userinfo['user_nicename'].'('.$v['touid'].')';
             $xlsData[$k]['addtime']=date("Y-m-d H:i:s",$v['addtime']); 
-            $xlsData[$k]['type'] = $type_list[$v['type']];
+            if(in_array($v['type'],[1,2,3])) $xlsData[$k]['type'] = $type_list[$v['type']];
         }
         
         $action="导出手动充值记录：".Db::name("charge_admin")->getLastSql();
