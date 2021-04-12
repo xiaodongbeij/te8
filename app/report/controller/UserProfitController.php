@@ -220,23 +220,23 @@ class UserProfitController extends AdminBaseController
             $start = strtotime($start);
             $map[] = ['uc.addtime','>=',$start];
         }
-//        else{
-//            $start = strtotime(date("Y-m-d"));
-//            $map[] = ['uc.addtime','>=',$start];
-//        }
+        else{
+            $start = strtotime(date("Y-m-d"));
+            $map[] = ['uc.addtime','>=',$start];
+        }
         if ($end){
             $end = strtotime($end);
             $map[] = ['uc.addtime','<=',$end];
         }
-//        else{
-//            $end = strtotime(date('Y-m-d',strtotime('+1 day')));
-//            $map[] = ['uc.addtime','<=',$end];
-//        }
+        else{
+            $end = strtotime(date('Y-m-d',strtotime('+1 day')));
+            $map[] = ['uc.addtime','<=',$end];
+        }
 //        dump($map);die;
         $list = Db::table('cmf_user')
             ->alias('u')
             ->field('u.id,u.user_login,u.is_dai,u.invite_level,u.mobile')
-            ->group('id')
+            ->group('u.id')
             ->where($where)
             ->paginate($limit,false,['page'=>$page])->items();
 //            ->paginate(20)->items();
