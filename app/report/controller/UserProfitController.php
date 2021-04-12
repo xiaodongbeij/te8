@@ -180,7 +180,7 @@ class UserProfitController extends AdminBaseController
             ->field('sum(if(uc.change_type=1,uc.change_money,0)) recharge')
             ->field('sum(if(uc.change_type=2,uc.change_money,0)) withdrawal')
             ->field('sum(if(uc.change_type=3&&uc.change_money>0,uc.change_money,0)) bonus')
-            ->field('sum(if(uc.change_type=7,uc.change_money,0)) rate')
+            ->field('sum(if(uc.change_type=7&&uc.platform=1,uc.change_money,0)) rate')
             ->field('sum(if(uc.change_type=3&&uc.change_money<0,uc.change_money,0)) xia')
             ->field('sum(if(uc.change_type=6,uc.change_money,0)) activity')
             ->field('sum(if(uc.change_type in (3,6,7),uc.change_money,0)) yin')
