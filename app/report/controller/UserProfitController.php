@@ -261,6 +261,7 @@ class UserProfitController extends AdminBaseController
                 ->field('sum(if(uc.change_type in (3,6,7),uc.change_money,0)) yin')
                 ->field('-1*sum(if(uc.change_type in (3,6,7),uc.change_money,0)) pin_yin')
                 ->find();
+            dump(Db::table('cmf_user_change')->getLastSql());die;
             $list[$k]['recharge'] = is_null($change['recharge']) ? '0.0000' : $change['recharge'];
             $list[$k]['withdrawal'] = is_null($change['withdrawal']) ? '0.0000' : $change['withdrawal'];
             $list[$k]['bonus'] = is_null($change['bonus']) ? '0.0000' : $change['bonus'];
