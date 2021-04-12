@@ -88,8 +88,9 @@ class ManualController extends AdminbaseController {
                 $this->error("会员不存在，请更正");
                 
             }
-            $type = $data['type'];
-            if (!in_array($type,[1,2,3])){
+
+            $type = isset($data['type']) ? $data['type']: '';
+            if ($type == '' || !in_array($type,[1,2,3])){
                 $this->error("类型错误");
             }
             unset($data['type']);
