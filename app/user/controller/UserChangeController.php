@@ -98,6 +98,7 @@ class UserChangeController extends AdminbaseController
             23 => '游戏存取',
             24 => '提现服务费',
             25 => '彩票下注撤销',
+            26 => '房间付费'
         ];
 
         $list->appends($data);
@@ -537,6 +538,7 @@ class UserChangeController extends AdminbaseController
             23 => '游戏存取',
             24 => '提现服务费',
             25 => '彩票下注撤销',
+            26 => '房间付费'
         ];
 
         $withdraw_type_list = [

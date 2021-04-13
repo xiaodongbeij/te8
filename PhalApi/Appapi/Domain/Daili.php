@@ -592,7 +592,7 @@ class Domain_Daili
         if ($platform == 1) {    //官方彩票
             $sql = "SELECT 
             sum(if(change_type=1,change_money,0)) recharge,
-            sum(if(change_type=2,change_money,0)) withdrawal,
+            sum(if(change_type=2&&status=4,change_money,0)) withdrawal,
             sum(if(change_type=3&&change_money>0,change_money,0)) zho,
             sum(if(change_type=3&&change_money<0,change_money,0)) tou,
             sum(if(change_type=7&&platform=1,change_money,0)) rate,
@@ -606,7 +606,7 @@ class Domain_Daili
         } elseif ($platform == 2) {    //天鹅直播
             $sql = "SELECT 
             sum(if(change_type=1,change_money,0)) recharge, 
-            sum(if(change_type=2,change_money,0)) withdrawal,
+            sum(if(change_type=2&&status=4,change_money,0)) withdrawal,
             sum(if(change_type=11,change_money,0)) reward,
             sum(if(change_type=7&&platform=2,change_money,0)) yin,
             sum(if(change_type=6,change_money,0)) discount,

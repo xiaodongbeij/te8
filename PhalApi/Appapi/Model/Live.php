@@ -319,7 +319,9 @@ class Model_Live extends PhalApi_Model_NotORM {
 			return 1007;
 		}
         
-        
+        //开启事务
+        DI()->notorm->beginTransaction('db_appapi');
+
         /* 更新用户余额 消费 */
 		$ifok=DI()->notorm->user
 				->where('id = ? and coin >= ?', $uid,$total)
@@ -340,7 +342,7 @@ class Model_Live extends PhalApi_Model_NotORM {
 		
 
 		/* 更新直播 映票 累计映票 */
-		DI()->notorm->user
+		$res1 = DI()->notorm->user
 				->where('id = ?', $liveuid)
 				->update( array('votes' => new NotORM_Literal("votes + {$total}"),'votestotal' => new NotORM_Literal("votestotal + {$total}") ));
         
@@ -356,11 +358,22 @@ class Model_Live extends PhalApi_Model_NotORM {
             'votes'=>$total,
             'addtime'=>time(),
         ];
-        DI()->notorm->user_voterecord->insert($insert_votes);
+        $res2 = DI()->notorm->user_voterecord->insert($insert_votes);
 
 		/* 更新直播 映票 累计映票 */
-		DI()->notorm->user_coinrecord
+		$res3 = DI()->notorm->user_coinrecord
 				->insert(array("type"=>'0',"action"=>$action,"uid"=>$uid,"touid"=>$liveuid,"giftid"=>$giftid,"giftcount"=>$giftcount,"totalcoin"=>$total,"showid"=>$showid,"addtime"=>$addtime ));	
+
+			        $res4 = user_change_action($uid,26,-1 * $total,'房间扣费',$liveuid,'',1,'','',2);
+
+
+		if ($ifok && $res1 && $res2 && $res3 && $res4 && $res4 != 2){
+            DI()->notorm->commit('db_appapi');
+            return ['code' => 0, 'msg' => '成功'];
+        }else{
+            DI()->notorm->rollback('db_appapi');
+            return ['code' => 1, 'msg' => '失败'];
+        }	
 				
 		$userinfo2=DI()->notorm->user
 					->select('coin')

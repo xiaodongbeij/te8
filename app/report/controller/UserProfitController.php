@@ -195,24 +195,21 @@ class UserProfitController extends AdminBaseController
     public function team_data(Request $request)
     {
         $data = input();
-//        dump($data);die;
+
         $limit = $data['limit'];
         $page = $data['page'];
-//        $limit = 10;
-//        $page = 1;
 
         $uid = isset($data['uid']) ? $data['uid']: '';
         if($uid != ''){
-//            $user = Db::name('user')->where('user_login', $uid)->find();
-//            $where[] = ['u.invite_level','like',$user['invite_level'].'%'];
+
             $where[] = ['u.id','=',$uid];
         }else{
-//            $where[] = ['u.invite_level','not like','%-%'];
+
             $where[] = ['u.parent_id','=',0];
             $where[] = ['u.iszombiep','=','0'];
             $where[] = ['u.iszombie','=','0'];
         }
-//        dump($where);die;
+
         $map = [];
         $start = isset($data['start']) ? $data['start']: '';
         $end = isset($data['end']) ? $data['end']: '';
@@ -232,7 +229,7 @@ class UserProfitController extends AdminBaseController
             $end = strtotime(date('Y-m-d',strtotime('+1 day')));
             $map[] = ['uc.addtime','<=',$end];
         }
-//        dump($map);die;
+
         $list = Db::table('cmf_user')
             ->alias('u')
             ->field('u.id,u.user_login,u.is_dai,u.invite_level,u.mobile')
@@ -240,9 +237,7 @@ class UserProfitController extends AdminBaseController
             ->order('u.id desc')
             ->where($where)
             ->paginate($limit,false,['page'=>$page])->items();
-//            ->paginate(20)->items();
-//        dump(Db::table('cmf_user')->getLastSql());die;
-//        dump($list);die;
+
         foreach ($list as $k => $v){
             $temp = Db::table('cmf_user')->where('invite_level','like',$v['invite_level'].'%')->field('id')->select();
             $ids=[];
@@ -298,7 +293,7 @@ class UserProfitController extends AdminBaseController
             'count' => $count,
             'data' => $list
         ];
-//        $return = $list;
+
         return json($return);
     }
 
