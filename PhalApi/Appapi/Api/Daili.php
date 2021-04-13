@@ -63,11 +63,12 @@ class Api_Daili extends PhalApi_Api
             ),
             'getReport' => array(
                 'uid' => array('name' => 'uid', 'type' => 'int', 'min' => 1, 'require' => true, 'desc' => '用户ID'),
+                'id' => array('name' => 'id', 'type' => 'int', 'min' => 1, 'require' => true, 'desc' => 'id,查询下级id,为空查询当前用户'),
                 'token' => array('name' => 'token', 'type' => 'string', 'min' => 1, 'require' => true, 'desc' => 'token'),
                 'user_login' => array('name' => 'user_login', 'type' => 'int','min' => 0, 'require' => false, 'desc' => '代理账号,为空显示当前账号团队统计'),
                 'platform' => array('name' => 'platform', 'type' => 'int','min' => 1, 'require' => true, 'desc' => '平台,1-官方彩票,2-天鹅直播,0016-开元棋牌'),
-                'start' => array('name' => 'start', 'type' => 'string', 'min' => 1, 'require' => true, 'desc' => '日期起始,例:2020-01-01'),
-                'end' => array('name' => 'end', 'type' => 'string', 'min' => 1, 'require' => true, 'desc' => '日期结束,例如:2020-01-02'),
+                'start' => array('name' => 'start', 'type' => 'string', 'require' => false, 'desc' => '日期起始,例:2020-01-01'),
+                'end' => array('name' => 'end', 'type' => 'string', 'require' => false, 'desc' => '日期结束,例如:2020-01-02'),
                 'page' => array('name' => 'page', 'type' => 'int', 'min' => 1, 'require' => true, 'desc' => '页数,1开始'),
                 'page_size' => array('name' => 'page_size', 'type' => 'int', 'min' => 1, 'require' => true, 'desc' => '每页条数'),
             ),
@@ -916,6 +917,7 @@ class Api_Daili extends PhalApi_Api
     {
         $domain = new Domain_Daili();
         $uid = $this->uid;
+        $id = $this->id;
         $user_login = $this->user_login;
         $start = $this->start;
         $end = $this->end;
@@ -929,7 +931,7 @@ class Api_Daili extends PhalApi_Api
 //            return $rs;
 //        }
 
-        $rs = $domain->getReport($uid,$user_login,$start,$end,$platform,$page,$page_size);
+        $rs = $domain->getReport($uid,$id,$user_login,$start,$end,$platform,$page,$page_size);
         return $rs;
     }
 

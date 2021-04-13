@@ -856,8 +856,19 @@ class Domain_Daili
 //        return $rs;
 //    }
 
-    public function getReport($uid, $user_login, $start, $end, $platform, $page, $page_size)
+    public function getReport($uid,$id, $user_login, $start, $end, $platform, $page, $page_size)
     {
+        if ($id){
+            $temp3 = DI()->notorm->user->where('id',$id)->fetchOne();
+            if (strpos($temp3['invite_level'],$uid) !== false){
+                //存在
+                $uid = $id;
+            }else{
+                $rs['code'] = 1001;
+                $rs['msg'] = '无法查询改用户';
+                return $rs;
+            }
+        }
         $info = DI()->notorm->user
             ->where('id', $uid)
             ->fetchOne();
@@ -866,13 +877,23 @@ class Domain_Daili
             $rs['msg'] = '信息错误';
             return $rs;
         }
-        $start = strtotime($start);
-        $end = strtotime($end);
-        if (!is_int($start) || !is_int($end)) {
-            $rs['code'] = 1001;
-            $rs['msg'] = '起始日期或结束日期错误';
-            return $rs;
+        if ($start){
+            $start = strtotime($start);
+        }else{
+            $start = 0;
         }
+        if ($end){
+            $end = strtotime($end);
+        }else{
+            $end = 9999999999;
+        }
+//        $start = strtotime($start);
+//        $end = strtotime($end);
+//        if (!is_int($start) || !is_int($end)) {
+//            $rs['code'] = 1001;
+//            $rs['msg'] = '起始日期或结束日期错误';
+//            return $rs;
+//        }
 //        echo 1;die;
         //查找所有下级
         $all = DI()->notorm->user
