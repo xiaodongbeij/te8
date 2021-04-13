@@ -8,7 +8,7 @@ return [
     // 错误显示信息,非调试模式有效
     'error_message'          => '页面错误！请稍后再试～',
     // 显示错误信息
-    'show_error_msg'         => false,
+    'show_error_msg'         => true,
     // 异常处理handle类 留空使用 \think\exception\Handle
     'exception_handle'       => '',
 
@@ -33,7 +33,7 @@ return [
         'key' => 'TWBLFK6KZ5',
     ],
     
-    'telegram' => 'https://api.telegram.org/bot1716954932:AAFFi_raD8um5WWp3HsDcWpBDwa1DUSK80w/sendMessage?chat_id=-1001244810191&text=',
+    'telegram' => 'https://api.telegram.org/bot1752695504:AAEJVk63AcW9qELBOCuZo076ZvTc64Bjmgk/sendMessage?chat_id=-1001244810191&text=',
 
     //返点平台
     'rate_plat' => [

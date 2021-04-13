@@ -180,8 +180,11 @@ class LiveController extends HomebaseController{
     {
         $day = date('Y-m-d H:i:s');
         $user_num = DB::name('user')->whereTime('create_time','today')->count();
-        $user_money = DB::name('order')->whereTime('addtime','today')->where('pay_status',1)->sum('pay_money');
-        $message = " 天鹅直播(截止当日时间)：\n $day \n 注册量: $user_num \n 充值量: $user_money 元";
+        $user_money = DB::name('user_change')->whereTime('addtime','today')->where('change_type',1)->sum('change_money');
+        $tx = DB::name('user_change')->whereTime('addtime','today')->where('change_type',2)->sum('change_money');
+        $tx = abs($tx);
+        $yh = DB::name('user_change')->whereTime('addtime','today')->where('change_type',6)->sum('change_money');
+        $message = " 天鹅直播(截止当日时间)：\n $day \n 注册量: $user_num \n 充值量: $user_money 元 \n 提现: $tx 元 \n 优惠赠送: $yh 元";
         $this->telegrams($message);
     }
 
