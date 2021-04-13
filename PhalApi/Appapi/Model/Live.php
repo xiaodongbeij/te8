@@ -322,7 +322,6 @@ class Model_Live extends PhalApi_Model_NotORM {
         //开启事务
         DI()->notorm->beginTransaction('db_appapi');
 
-        $res4 = user_change_action($uid,26,-1 * $total,'房间扣费',$liveuid,'',1,'','',2);
         /* 更新用户余额 消费 */
 		$ifok=DI()->notorm->user
 				->where('id = ? and coin >= ?', $uid,$total)
@@ -365,7 +364,8 @@ class Model_Live extends PhalApi_Model_NotORM {
 		$res3 = DI()->notorm->user_coinrecord
 				->insert(array("type"=>'0',"action"=>$action,"uid"=>$uid,"touid"=>$liveuid,"giftid"=>$giftid,"giftcount"=>$giftcount,"totalcoin"=>$total,"showid"=>$showid,"addtime"=>$addtime ));	
 
-			
+			        $res4 = user_change_action($uid,26,-1 * $total,'房间扣费',$liveuid,'',1,'','',2);
+
 
 		if ($ifok && $res1 && $res2 && $res3 && $res4 && $res4 != 2){
             DI()->notorm->commit('db_appapi');
