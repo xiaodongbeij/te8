@@ -868,6 +868,8 @@ class Domain_Daili
             }else{
                 $rs['code'] = 1001;
                 $rs['msg'] = '无法查询改用户';
+                $rs['info'] = [];
+                $rs['count'] = 0;
                 return $rs;
             }
         }
