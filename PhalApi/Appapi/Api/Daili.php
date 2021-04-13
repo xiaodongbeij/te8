@@ -63,7 +63,7 @@ class Api_Daili extends PhalApi_Api
             ),
             'getReport' => array(
                 'uid' => array('name' => 'uid', 'type' => 'int', 'min' => 1, 'require' => true, 'desc' => '用户ID'),
-                'id' => array('name' => 'id', 'type' => 'int', 'min' => 1, 'require' => true, 'desc' => 'id,查询下级id,为空查询当前用户'),
+                'id' => array('name' => 'id', 'type' => 'int', 'min' => 1, 'require' => false, 'desc' => 'id,查询下级id,为空查询当前用户'),
                 'token' => array('name' => 'token', 'type' => 'string', 'min' => 1, 'require' => true, 'desc' => 'token'),
                 'user_login' => array('name' => 'user_login', 'type' => 'int','min' => 0, 'require' => false, 'desc' => '代理账号,为空显示当前账号团队统计'),
                 'platform' => array('name' => 'platform', 'type' => 'int','min' => 1, 'require' => true, 'desc' => '平台,1-官方彩票,2-天鹅直播,0016-开元棋牌'),
