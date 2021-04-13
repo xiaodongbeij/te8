@@ -198,7 +198,7 @@ class Api_Daili extends PhalApi_Api
             $where .= " and status = 2";
         }
 
-        $sql = "select gt.user_id,gt.rate_name,u.user_nicename,gt.show_name,gt.expect,gt.money,gt.prize,gt.ok,FROM_UNIXTIME(gt.addtime, '%Y-%m-%d %H:%i:%s') addtime from cmf_game_ticket gt join cmf_user u on gt.user_id = u.id where $where order gt.expect limit $of,$page_size";
+        $sql = "select gt.user_id,gt.rate_name,u.user_nicename,gt.show_name,gt.expect,gt.money,gt.prize,gt.ok,FROM_UNIXTIME(gt.addtime, '%Y-%m-%d %H:%i:%s') addtime from cmf_game_ticket gt join cmf_user u on gt.user_id = u.id where $where order gt.expect desc limit $of,$page_size";
         $list = DI()->notorm->game_ticket->queryAll($sql);
 
         $rs['code'] = 0;
