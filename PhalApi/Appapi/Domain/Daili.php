@@ -861,7 +861,7 @@ class Domain_Daili
         if ($id){
             $temp3 = DI()->notorm->user->where('id',$id)->fetchOne();
             var_dump($uid);
-            var_dump($id);die;
+            var_dump($temp3['invite_level']);die;
             if (strpos($temp3['invite_level'],$uid) !== false){
                 //存在
                 $uid = $id;
