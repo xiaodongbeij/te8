@@ -913,7 +913,7 @@ class Domain_Daili
         //查找一级代理或指定用户
         $where = "parent_id = $uid";
         if ($user_login) {
-            $where = "user_login = $user_login";
+            $where = "id = $user_login";
         }
         $list = DI()->notorm->user
             ->where($where)
