@@ -245,7 +245,7 @@ class Api_Daili extends PhalApi_Api
         $page = $this->page;
         $page_size = $this->page_size;
         $of = ($page-1) * $page_size;
-        echo 2;die;
+        
         if ($type == 1){
             $field1 = 'money';
             $field2 = 'bet_amount';
