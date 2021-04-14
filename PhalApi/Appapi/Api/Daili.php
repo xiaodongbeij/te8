@@ -535,7 +535,18 @@ class Api_Daili extends PhalApi_Api
             $where .= " and uc.addtime <= ".strtotime($end);
         }
         if ($id){
-            $where .= " and uc.user_id = $id";
+            $temp3 = DI()->notorm->user->where('id',$id)->fetchOne();
+//            var_dump($uid);
+//            var_dump($temp3['invite_level']);die;
+            if (strpos($temp3['invite_level'],$uid.'') !== false){
+                //存在
+                $where .= " and uc.user_id = $id";
+            }else{
+                $rs['code'] = 1001;
+                $rs['msg'] = '无法查询改用户';
+                $rs['info'] = [];
+                return $rs;
+            }
         }else{
             if ($cate == 1){
                 $where .= " and uc.user_id = $uid";
