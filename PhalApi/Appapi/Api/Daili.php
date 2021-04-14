@@ -687,7 +687,7 @@ class Api_Daili extends PhalApi_Api
         if(!$today_profit) $today_profit = 0;
         $sum_profit = DI()->notorm->user_change->where('change_type = ? and user_id = ?', 7, $uid)->sum('change_money');
         if(!$sum_profit) $sum_profit = 0;
-        $key = 'fh' . $user_info['invite_code'];
+        $key = 'fh01' . $user_info['invite_code'];
         $con = getConfigPub();
         $url = $con['app_android'] . '?invite=';
     
