@@ -324,9 +324,9 @@ class Api_Daili extends PhalApi_Api
                 ->order('id desc')
                 ->limit(($page-1) * $page_size,$page_size)
                 ->fetchAll();
-            foreach ($list as $k => $v){
-                $list[$k]['game_name'] = "官方彩票";
-            }
+//            foreach ($list as $k => $v){
+//                $list[$k]['game_name'] = "官方彩票";
+//            }
         }else{
             $where .= " platform_code = $plat";
             if ($start){
