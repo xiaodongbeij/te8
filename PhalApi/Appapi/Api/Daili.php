@@ -320,13 +320,13 @@ class Api_Daili extends PhalApi_Api
 //            var_dump($where);die;
             $list = DI()->notorm->game_ticket
                 ->where("$where")
-                ->select("user_id,money,FROM_UNIXTIME(addtime, '%Y-%m-%d %H:%i:%s') addtime,prize")
+                ->select("user_id,money,FROM_UNIXTIME(addtime, '%Y-%m-%d %H:%i:%s') addtime,prize,show_name game_name")
                 ->order('id desc')
                 ->limit(($page-1) * $page_size,$page_size)
                 ->fetchAll();
-            foreach ($list as $k => $v){
-                $list[$k]['game_name'] = "官方彩票";
-            }
+//            foreach ($list as $k => $v){
+//                $list[$k]['game_name'] = "官方彩票";
+//            }
         }else{
             $where .= " platform_code = $plat";
             if ($start){
