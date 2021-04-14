@@ -309,6 +309,12 @@ class Api_Daili extends PhalApi_Api
                         $where .= " and user_id = $uid";
                 }else{
                     $ids = DI()->notorm->user->where('id <> ?',$uid)->where('invite_level like ?',$user['invite_level'].'%')->select('id')->fetchAll();
+                    if (!$ids){
+                        $rs['code'] = 1001;
+                        $rs['msg'] = '暂无数据';
+                        $rs['info'] = [];
+                        return $rs;
+                    }
                     $str = "";
                     foreach ($ids as $v){
                         $str .= $v['id'].',';
@@ -356,6 +362,12 @@ class Api_Daili extends PhalApi_Api
                     $where .= " and user_login = $uid";
                 }else{
                     $ids = DI()->notorm->user->where('id <> ?',$uid)->where('invite_level like ?',$user['invite_level'].'%')->select('id')->fetchAll();
+                    if (!$ids){
+                        $rs['code'] = 1001;
+                        $rs['msg'] = '暂无数据';
+                        $rs['info'] = [];
+                        return $rs;
+                    }
                     $str = "";
                     foreach ($ids as $v){
                         $str .= $v['id'].',';
