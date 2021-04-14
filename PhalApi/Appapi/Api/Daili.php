@@ -320,8 +320,6 @@ class Api_Daili extends PhalApi_Api
                         $str .= $v['id'].',';
                     }
                     $str = substr($str,0,-1);
-                    var_dump($ids);
-                    var_dump($str);die;
                     $where .= " and user_id in ($str)";
                 }
             }
