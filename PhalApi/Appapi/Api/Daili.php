@@ -556,7 +556,7 @@ class Api_Daili extends PhalApi_Api
 //            ->limit(($page-1) * $page_size,$page_size)
 //            ->fetchAll();
         $sql = "select uc.user_id,u.user_nicename,uc.change_money,uc.next_money,uc.status,FROM_UNIXTIME(uc.addtime, '%Y-%m-%d %H:%i:%s') addtime from cmf_user_change uc join cmf_user u on uc.user_id = u.id where $where order by uc.id desc limit $of,$page_size";
-//        var_dump($sql);die;
+        var_dump($sql);die;
         $list = DI()->notorm->user_change->queryAll($sql);
 
         foreach ($list as $k => $v){
