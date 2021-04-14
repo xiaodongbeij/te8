@@ -918,6 +918,7 @@ class Domain_Daili
         $list = DI()->notorm->user
             ->where($where)
             ->select('id,user_login,invite_level,is_dai,create_time')
+            ->order('id desc')
             ->limit(($page - 1) * $page_size, $page_size)
             ->fetchAll();
         if (!$list) {
