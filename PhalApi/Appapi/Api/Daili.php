@@ -183,7 +183,18 @@ class Api_Daili extends PhalApi_Api
             $where .= " and addtime <= ".strtotime($end);
         }
         if ($id){
-            $where .= " and user_id = $id";
+            $temp3 = DI()->notorm->user->where('id',$id)->fetchOne();
+//            var_dump($uid);
+//            var_dump($temp3['invite_level']);die;
+            if (strpos($temp3['invite_level'],$uid.'') !== false){
+                //存在
+                $where .= " and user_id = $id";
+            }else{
+                $rs['code'] = 1001;
+                $rs['msg'] = '无法查询改用户';
+                $rs['info'] = [];
+                return $rs;
+            }
         }
         if ($type){
             $where .= " and short_name = '$type'";
@@ -281,10 +292,21 @@ class Api_Daili extends PhalApi_Api
                 $where .= " and prize > 0";
             }
             if ($id){
-                $where .= " and user_id = $id";
+                $temp3 = DI()->notorm->user->where('id',$id)->fetchOne();
+//            var_dump($uid);
+//            var_dump($temp3['invite_level']);die;
+                if (strpos($temp3['invite_level'],$uid.'') !== false){
+                    //存在
+                    $where .= " and user_id = $id";
+                }else{
+                    $rs['code'] = 1001;
+                    $rs['msg'] = '无法查询改用户';
+                    $rs['info'] = [];
+                    return $rs;
+                }
             }else{
                 if ($cate == 1){
-                    $where .= " and user_id = $uid";
+                        $where .= " and user_id = $uid";
                 }else{
                     $ids = DI()->notorm->user->where('id <> ?',$uid)->where('invite_level like ?',$user['invite_level'].'%')->select('id')->fetchAll();
                     $str = "";
@@ -317,7 +339,18 @@ class Api_Daili extends PhalApi_Api
                 $where .= " and pay_off > 0";
             }
             if ($id){
-                $where .= " and user_login = $id";
+                $temp3 = DI()->notorm->user->where('id',$id)->fetchOne();
+//            var_dump($uid);
+//            var_dump($temp3['invite_level']);die;
+                if (strpos($temp3['invite_level'],$uid.'') !== false){
+                    //存在
+                    $where .= " and user_login = $id";
+                }else{
+                    $rs['code'] = 1001;
+                    $rs['msg'] = '无法查询改用户';
+                    $rs['info'] = [];
+                    return $rs;
+                }
             }else{
                 if ($cate == 1){
                     $where .= " and user_login = $uid";
