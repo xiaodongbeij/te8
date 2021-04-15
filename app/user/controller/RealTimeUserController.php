@@ -10,6 +10,13 @@
 // +----------------------------------------------------------------------
 
 namespace app\user\controller;
+use app\game\model\GameCate;
+use app\user\model\User;
+use app\user\model\UserRate;
+use cmf\controller\AdminBaseController;
+use think\Db;
+use think\Request;
+
 
 class RealTimeUserController extends AdminBaseController{
 
@@ -25,7 +32,7 @@ class RealTimeUserController extends AdminBaseController{
         $map=[];
         $map[]=['user_type','=',2];
         $map[]=['id','in',[181169,181171,181172,181173,181174,186285,186286,186287,186288,186289,186290,186291]];
-                
+
         $list = Db::name("user")
             ->where($map)
             ->where('iszombiep',0)
