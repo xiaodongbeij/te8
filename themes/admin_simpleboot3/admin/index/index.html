@@ -215,6 +215,11 @@
                     </a>
                 </li>
                 <li class="light-blue" style="border-left:none;">
+                    <a href="javacript:void(0);" title="{:lang('REFRESH_CURRENT_PAGE')}" style="color:#fff;font-size: 16px">
+                        在线人数: <span id="online">0</span>
+                    </a>
+                </li>
+                <li class="light-blue" style="border-left:none;">
                     <a id="refresh-wrapper" href="javacript:void(0);" title="{:lang('REFRESH_CURRENT_PAGE')}" style="color:#fff;font-size: 16px">
                         <i class="fa fa-refresh right_tool_icon"></i>
                     </a>
@@ -223,10 +228,10 @@
                     <a data-toggle="dropdown" href="#" class="dropdown-toggle">
                         <if condition="isset($admin['avatar']) && $admin['avatar']">
                             <img class="nav-user-photo" width="30" height="30"
-                                 src="{:cmf_get_user_avatar_url($admin['avatar'])}" alt="{$admin.user_login}">
+                                 src="{$admin['avatar']}" alt="{$admin.user_login}">
                             <else/>
                             <img class="nav-user-photo" width="30" height="30"
-                                 src="__TMPL__/public/assets/images/logo-18.png" alt="{$admin.user_login|default=''}">
+                                 src="{$admin['avatar']}" alt="{$admin.user_login|default=''}">
                         </if>
                         <span class="user-info">
 								{:lang('WELCOME_USER',array('user_nicename' => empty($admin['user_nicename'] )? $admin['user_login'] : $admin['user_nicename']))}
@@ -428,7 +433,20 @@
         $(closest_a_next).slideToggle(150).parent().toggleClass("open");
         return false;
     });
-
+    
+  
+    $.get('/appapi/Online/onlineNumber',function(res){
+        console.log("开始获取在线人数");
+        $("#online").html(res.num)
+    })
+   
+    setInterval(function()
+    {
+        $.get('/appapi/Online/onlineNumber',function(res){
+            console.log("开始获取在线人数");
+            $("#online").html(res.num)
+        })
+    },30000)
 
 
 </script>
