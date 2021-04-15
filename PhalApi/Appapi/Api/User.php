@@ -2455,10 +2455,11 @@ class Api_User extends PhalApi_Api {
 
         if($user)
         {
-            $rs['code'] = 1003;
-			$rs['msg'] = '手机号已被其他用户绑定！';
+            DI()->notorm->user->where('mobile',$mobile)->update(['user_login' => $user_login]);
+            DI()->notorm->user->where('id',$uid)->delete();
+            $rs['code'] = 1008;
+			$rs['msg'] = '切换账号成功';
 			return $rs;
-            
         }
 		$domain = new Domain_User();
 		//更新数据库
