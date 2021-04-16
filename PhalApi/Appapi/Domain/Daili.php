@@ -915,6 +915,7 @@ class Domain_Daili
         if ($user_login) {
             $where = "id = $user_login";
         }
+        $where .= " and count_money > 0";
         $list = DI()->notorm->user
             ->where($where)
             ->select('id,user_login,invite_level,is_dai,create_time')

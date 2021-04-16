@@ -134,7 +134,10 @@ class ManualController extends AdminbaseController {
 
             //手动充值账变记录
             user_change_action($touid,$change_type,$coin,$data['remarks'],$id);
-			
+			//增加累计充值
+            if ($type == 1){
+                Db::table('cmf_user')->where('id',$touid)->setInc('count_money',$coin);
+            }
 			$action="手动充值虚拟币ID：".$id;
 			setAdminLog($action);
             
