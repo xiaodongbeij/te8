@@ -801,6 +801,11 @@ class AdminIndexController extends AdminBaseController{
             $user_id = $data['id'];
             $is_dai = $data['is_dai'];
             $user = Db::name('user')->where('id', $user_id)->find();
+            foreach ($data['rate'] as $v){
+                if ($v >= 10){
+                    $this->error('返点不能超过10%');
+                }
+            }
             if($is_dai != 1)
             {
                 $this->error("代理必须设置为是");
