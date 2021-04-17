@@ -43,9 +43,9 @@ function setcaches($key,$info,$time=0){
 function getcache($key){
     $config=getConfigPri();
     $isexist=$GLOBALS['redisdb']->Get($key);
-    if($config['cache_switch']!=1){
-        $isexist=false;
-    }
+    // if($config['cache_switch']!=1){
+    //     $isexist=false;
+    // }
     return json_decode($isexist,true);
 }	
 	

@@ -17,8 +17,11 @@ class OnlineController extends HomebaseController{
         if(empty($id)) return json(['code' => 1, 'msg' => '参数错误']);
         $user = Db::name('user')->where('id', $id)->find();
         if(empty($user)) return json(['code' => 1, 'msg' => '用户信息不存在']);
-        $tt = time();
-        setcaches('onlineo:' . $id, 1,$time);
+        if(!getcache('onlineo:' . $id))
+        {
+            Db::name('user')->where('id', $id)->update(['last_login_time' => time()]);
+        }
+        setcaches('onlineo:' . $id, $id,$time);
         return json(['code' => 0, 'msg' => '成功']);
     }
     

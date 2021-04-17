@@ -23,47 +23,54 @@ class RealTimeUserController extends AdminBaseController{
     public function index(){
 
         $content = hook_one('user_admin_index_view');
-
+        
         if (!empty($content)) {
             return $content;
         }
+        $redis = $GLOBALS['redisdb'];
+        $data = input();
         
-        $data = $this->request->param();
         $map=[];
         $map[]=['user_type','=',2];
         
-        
-        $redis = $GLOBALS['redisdb'];
-        $key = $redis->keys('onlineo:*');
-
-        $ids = [];
-       
-        foreach ($key as $v)
+        if(!empty($data['uid']))
         {
-            $id = explode(':', $v);
-            $ids[] = $id[1];
-  
-        
+            $id = getcache('onlineo:' . $data['uid']);
+    
+            if($id)
+            {
+                $map[] = ['id', '=', $id];
+            }
+            
+        }else{
+            
+            $key = $redis->keys('onlineo:*');
+           
+            $ids = [];
+            
+            foreach ($key as $v)
+            {
+                $id = explode(':', $v);
+                if(!empty($id[1]))
+                {
+                    $ids[] = $id[1];
+                }
+            }
+    
+            $map[]=['id','in',$ids];
         }
-
-        $map[]=['id','in',$ids];
+        
 
         $list = Db::name("user")
             ->where($map)
             ->where('iszombiep',0)
-			->order("id desc")
+			->order("last_login_time desc")
 			->paginate(20);
 			
-        
+        $num = $list->total();
         $list->each(function($v,$k){
-			
-            $v['code']=Db::name("agent_code")->where("uid = {$v['id']}")->value('code');
-            $v['user_login']=m_s($v['user_login']);
-            $v['mobile']=m_s($v['mobile']);
-//            $v['user_email']=m_s($v['user_email']);
-            
             $v['avatar']=get_upload_path($v['avatar']);
-            
+            $v['last_login_time']= date('Y-m-d H:i:s', $v['last_login_time']);
             return $v;           
         });
         
@@ -71,6 +78,7 @@ class RealTimeUserController extends AdminBaseController{
         // 获取分页显示
         $page = $list->render();
         $this->assign('list', $list);
+        $this->assign('num', $num);
         $this->assign('page', $page);
         // 渲染模板输出
         return $this->fetch();

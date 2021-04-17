@@ -17,8 +17,22 @@
 <div class="wrap js-check-wrap">
     <ul class="nav nav-tabs">
         <li class="active"><a>实时在线</a></li>
-        <!-- <li><a href="{:url('adminIndex/add')}">{:lang('ADD')}</a></li> -->
+         <!--<li><a href="{:url('adminIndex/add')}">{:lang('ADD')}</a></li> -->
     </ul>
+    
+    <form class="well form-inline margin-top-20" name="form1" method="post" action="{:url('user/real_time_user/index')}">
+      用户：
+        <input class="form-control" type="text" name="uid" style="width: 200px;" value="{:input('request.uid')}"
+               placeholder="请输入用户ID">
+
+
+        <input type="submit" class="btn btn-primary" value="搜索"/>
+        <a class="btn btn-danger" href="{:url('user/real_time_user/index')}">清空</a>
+
+        <br>
+        <br>
+        用户数：{$num}  (根据条件统计)
+    </form>
     
     <form method="post" class="js-ajax-form">
         <!--<div class="table-actions">-->
@@ -34,6 +48,7 @@
         <!--    <button class="btn btn-danger btn-sm js-ajax-submit" type="submit" data-action="{:url('user/adminIndex/setzombieall',array('iszombie'=>0))}" data-msg="您确定要进行此操作吗？">一键关闭僵尸粉-->
         <!--    </button>-->
         <!--</div>-->
+        
         <table class="table table-hover table-bordered">
             <thead>
             <tr>
@@ -43,7 +58,7 @@
                 <th>{:lang('NICENAME')}</th>
                 <th>{:lang('AVATAR')}</th>
                 <th>设备</th>
-                <!-- th>{:lang('ACTIONS')}</th> -->
+                <th>登录时间</th> 
             </tr>
             </thead>
             <tbody>
@@ -54,12 +69,12 @@
                 <tr>
                    
                     <td>{$vo.id}</td>
-                    <!--<td>{$vo['user_login']?$vo['user_login']:($vo['mobile']?$vo['mobile']:lang('THIRD_PARTY_USER'))}-->
+
                     </td>
                     <td>{$vo['user_nicename']?$vo['user_nicename']:lang('NOT_FILLED')}</td>
                     <td><img src="{$vo['avatar']}" class="imgtip" /></td>
                     <td>{$vo.source}</td>
-
+                    <td>{$vo.last_login_time}</td>
                         
                     </td>
                 </tr>
@@ -70,186 +85,15 @@
     </form>
 </div>
 
-<div id="pop">
-    <div class="wrap" style="padding-bottom:40px;">
-        <form method="post" class="form-horizontal margin-top-20">
-            <div class="form-group">
-                <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>禁用截止日期</label>
-                <div class="col-md-6 col-sm-10">
-                    <input class="form-control js-bootstrap-date" name="ban_long" contenteditable="off" id="ban_long" value="" aria-invalid="false">
-                </div>
-            </div>
-            
-            <div class="form-group">
-                <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>禁用原因</label>
-                <div class="col-md-6 col-sm-10">
-                    <textarea class="form-control" id="ban_reason" name="ban_reason" placeholder="200字以内"></textarea> 
-                </div>
-            </div>
-            
-            <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                    <a href="javascript:void(0)" class="btn btn-primary" onclick="xiajia_submit()">禁用</a>
-                </div>
-            </div>
-        </form>
-    </div>
-</div>
 
-<div id="ret">
-    <div class="wrap" style="padding-bottom:40px;">
-        <form method="post" class="form-horizontal margin-top-20">
-            <div class="form-group">
-                <label for="input-kou" class="col-sm-2 control-label"><span class="form-required">*</span>口令</label>
-                <div class="col-md-6 col-sm-10">
-                    <input type="text" class="form-control" id="input-kou" name="kou">
-                </div>
-            </div>
-
-            <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                    <a href="javascript:void(0)" class="btn btn-primary" onclick="ret_submit()">重置</a>
-                </div>
-            </div>
-        </form>
-    </div>
-</div>
             
 <script src="__STATIC__/js/admin.js"></script>
 <script src="__STATIC__/js/laydate/laydate.js"></script>
 <script>
-        Wind.use('layer');
-		var clickuid='0';
-		function showlayer(id){
-			clickuid=id;
-            layer.open({
-                type: 1,
-                title: '禁用',
-                shadeClose: true,
-                shade: 0.8,
-                area: ['800px', '300px'],
-                content: $('#pop'),
-                success:function(){
-                    laydate.render({
-                        elem: '#ban_long',//指定元素
-                        trigger: 'click'
-                    });
-                }
-            }); 
-		}
-
-        function showret(id){
-            clickuid=id;
-            layer.open({
-                type: 1,
-                title: '重置资金密码',
-                shadeClose: true,
-                shade: 0.8,
-                area: ['800px', '300px'],
-                content: $('#ret'),
-                success:function(){
-                    laydate.render({
-                        elem: '#kou',//指定元素
-                        trigger: 'click'
-                    });
-                }
-            });
-        }
-        
-        
-        
-        function deleGameAccount(id)
-        {
-            $.get("{:url('user/adminIndex/delGameAccount')}?id="+ id,function(){
-                layer.msg("重置成功");
-            })
-        }
-        
-        
-
-        function ret_submit(){
-		    var kou = $('#input-kou').val();
-            if(kou==''){
-                layer.msg("口令不能为空");
-                return;
-            }
-            $.ajax({
-                url: '{:url('user/adminIndex/re_money_pass')}',
-                type: 'POST',
-                dataType: 'json',
-                data: {id:clickuid,kou: kou},
-            success:function(data){
-                var code=data.code;
-                if(code==0){
-                    layer.msg(data.msg);
-                    return !1;
-                }
-
-                layer.msg("操作成功",{},function(){
-                    //layer.closeAll();
-                    clickuid=0;
-                    $("#input-kou").val("");
-                    layer.closeAll();
-                    reloadPage(window);
-                });
-            },
-            error:function(e){
-            }
-        });
-        }
-		
-		var xiajia_status=0;
-		function xiajia_submit(){
-			var ban_long=$("#ban_long").val();
-			var reason=$("#ban_reason").val();
-
-            if(ban_long==''){
-                layer.msg("请选择禁用截止日期");
-                return;
-            }
-
-            if(reason==''){
-                layer.msg("请填写禁用原因");
-                return;
-            }
-
-            if(reason.length>200){
-                layer.msg("禁用原因必须在200字以内");
-                return;
-            }
-
-			if(xiajia_status==1){
-				return;
-			}
-			xiajia_status=1;
-			$.ajax({
-				url: '{:url('user/adminIndex/setBan')}',
-				type: 'POST',
-				dataType: 'json',
-				data: {id:clickuid,reason: reason,ban_long:ban_long},
-				success:function(data){
-					var code=data.code;
-					if(code==0){
-						layer.msg(data.msg);
-						return !1;
-					}
-
-					xiajia_status=0;
-					
-					layer.msg("操作成功",{},function(){
-						//layer.closeAll();
-                        clickuid=0;
-						$("#ban_long").val("");
-						$("#ban_reason").attr("value","");
-						layer.closeAll();
-                        reloadPage(window);
-					});
-				},
-				error:function(e){
-				}
-			});
-			
-		}
+    setInterval(function()
+    {
+        location.reload();
+    },30000)
 </script>
 </body>
 </html>
