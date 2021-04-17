@@ -31,7 +31,22 @@ class RealTimeUserController extends AdminBaseController{
         $data = $this->request->param();
         $map=[];
         $map[]=['user_type','=',2];
-        $map[]=['id','in',[181169,181171,181172,181173,181174,186285,186286,186287,186288,186289,186290,186291]];
+        
+        
+        $redis = $GLOBALS['redisdb'];
+        $key = $redis->keys('onlineo:*');
+
+        $ids = [];
+       
+        foreach ($key as $v)
+        {
+            $id = explode(':', $v);
+            $ids[] = $id[1];
+  
+        
+        }
+
+        $map[]=['id','in',$ids];
 
         $list = Db::name("user")
             ->where($map)
