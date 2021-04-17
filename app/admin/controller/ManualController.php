@@ -142,13 +142,19 @@ class ManualController extends AdminbaseController {
 //            setAdminLog($action);
 //            $this->success("充值成功！");
 
+//            Db::transaction(function ($data,) {
+//                //手动充值账变记录
+//                $id = DB::name('charge_admin')->insertGetId($data);
+//                $res = user_change_action($touid,$change_type,$coin,$data['remarks'],$id);
+//            });
+
             //开启事务
             Db::startTrans();
 
                 //手动充值账变记录
                 $id = DB::name('charge_admin')->insertGetId($data);
                 $res = user_change_action($touid,$change_type,$coin,$data['remarks'],$id);
-                if ($id && $res){
+                if (false && $res){
                     Db::commit();
                     if ($type == 1){
                     Db::table('cmf_user')->where('id',$touid)->setInc('count_money',$coin);
