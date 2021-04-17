@@ -184,7 +184,11 @@ class LiveController extends HomebaseController{
         $tx = DB::name('user_change')->whereTime('addtime','today')->where('change_type',2)->sum('change_money');
         $tx = abs($tx);
         $yh = DB::name('user_change')->whereTime('addtime','today')->where('change_type',6)->sum('change_money');
-        $message = " 天鹅直播(截止当日时间)：\n $day \n 注册量: $user_num \n 充值量: $user_money 元 \n 提现: $tx 元 \n 优惠赠送: $yh 元";
+        $redis = $GLOBALS['redisdb'];
+        $key = $redis->keys('online:*');
+        $num = count($key);
+        $message = " 天鹅直播(截止当日时间)：\n $day \n 在线人数: $num \n 注册量: $user_num \n 充值量: $user_money 元 \n 提现: $tx 元 \n 优惠赠送: $yh 元";
+
         $this->telegrams($message);
     }
 
