@@ -117,13 +117,10 @@ class ManualController extends AdminbaseController {
             $data['ip']=ip2long($ip);
             
             $data['addtime']=time();
-            
-			$id = DB::name('charge_admin')->insertGetId($data);
 
-
-            if(!$id){
-                $this->error("充值失败！");
-            }
+//            if(!$id){
+//                $this->error("充值失败！");
+//            }
 
             $change_type = 1;
             if ($type == 2){
@@ -132,17 +129,31 @@ class ManualController extends AdminbaseController {
                 $change_type = 6;
             }
 
-            //手动充值账变记录
-            user_change_action($touid,$change_type,$coin,$data['remarks'],$id);
-			//增加累计充值
-            if ($type == 1){
-                Db::table('cmf_user')->where('id',$touid)->setInc('count_money',$coin);
+            //开启事务
+            Db::startTrans();
+            try {
+                //手动充值账变记录
+                $id = DB::name('charge_admin')->insertGetId($data);
+                $res = user_change_action($touid,$change_type,$coin,$data['remarks'],$id);
+                if ($id && $res){
+                    Db::commit();
+                    //增加累计充值
+                    if ($type == 1){
+                        Db::table('cmf_user')->where('id',$touid)->setInc('count_money',$coin);
+                    }
+                    $action="手动充值虚拟币ID：".$id;
+                    setAdminLog($action);
+                    $this->success("充值成功！");
+                }else{
+                    Db::rollback();
+                    $this->error("充值失败！");
+                }
+
+            }catch (\Exception $e) {
+                Db::rollback();
+                $this->error("充值失败！");
             }
-			$action="手动充值虚拟币ID：".$id;
-			setAdminLog($action);
-            
-//            Db::name("user")->where(["id"=>$touid])->setInc("coin",$coin);
-            $this->success("充值成功！");
+
             
 		}
 	}
