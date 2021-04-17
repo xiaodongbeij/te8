@@ -135,12 +135,7 @@ class ManualController extends AdminbaseController {
                 //手动充值账变记录
                 $id = DB::name('charge_admin')->insertGetId($data);
                 $res = user_change_action($touid,$change_type,$coin,$data['remarks'],$id);
-                dump($id);
-                dump($res);
                 if ($id && $res){
-                    echo 1;
-                    Db::commit();
-                    echo 2;die;
                     //增加累计充值
                     if ($type == 1){
                         Db::table('cmf_user')->where('id',$touid)->setInc('count_money',$coin);
