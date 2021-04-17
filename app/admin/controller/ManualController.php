@@ -154,6 +154,7 @@ class ManualController extends AdminbaseController {
                 //手动充值账变记录
                 $id = DB::name('charge_admin')->insertGetId($data);
                 $res = user_change_action($touid,$change_type,$coin,$data['remarks'],$id);
+                $id = 0;
                 if ($id && $res){
                     Db::commit();
                     if ($type == 1){
