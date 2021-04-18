@@ -102,6 +102,7 @@ class GameController extends HomebaseController
             ];
             $insert[] = $temp;
         }
+        var_dump($insert);die;
         $res = Db::table('cmf_game_record')->limit(100)->insertAll($insert,true);
         var_dump($res);
     }
@@ -160,7 +161,7 @@ class GameController extends HomebaseController
                 $insert[] = $temp;
             }
         }
-        dump($insert);die;
+//        dump($insert);die;
         $res = Db::table('cmf_game_record')->limit(100)->insertAll($insert,true);
         var_dump($res);
     }
