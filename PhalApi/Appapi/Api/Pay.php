@@ -52,6 +52,7 @@ class Api_Pay extends PhalApi_Api
             $v['src'] = get_upload_path($v['src']);
             $v['list'] = pay($info['level'],$v['id']);
         }
+        // var_dump($list);die;
         $rs['info'] = $list;
         return $rs;
     }

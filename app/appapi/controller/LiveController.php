@@ -185,7 +185,7 @@ class LiveController extends HomebaseController{
         $tx = abs($tx);
         $yh = DB::name('user_change')->whereTime('addtime','today')->where('change_type',6)->sum('change_money');
         $redis = $GLOBALS['redisdb'];
-        $key = $redis->keys('online:*');
+        $key = $redis->keys('onlineo:*');
         $num = count($key);
         $message = " 天鹅直播(截止当日时间)：\n $day \n 在线人数: $num \n 注册量: $user_num \n 充值量: $user_money 元 \n 提现: $tx 元 \n 优惠赠送: $yh 元";
 

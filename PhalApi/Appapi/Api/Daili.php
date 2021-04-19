@@ -699,17 +699,17 @@ class Api_Daili extends PhalApi_Api
         if(!$today_profit) $today_profit = 0;
         $sum_profit = DI()->notorm->user_change->where('change_type = ? and user_id = ?', 7, $uid)->sum('change_money');
         if(!$sum_profit) $sum_profit = 0;
-        $key = 'fh01' . $user_info['invite_code'];
+     
         $con = getConfigPub();
-        $url = $con['app_android'] . '?invite=';
+        $url = $con['app_android'] . '?invite=' . $user_info['invite_code'];
     
-        if(!$u = DI()->redis->get($key))
-        {
-            $u = @file_get_contents('http://rrgysc.com/api/v1/url/short/create/1100a8f0d7ff90ec9a1c9dcda8b92d51?format=txt&type=default&url=' . $url . $user_info['invite_code']);
-            DI()->redis->set($key, $u);
+        // if(!$u = DI()->redis->get($key))
+        // {
+        //     $u = @file_get_contents('http://rrgysc.com/api/v1/url/short/create/1100a8f0d7ff90ec9a1c9dcda8b92d51?format=txt&type=default&url=' . $url . $user_info['invite_code']);
+        //     DI()->redis->set($key, $u);
             
-        }
-        $info['share_url'] = $u;
+        // }
+        $info['share_url'] = $url;
         $info['invite_code'] = $user_info['invite_code'];
         $info['sum_user_count'] = $users_count;
         $info['today_user_count'] = $today_user_count;

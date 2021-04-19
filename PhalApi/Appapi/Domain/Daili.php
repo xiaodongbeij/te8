@@ -267,14 +267,14 @@ class Domain_Daili
         $user = '';
 
         foreach ($list as $k => $v) {
-
+            $list[$k]['online'] = getcache('onlineo:'. $v['id']);
             //是否直属
             if ($v['parent_id'] == $uid){
                 $list[$k]['is_one'] = 1;
             }else{
                 $list[$k]['is_one'] = 0;
             }
-
+        
             $user .= $v['id'] . ',';
             if ($v['is_dai'] == 1) {
                 $list[$k]['level'] = '代理';

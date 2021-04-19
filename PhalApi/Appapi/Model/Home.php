@@ -162,7 +162,7 @@ class Model_Home extends PhalApi_Model_NotORM {
                 $where.=" and starttime < {$endtime}";
             }
 		}
-        $sql = "SELECT uid,title,type_val,type,stream,pull,thumb,show_name,short_name,c_id,c_type,icon,avatar,avatar_thumb,user_nicename,starttime FROM cmf_live cl join cmf_user cu on cl.uid=cu.id WHERE islive = 1 ORDER BY starttime desc limit $start,$pnum";
+        $sql = "SELECT uid,title,type_val,type,stream,pull,thumb,show_name,short_name,c_id,c_type,icon,avatar,avatar_thumb,user_nicename,starttime FROM cmf_live cl join cmf_user cu on cl.uid=cu.id ORDER BY starttime desc limit $start,$pnum";
    
         $result=DI()->notorm->live->queryAll($sql);
 
