@@ -220,7 +220,7 @@ class Domain_Daili
 
     $list = DI()->notorm->user
         ->where("$where")
-        ->order('id desc')
+        ->order('coin desc')
         ->limit(($page-1) * $page_size,$page_size)
         ->fetchAll();
     if (!$list){
