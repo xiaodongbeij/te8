@@ -536,22 +536,22 @@ class RateController extends HomebaseController
        dump('当前id:'.$id);
        dump('添加数量:'.$res);die;
    }
-//////
-//    //md5生成签名，返回url参数和签名
-//    protected function get_sign($data, $key)
-//    {
-//        $str = '';
-//        ksort($data);
-//        foreach ($data as $k => $v) {
-//            $str .= $k . '=' . $v . '&';
-//        }
-//        $data = $str = substr($str, 0, -1);
-//        $str .= $key;
-//        return [
-//            'date' => $data,
-//            'sign' => md5($str)
-//        ];
-//    }
+
+   //md5生成签名，返回url参数和签名
+   protected function get_sign($data, $key)
+   {
+       $str = '';
+       ksort($data);
+       foreach ($data as $k => $v) {
+           $str .= $k . '=' . $v . '&';
+       }
+       $data = $str = substr($str, 0, -1);
+       $str .= $key;
+       return [
+           'date' => $data,
+           'sign' => md5($str)
+       ];
+   }
 //
 //    protected function curl($url, $params = false, $ispost = 0, $https = 0)
 //    {
