@@ -81,7 +81,7 @@ class GameController extends HomebaseController
         // 每页的记录数
         $this->param['pagesize'] = 100000;
         $res = json_decode($this->getHttpQuery($url, $this->param, 1),true);
-//        dump($res);die;
+        dump($res);die;
         if ($res['hRet'] !== 1) die('error');
         $insert = [];
         foreach ($res['list'] as $v){
@@ -102,6 +102,7 @@ class GameController extends HomebaseController
             ];
             $insert[] = $temp;
         }
+        var_dump($insert);die;
         $res = Db::table('cmf_game_record')->limit(100)->insertAll($insert,true);
         var_dump($res);
     }

@@ -486,55 +486,55 @@ class RateController extends HomebaseController
 //    }
 
     //拉取数据
-//    public function test()
-//    {
-//        $max = Db::table('cmf_game_rule_rate')->field('max(cai_id) cai_id')->select();
-////        $id = $max[0]['cai_id'] + 1;
-////        $id = 12;
-//        $id = input('id');
-//        $cai = Db::table('cmf_game_caizhong')->field('id,short_name')->where('id', $id)->find();
-////        dump($cai);die;
-//        if (!$cai){
-//            echo 'ok';die;
-//        }
-//        $data = [
-//            'shortName' => $cai['short_name']
-//        ];
-//        $return = $this->get_sign($data, 'uHai9bCz');
-//        $url = 'http://testport1.webuitest.com/ct-data-app/live/wpRuleGroup?' . $return['date'] . '&sign=' . $return['sign'];
-//        $info = $this->curl($url);
-////        dump($info);die;
-//        $info = json_decode($info,true);
-//        $list = $info['list'];
-////        dump($info);die;
-//        $insertAll = [];
-//        foreach ($list as $v){
-//            $data2 = [
-//                'shortName' => $cai['short_name'],
-//                'groupCode' => $v['groupCode']
-//            ];
-//            $return2 = $this->get_sign($data2, 'uHai9bCz');
-//            $url2 = 'http://testport1.webuitest.com/ct-data-app/live/wplottery?' . $return2['date'] . '&sign=' . $return2['sign'];
-//            $temp = json_decode($this->curl($url2),true);
-//            $ruleList = $temp['ruleList'];
-//            foreach ($ruleList as $val){
-//                foreach ($val['rateList'] as $value){
-//                    $insert = [
-//                        'cai_id'=>$id,
-//                        'rate_name'=>$value['rateName'],
-//                        'rate_code'=>$value['rateCode'],
-//                        'rate'=>$value['rate'],
-//                        'rule_name'=>$val['ruleName'],
-//                        'rule_code' =>$val['ruleCode']
-//                    ];
-//                    $insertAll[] = $insert;
-//                }
-//            }
-//        }
-//        $res = Db::table('cmf_game_rule_rate')->insertAll($insertAll);
-//        dump('当前id:'.$id);
-//        dump('添加数量:'.$res);die;
-//    }
+   public function test()
+   {
+       $max = Db::table('cmf_game_rule_rate')->field('max(cai_id) cai_id')->select();
+//        $id = $max[0]['cai_id'] + 1;
+       $id = 281;
+       $id = input('id');
+       $cai = Db::table('cmf_game_caizhong')->field('id,short_name')->where('id', $id)->find();
+//        dump($cai);die;
+       if (!$cai){
+           echo 'ok';die;
+       }
+       $data = [
+           'shortName' => $cai['short_name']
+       ];
+       $return = $this->get_sign($data, 'uHai9bCz');
+       $url = 'http://testport1.webuitest.com/ct-data-app/live/wpRuleGroup?' . $return['date'] . '&sign=' . $return['sign'];
+       $info = $this->curl($url);
+//        dump($info);die;
+       $info = json_decode($info,true);
+       $list = $info['list'];
+//        dump($info);die;
+       $insertAll = [];
+       foreach ($list as $v){
+           $data2 = [
+               'shortName' => $cai['short_name'],
+               'groupCode' => $v['groupCode']
+           ];
+           $return2 = $this->get_sign($data2, 'uHai9bCz');
+           $url2 = 'http://testport1.webuitest.com/ct-data-app/live/wplottery?' . $return2['date'] . '&sign=' . $return2['sign'];
+           $temp = json_decode($this->curl($url2),true);
+           $ruleList = $temp['ruleList'];
+           foreach ($ruleList as $val){
+               foreach ($val['rateList'] as $value){
+                   $insert = [
+                       'cai_id'=>$id,
+                       'rate_name'=>$value['rateName'],
+                       'rate_code'=>$value['rateCode'],
+                       'rate'=>$value['rate'],
+                       'rule_name'=>$val['ruleName'],
+                       'rule_code' =>$val['ruleCode']
+                   ];
+                   $insertAll[] = $insert;
+               }
+           }
+       }
+       $res = Db::table('cmf_game_rule_rate')->insertAll($insertAll);
+       dump('当前id:'.$id);
+       dump('添加数量:'.$res);die;
+   }
 //////
 //    //md5生成签名，返回url参数和签名
 //    protected function get_sign($data, $key)
