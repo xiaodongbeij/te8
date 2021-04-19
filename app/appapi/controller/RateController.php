@@ -491,9 +491,10 @@ class RateController extends HomebaseController
        $max = Db::table('cmf_game_rule_rate')->field('max(cai_id) cai_id')->select();
 //        $id = $max[0]['cai_id'] + 1;
        $id = 281;
-       $id = input('id');
+       // $id = input('id');
        $cai = Db::table('cmf_game_caizhong')->field('id,short_name')->where('id', $id)->find();
 //        dump($cai);die;
+
        if (!$cai){
            echo 'ok';die;
        }
