@@ -253,6 +253,24 @@ class LiveController extends HomebaseController{
     }
     
     
+    // public function aa()
+    // {
+    //     $list = file_get_contents("https://damengyinqing.com/appapi/?service=Ticket.GetTicketPlayOdds&token=9053389483241d38c71655b566566afb&shortName=tezbsfks&uid=257799&groupCode=001");
+    //     $list = json_decode($list, true);
+    //     $data = [];
+    //     foreach ($list['data']['info'] as $v )
+    //     {
+            
+    //         foreach ($v['rateList'] as $vv)
+    //         {
+    //             $data[] = ['cai_id' => 238,'rate_name' => $vv['rateName'], 'rate_code' => $vv['rateCode'], 'rate' => $vv['rate'], 'rule_name' => $v['ruleName'], 'rule_code' => $v['ruleCode'], 'status' => 0];
+    //         }
+    //     }
+   
+    //     Db::name("game_rule_rate")->insertAll($data);
+    // }
+    
+    
     protected function http_request($url, $data = null)
     {
         $curl = curl_init();
