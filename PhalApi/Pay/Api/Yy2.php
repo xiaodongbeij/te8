@@ -42,12 +42,10 @@ class Api_Yy2 extends PhalApi_Api {
         $data['sign'] = $this->get_sign($data, $info['key']);
         $data['sign_type'] = 'MD5';
         $res = Post($data, $info['action']);
-        if (strpos($res, '订单创建成功') !== false) {
-            $pay_url = substr($res, strpos($res, 'https://payplf-gate.yy.com'), strpos($res, '.do') - strpos($res, 'https://payplf-gate.yy.com') + 3);
-            $order_id = substr($res, strpos($res, 'oid=') + 4, strpos($res, '[payUrl]') - (strpos($res, 'oid=') + 4));
+        $res = json_decode($res, true);
+        if ($res['code'] == 0) {
             return ['code' => 1, 'msg' => '成功', 'data' => [
-                'order_id' => $order_id,
-                'pay_url' => $pay_url
+                'pay_url' => $res['linkUrl']
             ]];
         }
         return ['code' => 0, 'msg' => '通道异常'];

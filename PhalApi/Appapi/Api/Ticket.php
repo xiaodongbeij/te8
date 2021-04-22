@@ -252,6 +252,7 @@ class Api_Ticket extends PhalApi_Api
         $shortName = checkNull($this->shortName);
         $key = 'getTicketPlay:'. $shortName;
         $getTicketPlay = getcaches($key);
+//        $getTicketPlay = false;
         if(!$getTicketPlay)
         {
             //彩票接口路由
@@ -298,6 +299,7 @@ class Api_Ticket extends PhalApi_Api
         $key = 'getTicketPlay:'. $shortName . ":" . $groupCode;
         
         $getTicketPlayOdds= getcaches($key);
+//        $getTicketPlayOdds = false;
         if(!$getTicketPlayOdds)
         {
             $data = [

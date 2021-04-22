@@ -41,21 +41,16 @@ class Api_Yy extends PhalApi_Api {
         ];
         $data['sign'] = $this->get_sign($data, $info['key']);
         $data['sign_type'] = 'MD5';
-//        var_dump($data);die;
+
+
         $res = Post($data, $info['action']);
-//        var_dump($res);die;
-//        file_put_contents('../../paylog/'.date('Y-m').'/'.date('Y-m-d').'.txt',$res);
-//        var_dump($res);
-//        var_dump(strpos($res,'订单创建成功'));die;
-//        $res = $this->curl->post($info['action'],$data);
-//        var_dump($res);die;
-        if (strpos($res, '订单创建成功') !== false) {
-            $pay_url = substr($res, strpos($res, 'https://payplf-gate.yy.com'), strpos($res, '.do') - strpos($res, 'https://payplf-gate.yy.com') + 3);
-            $order_id = substr($res, strpos($res, 'oid=') + 4, strpos($res, '[payUrl]') - (strpos($res, 'oid=') + 4));
-//            var_dump($order_id);
+
+        $res = json_decode($res, true);
+   
+        if ($res['code'] == 0) {
+            
             return ['code' => 1, 'msg' => '成功', 'data' => [
-                'order_id' => $order_id,
-                'pay_url' => $pay_url
+                'pay_url' => $res['linkUrl']
             ]];
         }
         return ['code' => 0, 'msg' => '通道异常'];
