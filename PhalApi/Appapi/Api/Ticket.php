@@ -359,7 +359,7 @@ class Api_Ticket extends PhalApi_Api
         $res = $this->curl->get($url, 3000);
 
         $path = CMF_DATA . 'ticket_open_time/'.date('Ym').'/';
-        $filename = date('Y-m-d H:i:s').'.txt';
+        $filename = date('YmdHis').'.txt';
         if(!is_dir($path)){
             $flag = mkdir($path,0777,true);
         }
