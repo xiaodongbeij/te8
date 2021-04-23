@@ -674,19 +674,9 @@ class SettingController extends AdminBaseController
     public function configpri(){
         $siteinfo=cmf_get_option('site_info');
         $name_coin=$siteinfo['name_coin'];
-        $channels = Db::name('channel')->where('status', 1)->where('del_status', 0)->field('id,channel_name')->select();
-
-        $config = cmf_get_option('configpri');
-
-
-        if($config['lbcz_setup']){
-            $config['lbcz_setup'] = explode(',', $config['lbcz_setup']);
-        }
-        // dump($config);die;
         $this->assign('name_coin',$name_coin);
-        $this->assign('config', $config);
-        $this->assign('channels', $channels);
-        // dump(1);die;
+        $this->assign('config', cmf_get_option('configpri'));
+
         return $this->fetch();
     }
 
@@ -701,10 +691,6 @@ class SettingController extends AdminBaseController
 			$oldconfigpri=cmf_get_option('configpri');
             
             $options = $this->request->param('options/a');
-
-            if($options['lbcz_setup'] != ''){
-                $options['lbcz_setup'] = implode(',', $options['lbcz_setup']);
-            }
 
             if($options['reg_reward']==''){
                 $this->error("登录配置请填写注册奖励");
@@ -1350,7 +1336,6 @@ class SettingController extends AdminBaseController
             $this->success("保存成功！", '');
 
         }
-
     }
 
     protected function resetcache($key='',$info=[]){

@@ -425,19 +425,10 @@
                         <div class="form-group">
                             <label for="input-sensitive_words" class="col-sm-2 control-label">录播彩种ID</label>
                             <div class="col-md-6 col-sm-10">
-                                <!-- <input type="text" class="form-control" id="input-lbcz_setup" name="options[lbcz_setup]" value="{$config['lbcz_setup']|default=''}">
-                                <p class="help-block">多个用英文逗号（,）分隔</p> -->
-
-                                <select class="form-control demo" multiple="multiple" name="options[lbcz_setup][]">
-                                    <foreach name="channels" item="v">
-                                    <option value="{$v.id}" <php>if( in_array($v['id'],$config['lbcz_setup']) ) echo 'selected';</php>>{$v.channel_name}</option>
-                                    </foreach>
-                                </select>
-
-
+                                <input type="text" class="form-control" id="input-lbcz_setup" name="options[lbcz_setup]" value="{$config['lbcz_setup']|default=''}">
+                                <p class="help-block">多个用英文逗号（,）分隔</p>
                             </div>
                         </div>
-
                         <div class="form-group">
                             <label for="input-sensitive_words" class="col-sm-2 control-label">录播微信名片设置</label>
                             <div class="col-md-6 col-sm-10">
@@ -894,7 +885,6 @@
 
 </div>
 <script type="text/javascript" src="__STATIC__/js/admin.js"></script>
-<script src="__STATIC__/js/fSelect.js"></script>
 <script>
 (function(){
 
