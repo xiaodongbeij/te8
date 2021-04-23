@@ -686,7 +686,7 @@ class SettingController extends AdminBaseController
         $this->assign('name_coin',$name_coin);
         $this->assign('config', $config);
         $this->assign('channels', $channels);
-        dump(1);die;
+        // dump(1);die;
         return $this->fetch();
     }
 
