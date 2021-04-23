@@ -682,7 +682,7 @@ class SettingController extends AdminBaseController
         if($config['lbcz_setup']){
             $config['lbcz_setup'] = explode(',', $config['lbcz_setup']);
         }
-        dump($config['lbcz_setup']);die;
+        dump($config);die;
         $this->assign('name_coin',$name_coin);
         $this->assign('config', cmf_get_option('configpri'));
         $this->assign('channels', $channels);
