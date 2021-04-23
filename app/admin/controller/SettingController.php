@@ -702,9 +702,9 @@ class SettingController extends AdminBaseController
             
             $options = $this->request->param('options/a');
 
-            if($options['lbcz_setup'] != ''){
-                $options['lbcz_setup'] = implode(',', $options['lbcz_setup']);
-            }
+            // if($options['lbcz_setup'] != ''){
+            //     $options['lbcz_setup'] = implode(',', $options['lbcz_setup']);
+            // }
 
             if($options['reg_reward']==''){
                 $this->error("登录配置请填写注册奖励");
