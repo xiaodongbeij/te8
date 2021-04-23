@@ -677,6 +677,8 @@ class SettingController extends AdminBaseController
         $channels = Db::name('channel')->where('status', 1)->where('del_status', 0)->field('id,channel_name')->select();
 
         $config = cmf_get_option('configpri');
+
+        dump($config);die;
         if($config['lbcz_setup']){
             $config['lbcz_setup'] = explode(',', $config['lbcz_setup']);
         }
