@@ -314,15 +314,14 @@ class Api_Ticket extends PhalApi_Api
                 $res = json_decode($res, true);
                 if ($res['code'] == '000000') {
                     setcaches($key,$res['ruleList']);
-                    $rs['info'] = $res['ruleList'];
+                    $rs['info'] = array_reverse($res['ruleList']);
                     return $rs;
                 }
             }
         }else{
-            $rs['info'] = $getTicketPlayOdds;
+            $rs['info'] = array_reverse($getTicketPlayOdds);
             return $rs;
         }
-        $rs['info'] = array_reverse($rs['info']);
         $rs['code'] = 1001;
         $rs['msg'] = '请求异常';
         return $rs;
