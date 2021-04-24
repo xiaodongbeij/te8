@@ -322,6 +322,7 @@ class Api_Ticket extends PhalApi_Api
             $rs['info'] = $getTicketPlayOdds;
             return $rs;
         }
+        $rs['info'] = array_reverse($rs['info']);
         $rs['code'] = 1001;
         $rs['msg'] = '请求异常';
         return $rs;
