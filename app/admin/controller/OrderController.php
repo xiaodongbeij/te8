@@ -283,6 +283,7 @@ class OrderController extends AdminBaseController
             $xlsData[$k]['order_status'] = $order_status[$v['order_status']];
             $xlsData[$k]['pay_status'] = $pay_status[$v['pay_status']];
             $xlsData[$k]['payway'] = $pay_way[$v['payway']];
+            $xlsData[$k]['channel_id'] = Db::name("order")->where('id',$v['channel_id'])->value('channel_name');
         }
 
         $action="导出订单：".Db::name("order")->getLastSql();
