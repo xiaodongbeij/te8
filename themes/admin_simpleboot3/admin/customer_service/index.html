@@ -28,6 +28,7 @@
                     </label>
                 </th>
                 <th>ID</th>
+                <th>客服头像</th>
                 <th>客服名称</th>
                 <th>客服简介</th>
                 
@@ -47,6 +48,7 @@
                         <input type="checkbox" class="js-check" data-yid="js-check-y" data-xid="js-check-x" name="ids[]" value="{$vo.id}">
                     </td>
                     <td>{$vo.id}</td>
+                    <td><img src="{$vo['avatar']}" class="imgtip" /></td>
                     <td>{$vo.name}</td>
                     <td>{$vo.desc}</td>
                     <td>{$vo.url}</td>

@@ -17,6 +17,11 @@ class CustomerServiceController extends AdminBaseController
     {
         $list = CustomerService::order('id desc')->paginate(20);
 
+        $list->each(function($v,$k){
+            $v['avatar']=get_upload_path($v['avatar']);
+            return $v;           
+        });
+
         // $list->appends();
         $page = $list->render();
         $this->assign('list', $list);

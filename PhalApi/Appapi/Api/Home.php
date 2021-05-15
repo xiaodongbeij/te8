@@ -103,10 +103,21 @@ class Api_Home extends PhalApi_Api {
      */
     public function getKf()
     {
+        $p = checkNull($this->p);
+        if($p < 1){
+            $p = 1;
+        }
+        $pnum = 20;
+        $start = ($p-1) * $pnum;
         $info = DI()->notorm->customer_service
             ->where('status != ?', 2)
             ->order("id desc")
+            ->limit($start,$pnum)
             ->fetchAll();
+
+        foreach ($info as $key => $value) {
+                $info[$key]['avatar'] = get_upload_path($value['avatar']);
+            }    
         
         return ['code' => 0, 'msg' => 'ok', 'info' => $info];     
     }
