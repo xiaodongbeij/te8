@@ -51,9 +51,9 @@
                     <td>{$vo.desc}</td>
                     <td>{$vo.url}</td>
                     <td>
-                        <eq name="$vo.status" value="0">空闲</eq>
-                        <eq name="$vo.status" value="1">忙碌</eq>
-                        <eq name="$vo.status" value="2">禁用</eq>
+                        <eq name="$vo.status" value="0"><span class="label label-success">空闲</span></eq>
+                        <eq name="$vo.status" value="1"><span class="label label-success">忙碌</span></eq>
+                        <eq name="$vo.status" value="2"><span class="label label-danger">禁用</span></eq>
                     </td>
                     <td>{$vo.create_time}</td>
                     <td>{$vo.update_time}</td>
