@@ -104,7 +104,6 @@ class Api_Home extends PhalApi_Api {
     public function getKf()
     {
         $info = DI()->notorm->customer_service
-            ->select("id,name,desc,status,url")
             ->where('status != ?', 2)
             ->order("id desc")
             ->fetchAll();
