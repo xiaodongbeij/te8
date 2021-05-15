@@ -1,7 +1,7 @@
 <?php
 
 
-namespace app\user\model;
+namespace app\admin\model;
 
 
 class CustomerService extends BaseModel
