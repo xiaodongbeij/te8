@@ -17,7 +17,7 @@ class CustomerServiceController extends AdminBaseController
     {
         $list = CustomerService::order('id desc')->paginate(20);
 
-        $list->appends($data);
+        // $list->appends();
         $page = $list->render();
         $this->assign('list', $list);
         $this->assign('page', $page);
