@@ -16,14 +16,14 @@
         <div class="form-group">
                 <label for="input-user_login" class="col-sm-2 control-label">头像</label>
                 <div class="col-md-6 col-sm-10">
-                    <input type="hidden" name="avatar" id="thumbnail" value="{$data['avatar']}">
+                    <input type="hidden" name="avatar" id="thumbnail" value="{$info['avatar']}">
                     <a href="javascript:uploadOneImage('图片上传','#thumbnail');">
-                        <if condition="empty($data.avatar)">
+                        <if condition="empty($info.avatar)">
                         <img src="__TMPL__/public/assets/images/default-thumbnail.png"
                                  id="thumbnail-preview"
                                  style="cursor: pointer;max-width:100px;max-height:100px;"/>
                         <else/>
-                        <img src="{:cmf_get_image_preview_url($data.avatar)}"
+                        <img src="{:cmf_get_image_preview_url($info.avatar)}"
                              id="thumbnail-preview"
                              style="cursor: pointer;max-width:100px;max-height:100px;"/>
                         </if>
