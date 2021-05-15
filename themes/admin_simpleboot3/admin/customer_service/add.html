@@ -1,0 +1,65 @@
+<include file="public@header" />
+
+
+<link href="__STATIC__/css/fSelect.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<div class="wrap">
+    <ul class="nav nav-tabs">
+        <li ><a href="{:url('customerService/index')}">列表</a></li>
+        <li class="active"><a >{:lang('ADD')}</a></li>
+    </ul>
+    <form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('customerService/add')}">
+
+        <div class="form-group">
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>客服名称</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="text" class="form-control" id="input-name" name="name">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>客服简介</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="text" class="form-control" id="input-desc" name="desc">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>跳转地址</label>
+            <div class="col-md-6 col-sm-10">
+                <input type="text" class="form-control" id="input-url" name="url">
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>是否默认</label>
+            <div class="col-md-6 col-sm-10">
+                <select class="form-control" name="status">
+                    <option value="0">空闲</option>
+                    <option value="1">忙碌</option>
+                    <option value="2" selected>禁用</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-primary js-ajax-submit">{:lang('ADD')}</button>
+                <a class="btn btn-default" href="{:url('customerService/index')}">{:lang('BACK')}</a>
+            </div>
+        </div>
+
+    </form>
+</div>
+<script src="__STATIC__/js/admin.js"></script>
+<script src="__STATIC__/js/fSelect.js"></script>
+<script>
+    $(function() {
+        $('.demo1').fSelect();
+    });
+</script>
+</body>
+</html>

@@ -89,8 +89,29 @@ class Api_Home extends PhalApi_Api {
             'getActive' => array(
                 'cate' => array('name' => 'cate', 'type' => 'int', 'default'=>'1' ,'desc' => '活动分类,1-直播,2-游戏'),
             )
+            'getKf'=>array(
+                'p' => array('name' => 'p', 'type' => 'int', 'default'=>'1' ,'desc' => '页数'),
+            ),
 		);
 	}
+    /**
+     * 客服列表
+     * @desc 用于 客服列表
+     * @return int code 操作码，0表示成功
+     * @return array info
+     * @return string msg 提示信息
+     */
+    public function getKf()
+    {
+        $info = DI()->notorm->customer_service
+            ->select("id,name,desc,status,url")
+            ->where('status <> 2')
+            ->order("id desc")
+            ->fetchAll();
+        
+        return ['code' => 0, 'msg' => 'ok', 'info' => $info];     
+    }
+
 
     /**
      * 轮播图APP

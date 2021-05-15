@@ -1,0 +1,81 @@
+<include file="public@header"/>
+<style>
+    .table img{
+        width:25px;
+        height:25px;
+    }
+
+    #pop{
+        display:none;
+    }
+</style>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a>客服列表</a></li>
+        <li><a href="{:url('customerService/add')}">{:lang('ADD')}</a></li>
+    </ul>
+    
+    <form method="post" class="js-ajax-form">
+
+        <table class="table table-hover table-bordered">
+            <thead>
+            <tr>
+                <th width="16">
+                    <label>
+                        <input type="checkbox" class="js-check-all" data-direction="x" data-checklist="js-check-x">
+                    </label>
+                </th>
+                <th>ID</th>
+                <th>客服名称</th>
+                <th>客服简介</th>
+                
+                <th>跳转地址</th>
+                <th>状态</th>
+                <th>创建时间</th>
+                <th>更新时间</th>
+
+                <th>{:lang('ACTIONS')}</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            <foreach name="list" item="vo">
+                <tr>
+                    <td>
+                        <input type="checkbox" class="js-check" data-yid="js-check-y" data-xid="js-check-x" name="ids[]" value="{$vo.id}">
+                    </td>
+                    <td>{$vo.id}</td>
+                    <td>{$vo.name}</td>
+                    <td>{$vo.desc}</td>
+                    <td>{$vo.url}</td>
+                    <td>
+                        <eq name="$vo.status" value="0">空闲</eq>
+                        <eq name="$vo.status" value="1">忙碌</eq>
+                        <eq name="$vo.status" value="2">禁用</eq>
+                    </td>
+                    <td>{$vo.create_time}</td>
+                    <td>{$vo.update_time}</td>
+
+                    <td>
+                        <a class="btn btn-xs btn-primary" href='{:url("customerService/edit",array("id"=>$vo["id"]))}'>{:lang('EDIT')}</a>
+                        <a class="btn btn-xs btn-danger js-ajax-delete" href="{:url('customerService/del',array($vo['id']))}">{:lang('DELETE')}</a>
+
+                    </td>
+                </tr>
+            </foreach>
+            </tbody>
+        </table>
+        <div class="pagination">{$page}</div>
+    </form>
+</div>
+
+
+<script src="__STATIC__/js/admin.js"></script>
+<script src="__STATIC__/js/laydate/laydate.js"></script>
+<script>
+
+</script>
+</body>
+</html>
