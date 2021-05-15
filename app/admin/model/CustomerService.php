@@ -13,4 +13,14 @@ class CustomerService extends BaseModel
     protected $updateTime = 'update_time';
 
     protected $table = 'cmf_customer_service';
+
+    public function getCreateTimeAttr($value)
+    {
+        if($value) return date('Y-m-d H:i:s', $value);
+    }
+
+    public function getUpdateTimeAttr($value)
+    {
+        if($value) return date('Y-m-d H:i:s', $value);
+    }
 }
