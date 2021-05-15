@@ -88,7 +88,7 @@ class Api_Home extends PhalApi_Api {
 			),
             'getActive' => array(
                 'cate' => array('name' => 'cate', 'type' => 'int', 'default'=>'1' ,'desc' => '活动分类,1-直播,2-游戏'),
-            )
+            ),
             'getKf'=>array(
                 'p' => array('name' => 'p', 'type' => 'int', 'default'=>'1' ,'desc' => '页数'),
             ),
